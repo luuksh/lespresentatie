@@ -43,7 +43,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+      grid-template-columns: repeat(3, 1fr);
       gap: 2em;
       margin-top: 2.5em;
       justify-items: center;
@@ -88,6 +88,22 @@
       border-radius: 4px;
     }
 
+    .leraar-bureau {
+      width: 200px;
+      height: 60px;
+      background: #c8d6e5;
+      border: 3px solid #3b3b3b;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1em;
+      margin-bottom: 2em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media (max-width: 600px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -99,6 +115,7 @@
   <div class="container">
     <h1>Klassenplattegrond – 5×3 Duotafels</h1>
     <p>Elke duotafel bestaat uit twee losse tafels met twee stoelen eronder.</p>
+    <div class="leraar-bureau">Bureau leraar</div>
     <button onclick="husselTweetallen()">Nieuwe indeling</button>
 
     <div class="grid" id="plattegrond"></div>
