@@ -9,43 +9,43 @@
       font-family: 'Segoe UI', sans-serif;
       background: #eef2f7;
       margin: 0;
-      padding: 0;
+      padding: 2em;
     }
 
-    header {
-      position: sticky;
-      top: 0;
+    .indeling-knop {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .indeling-knop button {
       background: #007bff;
       color: white;
-      padding: 1em 2em;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    header button {
-      background: white;
-      color: #007bff;
       border: none;
-      padding: 0.5em 1em;
+      padding: 0.6em 1.2em;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 1em;
     }
 
-    header button:hover {
-      background: #e0e0e0;
+    .indeling-knop button:hover {
+      background: #005fc1;
     }
 
     .container {
       background: white;
       padding: 2em;
       max-width: 900px;
-      margin: 2em auto;
+      margin: 0 auto;
       border-radius: 16px;
       box-shadow: 0 0 30px rgba(0,0,0,0.1);
       text-align: center;
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      row-gap: 2em;
     }
 
     .grid {
@@ -53,7 +53,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 2em;
       justify-items: center;
-      position: relative;
     }
 
     .duotafel {
@@ -96,9 +95,13 @@
       border-radius: 4px;
     }
 
-    .leraar-bureau {
-      grid-column: span 3;
+    .bureau-rij {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       margin-bottom: 2em;
+    }
+
+    .leraar-bureau {
       width: 160px;
       height: 60px;
       background: #c8d6e5;
@@ -109,8 +112,8 @@
       justify-content: center;
       font-weight: bold;
       font-size: 0.9em;
-      margin-left: auto;
-      margin-right: auto;
+      grid-column: 1;
+      margin: 0 auto;
     }
 
     @media (max-width: 600px) {
@@ -121,12 +124,17 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="indeling-knop">
     <button onclick="husselTweetallen()">Nieuwe indeling</button>
-  </header>
+  </div>
 
   <div class="container">
-    <div class="grid" id="plattegrond"></div>
+    <div class="grid-wrapper">
+      <div class="bureau-rij">
+        <div class="leraar-bureau">Bureau leraar</div>
+      </div>
+      <div class="grid" id="plattegrond"></div>
+    </div>
   </div>
 
   <script>
@@ -141,11 +149,6 @@
       const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
       const grid = document.getElementById("plattegrond");
       grid.innerHTML = '';
-
-      const bureau = document.createElement("div");
-      bureau.className = "leraar-bureau";
-      bureau.textContent = "Bureau leraar";
-      grid.appendChild(bureau);
 
       for (let i = 0; i < 15; i++) {
         const naam1 = shuffled[i * 2] || "-";
