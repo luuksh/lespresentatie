@@ -38,22 +38,21 @@ function u008Indeling() {
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
-  const kolommen = 3;
-  const rijen = 4;
-  let index = 0;
-
   const rijContainer = document.createElement("div");
   rijContainer.style.display = "flex";
   rijContainer.style.justifyContent = "center";
   rijContainer.style.gap = "2em";
 
-  for (let c = 0; c < kolommen; c++) {
+  let index = 0;
+
+  // Linker- en middenkolom: 4 rijen drietafels
+  for (let c = 0; c < 2; c++) {
     const kolom = document.createElement("div");
     kolom.style.display = "flex";
     kolom.style.flexDirection = "column";
     kolom.style.gap = "2em";
 
-    for (let r = 0; r < rijen; r++) {
+    for (let r = 0; r < 4; r++) {
       const naam1 = shuffled[index++] || "-";
       const naam2 = shuffled[index++] || "-";
       const naam3 = shuffled[index++] || "-";
@@ -64,6 +63,20 @@ function u008Indeling() {
     rijContainer.appendChild(kolom);
   }
 
+  // Rechterkolom: 3 rijen duotafels
+  const rechterKolom = document.createElement("div");
+  rechterKolom.style.display = "flex";
+  rechterKolom.style.flexDirection = "column";
+  rechterKolom.style.gap = "2em";
+
+  for (let r = 0; r < 3; r++) {
+    const naam1 = shuffled[index++] || "-";
+    const naam2 = shuffled[index++] || "-";
+    const tafel = maakDuotafel(naam1, naam2);
+    rechterKolom.appendChild(tafel);
+  }
+
+  rijContainer.appendChild(rechterKolom);
   grid.appendChild(rijContainer);
 }
 
