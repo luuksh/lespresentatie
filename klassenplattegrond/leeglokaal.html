@@ -125,31 +125,43 @@
       }
     }
   </style>
+
   <script type="module">
     import { kiesIndeling } from './indeling.js';
 
     document.addEventListener("DOMContentLoaded", async () => {
       const indelingSelect = document.getElementById("indelingSelect");
       const klasSelect = document.getElementById("klasSelect");
+      const grid = document.getElementById("plattegrond");
 
-      // Dynamisch klassen inladen uit JSON
-      const klasResponse = await fetch("leerlingen_per_klas.json");
-      const klasData = await klasResponse.json();
-      for (const klas of Object.keys(klasData)) {
-        const opt = document.createElement("option");
-        opt.value = klas;
-        opt.textContent = "Klas " + klas;
-        klasSelect.appendChild(opt);
+      // Klassen laden
+      try {
+        const res = await fetch("leerlingen_per_klas.json");
+        const data = await res.json();
+
+        for (const klas of Object.keys(data)) {
+          const option = document.createElement("option");
+          option.value = klas;
+          option.textContent = `Klas ${klas}`;
+          klasSelect.appendChild(option);
+        }
+
+        klasSelect.value = "G1D"; // standaard
+      } catch (err) {
+        console.error("Fout bij laden van klassen:", err);
+        klasSelect.innerHTML = '<option>Fout bij laden</option>';
       }
 
+      // Herschrijf de plattegrond bij selectie
       function herlaad() {
+        grid.innerHTML = ""; // reset inhoud
         kiesIndeling(indelingSelect.value, klasSelect.value);
       }
 
       indelingSelect.addEventListener("change", herlaad);
       klasSelect.addEventListener("change", herlaad);
 
-      herlaad(); // initieel laden
+      herlaad(); // eerste render
     });
   </script>
 </head>
@@ -162,7 +174,7 @@
     </select>
 
     <select id="klasSelect">
-      <!-- Dynamisch gevuld -->
+      <!-- Wordt geladen uit JSON -->
     </select>
   </div>
 
