@@ -39,7 +39,11 @@ export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
 
   try {
     const indelingFunctie = await laadModule();
-    indelingFunctie(leerlingen);
+    if (typeof indelingFunctie === 'function') {
+      indelingFunctie(leerlingen);
+    } else {
+      throw new Error("Module bevat geen exporteerbare functie");
+    }
   } catch (err) {
     console.error(`Fout bij toepassen van indeling "${type}":`, err);
     const fallback = await modules["h216"]();
