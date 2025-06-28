@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klassenplattegrond – 3x5 Duotafels</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1em;
+      margin-top: 2em;
+    }
+    .tafel {
+      border: 2px solid #888;
+      border-radius: 12px;
+      padding: 1em;
+      font-size: 1.1em;
+      background-color: #f3f3f3;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004c99;
+    }
+  </style>
+</head>
+<body>
+  <h1>Klassenplattegrond – 3x5 Duotafels</h1>
+  <button onclick="husselTweetallen()">Nieuwe indeling</button>
+
+  <div class="grid" id="plattegrond"></div>
+
+  <script>
+    const leerlingen = [
+      "Samira", "Daan", "Tobias", "Yara", "Levi", "Mila",
+      "Noah", "Sophie", "Liam", "Emma", "Finn", "Julia",
+      "Lucas", "Nora", "Sem", "Lotte", "Thijs", "Eva",
+      "Mats", "Zoë"
+    ];
+
+    function husselTweetallen() {
+      const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
+      const grid = document.getElementById("plattegrond");
+      grid.innerHTML = "";
+
+      for (let i = 0; i < 15; i++) {
+        const naam1 = shuffled[i * 2] || "-";
+        const naam2 = shuffled[i * 2 + 1] || "-";
+        const div = document.createElement("div");
+        div.className = "tafel";
+        div.textContent = naam1 + " & " + naam2;
+        grid.appendChild(div);
+      }
+    }
+
+    // Initieel laden
+    husselTweetallen();
+  </script>
+</body>
+</html>
