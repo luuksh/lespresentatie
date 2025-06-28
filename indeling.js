@@ -1,5 +1,3 @@
-// indeling.js
-
 const leerlingen = [
   "Samira", "Daan", "Tobias", "Yara", "Levi", "Mila",
   "Noah", "Sophie", "Liam", "Emma", "Finn", "Julia",
@@ -8,12 +6,18 @@ const leerlingen = [
 ];
 
 function kiesIndeling(type) {
-  if (type === "h216") {
-    h216Indeling();
-  } else if (type === "u008") {
-    u008Indeling();
-  } else if (type === "groepjes") {
-    groepjesIndeling();
+  switch (type) {
+    case "h216":
+      h216Indeling();
+      break;
+    case "u008":
+      u008Indeling();
+      break;
+    case "groepjes":
+      groepjesIndeling();
+      break;
+    default:
+      h216Indeling();
   }
 }
 
@@ -25,9 +29,7 @@ function h216Indeling() {
   for (let i = 0; i < 15; i++) {
     const naam1 = shuffled[i * 2] || "-";
     const naam2 = shuffled[i * 2 + 1] || "-";
-
-    const duotafel = maakDuotafel(naam1, naam2);
-    grid.appendChild(duotafel);
+    grid.appendChild(maakDuotafel(naam1, naam2));
   }
 }
 
@@ -35,33 +37,30 @@ function u008Indeling() {
   const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
-  grid.style.gridTemplateColumns = "repeat(3, 1fr)";
 
-  let i = 0;
+  const patroon = [3, 3, 3, 3, 3, 3, 2, 2, 2];
+  let index = 0;
 
-  // Linkerkolom en middenkolom: 4 rijen van 3 tafels
-  for (let col = 0; col < 2; col++) {
-    for (let rij = 0; rij < 4; rij++) {
-      const naam1 = shuffled[i++] || "-";
-      const naam2 = shuffled[i++] || "-";
-      const duotafel = maakDuotafel(naam1, naam2);
-      grid.appendChild(duotafel);
+  for (let tafelsInRij of patroon) {
+    const rij = document.createElement("div");
+    rij.className = "duotafel";
+    rij.style.flexDirection = "row";
+    rij.style.justifyContent = "center";
+    rij.style.gap = "2em";
+
+    for (let i = 0; i < tafelsInRij; i++) {
+      const naam1 = shuffled[index++] || "-";
+      const naam2 = shuffled[index++] || "-";
+      rij.appendChild(maakDuotafel(naam1, naam2));
     }
-  }
 
-  // Rechterkolom: 3 rijen van 2 tafels
-  for (let rij = 0; rij < 3; rij++) {
-    const naam1 = shuffled[i++] || "-";
-    const naam2 = shuffled[i++] || "-";
-    const duotafel = maakDuotafel(naam1, naam2);
-    grid.appendChild(duotafel);
+    grid.appendChild(rij);
   }
 }
 
 function groepjesIndeling() {
-  // Placeholder - voeg je eigen groepsindeling toe
   const grid = document.getElementById("plattegrond");
-  grid.innerHTML = "<p>Indeling 'Groepjes' is nog niet geïmplementeerd.</p>";
+  grid.innerHTML = "<p style='color:#999'>Groepjes-indeling volgt nog.</p>";
 }
 
 function maakDuotafel(naam1, naam2) {
@@ -100,6 +99,4 @@ function maakDuotafel(naam1, naam2) {
   return duotafel;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  kiesIndeling("h216");
-});
+document.addEventListener("DOMContentLoaded", () => kiesIndeling("h216"));
