@@ -30,6 +30,6 @@
   <h1>Welkom bij de lespresentatie</h1>
   <p>Bekijk hieronder de interactieve klassenplattegrond.</p>
 
-  <iframe src="klassenplattegrond/Klassenplattegrond_Interactief.html" title="Klassenplattegrond"></iframe>
+  <iframe src="klassenplattegrond/klassenplattegrond.html" title="Klassenplattegrond"></iframe>
 </body>
 </html>
