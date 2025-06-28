@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
   <style>
+    :root {
+      --primaire-kleur: #007bff;
+      --hover-kleur: #005fc1;
+      --achtergrond: #eef2f7;
+      --groep-kleur: #f8f9fa;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+      background: var(--achtergrond);
       margin: 0;
       padding: 2em;
     }
@@ -17,24 +24,24 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1em;
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
     }
 
     .indeling-knop select {
-      background: #007bff;
+      background: var(--primaire-kleur);
       color: white;
       border: none;
-      padding: 0.7em 1.5em;
+      padding: 0.6em 1.2em;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1em;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-      transition: background 0.2s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background 0.3s;
     }
 
     .indeling-knop select:hover {
-      background: #0056b3;
+      background: var(--hover-kleur);
     }
 
     .container {
@@ -42,8 +49,8 @@
       padding: 2em;
       max-width: 1000px;
       margin: 0 auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.08);
       text-align: center;
     }
 
@@ -55,55 +62,49 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2em;
       justify-items: center;
+      transition: opacity 0.5s ease;
     }
 
-    .duotafel {
+    .duotafel, .groepje {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-
-    .duotafel:hover {
-      transform: scale(1.02);
+      animation: fadeIn 0.6s ease;
     }
 
     .tafels {
       display: flex;
       gap: 6px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
     .tafel {
-      width: 64px;
-      height: 52px;
-      background: #e9eef5;
-      border: 2px solid #b0c4d9;
-      border-radius: 10px;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      width: 60px;
+      height: 50px;
+      background: #ddd;
+      border: 2px solid #999;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 0.9em;
       font-weight: bold;
-      font-size: 0.95em;
-      color: #333;
-      transition: background 0.2s;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .tafel:hover {
-      background: #d1e3ff;
+      transform: scale(1.05);
+      background: #dceaf5;
     }
 
     .stoelen {
       display: flex;
       justify-content: center;
-      margin-top: 8px;
-      gap: 20px;
+      margin-top: 6px;
+      gap: 16px;
     }
 
     .stoel {
@@ -111,6 +112,22 @@
       height: 18px;
       background: #444;
       border-radius: 4px;
+      animation: slideIn 0.4s ease;
+    }
+
+    .groepje {
+      background: var(--groep-kleur);
+      border: 2px dashed #ccc;
+      padding: 1em;
+      border-radius: 14px;
+      width: 240px;
+      gap: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .groepje:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .bureau-rij {
@@ -120,7 +137,7 @@
     }
 
     .leraar-bureau {
-      width: 180px;
+      width: 160px;
       height: 60px;
       background: #c8d6e5;
       border: 3px solid #3b3b3b;
@@ -129,11 +146,20 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 0.9em;
       grid-column: 1 / 2;
       justify-self: start;
-      margin: 0 auto 2em auto;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
@@ -169,13 +195,33 @@
       }
 
       function herlaad() {
-        grid.innerHTML = "";
-        kiesIndeling(indelingSelect.value, klasSelect.value);
+        const kleurcodes = {
+          h216: '#007bff',
+          u008: '#28a745',
+          groepjes: '#e83e8c'
+        };
+
+        const achtergrondcodes = {
+          h216: '#eef2f7',
+          u008: '#eaf7ef',
+          groepjes: '#fdf2f7'
+        };
+
+        const waarde = indelingSelect.value;
+        document.documentElement.style.setProperty('--primaire-kleur', kleurcodes[waarde] || '#007bff');
+        document.documentElement.style.setProperty('--hover-kleur', kleurcodes[waarde] || '#005fc1');
+        document.documentElement.style.setProperty('--achtergrond', achtergrondcodes[waarde] || '#eef2f7');
+
+        grid.style.opacity = 0;
+        setTimeout(() => {
+          grid.innerHTML = "";
+          kiesIndeling(waarde, klasSelect.value);
+          grid.style.opacity = 1;
+        }, 200);
       }
 
       indelingSelect.addEventListener("change", herlaad);
       klasSelect.addEventListener("change", herlaad);
-
       herlaad();
     });
   </script>
