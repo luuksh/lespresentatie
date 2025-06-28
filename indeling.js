@@ -38,26 +38,38 @@ function u008Indeling() {
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
-  const patroon = [3, 3, 3, 3, 3, 3, 2, 2, 2];
+  const kolommen = [4, 4, 3];
   let index = 0;
 
-  for (let tafelsInRij of patroon) {
-    const rij = document.createElement("div");
-    rij.className = "duotafel";
-    rij.style.flexDirection = "row";
-    rij.style.justifyContent = "center";
-    rij.style.gap = "2em";
-    rij.style.display = "flex";
+  const rijContainer = document.createElement("div");
+  rijContainer.style.display = "flex";
+  rijContainer.style.justifyContent = "center";
+  rijContainer.style.gap = "2em";
 
-    for (let i = 0; i < tafelsInRij; i++) {
-      const naam1 = shuffled[index++] || "-";
-      const naam2 = shuffled[index++] || "-";
-      const naam3 = shuffled[index++] || "-";
-      rij.appendChild(maakDrietafel(naam1, naam2, naam3));
+  kolommen.forEach((aantalRijen, kolomIndex) => {
+    const kolom = document.createElement("div");
+    kolom.style.display = "flex";
+    kolom.style.flexDirection = "column";
+    kolom.style.gap = "2em";
+
+    for (let r = 0; r < aantalRijen; r++) {
+      let tafel;
+      if (kolomIndex < 2) {
+        const naam1 = shuffled[index++] || "-";
+        const naam2 = shuffled[index++] || "-";
+        const naam3 = shuffled[index++] || "-";
+        tafel = maakDrietafel(naam1, naam2, naam3);
+      } else {
+        const naam1 = shuffled[index++] || "-";
+        const naam2 = shuffled[index++] || "-";
+        tafel = maakDuotafel(naam1, naam2);
+      }
+      kolom.appendChild(tafel);
     }
+    rijContainer.appendChild(kolom);
+  });
 
-    grid.appendChild(rij);
-  }
+  grid.appendChild(rijContainer);
 }
 
 function groepjesIndeling() {
