@@ -17,18 +17,18 @@
       margin-bottom: 1em;
     }
 
-    .indeling-knop button {
+    .indeling-knop select {
       background: #007bff;
       color: white;
       border: none;
       padding: 0.6em 1.2em;
       border-radius: 6px;
       font-weight: bold;
-      cursor: pointer;
       font-size: 1em;
+      cursor: pointer;
     }
 
-    .indeling-knop button:hover {
+    .indeling-knop select:hover {
       background: #005fc1;
     }
 
@@ -126,7 +126,11 @@
 </head>
 <body>
   <div class="indeling-knop">
-    <button onclick="husselTweetallen()">Nieuwe indeling</button>
+    <select onchange="kiesIndeling(this.value)">
+      <option value="h216">Indeling H216</option>
+      <option value="u008">Indeling U008</option>
+      <option value="groepjes">Indeling Groepjes</option>
+    </select>
   </div>
 
   <div class="container">
