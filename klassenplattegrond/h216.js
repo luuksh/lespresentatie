@@ -12,7 +12,7 @@ export function h216Indeling(leerlingen) {
 
 function maakDuotafel(naam1, naam2) {
   const duotafel = document.createElement("div");
-  duotafel.className = "duotafel";
+  duotafel.className = "duotafel fade-in";
 
   const tafels = document.createElement("div");
   tafels.className = "tafels";
@@ -45,3 +45,17 @@ function maakDuotafel(naam1, naam2) {
 
   return duotafel;
 }
+
+// CSS-animatie toevoegen via JavaScript of stylesheet:
+// .fade-in {
+//   opacity: 0;
+//   transform: translateY(10px);
+//   animation: fadeIn 0.4s ease forwards;
+// }
+//
+// @keyframes fadeIn {
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
