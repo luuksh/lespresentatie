@@ -13,8 +13,11 @@
     }
 
     .indeling-knop {
-      text-align: center;
-      margin-bottom: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 1.5em;
     }
 
     .indeling-knop select {
@@ -122,14 +125,44 @@
       }
     }
   </style>
-  <script src="indeling.js" defer></script>
+  <script type="module">
+    import { kiesIndeling } from './indeling.js';
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const indelingSelect = document.getElementById("indelingSelect");
+      const klasSelect = document.getElementById("klasSelect");
+
+      // Dynamisch klassen inladen uit JSON
+      const klasResponse = await fetch("leerlingen_per_klas.json");
+      const klasData = await klasResponse.json();
+      for (const klas of Object.keys(klasData)) {
+        const opt = document.createElement("option");
+        opt.value = klas;
+        opt.textContent = "Klas " + klas;
+        klasSelect.appendChild(opt);
+      }
+
+      function herlaad() {
+        kiesIndeling(indelingSelect.value, klasSelect.value);
+      }
+
+      indelingSelect.addEventListener("change", herlaad);
+      klasSelect.addEventListener("change", herlaad);
+
+      herlaad(); // initieel laden
+    });
+  </script>
 </head>
 <body>
   <div class="indeling-knop">
-    <select onchange="kiesIndeling(this.value)">
+    <select id="indelingSelect">
       <option value="h216">Indeling H216</option>
       <option value="u008">Indeling U008</option>
       <option value="groepjes">Indeling Groepjes</option>
+    </select>
+
+    <select id="klasSelect">
+      <!-- Dynamisch gevuld -->
     </select>
   </div>
 
