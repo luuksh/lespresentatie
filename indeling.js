@@ -92,33 +92,45 @@ function groepjesIndeling() {
   wrapper.style.justifyContent = "center";
 
   let index = 0;
+
+  // Vijf groepjes van vier
   for (let i = 0; i < 5; i++) {
-    const groepje = document.createElement("div");
-    groepje.style.display = "flex";
-    groepje.style.flexWrap = "wrap";
-    groepje.style.justifyContent = "center";
-    groepje.style.alignItems = "center";
-    groepje.style.gap = "4px";
-    groepje.style.margin = `${Math.random() * 40 + 10}px`;
-    groepje.style.width = "240px";
-    groepje.style.background = "#f9f9f9";
-    groepje.style.border = "2px dashed #ccc";
-    groepje.style.padding = "1em";
-    groepje.style.borderRadius = "12px";
-    groepje.style.transform = `rotate(${Math.random() * 10 - 5}deg)`;
+    wrapper.appendChild(maakGroepje(shuffled.slice(index, index + 4)));
+    index += 4;
+  }
 
-    for (let j = 0; j < 4; j++) {
-      const naam = shuffled[index++] || "-";
-      const tafel = document.createElement("div");
-      tafel.className = "tafel";
-      tafel.textContent = naam;
-      groepje.appendChild(tafel);
-    }
-
-    wrapper.appendChild(groepje);
+  // Twee groepjes van vijf
+  for (let i = 0; i < 2; i++) {
+    wrapper.appendChild(maakGroepje(shuffled.slice(index, index + 5)));
+    index += 5;
   }
 
   grid.appendChild(wrapper);
+}
+
+function maakGroepje(namen) {
+  const groepje = document.createElement("div");
+  groepje.style.display = "flex";
+  groepje.style.flexWrap = "wrap";
+  groepje.style.justifyContent = "center";
+  groepje.style.alignItems = "center";
+  groepje.style.gap = "4px";
+  groepje.style.margin = `${Math.random() * 40 + 10}px`;
+  groepje.style.width = "240px";
+  groepje.style.background = "#f9f9f9";
+  groepje.style.border = "2px dashed #ccc";
+  groepje.style.padding = "1em";
+  groepje.style.borderRadius = "12px";
+  groepje.style.transform = `rotate(${Math.random() * 10 - 5}deg)`;
+
+  namen.forEach(naam => {
+    const tafel = document.createElement("div");
+    tafel.className = "tafel";
+    tafel.textContent = naam;
+    groepje.appendChild(tafel);
+  });
+
+  return groepje;
 }
 
 function maakDuotafel(naam1, naam2) {
