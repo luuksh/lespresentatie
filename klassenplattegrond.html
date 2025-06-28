@@ -6,23 +6,24 @@
   <title>Klassenplattegrond – 5x3 Duotafels</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 2em;
-      background-color: #f9f9f9;
-    }
-
-    h1 {
-      margin-bottom: 0.2em;
+      margin: 0;
+      background: radial-gradient(circle at center, #eef2f7, #cfd8e0);
     }
 
     .container {
       background: white;
       padding: 2em;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      max-width: 800px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.15);
+      max-width: 900px;
       margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 0.3em;
     }
 
     button {
@@ -43,57 +44,69 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
-      gap: 2em;
+      gap: 2.5em;
       margin-top: 2em;
       justify-items: center;
     }
 
     .tafel {
-      width: 140px;
+      width: 160px;
       height: 100px;
-      background-color: #f0f0f0;
-      border: 2px solid #888;
-      border-radius: 12px;
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #dcdcdc, #f6f6f6);
+      border: 2px solid #666;
+      border-radius: 10px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      font-weight: bold;
+      justify-content: center;
       position: relative;
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease;
+    }
+
+    .tafel:hover {
+      transform: rotate(0deg) scale(1.03);
     }
 
     .stoel {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #444;
+      width: 18px;
+      height: 18px;
+      background-color: #2e3a59;
       border-radius: 50%;
     }
 
-    .stoel.top {
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
+    .stoel.left {
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    .stoel.bottom {
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
+    .stoel.right {
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .namen {
+      font-weight: bold;
+      font-size: 1em;
+      color: #222;
       z-index: 1;
       text-align: center;
-      padding: 0.5em;
-      color: #222;
+      line-height: 1.4em;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Klassenplattegrond – 5x3 Duotafels</h1>
+    <h1>Klassenplattegrond – 5×3 Duotafels</h1>
     <p>Bekijk hieronder de tafelschikking van vandaag:</p>
     <button onclick="husselTweetallen()">Nieuwe indeling</button>
 
@@ -120,20 +133,19 @@
         const tafel = document.createElement("div");
         tafel.className = "tafel";
 
-        const stoelTop = document.createElement("div");
-        stoelTop.className = "stoel top";
+        const stoelL = document.createElement("div");
+        stoelL.className = "stoel left";
 
-        const stoelBottom = document.createElement("div");
-        stoelBottom.className = "stoel bottom";
+        const stoelR = document.createElement("div");
+        stoelR.className = "stoel right";
 
         const namen = document.createElement("div");
         namen.className = "namen";
         namen.textContent = `${naam1} & ${naam2}`;
 
-        tafel.appendChild(stoelTop);
-        tafel.appendChild(stoelBottom);
+        tafel.appendChild(stoelL);
+        tafel.appendChild(stoelR);
         tafel.appendChild(namen);
-
         grid.appendChild(tafel);
       }
     }
