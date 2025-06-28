@@ -85,6 +85,12 @@ function groepjesIndeling() {
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
+  const wrapper = document.createElement("div");
+  wrapper.style.display = "flex";
+  wrapper.style.flexWrap = "wrap";
+  wrapper.style.gap = "2em";
+  wrapper.style.justifyContent = "center";
+
   let index = 0;
   for (let i = 0; i < 5; i++) {
     const groepje = document.createElement("div");
@@ -93,7 +99,7 @@ function groepjesIndeling() {
     groepje.style.justifyContent = "center";
     groepje.style.alignItems = "center";
     groepje.style.gap = "4px";
-    groepje.style.margin = `${Math.random() * 40 + 10}px auto`;
+    groepje.style.margin = `${Math.random() * 40 + 10}px`;
     groepje.style.width = "240px";
     groepje.style.background = "#f9f9f9";
     groepje.style.border = "2px dashed #ccc";
@@ -109,8 +115,10 @@ function groepjesIndeling() {
       groepje.appendChild(tafel);
     }
 
-    grid.appendChild(groepje);
+    wrapper.appendChild(groepje);
   }
+
+  grid.appendChild(wrapper);
 }
 
 function maakDuotafel(naam1, naam2) {
