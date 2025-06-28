@@ -9,43 +9,96 @@
       font-family: sans-serif;
       text-align: center;
       padding: 2em;
+      background-color: #f9f9f9;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
-      gap: 1em;
-      margin-top: 2em;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+
+    h1 {
+      margin-bottom: 0.2em;
     }
-    .tafel {
-      border: 2px solid #888;
-      border-radius: 12px;
-      padding: 1em;
-      font-size: 1.1em;
-      background-color: #f3f3f3;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+
+    .container {
+      background: white;
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto;
     }
+
     button {
-      padding: 0.5em 1em;
+      padding: 0.6em 1.2em;
       font-size: 1em;
       border: none;
       border-radius: 8px;
-      background-color: #0066cc;
+      background-color: #007bff;
       color: white;
       cursor: pointer;
+      margin-top: 1em;
     }
+
     button:hover {
-      background-color: #004c99;
+      background-color: #0056b3;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+      gap: 2em;
+      margin-top: 2em;
+      justify-items: center;
+    }
+
+    .tafel {
+      width: 140px;
+      height: 100px;
+      background-color: #f0f0f0;
+      border: 2px solid #888;
+      border-radius: 12px;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .stoel {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #444;
+      border-radius: 50%;
+    }
+
+    .stoel.top {
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .stoel.bottom {
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .namen {
+      z-index: 1;
+      text-align: center;
+      padding: 0.5em;
+      color: #222;
     }
   </style>
 </head>
 <body>
-  <h1>Klassenplattegrond – 5x3 Duotafels</h1>
-  <button onclick="husselTweetallen()">Nieuwe indeling</button>
+  <div class="container">
+    <h1>Klassenplattegrond – 5x3 Duotafels</h1>
+    <p>Bekijk hieronder de tafelschikking van vandaag:</p>
+    <button onclick="husselTweetallen()">Nieuwe indeling</button>
 
-  <div class="grid" id="plattegrond"></div>
+    <div class="grid" id="plattegrond"></div>
+  </div>
 
   <script>
     const leerlingen = [
@@ -63,10 +116,25 @@
       for (let i = 0; i < 15; i++) {
         const naam1 = shuffled[i * 2] || "-";
         const naam2 = shuffled[i * 2 + 1] || "-";
-        const div = document.createElement("div");
-        div.className = "tafel";
-        div.textContent = naam1 + " & " + naam2;
-        grid.appendChild(div);
+
+        const tafel = document.createElement("div");
+        tafel.className = "tafel";
+
+        const stoelTop = document.createElement("div");
+        stoelTop.className = "stoel top";
+
+        const stoelBottom = document.createElement("div");
+        stoelBottom.className = "stoel bottom";
+
+        const namen = document.createElement("div");
+        namen.className = "namen";
+        namen.textContent = `${naam1} & ${naam2}`;
+
+        tafel.appendChild(stoelTop);
+        tafel.appendChild(stoelBottom);
+        tafel.appendChild(namen);
+
+        grid.appendChild(tafel);
       }
     }
 
