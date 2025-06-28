@@ -97,10 +97,9 @@
     }
 
     .leraar-bureau {
-      position: absolute;
-      top: -80px;
-      left: 0;
-      width: 140px;
+      grid-column: span 3;
+      margin-bottom: 2em;
+      width: 160px;
       height: 60px;
       background: #c8d6e5;
       border: 3px solid #3b3b3b;
@@ -110,6 +109,8 @@
       justify-content: center;
       font-weight: bold;
       font-size: 0.9em;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 600px) {
@@ -125,9 +126,7 @@
   </header>
 
   <div class="container">
-    <div class="grid" id="plattegrond">
-      <div class="leraar-bureau">Bureau leraar</div>
-    </div>
+    <div class="grid" id="plattegrond"></div>
   </div>
 
   <script>
@@ -141,7 +140,12 @@
     function husselTweetallen() {
       const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
       const grid = document.getElementById("plattegrond");
-      grid.innerHTML = '<div class="leraar-bureau">Bureau leraar</div>';
+      grid.innerHTML = '';
+
+      const bureau = document.createElement("div");
+      bureau.className = "leraar-bureau";
+      bureau.textContent = "Bureau leraar";
+      grid.appendChild(bureau);
 
       for (let i = 0; i < 15; i++) {
         const naam1 = shuffled[i * 2] || "-";
