@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("plattegrond");
 
   try {
-    const res = await fetch("leerlingen_per_klas.json"); // ✔ juiste pad aangepast
+    const res = await fetch("js/leerlingen_per_klas.json"); // ✔ juiste pad aangepast
     const data = await res.json();
     for (const klas of Object.keys(data)) {
       const option = document.createElement("option");
