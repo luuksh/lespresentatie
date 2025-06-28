@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klassenplattegrond – 5x3 Duotafels</title>
+  <title>Klassenplattegrond – 3x5 Duotafels</title>
   <style>
     body {
       font-family: sans-serif;
@@ -12,7 +12,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr); /* 5 kolommen */
       gap: 1em;
       margin-top: 2em;
     }
@@ -39,7 +39,7 @@
   </style>
 </head>
 <body>
-  <h1>Klassenplattegrond – 5x3 Duotafels</h1>
+  <h1>Klassenplattegrond – 3x5 Duotafels</h1>
   <button onclick="husselTweetallen()">Nieuwe indeling</button>
 
   <div class="grid" id="plattegrond"></div>
@@ -57,7 +57,7 @@
       const grid = document.getElementById("plattegrond");
       grid.innerHTML = "";
 
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 15; i++) { // 3 rijen * 5 kolommen = 15 tafels
         const naam1 = shuffled[i * 2] || "-";
         const naam2 = shuffled[i * 2 + 1] || "-";
         const div = document.createElement("div");
