@@ -3,21 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klassenplattegrond</title>
+  <title>Klassenplattegrond – 5x3 Duotafels</title>
   <style>
-    html, body {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef2f7;
       margin: 0;
       padding: 0;
-      height: 100%;
-      background: #eef2f7;
-      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #007bff;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    header button {
+      background: white;
+      color: #007bff;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    header button:hover {
+      background: #e0e0e0;
     }
 
     .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
+      background: white;
+      padding: 2em;
+      max-width: 900px;
+      margin: 2em auto;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     .plattegrond-container {
@@ -25,6 +58,7 @@
       grid-template-columns: auto 1fr;
       gap: 2em;
       align-items: start;
+      margin-top: 2em;
     }
 
     .leraar-bureau {
@@ -95,7 +129,13 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>Klassenplattegrond – 5×3 Duotafels</h1>
+    <button onclick="husselTweetallen()">Nieuwe indeling</button>
+  </header>
+
   <div class="container">
+    <p>Elke duotafel bestaat uit twee losse tafels met twee stoelen eronder.</p>
     <div class="plattegrond-container">
       <div class="leraar-bureau">Bureau leraar</div>
       <div class="grid" id="plattegrond"></div>
