@@ -46,11 +46,12 @@ export function groepjesIndeling(leerlingen) {
       borderRadius: "12px",
       transform: `rotate(${Math.random() * 10 - 5}deg)`
     });
+    groepje.classList.add("fade-in");
 
     for (let j = 0; j < grootte; j++) {
       const naam = shuffled[index++];
       const tafel = document.createElement("div");
-      tafel.className = "tafel";
+      tafel.className = "tafel fade-in";
       tafel.textContent = naam;
       groepje.appendChild(tafel);
     }
