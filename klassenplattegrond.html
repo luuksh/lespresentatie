@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klassenplattegrond – 5x3 Duotafels</title>
+  <title>Klassenplattegrond</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -19,14 +19,9 @@
       color: white;
       padding: 1em 2em;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.2em;
     }
 
     header button {
@@ -53,39 +48,19 @@
       text-align: center;
     }
 
-    .plattegrond-container {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2em;
-      align-items: start;
-      margin-top: 2em;
-    }
-
-    .leraar-bureau {
-      width: 120px;
-      height: 60px;
-      background: #c8d6e5;
-      border: 3px solid #3b3b3b;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.9em;
-      grid-row: span 5;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2em;
       justify-items: center;
+      position: relative;
     }
 
     .duotafel {
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
     }
 
     .tafels {
@@ -121,6 +96,22 @@
       border-radius: 4px;
     }
 
+    .leraar-bureau {
+      position: absolute;
+      top: -80px;
+      left: 0;
+      width: 140px;
+      height: 60px;
+      background: #c8d6e5;
+      border: 3px solid #3b3b3b;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
     @media (max-width: 600px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -130,15 +121,12 @@
 </head>
 <body>
   <header>
-    <h1>Klassenplattegrond – 5×3 Duotafels</h1>
     <button onclick="husselTweetallen()">Nieuwe indeling</button>
   </header>
 
   <div class="container">
-    <p>Elke duotafel bestaat uit twee losse tafels met twee stoelen eronder.</p>
-    <div class="plattegrond-container">
+    <div class="grid" id="plattegrond">
       <div class="leraar-bureau">Bureau leraar</div>
-      <div class="grid" id="plattegrond"></div>
     </div>
   </div>
 
@@ -153,7 +141,7 @@
     function husselTweetallen() {
       const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
       const grid = document.getElementById("plattegrond");
-      grid.innerHTML = "";
+      grid.innerHTML = '<div class="leraar-bureau">Bureau leraar</div>';
 
       for (let i = 0; i < 15; i++) {
         const naam1 = shuffled[i * 2] || "-";
