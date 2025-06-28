@@ -47,11 +47,13 @@ function u008Indeling() {
     rij.style.flexDirection = "row";
     rij.style.justifyContent = "center";
     rij.style.gap = "2em";
+    rij.style.display = "flex";
 
     for (let i = 0; i < tafelsInRij; i++) {
       const naam1 = shuffled[index++] || "-";
       const naam2 = shuffled[index++] || "-";
-      rij.appendChild(maakDuotafel(naam1, naam2));
+      const naam3 = shuffled[index++] || "-";
+      rij.appendChild(maakDrietafel(naam1, naam2, naam3));
     }
 
     grid.appendChild(rij);
@@ -97,6 +99,51 @@ function maakDuotafel(naam1, naam2) {
   duotafel.appendChild(stoelen);
 
   return duotafel;
+}
+
+function maakDrietafel(naam1, naam2, naam3) {
+  const drietafel = document.createElement("div");
+  drietafel.className = "duotafel";
+
+  const tafels = document.createElement("div");
+  tafels.className = "tafels";
+
+  const tafel1 = document.createElement("div");
+  tafel1.className = "tafel";
+  tafel1.textContent = naam1;
+
+  const tafel2 = document.createElement("div");
+  tafel2.className = "tafel";
+  tafel2.textContent = naam2;
+
+  const tafel3 = document.createElement("div");
+  tafel3.className = "tafel";
+  tafel3.textContent = naam3;
+
+  tafels.appendChild(tafel1);
+  tafels.appendChild(tafel2);
+  tafels.appendChild(tafel3);
+
+  const stoelen = document.createElement("div");
+  stoelen.className = "stoelen";
+
+  const stoel1 = document.createElement("div");
+  stoel1.className = "stoel";
+
+  const stoel2 = document.createElement("div");
+  stoel2.className = "stoel";
+
+  const stoel3 = document.createElement("div");
+  stoel3.className = "stoel";
+
+  stoelen.appendChild(stoel1);
+  stoelen.appendChild(stoel2);
+  stoelen.appendChild(stoel3);
+
+  drietafel.appendChild(tafels);
+  drietafel.appendChild(stoelen);
+
+  return drietafel;
 }
 
 document.addEventListener("DOMContentLoaded", () => kiesIndeling("h216"));
