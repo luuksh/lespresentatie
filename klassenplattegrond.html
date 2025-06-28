@@ -7,94 +7,84 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 2em;
+      background: #eef2f7;
       margin: 0;
-      background: radial-gradient(circle at center, #eef2f7, #cfd8e0);
+      padding: 2em;
+      text-align: center;
     }
 
     .container {
       background: white;
       padding: 2em;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.15);
       max-width: 900px;
-      margin: 0 auto;
+      margin: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
     }
 
     h1 {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.2em;
     }
 
     button {
+      background: #007bff;
+      color: white;
       padding: 0.6em 1.2em;
       font-size: 1em;
       border: none;
       border-radius: 8px;
-      background-color: #007bff;
-      color: white;
       cursor: pointer;
       margin-top: 1em;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background: #0056b3;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
-      gap: 2.5em;
-      margin-top: 2em;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolommen met elk 5 rijen verticaal */
+      gap: 2em;
+      margin-top: 2.5em;
       justify-items: center;
     }
 
+    .duotafel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tafels {
+      display: flex;
+    }
+
     .tafel {
-      width: 160px;
-      height: 100px;
-      background: linear-gradient(135deg, #dcdcdc, #f6f6f6);
-      border: 2px solid #666;
-      border-radius: 10px;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+      width: 80px;
+      height: 50px;
+      background: #ddd;
+      border: 2px solid #999;
+      margin: 0 2px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      transform: rotate(-2deg);
-      transition: transform 0.3s ease;
+      font-weight: bold;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
     }
 
-    .tafel:hover {
-      transform: rotate(0deg) scale(1.03);
+    .stoelen {
+      display: flex;
+      justify-content: center;
+      margin-top: 6px;
     }
 
     .stoel {
-      position: absolute;
       width: 18px;
       height: 18px;
-      background-color: #2e3a59;
-      border-radius: 50%;
-    }
-
-    .stoel.left {
-      left: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .stoel.right {
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .namen {
-      font-weight: bold;
-      font-size: 1em;
-      color: #222;
-      z-index: 1;
-      text-align: center;
-      line-height: 1.4em;
+      background: #444;
+      border-radius: 4px;
+      margin: 0 10px;
     }
 
     @media (max-width: 600px) {
@@ -107,7 +97,7 @@
 <body>
   <div class="container">
     <h1>Klassenplattegrond – 5×3 Duotafels</h1>
-    <p>Bekijk hieronder de tafelschikking van vandaag:</p>
+    <p>Elke duotafel heeft twee losse tafeltjes met twee stoelen eronder.</p>
     <button onclick="husselTweetallen()">Nieuwe indeling</button>
 
     <div class="grid" id="plattegrond"></div>
@@ -130,23 +120,39 @@
         const naam1 = shuffled[i * 2] || "-";
         const naam2 = shuffled[i * 2 + 1] || "-";
 
-        const tafel = document.createElement("div");
-        tafel.className = "tafel";
+        const duotafel = document.createElement("div");
+        duotafel.className = "duotafel";
 
-        const stoelL = document.createElement("div");
-        stoelL.className = "stoel left";
+        const tafels = document.createElement("div");
+        tafels.className = "tafels";
 
-        const stoelR = document.createElement("div");
-        stoelR.className = "stoel right";
+        const tafel1 = document.createElement("div");
+        tafel1.className = "tafel";
+        tafel1.textContent = naam1;
 
-        const namen = document.createElement("div");
-        namen.className = "namen";
-        namen.textContent = `${naam1} & ${naam2}`;
+        const tafel2 = document.createElement("div");
+        tafel2.className = "tafel";
+        tafel2.textContent = naam2;
 
-        tafel.appendChild(stoelL);
-        tafel.appendChild(stoelR);
-        tafel.appendChild(namen);
-        grid.appendChild(tafel);
+        tafels.appendChild(tafel1);
+        tafels.appendChild(tafel2);
+
+        const stoelen = document.createElement("div");
+        stoelen.className = "stoelen";
+
+        const stoel1 = document.createElement("div");
+        stoel1.className = "stoel";
+
+        const stoel2 = document.createElement("div");
+        stoel2.className = "stoel";
+
+        stoelen.appendChild(stoel1);
+        stoelen.appendChild(stoel2);
+
+        duotafel.appendChild(tafels);
+        duotafel.appendChild(stoelen);
+
+        grid.appendChild(duotafel);
       }
     }
 
