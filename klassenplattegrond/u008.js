@@ -22,6 +22,7 @@ export function u008Indeling(leerlingen) {
       const naam2 = shuffled[index++] || "-";
       const naam3 = shuffled[index++] || "-";
       const tafel = maakDrietafel(naam1, naam2, naam3);
+      tafel.classList.add("fade-in");
       kolom.appendChild(tafel);
     }
 
@@ -38,6 +39,7 @@ export function u008Indeling(leerlingen) {
     const naam1 = shuffled[index++] || "-";
     const naam2 = shuffled[index++] || "-";
     const tafel = maakDuotafel(naam1, naam2);
+    tafel.classList.add("fade-in");
     rechterKolom.appendChild(tafel);
   }
 
@@ -47,7 +49,7 @@ export function u008Indeling(leerlingen) {
 
 function maakDuotafel(naam1, naam2) {
   const duotafel = document.createElement("div");
-  duotafel.className = "duotafel";
+  duotafel.className = "duotafel fade-in";
 
   const tafels = document.createElement("div");
   tafels.className = "tafels";
@@ -83,7 +85,7 @@ function maakDuotafel(naam1, naam2) {
 
 function maakDrietafel(naam1, naam2, naam3) {
   const drietafel = document.createElement("div");
-  drietafel.className = "duotafel";
+  drietafel.className = "duotafel fade-in";
 
   const tafels = document.createElement("div");
   tafels.className = "tafels";
