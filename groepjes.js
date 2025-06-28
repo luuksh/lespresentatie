@@ -1,4 +1,4 @@
-export function groepjesIndeling(leerlingen) {
+export function groepjesIndeling(leerlingen, aantalVier, aantalVijf) {
   const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
@@ -10,7 +10,11 @@ export function groepjesIndeling(leerlingen) {
   wrapper.style.justifyContent = "center";
 
   let index = 0;
-  const groepGroottes = [4, 4, 4, 4, 4, 5, 5];
+
+  const groepGroottes = [
+    ...Array(aantalVier).fill(4),
+    ...Array(aantalVijf).fill(5)
+  ];
 
   groepGroottes.forEach(grootte => {
     const groepje = document.createElement("div");
