@@ -1,5 +1,5 @@
 export function u008Indeling(leerlingen) {
-  const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
+  const shuffled = [...leerlingen].sort(() => Math.random() - 0.5);
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
@@ -18,12 +18,8 @@ export function u008Indeling(leerlingen) {
     kolom.style.gap = "2em";
 
     for (let r = 0; r < 4; r++) {
-      const naam1 = shuffled[index++] || "-";
-      const naam2 = shuffled[index++] || "-";
-      const naam3 = shuffled[index++] || "-";
-      const tafel = maakDrietafel(naam1, naam2, naam3);
-      tafel.classList.add("fade-in");
-      kolom.appendChild(tafel);
+      const namen = [shuffled[index++] || "-", shuffled[index++] || "-", shuffled[index++] || "-"];
+      kolom.appendChild(maakTafel(namen));
     }
 
     rijContainer.appendChild(kolom);
@@ -36,94 +32,28 @@ export function u008Indeling(leerlingen) {
   rechterKolom.style.gap = "2em";
 
   for (let r = 0; r < 3; r++) {
-    const naam1 = shuffled[index++] || "-";
-    const naam2 = shuffled[index++] || "-";
-    const tafel = maakDuotafel(naam1, naam2);
-    tafel.classList.add("fade-in");
-    rechterKolom.appendChild(tafel);
+    const namen = [shuffled[index++] || "-", shuffled[index++] || "-"];
+    rechterKolom.appendChild(maakTafel(namen));
   }
 
   rijContainer.appendChild(rechterKolom);
   grid.appendChild(rijContainer);
 }
 
-function maakDuotafel(naam1, naam2) {
-  const duotafel = document.createElement("div");
-  duotafel.className = "duotafel fade-in";
+function maakTafel(namen) {
+  const tafelContainer = document.createElement("div");
+  tafelContainer.className = "duotafel fade-in";
 
   const tafels = document.createElement("div");
   tafels.className = "tafels";
 
-  const tafel1 = document.createElement("div");
-  tafel1.className = "tafel";
-  tafel1.textContent = naam1;
+  namen.forEach(naam => {
+    const tafel = document.createElement("div");
+    tafel.className = "tafel";
+    tafel.textContent = naam;
+    tafels.appendChild(tafel);
+  });
 
-  const tafel2 = document.createElement("div");
-  tafel2.className = "tafel";
-  tafel2.textContent = naam2;
-
-  tafels.appendChild(tafel1);
-  tafels.appendChild(tafel2);
-
-  const stoelen = document.createElement("div");
-  stoelen.className = "stoelen";
-
-  const stoel1 = document.createElement("div");
-  stoel1.className = "stoel";
-
-  const stoel2 = document.createElement("div");
-  stoel2.className = "stoel";
-
-  stoelen.appendChild(stoel1);
-  stoelen.appendChild(stoel2);
-
-  duotafel.appendChild(tafels);
-  duotafel.appendChild(stoelen);
-
-  return duotafel;
-}
-
-function maakDrietafel(naam1, naam2, naam3) {
-  const drietafel = document.createElement("div");
-  drietafel.className = "duotafel fade-in";
-
-  const tafels = document.createElement("div");
-  tafels.className = "tafels";
-
-  const tafel1 = document.createElement("div");
-  tafel1.className = "tafel";
-  tafel1.textContent = naam1;
-
-  const tafel2 = document.createElement("div");
-  tafel2.className = "tafel";
-  tafel2.textContent = naam2;
-
-  const tafel3 = document.createElement("div");
-  tafel3.className = "tafel";
-  tafel3.textContent = naam3;
-
-  tafels.appendChild(tafel1);
-  tafels.appendChild(tafel2);
-  tafels.appendChild(tafel3);
-
-  const stoelen = document.createElement("div");
-  stoelen.className = "stoelen";
-
-  const stoel1 = document.createElement("div");
-  stoel1.className = "stoel";
-
-  const stoel2 = document.createElement("div");
-  stoel2.className = "stoel";
-
-  const stoel3 = document.createElement("div");
-  stoel3.className = "stoel";
-
-  stoelen.appendChild(stoel1);
-  stoelen.appendChild(stoel2);
-  stoelen.appendChild(stoel3);
-
-  drietafel.appendChild(tafels);
-  drietafel.appendChild(stoelen);
-
-  return drietafel;
+  tafelContainer.appendChild(tafels);
+  return tafelContainer;
 }
