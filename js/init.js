@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("js/leerlingen_per_klas.json");
     const klassen = await res.json();
 
-    Object.keys(klassen).forEach(klas => {
+    for (const klas of Object.keys(klassen)) {
       const option = document.createElement("option");
       option.value = klas;
       option.textContent = `Klas ${klas}`;
       klasSelect.appendChild(option);
-    });
+    }
 
-    klasSelect.value = "G1D"; // standaardkeuze
+    klasSelect.value = "G1D"; // standaard selectie
   } catch (err) {
     console.error("Fout bij laden van klassen:", err);
     klasSelect.innerHTML = '<option>Fout bij laden</option>';
   }
 
-  // 🟦 Indeling laden met kleuren en layout-klasse
+  // 🟦 Past kleuren en indeling toe
   function laadIndeling() {
     const kleuren = {
       h216: '#007bff',
@@ -39,15 +39,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const type = indelingSelect.value;
 
-    // kleuren toepassen op root
+    // Pas kleuren aan op basis van type
     document.documentElement.style.setProperty('--primaire-kleur', kleuren[type] || '#007bff');
     document.documentElement.style.setProperty('--hover-kleur', kleuren[type] || '#005fc1');
     document.documentElement.style.setProperty('--achtergrond', achtergronden[type] || '#eef2f7');
 
-    // layoutklasse wisselen voor groepjes
-    grid.classList.toggle("groepjes-layout", type === "groepjes");
+    // Verwijder layoutklasse en voeg indien nodig toe
+    grid.classList.remove("groepjes-layout");
+    if (type === "groepjes") {
+      grid.classList.add("groepjes-layout");
+    }
 
-    // fade-out, dan opnieuw vullen
+    // Fade-out en opnieuw opbouwen
     grid.style.opacity = 0;
     setTimeout(() => {
       grid.innerHTML = "";
