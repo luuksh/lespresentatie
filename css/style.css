@@ -63,26 +63,30 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 1em;
   overflow: hidden;
 }
 
 .grid {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 0.8em;
+  gap: 1.2em;
+  padding: 0.5em;
   transition: opacity 0.5s ease;
 }
 
+/* Tafelrijen (voor h216) */
 .tafelrij {
   display: flex;
   justify-content: center;
   gap: 1.5em;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
+/* Duotafels (voor h216 & u008) */
 .duotafel {
   display: flex;
   flex-direction: column;
@@ -130,6 +134,29 @@ body {
   animation: slideIn 0.4s ease;
 }
 
+/* Groepjes (meeschalend) */
+.groepje {
+  background: var(--groep-kleur);
+  border: 2px dashed #ccc;
+  padding: 1em;
+  border-radius: 14px;
+  flex: 1 1 200px;
+  max-width: 220px;
+  min-height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.groepje:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Bureau bovenaan */
 .bureau-rij {
   display: flex;
   justify-content: flex-start;
@@ -161,7 +188,7 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobiel: onder elkaar */
+/* Mobiel */
 @media (max-width: 600px) {
   .tafelrij {
     flex-direction: column;
