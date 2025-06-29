@@ -8,23 +8,36 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
       height: 100%;
+      background-color: #f9f9f9;
     }
 
     iframe {
-      border: none;
       width: 100%;
       height: 100%;
+      border: none;
       display: block;
+    }
+
+    noscript {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-family: sans-serif;
+      color: #333;
     }
   </style>
 </head>
 <body>
   <iframe 
     src="leeglokaal.html" 
-    title="Klassenplattegrond" 
+    title="Interactieve klassenindeling"
+    loading="lazy"
     allowfullscreen
   ></iframe>
+
+  <noscript>
+    Je browser ondersteunt geen JavaScript of heeft dit uitgeschakeld. Activeer JavaScript om de presentatie te bekijken.
+  </noscript>
 </body>
 </html>
