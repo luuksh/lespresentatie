@@ -3,10 +3,19 @@ export function h216Indeling(leerlingen) {
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
-  for (let i = 0; i < 15; i++) {
-    const naam1 = shuffled[i * 2] || "-";
-    const naam2 = shuffled[i * 2 + 1] || "-";
-    grid.appendChild(maakDuotafel(naam1, naam2));
+  let index = 0;
+
+  for (let rij = 0; rij < 5; rij++) {
+    const rijElement = document.createElement("div");
+    rijElement.className = "tafelrij";
+
+    for (let kolom = 0; kolom < 3; kolom++) {
+      const naam1 = shuffled[index++] || "-";
+      const naam2 = shuffled[index++] || "-";
+      rijElement.appendChild(maakDuotafel(naam1, naam2));
+    }
+
+    grid.appendChild(rijElement);
   }
 }
 
@@ -45,17 +54,3 @@ function maakDuotafel(naam1, naam2) {
 
   return duotafel;
 }
-
-// CSS-animatie toevoegen via JavaScript of stylesheet:
-// .fade-in {
-//   opacity: 0;
-//   transform: translateY(10px);
-//   animation: fadeIn 0.4s ease forwards;
-// }
-//
-// @keyframes fadeIn {
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
