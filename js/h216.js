@@ -1,5 +1,5 @@
 export function h216Indeling(leerlingen) {
-  const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
+  const shuffled = [...leerlingen].sort(() => Math.random() - 0.5);
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
@@ -26,31 +26,13 @@ function maakDuotafel(naam1, naam2) {
   const tafels = document.createElement("div");
   tafels.className = "tafels";
 
-  const tafel1 = document.createElement("div");
-  tafel1.className = "tafel";
-  tafel1.textContent = naam1;
-
-  const tafel2 = document.createElement("div");
-  tafel2.className = "tafel";
-  tafel2.textContent = naam2;
-
-  tafels.appendChild(tafel1);
-  tafels.appendChild(tafel2);
-
-  const stoelen = document.createElement("div");
-  stoelen.className = "stoelen";
-
-  const stoel1 = document.createElement("div");
-  stoel1.className = "stoel";
-
-  const stoel2 = document.createElement("div");
-  stoel2.className = "stoel";
-
-  stoelen.appendChild(stoel1);
-  stoelen.appendChild(stoel2);
+  [naam1, naam2].forEach(naam => {
+    const tafel = document.createElement("div");
+    tafel.className = "tafel";
+    tafel.textContent = naam;
+    tafels.appendChild(tafel);
+  });
 
   duotafel.appendChild(tafels);
-  duotafel.appendChild(stoelen);
-
   return duotafel;
 }
