@@ -68,18 +68,44 @@ body {
   transition: opacity 0.5s ease;
 }
 
+/* ✅ Groepjes layout exact 4x4 en schermvullend */
 .grid.groepjes-layout {
-  width: 780px;
-  height: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 1.2em;
+  justify-items: center;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
   padding: 1em;
-  gap: 0.8em;
   box-sizing: border-box;
 }
 
+/* ✅ Ieder groepje is 2x2 tafels */
+.groepje {
+  background: var(--groep-kleur);
+  border: 2px dashed #ccc;
+  padding: 0.8em;
+  border-radius: 12px;
+  width: 180px;
+  height: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-size: 0.85em;
+  gap: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.groepje:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Rij met duotafels (bij H216/U008) */
 .tafelrij {
   display: flex;
   justify-content: center;
@@ -100,6 +126,7 @@ body {
   gap: 6px;
 }
 
+/* ✅ Schooltafeltjes */
 .tafel {
   width: 80px;
   height: 52px;
@@ -120,29 +147,7 @@ body {
   background: #ede4d4;
 }
 
-/* Groepjes */
-.groepje {
-  background: var(--groep-kleur);
-  border: 2px dashed #ccc;
-  padding: 0.6em;
-  border-radius: 12px;
-  flex: 0 0 calc(25% - 0.8em);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 90px;
-  font-size: 0.8em;
-  gap: 4px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.groepje:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Bureau */
+/* Bureau van de docent */
 .bureau-rij {
   display: flex;
   justify-content: flex-start;
@@ -163,13 +168,13 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* Animaties */
+/* Animatie bij binnenkomst */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Mobiel */
+/* 📱 Mobiele weergave */
 @media (max-width: 600px) {
   body {
     padding: 1em;
@@ -193,13 +198,18 @@ body {
   }
 
   .groepje {
-    max-width: 100%;
-    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
   }
 
   .grid.groepjes-layout {
     width: 100%;
     height: auto;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 }
