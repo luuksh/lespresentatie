@@ -11,7 +11,7 @@ const modules = {
  */
 async function laadLeerlingen(klasnaam = "G1D") {
   try {
-    const response = await fetch("leerlingen_per_klas.json");
+    const response = await fetch("js/leerlingen_per_klas.json");
     if (!response.ok) throw new Error("Netwerkfout bij ophalen JSON");
 
     const data = await response.json();
