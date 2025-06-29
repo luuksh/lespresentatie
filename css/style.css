@@ -69,6 +69,14 @@
       animation: fadeIn 0.6s ease;
     }
 
+.tafelrij {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+
     .tafels {
       display: flex;
       gap: 6px;
