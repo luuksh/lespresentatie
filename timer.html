@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Klasindeling + Timer</title>
+  <title>Timer</title>
   <style>
     :root {
       --primaire-kleur: #007bff;
       --hover-kleur: #005fc1;
-      --achtergrond: #f0f2f5;
       --groep-kleur: #ffffff;
-      --tafelkleur: #f5f0e6;
-      --tafelrand: #b09c7c;
     }
 
     * {
@@ -20,67 +17,14 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--achtergrond);
+      background: #f0f2f5;
       margin: 0;
       padding: 2em;
-      min-height: 100vh;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 2em;
-    }
-
-    .container {
-      background: var(--groep-kleur);
-      padding: 2em;
-      width: fit-content;
-      max-width: none;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-    }
-
-    .grid.groepjes-layout {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, auto);
-      gap: 1.2em;
-      justify-items: center;
-      align-items: center;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 1em;
-    }
-
-    .groepje {
-      background: var(--groep-kleur);
-      border: 2px dashed #ccc;
-      padding: 0.8em;
-      border-radius: 12px;
-      width: 180px;
-      height: 120px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      align-items: center;
-      justify-items: center;
-      font-size: 0.85em;
-      gap: 6px;
-    }
-
-    .tafel {
-      width: 80px;
-      height: 52px;
-      background: var(--tafelkleur);
-      border: 2px solid var(--tafelrand);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      font-weight: bold;
+      align-items: flex-start;
     }
 
-    /* ✅ Timer */
     .timer-container {
       width: 220px;
       background: var(--groep-kleur);
@@ -127,8 +71,8 @@
 
     @media (max-width: 800px) {
       body {
-        flex-direction: column;
-        align-items: stretch;
+        padding: 1em;
+        justify-content: stretch;
       }
     }
   </style>
@@ -147,41 +91,9 @@
     <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
   </div>
 
-  <div class="container">
-    <div class="grid groepjes-layout" id="plattegrond"></div>
-  </div>
-
   <script>
-    // ✅ Demo-leerlingen (20 leerlingen)
-    const leerlingen = Array.from({ length: 20 }, (_, i) => `Leerling ${i + 1}`);
-
-    function renderGroepjes(leerlingen) {
-      const grid = document.getElementById("plattegrond");
-      grid.innerHTML = "";
-
-      const shuffled = [...leerlingen].sort(() => 0.5 - Math.random());
-      const groepGroottes = [4, 4, 4, 4, 4]; // 5 groepjes van 4
-
-      let index = 0;
-      groepGroottes.forEach(grootte => {
-        const groepje = document.createElement("div");
-        groepje.className = "groepje";
-
-        for (let j = 0; j < grootte; j++) {
-          const tafel = document.createElement("div");
-          tafel.className = "tafel";
-          tafel.textContent = shuffled[index++];
-          groepje.appendChild(tafel);
-        }
-
-        grid.appendChild(groepje);
-      });
-    }
-
-    renderGroepjes(leerlingen);
-
-    // ✅ Timerfunctionaliteit
     let timerInterval;
+
     function startTimer() {
       const min = parseInt(document.getElementById("minuten").value) || 0;
       const sec = parseInt(document.getElementById("seconden").value) || 0;
