@@ -12,16 +12,17 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--achtergrond);
   margin: 0;
   padding: 2em;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--achtergrond);
   min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
+/* 🎛 Keuzemenu */
 .indeling-knop {
   display: flex;
   gap: 1em;
@@ -30,7 +31,7 @@ body {
 
 .indeling-knop select {
   background: var(--primaire-kleur);
-  color: white;
+  color: #fff;
   border: none;
   padding: 0.5em 1.2em;
   border-radius: 8px;
@@ -44,13 +45,14 @@ body {
   background: var(--hover-kleur);
 }
 
+/* 🧱 Algemene container */
 .container {
   background: var(--groep-kleur);
   padding: 2em;
   border-radius: 20px;
-  width: fit-content;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  width: fit-content;
 }
 
 .grid-wrapper {
@@ -67,7 +69,7 @@ body {
   transition: opacity 0.5s ease;
 }
 
-/* ✅ GROEPJES-INDELING */
+/* 🟪 Groepjesweergave: 4x4 layout */
 .grid.groepjes-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -80,11 +82,12 @@ body {
   padding: 1em;
 }
 
-/* ✅ GROEPJE: 2x2 tafels */
+/* ⬛ Groepje met 4 tafels (2x2) */
 .groepje {
   background: var(--groep-kleur);
   border: 2px dashed #ccc;
   border-radius: 12px;
+  padding: 0.8em;
   width: 180px;
   height: 120px;
   display: grid;
@@ -102,7 +105,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ✅ H216/U008 tafels */
+/* 🪑 Duotafels (zoals H216/U008) */
 .tafelrij {
   display: flex;
   justify-content: center;
@@ -123,7 +126,7 @@ body {
   gap: 6px;
 }
 
-/* ✅ Schooltafeltjes */
+/* 🪑 Tafeltjes */
 .tafel {
   width: 80px;
   height: 52px;
@@ -135,7 +138,9 @@ body {
   justify-content: center;
   font-size: 0.85em;
   font-weight: bold;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.1), 
+    0 2px 4px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
@@ -144,7 +149,7 @@ body {
   background: #ede4d4;
 }
 
-/* ✅ Bureau leraar */
+/* 👩‍🏫 Bureau van de docent */
 .bureau-rij {
   display: flex;
   justify-content: flex-start;
@@ -165,17 +170,17 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* ✅ Fade-in effect */
+/* ✨ Fade-in animatie */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* 📱 Mobiele weergave */
+/* 📱 Mobiele optimalisatie */
 @media (max-width: 600px) {
   body {
-    padding: 1em;
     flex-direction: column;
+    padding: 1em;
   }
 
   .container {
