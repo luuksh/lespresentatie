@@ -10,31 +10,70 @@
       padding: 0;
       height: 100%;
       background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      gap: 2em;
+      padding: 2em;
+      box-sizing: border-box;
     }
 
     iframe {
-      width: 100%;
-      height: 100%;
       border: none;
-      display: block;
+      border-radius: 16px;
+      box-shadow: 0 0 24px rgba(0,0,0,0.05);
+    }
+
+    .iframe-lokaal {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .iframe-timer {
+      width: 260px;
+      min-width: 220px;
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .iframe-timer {
+        width: 100%;
+        height: 180px;
+      }
     }
 
     noscript {
       position: absolute;
       top: 1rem;
       left: 1rem;
-      font-family: sans-serif;
       color: #333;
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="leeglokaal.html" 
-    title="Interactieve klassenindeling"
-    loading="lazy"
-    allowfullscreen
-  ></iframe>
+  <div class="layout">
+    <iframe 
+      class="iframe-lokaal"
+      src="leeglokaal.html" 
+      title="Interactieve klassenindeling"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
+
+    <iframe 
+      class="iframe-timer"
+      src="timer.html" 
+      title="Timer of alarm"
+      loading="lazy"
+    ></iframe>
+  </div>
 
   <noscript>
     Je browser ondersteunt geen JavaScript of heeft dit uitgeschakeld. Activeer JavaScript om de presentatie te bekijken.
