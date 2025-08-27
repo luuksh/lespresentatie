@@ -225,3 +225,15 @@ body {
 /* optioneel: als je een leeg vakje toevoegt in JS */
 .groepje .placeholder { visibility: hidden; }
 
+.opdracht-balk {
+  background: var(--primaire-kleur);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
