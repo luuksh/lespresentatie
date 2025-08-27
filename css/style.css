@@ -228,12 +228,14 @@ body {
 .opdracht-balk {
   background: var(--primaire-kleur);
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 600;
   text-align: center;
-  padding: 12px;
+  padding: 14px 20px;
   border-radius: 10px;
-  margin-bottom: 1em;
+  margin: 0 auto 1.5em auto; /* auto marge om te centreren */
+  width: fit-content;        /* balk wordt zo breed als de tekst */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 
