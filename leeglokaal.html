@@ -48,12 +48,14 @@
   </div>
 <script>
 (() => {
-  // Kies hier de selector die op jouw naamkaartjes past:
-  const CARD_SELECTOR = '.seat, .student, .desk-item, .naamkaartje';
+  // === Instellingen ===
+  const GRID_ID = 'plattegrond';
+  // Pas dit aan als jouw kaartjes andere klassennamen hebben:
+  const CARD_SELECTOR = '.seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
 
-  // (optioneel) als je lokaal per lokaal/klas wilt onthouden:
-  const roomSel = document.querySelector('select#lokaal, select[name="room"], .room-select');
-  const classSel = document.querySelector('select#klas, select[name="class"], .class-select');
+  // Jouw dropdowns:
+  const roomSel  = document.getElementById('indelingSelect');
+  const classSel = document.getElementById('klasSelect');
 
   const keyForStorage = () => {
     const r = roomSel?.value || 'room';
@@ -61,40 +63,53 @@
     return `absent_${r}_${c}`;
   };
 
-  // Toggle op klik
-  function attachClickToggles() {
-    document.querySelectorAll(CARD_SELECTOR).forEach(el => {
-      el.addEventListener('click', () => {
-        el.classList.toggle('is-absent');
-        persist();
-      }, { passive: true });
+  // Toggle met event delegation (werkt ook voor later ingevoegde elementen)
+  function attachDelegatedClick() {
+    const grid = document.getElementById(GRID_ID);
+    if (!grid) return;
+    grid.addEventListener('click', (e) => {
+      const card = e.target.closest(CARD_SELECTOR);
+      if (!card || !grid.contains(card)) return;
+      card.classList.toggle('is-absent');
+      persist();
     });
   }
 
-  // Opslaan & herstellen (localStorage)
+  // Opslaan & herstellen
   function persist() {
-    const ids = Array.from(document.querySelectorAll(CARD_SELECTOR))
-      .map((el, i) => ({ el, i }))
-      .filter(x => x.el.classList.contains('is-absent'))
-      .map(x => x.i); // we bewaren de index in de grid
-    try { localStorage.setItem(keyForStorage(), JSON.stringify(ids)); } catch {}
+    const cards = Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`));
+    const idxs = cards
+      .map((el, i) => el.classList.contains('is-absent') ? i : null)
+      .filter(i => i !== null);
+    try { localStorage.setItem(keyForStorage(), JSON.stringify(idxs)); } catch {}
   }
 
   function restore() {
     const raw = localStorage.getItem(keyForStorage());
-    if (!raw) return;
-    let idxs = [];
-    try { idxs = JSON.parse(raw) || []; } catch {}
-    const cards = Array.from(document.querySelectorAll(CARD_SELECTOR));
+    const idxs = raw ? (JSON.parse(raw) || []) : [];
+    const cards = Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`));
     cards.forEach((el, i) => el.classList.toggle('is-absent', idxs.includes(i)));
   }
 
-  // Als lokaal/klas wisselt: andere set laden
+  // Als de grid-inhoud wijzigt (init.js rendert): opnieuw herstellen
+  function watchGridChanges() {
+    const grid = document.getElementById(GRID_ID);
+    if (!grid) return;
+    const mo = new MutationObserver(() => restore());
+    mo.observe(grid, { childList: true, subtree: true });
+  }
+
+  // Wissel lokaal/klas => andere set
   roomSel?.addEventListener('change', restore);
   classSel?.addEventListener('change', restore);
 
   // Init
-  const init = () => { attachClickToggles(); restore(); };
+  const init = () => {
+    attachDelegatedClick();
+    watchGridChanges();
+    // kleine delay voor eerste render door init.js, daarna herstellen
+    setTimeout(restore, 0);
+  };
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
