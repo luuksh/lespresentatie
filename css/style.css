@@ -357,4 +357,44 @@ body {
 .is-absent, .is-absent * {
   text-decoration: line-through;
 }
+/* klikbaar */
+#plattegrond .tafel,
+#plattegrond .seat,
+#plattegrond .student,
+#plattegrond .desk-item,
+#plattegrond .naamkaartje,
+#plattegrond .kaartje,
+#plattegrond .student-card,
+#plattegrond .desk {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* gemarkeerd/afwezig – iets hogere specificiteit zodat dit wint */
+#plattegrond .is-absent {
+  position: relative;
+  outline: 3px solid #e53935 !important;
+  border-radius: 12px;
+  opacity: .92;
+  box-shadow: 0 0 0 3px rgba(229,57,53,.18) inset;
+}
+#plattegrond .is-absent::after {
+  content: "AFWEZIG";
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-weight: 800; letter-spacing: .06em;
+  color: #e53935;
+  text-shadow: 0 1px 0 #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(229,57,53,.10) 0 10px,
+    rgba(229,57,53,.22) 10px 20px
+  );
+  border-radius: 12px;
+  pointer-events: none;   /* overlay blokkeert geen kliks */
+}
+#plattegrond .is-absent,
+#plattegrond .is-absent * {
+  text-decoration: line-through;
+}
 
