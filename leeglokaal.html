@@ -116,55 +116,48 @@
 </script>
 <script>
 (() => {
-  const SEND_TO = 'l.hijne@cgu.nl';                 // ontvanger
-  const gridId  = 'plattegrond';
-  const kaartSelector = '.tafel';                   // jouw klikbare kaartjes
+  const GRID_ID = 'plattegrond';
+  const CARD = '.tafel';
   const klasSel = document.getElementById('klasSelect');
+  const statusEl = document.getElementById('save-status');
+  const key = "absenties_dag"; // centrale opslag voor de dag
 
-  function formatDateNL(d=new Date()){
-    // Tijdzone: browser pakt jouw locale; onderwerp/body zijn informatief
-    const dtf = new Intl.DateTimeFormat('nl-NL', {
-      weekday:'long', year:'numeric', month:'long', day:'numeric',
-      hour:'2-digit', minute:'2-digit'
-    });
-    return dtf.format(d);
+  function nowNL(){
+    return new Intl.DateTimeFormat('nl-NL',{
+      year:'numeric',month:'2-digit',day:'2-digit',
+      hour:'2-digit',minute:'2-digit'
+    }).format(new Date());
   }
 
   function getAbsentNames(){
-    const cards = Array.from(document.querySelectorAll(`#${gridId} ${kaartSelector}.is-absent`));
-    // De naam staat bij jou in de .tafel (innerText). Pas dit aan als je een child gebruikt.
-    return cards.map(el => el.innerText.trim()).filter(Boolean);
+    return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
+      .map(el=>el.innerText.trim()).filter(Boolean);
   }
 
-  function createMailto({ klas, names }){
-    const subject = `absenties – ${klas || 'onbekende klas'}`;
-    const dateStr = formatDateNL();
-    const bodyLines = [
-      `Klas: ${klas || '(niet geselecteerd)'}`,
-      `Datum/tijd: ${dateStr}`,
-      ``,
-      `Afwezigen (${names.length}):`,
-      names.length ? names.map(n => `• ${n}`).join('\n') : '— geen —',
-      ``,
-      `Verzonden vanaf de klassenplattegrond-tool.`
-    ];
-    const body = bodyLines.join('\n');
-    return `mailto:${encodeURIComponent(SEND_TO)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-
-  function handleSend(){
-    const klas = klasSel?.value || '';
+  function saveSnapshot(){
+    const klas = klasSel?.value || 'onbekend';
     const names = getAbsentNames();
-    const url = createMailto({ klas, names });
-    // Open standaard mailclient met ingevulde mail
-    window.location.href = url;
+    const entry = { klas, datetime:new Date().toISOString(), names };
+    let all=[];
+    try{ all=JSON.parse(localStorage.getItem(key))||[]; }catch{}
+    all.push(entry);
+    localStorage.setItem(key, JSON.stringify(all));
+    flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
   }
 
-  // knop koppelen
-  const btn = document.getElementById('send-absenties-btn');
-  if (btn) btn.addEventListener('click', handleSend);
+  function flash(msg){
+    if(!statusEl) return;
+    statusEl.textContent=msg;
+    statusEl.style.opacity='1';
+    clearTimeout(flash.t);
+    flash.t=setTimeout(()=>{statusEl.style.opacity='0';},2500);
+  }
+
+  document.getElementById('save-absenties-btn')
+    ?.addEventListener('click', saveSnapshot);
 })();
 </script>
+
   
 </body>
 </html>
