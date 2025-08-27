@@ -120,7 +120,7 @@
   const CARD = '.tafel';
   const klasSel = document.getElementById('klasSelect');
   const statusEl = document.getElementById('save-status');
-  const key = "absenties_dag"; // centrale opslag voor de dag
+  const key = `absenties_${new Date().toISOString().slice(0,10)}`; // bv. absenties_2025-08-27
 
   function nowNL(){
     return new Intl.DateTimeFormat('nl-NL',{
