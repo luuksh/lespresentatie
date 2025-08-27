@@ -266,3 +266,64 @@ body {
   white-space: nowrap;
 }
 
+/* ===== Instructie-balk (geen knoplook, echt een paneel) ===== */
+.opdracht-balk{
+  --bg1: #f7fbff;
+  --bg2: #eef6ff;
+  --stroke: #cfe2ff;
+  --accent: var(--primaire-kleur);
+  --text: #0f1a2a;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 18px 14px 16px;
+  border-radius:14px;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  border:1px solid var(--stroke);
+  box-shadow: 0 6px 20px rgba(16, 42, 67, .06);
+  position:relative;
+  white-space:normal;        /* mag afbreken */
+  max-width: 640px;          /* hou ‘m elegant */
+}
+
+/* slank accentbalkje links */
+.opdracht-balk::before{
+  content:"";
+  position:absolute;
+  left:0; top:10px; bottom:10px;
+  width:6px;
+  border-radius:6px;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.04) inset;
+}
+
+/* icoon + tekst */
+.opdracht-icoon{
+  font-size:22px; line-height:1; margin-left:6px;
+}
+.opdracht-tekst strong{
+  color:var(--text);
+  font-size:18px; font-weight:800; letter-spacing:.2px;
+  display:block;
+}
+.opdracht-tekst small{
+  color:#4a5a70; opacity:.9; font-size:13px; font-weight:500;
+}
+
+/* kleurvarianten (optioneel) */
+.opdracht-balk.is-info   { --bg1:#f6fbff; --bg2:#eef7ff; --stroke:#cfe6ff; --accent:#3aa0ff; }
+.opdracht-balk.is-success{ --bg1:#f5fff7; --bg2:#edf9f0; --stroke:#cfead7; --accent:#28a745; }
+.opdracht-balk.is-warning{ --bg1:#fffaf3; --bg2:#fff4e5; --stroke:#f8deb8; --accent:#f59f00; }
+
+/* responsief in jouw topbar */
+.topbar{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:1em;
+}
+@media (max-width: 900px){
+  .topbar{ flex-direction:column; align-items:stretch; }
+  .opdracht-balk{ max-width:none; }
+}
+
+/* voorkom “knopgevoel”: geen hover-donkerder, alleen mini-lift bij focus met keyboard */
+.opdracht-balk:focus-within{ outline:2px solid rgba(0,0,0,.08); outline-offset:2px; }
