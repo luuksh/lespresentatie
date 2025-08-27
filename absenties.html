@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dagoverzicht absenties</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Segoe UI, sans-serif; padding:2em; }
+    h3 { margin-top:0; }
+    .btn-primary, .btn-secondary { margin-right:.5em; margin-top:.3em; }
+    .klas-block { margin-bottom:1.5em; }
+    pre { background:#f5f5f5; padding:.5em; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h3>Dagoverzicht absenties</h3>
+  <div id="absentie-lijst"></div>
+  <button id="clear-day-btn" class="btn-secondary">Wis dagoverzicht</button>
+
+  <script>
+  (() => {
+    const key = "absenties_dag";
+    const listEl = document.getElementById('absentie-lijst');
+
+    function render(){
+      let all = [];
+      try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+      if (!all.length){
+        listEl.innerHTML = "<em>Geen absenties opgeslagen vandaag.</em>";
+        return;
+      }
+      const byClass = {};
+      all.forEach(e=>{
+        if(!byClass[e.klas]) byClass[e.klas] = [];
+        byClass[e.klas].push(...e.names);
+      });
+
+      let html="";
+      Object.keys(byClass).forEach(klas=>{
+        const unique=[...new Set(byClass[klas])];
+        html+=`<div class="klas-block"><h4>${klas}</h4>
+          <pre>${unique.join("\\n") || "— geen —"}</pre>
+          <button class="btn-primary copy-btn" data-klas="${klas}">Kopieer ${klas}</button>
+        </div>`;
+      });
+      html+=`<button id="copy-all-btn" class="btn-primary">Kopieer alles</button>`;
+      listEl.innerHTML=html;
+
+      listEl.querySelectorAll('.copy-btn').forEach(btn=>{
+        btn.addEventListener('click',()=>copyClass(btn.dataset.klas));
+      });
+      document.getElementById('copy-all-btn')
+        ?.addEventListener('click',copyAll);
+    }
+
+    function copyClass(klas){
+      let all=JSON.parse(localStorage.getItem(key))||[];
+      const names=[...new Set(all.filter(e=>e.klas===klas).map(e=>e.names).flat())];
+      navigator.clipboard.writeText(names.join("\\n"));
+      alert(`Afwezigen ${klas} gekopieerd`);
+    }
+
+    function copyAll(){
+      let all=JSON.parse(localStorage.getItem(key))||[];
+      const byClass={};
+      all.forEach(e=>{
+        if(!byClass[e.klas]) byClass[e.klas]=[];
+        byClass[e.klas].push(...e.names);
+      });
+      let text="";
+      Object.keys(byClass).forEach(klas=>{
+        const unique=[...new Set(byClass[klas])];
+        text+=`${klas}:\\n${unique.join("\\n")}\\n\\n`;
+      });
+      navigator.clipboard.writeText(text.trim());
+      alert("Alle absenties van vandaag gekopieerd.");
+    }
+
+    document.getElementById('clear-day-btn').addEventListener('click',()=>{
+      localStorage.removeItem(key); render();
+    });
+
+    render();
+  })();
+  </script>
+</body>
+</html>
