@@ -214,3 +214,10 @@ body {
     grid-template-rows: auto;
   }
 }
+
+/* 5-persoons groep: 3 kolommen (2 rijen), 1 vakje blijft leeg */
+.groepje[data-size="5"] { grid-template-columns: repeat(3, 1fr); }
+
+/* optioneel: als je een leeg vakje toevoegt in JS */
+.groepje .placeholder { visibility: hidden; }
+
