@@ -397,4 +397,17 @@ body {
 #plattegrond .is-absent * {
   text-decoration: line-through;
 }
+.btn-primary{
+  background: var(--primaire-kleur);
+  color:#fff;
+  border:0;
+  padding:.6em 1em;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,.08);
+  transition: transform .06s ease, background .2s ease;
+}
+.btn-primary:hover{ background: var(--hover-kleur); }
+.btn-primary:active{ transform: translateY(1px); }
 
