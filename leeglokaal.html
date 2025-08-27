@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <!-- Externe stijlen -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- JavaScript-module voor opstarten -->
+  <!-- App init (bestaande logica) -->
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
@@ -25,6 +25,16 @@
     </select>
   </div>
 
+  <!-- ⭐ Standaard-opdrachten balk -->
+  <div id="opdrachtenDock" class="opdrachten-dock">
+    <div class="opdracht-bar">
+      <input id="opdrachtZoek" type="search" placeholder="Zoek opdracht…" />
+      <button id="toonFavorieten">★ Favorieten</button>
+      <button id="toonAlle">Alle</button>
+    </div>
+    <div id="opdrachtLijst" class="opdracht-lijst"></div>
+  </div>
+
   <!-- Hoofdcontainer met plattegrond en leraarsbureau -->
   <div class="container">
     <div class="grid-wrapper">
@@ -36,5 +46,8 @@
       </div>
     </div>
   </div>
+
+  <!-- ⭐ Opdrachten-logica -->
+  <script type="module" src="js/opdrachten.js"></script>
 </body>
 </html>
