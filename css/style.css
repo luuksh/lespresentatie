@@ -17,10 +17,9 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--achtergrond);
   min-height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: block;   /* geen flex meer */
 }
+
 
 /* 🎛 Keuzemenu */
 .indeling-knop {
