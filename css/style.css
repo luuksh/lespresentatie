@@ -324,3 +324,37 @@ body {
 
 /* voorkom “knopgevoel”: geen hover-donkerder, alleen mini-lift bij focus met keyboard */
 .opdracht-balk:focus-within{ outline:2px solid rgba(0,0,0,.08); outline-offset:2px; }
+
+/* Maak elk kaartje klikbaar */
+.seat, .student, .desk-item, .naamkaartje {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Gemarkeerd/afwezig-staat */
+.is-absent {
+  position: relative;
+  outline: 3px solid #e53935;
+  border-radius: 12px;
+  opacity: .85;
+}
+.is-absent::after {
+  content: "AFWEZIG";
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-weight: 800; letter-spacing: .06em;
+  color: #e53935;
+  text-shadow: 0 1px 0 #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(229,57,53,.10) 0 10px,
+    rgba(229,57,53,.22) 10px 20px
+  );
+  border-radius: 12px;
+  pointer-events: none;
+}
+/* Streep door de naam (werkt ook als de naam gewoon tekstknoop is) */
+.is-absent, .is-absent * {
+  text-decoration: line-through;
+}
+
