@@ -4,7 +4,7 @@ export function groepjesIndeling(leerlingen) {
   const totaalGevraagd = aantalVier * 4 + aantalVijf * 5;
 
   const grid = document.getElementById("plattegrond");
-  grid.className = "grid"; // Verwijder 'groepjes-layout' om stylingconflict te voorkomen
+  grid.className = "groepjes-layout"; // geeft de juiste grid-styling
   grid.innerHTML = "";
 
   if (leerlingen.length !== totaalGevraagd) {
@@ -20,13 +20,30 @@ export function groepjesIndeling(leerlingen) {
   const groepGroottes = [...Array(aantalVier).fill(4), ...Array(aantalVijf).fill(5)];
 
   let index = 0;
-  for (const grootte of groepGroottes) {
+  groepGroottes.forEach((grootte, gIdx) => {
+    // container per groep
+    const groep = document.createElement("div");
+    groep.className = "groep";
+
+    const title = document.createElement("div");
+    title.className = "groep-titel";
+    title.textContent = `Groep ${gIdx + 1} (${grootte})`;
+    groep.appendChild(title);
+
+    const roster = document.createElement("div");
+    roster.className = "tafel-grid";
+    // optioneel: iets andere vorm voor 5
+    roster.dataset.size = String(grootte);
+    groep.appendChild(roster);
+
     for (let i = 0; i < grootte; i++) {
       const naam = shuffled[index++];
-      const tafel = document.createElement("div");
-      tafel.className = "tafel";
-      tafel.textContent = naam;
-      grid.appendChild(tafel);
+      const kaart = document.createElement("div");
+      kaart.className = "tafel";
+      kaart.textContent = naam;
+      roster.appendChild(kaart);
     }
-  }
+
+    grid.appendChild(groep);
+  });
 }
