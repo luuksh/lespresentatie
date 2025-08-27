@@ -25,9 +25,12 @@ body {
 /* 🎛 Keuzemenu */
 .indeling-knop {
   display: flex;
-  gap: 1em;
+  flex-direction: column;  /* zet knoppen onder elkaar */
+  gap: 0.6em;              /* iets kleinere ruimte ertussen */
   margin-bottom: 1.5em;
+  align-items: flex-start; /* uitlijnen aan de linkerkant */
 }
+
 
 .indeling-knop select {
   background: var(--primaire-kleur);
