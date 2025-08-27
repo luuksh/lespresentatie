@@ -72,15 +72,16 @@ body {
 /* 🟪 Groepjesweergave: 4x4 layout */
 .grid.groepjes-layout {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.2em;
   justify-items: center;
-  align-items: center;
-  width: 880px;
+  align-items: start;
+  width: 100%;       /* laat hem de volle breedte nemen */
+  max-width: 1200px; /* optioneel: begrens totale breedte */
   margin: 0 auto;
   padding: 1em;
 }
+
 
 /* ⬛ Groepje met 4 tafels (2x2) */
 .groepje {
