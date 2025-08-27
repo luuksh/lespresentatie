@@ -48,12 +48,12 @@
   </div>
 <script>
 (() => {
-  // === Instellingen ===
   const GRID_ID = 'plattegrond';
-  // Pas dit aan als jouw kaartjes andere klassennamen hebben:
-  const CARD_SELECTOR = '.seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
 
-  // Jouw dropdowns:
+  // Belangrijk: voeg .tafel toe (dat is jouw echte kaartje)
+  const CARD_SELECTOR =
+    '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
+
   const roomSel  = document.getElementById('indelingSelect');
   const classSel = document.getElementById('klasSelect');
 
@@ -63,7 +63,7 @@
     return `absent_${r}_${c}`;
   };
 
-  // Toggle met event delegation (werkt ook voor later ingevoegde elementen)
+  // Event delegation: klik op elk toekomstig kaartje
   function attachDelegatedClick() {
     const grid = document.getElementById(GRID_ID);
     if (!grid) return;
@@ -75,12 +75,10 @@
     });
   }
 
-  // Opslaan & herstellen
   function persist() {
     const cards = Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`));
-    const idxs = cards
-      .map((el, i) => el.classList.contains('is-absent') ? i : null)
-      .filter(i => i !== null);
+    const idxs = cards.map((el, i) => el.classList.contains('is-absent') ? i : null)
+                      .filter(i => i !== null);
     try { localStorage.setItem(keyForStorage(), JSON.stringify(idxs)); } catch {}
   }
 
@@ -91,7 +89,6 @@
     cards.forEach((el, i) => el.classList.toggle('is-absent', idxs.includes(i)));
   }
 
-  // Als de grid-inhoud wijzigt (init.js rendert): opnieuw herstellen
   function watchGridChanges() {
     const grid = document.getElementById(GRID_ID);
     if (!grid) return;
@@ -99,15 +96,12 @@
     mo.observe(grid, { childList: true, subtree: true });
   }
 
-  // Wissel lokaal/klas => andere set
   roomSel?.addEventListener('change', restore);
   classSel?.addEventListener('change', restore);
 
-  // Init
   const init = () => {
     attachDelegatedClick();
     watchGridChanges();
-    // kleine delay voor eerste render door init.js, daarna herstellen
     setTimeout(restore, 0);
   };
   if (document.readyState === 'loading') {
@@ -115,6 +109,7 @@
   } else { init(); }
 })();
 </script>
+
 
 </body>
 </html>
