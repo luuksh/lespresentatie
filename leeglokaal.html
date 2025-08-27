@@ -109,6 +109,57 @@
   } else { init(); }
 })();
 </script>
+<script>
+(() => {
+  const SEND_TO = 'l.hijne@cgu.nl';                 // ontvanger
+  const gridId  = 'plattegrond';
+  const kaartSelector = '.tafel';                   // jouw klikbare kaartjes
+  const klasSel = document.getElementById('klasSelect');
+
+  function formatDateNL(d=new Date()){
+    // Tijdzone: browser pakt jouw locale; onderwerp/body zijn informatief
+    const dtf = new Intl.DateTimeFormat('nl-NL', {
+      weekday:'long', year:'numeric', month:'long', day:'numeric',
+      hour:'2-digit', minute:'2-digit'
+    });
+    return dtf.format(d);
+  }
+
+  function getAbsentNames(){
+    const cards = Array.from(document.querySelectorAll(`#${gridId} ${kaartSelector}.is-absent`));
+    // De naam staat bij jou in de .tafel (innerText). Pas dit aan als je een child gebruikt.
+    return cards.map(el => el.innerText.trim()).filter(Boolean);
+  }
+
+  function createMailto({ klas, names }){
+    const subject = `absenties – ${klas || 'onbekende klas'}`;
+    const dateStr = formatDateNL();
+    const bodyLines = [
+      `Klas: ${klas || '(niet geselecteerd)'}`,
+      `Datum/tijd: ${dateStr}`,
+      ``,
+      `Afwezigen (${names.length}):`,
+      names.length ? names.map(n => `• ${n}`).join('\n') : '— geen —',
+      ``,
+      `Verzonden vanaf de klassenplattegrond-tool.`
+    ];
+    const body = bodyLines.join('\n');
+    return `mailto:${encodeURIComponent(SEND_TO)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function handleSend(){
+    const klas = klasSel?.value || '';
+    const names = getAbsentNames();
+    const url = createMailto({ klas, names });
+    // Open standaard mailclient met ingevulde mail
+    window.location.href = url;
+  }
+
+  // knop koppelen
+  const btn = document.getElementById('send-absenties-btn');
+  if (btn) btn.addEventListener('click', handleSend);
+})();
+</script>
 
 
 </body>
