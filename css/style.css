@@ -432,3 +432,22 @@ body {
   transform: scale(1.01);               /* milde zoom */
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
+/* Tafeltjes boven alles */
+#plattegrond .tafel {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* Groepjes vormen wel een eigen laag, maar liggen eronder */
+#plattegrond .groepje {
+  position: relative !important;
+  z-index: 1 !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+/* Hover-zoom van groepjes uitschakelen of milder maken */
+#plattegrond .groepje:hover {
+  transform: none !important;               /* of: scale(1.01) !important; */
+  box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+}
