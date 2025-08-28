@@ -57,8 +57,6 @@ if (typeof window !== 'undefined') {
 
 /**
  * Leest de huidige opstelling uit de DOM (#plattegrond .tafel).
- * - seatId: prefer data-seat-id; anders indexvolgorde als fallback.
- * - studentId: de (getrimde) tekst in het tafeltje.
  */
 function getCurrentArrangement() {
   const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
@@ -70,12 +68,10 @@ function getCurrentArrangement() {
 
 /**
  * Past een opgeslagen opstelling toe.
- * Probeert eerst te matchen op data-seat-id; zo niet, valt terug op index.
  */
 function applyArrangement(arr) {
   const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
 
-  // indexeer bestaande tafels zowel op id als op index
   const byIdx = new Map(seats.map((el, i) => [i, el]));
   const byId  = new Map(seats.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
 
@@ -89,19 +85,28 @@ function applyArrangement(arr) {
 }
 
 /* ---------- Presets: initialisatie ---------- */
-
 (function initPresetsUI() {
-  // Alleen initialiseren als de controls bestaan in deze pagina
   const klasSel = document.getElementById('klasSelect');
   const plattegrond = document.getElementById('plattegrond');
   if (!klasSel || !plattegrond) return;
 
+  function getCurrentClassId() {
+    const v = klasSel?.value?.trim();
+    return v || localStorage.getItem('lastClassId') || 'onbekend';
+  }
+
   const presetUI = initPresetUI({
-    getCurrentClassId: () => klasSel.value || 'onbekend',
+    getCurrentClassId,
     getCurrentArrangement,
     applyArrangement
   });
 
-  // bij klaswissel: lijst met presets verversen
-  klasSel.addEventListener('change', () => presetUI.refreshForClassChange());
+  // bij klaswissel: lijst met presets verversen + laatst gebruikte onthouden
+  klasSel.addEventListener('change', () => {
+    if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
+    presetUI.refreshForClassChange();
+  });
+
+  // kickstart: extra refresh zodra de klaslijst is gevuld
+  setTimeout(() => presetUI.refreshForClassChange(), 300);
 })();
