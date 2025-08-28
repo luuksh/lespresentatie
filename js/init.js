@@ -36,6 +36,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     klasSelect.innerHTML = '<option>Fout bij laden</option>';
   }
 
+  // 🔢 Groepsnummers aanbrengen (alleen bij viertallen/vijftallen)
+  function applyGroupNumbers(type){
+    // Opruimen bij andere layouts
+    if (type !== "groepjes" && type !== "vijftallen") {
+      document.querySelectorAll("#plattegrond .group-badge").forEach(b => b.remove());
+      return;
+    }
+    const groups = document.querySelectorAll("#plattegrond .groepje");
+    let n = 1;
+    groups.forEach(g => {
+      g.dataset.group = n;
+      let badge = g.querySelector(".group-badge");
+      if (!badge) {
+        badge = document.createElement("div");
+        badge.className = "group-badge";
+        g.appendChild(badge);
+      }
+      badge.textContent = n;
+      n++;
+    });
+  }
+
   // 🟦 Past kleuren en indeling toe
   function laadIndeling() {
     const kleuren = {
@@ -69,8 +91,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     grid.style.opacity = 0;
     setTimeout(() => {
       grid.innerHTML = "";
-      kiesIndeling(type, klasSelect.value);
-      grid.style.opacity = 1;
+      kiesIndeling(type, klasSelect.value); // tekent en (in indeling.js) shuffle't standaard
+      // wacht 1 tick zodat DOM er staat, dan badges aanbrengen
+      setTimeout(() => {
+        applyGroupNumbers(type);
+        grid.style.opacity = 1;
+      }, 0);
     }, 200);
   }
 
