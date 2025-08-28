@@ -411,3 +411,24 @@ body {
 .btn-primary:hover{ background: var(--hover-kleur); }
 .btn-primary:active{ transform: translateY(1px); }
 
+/* 1) Tafeltjes altijd boven de groep-box */
+.tafel {
+  position: relative;   /* nodig voor z-index */
+  z-index: 3;           /* hoger dan .groepje */
+}
+
+/* 2) Groepjes niet over andere items heen tekenen */
+.groepje {
+  position: relative;   /* eigen stacking context */
+  z-index: 1;
+  overflow: visible;    /* geen afkappen */
+  background: transparent; /* voorkomt witte 'deken' over buren */
+}
+
+/* 3) (Optioneel) Hover-zoom uitschakelen of milder maken */
+.groepje:hover {
+  /* kies één van de twee regels hieronder: */
+  /* transform: none; */                /* helemaal geen zoom */
+  transform: scale(1.01);               /* milde zoom */
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
