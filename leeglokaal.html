@@ -266,6 +266,36 @@
     presetUI.refreshForClassChange();
   });
 </script>
+<script>
+/* Nummer elk .groepje automatisch, wanneer #plattegrond verandert */
+(function () {
+  const grid = document.getElementById('plattegrond');
+  if (!grid) return;
+
+  function nummerGroepjes() {
+    // haal oude nummers weg
+    grid.querySelectorAll('.group-badge').forEach(b => b.remove());
+
+    const groups = grid.querySelectorAll('.groepje');
+    let n = 1;
+    groups.forEach(g => {
+      // zorg dat absolute pos binnen de groep kan
+      if (getComputedStyle(g).position === 'static') g.style.position = 'relative';
+      const badge = document.createElement('div');
+      badge.className = 'group-badge';
+      badge.textContent = n++;
+      g.appendChild(badge);
+    });
+  }
+
+  // eerste poging na load
+  window.addEventListener('load', () => setTimeout(nummerGroepjes, 0));
+
+  // opnieuw nummeren zodra de indeling wordt getekend/gewijzigd
+  const mo = new MutationObserver(() => nummerGroepjes());
+  mo.observe(grid, { childList: true, subtree: true });
+})();
+</script>
 
   
 </body>
