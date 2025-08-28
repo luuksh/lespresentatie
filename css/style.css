@@ -461,3 +461,29 @@ body {
   transform: none !important;               /* of: scale(1.01) !important; */
   box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
 }
+/* Max. 3 kolommen groepjes; extra groepjes vallen automatisch op nieuwe rij */
+.grid.groepjes-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 180px) !important; /* 3 kolommen van 180px */
+  grid-auto-rows: auto;
+  gap: 1.2em;
+  justify-content: center;   /* rij centreren */
+  align-items: start;
+  width: auto;
+  max-width: none;
+}
+
+/* Responsief: op tablet max. 2 kolommen */
+@media (max-width: 900px) {
+  .grid.groepjes-layout {
+    grid-template-columns: repeat(2, 180px) !important;
+  }
+}
+
+/* Smal: 1 kolom */
+@media (max-width: 520px) {
+  .grid.groepjes-layout {
+    grid-template-columns: 180px !important;
+  }
+}
+
