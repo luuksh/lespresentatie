@@ -101,8 +101,23 @@
     mo.observe(grid, { childList: true, subtree: true });
   }
 
-  roomSel?.addEventListener('change', restore);
-  classSel?.addEventListener('change', restore);
+// Altijd herstellen – ook als je dezelfde opstelling/klas opnieuw selecteert
+function restoreSoon(){ setTimeout(restore, 0); } // na eventuele re-render
+
+['change','click','input'].forEach(evt => {
+  roomSel?.addEventListener(evt, restoreSoon);
+  classSel?.addEventListener(evt, restoreSoon);
+});
+
+// (optioneel) dubbelklik wist markeringen + opslag voor de huidige combi
+function clearCurrentCombo(){
+  try { localStorage.removeItem(keyForStorage()); } catch {}
+  document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`)
+    .forEach(el => el.classList.remove('is-absent'));
+}
+roomSel?.addEventListener('dblclick', clearCurrentCombo);
+classSel?.addEventListener('dblclick', clearCurrentCombo);
+
 
   const init = () => {
     attachDelegatedClick();
