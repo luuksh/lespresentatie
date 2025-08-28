@@ -1,58 +1,241 @@
 // seating-presets.js — v1.0
 // Drop-in opslag & beheer van klassenopstellingen via localStorage + export/import
 
-
 const STORAGE_KEY = 'lespresentatie.presets.v1';
 const VERSION = 1;
 
-
 /**
-* Data model in localStorage
-* {
-* version: 1,
-* classes: {
-* [classId]: {
-* presets: {
-* [presetName]: { createdAt, updatedAt, arrangement }
-* },
-* lastUsedPreset: ""
-* }
-* }
-* }
-*/
-
+ * Data model in localStorage
+ * {
+ *   version: 1,
+ *   classes: {
+ *     [classId]: {
+ *       presets: {
+ *         [presetName]: { createdAt, updatedAt, arrangement }
+ *       },
+ *       lastUsedPreset: ""
+ *     }
+ *   }
+ * }
+ */
 
 class PresetStore {
-constructor(storageKey = STORAGE_KEY) {
-this.key = storageKey;
-this.state = this.#load();
-}
-#blank() { return { version: VERSION, classes: {} }; }
-#load() {
-try {
-const raw = localStorage.getItem(this.key);
-if (!raw) return this.#blank();
-const parsed = JSON.parse(raw);
-if (!parsed.version) parsed.version = 1; // simple forward compat
-if (!parsed.classes) parsed.classes = {};
-return parsed;
-} catch (e) {
-console.warn('PresetStore load error, resetting', e);
-return this.#blank();
-}
-}
-#save() { localStorage.setItem(this.key, JSON.stringify(this.state)); }
+  constructor(storageKey = STORAGE_KEY) {
+    this.key = storageKey;
+    this.state = this.#load();
+  }
+  #blank() { return { version: VERSION, classes: {} }; }
+  #load() {
+    try {
+      const raw = localStorage.getItem(this.key);
+      if (!raw) return this.#blank();
+      const parsed = JSON.parse(raw);
+      if (!parsed.version) parsed.version = 1;
+      if (!parsed.classes) parsed.classes = {};
+      return parsed;
+    } catch (e) {
+      console.warn('PresetStore load error, resetting', e);
+      return this.#blank();
+    }
+  }
+  #save() { localStorage.setItem(this.key, JSON.stringify(this.state)); }
 
+  list(classId) {
+    const cls = this.state.classes[classId];
+    if (!cls) return [];
+    return Object.keys(cls.presets || {}).sort((a,b)=>a.localeCompare(b,'nl'));
+  }
+  get(classId, name) {
+    return this.state.classes?.[classId]?.presets?.[name] || null;
+  }
+  upsert(classId, name, arrangement) {
+    if (!this.state.classes[classId]) this.state.classes[classId] = { presets:{}, lastUsedPreset:"" };
+    const now = new Date().toISOString();
+    const existed = !!this.state.classes[classId].presets[name];
+    this.state.classes[classId].presets[name] = {
+      createdAt: existed ? this.state.classes[classId].presets[name].createdAt : now,
+      updatedAt: now,
+      arrangement
+    };
+    this.state.classes[classId].lastUsedPreset = name;
+    this.#save();
+  }
+  rename(classId, oldName, newName) {
+    const cls = this.state.classes[classId];
+    if (!cls || !cls.presets[oldName]) return false;
+    if (cls.presets[newName]) throw new Error('Bestaat al');
+    cls.presets[newName] = cls.presets[oldName];
+    delete cls.presets[oldName];
+    if (cls.lastUsedPreset === oldName) cls.lastUsedPreset = newName;
+    this.#save();
+    return true;
+  }
+  remove(classId, name) {
+    const cls = this.state.classes[classId];
+    if (!cls || !cls.presets[name]) return false;
+    delete cls.presets[name];
+    if (cls.lastUsedPreset === name) cls.lastUsedPreset = "";
+    this.#save();
+    return true;
+  }
+  lastUsed(classId) {
+    return this.state.classes?.[classId]?.lastUsedPreset || '';
+  }
+  exportClass(classId) {
+    const cls = this.state.classes[classId] || { presets:{}, lastUsedPreset:"" };
+    return JSON.stringify({
+      exportVersion: VERSION,
+      classId,
+      exportedAt: new Date().toISOString(),
+      presets: cls.presets
+    }, null, 2);
+  }
+  importClass(classId, jsonText, { overwrite=false } = {}) {
+    const data = JSON.parse(jsonText);
+    if (typeof data !== 'object' || !data.presets) throw new Error('Ongeldige import');
+    if (!this.state.classes[classId]) this.state.classes[classId] = { presets:{}, lastUsedPreset:"" };
+    const dest = this.state.classes[classId].presets;
+    for (const [name, payload] of Object.entries(data.presets)) {
+      if (!overwrite && dest[name]) continue;
+      dest[name] = payload;
+    }
+    this.#save();
+  }
+}
 
-list(classId) {
-const cls = this.state.classes[classId];
-if (!cls) return [];
-return Object.keys(cls.presets || {}).sort((a,b)=>a.localeCompare(b,'nl'));
+// ===== Validatie & utils =====
+function isArrangementValid(arr) {
+  if (!arr) return false;
+  if (Array.isArray(arr)) {
+    return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
+  }
+  return false;
 }
-get(classId, name) {
-return this.state.classes?.[classId]?.presets?.[name] || null;
+function sanitizeFilename(s) {
+  return String(s).replace(/[^a-z0-9-_]+/gi,'_');
 }
-upsert(classId, name, arrangement) {
-if (!this.state.classes[classId]) this.state.classes[classId] = { presets:{}, lastUsedPreset:"" };
-const now = new Date().toISOString();
+
+// ===== UI wiring =====
+export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement }) {
+  const store = new PresetStore();
+  const $sel = document.getElementById('presetSelect');
+  const $btnLoad = document.getElementById('btnPresetLoad');
+  const $btnSave = document.getElementById('btnPresetSave');
+  const $btnOverwrite = document.getElementById('btnPresetOverwrite');
+  const $btnRename = document.getElementById('btnPresetRename');
+  const $btnDelete = document.getElementById('btnPresetDelete');
+  const $btnExport = document.getElementById('btnPresetExport');
+  const $inpImport = document.getElementById('presetImport');
+
+  function refill() {
+    const classId = getCurrentClassId();
+    const names = store.list(classId);
+    const last = store.lastUsed(classId);
+    if (!$sel) return;
+    $sel.innerHTML = '';
+    for (const name of names) {
+      const opt = document.createElement('option');
+      opt.value = name; opt.textContent = name;
+      if (name === last) opt.selected = true;
+      $sel.appendChild(opt);
+    }
+  }
+  function ensureSelection() {
+    if (!$sel || $sel.options.length === 0) return '';
+    return $sel.value || $sel.options[0].value;
+  }
+
+  $btnSave?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const name = prompt('Naam voor deze opstelling:');
+    if (!name) return;
+    const arrangement = getCurrentArrangement();
+    if (!isArrangementValid(arrangement)) {
+      alert('Ongeldige opstelling.');
+      return;
+    }
+    if (store.get(classId, name)) {
+      const ok = confirm('Bestaat al. Overschrijven?');
+      if (!ok) return;
+    }
+    store.upsert(classId, name, arrangement);
+    refill();
+  });
+
+  $btnOverwrite?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const current = ensureSelection();
+    if (!current) { alert('Geen preset geselecteerd.'); return; }
+    const ok = confirm(`Opstelling "${current}" overschrijven met de huidige indeling?`);
+    if (!ok) return;
+    const arrangement = getCurrentArrangement();
+    if (!isArrangementValid(arrangement)) { alert('Ongeldige opstelling.'); return; }
+    store.upsert(classId, current, arrangement);
+    refill();
+  });
+
+  $btnLoad?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const current = ensureSelection();
+    if (!current) { alert('Geen preset geselecteerd.'); return; }
+    const data = store.get(classId, current);
+    if (!data) { alert('Preset niet gevonden.'); return; }
+    applyArrangement(structuredClone(data.arrangement));
+  });
+
+  $btnRename?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const current = ensureSelection();
+    if (!current) { alert('Geen preset geselecteerd.'); return; }
+    const newName = prompt('Nieuwe naam voor deze opstelling:', current);
+    if (!newName || newName === current) return;
+    try { store.rename(classId, current, newName); refill(); }
+    catch(e){ alert('Hernoemen mislukt: ' + e.message); }
+  });
+
+  $btnDelete?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const current = ensureSelection();
+    if (!current) { alert('Geen preset geselecteerd.'); return; }
+    const ok = confirm(`Preset "${current}" verwijderen? Dit kan niet ongedaan worden gemaakt.`);
+    if (!ok) return;
+    store.remove(classId, current);
+    refill();
+  });
+
+  $btnExport?.addEventListener('click', () => {
+    const classId = getCurrentClassId();
+    const json = store.exportClass(classId);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `opstellingen-${sanitizeFilename(classId)}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  $inpImport?.addEventListener('change', async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const text = await file.text();
+    const overwrite = confirm('Bestaande presets met dezelfde naam overschrijven?');
+    try {
+      store.importClass(getCurrentClassId(), text, { overwrite });
+      refill();
+      alert('Import voltooid.');
+    } catch(err) {
+      alert('Import mislukt: ' + err.message);
+    } finally {
+      e.target.value = '';
+    }
+  });
+
+  // Publiek: zodat je bij klaswissel het dropdown kunt verversen
+  function refreshForClassChange() { refill(); }
+
+  // Init
+  refill();
+
+  return { refreshForClassChange };
 }
