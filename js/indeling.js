@@ -1,4 +1,5 @@
 // js/indeling.js
+import { initPresetUI } from './seating-presets.js';
 
 const modules = {
   h216:      () => import('./h216.js').then(m => m.h216Indeling),
