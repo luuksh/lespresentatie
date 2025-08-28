@@ -55,20 +55,21 @@
 (() => {
   const GRID_ID = 'plattegrond';
 
-  // Belangrijk: voeg .tafel toe (dat is jouw echte kaartje)
+  // Klikbare items (jouw tafeltjes)
   const CARD_SELECTOR =
     '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
 
   const roomSel  = document.getElementById('indelingSelect');
   const classSel = document.getElementById('klasSelect');
 
-  const keyForStorage = () => {
-    const r = roomSel?.value || 'room';
-    const c = classSel?.value || 'class';
-    return `absent_${r}_${c}`;
-  };
+  // UI schoonmaken (alleen de visuele markering)
+  function clearUI() {
+    document
+      .querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`)
+      .forEach(el => el.classList.remove('is-absent'));
+  }
 
-  // Event delegation: klik op elk toekomstig kaartje
+  // Klik = toggle (alleen visueel, geen opslag)
   function attachDelegatedClick() {
     const grid = document.getElementById(GRID_ID);
     if (!grid) return;
@@ -76,59 +77,40 @@
       const card = e.target.closest(CARD_SELECTOR);
       if (!card || !grid.contains(card)) return;
       card.classList.toggle('is-absent');
-      persist();
     });
   }
 
-  function persist() {
-    const cards = Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`));
-    const idxs = cards.map((el, i) => el.classList.contains('is-absent') ? i : null)
-                      .filter(i => i !== null);
-    try { localStorage.setItem(keyForStorage(), JSON.stringify(idxs)); } catch {}
-  }
-
-  function restore() {
-    const raw = localStorage.getItem(keyForStorage());
-    const idxs = raw ? (JSON.parse(raw) || []) : [];
-    const cards = Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`));
-    cards.forEach((el, i) => el.classList.toggle('is-absent', idxs.includes(i)));
-  }
-
+  // Als init.js de grid (opnieuw) rendert: start altijd schoon
   function watchGridChanges() {
     const grid = document.getElementById(GRID_ID);
     if (!grid) return;
-    const mo = new MutationObserver(() => restore());
+    const mo = new MutationObserver(() => clearUI());
     mo.observe(grid, { childList: true, subtree: true });
   }
 
-// Altijd herstellen – ook als je dezelfde opstelling/klas opnieuw selecteert
-function restoreSoon(){ setTimeout(restore, 0); } // na eventuele re-render
+  // Bij (opnieuw) selecteren van opstelling/klas: UI schoon
+  ['change','click','input'].forEach(evt => {
+    roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+    classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+  });
 
-['change','click','input'].forEach(evt => {
-  roomSel?.addEventListener(evt, restoreSoon);
-  classSel?.addEventListener(evt, restoreSoon);
-});
+  // Bij (her)laden van de pagina: UI schoon
+  window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
 
-// (optioneel) dubbelklik wist markeringen + opslag voor de huidige combi
-function clearCurrentCombo(){
-  try { localStorage.removeItem(keyForStorage()); } catch {}
-  document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`)
-    .forEach(el => el.classList.remove('is-absent'));
-}
-roomSel?.addEventListener('dblclick', clearCurrentCombo);
-classSel?.addEventListener('dblclick', clearCurrentCombo);
-
-
+  // Init
   const init = () => {
     attachDelegatedClick();
     watchGridChanges();
-    setTimeout(restore, 0);
+    setTimeout(clearUI, 0);
   };
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+  } else {
+    init();
+  }
 })();
 </script>
+
 <script>
 (() => {
   const GRID_ID = 'plattegrond';
