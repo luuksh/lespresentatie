@@ -486,4 +486,8 @@ body {
     grid-template-columns: 180px !important;
   }
 }
-
+/* 6-persoons groep: 2 kolommen × 3 rijen */
+.groepje[data-size="6"] {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
