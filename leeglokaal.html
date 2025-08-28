@@ -51,7 +51,18 @@
   <button id="save-absenties-btn" type="button" class="btn-primary">Opslaan absenties</button>
   <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
         <button id="toggle-view-btn" type="button" class="btn-secondary">Docentweergave (spiegel)</button>
-
+<div class="presets-panel">
+<label for="presetSelect" class="presets-label">Opstelling:</label>
+<select id="presetSelect" class="presets-select"></select>
+<button id="btnPresetLoad" class="btn-secondary">Laden</button>
+<button id="btnPresetSave" class="btn-primary">Opslaan als…</button>
+<button id="btnPresetOverwrite" class="btn-secondary">Overschrijven</button>
+<button id="btnPresetRename" class="btn-secondary">Hernoemen</button>
+<button id="btnPresetDelete" class="btn-danger">Verwijderen</button>
+<button id="btnPresetExport" class="btn-secondary">Export</button>
+<label for="presetImport" class="btn-secondary import-label">Import</label>
+<input id="presetImport" type="file" accept="application/json" hidden />
+</div>
 </div>
   
 
