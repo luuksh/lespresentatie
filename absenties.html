@@ -10,68 +10,84 @@
     .btn-primary, .btn-secondary { margin-right:.5em; margin-top:.3em; }
     .klas-block { margin-bottom:1.5em; }
     pre { background:#f5f5f5; padding:.5em; border-radius:6px; }
+    .meta { font-size:.9em; opacity:.7; margin:.25em 0 .5em; }
+    .topbar { display:flex; align-items:center; gap:.8em; margin-bottom:1em; }
+    .topbar input[type="date"] { padding:.4em .6em; border:1px solid #ddd; border-radius:8px; }
   </style>
 </head>
 <body>
-  <h3>Dagoverzicht absenties</h3>
+  <div class="topbar">
+    <h3 style="margin:0;">Dagoverzicht absenties</h3>
+    <input type="date" id="day">
+    <button id="clear-day-btn" class="btn-secondary">Wis dagoverzicht</button>
+  </div>
+
   <div id="absentie-lijst"></div>
-  <button id="clear-day-btn" class="btn-secondary">Wis dagoverzicht</button>
 
- <script>
+<script>
 (() => {
-  const listEl = document.getElementById('absentie-lijst');
-  const clearBtn = document.getElementById('clear-day-btn');
+  const listEl  = document.getElementById('absentie-lijst');
+  const clearBtn= document.getElementById('clear-day-btn');
+  const dayInput= document.getElementById('day');
 
-  // (optioneel) maak een <input type="date" id="day"> boven je lijst
-  let dayInput = document.getElementById('day');
-  if (!dayInput) {
-    dayInput = document.createElement('input');
-    dayInput.type = 'date';
-    dayInput.id = 'day';
-    dayInput.style.margin = '0 0 1em 0';
-    document.body.insertBefore(dayInput, listEl);
-  }
   const todayStr = new Date().toISOString().slice(0,10);
   if (!dayInput.value) dayInput.value = todayStr;
 
   const legacyKey = 'absenties_dag';
   const keyFor = (dateStr) => `absenties_${dateStr}`;
 
+  /** Lees array entries [{klas, datetime, names}] uit storage (met legacy fallback voor vandaag). */
   function readStorage(dateStr){
-    // probeer nieuwe sleutel, val anders terug op legacy
     let data = [];
-    const k = keyFor(dateStr);
-    try { data = JSON.parse(localStorage.getItem(k) || '[]'); } catch {}
+    try { data = JSON.parse(localStorage.getItem(keyFor(dateStr)) || '[]'); } catch {}
     if (!data.length && dateStr === todayStr) {
-      // fallback voor oude builds
+      // fallback voor oude builds (alleen voor vandaag)
       try { data = JSON.parse(localStorage.getItem(legacyKey) || '[]'); } catch {}
     }
-    return data;
+    return Array.isArray(data) ? data : [];
+  }
+
+  /** Kies per klas alléén de nieuwste entry (laatste wint). */
+  function latestByClass(entries){
+    const map = {}; // klas -> entry
+    entries.forEach(e => {
+      if (!e || !e.klas) return;
+      const prev = map[e.klas];
+      if (!prev || (prev.datetime || '') < (e.datetime || '')) {
+        map[e.klas] = {
+          klas: e.klas,
+          datetime: e.datetime || '',
+          names: Array.isArray(e.names) ? e.names : []
+        };
+      }
+    });
+    return map;
   }
 
   function render(){
     const dateStr = dayInput.value || todayStr;
     const all = readStorage(dateStr);
+    const latest = latestByClass(all);
 
-    if (!all.length) {
+    const klasKeys = Object.keys(latest).sort();
+    if (!klasKeys.length) {
       listEl.innerHTML = `<em>Geen absenties opgeslagen voor ${dateStr}.</em>`;
       return;
     }
 
-    // groepeer per klas met unieke namen
-    const byClass = {};
-    all.forEach(e => {
-      if (!byClass[e.klas]) byClass[e.klas] = new Set();
-      (e.names || []).forEach(n => byClass[e.klas].add(n));
-    });
-
     let html = '';
-    Object.keys(byClass).sort().forEach(klas => {
-      const arr = [...byClass[klas]];
+    klasKeys.forEach(klas => {
+      const entry = latest[klas];
+      const arr = entry.names || [];
+      const ts  = entry.datetime ? new Date(entry.datetime) : null;
+      const nl  = ts ? new Intl.DateTimeFormat('nl-NL', {
+        hour:'2-digit', minute:'2-digit'
+      }).format(ts) : '';
       html += `
         <div class="klas-block">
-          <h4>${klas}</h4>
-          <pre>${arr.join('\n') || '— geen —'}</pre>
+          <h4 style="margin:.2em 0;">${klas}</h4>
+          <div class="meta">Laatst opgeslagen: ${nl || '—'}</div>
+          <pre>${(arr && arr.length ? arr.join('\n') : '— geen —')}</pre>
           <button class="btn-primary copy-btn" data-klas="${klas}">Kopieer ${klas}</button>
         </div>
       `;
@@ -79,42 +95,51 @@
     html += `<button id="copy-all-btn" class="btn-primary">Kopieer alles</button>`;
     listEl.innerHTML = html;
 
-    // events
+    // events koppelen
     listEl.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', () => copyClass(btn.dataset.klas));
+      btn.addEventListener('click', () => copyClass(btn.dataset.klas, latest));
     });
-    document.getElementById('copy-all-btn')?.addEventListener('click', copyAll);
+    document.getElementById('copy-all-btn')?.addEventListener('click', () => copyAll(latest));
   }
 
-  function copyClass(klas){
-    const dateStr = dayInput.value || todayStr;
-    const all = readStorage(dateStr);
-    const names = [...new Set(all.filter(e => e.klas === klas).flatMap(e => e.names || []))];
-    navigator.clipboard.writeText(names.join('\n'));
-    alert(`Afwezigen ${klas} gekopieerd (${names.length}).`);
+  function copyClass(klas, latest){
+    const entry = latest[klas];
+    const names = (entry?.names) || [];
+    const text  = names.join('\n');
+    copyText(text).then(() => {
+      alert(`Afwezigen ${klas} gekopieerd (${names.length}).`);
+    });
   }
 
-  function copyAll(){
-    const dateStr = dayInput.value || todayStr;
-    const all = readStorage(dateStr);
-    const byClass = {};
-    all.forEach(e => {
-      if (!byClass[e.klas]) byClass[e.klas] = new Set();
-      (e.names || []).forEach(n => byClass[e.klas].add(n));
-    });
+  function copyAll(latest){
+    const klasKeys = Object.keys(latest).sort();
     let text = '';
-    Object.keys(byClass).sort().forEach(klas => {
-      text += `${klas}:\n${[...byClass[klas]].join('\n')}\n\n`;
+    klasKeys.forEach(klas => {
+      const names = latest[klas].names || [];
+      text += `${klas}:\n${names.join('\n')}\n\n`;
     });
-    navigator.clipboard.writeText(text.trim());
-    alert('Alle absenties gekopieerd.');
+    copyText(text.trim()).then(() => {
+      alert('Alle absenties (laatste versie per klas) gekopieerd.');
+    });
+  }
+
+  function copyText(t){
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(t);
+    }
+    // Fallback
+    return new Promise(resolve => {
+      const ta = document.createElement('textarea');
+      ta.value = t; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+      resolve();
+    });
   }
 
   clearBtn?.addEventListener('click', () => {
     const dateStr = dayInput.value || todayStr;
     localStorage.removeItem(keyFor(dateStr));
-    // ook legacy wissen als je op vandaag staat
-    if (dateStr === todayStr) localStorage.removeItem('absenties_dag');
+    if (dateStr === todayStr) localStorage.removeItem(legacyKey); // legacy meewissen voor vandaag
     render();
   });
 
