@@ -491,3 +491,19 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
 }
+/* Spiegelmodus voor de plattegrond (alleen het bord, niet de UI eromheen) */
+.container.mirror .grid-wrapper{
+  transform: rotate(180deg);
+  transition: transform .25s ease;
+  transform-origin: center center;
+}
+
+/* Kaartjes en 'Bureau leraar' weer rechtop in spiegelmodus */
+.tafel{ transform: rotate(var(--rot, 0deg)); transition: transform .2s ease, background .3s ease; }
+.tafel:hover{ transform: rotate(var(--rot, 0deg)) scale(1.04); }
+
+.container.mirror .tafel{ --rot: 180deg; }
+.container.mirror .leraar-bureau{ transform: rotate(180deg); }
+
+/* (optioneel) groepjes-zoom blijft netjes in spiegelmodus */
+.container.mirror .groepje:hover{ transform: scale(1.02); }
