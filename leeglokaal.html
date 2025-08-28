@@ -178,20 +178,31 @@
   const btn = document.getElementById('toggle-view-btn');
   const LS_KEY = 'mirror_view_enabled';
 
+  // controls
+  const indelingSel = document.getElementById('indelingSelect');
+  const klasSel     = document.getElementById('klasSelect');
+
+  function setMirror(on){
+    container.classList.toggle('mirror', on);
+    try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
+    if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+  }
+
   function applyFromStorage(){
     const on = localStorage.getItem(LS_KEY) === '1';
-    container.classList.toggle('mirror', on);
-    btn && (btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)');
+    setMirror(on);
   }
 
   function toggleMirror(){
-    const on = !container.classList.contains('mirror');
-    container.classList.toggle('mirror', on);
-    try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
-    btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+    setMirror(!container.classList.contains('mirror'));
   }
 
+  // knop
   btn?.addEventListener('click', toggleMirror);
+
+  // ⇨ bij wisselen van indeling/klas altijd terug naar leerlingweergave
+  indelingSel?.addEventListener('change', () => setMirror(false));
+  klasSel?.addEventListener('change',     () => setMirror(false));
 
   // herstellen bij laden
   if (document.readyState === 'loading') {
@@ -199,6 +210,11 @@
   } else {
     applyFromStorage();
   }
+
+  // (optioneel) sneltoets Alt+M om te togglen
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.altKey && e.key.toLowerCase() === 'm') { e.preventDefault(); toggleMirror(); }
+  // });
 })();
 </script>
 
