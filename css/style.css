@@ -507,3 +507,9 @@ body {
 
 /* (optioneel) groepjes-zoom blijft netjes in spiegelmodus */
 .container.mirror .groepje:hover{ transform: scale(1.02); }
+
+.presets-panel { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.presets-label { font-weight:600; }
+.presets-select { min-width:14rem; }
+.btn-danger { background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.4rem; }
+.import-label { cursor:pointer; display:inline-flex; align-items:center; }
