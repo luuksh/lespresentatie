@@ -514,22 +514,17 @@ body {
 .btn-danger { background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.4rem; }
 .import-label { cursor:pointer; display:inline-flex; align-items:center; }
 
-/* Badges voor viertallen/vijftallen */
 .groepje { position: relative; }
 .group-badge{
   position: absolute;
-  top: 4px;              /* was -10px */
-  left: 4px;             /* was -10px */
-  width: 28px;
-  height: 28px;
+  top: 4px; left: 4px;
+  width: 28px; height: 28px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: grid; place-items: center;
   background: var(--primaire-kleur);
-  color: #fff;
-  font-weight: 800;
+  color:#fff; font-weight:800; font-size:.9rem;
   box-shadow: 0 4px 10px rgba(0,0,0,.12);
-  z-index: 9999;         /* hoger, voor alle gevallen */
+  z-index: 9999;
   pointer-events: none;
-  font-size: .9rem;
 }
+
