@@ -231,11 +231,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
   });
 
-  // Publiek: zodat je bij klaswissel het dropdown kunt verversen
   function refreshForClassChange() { refill(); }
-
-  // Init
   refill();
-
   return { refreshForClassChange };
 }
