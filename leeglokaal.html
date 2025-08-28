@@ -136,15 +136,29 @@
   }
 
   function saveSnapshot(){
-    const klas = klasSel?.value || 'onbekend';
-    const names = getAbsentNames();
-    const entry = { klas, datetime:new Date().toISOString(), names };
-    let all=[];
-    try{ all=JSON.parse(localStorage.getItem(key))||[]; }catch{}
-    all.push(entry);
-    localStorage.setItem(key, JSON.stringify(all));
-    flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
+  const klas = klasSel?.value || 'onbekend';
+  const names = getAbsentNames();
+
+  // laad huidige dagdata
+  let all = [];
+  try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+
+  // verwijder bestaande snapshot voor déze klas (zelfde dag)
+  const others = all.filter(e => e && e.klas !== klas);
+
+  // extra: als je met lege selectie opslaat → verwijder voor deze klas
+  if (names.length === 0) {
+    localStorage.setItem(key, JSON.stringify(others));
+    flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
+    return;
   }
+
+  // schrijf nieuwe snapshot (laatste wint)
+  const entry = { klas, datetime: new Date().toISOString(), names };
+  others.push(entry);
+  localStorage.setItem(key, JSON.stringify(others));
+  flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
+}
 
   function flash(msg){
     if(!statusEl) return;
