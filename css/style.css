@@ -513,3 +513,22 @@ body {
 .presets-select { min-width:14rem; }
 .btn-danger { background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.4rem; }
 .import-label { cursor:pointer; display:inline-flex; align-items:center; }
+
+/* Groepsnummertjes voor viertallen/vijftallen */
+.groepje {
+  position: relative;
+}
+.group-badge{
+  position: absolute;
+  top: -10px; left: -10px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--primaire-kleur);
+  color:#fff; font-weight:800;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  z-index: 10;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
