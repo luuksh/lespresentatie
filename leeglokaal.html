@@ -50,7 +50,10 @@
       <div style="margin-top:1.5em; text-align:center;">
   <button id="save-absenties-btn" type="button" class="btn-primary">Opslaan absenties</button>
   <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
+        <button id="toggle-view-btn" type="button" class="btn-secondary">Docentweergave (spiegel)</button>
+
 </div>
+  
 
 <script>
 (() => {
@@ -153,6 +156,35 @@
 
   document.getElementById('save-absenties-btn')
     ?.addEventListener('click', saveSnapshot);
+})();
+</script>
+<script>
+(() => {
+  const container = document.querySelector('.container');
+  const btn = document.getElementById('toggle-view-btn');
+  const LS_KEY = 'mirror_view_enabled';
+
+  function applyFromStorage(){
+    const on = localStorage.getItem(LS_KEY) === '1';
+    container.classList.toggle('mirror', on);
+    btn && (btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)');
+  }
+
+  function toggleMirror(){
+    const on = !container.classList.contains('mirror');
+    container.classList.toggle('mirror', on);
+    try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
+    btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+  }
+
+  btn?.addEventListener('click', toggleMirror);
+
+  // herstellen bij laden
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyFromStorage);
+  } else {
+    applyFromStorage();
+  }
 })();
 </script>
 
