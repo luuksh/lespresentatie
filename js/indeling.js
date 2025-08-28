@@ -57,3 +57,13 @@ document.getElementById('klasSelect').addEventListener('change', () => {
   presetUI.refreshForClassChange();
 });
 
+// bestaand:
+export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
+  /* ... */
+}
+
+// ✅ voeg toe (houdt export én maakt een globale fallback voor init.js):
+if (typeof window !== 'undefined') {
+  window.kiesIndeling = kiesIndeling;
+}
+
