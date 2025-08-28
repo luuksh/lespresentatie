@@ -47,3 +47,13 @@ export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
     fallback(leerlingen);
   }
 }
+const presetUI = initPresetUI({
+  getCurrentClassId: () => document.getElementById('klasSelect').value,
+  getCurrentArrangement,
+  applyArrangement
+});
+
+document.getElementById('klasSelect').addEventListener('change', () => {
+  presetUI.refreshForClassChange();
+});
+
