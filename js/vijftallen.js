@@ -10,16 +10,24 @@ export function vijftallenIndeling(leerlingen, { shuffle = false } = {}) {
   const list = shuffle ? fisherYates(leerlingen.slice()) : leerlingen.slice();
   const groups = chunk5Prefer6(list);
 
-  groups.forEach(g => {
+  groups.forEach((g, idx) => {
     const wrap = document.createElement('div');
     wrap.className = 'groepje';
     wrap.dataset.size = String(g.length); // 5 of 6 (edge: heel kleine n)
+
+    // ▼ Badge met groepsnummer
+    const badge = document.createElement('div');
+    badge.className = 'group-badge';
+    badge.textContent = String(idx + 1);
+    wrap.appendChild(badge);
+
     g.forEach(naam => {
       const d = document.createElement('div');
       d.className = 'tafel';
       d.textContent = naam;
       wrap.appendChild(d);
     });
+
     grid.appendChild(wrap);
   });
 }
@@ -56,7 +64,8 @@ function chunk5Prefer6(list) {
   i = 0;
   let remaining = n;
   while (remaining >= 6) {
-    alt.push(list.slice(i, i += 6));
+    alt.push(list.slice(i, i + 6));
+    i += 6;
     remaining -= 6;
   }
   if (remaining > 0) alt.push(list.slice(i)); // rest (<6) als 1 groep
