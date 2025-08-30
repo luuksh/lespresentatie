@@ -1,4 +1,4 @@
-// seating-presets.js — v1.1
+// seating-presets.js — v1.2
 // Drop-in opslag & beheer van klassenopstellingen via localStorage + export/import
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
@@ -107,7 +107,6 @@ class PresetStore {
 function isArrangementValid(arr) {
   if (!arr) return false;
 
-  // Nieuw objectmodel
   if (typeof arr === 'object' && !Array.isArray(arr)) {
     if (arr.type === 'presentatievolgorde') {
       return Array.isArray(arr.order);
@@ -118,7 +117,6 @@ function isArrangementValid(arr) {
     return false;
   }
 
-  // Legacy array
   if (Array.isArray(arr)) {
     return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
   }
@@ -131,13 +129,14 @@ function sanitizeFilename(s) {
 }
 
 function triggerExportAllForClass(store, classId, nameForFilename = '') {
-  const json = store.exportClass(classId); // volledige set voor deze klas
+  const json = store.exportClass(classId);
   const blob = new Blob([json], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  const extra = nameForFilename ? `-${sanitizeFilename(nameForFilename)}` : '';
+  // Format: Indeling [klas] [ingevoerde bestandsnaam].json
+  const extra = nameForFilename ? ` ${sanitizeFilename(nameForFilename)}` : '';
   a.href = url;
-  a.download = `opstellingen-${sanitizeFilename(classId)}${extra}.json`;
+  a.download = `Indeling ${sanitizeFilename(classId)}${extra}.json`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -191,11 +190,9 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       if (!ok) return;
     }
 
-    // 1) Opslaan
     store.upsert(classId, name, arrangement);
     refill();
 
-    // 2) Direct exporteren (hele klas, bestandsnaam met presetnaam)
     try {
       triggerExportAllForClass(store, classId, name);
     } catch (e) {
@@ -219,11 +216,9 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       return;
     }
 
-    // 1) Overschrijven
     store.upsert(classId, current, arrangement);
     refill();
 
-    // 2) Direct exporteren (hele klas, bestandsnaam met presetnaam)
     try {
       triggerExportAllForClass(store, classId, current);
     } catch (e) {
@@ -261,7 +256,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     refill();
   });
 
-  // Handmatige export-knop blijft bestaan (exporteert hele klas)
+  // Handmatige export-knop: alleen klas + geen presetnaam
   $btnExport?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     try {
