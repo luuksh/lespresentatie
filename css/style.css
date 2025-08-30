@@ -352,3 +352,32 @@ select:focus { outline:none; border-color:#4a90e2; box-shadow:0 0 0 3px rgba(74,
 select, .btn { height: 42px; }
 
 /* Micro-interactie: disabled seats snapshot status fade al aanwezig */
+/* ===== Docentweergave / Spiegelmodus =====
+   - We spiegelen het hele plattegrondcanvas.
+   - Daarna 'ontspiegelen' we de items zodat tekst leesbaar blijft.
+*/
+.container.mirror #plattegrond {
+  transform: scaleX(-1);
+  transform-origin: center;
+  transition: transform .2s ease;
+}
+
+/* Alle kaartjes/tafels/labels weer terugspiegelen (tekst blijft normaal) */
+.container.mirror #plattegrond .tafel,
+.container.mirror #plattegrond .seat,
+.container.mirror #plattegrond .student,
+.container.mirror #plattegrond .desk-item,
+.container.mirror #plattegrond .naamkaartje,
+.container.mirror #plattegrond .kaartje,
+.container.mirror #plattegrond .student-card,
+.container.mirror #plattegrond .desk,
+.container.mirror #plattegrond .groepje,
+.container.mirror #plattegrond .presentatie-item,
+.container.mirror #plattegrond .group-badge {
+  transform: scaleX(-1);
+}
+
+/* Optioneel: voorkom dat de groep-badge ‘meedraait’ naar links/rechts */
+.container.mirror #plattegrond .group-badge {
+  left: auto; right: 4px;  /* badge blijft visueel rechtsboven in spiegelmodus */
+}
