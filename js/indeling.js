@@ -91,7 +91,7 @@ function getCurrentArrangement() {
       type,
       klasId,
       savedAt: new Date().toISOString(),
-      order: items,
+      order: items,   // exacte lijstvolgorde
       seats: []
     };
   }
@@ -110,29 +110,36 @@ function getCurrentArrangement() {
   };
 }
 
+// kleine helper om even te wachten (voor fade/DOM-render uit init.js)
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
 /**
  * Past een opgeslagen opstelling toe.
- * Herkent objectvorm { type, seats, order }.
+ * - Zet eerst het juiste type in de dropdown en triggert de bestaande change-flow (laadIndeling).
+ * - Wacht op de re-render en projecteert daarna de opgeslagen inhoud.
+ * - Voorkomt dat styling/klassen van de vorige indeling “doorlekken”.
  */
 async function applyArrangement(payload) {
   const grid = document.getElementById('plattegrond');
   const typeSel = document.getElementById('indelingSelect');
-  const klasSel = document.getElementById('klasSelect');
-  const klasId = klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
 
-  // backward compat: als er een array wordt doorgegeven
+  // Backward compat: legacy array → objectvorm
   if (Array.isArray(payload)) {
     payload = { type: typeSel?.value || 'h216', seats: payload, order: [] };
   }
+  const type = payload?.type || typeSel?.value || 'h216';
 
-  const type = payload.type || typeSel?.value || 'h216';
+  // 1) Dropdown op juiste type zetten + 'change' dispatchen,
+  // zodat init.js → laadIndeling() álle themastates/klassen goed reset.
+  if (typeSel) {
+    typeSel.value = type;
+    typeSel.dispatchEvent(new Event('change', { bubbles: true }));
+  }
 
-  // Dropdown aanpassen
-  if (typeSel) typeSel.value = type;
+  // 2) Wacht even op de fade + render (init.js gebruikt ~200ms)
+  await sleep(250);
 
-  // Eerst de juiste indeling tekenen
-  await kiesIndeling(type, klasId);
-
+  // 3) Inhoud projecteren
   if (type === 'presentatievolgorde') {
     if (Array.isArray(payload.order) && payload.order.length) {
       grid.innerHTML = '';
@@ -156,10 +163,10 @@ async function applyArrangement(payload) {
       });
       grid.appendChild(ol);
     }
-    return;
+    return; // geen seats bij lijst
   }
 
-  // Tafels invullen
+  // Tafels invullen (h216/u008/groepjes/vijftallen)
   const seatsEls = Array.from(document.querySelectorAll('#plattegrond .tafel'));
   const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
   const byId  = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
