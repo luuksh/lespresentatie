@@ -6,7 +6,7 @@ const modules = {
   u008:               () => import('./u008.js').then(m => m.u008Indeling),
   groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
   vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
-  presentatievolgorde:() => import('./presentatievolgorde.js').then(m => m.presentatievolgordeIndeling), // ⬅️ nieuw
+  presentatievolgorde:() => import('./presentatievolgorde.js').then(m => m.presentatievolgordeIndeling),
 };
 
 /* ---------- Helpers ---------- */
@@ -74,27 +74,97 @@ if (typeof window !== 'undefined') {
 /* ---------- Presets: hooks ---------- */
 
 /**
- * Leest de huidige opstelling uit de DOM (#plattegrond .tafel).
+ * Leest de huidige opstelling uit de DOM (#plattegrond).
+ * ⚙️ Geeft een object terug met type + seats of order.
  */
 function getCurrentArrangement() {
-  const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
-  return seats.map((el, i) => ({
+  const typeSel = document.getElementById('indelingSelect');
+  const type = typeSel?.value || 'h216';
+  const klasSel = document.getElementById('klasSelect');
+  const klasId = klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
+
+  if (type === 'presentatievolgorde') {
+    const items = Array.from(document.querySelectorAll('#plattegrond .presentatie-item .naam'))
+      .map(el => (el.textContent || '').trim())
+      .filter(Boolean);
+    return {
+      type,
+      klasId,
+      savedAt: new Date().toISOString(),
+      order: items,
+      seats: []
+    };
+  }
+
+  const seats = Array.from(document.querySelectorAll('#plattegrond .tafel')).map((el, i) => ({
     seatId: el.dataset.seatId ?? String(i),
     studentId: (el.textContent || '').trim()
   }));
+
+  return {
+    type,
+    klasId,
+    savedAt: new Date().toISOString(),
+    seats,
+    order: []
+  };
 }
 
 /**
  * Past een opgeslagen opstelling toe.
- * (Dit is de enige manier waarop de standaard willekeur wordt overschreven.)
+ * Herkent objectvorm { type, seats, order }.
  */
-function applyArrangement(arr) {
-  const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+async function applyArrangement(payload) {
+  const grid = document.getElementById('plattegrond');
+  const typeSel = document.getElementById('indelingSelect');
+  const klasSel = document.getElementById('klasSelect');
+  const klasId = klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
 
-  const byIdx = new Map(seats.map((el, i) => [i, el]));
-  const byId  = new Map(seats.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
+  // backward compat: als er een array wordt doorgegeven
+  if (Array.isArray(payload)) {
+    payload = { type: typeSel?.value || 'h216', seats: payload, order: [] };
+  }
 
-  arr.forEach((item, i) => {
+  const type = payload.type || typeSel?.value || 'h216';
+
+  // Dropdown aanpassen
+  if (typeSel) typeSel.value = type;
+
+  // Eerst de juiste indeling tekenen
+  await kiesIndeling(type, klasId);
+
+  if (type === 'presentatievolgorde') {
+    if (Array.isArray(payload.order) && payload.order.length) {
+      grid.innerHTML = '';
+      const ol = document.createElement('ol');
+      ol.className = 'presentatie-lijst';
+      payload.order.forEach((naam, idx) => {
+        const li = document.createElement('li');
+        li.className = 'presentatie-item';
+
+        const nr = document.createElement('span');
+        nr.className = 'nr';
+        nr.textContent = idx + 1;
+
+        const nm = document.createElement('span');
+        nm.className = 'naam';
+        nm.textContent = naam;
+
+        li.appendChild(nr);
+        li.appendChild(nm);
+        ol.appendChild(li);
+      });
+      grid.appendChild(ol);
+    }
+    return;
+  }
+
+  // Tafels invullen
+  const seatsEls = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+  const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
+  const byId  = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
+
+  (payload.seats || []).forEach((item, i) => {
     const key = (item.seatId != null && byId.has(String(item.seatId)))
       ? String(item.seatId)
       : `__idx_${i}`;
