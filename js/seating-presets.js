@@ -1,18 +1,17 @@
-// seating-presets.js — v1.3
-// Drop-in opslag & beheer van klassenopstellingen via localStorage + export/import
-// Wijziging v1.3: export genereert een printklare HTML-presentatie i.p.v. JSON.
+// seating-presets.js — v1.5
+// Presets via localStorage + export naar Word (.doc) met publieksvriendelijke opmaak
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
 const VERSION = 1;
 
 /**
- * Data model in localStorage
+ * localStorage schema
  * {
  *   version: 1,
  *   classes: {
  *     [classId]: {
  *       presets: {
- *         [presetName]: { createdAt, updatedAt, arrangement }
+ *         [presetName]: { createdAt, updatedAt, arrangement } // arrangement: {type, seats[]} | {type:'presentatievolgorde', order[]}
  *       },
  *       lastUsedPreset: ""
  *     }
@@ -79,208 +78,204 @@ class PresetStore {
     this.#save();
     return true;
   }
-  lastUsed(classId) {
-    return this.state.classes?.[classId]?.lastUsedPreset || '';
-  }
+  lastUsed(classId) { return this.state.classes?.[classId]?.lastUsedPreset || ''; }
 }
 
-// ===== Validatie & utils =====
+/* ===== Validatie & helpers ===== */
 function isArrangementValid(arr) {
   if (!arr) return false;
 
-  // Nieuw objectmodel (vanaf jouw recente versies)
   if (typeof arr === 'object' && !Array.isArray(arr)) {
-    if (arr.type === 'presentatievolgorde') {
-      return Array.isArray(arr.order);
-    }
-    if (Array.isArray(arr.seats)) {
-      return arr.seats.every(x => x && (x.seatId != null) && ('studentId' in x));
-    }
+    if (arr.type === 'presentatievolgorde') return Array.isArray(arr.order);
+    if (Array.isArray(arr.seats)) return arr.seats.every(x => x && (x.seatId != null) && ('studentId' in x));
     return false;
   }
-
-  // Legacy array
-  if (Array.isArray(arr)) {
-    return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
-  }
-
+  if (Array.isArray(arr)) return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
   return false;
 }
-
-function sanitizeFilename(s) {
-  return String(s).replace(/[^a-z0-9-_]+/gi,'_');
-}
+function sanitizeFilename(s) { return String(s).replace(/[^a-z0-9-_]+/gi,'_'); }
 function escapeHTML(s){
   return String(s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
-    .replace(/'/g,'&#39;');
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 function nlDateTime(ts=new Date()){
   return new Intl.DateTimeFormat('nl-NL',{
-    year:'numeric', month:'2-digit', day:'2-digit',
-    hour:'2-digit', minute:'2-digit'
+    year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'
   }).format(ts);
 }
 
-/**
- * Render een arrangement als nette, zelfstandige HTML (voor publiek/print).
- * - presentatievolgorde: 3 kolommen, genummerd
- * - overige types: tabelachtig overzicht Stoel → Leerling
- */
-function renderArrangementAsHTML(classId, presetName, arrangement){
+/* ===== Groepen opbouwen uit seats =====
+   1) Prefix in seatId -> groepeer daarop (groep3, g_2, G1-1, A-1, etc.)
+   2) Anders chunken op basis van type: viertallen=4, vijftallen=5, anders 4
+*/
+function buildGroupsFromSeats(arrangement) {
+  const seats = Array.isArray(arrangement?.seats) ? arrangement.seats
+              : Array.isArray(arrangement) ? arrangement
+              : [];
+
+  const type = arrangement?.type || '';
+  const defaultSize = (type === 'vijftallen') ? 5 : 4;
+
+  const byKey = new Map();
+  let hasKey = false;
+  for (const s of seats) {
+    const id = String(s?.seatId ?? '');
+    let key = null;
+    const m1 = id.match(/^(groep|group|grp|g)[\s\-_]?(\d+)/i);
+    if (m1) { key = `G${m1[2]}`; }
+    else {
+      const m2 = id.match(/^([A-Za-z]+)\W/);
+      if (m2) key = m2[1].toUpperCase();
+    }
+    if (key) {
+      hasKey = true;
+      if (!byKey.has(key)) byKey.set(key, []);
+      byKey.get(key).push(s);
+    }
+  }
+  if (hasKey && byKey.size > 0) {
+    const out = [];
+    const keys = Array.from(byKey.keys()).sort((a,b)=>{
+      const na = parseInt(a.replace(/\D+/g,''),10);
+      const nb = parseInt(b.replace(/\D+/g,''),10);
+      if (!isNaN(na) && !isNaN(nb)) return na - nb;
+      return a.localeCompare(b,'nl');
+    });
+    let n=1;
+    for (const k of keys) {
+      const members = byKey.get(k).map(x => x?.studentId || '').filter(Boolean);
+      out.push({ id: String(n++), members });
+    }
+    return out;
+  }
+
+  // chunk volgorde
+  const groups = [];
+  let bucket = [];
+  let n = 1;
+  for (const s of seats) {
+    if (bucket.length === 0) groups.push({ id: String(n++), members: bucket });
+    bucket.push(s?.studentId || '');
+    if (bucket.length >= defaultSize) bucket = [];
+  }
+  return groups;
+}
+
+/* ===== Word-export (HTML voor Word) ===== */
+function renderArrangementAsWordHTML(classId, presetName, arrangement) {
   const safeClass = escapeHTML(classId || 'Onbekend');
   const safeName  = escapeHTML(presetName || 'Opstelling');
   const safeWhen  = escapeHTML(nlDateTime());
+  const type = arrangement?.type || '';
 
-  const baseCSS = `
-    :root {
-      --c1:#111827; --c2:#374151; --c3:#6B7280;
-      --brand:#007bff; --paper:#ffffff; --bg:#f5f7fb;
-      --chip:#eef2ff;
-    }
-    *{ box-sizing:border-box; }
-    html, body { margin:0; padding:0; }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      color: var(--c1); background: var(--bg);
-    }
-    .page {
-      max-width: 1120px; margin: 24px auto; padding: 24px;
-      background: var(--paper); border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
-    .title {
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      border-bottom: 2px solid #eef0f5; padding-bottom: 12px; margin-bottom: 18px;
-    }
-    .title h1 { margin:0; font-size: 24px; line-height:1.2; }
-    .meta { color: var(--c3); font-size: 14px; }
-    .chip { background: var(--chip); color:#1f2a44; padding:4px 10px; border-radius:999px; font-weight:700; font-size:12px; }
-
-    .note {
-      background:#f9fafb; border:1px solid #eef0f5; border-radius:12px;
-      padding:10px 12px; color:#374151; margin-bottom: 14px;
-    }
-
-    /* 3-koloms lijst voor presentatievolgorde */
-    .lijst3 {
-      list-style: none; padding:0; margin: 8px 0 0 0;
-      columns: 3; column-gap: 24px;
-    }
-    .lijst3 li {
-      break-inside: avoid;
-      display: flex; align-items: center; gap:10px;
-      background:#fff; border:1px solid #eef0f5; border-radius:10px;
-      padding:8px 10px; margin:0 0 8px 0;
-      box-shadow: 0 1px 3px rgba(0,0,0,.03);
-      font-size: 15px;
-    }
-    .lijst3 .nr {
-      width:26px; height:26px; border-radius:50%;
-      background: var(--brand); color:#fff; font-weight:800;
-      display:grid; place-items:center; font-size: 13px;
-    }
-
-    /* Stoel → leerling tabelachtig */
-    .table {
-      width:100%; border-collapse: separate; border-spacing: 0 8px; margin-top: 8px;
-    }
-    .table th {
-      text-align:left; color:var(--c2); font-size:12px; text-transform:uppercase; letter-spacing:.06em;
-      padding: 6px 10px;
-    }
-    .table td {
-      background:#fff; border:1px solid #eef0f5;
-      padding:10px 12px; font-size:15px;
-    }
-    .table tr td:first-child { border-radius:10px 0 0 10px; width:120px; color:#1f2a44; font-weight:700; }
-    .table tr td:last-child  { border-radius:0 10px 10px 0; }
-
-    @media print {
-      body { background:#fff; }
-      .page { box-shadow:none; margin:0; border-radius:0; max-width:none; }
-    }
+  const styles = `
+    <style>
+      @page { margin: 2cm; }
+      body { font-family: "Segoe UI", Arial, sans-serif; color:#111; }
+      h1 { font-size:22pt; margin:0 0 6pt 0; }
+      .meta { color:#555; font-size:10pt; margin:0 0 14pt 0; }
+      .groups { display: table; width:100%; border-collapse:separate; border-spacing:9pt; }
+      .group { display: table-cell; width: 33%; vertical-align: top; background:#fff; border:1pt solid #ddd; padding:8pt; border-radius:8pt; }
+      .group h2 { font-size:12pt; margin:0 0 6pt 0; }
+      .label { color:#555; font-size:9pt; margin:8pt 0 2pt 0; }
+      .field { min-height:12pt; padding:6pt; border:1pt dashed #bbb; border-radius:6pt; }
+      .members { margin:6pt 0 0 0; padding:0; }
+      .members p { margin:0 0 4pt 0; padding:6pt; border:1pt solid #eee; border-radius:6pt; }
+      .threecol-break { page-break-inside: avoid; }
+      /* Presentatievolgorde */
+      .list3 { column-count: 3; column-gap: 18pt; list-style: none; padding:0; margin:0; }
+      .list3 li { break-inside: avoid; border:1pt solid #eee; padding:6pt; border-radius:6pt; margin:0 0 6pt 0; }
+      .nr { font-weight:700; display:inline-block; min-width:16pt; }
+      /* Zorg dat "cells" onder elkaar vallen bij smalle weergave (fallback) */
+      @media screen and (max-width:900px) {
+        .group { display:block; width:100%; margin-bottom:10pt; }
+      }
+    </style>
   `;
 
-  function renderPresentatieVolgorde(order){
-    const items = (order || []).filter(Boolean);
-    const lis = items.map((naam, i) => `
-      <li><span class="nr">${i+1}</span><span>${escapeHTML(naam)}</span></li>
-    `).join('');
-    return `
-      <div class="note">Presentatievolgorde — klas <strong>${safeClass}</strong></div>
-      <ol class="lijst3">${lis}</ol>
-    `;
-  }
-
-  function renderSeats(seats){
-    const rows = (seats || []).map((s, i) => {
-      const stoelnr = s?.seatId ?? i+1;
-      const naam = s?.studentId ? escapeHTML(s.studentId) : '';
-      return `<tr><td>Stoel ${escapeHTML(String(stoelnr))}</td><td>${naam}</td></tr>`;
-    }).join('');
-    return `
-      <div class="note">Zitplaatsen — klas <strong>${safeClass}</strong></div>
-      <table class="table">
-        <thead><tr><th>Stoel</th><th>Leerling</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    `;
-  }
-
   let body = '';
+
   if (arrangement?.type === 'presentatievolgorde') {
-    body = renderPresentatieVolgorde(arrangement.order || []);
-  } else if (Array.isArray(arrangement?.seats)) {
-    body = renderSeats(arrangement.seats);
-  } else if (Array.isArray(arrangement)) { // legacy array
-    body = renderSeats(arrangement);
+    const items = (arrangement.order || []).filter(Boolean);
+    const lis = items.map((naam, i)=>`<li><span class="nr">${i+1}.</span> ${escapeHTML(naam)}</li>`).join('');
+    body = `
+      <h1>Presentatievolgorde — ${safeClass} ${safeName}</h1>
+      <p class="meta">${safeWhen}</p>
+      <ol class="list3">${lis}</ol>
+    `;
   } else {
-    body = `<div class="note">Onbekend formaat opstelling.</div>`;
+    const groups = buildGroupsFromSeats(arrangement);
+    const cards = groups.map((g, idx) => {
+      const members = (g.members || []).filter(Boolean)
+        .map(n => `<p>${escapeHTML(n)}</p>`).join('');
+      return `
+        <div class="group threecol-break">
+          <h2>Groep ${escapeHTML(String(g.id || idx+1))}</h2>
+          <div class="label">Thema / Rollen:</div>
+          <div class="field"></div>
+          <div class="label">Leden:</div>
+          <div class="members">${members || '<p>&nbsp;</p>'}</div>
+          <div class="label">Notities:</div>
+          <div class="field"></div>
+        </div>
+      `;
+    }).join('');
+
+    const typeLabel = type ? ` — <em>${escapeHTML(type)}</em>` : '';
+    body = `
+      <h1>Indeling — ${safeClass} ${safeName}${typeLabel}</h1>
+      <p class="meta">${safeWhen}</p>
+      <div class="groups">${cards}</div>
+    `;
   }
 
-  return `<!doctype html>
-<html lang="nl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Indeling ${safeClass} ${safeName}</title>
-<style>${baseCSS}</style>
-</head>
-<body>
-  <div class="page">
-    <div class="title">
-      <h1>Indeling <span class="chip">${safeClass}</span> ${safeName}</h1>
-      <div class="meta">${safeWhen}</div>
-    </div>
-    ${body}
-  </div>
-</body>
-</html>`;
+  // Word-compatible HTML (mso headers)
+  return `
+    <!doctype html>
+    <html xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:w="urn:schemas-microsoft-com:office:word"
+          xmlns="http://www.w3.org/TR/REC-html40">
+      <head>
+        <meta charset="utf-8">
+        <!--[if gte mso 9]><xml>
+          <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+          </w:WordDocument>
+        </xml><![endif]-->
+        ${styles}
+        <title>Indeling ${safeClass} ${safeName}</title>
+      </head>
+      <body>
+        ${body}
+      </body>
+    </html>
+  `;
 }
 
-/** Download helper — sla HTML-string als .html bestand op. */
-function downloadHTML(filename, htmlText){
-  const blob = new Blob([htmlText], { type: 'text/html' });
+/* Download helper: sla Word-HTML als .doc */
+function downloadDOC(filename, htmlText){
+  const blob = new Blob([htmlText], { type: 'application/msword' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = filename;
+  a.download = filename.endsWith('.doc') ? filename : `${filename}.doc`;
   document.body.appendChild(a);
   a.click();
   a.remove();
   URL.revokeObjectURL(url);
 }
 
-/** Exporteer één preset als HTML met bestandsnaam: Indeling [klas] [preset].html */
-function exportPresetAsHTML(classId, presetName, arrangement){
-  const html = renderArrangementAsHTML(classId, presetName, arrangement);
-  const fname = `Indeling ${sanitizeFilename(classId)} ${sanitizeFilename(presetName)}.html`;
-  downloadHTML(fname, html);
+/* Exporteer preset als .doc met bestandsnaam: Indeling [klas] [preset].doc */
+function exportPresetAsDOC(classId, presetName, arrangement){
+  const html = renderArrangementAsWordHTML(classId, presetName, arrangement);
+  const fname = `Indeling ${sanitizeFilename(classId)} ${sanitizeFilename(presetName)}.doc`;
+  downloadDOC(fname, html);
 }
 
-// ===== UI wiring =====
+/* ===== UI wiring ===== */
 export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement }) {
   const store = new PresetStore();
   const $sel = document.getElementById('presetSelect');
@@ -310,37 +305,28 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     return $sel.value || $sel.options[0].value;
   }
 
-  // "Opslaan als…" => opslaan + DIRECT exporteren (mooie HTML)
+  // Opslaan als… => opslaan + DIRECT Word-export
   $btnSave?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const name = prompt('Naam voor deze opstelling:');
     if (!name) return;
 
     const arrangement = getCurrentArrangement();
-    if (!isArrangementValid(arrangement)) {
-      alert('Ongeldige opstelling.');
-      return;
-    }
+    if (!isArrangementValid(arrangement)) { alert('Ongeldige opstelling.'); return; }
 
     if (store.get(classId, name)) {
       const ok = confirm('Bestaat al. Overschrijven?');
       if (!ok) return;
     }
 
-    // 1) Opslaan
     store.upsert(classId, name, arrangement);
     refill();
 
-    // 2) HTML exporteren van deze preset
-    try {
-      exportPresetAsHTML(classId, name, arrangement);
-    } catch (e) {
-      console.warn('Export na opslaan mislukt:', e);
-      alert('Opgeslagen, maar exporteren mislukte.');
-    }
+    try { exportPresetAsDOC(classId, name, arrangement); }
+    catch (e) { console.warn('Export na opslaan mislukt:', e); alert('Opgeslagen, maar exporteren mislukte.'); }
   });
 
-  // "Overschrijven" => opslaan + DIRECT exporteren (mooie HTML)
+  // Overschrijven => opslaan + DIRECT Word-export
   $btnOverwrite?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -350,22 +336,16 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     if (!ok) return;
 
     const arrangement = getCurrentArrangement();
-    if (!isArrangementValid(arrangement)) {
-      alert('Ongeldige opstelling.');
-      return;
-    }
+    if (!isArrangementValid(arrangement)) { alert('Ongeldige opstelling.'); return; }
 
     store.upsert(classId, current, arrangement);
     refill();
 
-    try {
-      exportPresetAsHTML(classId, current, arrangement);
-    } catch (e) {
-      console.warn('Export na overschrijven mislukt:', e);
-      alert('Overschreven, maar exporteren mislukte.');
-    }
+    try { exportPresetAsDOC(classId, current, arrangement); }
+    catch (e) { console.warn('Export na overschrijven mislukt:', e); alert('Overschreven, maar exporteren mislukte.'); }
   });
 
+  // Laden
   $btnLoad?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -375,6 +355,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     applyArrangement(structuredClone(data.arrangement));
   });
 
+  // Hernoemen
   $btnRename?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -385,6 +366,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch(e){ alert('Hernoemen mislukt: ' + e.message); }
   });
 
+  // Verwijderen
   $btnDelete?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -395,51 +377,29 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     refill();
   });
 
-  // Losse Export-knop: exporteert de GESELECTEERDE preset als HTML met dezelfde bestandsnaamstructuur
+  // Export-knop => exporteer GESELECTEERDE preset als .doc
   $btnExport?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
     const data = store.get(classId, current);
     if (!data) { alert('Preset niet gevonden.'); return; }
-    try {
-      exportPresetAsHTML(classId, current, data.arrangement);
-    } catch (e) {
-      console.warn('Export mislukt:', e);
-      alert('Export mislukt.');
-    }
+    try { exportPresetAsDOC(classId, current, data.arrangement); }
+    catch (e) { console.warn('Export mislukt:', e); alert('Export mislukt.'); }
   });
 
+  // Import (ongewijzigd; JSON voor beheer)
   $inpImport?.addEventListener('change', async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
     const text = await file.text();
     const overwrite = confirm('Bestaande presets met dezelfde naam overschrijven?');
     try {
-      // Import-format blijft JSON (intern), dat is prima voor beheer; we renderen bij export.
-      const data = JSON.parse(text);
-      if (!data || typeof data !== 'object') throw new Error('Ongeldig bestand.');
-      // Ondersteun zowel "volledige klas export" als "één preset"
-      if (data.presets && data.classId) {
-        // klas-export
-        const classId = getCurrentClassId();
-        const dest = new PresetStore().state; // gewoon valideren
-        // Reuse simpele import: map alle presets in dit bestand naar huidige classId
-        const tmp = { presets: data.presets };
-        const jsonText = JSON.stringify(tmp);
-        const storeLocal = new PresetStore(); // reuse API
-        storeLocal.importClass(classId, jsonText, { overwrite });
-      } else if (data.arrangement && data.name) {
-        // enkelvoudige preset-export (mocht je die ooit gebruiken)
-        const classId = getCurrentClassId();
-        const storeLocal = new PresetStore();
-        if (!overwrite && storeLocal.get(classId, data.name)) {
-          // sla desnoods over
-        }
-        storeLocal.upsert(classId, data.name, data.arrangement);
+      const parsed = JSON.parse(text);
+      const storeLocal = new PresetStore();
+      if (parsed && parsed.presets) {
+        storeLocal.importClass(getCurrentClassId(), JSON.stringify({presets:parsed.presets}), { overwrite });
       } else {
-        // fallback naar jouw bestaande importer
-        const storeLocal = new PresetStore();
         storeLocal.importClass(getCurrentClassId(), text, { overwrite });
       }
       refill();
