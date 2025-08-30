@@ -1,84 +1,85 @@
-// js/groepjes.js
-// Rendert "Viertallen" als groepjes van 4 en – als nodig – 5.
-// Geen drietallen. Werkt met #plattegrond en .tafel/.groepje styling.
+// groepjes.js
 
-export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
+import { kiesIndeling } from "./indeling.js";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const indelingSelect = document.getElementById("indelingSelect");
+  const klasSelect = document.getElementById("klasSelect");
   const grid = document.getElementById("plattegrond");
-  grid.className = "grid groepjes-layout";
-  grid.innerHTML = "";
 
-  const list = shuffle ? fisherYates(leerlingen.slice()) : leerlingen.slice();
-  const groups = chunk4of5Only(list);
+  // 🟩 Klassen ophalen en dropdown vullen
+  try {
+    const res = await fetch("js/leerlingen_per_klas.json", { cache: "no-cache" });
+    const klassen = await res.json();
 
-  groups.forEach(g => {
-    const groep = document.createElement("div");
-    groep.className = "groepje";
-    // 4 of 5 (CSS gebruikt dit om het 5e tafeltje onder te zetten)
-    groep.dataset.size = String(g.length);
+    klasSelect.innerHTML = "";
+    for (const klas of Object.keys(klassen)) {
+      const option = document.createElement("option");
+      option.value = klas;
+      option.textContent = `Klas ${klas}`;
+      klasSelect.appendChild(option);
+    }
 
-    g.forEach(naam => {
-      const kaart = document.createElement("div");
-      kaart.className = "tafel";
-      kaart.textContent = naam;
-      groep.appendChild(kaart);
+    // herstel laatst gebruikte klas of val terug op de eerste
+    const lastKlas = localStorage.getItem("lastKlas");
+    if (lastKlas && klassen[lastKlas]) {
+      klasSelect.value = lastKlas;
+    } else {
+      klasSelect.selectedIndex = 0;
+    }
+
+    laadIndeling();
+
+    klasSelect.addEventListener("change", () => {
+      localStorage.setItem("lastKlas", klasSelect.value);
+      laadIndeling();
     });
 
-    grid.appendChild(groep);
-  });
-}
+    indelingSelect.addEventListener("change", () => {
+      localStorage.setItem("lastIndeling", indelingSelect.value);
+      laadIndeling();
+    });
 
-/**
- * Verdeel in uitsluitend 4- en 5-tallen.
- * n = list.length, q = floor(n/4), r = n%4
- * r==0 → alleen 4-tallen
- * r==1 → 1 laatste 5-tal
- * r==2 → 2 laatste 5-tallen
- * r==3 → 3 laatste 5-tallen
- * Voor r>0 moet q >= r; bij hele kleine n (zeldzaam in klassen)
- * valt de functie terug op 5-jes en eventueel 1 restgroep (<4).
- */
-function chunk4of5Only(list) {
-  const n = list.length;
-  const q = Math.floor(n / 4);
-  const r = n % 4;
-
-  const groups = [];
-  let i = 0;
-
-  // eerst q groepen van 4
-  for (let g = 0; g < q; g++) groups.push(list.slice(i, i += 4));
-
-  if (r === 0) return groups;
-
-  if (q >= r) {
-    // rest verdelen: elk rest-item maakt, vanaf het einde, een 4-tal tot 5-tal
-    const rest = list.slice(i); // lengte r
-    for (let k = 0; k < r; k++) {
-      const idx = groups.length - 1 - k; // laatste, één-na-laatste, ...
-      groups[idx].push(rest[k]);
-    }
-    return groups;
+  } catch (e) {
+    console.error("Fout bij ophalen klassen:", e);
   }
 
-  // --- Edge cases (hele kleine aantallen, bv. n<8) ---
-  // Bouw zoveel mogelijk 5-tallen; overblijvende kleine restgroep kan <4 zijn.
-  // In normale klassen kom je hier niet.
-  const alt = [];
-  i = 0;
-  let remaining = n;
-  while (remaining >= 5) {
-    alt.push(list.slice(i, i += 5));
-    remaining -= 5;
-  }
-  if (remaining > 0) alt.push(list.slice(i)); // kan 2 of 3 zijn bij piepkleine groepen
-  return alt;
-}
+  function laadIndeling() {
+    const klas = klasSelect.value;
+    const indeling = indelingSelect.value;
+    grid.innerHTML = "";
 
-// Optioneel: zet shuffle:true mee aan om door elkaar te zetten
-function fisherYates(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    fetch(`js/${indeling}.js`)
+      .then(res => res.text())
+      .then(code => {
+        // eslint-disable-next-line no-eval
+        eval(code);
+        if (typeof genereerGroepjes === "function") {
+          const leerlingen = []; // wordt normaal uit json geladen
+          const groups = genereerGroepjes(klas);
+
+          groups.forEach((g, idx) => {
+            const groep = document.createElement("div");
+            groep.className = "groepje";
+            groep.dataset.size = String(g.length);
+
+            // ▶️ Badge met groepsnummer
+            const badge = document.createElement("div");
+            badge.className = "group-badge";
+            badge.textContent = String(idx + 1);
+            groep.appendChild(badge);
+
+            g.forEach(naam => {
+              const kaart = document.createElement("div");
+              kaart.className = "tafel";
+              kaart.textContent = naam;
+              groep.appendChild(kaart);
+            });
+
+            grid.appendChild(groep);
+          });
+        }
+      })
+      .catch(err => console.error("Fout bij laden indeling:", err));
   }
-  return arr;
-}
+});
