@@ -267,3 +267,88 @@ body{
   body{ padding:1rem; }
   .presentatie-lijst{ column-count:1; }
 }
+/* ===========================
+   UNIFIED CONTROLS THEME
+   =========================== */
+
+/* Basis: labels + velden */
+.field { display:flex; flex-direction:column; gap:.35rem; }
+.label {
+  font-size:.85rem; font-weight:700; letter-spacing:.02em;
+  color:#3a3a3a;
+}
+
+/* Select (droplist) – consistent uiterlijk */
+select,
+.select {
+  appearance: none;
+  border: 1px solid #d6d9e0;
+  border-radius: 10px;
+  padding: .56rem 2.2rem .56rem .9rem;
+  font-size: 1rem;
+  background: #fff
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" fill="none" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat right .7rem center/12px;
+  min-width: 11rem;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+select:hover { border-color:#b8bfd0; }
+select:focus { outline:none; border-color:#4a90e2; box-shadow:0 0 0 3px rgba(74,144,226,.18); }
+
+/* Knoppen – 1 familie, 3 varianten */
+.btn {
+  --bg:#eef0f6; --fg:#222; --bg-hover:#e6e8f0; --shadow:0 2px 8px rgba(0,0,0,.06);
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  border:0; border-radius:10px; padding:.58rem 1rem;
+  font-weight:700; font-size:.95rem; color:var(--fg); background:var(--bg);
+  box-shadow: var(--shadow); cursor:pointer; line-height:1; user-select:none;
+  transition: transform .06s ease, background .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.btn:hover { background:var(--bg-hover); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: none; box-shadow:0 0 0 3px rgba(74,144,226,.2); }
+
+/* Variants */
+.btn-primary { --bg:var(--primaire-kleur); --bg-hover:var(--hover-kleur); --fg:#fff; }
+.btn-secondary { --bg:#f4f6fb; --bg-hover:#eceff6; --fg:#2a2a2a; }
+.btn-danger { --bg:#e74c3c; --bg-hover:#cf3f31; --fg:#fff; }
+
+/* Icon-only of icoonknop */
+.btn-icon { padding:.5rem; width:2.25rem; height:2.25rem; }
+.btn-quiet { box-shadow:none; background:transparent; border:1px dashed #d9deea; }
+.btn-quiet:hover { background:#f7f8fc; }
+
+/* Button groups – één geheel met afgeronde uiteinden */
+.btn-group { display:inline-flex; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,.05); }
+.btn-group .btn { border-radius:0; box-shadow:none; }
+.btn-group .btn + .btn { border-left:1px solid rgba(0,0,0,.06); }
+.btn-group .btn:first-child { border-top-left-radius:12px; border-bottom-left-radius:12px; }
+.btn-group .btn:last-child  { border-top-right-radius:12px; border-bottom-right-radius:12px; }
+
+/* Toolbars/panels (zoals presetbalk) */
+.toolbar {
+  display:flex; align-items:center; flex-wrap:wrap; gap:.6rem 1rem;
+  padding:.6rem; border:1px solid #e6e9f2; border-radius:14px; background:#fff;
+}
+.toolbar .divider {
+  width:1px; height:2rem; background:linear-gradient(#e6e9f2, #cfd6e6, #e6e9f2);
+  margin:0 .25rem;
+}
+
+/* Control cards (groepjes van gerelateerde velden/knoppen) */
+.control-card { padding:1rem; border:1px solid #e8ebf3; border-radius:14px; background:#fff; }
+.controls-row { display:flex; align-items:flex-end; gap:1rem; flex-wrap:wrap; }
+
+/* Speciale topbar-tweaks */
+.topbar .field select { min-width:14rem; }
+.topbar .indeling-knop { gap:.8rem; }
+
+/* Presets panel polished */
+.presets-panel { gap:.6rem; align-items:center; }
+.presets-label { font-weight:800; color:#2d2d2d; margin-right:.2rem; }
+.presets-select { min-width:16rem; }
+
+/* Consistente hoogte voor select + buttons naast elkaar */
+select, .btn { height: 42px; }
+
+/* Micro-interactie: disabled seats snapshot status fade al aanwezig */
