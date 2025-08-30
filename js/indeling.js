@@ -2,10 +2,11 @@
 import { initPresetUI } from './seating-presets.js';
 
 const modules = {
-  h216:       () => import('./h216.js').then(m => m.h216Indeling),
-  u008:       () => import('./u008.js').then(m => m.u008Indeling),
-  groepjes:   () => import('./groepjes.js').then(m => m.groepjesIndeling),
-  vijftallen: () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
+  h216:               () => import('./h216.js').then(m => m.h216Indeling),
+  u008:               () => import('./u008.js').then(m => m.u008Indeling),
+  groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
+  vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
+  presentatievolgorde:() => import('./presentatievolgorde.js').then(m => m.presentatievolgordeIndeling), // ⬅️ nieuw
 };
 
 /* ---------- Helpers ---------- */
@@ -43,7 +44,7 @@ async function laadLeerlingen(klasnaam = "G1D") {
  * Laadt dynamisch de juiste indelingsfunctie en tekent de plattegrond.
  * Standaard: leerlingen worden **willekeurig** gezet.
  * Alleen bij het **handmatig Laden** van een preset (via applyArrangement) wordt niet gerandomized.
- * @param {"h216"|"u008"|"groepjes"|"vijftallen"} type
+ * @param {"h216"|"u008"|"groepjes"|"vijftallen"|"presentatievolgorde"} type
  * @param {string} klasnaam
  */
 export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
