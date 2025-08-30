@@ -225,7 +225,7 @@ body {
   height: auto;                 /* laat de container meegroeien */
 }
 
-.groepje[data-size="5"] .tafel:nth-child(5) {
+.groepje[data-size="5"] .tafel:nth--of-type(5) {
   grid-column: 1 / -1;          /* span over beide kolommen */
   justify-self: center;         /* mooi in het midden */
 }
