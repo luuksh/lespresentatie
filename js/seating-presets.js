@@ -130,6 +130,20 @@ function sanitizeFilename(s) {
   return String(s).replace(/[^a-z0-9-_]+/gi,'_');
 }
 
+function triggerExportAllForClass(store, classId, nameForFilename = '') {
+  const json = store.exportClass(classId); // volledige set voor deze klas
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const extra = nameForFilename ? `-${sanitizeFilename(nameForFilename)}` : '';
+  a.href = url;
+  a.download = `opstellingen-${sanitizeFilename(classId)}${extra}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 // ===== UI wiring =====
 export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement }) {
   const store = new PresetStore();
@@ -181,34 +195,41 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     store.upsert(classId, name, arrangement);
     refill();
 
-    // 2) Direct exporteren (zelfde als exportknop, maar met presetnaam in bestandsnaam)
+    // 2) Direct exporteren (hele klas, bestandsnaam met presetnaam)
     try {
-      const json = store.exportClass(classId);
-      const blob = new Blob([json], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `opstellingen-${sanitizeFilename(classId)}-${sanitizeFilename(name)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+      triggerExportAllForClass(store, classId, name);
     } catch (e) {
       console.warn('Export na opslaan mislukt:', e);
       alert('Opgeslagen, maar exporteren mislukte.');
     }
   });
 
+  // "Overschrijven" => opslaan + DIRECT exporteren
   $btnOverwrite?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
+
     const ok = confirm(`Opstelling "${current}" overschrijven met de huidige indeling?`);
     if (!ok) return;
+
     const arrangement = getCurrentArrangement();
-    if (!isArrangementValid(arrangement)) { alert('Ongeldige opstelling.'); return; }
+    if (!isArrangementValid(arrangement)) {
+      alert('Ongeldige opstelling.');
+      return;
+    }
+
+    // 1) Overschrijven
     store.upsert(classId, current, arrangement);
     refill();
+
+    // 2) Direct exporteren (hele klas, bestandsnaam met presetnaam)
+    try {
+      triggerExportAllForClass(store, classId, current);
+    } catch (e) {
+      console.warn('Export na overschrijven mislukt:', e);
+      alert('Overschreven, maar exporteren mislukte.');
+    }
   });
 
   $btnLoad?.addEventListener('click', () => {
@@ -240,16 +261,15 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     refill();
   });
 
+  // Handmatige export-knop blijft bestaan (exporteert hele klas)
   $btnExport?.addEventListener('click', () => {
     const classId = getCurrentClassId();
-    const json = store.exportClass(classId);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `opstellingen-${sanitizeFilename(classId)}.json`;
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
+    try {
+      triggerExportAllForClass(store, classId, '');
+    } catch (e) {
+      console.warn('Export mislukt:', e);
+      alert('Export mislukt.');
+    }
   });
 
   $inpImport?.addEventListener('change', async (e) => {
