@@ -381,3 +381,28 @@ select, .btn { height: 42px; }
 .container.mirror #plattegrond .group-badge {
   left: auto; right: 4px;  /* badge blijft visueel rechtsboven in spiegelmodus */
 }
+/* ===== Docentweergave / Spiegelmodus =====
+   Draai het hele grid 180° (alsof je voor in de klas staat).
+   Items zelf draaien we weer terug zodat tekst leesbaar blijft.
+*/
+.container.mirror #plattegrond {
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition: transform .3s ease;
+}
+
+/* Alle items (tafels, stoelen, groepjes, badges, lijst-items) terugdraaien */
+.container.mirror #plattegrond .tafel,
+.container.mirror #plattegrond .seat,
+.container.mirror #plattegrond .student,
+.container.mirror #plattegrond .desk-item,
+.container.mirror #plattegrond .naamkaartje,
+.container.mirror #plattegrond .kaartje,
+.container.mirror #plattegrond .student-card,
+.container.mirror #plattegrond .desk,
+.container.mirror #plattegrond .groepje,
+.container.mirror #plattegrond .presentatie-item,
+.container.mirror #plattegrond .group-badge,
+.container.mirror #plattegrond .leraar-bureau {
+  transform: rotate(180deg);
+}
