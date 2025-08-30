@@ -1,15 +1,18 @@
 // js/groepjes.js
-// Laadt op basis van indeling het juiste generator-script (bijv. 'viertallen' of 'vijftallen'),
-// vraagt groepen op via window.genereerGroepjes(klas) en rendert ze met een zichtbare badge (1, 2, 3, ...).
+// Laadt het generator-script (viertallen/vijftallen), vraagt groepen op via
+// window.genereerGroepjes(klas) en rendert ze met zichtbare nummertjes.
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", initGroepjes);
+
+async function initGroepjes() {
   const indelingSelect = document.getElementById("indelingSelect");
   const klasSelect = document.getElementById("klasSelect");
   const grid = document.getElementById("plattegrond");
 
-  // ———————————————————————————————————————————————————————————
+  // Zorg dat de container altijd de juiste layout-class heeft
+  grid.classList.add("grid", "groepjes-layout");
+
   // Klassen ophalen en dropdown vullen
-  // ———————————————————————————————————————————————————————————
   try {
     const res = await fetch("js/leerlingen_per_klas.json", { cache: "no-cache" });
     const klassen = await res.json();
@@ -23,21 +26,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       klasSelect.appendChild(opt);
     });
 
-    // Herstel laatste keuzes (indeling/klas) indien beschikbaar
+    // Herstel laatste keuzes (indeling/klas)
     const lastKlas = localStorage.getItem("lastKlas");
-    if (lastKlas && klassen[lastKlas]) {
-      klasSelect.value = lastKlas;
-    }
+    if (lastKlas && klassen[lastKlas]) klasSelect.value = lastKlas;
 
     const lastIndeling = localStorage.getItem("lastIndeling");
     if (lastIndeling && [...indelingSelect.options].some(o => o.value === lastIndeling)) {
       indelingSelect.value = lastIndeling;
     }
 
-    // Initieel laden
+    // Eerste render
     await laadIndeling();
 
-    // Event listeners
+    // Events
     klasSelect.addEventListener("change", async () => {
       localStorage.setItem("lastKlas", klasSelect.value);
       await laadIndeling(true);
@@ -49,15 +50,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
   } catch (e) {
-    console.error("Fout bij ophalen klassen of initialisatie:", e);
+    console.error("Fout bij initialisatie/klassen laden:", e);
   }
 
-  // ———————————————————————————————————————————————————————————
-  // Indeling laden en renderen
-  // ———————————————————————————————————————————————————————————
   async function laadIndeling(resetWeergave = false) {
     const klas = klasSelect.value;
-    const indeling = indelingSelect.value; // verwacht bv. 'viertallen' of 'vijftallen'
+    const indeling = indelingSelect.value; // 'viertallen' of 'vijftallen'
     grid.innerHTML = "";
 
     // (optioneel) terug naar leerlingweergave bij wisselen
@@ -70,47 +68,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-      // Laad generator-script dynamisch
+      // Laad het generator-script dynamisch
       const code = await (await fetch(`js/${indeling}.js`, { cache: "no-cache" })).text();
 
-      // Verwijder eventuele vorige generator
+      // Verwijder eerdere generator en evalueer nieuwe
       delete window.genereerGroepjes;
-
-      // Eval het script zodat window.genereerGroepjes beschikbaar komt
       // eslint-disable-next-line no-eval
       eval(code);
 
       if (typeof window.genereerGroepjes !== "function") {
-        console.error(`In js/${indeling}.js ontbreekt de functie window.genereerGroepjes`);
+        console.error(`In js/${indeling}.js ontbreekt window.genereerGroepjes()`);
         return;
       }
 
-      // Vraag groepen op en render
       const groups = window.genereerGroepjes(klas) || [];
       renderGroups(groups);
 
     } catch (err) {
-      console.error("Fout bij laden van indeling:", err);
+      console.error("Fout bij laden indeling:", err);
     }
   }
 
-  // ———————————————————————————————————————————————————————————
-  // Renderfunctie met zichtbare nummertjes (badges)
-  // ———————————————————————————————————————————————————————————
   function renderGroups(groups) {
     grid.innerHTML = "";
     groups.forEach((g, idx) => {
       const groep = document.createElement("div");
       groep.className = "groepje";
-      groep.dataset.size = String(g.length); // kan 3/4/5 zijn
+      groep.dataset.size = String(g.length); // 3/4/5 → CSS kan hierop inspelen
 
-      // ▼ Badge met groepsnummer zichtbaar linksboven (stijlen via .group-badge in CSS)
+      // ▼ badge met groepsnummer (zichtbaar linksboven)
       const badge = document.createElement("div");
       badge.className = "group-badge";
       badge.textContent = String(idx + 1);
       groep.appendChild(badge);
 
-      // Kaartjes/tafels
+      // Tafels/leerlingen
       g.forEach(naam => {
         const kaart = document.createElement("div");
         kaart.className = "tafel";
@@ -121,4 +113,4 @@ document.addEventListener("DOMContentLoaded", async () => {
       grid.appendChild(groep);
     });
   }
-});
+}
