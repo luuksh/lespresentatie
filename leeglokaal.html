@@ -15,18 +15,23 @@
 
   <!-- Topbar -->
   <div class="topbar">
-    <div class="indeling-knop">
-      <select id="indelingSelect">
-        <option value="h216">H216</option>
-        <option value="u008">U008</option>
-        <option value="groepjes">Viertallen</option>
-        <option value="vijftallen">Vijftallen</option>
-        <option value="presentatievolgorde">Volgorde</option>
-      </select>
-
-      <select id="klasSelect">
-        <!-- Wordt automatisch gevuld via JS -->
-      </select>
+    <div class="controls-row">
+      <div class="field">
+        <span class="label">Indeling</span>
+        <select id="indelingSelect">
+          <option value="h216">H216</option>
+          <option value="u008">U008</option>
+          <option value="groepjes">Viertallen</option>
+          <option value="vijftallen">Vijftallen</option>
+          <option value="presentatievolgorde">Volgorde</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="label">Klas</span>
+        <select id="klasSelect">
+          <!-- Wordt automatisch gevuld via JS -->
+        </select>
+      </div>
     </div>
 
     <div class="opdracht-balk is-success">
@@ -54,23 +59,38 @@
 
     <!-- Rechterkant: bediening -->
     <div>
-      <div class="card" style="text-align:center;">
-        <button id="save-absenties-btn" type="button" class="btn-primary">Opslaan absenties</button>
+      <!-- Absentie & spiegel -->
+      <div class="card control-card">
+        <div class="controls-row">
+          <button id="save-absenties-btn" type="button" class="btn btn-primary">Opslaan absenties</button>
+          <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
+        </div>
         <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
-        <button id="toggle-view-btn" type="button" class="btn-secondary">Docentweergave (spiegel)</button>
       </div>
 
-      <div class="card" style="margin-top:1rem;">
-        <div class="presets-panel">
-          <label for="presetSelect" class="presets-label">Opstelling:</label>
+      <!-- Preset controls -->
+      <div class="card control-card" style="margin-top:1rem;">
+        <div class="toolbar presets-panel">
+          <span class="presets-label">Opstelling:</span>
           <select id="presetSelect" class="presets-select"></select>
-          <button id="btnPresetLoad" class="btn-secondary">Laden</button>
-          <button id="btnPresetSave" class="btn-primary">Opslaan als…</button>
-          <button id="btnPresetOverwrite" class="btn-secondary">Overschrijven</button>
-          <button id="btnPresetRename" class="btn-secondary">Hernoemen</button>
-          <button id="btnPresetDelete" class="btn-danger">Verwijderen</button>
-          <button id="btnPresetExport" class="btn-secondary">Export</button>
-          <label for="presetImport" class="btn-secondary import-label">Import</label>
+
+          <span class="divider"></span>
+
+          <div class="btn-group">
+            <button id="btnPresetLoad" class="btn btn-secondary">Laden</button>
+            <button id="btnPresetSave" class="btn btn-primary">Opslaan als…</button>
+            <button id="btnPresetOverwrite" class="btn btn-secondary">Overschrijven</button>
+          </div>
+
+          <div class="btn-group">
+            <button id="btnPresetRename" class="btn btn-secondary">Hernoemen</button>
+            <button id="btnPresetDelete" class="btn btn-danger">Verwijderen</button>
+          </div>
+
+          <span class="divider"></span>
+
+          <button id="btnPresetExport" class="btn btn-secondary">Export</button>
+          <label for="presetImport" class="btn btn-secondary import-label">Import</label>
           <input id="presetImport" type="file" accept="application/json" hidden />
         </div>
       </div>
