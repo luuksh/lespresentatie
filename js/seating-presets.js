@@ -1,4 +1,4 @@
-// seating-presets.js — v1.0
+// seating-presets.js — v1.1
 // Drop-in opslag & beheer van klassenopstellingen via localStorage + export/import
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
@@ -106,11 +106,26 @@ class PresetStore {
 // ===== Validatie & utils =====
 function isArrangementValid(arr) {
   if (!arr) return false;
+
+  // Nieuw objectmodel
+  if (typeof arr === 'object' && !Array.isArray(arr)) {
+    if (arr.type === 'presentatievolgorde') {
+      return Array.isArray(arr.order);
+    }
+    if (Array.isArray(arr.seats)) {
+      return arr.seats.every(x => x && (x.seatId != null) && ('studentId' in x));
+    }
+    return false;
+  }
+
+  // Legacy array
   if (Array.isArray(arr)) {
     return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
   }
+
   return false;
 }
+
 function sanitizeFilename(s) {
   return String(s).replace(/[^a-z0-9-_]+/gi,'_');
 }
