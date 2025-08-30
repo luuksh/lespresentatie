@@ -406,3 +406,8 @@ select, .btn { height: 42px; }
 .container.mirror #plattegrond .leraar-bureau {
   transform: rotate(180deg);
 }
+/* Bureau van leraar verschuiven in docentweergave */
+.container.mirror .bureau-rij {
+  justify-content: flex-end;   /* naar rechts */
+  margin-top: 1.5rem;          /* optioneel extra ruimte zodat hij visueel onderaan staat */
+}
