@@ -564,3 +564,38 @@ body {
 .presentatie-item .naam {
   line-height: 1.2;
 }
+/* Presentatievolgorde in drie kolommen */
+.presentatie-lijst {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 3;           /* 🔑 verdeel in 3 kolommen */
+  column-gap: 2rem;          /* ruimte tussen kolommen */
+}
+
+.presentatie-item {
+  break-inside: avoid;       /* zorg dat een item niet doormidden breekt */
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .4rem .6rem;
+  margin-bottom: .5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  font-size: .95rem;
+}
+
+.presentatie-item .nr {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 1.8rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: var(--primaire-kleur, #007bff);
+  color: #fff;
+  font-size: .85rem;
+}
