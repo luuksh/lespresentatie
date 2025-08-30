@@ -1,85 +1,90 @@
-// groepjes.js
+// js/groepjes.js
+// Rendert "Viertallen": groepjes van 4 en – indien nodig – 5 (geen 3).
+// Exporteert: groepjesIndeling(leerlingen, { shuffle })
 
-import { kiesIndeling } from "./indeling.js";
-
-document.addEventListener("DOMContentLoaded", async () => {
-  const indelingSelect = document.getElementById("indelingSelect");
-  const klasSelect = document.getElementById("klasSelect");
+export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
   const grid = document.getElementById("plattegrond");
+  grid.className = "grid groepjes-layout";
+  grid.innerHTML = "";
 
-  // 🟩 Klassen ophalen en dropdown vullen
-  try {
-    const res = await fetch("js/leerlingen_per_klas.json", { cache: "no-cache" });
-    const klassen = await res.json();
+  const list = shuffle ? shuffleFY([...leerlingen]) : [...leerlingen];
+  const groups = chunk4of5Only(list);
 
-    klasSelect.innerHTML = "";
-    for (const klas of Object.keys(klassen)) {
-      const option = document.createElement("option");
-      option.value = klas;
-      option.textContent = `Klas ${klas}`;
-      klasSelect.appendChild(option);
-    }
+  groups.forEach((g, idx) => {
+    const groep = document.createElement("div");
+    groep.className = "groepje";
+    groep.dataset.size = String(g.length); // 4 of 5 → CSS kan hierop stylen
 
-    // herstel laatst gebruikte klas of val terug op de eerste
-    const lastKlas = localStorage.getItem("lastKlas");
-    if (lastKlas && klassen[lastKlas]) {
-      klasSelect.value = lastKlas;
-    } else {
-      klasSelect.selectedIndex = 0;
-    }
+    // ▶️ Badge met groepsnummer
+    const badge = document.createElement("div");
+    badge.className = "group-badge";
+    badge.textContent = String(idx + 1);
+    groep.appendChild(badge);
 
-    laadIndeling();
-
-    klasSelect.addEventListener("change", () => {
-      localStorage.setItem("lastKlas", klasSelect.value);
-      laadIndeling();
+    g.forEach(naam => {
+      const kaart = document.createElement("div");
+      kaart.className = "tafel";
+      kaart.textContent = naam;
+      groep.appendChild(kaart);
     });
 
-    indelingSelect.addEventListener("change", () => {
-      localStorage.setItem("lastIndeling", indelingSelect.value);
-      laadIndeling();
-    });
+    // Als 5, zet het 5e tafeltje op rij 2, kolom 1–2 (afhankelijk van je CSS)
+    if (g.length === 5) {
+      const vijfde = document.createElement("div");
+      vijfde.className = "tafel extra";
+      vijfde.textContent = g[4];
+      // We hebben het al toegevoegd via loop; als je 5e apart wil positioneren:
+      // groep.removeChild(groep.lastChild); groep.appendChild(vijfde);
+    }
 
-  } catch (e) {
-    console.error("Fout bij ophalen klassen:", e);
+    grid.appendChild(groep);
+  });
+}
+
+// --- helpers ---
+
+function chunk4of5Only(list) {
+  // Maak eerst zoveel mogelijk 4-tallen
+  const groups = [];
+  let i = 0;
+  while (i + 4 <= list.length) {
+    groups.push(list.slice(i, i + 4));
+    i += 4;
+  }
+  const rest = list.length - i;
+
+  if (rest === 0) return groups;
+  if (rest === 4) {
+    groups.push(list.slice(i, i + 4));
+    return groups;
+  }
+  if (rest === 5) {
+    groups.push(list.slice(i, i + 5));
+    return groups;
   }
 
-  function laadIndeling() {
-    const klas = klasSelect.value;
-    const indeling = indelingSelect.value;
-    grid.innerHTML = "";
-
-    fetch(`js/${indeling}.js`)
-      .then(res => res.text())
-      .then(code => {
-        // eslint-disable-next-line no-eval
-        eval(code);
-        if (typeof genereerGroepjes === "function") {
-          const leerlingen = []; // wordt normaal uit json geladen
-          const groups = genereerGroepjes(klas);
-
-          groups.forEach((g, idx) => {
-            const groep = document.createElement("div");
-            groep.className = "groepje";
-            groep.dataset.size = String(g.length);
-
-            // ▶️ Badge met groepsnummer
-            const badge = document.createElement("div");
-            badge.className = "group-badge";
-            badge.textContent = String(idx + 1);
-            groep.appendChild(badge);
-
-            g.forEach(naam => {
-              const kaart = document.createElement("div");
-              kaart.className = "tafel";
-              kaart.textContent = naam;
-              groep.appendChild(kaart);
-            });
-
-            grid.appendChild(groep);
-          });
-        }
-      })
-      .catch(err => console.error("Fout bij laden indeling:", err));
+  // Rest is 1,2 of 3 → leen 1 uit eerdere groepen om 5 te maken (geen 3)
+  const leftover = list.slice(i);
+  if (groups.length === 0) {
+    // heel kleine klas: maak één groep
+    groups.push(leftover);
+    return groups;
   }
-});
+  // Voeg leftover toe aan laatste groep tot die 5 is
+  const last = groups[groups.length - 1];
+  while (leftover.length && last.length < 5) {
+    last.push(leftover.shift());
+  }
+  // Als er toch nog iets overblijft (zeldzaam bij piepkleine aantallen),
+  // zet dat als aparte groep (3 max).
+  if (leftover.length) groups.push(leftover);
+  return groups;
+}
+
+function shuffleFY(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
