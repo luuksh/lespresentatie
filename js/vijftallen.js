@@ -1,73 +1,115 @@
-// js/vijftallen.js
-// Verdeel in 5-tallen; rest -> zo weinig mogelijk 6-tallen (geen 3- of 4-tallen).
-// Voor extreem kleine aantallen (bijv. < 7) maken we één groep met alle namen.
+// vijftallen.js
+//
+// Exporteert/definieert: genereerGroepjes(klas)
+// Retourneert een array met groepen (arrays met namen), geaimd op 5 per groep.
+// Herverdeelt zodat de laatste groep niet op 1–2 personen eindigt (=> 4/5 waar mogelijk).
 
-export function vijftallenIndeling(leerlingen, { shuffle = false } = {}) {
-  const grid = document.getElementById('plattegrond');
-  grid.className = 'grid groepjes-layout';
-  grid.innerHTML = '';
+(function () {
+  /**
+   * Haal de leerlingenlijst voor een klas op uit mogelijke bronnen in de pagina.
+   * - Voorkeur: window.klassenData[klas] (als je die elders al hebt gezet)
+   * - Alternatief: window.leerlingenLijst (platte array)
+   * - Anders: lege array
+   */
+  function getLeerlingenVoorKlas(klas) {
+    if (window.klassenData && window.klassenData[klas]) {
+      return [...window.klassenData[klas]];
+    }
+    if (Array.isArray(window.leerlingenLijst)) {
+      return [...window.leerlingenLijst];
+    }
+    // Desnoods fallback naar localStorage (optioneel, alleen als je dat elders opslaat)
+    try {
+      const raw = localStorage.getItem("leerlingen_" + klas);
+      if (raw) return JSON.parse(raw);
+    } catch (_) {}
+    return [];
+  }
 
-  const list = shuffle ? fisherYates(leerlingen.slice()) : leerlingen.slice();
-  const groups = chunk5Prefer6(list);
+  /** Fisher–Yates shuffle (stabiel en eerlijk) */
+  function shuffleInPlace(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
-  groups.forEach(g => {
-    const wrap = document.createElement('div');
-    wrap.className = 'groepje';
-    wrap.dataset.size = String(g.length); // 5 of 6 (edge: heel kleine n)
-    g.forEach(naam => {
-      const d = document.createElement('div');
-      d.className = 'tafel';
-      d.textContent = naam;
-      wrap.appendChild(d);
-    });
-    grid.appendChild(wrap);
-  });
-}
+  /**
+   * Herverdeel zodat laatste groep niet 1 of 2 heeft.
+   * We schuiven 1 of 2 leerlingen door vanuit eerdere groepen met 5.
+   */
+  function herverdeelLaatsteGroep(groups) {
+    if (groups.length === 0) return groups;
+    const last = groups[groups.length - 1];
+    if (last.length >= 3) return groups; // prima
 
-/**
- * Maak zoveel mogelijk 5-tallen; verdeel de rest (r) over de laatste r groepen
- * zodat die 6-tallen worden. Alleen 5 en 6 dus.
- * Edgecases: bij heel kleine n waar 5/6 niet haalbaar is, 1 groep met alle namen.
- */
-function chunk5Prefer6(list) {
-  const n = list.length;
-  if (n < 7) return [list.slice()]; // te klein om 5/6 netjes te verdelen
+    // We hebben 1 of 2 in de laatste groep—probeer te lenen uit eerdere groepen van 5
+    let nodig = 3 - last.length; // 1 of 2 nodig
+    for (let i = groups.length - 2; i >= 0 && nodig > 0; i--) {
+      if (groups[i].length > 4) {
+        last.push(groups[i].pop());
+        nodig--;
+      }
+    }
 
-  const groups = [];
-  const q = Math.floor(n / 5); // aantal 5-tallen
-  const r = n % 5;             // rest 0..4
-  let i = 0;
-
-  // eerst q groepen van 5
-  for (let g = 0; g < q; g++) groups.push(list.slice(i, i += 5));
-
-  if (r === 0) return groups;
-
-  // als het kan, maak van de laatste r groepen een 6-tal
-  if (q >= r) {
-    for (let k = 0; k < r; k++) {
-      groups[groups.length - 1 - k].push(list[i++]); // laatste, een-na-laatste, ...
+    // Als het nog steeds niet lukt (bijv. te weinig 5-tallen),
+    // probeer het meer globaal: maak waar mogelijk 4-4-4-...-5-5-balans
+    if (last.length < 3 && groups.length > 1) {
+      outer: for (let i = groups.length - 2; i >= 0; i--) {
+        while (groups[i].length > 3 && last.length < 3) {
+          last.push(groups[i].pop());
+          if (last.length >= 3) break outer;
+        }
+      }
     }
     return groups;
   }
 
-  // zeldzame kleine gevallen (bv. n=7/8/9: q<r): maak 6-tallen eerst
-  const alt = [];
-  i = 0;
-  let remaining = n;
-  while (remaining >= 6) {
-    alt.push(list.slice(i, i += 6));
-    remaining -= 6;
-  }
-  if (remaining > 0) alt.push(list.slice(i)); // rest (<6) als 1 groep
-  return alt;
-}
+  /**
+   * Maak groepen van ~5 (laatste groep 3–5).
+   * @param {string} klas - sleutel voor de gewenste klas
+   * @returns {string[][]} groepen (arrays met namen)
+   */
+  function genereerGroepjes(klas) {
+    const leerlingen = getLeerlingenVoorKlas(klas);
+    // Als er (nog) geen lijst is, geef lege indeling terug
+    if (!Array.isArray(leerlingen) || leerlingen.length === 0) return [];
 
-// optioneel: door elkaar husselen
-function fisherYates(a) {
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+    shuffleInPlace(leerlingen);
+
+    const groups = [];
+    const chunkSize = 5;
+
+    for (let i = 0; i < leerlingen.length; i += chunkSize) {
+      groups.push(leerlingen.slice(i, i + chunkSize));
+    }
+
+    // Herverdeel zodat laatste groep niet 1–2 groot is
+    herverdeelLaatsteGroep(groups);
+
+    // (Optioneel) tweede pass: probeer verschil tussen min/max groepsgrootte te beperken tot 1
+    // Zodat je vooral 4's en 5's krijgt
+    balance(groups);
+
+    return groups;
   }
-  return a;
-}
+
+  function balance(groups) {
+    // Streef naar sizes 4 of 5; als een groep 6 is en een andere 3, duw 1 door.
+    let changed = true;
+    while (changed) {
+      changed = false;
+      let donor = groups.findIndex(g => g.length > 5);
+      let taker = groups.findIndex(g => g.length < 3);
+      if (donor !== -1 && taker !== -1) {
+        groups[taker].push(groups[donor].pop());
+        changed = true;
+      }
+    }
+    return groups;
+  }
+
+  // Maak beschikbaar in de globale scope voor jouw loader (eval → functie-aanroep)
+  window.genereerGroepjes = genereerGroepjes;
+})();
