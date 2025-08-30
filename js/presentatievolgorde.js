@@ -1,34 +1,25 @@
 // js/presentatievolgorde.js
-// Maakt een genummerde, willekeurige presentatievolgorde en tekent die in #plattegrond
+// Rendert een eenvoudige genummerde lijst (1..n) met de geshuffelde leerlingen.
 
-export async function tekenPresentatieVolgorde(klasId) {
-  const grid = document.getElementById("plattegrond");
-  grid.innerHTML = "";
+export function presentatievolgordeIndeling(leerlingen = []) {
+  const grid = document.getElementById('plattegrond');
+  if (!grid) return;
 
-  // Leerlingen ophalen
-  const res = await fetch("js/leerlingen_per_klas.json", { cache: "no-cache" });
-  const data = await res.json();
-  const leerlingen = Array.isArray(data?.[klasId]) ? [...data[klasId]] : [];
+  grid.innerHTML = '';
 
-  // Fisher–Yates shuffle (stabiel & eerlijk)
-  for (let i = leerlingen.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [leerlingen[i], leerlingen[j]] = [leerlingen[j], leerlingen[i]];
-  }
+  const ol = document.createElement('ol');
+  ol.className = 'presentatie-lijst';
 
-  // Geordende, genummerde lijst
-  const ol = document.createElement("ol");
-  ol.className = "presentatie-lijst";
-  leerlingen.forEach((naam, index) => {
-    const li = document.createElement("li");
-    li.className = "presentatie-item";
+  leerlingen.forEach((naam, idx) => {
+    const li = document.createElement('li');
+    li.className = 'presentatie-item';
 
-    const nr = document.createElement("span");
-    nr.className = "nr";
-    nr.textContent = index + 1;
+    const nr = document.createElement('span');
+    nr.className = 'nr';
+    nr.textContent = idx + 1;
 
-    const nm = document.createElement("span");
-    nm.className = "naam";
+    const nm = document.createElement('span');
+    nm.className = 'naam';
     nm.textContent = naam;
 
     li.appendChild(nr);
