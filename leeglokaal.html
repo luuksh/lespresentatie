@@ -7,15 +7,13 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
-  
-<script type="module" src="js/indeling.js"></script>
 
-  <!-- App init (bestaande logica) -->
+  <script type="module" src="js/indeling.js"></script>
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
 
-  <!-- Topbalk: dropdowns links + opdrachtenbalk rechts -->
+  <!-- Topbar -->
   <div class="topbar">
     <div class="indeling-knop">
       <select id="indelingSelect">
@@ -31,7 +29,6 @@
       </select>
     </div>
 
-    <!-- Opdrachtenbalk (mooi paneel, geen knop-look) -->
     <div class="opdracht-balk is-success">
       <div class="opdracht-tekst">
         <strong>Lees in je leesboek.</strong>
@@ -39,236 +36,173 @@
     </div>
   </div>
 
-  <!-- Hoofdcontainer met plattegrond en leraarsbureau -->
-  <div class="container">
-    <div class="grid-wrapper">
-      <div class="bureau-rij">
-        <div class="leraar-bureau">Bureau leraar</div>
+  <!-- Layout: links plattegrond, rechts bediening -->
+  <div class="layout">
+    <!-- Linkerkant: plattegrond -->
+    <div>
+      <div class="card container">
+        <div class="grid-wrapper">
+          <div class="bureau-rij">
+            <div class="leraar-bureau">Bureau leraar</div>
+          </div>
+          <div class="grid" id="plattegrond">
+            <!-- Dynamisch gevuld via JS -->
+          </div>
+        </div>
       </div>
-      <div class="grid" id="plattegrond">
-        <!-- Hier komen de tafels/groepjes dynamisch via JS -->
+    </div>
+
+    <!-- Rechterkant: bediening -->
+    <div>
+      <div class="card" style="text-align:center;">
+        <button id="save-absenties-btn" type="button" class="btn-primary">Opslaan absenties</button>
+        <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
+        <button id="toggle-view-btn" type="button" class="btn-secondary">Docentweergave (spiegel)</button>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <div class="presets-panel">
+          <label for="presetSelect" class="presets-label">Opstelling:</label>
+          <select id="presetSelect" class="presets-select"></select>
+          <button id="btnPresetLoad" class="btn-secondary">Laden</button>
+          <button id="btnPresetSave" class="btn-primary">Opslaan als…</button>
+          <button id="btnPresetOverwrite" class="btn-secondary">Overschrijven</button>
+          <button id="btnPresetRename" class="btn-secondary">Hernoemen</button>
+          <button id="btnPresetDelete" class="btn-danger">Verwijderen</button>
+          <button id="btnPresetExport" class="btn-secondary">Export</button>
+          <label for="presetImport" class="btn-secondary import-label">Import</label>
+          <input id="presetImport" type="file" accept="application/json" hidden />
+        </div>
       </div>
     </div>
   </div>
-      <div style="margin-top:1.5em; text-align:center;">
-  <button id="save-absenties-btn" type="button" class="btn-primary">Opslaan absenties</button>
-  <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
-        <button id="toggle-view-btn" type="button" class="btn-secondary">Docentweergave (spiegel)</button>
-<div class="presets-panel">
-<label for="presetSelect" class="presets-label">Opstelling:</label>
-<select id="presetSelect" class="presets-select"></select>
-<button id="btnPresetLoad" class="btn-secondary">Laden</button>
-<button id="btnPresetSave" class="btn-primary">Opslaan als…</button>
-<button id="btnPresetOverwrite" class="btn-secondary">Overschrijven</button>
-<button id="btnPresetRename" class="btn-secondary">Hernoemen</button>
-<button id="btnPresetDelete" class="btn-danger">Verwijderen</button>
-<button id="btnPresetExport" class="btn-secondary">Export</button>
-<label for="presetImport" class="btn-secondary import-label">Import</label>
-<input id="presetImport" type="file" accept="application/json" hidden />
-</div>
-</div>
-  
 
-<script>
-(() => {
-  const GRID_ID = 'plattegrond';
+  <!-- Scripts (ongewijzigd) -->
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD_SELECTOR = '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
+      const roomSel  = document.getElementById('indelingSelect');
+      const classSel = document.getElementById('klasSelect');
 
-  // Klikbare items (jouw tafeltjes)
-  const CARD_SELECTOR =
-    '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
+      function clearUI() {
+        document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`)
+          .forEach(el => el.classList.remove('is-absent'));
+      }
+      function attachDelegatedClick() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        grid.addEventListener('click', (e) => {
+          const card = e.target.closest(CARD_SELECTOR);
+          if (!card || !grid.contains(card)) return;
+          card.classList.toggle('is-absent');
+        });
+      }
+      function watchGridChanges() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        const mo = new MutationObserver(() => clearUI());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+      ['change','click','input'].forEach(evt => {
+        roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+        classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+      });
+      window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
+      const init = () => { attachDelegatedClick(); watchGridChanges(); setTimeout(clearUI, 0); };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else { init(); }
+    })();
+  </script>
 
-  const roomSel  = document.getElementById('indelingSelect');
-  const classSel = document.getElementById('klasSelect');
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD = '.tafel';
+      const klasSel = document.getElementById('klasSelect');
+      const statusEl = document.getElementById('save-status');
+      const key = `absenties_${new Date().toISOString().slice(0,10)}`;
 
-  // UI schoonmaken (alleen de visuele markering)
-  function clearUI() {
-    document
-      .querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`)
-      .forEach(el => el.classList.remove('is-absent'));
-  }
+      function nowNL(){
+        return new Intl.DateTimeFormat('nl-NL',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date());
+      }
+      function getAbsentNames(){
+        return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
+          .map(el=>el.innerText.trim()).filter(Boolean);
+      }
+      function saveSnapshot(){
+        const klas = klasSel?.value || 'onbekend';
+        const names = getAbsentNames();
+        let all = [];
+        try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+        const others = all.filter(e => e && e.klas !== klas);
+        if (names.length === 0) {
+          localStorage.setItem(key, JSON.stringify(others));
+          flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
+          return;
+        }
+        const entry = { klas, datetime: new Date().toISOString(), names };
+        others.push(entry);
+        localStorage.setItem(key, JSON.stringify(others));
+        flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
+      }
+      function flash(msg){
+        if(!statusEl) return;
+        statusEl.textContent=msg;
+        statusEl.style.opacity='1';
+        clearTimeout(flash.t);
+        flash.t=setTimeout(()=>{statusEl.style.opacity='0';},2500);
+      }
+      document.getElementById('save-absenties-btn')?.addEventListener('click', saveSnapshot);
+    })();
+  </script>
 
-  // Klik = toggle (alleen visueel, geen opslag)
-  function attachDelegatedClick() {
-    const grid = document.getElementById(GRID_ID);
-    if (!grid) return;
-    grid.addEventListener('click', (e) => {
-      const card = e.target.closest(CARD_SELECTOR);
-      if (!card || !grid.contains(card)) return;
-      card.classList.toggle('is-absent');
-    });
-  }
+  <script>
+    (() => {
+      const container = document.querySelector('.container');
+      const btn = document.getElementById('toggle-view-btn');
+      const LS_KEY = 'mirror_view_enabled';
+      const indelingSel = document.getElementById('indelingSelect');
+      const klasSel     = document.getElementById('klasSelect');
 
-  // Als init.js de grid (opnieuw) rendert: start altijd schoon
-  function watchGridChanges() {
-    const grid = document.getElementById(GRID_ID);
-    if (!grid) return;
-    const mo = new MutationObserver(() => clearUI());
-    mo.observe(grid, { childList: true, subtree: true });
-  }
+      function setMirror(on){
+        container.classList.toggle('mirror', on);
+        try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
+        if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+      }
+      function applyFromStorage(){ setMirror(localStorage.getItem(LS_KEY) === '1'); }
+      function toggleMirror(){ setMirror(!container.classList.contains('mirror')); }
 
-  // Bij (opnieuw) selecteren van opstelling/klas: UI schoon
-  ['change','click','input'].forEach(evt => {
-    roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
-    classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
-  });
+      btn?.addEventListener('click', toggleMirror);
+      indelingSel?.addEventListener('change', () => setMirror(false));
+      klasSel?.addEventListener('change',     () => setMirror(false));
 
-  // Bij (her)laden van de pagina: UI schoon
-  window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyFromStorage);
+      } else { applyFromStorage(); }
+    })();
+  </script>
 
-  // Init
-  const init = () => {
-    attachDelegatedClick();
-    watchGridChanges();
-    setTimeout(clearUI, 0);
-  };
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-</script>
+  <script type="module">
+    import { initPresetUI } from './js/seating-presets.js';
+    const getCurrentClassId = () => document.getElementById('klasSelect')?.value || 'onbekend';
+    function getCurrentArrangement() {
+      const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+      return seats.map((el, i) => ({ seatId: el.dataset.seatId ?? String(i), studentId: (el.textContent || '').trim() }));
+    }
+    function applyArrangement(arr) {
+      const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+      const byId = new Map(seats.map((el, i) => [el.dataset.seatId ?? `__idx_${i}`, el]));
+      arr.forEach((item, i) => {
+        const key = (item.seatId != null && byId.has(String(item.seatId))) ? String(item.seatId) : `__idx_${i}`;
+        const el = byId.get(key);
+        if (el) el.textContent = item.studentId || '';
+      });
+    }
+    const presetUI = initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement });
+    document.getElementById('klasSelect')?.addEventListener('change', () => { presetUI.refreshForClassChange(); });
+  </script>
 
-<script>
-(() => {
-  const GRID_ID = 'plattegrond';
-  const CARD = '.tafel';
-  const klasSel = document.getElementById('klasSelect');
-  const statusEl = document.getElementById('save-status');
-  const key = `absenties_${new Date().toISOString().slice(0,10)}`; // bv. absenties_2025-08-27
-
-  function nowNL(){
-    return new Intl.DateTimeFormat('nl-NL',{
-      year:'numeric',month:'2-digit',day:'2-digit',
-      hour:'2-digit',minute:'2-digit'
-    }).format(new Date());
-  }
-
-  function getAbsentNames(){
-    return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
-      .map(el=>el.innerText.trim()).filter(Boolean);
-  }
-
-  function saveSnapshot(){
-  const klas = klasSel?.value || 'onbekend';
-  const names = getAbsentNames();
-
-  // laad huidige dagdata
-  let all = [];
-  try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
-
-  // verwijder bestaande snapshot voor déze klas (zelfde dag)
-  const others = all.filter(e => e && e.klas !== klas);
-
-  // extra: als je met lege selectie opslaat → verwijder voor deze klas
-  if (names.length === 0) {
-    localStorage.setItem(key, JSON.stringify(others));
-    flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
-    return;
-  }
-
-  // schrijf nieuwe snapshot (laatste wint)
-  const entry = { klas, datetime: new Date().toISOString(), names };
-  others.push(entry);
-  localStorage.setItem(key, JSON.stringify(others));
-  flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
-}
-
-  function flash(msg){
-    if(!statusEl) return;
-    statusEl.textContent=msg;
-    statusEl.style.opacity='1';
-    clearTimeout(flash.t);
-    flash.t=setTimeout(()=>{statusEl.style.opacity='0';},2500);
-  }
-
-  document.getElementById('save-absenties-btn')
-    ?.addEventListener('click', saveSnapshot);
-})();
-</script>
-<script>
-(() => {
-  const container = document.querySelector('.container');
-  const btn = document.getElementById('toggle-view-btn');
-  const LS_KEY = 'mirror_view_enabled';
-
-  // controls
-  const indelingSel = document.getElementById('indelingSelect');
-  const klasSel     = document.getElementById('klasSelect');
-
-  function setMirror(on){
-    container.classList.toggle('mirror', on);
-    try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
-    if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
-  }
-
-  function applyFromStorage(){
-    const on = localStorage.getItem(LS_KEY) === '1';
-    setMirror(on);
-  }
-
-  function toggleMirror(){
-    setMirror(!container.classList.contains('mirror'));
-  }
-
-  // knop
-  btn?.addEventListener('click', toggleMirror);
-
-  // ⇨ bij wisselen van indeling/klas altijd terug naar leerlingweergave
-  indelingSel?.addEventListener('change', () => setMirror(false));
-  klasSel?.addEventListener('change',     () => setMirror(false));
-
-  // herstellen bij laden
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyFromStorage);
-  } else {
-    applyFromStorage();
-  }
-
-  // (optioneel) sneltoets Alt+M om te togglen
-  // document.addEventListener('keydown', (e) => {
-  //   if (e.altKey && e.key.toLowerCase() === 'm') { e.preventDefault(); toggleMirror(); }
-  // });
-})();
-</script>
-<script type="module">
-  import { initPresetUI } from './js/seating-presets.js';
-
-  // ① Huidige klas-id (uit je dropdown)
-  const getCurrentClassId = () => document.getElementById('klasSelect')?.value || 'onbekend';
-
-  // ② Opstelling uitlezen: we nemen alle .tafel elementen in #plattegrond.
-  //    seatId = data-seat-id als aanwezig, anders de volgorde-index.
-  function getCurrentArrangement() {
-    const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
-    return seats.map((el, i) => ({
-      seatId: el.dataset.seatId ?? String(i),
-      studentId: (el.textContent || '').trim()
-    }));
-  }
-
-  // ③ Opstelling toepassen: match op seatId; als die niet bestaat, val terug op index-positie.
-  function applyArrangement(arr) {
-    const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
-    // maak twee indexen: op data-seat-id en op volgorde
-    const byId = new Map(seats.map((el, i) => [el.dataset.seatId ?? `__idx_${i}`, el]));
-    arr.forEach((item, i) => {
-      const key = (item.seatId != null && byId.has(String(item.seatId))) ? String(item.seatId) : `__idx_${i}`;
-      const el = byId.get(key);
-      if (el) el.textContent = item.studentId || '';
-    });
-  }
-
-  // ④ Init presets-UI
-  const presetUI = initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement });
-
-  // ⑤ Bij klaswissel dropdown refresht de presets-lijst
-  document.getElementById('klasSelect')?.addEventListener('change', () => {
-    presetUI.refreshForClassChange();
-  });
-</script>
-
-
-  
 </body>
 </html>
