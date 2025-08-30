@@ -1,79 +1,69 @@
 // js/vijftallen.js
-// Verdeel in 5-tallen; zorg dat de laatste groep 3–5 is (geen 1–2).
-// Exporteert: vijftallenIndeling(leerlingen, { shuffle })
+// Maakt groepjes van ~5 leerlingen, laatste groep altijd min. 3.
+// Exporteert: window.genereerGroepjes(klas)
 
-export function vijftallenIndeling(leerlingen, { shuffle = false } = {}) {
-  const grid = document.getElementById("plattegrond");
-  grid.className = "grid groepjes-layout";
-  grid.innerHTML = "";
-
-  const list = shuffle ? shuffleFY([...leerlingen]) : [...leerlingen];
-  let groups = chunkBy5(list);
-  groups = fixLastGroup(groups); // voorkom 1–2
-
-  groups.forEach((g, idx) => {
-    const wrap = document.createElement("div");
-    wrap.className = "groepje";
-    wrap.dataset.size = String(g.length); // 3–6
-
-    // ▶️ Badge met groepsnummer
-    const badge = document.createElement("div");
-    badge.className = "group-badge";
-    badge.textContent = String(idx + 1);
-    wrap.appendChild(badge);
-
-    g.forEach(naam => {
-      const d = document.createElement("div");
-      d.className = "tafel";
-      d.textContent = naam;
-      wrap.appendChild(d);
-    });
-
-    grid.appendChild(wrap);
-  });
-}
-
-// --- helpers ---
-
-function chunkBy5(list) {
-  const groups = [];
-  for (let i = 0; i < list.length; i += 5) {
-    groups.push(list.slice(i, i + 5));
-  }
-  return groups;
-}
-
-function fixLastGroup(groups) {
-  if (!groups.length) return groups;
-  const last = groups[groups.length - 1];
-  if (last.length >= 3) return groups;
-
-  // Lenen uit vorige groepen tot de laatste minstens 3 heeft
-  let needed = 3 - last.length; // 1 of 2
-  for (let i = groups.length - 2; i >= 0 && needed > 0; i--) {
-    if (groups[i].length > 4) {
-      last.push(groups[i].pop());
-      needed--;
+(function () {
+  /**
+   * Haalt leerlingenlijst voor een klas op
+   */
+  function getLeerlingenVoorKlas(klas) {
+    if (window.klassenData && window.klassenData[klas]) {
+      return [...window.klassenData[klas]];
     }
+    if (Array.isArray(window.leerlingenLijst)) {
+      return [...window.leerlingenLijst];
+    }
+    try {
+      const raw = localStorage.getItem("leerlingen_" + klas);
+      if (raw) return JSON.parse(raw);
+    } catch (_) {}
+    return [];
   }
 
-  // Nog steeds te klein? Probeer globaler te balanceren (zeldzaam)
-  if (last.length < 3) {
-    outer:
-    for (let i = groups.length - 2; i >= 0; i--) {
-      while (groups[i].length > 3 && last.length < 3) {
+  /** Fisher–Yates shuffle */
+  function shuffleInPlace(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  /** Corrigeer laatste groep (geen 1–2) */
+  function fixLastGroup(groups) {
+    if (!groups.length) return groups;
+    const last = groups[groups.length - 1];
+    if (last.length >= 3) return groups;
+
+    let nodig = 3 - last.length;
+    for (let i = groups.length - 2; i >= 0 && nodig > 0; i--) {
+      if (groups[i].length > 4) {
         last.push(groups[i].pop());
-        if (last.length >= 3) break outer;
+        nodig--;
       }
     }
+    return groups;
   }
-  return groups;
-}
 
-function shuffleFY(a) {
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+  /**
+   * Genereer groepen van ~5
+   * @param {string} klas
+   * @returns {string[][]}
+   */
+  function genereerGroepjes(klas) {
+    const leerlingen = getLeerlingenVoorKlas(klas);
+    if (!Array.isArray(leerlingen) || leerlingen.length === 0) return [];
+
+    shuffleInPlace(leerlingen);
+
+    const groups = [];
+    for (let i = 0; i < leerlingen.length; i += 5) {
+      groups.push(leerlingen.slice(i, i + 5));
+    }
+
+    return fixLastGroup(groups);
   }
-  return a;
-}
+
+  // Maak beschikbaar
+  window.genereerGroepjes = genereerGroepjes;
+})();
