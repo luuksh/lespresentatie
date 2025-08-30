@@ -1,601 +1,269 @@
-:root {
-  --primaire-kleur: #007bff;
-  --hover-kleur: #005fc1;
-  --achtergrond: #f0f2f5;
-  --groep-kleur: #ffffff;
-  --tafelkleur: #f5f0e6;
-  --tafelrand: #b09c7c;
+:root{
+  --primaire-kleur:#007bff;
+  --hover-kleur:#005fc1;
+  --achtergrond:#f5f7fb;
+  --groep-kleur:#ffffff;
+  --tafelkleur:#f5f0e6;
+  --tafelrand:#b09c7c;
 }
 
-* {
-  box-sizing: border-box;
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  padding:2rem;
+  font-family:'Segoe UI', Roboto, sans-serif;
+  background:var(--achtergrond);
+  color:#222;
+  min-height:100vh;
 }
 
-body {
-  margin: 0;
-  padding: 2em;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--achtergrond);
-  min-height: 100vh;
-  display: block;   /* geen flex meer */
+/* ====== GENERIC CARDS / PANELS ====== */
+.card{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  padding:1.25rem;
+}
+.soft-card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 1px 6px rgba(0,0,0,.06);
 }
 
-
-/* 🎛 Keuzemenu */
-.indeling-knop {
-  display: flex;
-  flex-direction: column;  /* zet knoppen onder elkaar */
-  gap: 0.6em;              /* iets kleinere ruimte ertussen */
-  margin-bottom: 1.5em;
-  align-items: flex-start; /* uitlijnen aan de linkerkant */
-}
-
-
-.indeling-knop select {
-  background: var(--primaire-kleur);
-  color: #fff;
-  border: none;
-  padding: 0.5em 1.2em;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.indeling-knop select:hover {
-  background: var(--hover-kleur);
-}
-
-/* 🧱 Algemene container */
-.container {
-  background: var(--groep-kleur);
-  padding: 2em;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  width: fit-content;
-}
-
-.grid-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1.5em;
-  transition: opacity 0.5s ease;
-}
-
-/* 🟪 Groepjesweergave: 4x4 layout */
-.grid.groepjes-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.2em;
-  justify-items: center;
-  align-items: start;
-  width: 100%;       /* laat hem de volle breedte nemen */
-  max-width: 1200px; /* optioneel: begrens totale breedte */
-  margin: 0 auto;
-  padding: 1em;
-}
-
-
-/* ⬛ Groepje met 4 tafels (2x2) */
-.groepje {
-  background: var(--groep-kleur);
-  border: 2px dashed #ccc;
-  border-radius: 12px;
-  padding: 0.8em;
-  width: 180px;
-  height: 120px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 6px;
-  align-items: center;
-  justify-items: center;
-  font-size: 0.85em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.groepje:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* 🪑 Duotafels (zoals H216/U008) */
-.tafelrij {
-  display: flex;
-  justify-content: center;
-  gap: 1.8em;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.duotafel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 0.6s ease;
-}
-
-.tafels {
-  display: flex;
-  gap: 6px;
-}
-
-/* 🪑 Tafeltjes */
-.tafel {
-  width: 80px;
-  height: 52px;
-  background: var(--tafelkleur);
-  border: 2px solid var(--tafelrand);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85em;
-  font-weight: bold;
-  box-shadow: 
-    inset 0 1px 2px rgba(0, 0, 0, 0.1), 
-    0 2px 4px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.tafel:hover {
-  transform: scale(1.04);
-  background: #ede4d4;
-}
-
-/* 👩‍🏫 Bureau van de docent */
-.bureau-rij {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 1em;
-}
-
-.leraar-bureau {
-  width: 120px;
-  height: 45px;
-  background: #c8d6e5;
-  border: 2px solid #3b3b3b;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.8em;
-  animation: fadeIn 0.8s ease;
-}
-
-/* ✨ Fade-in animatie */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-/* 📱 Mobiele optimalisatie */
-@media (max-width: 600px) {
-  body {
-    flex-direction: column;
-    padding: 1em;
-  }
-
-  .container {
-    padding: 1em;
-  }
-
-  .tafelrij {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-
-  .tafel {
-    width: 70px;
-    height: 48px;
-    font-size: 0.9em;
-  }
-
-  .groepje {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .grid.groepjes-layout {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-}
-
-/* 5-persoons groep: twee kolommen, drie rijen; 5e tafeltje onderaan gecentreerd */
-.groepje[data-size="5"] {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  height: auto;                 /* laat de container meegroeien */
-}
-
-.groepje[data-size="5"] .tafel:nth--of-type(5) {
-  grid-column: 1 / -1;          /* span over beide kolommen */
-  justify-self: center;         /* mooi in het midden */
-}
-
-
-/* optioneel: als je een leeg vakje toevoegt in JS */
-.groepje .placeholder { visibility: hidden; }
-
-.opdracht-balk {
-  background: var(--primaire-kleur);
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: 600;
-  text-align: center;
-  padding: 14px 20px;
-  border-radius: 10px;
-  margin: 0 auto 1.5em auto; /* auto marge om te centreren */
-  width: fit-content;        /* balk wordt zo breed als de tekst */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Topbalk: dropdowns links, opdrachtbalk rechts */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1em;
-  gap: 1em;
-}
-
-/* dropdowns in kolom */
-.indeling-knop {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6em;
-}
-
-/* opdrachtbalk blijft strak */
-.opdracht-balk {
-  background: var(--primaire-kleur);
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  white-space: nowrap;
-}
-
-/* ===== Instructie-balk (geen knoplook, echt een paneel) ===== */
-.opdracht-balk{
-  --bg1: #f7fbff;
-  --bg2: #eef6ff;
-  --stroke: #cfe2ff;
-  --accent: var(--primaire-kleur);
-  --text: #0f1a2a;
-
+/* ====== TOPBAR ====== */
+.topbar{
   display:flex;
   align-items:center;
-  gap:12px;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+.indeling-knop{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+}
+.indeling-knop select{
+  background:var(--primaire-kleur);
+  color:#fff;
+  border:none;
+  padding:.55rem 1.1rem;
+  border-radius:10px;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+  transition:background .2s ease, transform .06s ease;
+}
+.indeling-knop select:hover{ background:var(--hover-kleur); }
+.indeling-knop select:active{ transform:translateY(1px); }
+
+/* ====== OPDRACHT-BALK (paneel, geen knoplook) ====== */
+.opdracht-balk{
+  --bg1:#f7fbff; --bg2:#eef6ff; --stroke:#cfe2ff; --accent:var(--primaire-kleur); --text:#0f1a2a;
+  position:relative;
+  display:flex; align-items:center; gap:12px;
   padding:14px 18px 14px 16px;
   border-radius:14px;
-  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
   border:1px solid var(--stroke);
-  box-shadow: 0 6px 20px rgba(16, 42, 67, .06);
-  position:relative;
-  white-space:normal;        /* mag afbreken */
-  max-width: 640px;          /* hou ‘m elegant */
+  box-shadow:0 6px 20px rgba(16,42,67,.06);
+  white-space:normal; max-width:680px;
 }
-
-/* slank accentbalkje links */
 .opdracht-balk::before{
-  content:"";
-  position:absolute;
-  left:0; top:10px; bottom:10px;
-  width:6px;
-  border-radius:6px;
-  background: var(--accent);
-  box-shadow: 0 0 0 1px rgba(0,0,0,.04) inset;
-}
-
-/* icoon + tekst */
-.opdracht-icoon{
-  font-size:22px; line-height:1; margin-left:6px;
+  content:""; position:absolute; left:0; top:10px; bottom:10px; width:6px;
+  border-radius:6px; background:var(--accent);
+  box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;
 }
 .opdracht-tekst strong{
   color:var(--text);
-  font-size:30px; font-weight:800; letter-spacing:.2px;
-  display:block;
+  font-size:28px; font-weight:800; letter-spacing:.2px; display:block;
 }
 
-/* kleurvarianten (optioneel) */
-.opdracht-balk.is-info   { --bg1:#f6fbff; --bg2:#eef7ff; --stroke:#cfe6ff; --accent:#3aa0ff; }
-.opdracht-balk.is-success{ --bg1:#f5fff7; --bg2:#edf9f0; --stroke:#cfead7; --accent:#28a745; }
-.opdracht-balk.is-warning{ --bg1:#fffaf3; --bg2:#fff4e5; --stroke:#f8deb8; --accent:#f59f00; }
-
-/* responsief in jouw topbar */
-.topbar{
-  display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:1em;
+/* ====== CONTAINER MET PLATTEGROND ====== */
+.container{
+  background:#fff;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,0,0,.05);
+  overflow:hidden;
+  width:fit-content;
 }
-@media (max-width: 900px){
+.grid-wrapper{ display:flex; flex-direction:column; }
+.grid{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  align-items:center;
+  gap:1.5rem;
+  transition:opacity .5s ease;
+}
+
+/* ====== GROEPJES (vier- en vijftallen) ====== */
+.grid.groepjes-layout{
+  display:grid;
+  grid-template-columns:repeat(3,180px);
+  grid-auto-rows:auto;
+  gap:1.2rem;
+  justify-content:center;
+  align-items:start;
+  width:auto;
+}
+@media (max-width:900px){
+  .grid.groepjes-layout{ grid-template-columns:repeat(2,180px); }
+}
+@media (max-width:520px){
+  .grid.groepjes-layout{ grid-template-columns:180px; }
+}
+
+.groepje{
+  position:relative;
+  background:transparent;
+  border:2px dashed #d7d7d7;
+  border-radius:12px;
+  padding:.8rem;
+  width:180px; height:120px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap:6px;
+  align-items:center; justify-items:center;
+  font-size:.85rem;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.groepje:hover{
+  transform:scale(1.01);
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.groepje[data-size="5"]{
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(3,auto);
+  height:auto;
+}
+.groepje[data-size="6"]{
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(3,auto);
+}
+.groepje .placeholder{ visibility:hidden; }
+
+/* Nummerrondje op groep */
+.group-badge{
+  position:absolute; top:4px; left:4px;
+  width:28px; height:28px; border-radius:50%;
+  display:grid; place-items:center;
+  background:var(--primaire-kleur);
+  color:#fff; font-weight:800; font-size:.9rem;
+  box-shadow:0 4px 10px rgba(0,0,0,.12);
+  pointer-events:none; z-index:5;
+}
+
+/* ====== DUOTAFELS (h216/u008) ====== */
+.bureau-rij{ display:flex; justify-content:flex-start; margin-bottom:1rem; }
+
+.leraar-bureau{
+  width:120px; height:45px;
+  background:#c8d6e5; border:2px solid #3b3b3b; border-radius:6px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:600; font-size:.85rem;
+  animation:fadeIn .6s ease;
+}
+
+.tafelrij{
+  display:flex; justify-content:center; gap:1.8rem; flex-wrap:nowrap; width:100%;
+}
+.duotafel{ display:flex; flex-direction:column; align-items:center; animation:fadeIn .6s ease; }
+.tafels{ display:flex; gap:6px; }
+
+.tafel{
+  position:relative;
+  width:80px; height:52px;
+  background:var(--tafelkleur);
+  border:2px solid var(--tafelrand);
+  border-radius:6px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.85rem; font-weight:700;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.08);
+  transition:transform .15s ease, background .2s ease;
+  z-index:3;
+}
+.tafel:hover{ transform:scale(1.04); background:#ede4d4; }
+
+/* ====== ABSENTIE MARKERING ====== */
+.seat,.student,.desk-item,.naamkaartje{ cursor:pointer; user-select:none; }
+#plattegrond .tafel,#plattegrond .seat,#plattegrond .student,#plattegrond .desk-item,#plattegrond .naamkaartje,#plattegrond .kaartje,#plattegrond .student-card,#plattegrond .desk{
+  cursor:pointer; user-select:none;
+}
+
+#plattegrond .is-absent{
+  position:relative;
+  outline:3px solid #e53935 !important;
+  border-radius:12px; opacity:.92;
+  box-shadow:0 0 0 3px rgba(229,57,53,.18) inset;
+}
+#plattegrond .is-absent::after{
+  content:"AFWEZIG";
+  position:absolute; inset:0; display:grid; place-items:center;
+  font-weight:800; letter-spacing:.06em; color:#e53935;
+  text-shadow:0 1px 0 #fff;
+  background-image:repeating-linear-gradient(135deg, rgba(229,57,53,.10) 0 10px, rgba(229,57,53,.22) 10px 20px);
+  border-radius:12px; pointer-events:none;
+}
+#plattegrond .is-absent, #plattegrond .is-absent *{ text-decoration:line-through; }
+
+/* ====== PRESENTATIEVOLGORDE (LIJST) ====== */
+.presentatie-lijst{
+  list-style:none; margin:0; padding:0;
+  column-count:3;          /* ✅ 3 kolommen zoals gevraagd */
+  column-gap:2rem;
+  max-width:980px;
+}
+.presentatie-item{
+  break-inside:avoid;
+  display:flex; align-items:center; gap:.75rem;
+  padding:.45rem .7rem; margin:0 0 .55rem 0;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+  font-size:.98rem;
+}
+.presentatie-item .nr{
+  width:1.8rem; height:1.8rem; flex:0 0 1.8rem;
+  border-radius:999px;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:.85rem;
+  background:var(--primaire-kleur); color:#fff;
+}
+.presentatie-item .naam{ line-height:1.2; }
+
+/* ====== PRESETS-PANEEL ====== */
+.presets-panel{ display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.presets-label{ font-weight:600; }
+.presets-select{ min-width:14rem; }
+.btn-primary{
+  background:var(--primaire-kleur); color:#fff;
+  border:0; padding:.6rem 1rem; border-radius:10px; font-weight:700;
+  cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.08);
+  transition:transform .06s ease, background .2s ease;
+}
+.btn-primary:hover{ background:var(--hover-kleur); }
+.btn-primary:active{ transform:translateY(1px); }
+.btn-secondary{ background:#f0f0f0; color:#333; }
+.btn-danger{ background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.5rem; }
+
+.import-label{ cursor:pointer; display:inline-flex; align-items:center; }
+
+/* ====== ANIMATIES & RESPONSIVE ====== */
+@keyframes fadeIn{
+  from{ opacity:0; transform:scale(.98); }
+  to{ opacity:1; transform:scale(1); }
+}
+
+@media (max-width:900px){
   .topbar{ flex-direction:column; align-items:stretch; }
   .opdracht-balk{ max-width:none; }
+  .presentatie-lijst{ column-count:2; }
 }
-
-/* voorkom “knopgevoel”: geen hover-donkerder, alleen mini-lift bij focus met keyboard */
-.opdracht-balk:focus-within{ outline:2px solid rgba(0,0,0,.08); outline-offset:2px; }
-
-/* Maak elk kaartje klikbaar */
-.seat, .student, .desk-item, .naamkaartje {
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Gemarkeerd/afwezig-staat */
-.is-absent {
-  position: relative;
-  outline: 3px solid #e53935;
-  border-radius: 12px;
-  opacity: .85;
-}
-.is-absent::after {
-  content: "AFWEZIG";
-  position: absolute; inset: 0;
-  display: grid; place-items: center;
-  font-weight: 800; letter-spacing: .06em;
-  color: #e53935;
-  text-shadow: 0 1px 0 #fff;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(229,57,53,.10) 0 10px,
-    rgba(229,57,53,.22) 10px 20px
-  );
-  border-radius: 12px;
-  pointer-events: none;
-}
-/* Streep door de naam (werkt ook als de naam gewoon tekstknoop is) */
-.is-absent, .is-absent * {
-  text-decoration: line-through;
-}
-/* klikbaar */
-#plattegrond .tafel,
-#plattegrond .seat,
-#plattegrond .student,
-#plattegrond .desk-item,
-#plattegrond .naamkaartje,
-#plattegrond .kaartje,
-#plattegrond .student-card,
-#plattegrond .desk {
-  cursor: pointer;
-  user-select: none;
-}
-
-/* gemarkeerd/afwezig – iets hogere specificiteit zodat dit wint */
-#plattegrond .is-absent {
-  position: relative;
-  outline: 3px solid #e53935 !important;
-  border-radius: 12px;
-  opacity: .92;
-  box-shadow: 0 0 0 3px rgba(229,57,53,.18) inset;
-}
-#plattegrond .is-absent::after {
-  content: "AFWEZIG";
-  position: absolute; inset: 0;
-  display: grid; place-items: center;
-  font-weight: 800; letter-spacing: .06em;
-  color: #e53935;
-  text-shadow: 0 1px 0 #fff;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(229,57,53,.10) 0 10px,
-    rgba(229,57,53,.22) 10px 20px
-  );
-  border-radius: 12px;
-  pointer-events: none;   /* overlay blokkeert geen kliks */
-}
-#plattegrond .is-absent,
-#plattegrond .is-absent * {
-  text-decoration: line-through;
-}
-.btn-primary{
-  background: var(--primaire-kleur);
-  color:#fff;
-  border:0;
-  padding:.6em 1em;
-  border-radius:10px;
-  font-weight:700;
-  cursor:pointer;
-  box-shadow: 0 3px 10px rgba(0,0,0,.08);
-  transition: transform .06s ease, background .2s ease;
-}
-.btn-primary:hover{ background: var(--hover-kleur); }
-.btn-primary:active{ transform: translateY(1px); }
-
-/* 1) Tafeltjes altijd boven de groep-box */
-.tafel {
-  position: relative;   /* nodig voor z-index */
-  z-index: 3;           /* hoger dan .groepje */
-}
-
-/* 2) Groepjes niet over andere items heen tekenen */
-.groepje {
-  position: relative;   /* eigen stacking context */
-  z-index: 1;
-  overflow: visible;    /* geen afkappen */
-  background: transparent; /* voorkomt witte 'deken' over buren */
-}
-
-/* 3) (Optioneel) Hover-zoom uitschakelen of milder maken */
-.groepje:hover {
-  /* kies één van de twee regels hieronder: */
-  /* transform: none; */                /* helemaal geen zoom */
-  transform: scale(1.01);               /* milde zoom */
-  box-shadow: 0 4px 12px rgba(0,0,0,.08);
-}
-/* Tafeltjes boven alles */
-#plattegrond .tafel {
-  position: relative !important;
-  z-index: 5 !important;
-}
-
-/* Groepjes vormen wel een eigen laag, maar liggen eronder */
-#plattegrond .groepje {
-  position: relative !important;
-  z-index: 1 !important;
-  background: transparent !important;
-  overflow: visible !important;
-}
-
-/* Hover-zoom van groepjes uitschakelen of milder maken */
-#plattegrond .groepje:hover {
-  transform: none !important;               /* of: scale(1.01) !important; */
-  box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
-}
-/* Max. 3 kolommen groepjes; extra groepjes vallen automatisch op nieuwe rij */
-.grid.groepjes-layout {
-  display: grid;
-  grid-template-columns: repeat(3, 180px) !important; /* 3 kolommen van 180px */
-  grid-auto-rows: auto;
-  gap: 1.2em;
-  justify-content: center;   /* rij centreren */
-  align-items: start;
-  width: auto;
-  max-width: none;
-}
-
-/* Responsief: op tablet max. 2 kolommen */
-@media (max-width: 900px) {
-  .grid.groepjes-layout {
-    grid-template-columns: repeat(2, 180px) !important;
-  }
-}
-
-/* Smal: 1 kolom */
-@media (max-width: 520px) {
-  .grid.groepjes-layout {
-    grid-template-columns: 180px !important;
-  }
-}
-/* 6-persoons groep: 2 kolommen × 3 rijen */
-.groepje[data-size="6"] {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-}
-/* Spiegelmodus voor de plattegrond (alleen het bord, niet de UI eromheen) */
-.container.mirror .grid-wrapper{
-  transform: rotate(180deg);
-  transition: transform .25s ease;
-  transform-origin: center center;
-}
-
-/* Kaartjes en 'Bureau leraar' weer rechtop in spiegelmodus */
-.tafel{ transform: rotate(var(--rot, 0deg)); transition: transform .2s ease, background .3s ease; }
-.tafel:hover{ transform: rotate(var(--rot, 0deg)) scale(1.04); }
-
-.container.mirror .tafel{ --rot: 180deg; }
-.container.mirror .leraar-bureau{ transform: rotate(180deg); }
-
-/* (optioneel) groepjes-zoom blijft netjes in spiegelmodus */
-.container.mirror .groepje:hover{ transform: scale(1.02); }
-
-.presets-panel { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
-.presets-label { font-weight:600; }
-.presets-select { min-width:14rem; }
-.btn-danger { background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.4rem; }
-.import-label { cursor:pointer; display:inline-flex; align-items:center; }
-
-.groepje { position: relative; }
-.group-badge{
-  position: absolute;
-  top: 4px; left: 4px;
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--primaire-kleur);
-  color:#fff; font-weight:800; font-size:.9rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,.12);
-  z-index: 9999;
-  pointer-events: none;
-}
-
-/* Presentatievolgorde (lijst) */
-.presentatie-lijst {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-width: 640px;
-}
-
-.presentatie-item {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  padding: .6rem .85rem;
-  margin-bottom: .5rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.08);
-  font-size: 1.05rem;
-}
-
-.presentatie-item .nr {
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 2rem;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  background: var(--primaire-kleur, #007bff);
-  color: #fff;
-}
-
-.presentatie-item .naam {
-  line-height: 1.2;
-}
-/* Presentatievolgorde in drie kolommen */
-.presentatie-lijst {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  column-count: 4;           /* 🔑 verdeel in 4 kolommen */
-  column-gap: 2rem;          /* ruimte tussen kolommen */
-}
-
-.presentatie-item {
-  break-inside: avoid;       /* zorg dat een item niet doormidden breekt */
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  padding: .4rem .6rem;
-  margin-bottom: .5rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.06);
-  font-size: .95rem;
-}
-
-.presentatie-item .nr {
-  width: 1.8rem;
-  height: 1.8rem;
-  flex: 0 0 1.8rem;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  background: var(--primaire-kleur, #007bff);
-  color: #fff;
-  font-size: .85rem;
+@media (max-width:560px){
+  body{ padding:1rem; }
+  .presentatie-lijst{ column-count:1; }
 }
