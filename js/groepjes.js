@@ -10,11 +10,18 @@ export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
   const list = shuffle ? fisherYates(leerlingen.slice()) : leerlingen.slice();
   const groups = chunk4of5Only(list);
 
-  groups.forEach(g => {
+  // ▼ Voeg groepsnummers toe via een badge
+  groups.forEach((g, idx) => {
     const groep = document.createElement("div");
     groep.className = "groepje";
     // 4 of 5 (CSS gebruikt dit om het 5e tafeltje onder te zetten)
     groep.dataset.size = String(g.length);
+
+    // — Badge met groepsnummer (1, 2, 3, ...)
+    const badge = document.createElement("div");
+    badge.className = "group-badge";
+    badge.textContent = String(idx + 1);
+    groep.appendChild(badge);
 
     g.forEach(naam => {
       const kaart = document.createElement("div");
