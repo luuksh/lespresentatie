@@ -528,10 +528,11 @@ body {
   pointer-events: none;
 }
 
+/* Presentatievolgorde (lijst) */
 .presentatie-lijst {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   max-width: 640px;
 }
 
@@ -550,6 +551,7 @@ body {
 .presentatie-item .nr {
   width: 2rem;
   height: 2rem;
+  flex: 0 0 2rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -557,7 +559,6 @@ body {
   font-weight: 700;
   background: var(--primaire-kleur, #007bff);
   color: #fff;
-  flex: 0 0 2rem;
 }
 
 .presentatie-item .naam {
