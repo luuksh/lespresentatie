@@ -351,63 +351,21 @@ select:focus { outline:none; border-color:#4a90e2; box-shadow:0 0 0 3px rgba(74,
 /* Consistente hoogte voor select + buttons naast elkaar */
 select, .btn { height: 42px; }
 
-/* Micro-interactie: disabled seats snapshot status fade al aanwezig */
-/* ===== Docentweergave / Spiegelmodus =====
-   - We spiegelen het hele plattegrondcanvas.
-   - Daarna 'ontspiegelen' we de items zodat tekst leesbaar blijft.
-*/
-.container.mirror #plattegrond {
-  transform: scaleX(-1);
-  transform-origin: center;
-  transition: transform .2s ease;
+/* ====== DOCENTWEERGAVE (definitief) ====== */
+.container.mirror .grid-wrapper{
+  transform:rotate(180deg);
+  transform-origin:center;
+  transition:transform .3s ease;
 }
-
-/* Alle kaartjes/tafels/labels weer terugspiegelen (tekst blijft normaal) */
+/* Draai tekstdragende items terug */
 .container.mirror #plattegrond .tafel,
-.container.mirror #plattegrond .seat,
-.container.mirror #plattegrond .student,
-.container.mirror #plattegrond .desk-item,
-.container.mirror #plattegrond .naamkaartje,
-.container.mirror #plattegrond .kaartje,
-.container.mirror #plattegrond .student-card,
-.container.mirror #plattegrond .desk,
-.container.mirror #plattegrond .groepje,
-.container.mirror #plattegrond .presentatie-item,
-.container.mirror #plattegrond .group-badge {
-  transform: scaleX(-1);
-}
-
-/* Optioneel: voorkom dat de groep-badge ‘meedraait’ naar links/rechts */
-.container.mirror #plattegrond .group-badge {
-  left: auto; right: 4px;  /* badge blijft visueel rechtsboven in spiegelmodus */
-}
-/* ===== Docentweergave / Spiegelmodus =====
-   Draai het hele grid 180° (alsof je voor in de klas staat).
-   Items zelf draaien we weer terug zodat tekst leesbaar blijft.
-*/
-.container.mirror #plattegrond {
-  transform: rotate(180deg);
-  transform-origin: center;
-  transition: transform .3s ease;
-}
-
-/* Alle items (tafels, stoelen, groepjes, badges, lijst-items) terugdraaien */
-.container.mirror #plattegrond .tafel,
-.container.mirror #plattegrond .seat,
-.container.mirror #plattegrond .student,
-.container.mirror #plattegrond .desk-item,
-.container.mirror #plattegrond .naamkaartje,
-.container.mirror #plattegrond .kaartje,
-.container.mirror #plattegrond .student-card,
-.container.mirror #plattegrond .desk,
-.container.mirror #plattegrond .groepje,
 .container.mirror #plattegrond .presentatie-item,
 .container.mirror #plattegrond .group-badge,
-.container.mirror #plattegrond .leraar-bureau {
-  transform: rotate(180deg);
+.container.mirror .bureau-rij .leraar-bureau,
+.container.mirror #plattegrond .groepje > * {
+  transform:rotate(180deg);
 }
-/* Bureau van leraar verschuiven in docentweergave */
-.container.mirror .bureau-rij {
-  justify-content: flex-end;   /* naar rechts */
-  margin-top: 1.5rem;          /* optioneel extra ruimte zodat hij visueel onderaan staat */
+.container.mirror #plattegrond .group-badge {
+  left: 4px;
+  right: auto;
 }
