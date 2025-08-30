@@ -160,21 +160,43 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     return $sel.value || $sel.options[0].value;
   }
 
+  // "Opslaan als…" => opslaan + DIRECT exporteren
   $btnSave?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const name = prompt('Naam voor deze opstelling:');
     if (!name) return;
+
     const arrangement = getCurrentArrangement();
     if (!isArrangementValid(arrangement)) {
       alert('Ongeldige opstelling.');
       return;
     }
+
     if (store.get(classId, name)) {
       const ok = confirm('Bestaat al. Overschrijven?');
       if (!ok) return;
     }
+
+    // 1) Opslaan
     store.upsert(classId, name, arrangement);
     refill();
+
+    // 2) Direct exporteren (zelfde als exportknop, maar met presetnaam in bestandsnaam)
+    try {
+      const json = store.exportClass(classId);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `opstellingen-${sanitizeFilename(classId)}-${sanitizeFilename(name)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.warn('Export na opslaan mislukt:', e);
+      alert('Opgeslagen, maar exporteren mislukte.');
+    }
   });
 
   $btnOverwrite?.addEventListener('click', () => {
