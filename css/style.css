@@ -569,7 +569,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  column-count: 3;           /* 🔑 verdeel in 3 kolommen */
+  column-count: 4;           /* 🔑 verdeel in 4 kolommen */
   column-gap: 2rem;          /* ruimte tussen kolommen */
 }
 
