@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
   <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
   <aside class="side-drawer left" aria-label="Bediening">
     <button class="drawer-handle" aria-label="Open bediening">Bediening</button>
@@ -55,10 +56,10 @@
     </div>
   </aside>
 
-  <!-- ===== Plattegrondsectie (met dropdowns) in compacte, bare container ===== -->
+  <!-- ===== Plattegrondsectie (met dropdowns) in eigen box ===== -->
   <main class="layout">
-    <div class="container is-bare">
-      <!-- Dropdowns horen bij de plattegrond -->
+    <div class="card container">
+      <!-- Dropdowns horen nu bij de plattegrondbox -->
       <div class="topbar">
         <div class="controls-row">
           <div class="field">
@@ -73,7 +74,9 @@
           </div>
           <div class="field">
             <span class="label">Klas</span>
-            <select id="klasSelect"><!-- via JS gevuld --></select>
+            <select id="klasSelect">
+              <!-- Wordt automatisch gevuld via JS -->
+            </select>
           </div>
         </div>
       </div>
@@ -82,7 +85,9 @@
         <div class="bureau-rij">
           <div class="leraar-bureau">Bureau leraar</div>
         </div>
-        <div class="grid" id="plattegrond"><!-- Dynamisch gevuld via JS --></div>
+        <div class="grid" id="plattegrond">
+          <!-- Dynamisch gevuld via JS -->
+        </div>
       </div>
     </div>
 
@@ -177,19 +182,19 @@
   <!-- Spiegelweergave toggle -->
   <script>
     (() => {
-      const container = document.querySelector('.container'); // target de bare container
+      const container = document.querySelector('.container');
       const btn = document.getElementById('toggle-view-btn');
       const LS_KEY = 'mirror_view_enabled';
       const indelingSel = document.getElementById('indelingSelect');
       const klasSel     = document.getElementById('klasSelect');
 
       function setMirror(on){
-        container?.classList.toggle('mirror', on);
+        container.classList.toggle('mirror', on);
         try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
         if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
       }
       function applyFromStorage(){ setMirror(localStorage.getItem(LS_KEY) === '1'); }
-      function toggleMirror(){ setMirror(!container?.classList.contains('mirror')); }
+      function toggleMirror(){ setMirror(!container.classList.contains('mirror')); }
 
       btn?.addEventListener('click', toggleMirror);
       indelingSel?.addEventListener('change', () => setMirror(false));
