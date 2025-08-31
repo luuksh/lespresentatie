@@ -504,3 +504,32 @@ select, .btn { height: 42px; }
   }
   .card.container .topbar{ flex-direction: column; align-items: flex-start; gap:.5rem; }
 }
+/* === Lokaal als zelfstandige, gecentreerde kaart === */
+body {
+  display: block;             /* laat body normaal; iframe bepaalt breedte */
+  background: transparent;    /* geen extra achtergrondkleur binnen iframe */
+}
+
+.layout {
+  display: flex;
+  justify-content: center;    /* centreert de kaart in het iframe */
+  padding: 0 16px 24px;
+}
+
+.card.container {
+  margin: 0 auto;             /* extra zekerheid voor centreren */
+}
+
+/* Grid wrapper centreert intern, maar het leraars-bureau blijft links in z’n rij */
+.grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* centreert de grid als geheel */
+  padding-top: .25rem;
+}
+.bureau-rij {
+  display:flex;
+  justify-content:flex-start;  /* bureau links uitlijnen binnen de kaart */
+  width: 100%;
+  margin-bottom:.5rem;
+}
