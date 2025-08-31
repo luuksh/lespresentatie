@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Opdracht</title>
+  <style>
+    :root { --primaire-kleur:#007bff; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; padding:16px;
+      background:transparent; font-family:'Segoe UI', sans-serif;
+      display:flex; justify-content:center;
+    }
+    .opdracht-balk{
+      --bg1:#f7fbff; --bg2:#eef6ff; --stroke:#cfe2ff; --accent:var(--primaire-kleur); --text:#0f1a2a;
+      position:relative; display:flex; align-items:center; gap:14px;
+      padding:16px 22px 16px 18px; border-radius:16px;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2)); border:1px solid var(--stroke);
+      box-shadow:0 8px 24px rgba(16,42,67,.08);
+      max-width:1100px; width:min(92vw,1100px);
+    }
+    .opdracht-balk::before{
+      content:""; position:absolute; left:0; top:12px; bottom:12px; width:8px; border-radius:8px; background:var(--accent);
+    }
+    .opdracht-tekst{
+      margin-left:8px;
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 800; color: var(--text); letter-spacing:.2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="opdracht-balk" role="region" aria-label="Lesopdracht">
+    <div class="opdracht-tekst"><strong>Lees in je leesboek.</strong></div>
+  </div>
+</body>
+</html>
