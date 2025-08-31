@@ -7,7 +7,6 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Zorg dat css/style.css de .plattegrond-frame styles bevat (inline-block, geen vaste 100% breedte). -->
 
   <!-- Modules -->
   <script type="module" src="js/indeling.js"></script>
@@ -56,10 +55,10 @@
     </div>
   </aside>
 
-  <!-- ===== Plattegrondsectie (met dropdowns) in compacte, auto-breedte wrapper ===== -->
+  <!-- ===== Plattegrondsectie (met dropdowns) in compacte, bare container ===== -->
   <main class="layout">
-    <div class="plattegrond-frame">
-      <!-- Dropdowns horen nu bij de plattegrondbox -->
+    <div class="container is-bare">
+      <!-- Dropdowns horen bij de plattegrond -->
       <div class="topbar">
         <div class="controls-row">
           <div class="field">
@@ -178,7 +177,7 @@
   <!-- Spiegelweergave toggle -->
   <script>
     (() => {
-      const container = document.querySelector('.plattegrond-frame'); // ⟵ was '.container'
+      const container = document.querySelector('.container'); // target de bare container
       const btn = document.getElementById('toggle-view-btn');
       const LS_KEY = 'mirror_view_enabled';
       const indelingSel = document.getElementById('indelingSelect');
