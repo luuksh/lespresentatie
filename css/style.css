@@ -81,14 +81,15 @@ body{
 }
 
 /* ====== CONTAINER MET PLATTEGROND ====== */
-.container{
-  background:#fff;
-  padding:2rem;
-  border-radius:20px;
-  box-shadow:0 0 30px rgba(0,0,0,.05);
-  overflow:hidden;
-  width:fit-content;
+.card.container {
+  background: transparent;   /* geen wit vlak */
+  border: none;              /* geen rand */
+  border-radius: 0;          /* geen afgeronde hoeken */
+  box-shadow: none;          /* geen schaduw */
+  padding: 0;                /* geen extra binnenruimte */
+  margin: 0 auto;            /* blijft netjes centreren */
 }
+
 .grid-wrapper{ display:flex; flex-direction:column; }
 .grid{
   display:flex;
