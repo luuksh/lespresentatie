@@ -523,3 +523,17 @@ body { background: transparent; }
   box-shadow:0 8px 20px rgba(0,0,0,.06);
   padding: 12px;
 }
+/* Maak elke container 'naakt' (geen vlak) en shrink-to-fit */
+.is-bare {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important; /* krimpt tot inhoud */
+  width: auto !important;
+}
+
+/* voorkom dat interne rijen de container oprekken */
+.tafelrij { width: auto !important; }
+.bureau-rij { width: auto !important; }
