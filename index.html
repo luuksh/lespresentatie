@@ -1,494 +1,238 @@
-:root{
-  --primaire-kleur:#007bff;
-  --hover-kleur:#005fc1;
-  --achtergrond:#f5f7fb;
-  --groep-kleur:#ffffff;
-  --tafelkleur:#f5f0e6;
-  --tafelrand:#b09c7c;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klassenplattegrond</title>
 
-*{ box-sizing:border-box; }
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Zorg dat css/style.css de .plattegrond-frame styles bevat (inline-block, geen vaste 100% breedte). -->
 
-body{
-  margin:0;
-  padding:2rem;
-  font-family:'Segoe UI', Roboto, sans-serif;
-  background:var(--achtergrond);
-  color:#222;
-  min-height:100vh;
-}
+  <!-- Modules -->
+  <script type="module" src="js/indeling.js"></script>
+  <script type="module" src="js/init.js"></script>
+</head>
+<body>
 
-/* ====== GENERIC CARDS / PANELS ====== */
-.card{
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-  padding:1.25rem;
-}
-.soft-card{
-  background:#fff;
-  border-radius:20px;
-  box-shadow:0 1px 6px rgba(0,0,0,.06);
-}
+  <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
+  <aside class="side-drawer left" aria-label="Bediening">
+    <button class="drawer-handle" aria-label="Open bediening">Bediening</button>
+    <div class="drawer-content">
+      <!-- Absentie & spiegel -->
+      <div class="card control-card">
+        <div class="controls-row">
+          <button id="save-absenties-btn" type="button" class="btn btn-primary">Opslaan absenties</button>
+          <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
+        </div>
+        <div id="save-status" style="margin-top:.6em; font-size:.9em; opacity:.8;"></div>
+      </div>
 
-/* ====== TOPBAR ====== */
-.topbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  margin-bottom:1rem;
-}
-.indeling-knop{
-  display:flex;
-  flex-direction:column;
-  gap:.6rem;
-}
-.indeling-knop select{
-  background:var(--primaire-kleur);
-  color:#fff;
-  border:none;
-  padding:.55rem 1.1rem;
-  border-radius:10px;
-  font-weight:700;
-  font-size:1rem;
-  cursor:pointer;
-  transition:background .2s ease, transform .06s ease;
-}
-.indeling-knop select:hover{ background:var(--hover-kleur); }
-.indeling-knop select:active{ transform:translateY(1px); }
+      <!-- Preset controls -->
+      <div class="card control-card" style="margin-top:1rem;">
+        <div class="toolbar presets-panel">
+          <span class="presets-label">Opstelling:</span>
+          <select id="presetSelect" class="presets-select"></select>
 
-/* ====== CONTAINER MET PLATTEGROND ====== */
-.card.container {
-  background: transparent;   /* geen wit vlak */
-  border: none;              /* geen rand */
-  border-radius: 0;          /* geen afgeronde hoeken */
-  box-shadow: none;          /* geen schaduw */
-  padding: 0;                /* geen extra binnenruimte */
-  margin: 0 auto;            /* blijft netjes centreren */
-}
+          <span class="divider"></span>
 
-.grid-wrapper{ display:flex; flex-direction:column; }
-.grid{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-evenly;
-  align-items:center;
-  gap:1.5rem;
-  transition:opacity .5s ease;
-}
+          <div class="btn-group">
+            <button id="btnPresetLoad" class="btn btn-secondary">Laden</button>
+            <button id="btnPresetSave" class="btn btn-primary">Opslaan als…</button>
+            <button id="btnPresetOverwrite" class="btn btn-secondary">Overschrijven</button>
+          </div>
 
-/* ====== GROEPJES (vier- en vijftallen) ====== */
-.grid.groepjes-layout{
-  display:grid;
-  grid-template-columns:repeat(3,180px);
-  grid-auto-rows:auto;
-  gap:1.2rem;
-  justify-content:center;
-  align-items:start;
-  width:auto;
-}
-@media (max-width:900px){
-  .grid.groepjes-layout{ grid-template-columns:repeat(2,180px); }
-}
-@media (max-width:520px){
-  .grid.groepjes-layout{ grid-template-columns:180px; }
-}
+          <div class="btn-group">
+            <button id="btnPresetRename" class="btn btn-secondary">Hernoemen</button>
+            <button id="btnPresetDelete" class="btn btn-danger">Verwijderen</button>
+          </div>
 
-.groepje{
-  position:relative;
-  background:transparent;
-  border:2px dashed #d7d7d7;
-  border-radius:12px;
-  padding:.8rem;
-  width:180px; height:120px;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  grid-template-rows:repeat(2,1fr);
-  gap:6px;
-  align-items:center; justify-items:center;
-  font-size:.85rem;
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.groepje:hover{
-  transform:scale(1.01);
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-.groepje[data-size="5"]{
-  grid-template-columns:repeat(2,1fr);
-  grid-template-rows:repeat(3,auto);
-  height:auto;
-}
-.groepje[data-size="6"]{
-  grid-template-columns:repeat(2,1fr);
-  grid-template-rows:repeat(3,auto);
-}
-.groepje .placeholder{ visibility:hidden; }
+          <span class="divider"></span>
 
-/* Nummerrondje op groep */
-.group-badge{
-  position:absolute; top:4px; left:4px;
-  width:28px; height:28px; border-radius:50%;
-  display:grid; place-items:center;
-  background:var(--primaire-kleur);
-  color:#fff; font-weight:800; font-size:.9rem;
-  box-shadow:0 4px 10px rgba(0,0,0,.12);
-  pointer-events:none; z-index:5;
-}
+          <label for="presetImport" class="btn btn-secondary import-label">Import</label>
+          <input id="presetImport" type="file" accept="application/json" hidden />
+        </div>
+      </div>
+    </div>
+  </aside>
 
-/* ====== DUOTAFELS (h216/u008) ====== */
-.bureau-rij{ display:flex; justify-content:flex-start; margin-bottom:1rem; }
+  <!-- ===== Plattegrondsectie (met dropdowns) in compacte, auto-breedte wrapper ===== -->
+  <main class="layout">
+    <div class="plattegrond-frame">
+      <!-- Dropdowns horen nu bij de plattegrondbox -->
+      <div class="topbar">
+        <div class="controls-row">
+          <div class="field">
+            <span class="label">Indeling</span>
+            <select id="indelingSelect">
+              <option value="h216">H216</option>
+              <option value="u008">U008</option>
+              <option value="groepjes">Viertallen</option>
+              <option value="vijftallen">Vijftallen</option>
+              <option value="presentatievolgorde">Volgorde</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="label">Klas</span>
+            <select id="klasSelect"><!-- via JS gevuld --></select>
+          </div>
+        </div>
+      </div>
 
-.leraar-bureau{
-  width:120px; height:45px;
-  background:#c8d6e5; border:2px solid #3b3b3b; border-radius:6px;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:600; font-size:.85rem;
-  animation:fadeIn .6s ease;
-}
+      <div class="grid-wrapper">
+        <div class="bureau-rij">
+          <div class="leraar-bureau">Bureau leraar</div>
+        </div>
+        <div class="grid" id="plattegrond"><!-- Dynamisch gevuld via JS --></div>
+      </div>
+    </div>
 
-.tafelrij{
-  display:flex; justify-content:center; gap:1.8rem; flex-wrap:nowrap; width:100%;
-}
-.duotafel{ display:flex; flex-direction:column; align-items:center; animation:fadeIn .6s ease; }
-.tafels{ display:flex; gap:6px; }
+    <!-- Rechterkolom is leeg; bediening zit links in het zijpaneel -->
+    <div></div>
+  </main>
 
-.tafel{
-  position:relative;
-  width:80px; height:52px;
-  background:var(--tafelkleur);
-  border:2px solid var(--tafelrand);
-  border-radius:6px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:.85rem; font-weight:700;
-  box-shadow:inset 0 1px 2px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.08);
-  transition:transform .15s ease, background .2s ease;
-  z-index:3;
-}
-.tafel:hover{ transform:scale(1.04); background:#ede4d4; }
+  <!-- ====== Scripts die op IDs vertrouwen blijven identiek ====== -->
 
-/* ====== ABSENTIE MARKERING ====== */
-.seat,.student,.desk-item,.naamkaartje{ cursor:pointer; user-select:none; }
-#plattegrond .tafel,#plattegrond .seat,#plattegrond .student,#plattegrond .desk-item,#plattegrond .naamkaartje,#plattegrond .kaartje,#plattegrond .student-card,#plattegrond .desk{
-  cursor:pointer; user-select:none;
-}
+  <!-- Absentie toggling + reset bij wijzigingen -->
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD_SELECTOR = '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
+      const roomSel  = document.getElementById('indelingSelect');
+      const classSel = document.getElementById('klasSelect');
 
-#plattegrond .is-absent{
-  position:relative;
-  outline:3px solid #e53935 !important;
-  border-radius:12px; opacity:.92;
-  box-shadow:0 0 0 3px rgba(229,57,53,.18) inset;
-}
-#plattegrond .is-absent::after{
-  content:"AFWEZIG";
-  position:absolute; inset:0; display:grid; place-items:center;
-  font-weight:800; letter-spacing:.06em; color:#e53935;
-  text-shadow:0 1px 0 #fff;
-  background-image:repeating-linear-gradient(135deg, rgba(229,57,53,.10) 0 10px, rgba(229,57,53,.22) 10px 20px);
-  border-radius:12px; pointer-events:none;
-}
-#plattegrond .is-absent, #plattegrond .is-absent *{ text-decoration:line-through; }
+      function clearUI() {
+        document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`)
+          .forEach(el => el.classList.remove('is-absent'));
+      }
+      function attachDelegatedClick() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        grid.addEventListener('click', (e) => {
+          const card = e.target.closest(CARD_SELECTOR);
+          if (!card || !grid.contains(card)) return;
+          card.classList.toggle('is-absent');
+        });
+      }
+      function watchGridChanges() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        const mo = new MutationObserver(() => clearUI());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+      ['change','click','input'].forEach(evt => {
+        roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+        classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+      });
+      window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
+      const init = () => { attachDelegatedClick(); watchGridChanges(); setTimeout(clearUI, 0); };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else { init(); }
+    })();
+  </script>
 
-/* ====== PRESENTATIEVOLGORDE (LIJST) ====== */
-.presentatie-lijst{
-  list-style:none; margin:0; padding:0;
-  column-count:3;          /* ✅ 3 kolommen zoals gevraagd */
-  column-gap:2rem;
-  max-width:980px;
-}
-.presentatie-item{
-  break-inside:avoid;
-  display:flex; align-items:center; gap:.75rem;
-  padding:.45rem .7rem; margin:0 0 .55rem 0;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 1px 3px rgba(0,0,0,.06);
-  font-size:.98rem;
-}
-.presentatie-item .nr{
-  width:1.8rem; height:1.8rem; flex:0 0 1.8rem;
-  border-radius:999px;
-  display:inline-flex; align-items:center; justify-content:center;
-  font-weight:700; font-size:.85rem;
-  background:var(--primaire-kleur); color:#fff;
-}
-.presentatie-item .naam{ line-height:1.2; }
+  <!-- Opslaan absenties in localStorage (daggebonden) -->
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD = '.tafel';
+      const klasSel = document.getElementById('klasSelect');
+      const statusEl = document.getElementById('save-status');
+      const key = `absenties_${new Date().toISOString().slice(0,10)}`;
 
-/* ====== PRESETS-PANEEL ====== */
-.presets-panel{ display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
-.presets-label{ font-weight:600; }
-.presets-select{ min-width:14rem; }
-.btn-primary{
-  background:var(--primaire-kleur); color:#fff;
-  border:0; padding:.6rem 1rem; border-radius:10px; font-weight:700;
-  cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.08);
-  transition:transform .06s ease, background .2s ease;
-}
-.btn-primary:hover{ background:var(--hover-kleur); }
-.btn-primary:active{ transform:translateY(1px); }
-.btn-secondary{ background:#f0f0f0; color:#333; }
-.btn-danger{ background:#b00020; color:#fff; border:none; padding:.45rem .8rem; border-radius:.5rem; }
+      function nowNL(){
+        return new Intl.DateTimeFormat('nl-NL',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date());
+      }
+      function getAbsentNames(){
+        return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
+          .map(el=>el.innerText.trim()).filter(Boolean);
+      }
+      function saveSnapshot(){
+        const klas = klasSel?.value || 'onbekend';
+        const names = getAbsentNames();
+        let all = [];
+        try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+        const others = all.filter(e => e && e.klas !== klas);
+        if (names.length === 0) {
+          localStorage.setItem(key, JSON.stringify(others));
+          flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
+          return;
+        }
+        const entry = { klas, datetime: new Date().toISOString(), names };
+        others.push(entry);
+        localStorage.setItem(key, JSON.stringify(others));
+        flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
+      }
+      function flash(msg){
+        if(!statusEl) return;
+        statusEl.textContent=msg;
+        statusEl.style.opacity='1';
+        clearTimeout(flash.t);
+        flash.t=setTimeout(()=>{statusEl.style.opacity='0';},2500);
+      }
+      document.getElementById('save-absenties-btn')?.addEventListener('click', saveSnapshot);
+    })();
+  </script>
 
-.import-label{ cursor:pointer; display:inline-flex; align-items:center; }
+  <!-- Spiegelweergave toggle -->
+  <script>
+    (() => {
+      const container = document.querySelector('.plattegrond-frame'); // ⟵ was '.container'
+      const btn = document.getElementById('toggle-view-btn');
+      const LS_KEY = 'mirror_view_enabled';
+      const indelingSel = document.getElementById('indelingSelect');
+      const klasSel     = document.getElementById('klasSelect');
 
-/* ====== ANIMATIES & RESPONSIVE ====== */
-@keyframes fadeIn{
-  from{ opacity:0; transform:scale(.98); }
-  to{ opacity:1; transform:scale(1); }
-}
+      function setMirror(on){
+        container?.classList.toggle('mirror', on);
+        try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
+        if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+      }
+      function applyFromStorage(){ setMirror(localStorage.getItem(LS_KEY) === '1'); }
+      function toggleMirror(){ setMirror(!container?.classList.contains('mirror')); }
 
-@media (max-width:900px){
-  .topbar{ flex-direction:column; align-items:stretch; }
-  .opdracht-balk{ max-width:none; }
-  .presentatie-lijst{ column-count:2; }
-}
-@media (max-width:560px){
-  body{ padding:1rem; }
-  .presentatie-lijst{ column-count:1; }
-}
-/* ===========================
-   UNIFIED CONTROLS THEME
-   =========================== */
+      btn?.addEventListener('click', toggleMirror);
+      indelingSel?.addEventListener('change', () => setMirror(false));
+      klasSel?.addEventListener('change',     () => setMirror(false));
 
-/* Basis: labels + velden */
-.field { display:flex; flex-direction:column; gap:.35rem; }
-.label {
-  font-size:.85rem; font-weight:700; letter-spacing:.02em;
-  color:#3a3a3a;
-}
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyFromStorage);
+      } else { applyFromStorage(); }
+    })();
+  </script>
 
-/* Select (droplist) – consistent uiterlijk */
-select,
-.select {
-  appearance: none;
-  border: 1px solid #d6d9e0;
-  border-radius: 10px;
-  padding: .56rem 2.2rem .56rem .9rem;
-  font-size: 1rem;
-  background: #fff
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" fill="none" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-    no-repeat right .7rem center/12px;
-  min-width: 11rem;
-  transition: border-color .15s ease, box-shadow .15s ease;
-}
-select:hover { border-color:#b8bfd0; }
-select:focus { outline:none; border-color:#4a90e2; box-shadow:0 0 0 3px rgba(74,144,226,.18); }
+  <!-- Preset UI hookup -->
+  <script type="module">
+    import { initPresetUI } from './js/seating-presets.js';
 
-/* Knoppen – 1 familie, 3 varianten */
-.btn {
-  --bg:#eef0f6; --fg:#222; --bg-hover:#e6e8f0; --shadow:0 2px 8px rgba(0,0,0,.06);
-  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-  border:0; border-radius:10px; padding:.58rem 1rem;
-  font-weight:700; font-size:.95rem; color:var(--fg); background:var(--bg);
-  box-shadow: var(--shadow); cursor:pointer; line-height:1; user-select:none;
-  transition: transform .06s ease, background .15s ease, box-shadow .15s ease, opacity .15s ease;
-}
-.btn:hover { background:var(--bg-hover); }
-.btn:active { transform: translateY(1px); }
-.btn:focus-visible { outline: none; box-shadow:0 0 0 3px rgba(74,144,226,.2); }
+    const getCurrentClassId = () =>
+      document.getElementById('klasSelect')?.value || 'onbekend';
 
-/* Variants */
-.btn-primary { --bg:var(--primaire-kleur); --bg-hover:var(--hover-kleur); --fg:#fff; }
-.btn-secondary { --bg:#f4f6fb; --bg-hover:#eceff6; --fg:#2a2a2a; }
-.btn-danger { --bg:#e74c3c; --bg-hover:#cf3f31; --fg:#fff; }
+    function getCurrentArrangement() {
+      const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+      return seats.map((el, i) => ({
+        seatId: el.dataset.seatId ?? String(i),
+        studentId: (el.textContent || '').trim()
+      }));
+    }
 
-/* Icon-only of icoonknop */
-.btn-icon { padding:.5rem; width:2.25rem; height:2.25rem; }
-.btn-quiet { box-shadow:none; background:transparent; border:1px dashed #d9deea; }
-.btn-quiet:hover { background:#f7f8fc; }
+    function applyArrangement(arr) {
+      const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
+      const byId = new Map(seats.map((el, i) => [el.dataset.seatId ?? `__idx_${i}`, el]));
+      arr.forEach((item, i) => {
+        const key = (item.seatId != null && byId.has(String(item.seatId)))
+          ? String(item.seatId) : `__idx_${i}`;
+        const el = byId.get(key);
+        if (el) el.textContent = item.studentId || '';
+      });
+    }
 
-/* Button groups – één geheel met afgeronde uiteinden */
-.btn-group { display:inline-flex; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,.05); }
-.btn-group .btn { border-radius:0; box-shadow:none; }
-.btn-group .btn + .btn { border-left:1px solid rgba(0,0,0,.06); }
-.btn-group .btn:first-child { border-top-left-radius:12px; border-bottom-left-radius:12px; }
-.btn-group .btn:last-child  { border-top-right-radius:12px; border-bottom-right-radius:12px; }
+    const presetUI = initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement });
+    document.getElementById('klasSelect')?.addEventListener('change', () => {
+      presetUI.refreshForClassChange();
+    });
+  </script>
 
-/* Toolbars/panels (zoals presetbalk) */
-.toolbar {
-  display:flex; align-items:center; flex-wrap:wrap; gap:.6rem 1rem;
-  padding:.6rem; border:1px solid #e6e9f2; border-radius:14px; background:#fff;
-}
-.toolbar .divider {
-  width:1px; height:2rem; background:linear-gradient(#e6e9f2, #cfd6e6, #e6e9f2);
-  margin:0 .25rem;
-}
-
-/* Control cards (groepjes van gerelateerde velden/knoppen) */
-.control-card { padding:1rem; border:1px solid #e8ebf3; border-radius:14px; background:#fff; }
-.controls-row { display:flex; align-items:flex-end; gap:1rem; flex-wrap:wrap; }
-
-/* Speciale topbar-tweaks */
-.topbar .field select { min-width:14rem; }
-.topbar .indeling-knop { gap:.8rem; }
-
-/* Presets panel polished */
-.presets-panel { gap:.6rem; align-items:center; }
-.presets-label { font-weight:800; color:#2d2d2d; margin-right:.2rem; }
-.presets-select { min-width:16rem; }
-
-/* Consistente hoogte voor select + buttons naast elkaar */
-select, .btn { height: 42px; }
-
-/* ====== DOCENTWEERGAVE (definitief) ====== */
-.container.mirror .grid-wrapper{
-  transform:rotate(180deg);
-  transform-origin:center;
-  transition:transform .3s ease;
-}
-/* Draai tekstdragende items terug */
-.container.mirror #plattegrond .tafel,
-.container.mirror #plattegrond .presentatie-item,
-.container.mirror #plattegrond .group-badge,
-.container.mirror .bureau-rij .leraar-bureau,
-.container.mirror #plattegrond .groepje > * {
-  transform:rotate(180deg);
-}
-.container.mirror #plattegrond .group-badge {
-  left: 4px;
-  right: auto;
-}
-/* ====== LINKS INKLAPBAAR PANEEL (hover-to-reveal) ====== */
-.side-drawer.left{
-  position: fixed;
-  left: 0;
-  top: 96px;              /* onder de topbar; pas aan als nodig */
-  bottom: 24px;
-  width: 320px;           /* breedte van het paneel */
-  transform: translateX(calc(-100% + 28px)); /* alleen 'tab' zichtbaar */
-  transition: transform .25s ease;
-  z-index: 1000;
-}
-
-.side-drawer.left:hover,
-.side-drawer.left:focus-within{
-  transform: translateX(0);
-}
-
-/* Het zichtbare 'tabje' om te openen */
-.side-drawer .drawer-handle{
-  position: absolute;
-  right: -28px;
-  top: 40px;
-  width: 28px;
-  height: 120px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  background: #1e293b;
-  color: #fff;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  letter-spacing: .08em;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
-  cursor: pointer;
-  border: 0;
-}
-
-/* Inhoud van het paneel */
-.side-drawer .drawer-content{
-  height: 100%;
-  overflow: auto;
-  padding: .75rem;
-  background: #fff;
-  border: 1px solid #e6e9f2;
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-}
-
-/* Kleine spacing tussen je bestaande control-cards */
-.side-drawer .control-card{ margin-bottom: .8rem; }
-
-/* Mobile: paneel volledig uitschuiven zodat het bruikbaar blijft */
-@media (max-width: 900px){
-  .side-drawer.left{
-    width: min(92vw, 360px);
-    transform: translateX(calc(-100% + 22px));
-  }
-}
-
-/* ====== LINKER ZIJPANEEL (HOVER-TO-REVEAL) ======
-   Laat dit blok staan als je de drawer nog niet had. */
-.side-drawer.left{
-  position: fixed;
-  left: 0;
-  top: var(--opdrachtbalk-offset); /* NIET over de opdrachtbalk heen */
-  bottom: 24px;
-  width: 320px;
-  transform: translateX(calc(-100% + 28px)); /* alleen 'tab' zichtbaar */
-  transition: transform .25s ease;
-  z-index: 1000;
-}
-.side-drawer.left:hover,
-.side-drawer.left:focus-within{
-  transform: translateX(0);
-}
-.side-drawer .drawer-handle{
-  position: absolute;
-  right: -28px;
-  top: 40px;
-  width: 28px; height: 120px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  background: #1e293b; color: #fff;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:800; letter-spacing:.08em;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
-  cursor: pointer; border: 0;
-}
-.side-drawer .drawer-content{
-  height: 100%;
-  overflow: auto;
-  padding: .75rem;
-  background: #fff;
-  border: 1px solid #e6e9f2;
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-}
-.side-drawer .control-card{ margin-bottom: .8rem; }
-
-/* ====== RESPONSIVE TWEAKS ====== */
-@media (max-width: 900px){
-  :root{ --opdrachtbalk-offset: 104px; } /* iets meer ruimte op mobiel */
-  .side-drawer.left{
-    width: min(92vw, 360px);
-    transform: translateX(calc(-100% + 22px));
-  }
-  .card.container .topbar{ flex-direction: column; align-items: flex-start; gap:.5rem; }
-}
-/* === Lokaal als zelfstandige, gecentreerde kaart === */
-body {
-  display: block;             /* laat body normaal; iframe bepaalt breedte */
-  background: transparent;    /* geen extra achtergrondkleur binnen iframe */
-}
-
-.layout {
-  display: flex;
-  justify-content: center;    /* centreert de kaart in het iframe */
-  padding: 0 16px 24px;
-}
-
-.card.container {
-  margin: 0 auto;             /* extra zekerheid voor centreren */
-}
-
-/* Grid wrapper centreert intern, maar het leraars-bureau blijft links in z’n rij */
-.grid-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;         /* centreert de grid als geheel */
-  padding-top: .25rem;
-}
-.bureau-rij {
-  display:flex;
-  justify-content:flex-start;  /* bureau links uitlijnen binnen de kaart */
-  width: 100%;
-  margin-bottom:.5rem;
-}
+</body>
+</html>
