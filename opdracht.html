@@ -5,29 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Opdracht</title>
   <style>
-    :root { --primaire-kleur:#007bff; }
+    :root { --accent:#007bff; }
     * { box-sizing:border-box; }
+    html, body { margin: 0; background: transparent; }
     body {
-      margin:0; padding:16px;
-      background:transparent; font-family:'Segoe UI', sans-serif;
-      display:flex; justify-content:center;
+      padding: 8px 12px;                   /* klein beetje ademruimte */
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
     }
+
+    /* NAARKE, GROTE OPDRACHT – GEEN card, GEEN gradient, GEEN schaduw */
     .opdracht-balk{
-      --bg1:#f7fbff; --bg2:#eef6ff; --stroke:#cfe2ff; --accent:var(--primaire-kleur); --text:#0f1a2a;
-      position:relative; display:flex; align-items:center; gap:14px;
-      padding:16px 22px 16px 18px; border-radius:16px;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2)); border:1px solid var(--stroke);
-      box-shadow:0 8px 24px rgba(16,42,67,.08);
-      max-width:1100px; width:min(92vw,1100px);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .5rem .75rem;               /* compact */
+      margin: 0 auto;
+      max-width: min(1100px, 92vw);
+
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      /* typografie */
+      color: #0f1a2a;
+      font-weight: 800;
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.25;
+      letter-spacing: .2px;
+      text-align: center;
     }
+
+    /* smalle accent-lijn bovenlangs, geeft 'lesopdracht'-gevoel */
     .opdracht-balk::before{
-      content:""; position:absolute; left:0; top:12px; bottom:12px; width:8px; border-radius:8px; background:var(--accent);
+      content:"";
+      position:absolute;
+      left:0; right:0; top:0;
+      height:4px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 2px;
     }
-    .opdracht-tekst{
-      margin-left:8px;
-      font-size: clamp(20px, 2.4vw, 28px);
-      font-weight: 800; color: var(--text); letter-spacing:.2px;
-    }
+
+    .opdracht-tekst { margin-left: 0; }
   </style>
 </head>
 <body>
