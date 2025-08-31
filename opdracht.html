@@ -12,19 +12,19 @@
       padding: 8px 12px;                   /* klein beetje ademruimte */
       font-family: 'Segoe UI', Roboto, sans-serif;
       display: flex;
-      justify-content: center;
+      justify-content: center;             /* centreert de balk op de pagina */
     }
 
-    /* NAARKE, GROTE OPDRACHT – GEEN card, GEEN gradient, GEEN schaduw */
+    /* Strakke balk die zich automatisch aan de tekstbreedte aanpast */
     .opdracht-balk{
       position: relative;
-      display: flex;
+      display: inline-flex;                /* ⟵ past breedte aan op inhoud */
       align-items: center;
       justify-content: center;
-      padding: .5rem .75rem;               /* compact */
+      width: auto;                         /* ⟵ geen vaste/maximale kaartbreedte */
+      max-width: 92vw;                     /* ⟵ wrapt op kleine schermen */
+      padding: .3rem .6rem;                /* ⟵ weinig extra ruimte */
       margin: 0 auto;
-      max-width: min(1100px, 92vw);
-
       background: transparent;
       border: none;
       border-radius: 0;
@@ -33,23 +33,24 @@
       /* typografie */
       color: #0f1a2a;
       font-weight: 800;
-      font-size: clamp(22px, 2.6vw, 34px);
+      font-size: clamp(22px, 2.4vw, 34px);
       line-height: 1.25;
       letter-spacing: .2px;
       text-align: center;
+      white-space: normal;                 /* ⟵ mag afbreken/wrappen */
     }
 
-    /* smalle accent-lijn bovenlangs, geeft 'lesopdracht'-gevoel */
+    /* smalle accent-lijn exact over de breedte van de tekstbalk */
     .opdracht-balk::before{
       content:"";
       position:absolute;
-      left:0; right:0; top:0;
-      height:4px;
+      left:0; right:0; top:0;              /* ⟵ volgt de breedte van de balk */
+      height:3px;
       background: linear-gradient(90deg, var(--accent), transparent);
       border-radius: 2px;
     }
 
-    .opdracht-tekst { margin-left: 0; }
+    .opdracht-tekst { margin: 0; }
   </style>
 </head>
 <body>
