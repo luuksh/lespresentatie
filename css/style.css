@@ -59,22 +59,23 @@ body{
 .indeling-knop select:active{ transform:translateY(1px); }
 
 /* ====== OPDRACHT-BALK (paneel, geen knoplook) ====== */
-.opdracht-balk{
-  --bg1:#f7fbff; --bg2:#eef6ff; --stroke:#cfe2ff; --accent:var(--primaire-kleur); --text:#0f1a2a;
-  position:relative;
-  display:flex; align-items:center; gap:12px;
-  padding:14px 18px 14px 16px;
-  border-radius:14px;
-  background:linear-gradient(180deg,var(--bg1),var(--bg2));
-  border:1px solid var(--stroke);
-  box-shadow:0 6px 20px rgba(16,42,67,.06);
-  white-space:normal; max-width:680px;
+.opdracht-balk {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 800;
+  color:#0f1a2a;
+  margin: 0 auto 1.5rem;
+  max-width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: .5rem;
 }
-.opdracht-balk::before{
-  content:""; position:absolute; left:0; top:10px; bottom:10px; width:6px;
-  border-radius:6px; background:var(--accent);
-  box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;
-}
+.opdracht-balk::before { content: none; }
+
 .opdracht-tekst strong{
   color:var(--text);
   font-size:28px; font-weight:800; letter-spacing:.2px; display:block;
