@@ -7,13 +7,13 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Zorg dat css/style.css de .plattegrond-frame styles bevat (inline-block, geen vaste 100% breedte). -->
 
   <!-- Modules -->
   <script type="module" src="js/indeling.js"></script>
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
-
 
   <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
   <aside class="side-drawer left" aria-label="Bediening">
@@ -56,9 +56,9 @@
     </div>
   </aside>
 
-  <!-- ===== Plattegrondsectie (met dropdowns) in eigen box ===== -->
+  <!-- ===== Plattegrondsectie (met dropdowns) in compacte, auto-breedte wrapper ===== -->
   <main class="layout">
-    <div class="card container">
+    <div class="plattegrond-frame">
       <!-- Dropdowns horen nu bij de plattegrondbox -->
       <div class="topbar">
         <div class="controls-row">
@@ -74,9 +74,7 @@
           </div>
           <div class="field">
             <span class="label">Klas</span>
-            <select id="klasSelect">
-              <!-- Wordt automatisch gevuld via JS -->
-            </select>
+            <select id="klasSelect"><!-- via JS gevuld --></select>
           </div>
         </div>
       </div>
@@ -85,9 +83,7 @@
         <div class="bureau-rij">
           <div class="leraar-bureau">Bureau leraar</div>
         </div>
-        <div class="grid" id="plattegrond">
-          <!-- Dynamisch gevuld via JS -->
-        </div>
+        <div class="grid" id="plattegrond"><!-- Dynamisch gevuld via JS --></div>
       </div>
     </div>
 
@@ -182,19 +178,19 @@
   <!-- Spiegelweergave toggle -->
   <script>
     (() => {
-      const container = document.querySelector('.container');
+      const container = document.querySelector('.plattegrond-frame'); // ⟵ was '.container'
       const btn = document.getElementById('toggle-view-btn');
       const LS_KEY = 'mirror_view_enabled';
       const indelingSel = document.getElementById('indelingSelect');
       const klasSel     = document.getElementById('klasSelect');
 
       function setMirror(on){
-        container.classList.toggle('mirror', on);
+        container?.classList.toggle('mirror', on);
         try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
         if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
       }
       function applyFromStorage(){ setMirror(localStorage.getItem(LS_KEY) === '1'); }
-      function toggleMirror(){ setMirror(!container.classList.contains('mirror')); }
+      function toggleMirror(){ setMirror(!container?.classList.contains('mirror')); }
 
       btn?.addEventListener('click', toggleMirror);
       indelingSel?.addEventListener('change', () => setMirror(false));
