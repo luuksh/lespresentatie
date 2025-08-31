@@ -8,6 +8,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Modules -->
   <script type="module" src="js/indeling.js"></script>
   <script type="module" src="js/init.js"></script>
 </head>
@@ -41,24 +42,11 @@
     </div>
   </div>
 
-  <!-- Layout: links plattegrond, rechts bediening -->
-  <div class="layout">
-    <!-- Linkerkant: plattegrond -->
-    <div>
-      <div class="card container">
-        <div class="grid-wrapper">
-          <div class="bureau-rij">
-            <div class="leraar-bureau">Bureau leraar</div>
-          </div>
-          <div class="grid" id="plattegrond">
-            <!-- Dynamisch gevuld via JS -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rechterkant: bediening -->
-    <div>
+  <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
+  <!-- Zorg dat je in css/style.css de .side-drawer.left styles hebt zoals besproken -->
+  <aside class="side-drawer left" aria-label="Bediening">
+    <button class="drawer-handle" aria-label="Open bediening">Bediening</button>
+    <div class="drawer-content">
       <!-- Absentie & spiegel -->
       <div class="card control-card">
         <div class="controls-row">
@@ -95,9 +83,31 @@
         </div>
       </div>
     </div>
+  </aside>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Linkerkant: plattegrond -->
+    <div>
+      <div class="card container">
+        <div class="grid-wrapper">
+          <div class="bureau-rij">
+            <div class="leraar-bureau">Bureau leraar</div>
+          </div>
+          <div class="grid" id="plattegrond">
+            <!-- Dynamisch gevuld via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rechterkant is nu vrij (timer of niets); bediening is naar links verhuisd -->
+    <div></div>
   </div>
 
-  <!-- Scripts (ongewijzigd) -->
+  <!-- ====== Scripts die op IDs vertrouwen blijven identiek ====== -->
+
+  <!-- Absentie toggling + reset bij wijzigingen -->
   <script>
     (() => {
       const GRID_ID = 'plattegrond';
@@ -136,6 +146,7 @@
     })();
   </script>
 
+  <!-- Opslaan absenties in localStorage (daggebonden) -->
   <script>
     (() => {
       const GRID_ID = 'plattegrond';
@@ -178,6 +189,7 @@
     })();
   </script>
 
+  <!-- Spiegelweergave toggle -->
   <script>
     (() => {
       const container = document.querySelector('.container');
@@ -204,24 +216,36 @@
     })();
   </script>
 
+  <!-- Preset UI hookup -->
   <script type="module">
     import { initPresetUI } from './js/seating-presets.js';
-    const getCurrentClassId = () => document.getElementById('klasSelect')?.value || 'onbekend';
+
+    const getCurrentClassId = () =>
+      document.getElementById('klasSelect')?.value || 'onbekend';
+
     function getCurrentArrangement() {
       const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
-      return seats.map((el, i) => ({ seatId: el.dataset.seatId ?? String(i), studentId: (el.textContent || '').trim() }));
+      return seats.map((el, i) => ({
+        seatId: el.dataset.seatId ?? String(i),
+        studentId: (el.textContent || '').trim()
+      }));
     }
+
     function applyArrangement(arr) {
       const seats = Array.from(document.querySelectorAll('#plattegrond .tafel'));
       const byId = new Map(seats.map((el, i) => [el.dataset.seatId ?? `__idx_${i}`, el]));
       arr.forEach((item, i) => {
-        const key = (item.seatId != null && byId.has(String(item.seatId))) ? String(item.seatId) : `__idx_${i}`;
+        const key = (item.seatId != null && byId.has(String(item.seatId)))
+          ? String(item.seatId) : `__idx_${i}`;
         const el = byId.get(key);
         if (el) el.textContent = item.studentId || '';
       });
     }
+
     const presetUI = initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement });
-    document.getElementById('klasSelect')?.addEventListener('change', () => { presetUI.refreshForClassChange(); });
+    document.getElementById('klasSelect')?.addEventListener('change', () => {
+      presetUI.refreshForClassChange();
+    });
   </script>
 
 </body>
