@@ -14,36 +14,16 @@
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="controls-row">
-      <div class="field">
-        <span class="label">Indeling</span>
-        <select id="indelingSelect">
-          <option value="h216">H216</option>
-          <option value="u008">U008</option>
-          <option value="groepjes">Viertallen</option>
-          <option value="vijftallen">Vijftallen</option>
-          <option value="presentatievolgorde">Volgorde</option>
-        </select>
-      </div>
-      <div class="field">
-        <span class="label">Klas</span>
-        <select id="klasSelect">
-          <!-- Wordt automatisch gevuld via JS -->
-        </select>
-      </div>
-    </div>
-
+  <!-- ===== Opdrachtenbalk - los, mooi gecentreerd bovenaan ===== -->
+  <section class="opdracht-wrapper" aria-label="Opdracht">
     <div class="opdracht-balk is-success">
       <div class="opdracht-tekst">
         <strong>Lees in je leesboek.</strong>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
-  <!-- Zorg dat je in css/style.css de .side-drawer.left styles hebt zoals besproken -->
   <aside class="side-drawer left" aria-label="Bediening">
     <button class="drawer-handle" aria-label="Open bediening">Bediening</button>
     <div class="drawer-content">
@@ -84,25 +64,44 @@
     </div>
   </aside>
 
-  <!-- Layout -->
-  <div class="layout">
-    <!-- Linkerkant: plattegrond -->
-    <div>
-      <div class="card container">
-        <div class="grid-wrapper">
-          <div class="bureau-rij">
-            <div class="leraar-bureau">Bureau leraar</div>
+  <!-- ===== Plattegrondsectie (met dropdowns) in eigen box ===== -->
+  <main class="layout">
+    <div class="card container">
+      <!-- Dropdowns horen nu bij de plattegrondbox -->
+      <div class="topbar">
+        <div class="controls-row">
+          <div class="field">
+            <span class="label">Indeling</span>
+            <select id="indelingSelect">
+              <option value="h216">H216</option>
+              <option value="u008">U008</option>
+              <option value="groepjes">Viertallen</option>
+              <option value="vijftallen">Vijftallen</option>
+              <option value="presentatievolgorde">Volgorde</option>
+            </select>
           </div>
-          <div class="grid" id="plattegrond">
-            <!-- Dynamisch gevuld via JS -->
+          <div class="field">
+            <span class="label">Klas</span>
+            <select id="klasSelect">
+              <!-- Wordt automatisch gevuld via JS -->
+            </select>
           </div>
+        </div>
+      </div>
+
+      <div class="grid-wrapper">
+        <div class="bureau-rij">
+          <div class="leraar-bureau">Bureau leraar</div>
+        </div>
+        <div class="grid" id="plattegrond">
+          <!-- Dynamisch gevuld via JS -->
         </div>
       </div>
     </div>
 
-    <!-- Rechterkant is nu vrij (timer of niets); bediening is naar links verhuisd -->
+    <!-- Rechterkolom is leeg; bediening zit links in het zijpaneel -->
     <div></div>
-  </div>
+  </main>
 
   <!-- ====== Scripts die op IDs vertrouwen blijven identiek ====== -->
 
