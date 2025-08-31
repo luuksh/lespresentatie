@@ -147,9 +147,8 @@ body{
   animation:fadeIn .6s ease;
 }
 
-.tafelrij{
-  display:flex; justify-content:center; gap:1.8rem; flex-wrap:nowrap; width:100%;
-}
+.tafelrij{ display:flex; justify-content:center; gap:1.8rem; flex-wrap:nowrap; width:auto; }
+
 .duotafel{ display:flex; flex-direction:column; align-items:center; animation:fadeIn .6s ease; }
 .tafels{ display:flex; gap:6px; }
 
