@@ -450,41 +450,7 @@ select, .btn { height: 42px; }
   font-size: clamp(1rem, 1.2vw + .6rem, 1.25rem);
 }
 
-/* ====== PLATTEGRONDBOX MET DROPDOWNS (LOSSE KAART) ====== */
-.layout{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  padding: 0 1rem;
-}
-.card.container{
-  background: #fff;
-  border: 1px solid #e6e9f2;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.06);
-  padding: 1rem 1rem 1.25rem;
-}
-.card.container .topbar{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: .75rem;
-  padding-bottom: .5rem;
-  border-bottom: 1px dashed #e5e7eb;
-}
-.controls-row{ display:flex; gap:.75rem; flex-wrap:wrap; }
-.field{ display:flex; align-items:center; gap:.5rem; }
 
-.grid-wrapper{ padding-top: .25rem; }
-.bureau-rij{ display:flex; justify-content:center; margin-bottom:.5rem; }
-.leraar-bureau{
-  padding:.35rem .6rem;
-  border:1px solid #cfd8e3;
-  border-radius:10px;
-  font-weight:600;
-}
 
 /* ====== LINKER ZIJPANEEL (HOVER-TO-REVEAL) ======
    Laat dit blok staan als je de drawer nog niet had. */
