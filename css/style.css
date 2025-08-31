@@ -431,3 +431,110 @@ select, .btn { height: 42px; }
     transform: translateX(calc(-100% + 22px));
   }
 }
+/* ====== OPDRACHTBALK BOVENAAN (GECENTREERD) ====== */
+:root{
+  /* Pas dit aan als je opdrachtbalk hoger/lager is */
+  --opdrachtbalk-offset: 88px;
+}
+.opdracht-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: .75rem 1rem;
+}
+.opdracht-balk{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.opdracht-balk .opdracht-tekst{
+  font-size: clamp(1rem, 1.2vw + .6rem, 1.25rem);
+}
+
+/* ====== PLATTEGRONDBOX MET DROPDOWNS (LOSSE KAART) ====== */
+.layout{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+.card.container{
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  padding: 1rem 1rem 1.25rem;
+}
+.card.container .topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dashed #e5e7eb;
+}
+.controls-row{ display:flex; gap:.75rem; flex-wrap:wrap; }
+.field{ display:flex; align-items:center; gap:.5rem; }
+
+.grid-wrapper{ padding-top: .25rem; }
+.bureau-rij{ display:flex; justify-content:center; margin-bottom:.5rem; }
+.leraar-bureau{
+  padding:.35rem .6rem;
+  border:1px solid #cfd8e3;
+  border-radius:10px;
+  font-weight:600;
+}
+
+/* ====== LINKER ZIJPANEEL (HOVER-TO-REVEAL) ======
+   Laat dit blok staan als je de drawer nog niet had. */
+.side-drawer.left{
+  position: fixed;
+  left: 0;
+  top: var(--opdrachtbalk-offset); /* NIET over de opdrachtbalk heen */
+  bottom: 24px;
+  width: 320px;
+  transform: translateX(calc(-100% + 28px)); /* alleen 'tab' zichtbaar */
+  transition: transform .25s ease;
+  z-index: 1000;
+}
+.side-drawer.left:hover,
+.side-drawer.left:focus-within{
+  transform: translateX(0);
+}
+.side-drawer .drawer-handle{
+  position: absolute;
+  right: -28px;
+  top: 40px;
+  width: 28px; height: 120px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: #1e293b; color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; letter-spacing:.08em;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  cursor: pointer; border: 0;
+}
+.side-drawer .drawer-content{
+  height: 100%;
+  overflow: auto;
+  padding: .75rem;
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.side-drawer .control-card{ margin-bottom: .8rem; }
+
+/* ====== RESPONSIVE TWEAKS ====== */
+@media (max-width: 900px){
+  :root{ --opdrachtbalk-offset: 104px; } /* iets meer ruimte op mobiel */
+  .side-drawer.left{
+    width: min(92vw, 360px);
+    transform: translateX(calc(-100% + 22px));
+  }
+  .card.container .topbar{ flex-direction: column; align-items: flex-start; gap:.5rem; }
+}
