@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Opdracht</title>
   <style>
-    :root { --accent:#007bff; }
-    * { box-sizing:border-box; }
+    :root { --accent:#007bff; } /* pas de accentkleur hier aan */
+    * { box-sizing: border-box; }
     html, body { margin: 0; background: transparent; }
     body {
       padding: 8px 12px;                   /* klein beetje ademruimte */
-      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
       display: flex;
       justify-content: center;             /* centreert de balk op de pagina */
     }
@@ -18,14 +18,14 @@
     /* Strakke balk die zich automatisch aan de tekstbreedte aanpast */
     .opdracht-balk{
       position: relative;
-      display: inline-flex;                /* ⟵ past breedte aan op inhoud */
+      display: inline-flex;                /* ⟵ krimpt tot inhoud */
       align-items: center;
       justify-content: center;
-      width: auto;                         /* ⟵ geen vaste/maximale kaartbreedte */
-      max-width: 92vw;                     /* ⟵ wrapt op kleine schermen */
-      padding: .3rem .6rem;                /* ⟵ weinig extra ruimte */
+      width: auto;                         /* geen vaste/maximale kaartbreedte */
+      max-width: 92vw;                     /* wrapt netjes op kleine schermen */
+      padding: .3rem .6rem;                /* minimaal extra randje om de tekst */
       margin: 0 auto;
-      background: transparent;
+      background: transparent;             /* geen vlak, geen schaduw */
       border: none;
       border-radius: 0;
       box-shadow: none;
@@ -37,14 +37,14 @@
       line-height: 1.25;
       letter-spacing: .2px;
       text-align: center;
-      white-space: normal;                 /* ⟵ mag afbreken/wrappen */
+      white-space: normal;                 /* mag afbreken/wrappen */
     }
 
     /* smalle accent-lijn exact over de breedte van de tekstbalk */
     .opdracht-balk::before{
       content:"";
       position:absolute;
-      left:0; right:0; top:0;              /* ⟵ volgt de breedte van de balk */
+      left:0; right:0; top:0;              /* volgt de breedte van de balk */
       height:3px;
       background: linear-gradient(90deg, var(--accent), transparent);
       border-radius: 2px;
