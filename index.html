@@ -9,11 +9,46 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- Zorg dat css/style.css de .plattegrond-frame styles bevat (inline-block, geen vaste 100% breedte). -->
 
+  <!-- [NIEUW] Minimale styles voor opdracht-boven en timer-rechts -->
+  <style>
+    /* Opdracht bovenaan, shrink-to-fit en gecentreerd */
+    #opdrachtMount{
+      display:flex; justify-content:center;
+      padding: 12px 16px 0;
+    }
+    #opdrachtMount iframe{
+      border:0; background:transparent; display:block;
+      width:auto; max-width:92vw;
+    }
+
+    /* Timer vast rechts, nauwsluitend (zonder overlap door padding-right) */
+    body{ padding-right: 300px; } /* ruimte vrijhouden voor timer */
+    #timerDock{
+      position: fixed; right: 16px; top: 16px; z-index: 999;
+    }
+    #timerDock iframe{
+      border:0; background:transparent; display:block; width:260px;
+    }
+
+    /* Mobiel: timer onder content plaatsen */
+    @media (max-width: 980px){
+      body{ padding-right: 0; }
+      #timerDock{ position: static; padding: 8px 16px; display:flex; justify-content:center; }
+      #timerDock iframe{ width:260px; }
+    }
+  </style>
+
   <!-- Modules -->
   <script type="module" src="js/indeling.js"></script>
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
+
+  <!-- [NIEUW] OPDRACHT BOVENIN -->
+  <div id="opdrachtMount">
+    <!-- Pas zonodig de bestandsnaam aan, b.v. 'opdracht (3).html' -->
+    <iframe src="opdracht.html" title="Lesopdracht" id="opdrachtFrame"></iframe>
+  </div>
 
   <!-- LINKER ZIJPANEEL (hover-to-reveal) -->
   <aside class="side-drawer left" aria-label="Bediening">
@@ -90,6 +125,12 @@
     <!-- Rechterkolom is leeg; bediening zit links in het zijpaneel -->
     <div></div>
   </main>
+
+  <!-- [NIEUW] TIMER RECHTS -->
+  <div id="timerDock">
+    <!-- Pas zonodig de bestandsnaam aan, b.v. 'timer (1).html' -->
+    <iframe src="timer.html" title="Timer" id="timerFrame"></iframe>
+  </div>
 
   <!-- ====== Scripts die op IDs vertrouwen blijven identiek ====== -->
 
@@ -231,6 +272,29 @@
     const presetUI = initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement });
     document.getElementById('klasSelect')?.addEventListener('change', () => {
       presetUI.refreshForClassChange();
+    });
+  </script>
+
+  <!-- [NIEUW] Auto-height voor de twee iframes -->
+  <script>
+    function autosizeIframe(iframe){
+      try{
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        if(!doc) return;
+        const getH = () => {
+          const b = doc.body, e = doc.documentElement;
+          return Math.max(b.scrollHeight, b.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight);
+        };
+        const set = () => { iframe.style.height = getH() + 'px'; };
+        set();
+        const ro = new ResizeObserver(set); ro.observe(doc.documentElement);
+        const mo = new MutationObserver(set); mo.observe(doc, {childList:true, subtree:true, attributes:true, characterData:true});
+        iframe._cleanup = () => { ro.disconnect(); mo.disconnect(); };
+      } catch(e){ /* same-origin vereist; anders valt het terug op default hoogte */ }
+    }
+    window.addEventListener('load', () => {
+      autosizeIframe(document.getElementById('opdrachtFrame'));
+      autosizeIframe(document.getElementById('timerFrame'));
     });
   </script>
 
