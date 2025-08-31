@@ -369,3 +369,65 @@ select, .btn { height: 42px; }
   left: 4px;
   right: auto;
 }
+/* ====== LINKS INKLAPBAAR PANEEL (hover-to-reveal) ====== */
+.side-drawer.left{
+  position: fixed;
+  left: 0;
+  top: 96px;              /* onder de topbar; pas aan als nodig */
+  bottom: 24px;
+  width: 320px;           /* breedte van het paneel */
+  transform: translateX(calc(-100% + 28px)); /* alleen 'tab' zichtbaar */
+  transition: transform .25s ease;
+  z-index: 1000;
+}
+
+.side-drawer.left:hover,
+.side-drawer.left:focus-within{
+  transform: translateX(0);
+}
+
+/* Het zichtbare 'tabje' om te openen */
+.side-drawer .drawer-handle{
+  position: absolute;
+  right: -28px;
+  top: 40px;
+  width: 28px;
+  height: 120px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: #1e293b;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  letter-spacing: .08em;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  cursor: pointer;
+  border: 0;
+}
+
+/* Inhoud van het paneel */
+.side-drawer .drawer-content{
+  height: 100%;
+  overflow: auto;
+  padding: .75rem;
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+/* Kleine spacing tussen je bestaande control-cards */
+.side-drawer .control-card{ margin-bottom: .8rem; }
+
+/* Mobile: paneel volledig uitschuiven zodat het bruikbaar blijft */
+@media (max-width: 900px){
+  .side-drawer.left{
+    width: min(92vw, 360px);
+    transform: translateX(calc(-100% + 22px));
+  }
+}
