@@ -330,23 +330,27 @@ select:focus { outline:none; border-color:#4a90e2; box-shadow:0 0 0 3px rgba(74,
 select, .btn { height: 42px; }
 
 /* ====== DOCENTWEERGAVE (definitief) ====== */
-.container.mirror .grid-wrapper{
-  transform:rotate(180deg);
-  transform-origin:center;
-  transition:transform .3s ease;
+.container.mirror .grid-wrapper,
+.plattegrond-frame.mirror .grid-wrapper {
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition: transform .3s ease;
 }
+
 /* Draai tekstdragende items terug */
 .container.mirror #plattegrond .tafel,
 .container.mirror #plattegrond .presentatie-item,
 .container.mirror #plattegrond .group-badge,
 .container.mirror .bureau-rij .leraar-bureau,
-.container.mirror #plattegrond .groepje > * {
-  transform:rotate(180deg);
+.container.mirror #plattegrond .groepje > *,
+.plattegrond-frame.mirror #plattegrond .tafel,
+.plattegrond-frame.mirror #plattegrond .presentatie-item,
+.plattegrond-frame.mirror #plattegrond .group-badge,
+.plattegrond-frame.mirror .bureau-rij .leraar-bureau,
+.plattegrond-frame.mirror #plattegrond .groepje > * {
+  transform: rotate(180deg);
 }
-.container.mirror #plattegrond .group-badge {
-  left: 4px;
-  right: auto;
-}
+
 /* ====== LINKS INKLAPBAAR PANEEL (hover-to-reveal) ====== */
 .side-drawer.left{
   position: fixed;
