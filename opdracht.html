@@ -32,7 +32,7 @@
       display: inline-block;
       width: auto;                /* past zich aan de tekst aan */
       min-width: 400px;           /* niet te smal */
-      max-width: 95vw;            /* wel responsief */
+      max-width: none;            /* mag onbeperkt breed zijn */
       white-space: nowrap;        /* geen afbreken */
       font-size: clamp(28px, 3.5vw, 44px);
       font-weight: 900;
@@ -86,5 +86,27 @@
       <option>Bereid je presentatie voor</option>
     </select>
   </div>
+
+  <script>
+    const select = document.querySelector('select');
+    const measurer = document.createElement('span');
+    measurer.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;";
+    document.body.appendChild(measurer);
+
+    function resize() {
+      const cs = getComputedStyle(select);
+      measurer.style.font = cs.font;
+      let longest = '';
+      for (const o of select.options) {
+        if (o.text.length > longest.length) longest = o.text;
+      }
+      measurer.textContent = longest;
+      select.style.width = (measurer.offsetWidth + 110) + 'px'; // extra voor padding + pijl
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    select.addEventListener('change', resize);
+  </script>
 </body>
 </html>
