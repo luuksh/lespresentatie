@@ -5,57 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Opdracht</title>
   <style>
-    :root { --accent:#007bff; } /* pas de accentkleur hier aan */
-    * { box-sizing: border-box; }
-    html, body { margin: 0; background: transparent; }
-    body {
-      padding: 8px 12px;                   /* klein beetje ademruimte */
-      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    :root { --accent:#007bff; }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: transparent;
       display: flex;
-      justify-content: center;             /* centreert de balk op de pagina */
-    }
-
-    /* Strakke balk die zich automatisch aan de tekstbreedte aanpast */
-    .opdracht-balk{
-      position: relative;
-      display: inline-flex;                /* ⟵ krimpt tot inhoud */
-      align-items: center;
+      align-items: start;
       justify-content: center;
-      width: auto;                         /* geen vaste/maximale kaartbreedte */
-      max-width: 92vw;                     /* wrapt netjes op kleine schermen */
-      padding: .3rem .6rem;                /* minimaal extra randje om de tekst */
-      margin: 0 auto;
-      background: transparent;             /* geen vlak, geen schaduw */
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      padding: 20px;
+    }
 
-      /* typografie */
+    .opdracht-menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    select {
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 700;
+      padding: 16px 32px;
+      border: 3px solid var(--accent);
+      border-radius: 12px;
+      background-color: #fff;
       color: #0f1a2a;
-      font-weight: 800;
-      font-size: clamp(22px, 2.4vw, 34px);
-      line-height: 1.25;
-      letter-spacing: .2px;
-      text-align: center;
-      white-space: normal;                 /* mag afbreken/wrappen */
+      cursor: pointer;
+      appearance: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* smalle accent-lijn exact over de breedte van de tekstbalk */
-    .opdracht-balk::before{
-      content:"";
-      position:absolute;
-      left:0; right:0; top:0;              /* volgt de breedte van de balk */
-      height:3px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      border-radius: 2px;
+    /* pijltje rechts */
+    .opdracht-menu::after {
+      content: "▼";
+      font-size: 1.2em;
+      color: var(--accent);
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
     }
-
-    .opdracht-tekst { margin: 0; }
   </style>
 </head>
 <body>
-  <div class="opdracht-balk" role="region" aria-label="Lesopdracht">
-    <div class="opdracht-tekst"><strong>Lees in je leesboek.</strong></div>
+  <div class="opdracht-menu">
+    <select aria-label="Kies een opdracht">
+      <option>Lees in je leesboek</option>
+      <option>Maak de opdrachten op bladzijde 12</option>
+      <option>Werk verder aan je betoog</option>
+      <option>Overleg in tweetallen</option>
+      <option>Bereid je presentatie voor</option>
+    </select>
   </div>
 </body>
 </html>
