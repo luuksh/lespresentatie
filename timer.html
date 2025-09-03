@@ -2,128 +2,353 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klas Timer — Compact & Pro</title>
   <style>
-    :root {
-      --primaire-kleur: #007bff;
-      --hover-kleur: #005fc1;
-      --groep-kleur: #ffffff;
+    :root{
+      --bg: #0b1220;
+      --panel: #111a2b;
+      --panel-2:#0e1626;
+      --accent:#6ee7ff;
+      --accent-2:#59d2ff;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+      --text:#e6eef8;
+      --muted:#9fb2cc;
+      --ring-track: rgba(255,255,255,.08);
     }
 
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 800px at 10% 10%, #0f1b31 0%, #0b1220 40%, #090f1a 100%);
+      color:var(--text);
+      font: 16px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      display:flex; align-items:center; justify-content:center; padding:24px;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 2em;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    .wrap{
+      width:min(720px, 96vw);
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.04);
+      padding:20px;
     }
 
-    .timer-container {
-      width: 220px;
-      background: var(--groep-kleur);
-      border: 2px solid var(--primaire-kleur);
-      border-radius: 12px;
-      padding: 1em;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    .hdr{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      margin-bottom:10px;
+    }
+    .hdr h1{
+      font-size:18px; margin:0; font-weight:650; letter-spacing:.2px;
+      display:flex; align-items:center; gap:.6rem;
+    }
+    .badge{
+      font-size:12px; color:var(--muted); padding:.25rem .55rem; border:1px solid rgba(255,255,255,.12);
+      border-radius:999px; background:rgba(255,255,255,.04)
     }
 
-    .timer-container h3 {
-      margin-top: 0;
-      color: var(--primaire-kleur);
+    .grid{
+      display:grid;
+      grid-template-columns: 240px 1fr;
+      gap:18px;
+    }
+    @media (max-width:700px){
+      .grid{grid-template-columns:1fr}
     }
 
-    .timer-display {
-      font-size: 2em;
-      font-weight: bold;
-      text-align: center;
-      margin: 0.4em 0 1em;
+    /* RING */
+    .ring{
+      aspect-ratio:1/1; width:100%;
+      border-radius:50%;
+      position:relative;
+      background:
+        conic-gradient(var(--accent) calc(var(--pct,0)*1%), var(--ring-track) 0);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.08) inset,
+        0 10px 30px rgba(0,0,0,.35);
+    }
+    .ring::after{
+      content:"";
+      position:absolute; inset:12px;
+      background: linear-gradient(180deg, #0b1324 0%, #0b1220 100%);
+      border-radius:50%;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), inset 0 -2px 8px rgba(0,0,0,.35);
     }
 
-    .timer-container input {
-      width: 45%;
-      padding: 0.3em;
-      margin-right: 5%;
-      text-align: center;
+    .digits{
+      position:absolute; inset:0; display:grid; place-items:center; text-align:center;
+      z-index:2;
+    }
+    .time{
+      font-variant-numeric: tabular-nums;
+      font-weight:800;
+      letter-spacing:.02em;
+      font-size: clamp(38px, 8vw, 56px);
+    }
+    .state{
+      margin-top:4px; font-size:12px; color:var(--muted)
     }
 
-    .timer-container button {
-      margin-top: 0.8em;
-      width: 48%;
-      padding: 0.4em;
-      border: none;
-      border-radius: 6px;
-      background: var(--primaire-kleur);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
+    /* CONTROLS */
+    .panel{
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:14px;
+      display:grid; gap:12px;
     }
 
-    .timer-container button:hover {
-      background: var(--hover-kleur);
+    .row{display:flex; gap:10px; flex-wrap:wrap}
+    .row.stretch > *{flex:1}
+
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      color:var(--text); padding:.7rem .9rem; border-radius:12px;
+      font-weight:650; letter-spacing:.2px; cursor:pointer;
+      transition: transform .08s ease, border-color .15s ease, background .15s ease;
+      user-select:none;
+    }
+    .btn:hover{border-color: rgba(255,255,255,.25)}
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+      color:#061424; border-color: transparent; box-shadow: 0 8px 18px rgba(89,210,255,.25);
+    }
+    .btn.warn{background: linear-gradient(180deg, #ffd19a, #f5a73e); color:#3b2600; border-color:transparent}
+    .btn.ghost{
+      background: transparent;
+    }
+    .btn.small{padding:.5rem .6rem; font-weight:600}
+
+    .in{
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap
+    }
+    .in input{
+      width:7ch; padding:.6rem .7rem; border-radius:12px; border:1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.04); color:var(--text); font-weight:700; text-align:center;
+      font-variant-numeric: tabular-nums;
+    }
+    .in label{font-size:12px; color:var(--muted)}
+
+    .presets .btn{flex:1; min-width:84px}
+
+    .toolbar{
+      display:flex; gap:8px; align-items:center; justify-content:space-between;
+      color:var(--muted); font-size:12px;
+    }
+    .tog{
+      display:flex; align-items:center; gap:8px;
+      padding:.45rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03)
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: var(--ok); box-shadow:0 0 0 2px rgba(34,197,94,.25)
+    }
+    .dot.off{background:#334155; box-shadow:none}
+
+    .complete{
+      animation: pulse 1s ease-in-out infinite;
+      box-shadow: 0 0 0 6px rgba(239,68,68,.18), 0 0 40px rgba(239,68,68,.35);
+    }
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.02)}
+      100%{transform:scale(1)}
     }
 
-    @media (max-width: 800px) {
-      body {
-        padding: 1em;
-        justify-content: stretch;
-      }
-    }
+    .kbd{font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--muted)}
+    .kbd code{background: rgba(255,255,255,.06); padding:.15rem .4rem; border-radius:6px; border:1px solid rgba(255,255,255,.12)}
   </style>
 </head>
 <body>
-
-  <div class="timer-container">
-    <h3>⏱ Timer</h3>
-    <div class="timer-display" id="display">00:00</div>
-    <input type="number" id="minuten" min="0" max="59" placeholder="Min">
-    <input type="number" id="seconden" min="0" max="59" placeholder="Sec">
-    <div style="display:flex; justify-content: space-between;">
-      <button onclick="startTimer()">Start</button>
-      <button onclick="resetTimer()">Reset</button>
+  <div class="wrap" role="timer" aria-live="polite">
+    <div class="hdr">
+      <h1>⏱ Klas-timer <span class="badge">space = start/pauze · R = reset</span></h1>
+      <div class="toolbar">
+        <div class="tog" id="soundTog" role="button" aria-pressed="true" tabindex="0" title="Geluid aan/uit">
+          <span class="dot" id="soundDot"></span> Geluid
+        </div>
+      </div>
     </div>
-    <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+    <div class="grid">
+      <!-- LEFT: ring + digits -->
+      <div class="ring" id="ring" aria-label="Voortgang">
+        <div class="digits">
+          <div class="time" id="time">05:00</div>
+          <div class="state" id="state">Gepauzeerd</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: controls -->
+      <div class="panel" aria-label="Timerbediening">
+        <div class="row presets">
+          <button class="btn small ghost" data-pres="60">+1m</button>
+          <button class="btn small ghost" data-pres="180">+3m</button>
+          <button class="btn small ghost" data-pres="300">+5m</button>
+          <button class="btn small ghost" data-pres="600">+10m</button>
+          <button class="btn small ghost" data-pres="-30">−30s</button>
+          <button class="btn small ghost" data-pres="30">+30s</button>
+        </div>
+
+        <div class="row in">
+          <label for="min">Stel in:</label>
+          <input id="min" type="number" min="0" max="999" value="5" aria-label="Minuten" />
+          <span>:</span>
+          <input id="sec" type="number" min="0" max="59" value="0" aria-label="Seconden" />
+          <button class="btn" id="apply">Zet tijd</button>
+        </div>
+
+        <div class="row stretch">
+          <button class="btn primary" id="startPause">Start</button>
+          <button class="btn" id="reset">Reset</button>
+        </div>
+
+        <div class="kbd">Sneltoetsen: <code>spatie</code> start/pauze · <code>R</code> reset</div>
+      </div>
+    </div>
   </div>
 
+  <!-- Audio -->
+  <audio id="alarm" preload="auto">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg"/>
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.mp3" type="audio/mpeg"/>
+  </audio>
+
   <script>
-    let timerInterval;
+    // ===== State =====
+    let total = 300;          // default 5 min
+    let remaining = total;
+    let running = false;
+    let intervalId = null;
+    let soundOn = true;
 
-    function startTimer() {
-      const min = parseInt(document.getElementById("minuten").value) || 0;
-      const sec = parseInt(document.getElementById("seconden").value) || 0;
-      let tijd = min * 60 + sec;
+    const timeEl = document.getElementById('time');
+    const stateEl = document.getElementById('state');
+    const ringEl  = document.getElementById('ring');
+    const startBtn= document.getElementById('startPause');
+    const resetBtn= document.getElementById('reset');
+    const applyBtn= document.getElementById('apply');
+    const minIn   = document.getElementById('min');
+    const secIn   = document.getElementById('sec');
+    const alarm   = document.getElementById('alarm');
+    const soundTog= document.getElementById('soundTog');
+    const soundDot= document.getElementById('soundDot');
 
-      if (tijd <= 0) return;
+    // ===== Helpers =====
+    const clamp = (v, lo, hi)=> Math.max(lo, Math.min(hi, v));
+    const fmt = (s)=>{
+      const m = Math.floor(s/60);
+      const r = s%60;
+      return `${String(m).padStart(2,'0')}:${String(r).padStart(2,'0')}`;
+    };
+    function updateDigits(){
+      timeEl.textContent = fmt(remaining);
+      stateEl.textContent = running ? 'Bezig…' : 'Gepauzeerd';
+    }
+    function updateRing(){
+      const pct = total>0 ? (total - remaining)/total : 0;
+      // CSS conic uses degrees of the first stop; multiply by 100 for 0–100%
+      ringEl.style.setProperty('--pct', (pct*100).toFixed(4));
+      ringEl.classList.toggle('complete', remaining === 0);
+    }
 
-      clearInterval(timerInterval);
-      updateDisplay(tijd);
+    function setFromInputs(){
+      const m = clamp(parseInt(minIn.value,10)||0, 0, 999);
+      const s = clamp(parseInt(secIn.value,10)||0, 0, 59);
+      total = clamp(m*60 + s, 0, 999*60 + 59);
+      remaining = total;
+      running = false;
+      clearInterval(intervalId);
+      startBtn.textContent = 'Start';
+      updateDigits(); updateRing();
+    }
 
-      timerInterval = setInterval(() => {
-        tijd--;
-        updateDisplay(tijd);
-        if (tijd <= 0) {
-          clearInterval(timerInterval);
-          document.getElementById("alarm").play();
+    function applyPreset(delta){
+      // if no total yet, base on remaining
+      if (total === 0 && remaining === 0) { total = 0; }
+      let base = running ? remaining : remaining;
+      let next = clamp(base + delta, 0, 999*60 + 59);
+      remaining = next;
+      if (!running) { total = Math.max(total, remaining); }
+      updateDigits(); updateRing();
+    }
+
+    function tick(){
+      if (!running) return;
+      if (remaining <= 0){
+        clearInterval(intervalId);
+        running = false;
+        startBtn.textContent = 'Start';
+        stateEl.textContent = 'Klaar!';
+        if (soundOn){
+          alarm.currentTime = 0;
+          alarm.play().catch(()=>{});
         }
-      }, 1000);
+        if (navigator.vibrate) navigator.vibrate([200,100,200]);
+        return;
+      }
+      remaining -= 1;
+      updateDigits(); updateRing();
     }
 
-    function updateDisplay(tijd) {
-      const m = String(Math.floor(tijd / 60)).padStart(2, '0');
-      const s = String(tijd % 60).padStart(2, '0');
-      document.getElementById("display").textContent = `${m}:${s}`;
+    function start(){
+      if (remaining <= 0 && total > 0){
+        remaining = total; // restart finished timer
+      }
+      if (remaining <= 0 && total === 0) return;
+      running = true;
+      startBtn.textContent = 'Pauze';
+      clearInterval(intervalId);
+      intervalId = setInterval(tick, 1000);
+      updateDigits();
+    }
+    function pause(){
+      running = false;
+      startBtn.textContent = 'Start';
+      clearInterval(intervalId);
+      updateDigits();
+    }
+    function reset(){
+      running = false;
+      clearInterval(intervalId);
+      remaining = total;
+      startBtn.textContent = 'Start';
+      updateDigits(); updateRing();
     }
 
-    function resetTimer() {
-      clearInterval(timerInterval);
-      updateDisplay(0);
-    }
+    // ===== Events =====
+    startBtn.addEventListener('click', ()=> running ? pause() : start());
+    resetBtn.addEventListener('click', reset);
+    applyBtn.addEventListener('click', setFromInputs);
+
+    document.querySelectorAll('[data-pres]').forEach(b=>{
+      b.addEventListener('click', ()=> applyPreset(parseInt(b.dataset.pres,10)));
+    });
+
+    soundTog.addEventListener('click', ()=>{
+      soundOn = !soundOn;
+      soundTog.setAttribute('aria-pressed', String(soundOn));
+      soundDot.classList.toggle('off', !soundOn);
+    });
+    soundTog.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); soundTog.click(); }});
+
+    window.addEventListener('keydown', (e)=>{
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.isContentEditable)) return;
+      if (e.code === 'Space'){ e.preventDefault(); running ? pause() : start(); }
+      if (e.key.toLowerCase() === 'r'){ e.preventDefault(); reset(); }
+    });
+
+    // ===== Init =====
+    updateDigits(); updateRing();
   </script>
 </body>
 </html>
