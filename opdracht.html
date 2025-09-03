@@ -5,52 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Opdracht</title>
   <style>
-    :root { --accent:#007bff; }
+    :root{
+      --accent:#007bff;     /* pas de accentkleur aan */
+      --bar-h:76px;         /* totale hoogte van de balk */
+    }
 
-    html, body {
-      margin: 0;
-      height: 100%;
-      background: transparent;
+    /* Belangrijk: maak het document NIET fullscreen hoog */
+    html, body { margin:0; background:transparent; }
+    body{
+      height: var(--bar-h);     /* geforceerd compacte hoogte */
+      overflow: hidden;         /* verberg eventuele extra ruimte */
       display: flex;
-      align-items: start;
+      align-items: center;
       justify-content: center;
       font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-      padding: 20px;
     }
 
-    .opdracht-menu {
+    .opdracht-menu{
       position: relative;
       display: inline-block;
+      line-height: 1;
     }
 
-    select {
-      font-size: clamp(26px, 3vw, 40px);
-      font-weight: 700;
-      padding: 16px 32px;
+    select{
+      font-size: clamp(24px, 2.6vw, 36px);
+      font-weight: 800;
+      padding: 14px 56px 16px 24px;  /* ruimte voor pijl rechts */
       border: 3px solid var(--accent);
-      border-radius: 12px;
-      background-color: #fff;
+      border-radius: 14px;
+      background: #fff;
       color: #0f1a2a;
       cursor: pointer;
       appearance: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,.08);
+      max-width: 92vw;             /* breder op klein scherm, zonder overflow */
     }
 
-    /* pijltje rechts */
-    .opdracht-menu::after {
-      content: "▼";
-      font-size: 1.2em;
-      color: var(--accent);
+    /* pijl rechts in de dropdown */
+    .opdracht-menu::after{
+      content:"▼";
       position: absolute;
-      right: 16px;
+      right: 18px;
       top: 50%;
       transform: translateY(-50%);
+      font-size: 1.2em;
+      color: var(--accent);
       pointer-events: none;
+    }
+
+    /* subtiele bovenlijn als visueel accent */
+    .accent-line{
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 2px;
+      transform: translateY(-10px);
     }
   </style>
 </head>
 <body>
-  <div class="opdracht-menu">
+  <div class="opdracht-menu" role="region" aria-label="Lesopdracht">
+    <div class="accent-line" aria-hidden="true"></div>
     <select aria-label="Kies een opdracht">
       <option>Lees in je leesboek</option>
       <option>Maak de opdrachten op bladzijde 12</option>
