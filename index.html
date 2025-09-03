@@ -278,27 +278,42 @@
   </script>
 
   <!-- [NIEUW] Auto-height voor de twee iframes -->
-  <script>
-    function autosizeIframe(iframe){
-      try{
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        if(!doc) return;
-        const getH = () => {
-          const b = doc.body, e = doc.documentElement;
-          return Math.max(b.scrollHeight, b.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight);
-        };
-        const set = () => { iframe.style.height = getH() + 'px'; };
-        set();
-        const ro = new ResizeObserver(set); ro.observe(doc.documentElement);
-        const mo = new MutationObserver(set); mo.observe(doc, {childList:true, subtree:true, attributes:true, characterData:true});
-        iframe._cleanup = () => { ro.disconnect(); mo.disconnect(); };
-      } catch(e){ /* same-origin vereist; anders valt het terug op default hoogte */ }
-    }
-    window.addEventListener('load', () => {
-      autosizeIframe(document.getElementById('opdrachtFrame'));
-      autosizeIframe(document.getElementById('timerFrame'));
-    });
-  </script>
+<script>
+  function autosizeIframe(iframe){
+    try{
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      if(!doc) return;
+
+      const getH = () => {
+        const b = doc.body, e = doc.documentElement;
+        return Math.max(b.scrollHeight, b.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight);
+      };
+      const getW = () => {
+        const b = doc.body, e = doc.documentElement;
+        const contentW = Math.max(b.scrollWidth, e.scrollWidth, b.offsetWidth, e.offsetWidth);
+        // knijp niet tegen de randen van het venster
+        const viewportCap = Math.floor(window.innerWidth * 0.98);
+        return Math.min(contentW, viewportCap);
+      };
+
+      const set = () => {
+        iframe.style.height = getH() + 'px';
+        iframe.style.width  = getW() + 'px';
+      };
+
+      set();
+      const ro = new ResizeObserver(set); ro.observe(doc.documentElement);
+      const mo = new MutationObserver(set); mo.observe(doc, {childList:true, subtree:true, attributes:true, characterData:true});
+      window.addEventListener('resize', set);
+      iframe._cleanup = () => { ro.disconnect(); mo.disconnect(); window.removeEventListener('resize', set); };
+    } catch(e){ /* same-origin vereist; anders geen autosize mogelijk */ }
+  }
+  window.addEventListener('load', () => {
+    autosizeIframe(document.getElementById('opdrachtFrame'));
+    autosizeIframe(document.getElementById('timerFrame'));
+  });
+</script>
+
 
 </body>
 </html>
