@@ -16,10 +16,12 @@
       display:flex; justify-content:center;
       padding: 12px 16px 0;
     }
-    #opdrachtMount iframe{
-      border:0; background:transparent; display:block;
-      width:auto; max-width:92vw;
-    }
+   #opdrachtMount iframe{
+  border:0; background:transparent; display:inline-block;
+  /* laat JS de breedte zetten; geen max-width cap */
+  width:auto; max-width:none;
+}
+
 
     /* Timer vast rechts, nauwsluitend (zonder overlap door padding-right) */
     body{ padding-right: 300px; } /* ruimte vrijhouden voor timer */
