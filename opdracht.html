@@ -6,8 +6,8 @@
   <title>Opdracht</title>
   <style>
     :root{
-      --accent:#007bff;     /* accentkleur */
-      --bar-h:90px;         /* totale hoogte van de balk */
+      --accent:#007bff;
+      --bar-h:90px;
     }
 
     html, body {
@@ -26,13 +26,15 @@
     .opdracht-menu {
       position: relative;
       display: inline-block;
-      width: 90vw;              /* veel breder: vrijwel schermvullend */
-      max-width: 1200px;        /* op grote schermen begrensd */
     }
 
     select {
-      width: 100%;
-      font-size: clamp(28px, 3.5vw, 44px);  /* groot en flexibel */
+      display: inline-block;
+      width: auto;                /* past zich aan de tekst aan */
+      min-width: 400px;           /* niet te smal */
+      max-width: 95vw;            /* wel responsief */
+      white-space: nowrap;        /* geen afbreken */
+      font-size: clamp(28px, 3.5vw, 44px);
       font-weight: 900;
       padding: 18px 70px 20px 30px;
       border: 4px solid var(--accent);
@@ -42,10 +44,9 @@
       cursor: pointer;
       appearance: none;
       box-shadow: 0 6px 20px rgba(0,0,0,.15);
-      text-align: center;       /* tekst gecentreerd */
+      text-align: center;
     }
 
-    /* pijl rechts */
     .opdracht-menu::after {
       content:"▼";
       position: absolute;
@@ -57,7 +58,6 @@
       pointer-events: none;
     }
 
-    /* extra visueel accent boven en rondom */
     .highlight {
       position: absolute;
       top: -8px; left: -8px; right: -8px; bottom: -8px;
