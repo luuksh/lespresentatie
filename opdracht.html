@@ -6,67 +6,78 @@
   <title>Opdracht</title>
   <style>
     :root{
-      --accent:#007bff;     /* pas de accentkleur aan */
-      --bar-h:76px;         /* totale hoogte van de balk */
+      --accent:#007bff;     /* accentkleur */
+      --bar-h:90px;         /* totale hoogte van de balk */
     }
 
-    /* Belangrijk: maak het document NIET fullscreen hoog */
-    html, body { margin:0; background:transparent; }
-    body{
-      height: var(--bar-h);     /* geforceerd compacte hoogte */
-      overflow: hidden;         /* verberg eventuele extra ruimte */
+    html, body {
+      margin:0;
+      background:transparent;
+    }
+    body {
+      height: var(--bar-h);
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
     }
 
-    .opdracht-menu{
+    .opdracht-menu {
       position: relative;
       display: inline-block;
-      line-height: 1;
+      width: 90vw;              /* veel breder: vrijwel schermvullend */
+      max-width: 1200px;        /* op grote schermen begrensd */
     }
 
-    select{
-      font-size: clamp(24px, 2.6vw, 36px);
-      font-weight: 800;
-      padding: 14px 56px 16px 24px;  /* ruimte voor pijl rechts */
-      border: 3px solid var(--accent);
-      border-radius: 14px;
+    select {
+      width: 100%;
+      font-size: clamp(28px, 3.5vw, 44px);  /* groot en flexibel */
+      font-weight: 900;
+      padding: 18px 70px 20px 30px;
+      border: 4px solid var(--accent);
+      border-radius: 16px;
       background: #fff;
       color: #0f1a2a;
       cursor: pointer;
       appearance: none;
-      box-shadow: 0 6px 16px rgba(0,0,0,.08);
-      max-width: 92vw;             /* breder op klein scherm, zonder overflow */
+      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+      text-align: center;       /* tekst gecentreerd */
     }
 
-    /* pijl rechts in de dropdown */
-    .opdracht-menu::after{
+    /* pijl rechts */
+    .opdracht-menu::after {
       content:"▼";
       position: absolute;
-      right: 18px;
+      right: 26px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: var(--accent);
       pointer-events: none;
     }
 
-    /* subtiele bovenlijn als visueel accent */
-    .accent-line{
+    /* extra visueel accent boven en rondom */
+    .highlight {
       position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      border-radius: 2px;
-      transform: translateY(-10px);
+      top: -8px; left: -8px; right: -8px; bottom: -8px;
+      border: 4px solid var(--accent);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,123,255,.5);
+      z-index: -1;
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 15px rgba(0,123,255,.4); }
+      50%  { box-shadow: 0 0 40px rgba(0,123,255,.8); }
+      100% { box-shadow: 0 0 15px rgba(0,123,255,.4); }
     }
   </style>
 </head>
 <body>
   <div class="opdracht-menu" role="region" aria-label="Lesopdracht">
-    <div class="accent-line" aria-hidden="true"></div>
+    <div class="highlight" aria-hidden="true"></div>
     <select aria-label="Kies een opdracht">
       <option>Lees in je leesboek</option>
       <option>Maak de opdrachten op bladzijde 12</option>
