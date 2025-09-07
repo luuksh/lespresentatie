@@ -5,6 +5,7 @@ const modules = {
   h216:               () => import('./h216.js').then(m => m.h216Indeling),
   u008:               () => import('./u008.js').then(m => m.u008Indeling),
   groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
+  drietallen:         () => import('./drietallen.js').then(m => m.drietallenIndeling),
   vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
   presentatievolgorde:() => import('./presentatievolgorde.js').then(m => m.presentatievolgordeIndeling),
 };
