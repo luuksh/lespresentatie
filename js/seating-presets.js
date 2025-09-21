@@ -80,7 +80,7 @@ class PresetStore {
   }
   lastUsed(classId) { return this.state.classes?.[classId]?.lastUsedPreset || ''; }
 
-  // ✅ Nieuw: expliciet laatste preset zetten
+  // Nieuw: expliciet laatste preset zetten
   setLastUsed(classId, name) {
     if (!this.state.classes[classId]) {
       this.state.classes[classId] = { presets: {}, lastUsedPreset: "" };
@@ -89,7 +89,7 @@ class PresetStore {
     this.#save();
   }
 
-  // ✅ Nieuw: importeren van JSON voor (alleen) één klas
+  // Nieuw: importeren van JSON voor (alleen) één klas
   // - input: string JSON met {presets:{...}} of een object in die vorm
   // - options.overwrite: true => overschrijf bestaande presets met dezelfde naam
   importClass(classId, jsonOrString, { overwrite = false } = {}) {
@@ -223,7 +223,7 @@ function renderArrangementAsWordHTML(classId, presetName, arrangement) {
         .group { display:block; width:100%; margin-bottom:10pt; }
       }
     </style>
-  ";
+  `;
 
   let body = '';
 
@@ -332,7 +332,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
   }
 
-  // ✅ Verbeterd: probeer eerst expliciet geselecteerde waarde,
+  // Verbeterd: probeer eerst expliciet geselecteerde waarde,
   // anders val terug op lastUsedPreset, en anders eerste optie
   function ensureSelection() {
     if (!$sel || $sel.options.length === 0) return '';
@@ -391,7 +391,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na overschrijven mislukt:', e); alert('Overschreven, maar exporteren mislukte.'); }
   });
 
-  // ✅ Laden — defensiever + onthoud "laatst gebruikt"
+  // Laden — defensiever + onthoud "laatst gebruikt"
   $btnLoad?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
