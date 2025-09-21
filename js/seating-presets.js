@@ -1,4 +1,4 @@
-// seating-presets.js — v1.5 + load-fix
+// seating-presets.js — v1.5
 // Presets via localStorage + export naar Word (.doc) met publieksvriendelijke opmaak
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
@@ -79,15 +79,6 @@ class PresetStore {
     return true;
   }
   lastUsed(classId) { return this.state.classes?.[classId]?.lastUsedPreset || ''; }
-
-  // Nieuw: expliciet laatst gebruikte preset zetten
-  setLastUsed(classId, name) {
-    if (!this.state.classes[classId]) {
-      this.state.classes[classId] = { presets: {}, lastUsedPreset: "" };
-    }
-    this.state.classes[classId].lastUsedPreset = name || "";
-    this.#save();
-  }
 }
 
 /* ===== Validatie & helpers ===== */
@@ -95,17 +86,17 @@ function isArrangementValid(arr) {
   if (!arr) return false;
 
   if (typeof arr === 'object' && !Array.isArray(arr)) {
-    if (arr.type === 'presentatievolgorde') return Array.isArray(arr.order) && arr.order.length > 0;
-    if (Array.isArray(arr.seats)) return arr.seats.length > 0 && arr.seats.every(x => x && (x.seatId != null) && ('studentId' in x));
+    if (arr.type === 'presentatievolgorde') return Array.isArray(arr.order);
+    if (Array.isArray(arr.seats)) return arr.seats.every(x => x && (x.seatId != null) && ('studentId' in x));
     return false;
   }
-  if (Array.isArray(arr)) return arr.length > 0 && arr.every(x => x && (x.seatId != null) && ('studentId' in x));
+  if (Array.isArray(arr)) return arr.every(x => x && (x.seatId != null) && ('studentId' in x));
   return false;
 }
 function sanitizeFilename(s) { return String(s).replace(/[^a-z0-9-_]+/gi,'_'); }
 function escapeHTML(s){
   return String(s)
-    .replace(/&/g,'&amp;').replace(/<//g,'&lt;')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 function nlDateTime(ts=new Date()){
@@ -309,26 +300,12 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       $sel.appendChild(opt);
     }
   }
-
-  // ✅ nieuwe ensureSelection(): valt terug op lastUsedPreset als niks geselecteerd is
   function ensureSelection() {
     if (!$sel || $sel.options.length === 0) return '';
-    if ($sel.value) return $sel.value;
-
-    const classId = getCurrentClassId();
-    const last = store.lastUsed(classId);
-    if (last) {
-      for (const opt of $sel.options) {
-        if (opt.value === last) {
-          $sel.value = last;
-          return last;
-        }
-      }
-    }
-    return $sel.options[0].value;
+    return $sel.value || $sel.options[0].value;
   }
 
-  // Opslaan als… => opslaan + DIRECT Word-export (ongewijzigd)
+  // Opslaan als… => opslaan + DIRECT Word-export
   $btnSave?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const name = prompt('Naam voor deze opstelling:');
@@ -349,7 +326,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na opslaan mislukt:', e); alert('Opgeslagen, maar exporteren mislukte.'); }
   });
 
-  // Overschrijven => opslaan + DIRECT Word-export (ongewijzigd)
+  // Overschrijven => opslaan + DIRECT Word-export
   $btnOverwrite?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -368,38 +345,17 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na overschrijven mislukt:', e); alert('Overschreven, maar exporteren mislukte.'); }
   });
 
-  // ✅ Laden — stabiel + onthoud laatst gebruikt; voorkomt “willekeurige” nieuwe layouts
+  // Laden
   $btnLoad?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
-
     const data = store.get(classId, current);
-    if (!data) {
-      console.warn('Preset niet gevonden voor classId/current:', { classId, current, known: store.list(classId) });
-      alert('Preset niet gevonden. Controleer of je de juiste klas hebt gekozen.');
-      return;
-    }
-
-    const arr = data.arrangement;
-    const valid =
-      arr &&
-      (
-        (arr.type === 'presentatievolgorde' && Array.isArray(arr.order) && arr.order.length > 0) ||
-        (Array.isArray(arr.seats) && arr.seats.length > 0 && arr.seats.every(x => x && ('studentId' in x)))
-      );
-
-    if (!valid) {
-      console.warn('Ongeldige/lege arrangement-data bij laden:', arr);
-      alert('Deze preset lijkt leeg of ongeldig.');
-      return;
-    }
-
-    applyArrangement(structuredClone(arr));
-    try { store.setLastUsed(classId, current); } catch (e) { console.warn('setLastUsed faalde:', e); }
+    if (!data) { alert('Preset niet gevonden.'); return; }
+    applyArrangement(structuredClone(data.arrangement));
   });
 
-  // Hernoemen (ongewijzigd)
+  // Hernoemen
   $btnRename?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -410,7 +366,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch(e){ alert('Hernoemen mislukt: ' + e.message); }
   });
 
-  // Verwijderen (ongewijzigd)
+  // Verwijderen
   $btnDelete?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -421,7 +377,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     refill();
   });
 
-  // Export-knop => exporteer GESELECTEERDE preset als .doc (ongewijzigd)
+  // Export-knop => exporteer GESELECTEERDE preset als .doc
   $btnExport?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
