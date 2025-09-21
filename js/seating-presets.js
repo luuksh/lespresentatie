@@ -1,4 +1,4 @@
-// seating-presets.js — v1.5
+// seating-presets.js — v1.5-patched
 // Presets via localStorage + export naar Word (.doc) met publieksvriendelijke opmaak
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
@@ -79,6 +79,37 @@ class PresetStore {
     return true;
   }
   lastUsed(classId) { return this.state.classes?.[classId]?.lastUsedPreset || ''; }
+
+  // ✅ Nieuw: expliciet laatste preset zetten
+  setLastUsed(classId, name) {
+    if (!this.state.classes[classId]) {
+      this.state.classes[classId] = { presets: {}, lastUsedPreset: "" };
+    }
+    this.state.classes[classId].lastUsedPreset = name || "";
+    this.#save();
+  }
+
+  // ✅ Nieuw: importeren van JSON voor (alleen) één klas
+  // - input: string JSON met {presets:{...}} of een object in die vorm
+  // - options.overwrite: true => overschrijf bestaande presets met dezelfde naam
+  importClass(classId, jsonOrString, { overwrite = false } = {}) {
+    let data = jsonOrString;
+    if (typeof data === 'string') data = JSON.parse(data);
+    if (!data || typeof data !== 'object') throw new Error('Ongeldig importformaat');
+    const presets = data.presets || {};
+    if (!this.state.classes[classId]) this.state.classes[classId] = { presets:{}, lastUsedPreset:"" };
+    const target = this.state.classes[classId].presets;
+
+    for (const [name, value] of Object.entries(presets)) {
+      if (!overwrite && target[name]) continue;
+      target[name] = {
+        createdAt: value.createdAt || new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        arrangement: value.arrangement
+      };
+    }
+    this.#save();
+  }
 }
 
 /* ===== Validatie & helpers ===== */
@@ -192,7 +223,7 @@ function renderArrangementAsWordHTML(classId, presetName, arrangement) {
         .group { display:block; width:100%; margin-bottom:10pt; }
       }
     </style>
-  `;
+  ";
 
   let body = '';
 
@@ -300,9 +331,24 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       $sel.appendChild(opt);
     }
   }
+
+  // ✅ Verbeterd: probeer eerst expliciet geselecteerde waarde,
+  // anders val terug op lastUsedPreset, en anders eerste optie
   function ensureSelection() {
     if (!$sel || $sel.options.length === 0) return '';
-    return $sel.value || $sel.options[0].value;
+    if ($sel.value) return $sel.value;
+
+    const classId = getCurrentClassId();
+    const last = store.lastUsed(classId);
+    if (last) {
+      for (const opt of $sel.options) {
+        if (opt.value === last) {
+          $sel.value = last;
+          return last;
+        }
+      }
+    }
+    return $sel.options[0].value;
   }
 
   // Opslaan als… => opslaan + DIRECT Word-export
@@ -345,14 +391,24 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na overschrijven mislukt:', e); alert('Overschreven, maar exporteren mislukte.'); }
   });
 
-  // Laden
+  // ✅ Laden — defensiever + onthoud "laatst gebruikt"
   $btnLoad?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
     const data = store.get(classId, current);
-    if (!data) { alert('Preset niet gevonden.'); return; }
+    if (!data) {
+      console.warn('Preset niet gevonden voor classId/current:', { classId, current, known: store.list(classId) });
+      alert('Preset niet gevonden. Controleer of je de juiste klas hebt gekozen.');
+      return;
+    }
+    if (!isArrangementValid(data.arrangement)) {
+      console.warn('Ongeldige arrangement-data bij laden:', data.arrangement);
+      alert('Deze preset lijkt beschadigd of ongeldig.');
+      return;
+    }
     applyArrangement(structuredClone(data.arrangement));
+    try { store.setLastUsed(classId, current); } catch(e) { console.warn('setLastUsed faalde:', e); }
   });
 
   // Hernoemen
@@ -388,7 +444,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export mislukt:', e); alert('Export mislukt.'); }
   });
 
-  // Import (ongewijzigd; JSON voor beheer)
+  // Import (ongewijzigd in UI; onder water nu ondersteund door PresetStore.importClass)
   $inpImport?.addEventListener('change', async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
