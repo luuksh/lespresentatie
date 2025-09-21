@@ -1,4 +1,4 @@
-// seating-presets.js — v1.5
+// seating-presets.js — v1.6 (load fix only)
 // Presets via localStorage + export naar Word (.doc) met publieksvriendelijke opmaak
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
@@ -79,6 +79,15 @@ class PresetStore {
     return true;
   }
   lastUsed(classId) { return this.state.classes?.[classId]?.lastUsedPreset || ''; }
+
+  // ✅ Nieuw: expliciet laatst gebruikte preset zetten
+  setLastUsed(classId, name) {
+    if (!this.state.classes[classId]) {
+      this.state.classes[classId] = { presets: {}, lastUsedPreset: "" };
+    }
+    this.state.classes[classId].lastUsedPreset = name || "";
+    this.#save();
+  }
 }
 
 /* ===== Validatie & helpers ===== */
@@ -300,12 +309,26 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       $sel.appendChild(opt);
     }
   }
+
+  // ✅ nieuwe ensureSelection(): valt terug op lastUsedPreset als niks expliciet is gekozen
   function ensureSelection() {
     if (!$sel || $sel.options.length === 0) return '';
-    return $sel.value || $sel.options[0].value;
+    if ($sel.value) return $sel.value;
+
+    const classId = getCurrentClassId();
+    const last = store.lastUsed(classId);
+    if (last) {
+      for (const opt of $sel.options) {
+        if (opt.value === last) {
+          $sel.value = last;
+          return last;
+        }
+      }
+    }
+    return $sel.options[0].value;
   }
 
-  // Opslaan als… => opslaan + DIRECT Word-export
+  // Opslaan als… => opslaan + DIRECT Word-export (ongewijzigd)
   $btnSave?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const name = prompt('Naam voor deze opstelling:');
@@ -326,7 +349,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na opslaan mislukt:', e); alert('Opgeslagen, maar exporteren mislukte.'); }
   });
 
-  // Overschrijven => opslaan + DIRECT Word-export
+  // Overschrijven => opslaan + DIRECT Word-export (ongewijzigd)
   $btnOverwrite?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -345,17 +368,40 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch (e) { console.warn('Export na overschrijven mislukt:', e); alert('Overschreven, maar exporteren mislukte.'); }
   });
 
-  // Laden
+  // ✅ Laden — stabiel, met validatie + onthoud "laatst gebruikt"
   $btnLoad?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
+
     const data = store.get(classId, current);
-    if (!data) { alert('Preset niet gevonden.'); return; }
-    applyArrangement(structuredClone(data.arrangement));
+    if (!data) {
+      console.warn('Preset niet gevonden:', { classId, current, known: store.list(classId) });
+      alert('Preset niet gevonden. Controleer of je de juiste klas hebt gekozen.');
+      return;
+    }
+
+    // Hardere validatie om random fallback te voorkomen
+    const arr = data.arrangement;
+    const valid =
+      arr &&
+      (
+        (arr.type === 'presentatievolgorde' && Array.isArray(arr.order) && arr.order.length > 0) ||
+        (Array.isArray(arr.seats) && arr.seats.length > 0 && arr.seats.every(x => x && ('studentId' in x)))
+      );
+
+    if (!valid) {
+      console.warn('Ongeldige/lege arrangement-data bij laden:', arr);
+      alert('Deze preset lijkt leeg of ongeldig (geen leerlingen/stoelen).');
+      return;
+    }
+
+    // Pas toe (met diepe kopie) en onthoud als laatst gebruikt
+    applyArrangement(structuredClone(arr));
+    try { store.setLastUsed(classId, current); } catch (e) { console.warn('setLastUsed faalde:', e); }
   });
 
-  // Hernoemen
+  // Hernoemen (ongewijzigd)
   $btnRename?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -366,7 +412,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     catch(e){ alert('Hernoemen mislukt: ' + e.message); }
   });
 
-  // Verwijderen
+  // Verwijderen (ongewijzigd)
   $btnDelete?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
@@ -377,7 +423,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     refill();
   });
 
-  // Export-knop => exporteer GESELECTEERDE preset als .doc
+  // Export-knop => exporteer GESELECTEERDE preset als .doc (ongewijzigd)
   $btnExport?.addEventListener('click', () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
