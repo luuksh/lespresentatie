@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260220-2" />
 
-  <script type="module" src="js/indeling.js"></script>
-  <script type="module" src="js/init.js"></script>
+  <script type="module" src="js/indeling.js?v=20260220-2"></script>
+  <script type="module" src="js/init.js?v=20260220-2"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
@@ -122,18 +122,26 @@
   <aside id="timerDock" class="clock-timer" role="timer" aria-live="polite">
     <div class="timer-head">
       <h2 class="timer-title">Kloktimer</h2>
-      <div class="timer-hotkeys">spatie start/pauze · R reset</div>
+      <div class="timer-hotkeys">spatie start/pauze · R/Esc reset</div>
     </div>
 
     <div class="clock-wrap">
       <div class="clock-face" id="clockFace" aria-label="Aftelklok">
+        <div class="clock-bezel"></div>
         <div class="clock-progress" id="clockProgress"></div>
+        <div class="clock-dial" id="clockDial"></div>
         <div class="clock-hand" id="clockHand"></div>
+        <div class="clock-hub"></div>
+        <div class="clock-numeral n12">12</div>
+        <div class="clock-numeral n3">3</div>
+        <div class="clock-numeral n6">6</div>
+        <div class="clock-numeral n9">9</div>
         <div class="clock-digital">
           <div class="clock-time" id="clockTime">05:00</div>
           <div class="clock-state" id="clockState">Gepauzeerd</div>
         </div>
       </div>
+      <div class="clock-scrub-hint">Sleep over de klok om tijd te zetten</div>
     </div>
 
     <div class="timer-panel" aria-label="Timerbediening">
@@ -537,7 +545,9 @@
       const minIn = document.getElementById('timerMin');
       const secIn = document.getElementById('timerSec');
 
-      if (!clockFace || !progress || !hand || !timeEl || !stateEl) return;
+      const dial = document.getElementById('clockDial');
+
+      if (!clockFace || !progress || !hand || !timeEl || !stateEl || !dial) return;
 
       const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
@@ -568,6 +578,22 @@
         progress.style.setProperty('--pct', (done * 100).toFixed(4));
         hand.style.setProperty('--angle', `${(done * 360).toFixed(4)}deg`);
         clockFace.classList.toggle('done', remaining === 0);
+      }
+
+      function setByAngle(clientX, clientY) {
+        if (total <= 0) total = 300;
+        const rect = clockFace.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+        if (angle < 0) angle += 360;
+        const done = angle / 360;
+        remaining = clamp(Math.round(total * (1 - done)), 0, total);
+        syncInputsFrom(remaining);
+        updateDigits();
+        updateClock();
       }
 
       function setFromInputs() {
@@ -643,13 +669,20 @@
       });
 
       document.addEventListener('keydown', (e) => {
+        const hardReload = (e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyR';
+        if (hardReload) {
+          window.location.reload();
+          return;
+        }
+
         const activeTag = document.activeElement?.tagName;
         if (activeTag === 'INPUT' || document.activeElement?.isContentEditable) return;
         if (e.code === 'Space') {
           e.preventDefault();
           running ? pause() : start();
         }
-        if (e.key.toLowerCase() === 'r') {
+        const plainR = e.code === 'KeyR' && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey;
+        if (plainR || e.code === 'Escape') {
           e.preventDefault();
           reset();
         }
@@ -659,8 +692,23 @@
         const tickEl = document.createElement('div');
         tickEl.className = `clock-tick${i % 5 === 0 ? ' big' : ''}`;
         tickEl.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
-        clockFace.appendChild(tickEl);
+        dial.appendChild(tickEl);
       }
+
+      let scrubbing = false;
+      const stopScrub = () => { scrubbing = false; };
+      clockFace.addEventListener('pointerdown', (e) => {
+        if (running) pause();
+        scrubbing = true;
+        clockFace.setPointerCapture(e.pointerId);
+        setByAngle(e.clientX, e.clientY);
+      });
+      clockFace.addEventListener('pointermove', (e) => {
+        if (!scrubbing) return;
+        setByAngle(e.clientX, e.clientY);
+      });
+      clockFace.addEventListener('pointerup', stopScrub);
+      clockFace.addEventListener('pointercancel', stopScrub);
 
       syncInputsFrom(total);
       updateDigits();

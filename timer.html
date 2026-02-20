@@ -80,6 +80,7 @@
       display: grid;
       place-items: center;
       padding: 2px 0;
+      gap: 8px;
     }
 
     .clock {
@@ -87,41 +88,59 @@
       width: 220px;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
-      border: 8px solid rgba(192, 215, 248, 0.28);
+      border: 9px solid rgba(192, 215, 248, 0.22);
       background:
-        radial-gradient(circle at 50% 35%, #203e67 0%, #132844 62%, #0f1f36 100%);
+        radial-gradient(circle at 50% 35%, #325684 0%, #162f4f 55%, #0f1f36 100%);
       box-shadow:
         inset 0 2px 0 rgba(255, 255, 255, 0.08),
         inset 0 -14px 24px rgba(5, 12, 22, 0.45),
         0 14px 24px rgba(7, 16, 31, 0.4);
       overflow: hidden;
+      touch-action: none;
+      cursor: crosshair;
+    }
+
+    .bezel {
+      position: absolute;
+      inset: 5px;
+      z-index: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 224, 255, 0.24);
+      box-shadow: inset 0 0 0 8px rgba(6, 16, 30, 0.22);
+    }
+
+    .dial {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
     }
 
     .tick {
       position: absolute;
       z-index: 1;
       left: 50%;
-      top: 10px;
-      width: 3px;
-      height: 10px;
+      top: 11px;
+      width: 2px;
+      height: 9px;
       border-radius: 2px;
       background: rgba(213, 227, 248, 0.55);
-      transform-origin: 50% calc(110px - 10px);
+      transform-origin: 50% calc(110px - 11px);
     }
 
     .tick.big {
-      height: 14px;
+      width: 3px;
+      height: 16px;
       background: rgba(235, 244, 255, 0.78);
     }
 
     .progress {
       position: absolute;
       z-index: 0;
-      inset: 0;
+      inset: 8px;
       border-radius: 50%;
-      background: conic-gradient(var(--accent) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.12) 0);
+      background: conic-gradient(var(--accent) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.08) 0);
       mix-blend-mode: screen;
-      opacity: 0.85;
+      opacity: 0.92;
       pointer-events: none;
     }
 
@@ -152,6 +171,34 @@
       box-shadow: 0 0 10px rgba(118, 206, 255, 0.48);
     }
 
+    .hub {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      z-index: 4;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle at 35% 35%, #f1fbff, #8ed3ff 65%, #4a97cc 100%);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .numeral {
+      position: absolute;
+      z-index: 2;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      color: rgba(228, 241, 255, 0.92);
+      text-shadow: 0 1px 1px rgba(4, 12, 23, 0.5);
+    }
+
+    .numeral.n12 { left: 50%; top: 18px; transform: translateX(-50%); }
+    .numeral.n3 { right: 18px; top: 50%; transform: translateY(-50%); }
+    .numeral.n6 { left: 50%; bottom: 48px; transform: translateX(-50%); }
+    .numeral.n9 { left: 18px; top: 50%; transform: translateY(-50%); }
+
     .digital {
       position: absolute;
       left: 50%;
@@ -179,6 +226,13 @@
       font-size: 12px;
       color: var(--muted);
       font-weight: 700;
+    }
+
+    .scrub-hint {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-align: center;
     }
 
     .panel {
@@ -298,18 +352,26 @@
   <div class="timer" role="timer" aria-live="polite">
     <div class="head">
       <h1 class="title">🕒 Kloktimer</h1>
-      <div class="kbd">spatie start/pauze · R reset</div>
+      <div class="kbd">spatie start/pauze · R/Esc reset</div>
     </div>
 
     <div class="clock-wrap">
       <div class="clock" id="clock" aria-label="Aftelklok">
+        <div class="bezel"></div>
         <div class="progress" id="ring"></div>
+        <div class="dial" id="dial"></div>
         <div class="hand" id="hand"></div>
+        <div class="hub"></div>
+        <div class="numeral n12">12</div>
+        <div class="numeral n3">3</div>
+        <div class="numeral n6">6</div>
+        <div class="numeral n9">9</div>
         <div class="digital">
           <div class="time" id="time">05:00</div>
           <div class="state" id="state">Gepauzeerd</div>
         </div>
       </div>
+      <div class="scrub-hint">Sleep over de klok om tijd te zetten</div>
     </div>
 
     <div class="panel" aria-label="Timerbediening">
@@ -348,6 +410,7 @@
     const ringEl = document.getElementById('ring');
     const handEl = document.getElementById('hand');
     const clockEl = document.getElementById('clock');
+    const dialEl = document.getElementById('dial');
     const startBtn = document.getElementById('startPause');
     const resetBtn = document.getElementById('reset');
     const applyBtn = document.getElementById('apply');
@@ -385,6 +448,22 @@
       const angle = done * 360;
       handEl.style.setProperty('--angle', `${angle}deg`);
       clockEl.classList.toggle('done', remaining === 0);
+    }
+
+    function setByAngle(clientX, clientY) {
+      if (total <= 0) total = 300;
+      const rect = clockEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = clientX - cx;
+      const dy = clientY - cy;
+      let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+      if (angle < 0) angle += 360;
+      const done = angle / 360;
+      remaining = clamp(Math.round(total * (1 - done)), 0, total);
+      syncInputsFrom(remaining);
+      updateDigits();
+      updateClock();
     }
 
     function setFromInputs() {
@@ -463,12 +542,19 @@
     });
 
     window.addEventListener('keydown', (e) => {
+      const hardReload = (e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyR';
+      if (hardReload) {
+        window.location.reload();
+        return;
+      }
+
       if (e.target && (e.target.tagName === 'INPUT' || e.target.isContentEditable)) return;
       if (e.code === 'Space') {
         e.preventDefault();
         running ? pause() : start();
       }
-      if (e.key.toLowerCase() === 'r') {
+      const plainR = e.code === 'KeyR' && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey;
+      if (plainR || e.code === 'Escape') {
         e.preventDefault();
         reset();
       }
@@ -479,9 +565,24 @@
         const tick = document.createElement('div');
         tick.className = `tick${i % 5 === 0 ? ' big' : ''}`;
         tick.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
-        clockEl.appendChild(tick);
+        dialEl.appendChild(tick);
       }
     }
+
+    let scrubbing = false;
+    const stopScrub = () => { scrubbing = false; };
+    clockEl.addEventListener('pointerdown', (e) => {
+      if (running) pause();
+      scrubbing = true;
+      clockEl.setPointerCapture(e.pointerId);
+      setByAngle(e.clientX, e.clientY);
+    });
+    clockEl.addEventListener('pointermove', (e) => {
+      if (!scrubbing) return;
+      setByAngle(e.clientX, e.clientY);
+    });
+    clockEl.addEventListener('pointerup', stopScrub);
+    clockEl.addEventListener('pointercancel', stopScrub);
 
     drawTicks();
     syncInputsFrom(total);
