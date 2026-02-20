@@ -60,6 +60,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  function dispatchRendered(type) {
+    window.dispatchEvent(new CustomEvent('indeling:rendered', {
+      detail: { type, timestamp: Date.now() }
+    }));
+  }
+
   // 🟦 Kleuren + indeling tekenen
   function laadIndeling() {
     const kleuren = {
@@ -91,12 +97,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Fade-out, opnieuw opbouwen, badges zetten
     grid.style.opacity = 0;
-    setTimeout(() => {
+    setTimeout(async () => {
       grid.innerHTML = "";
-      kiesIndeling(type, klasSelect.value); // tekent; standaard random in indeling.js
+      await kiesIndeling(type, klasSelect.value); // tekent; standaard random in indeling.js
       setTimeout(() => {
         applyGroupNumbers();  // type-onafhankelijk: zet nummers zodra er .groepje is
         grid.style.opacity = 1;
+        dispatchRendered(type);
       }, 0);
     }, 200);
   }

@@ -12,7 +12,7 @@ const modules = {
 
 /* ---------- Helpers ---------- */
 
-// Fisher–Yates shuffle: maakt standaardopstelling willekeurig
+// Fisher-Yates shuffle: maakt standaardopstelling willekeurig
 function shuffleInPlace(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -36,22 +36,22 @@ async function laadLeerlingen(klasnaam = "G1D") {
     if (!Array.isArray(lijst)) throw new Error(`Klas ${klasnaam} niet gevonden of onjuist formaat`);
     return lijst;
   } catch (err) {
-    console.error("❌ Fout bij laden leerlingen:", err);
+    console.error("Fout bij laden leerlingen:", err);
     return [];
   }
 }
 
 /**
  * Laadt dynamisch de juiste indelingsfunctie en tekent de plattegrond.
- * Standaard: leerlingen worden **willekeurig** gezet.
- * Alleen bij het **handmatig Laden** van een preset (via applyArrangement) wordt niet gerandomized.
+ * Standaard: leerlingen worden willekeurig gezet.
+ * Alleen bij het handmatig Laden van een preset (via applyArrangement) wordt niet gerandomized.
  * @param {"h216"|"u008"|"groepjes"|"vijftallen"|"presentatievolgorde"} type
  * @param {string} klasnaam
  */
 export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
   const leerlingen = await laadLeerlingen(klasnaam);
 
-  // ⬇️ Maak standaardopstelling willekeurig
+  // Maak standaardopstelling willekeurig
   const shuffled = shuffleInPlace([...leerlingen]);
 
   const moduleLader = modules[type] || modules.h216;
@@ -59,9 +59,9 @@ export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
   try {
     const indeling = await moduleLader();
     if (typeof indeling !== "function") throw new Error("Module bevat geen exporteerbare functie");
-    indeling(shuffled);           // <-- geef de geshuffelde lijst door
+    indeling(shuffled);
   } catch (err) {
-    console.error(`⚠️ Fout bij toepassen van indeling "${type}":`, err);
+    console.error(`Fout bij toepassen van indeling "${type}":`, err);
     const fallback = await modules.h216();
     fallback(shuffled);
   }
@@ -76,7 +76,7 @@ if (typeof window !== 'undefined') {
 
 /**
  * Leest de huidige opstelling uit de DOM (#plattegrond).
- * ⚙️ Geeft een object terug met type + seats of order.
+ * Geeft een object terug met type + seats of order.
  */
 function getCurrentArrangement() {
   const typeSel = document.getElementById('indelingSelect');
@@ -92,7 +92,7 @@ function getCurrentArrangement() {
       type,
       klasId,
       savedAt: new Date().toISOString(),
-      order: items,   // exacte lijstvolgorde
+      order: items,
       seats: []
     };
   }
@@ -111,34 +111,52 @@ function getCurrentArrangement() {
   };
 }
 
-// kleine helper om even te wachten (voor fade/DOM-render uit init.js)
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function waitForRendered(type, timeoutMs = 4000) {
+  return new Promise((resolve) => {
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      window.removeEventListener('indeling:rendered', onRendered);
+      clearTimeout(timer);
+      resolve();
+    };
+
+    const onRendered = (evt) => {
+      const renderedType = evt?.detail?.type;
+      if (!type || renderedType === type) finish();
+    };
+
+    const timer = setTimeout(finish, timeoutMs);
+    window.addEventListener('indeling:rendered', onRendered);
+  });
+}
 
 /**
  * Past een opgeslagen opstelling toe.
  * - Zet eerst het juiste type in de dropdown en triggert de bestaande change-flow (laadIndeling).
  * - Wacht op de re-render en projecteert daarna de opgeslagen inhoud.
- * - Voorkomt dat styling/klassen van de vorige indeling “doorlekken”.
+ * - Voorkomt dat styling/klassen van de vorige indeling doorlekken.
  */
 async function applyArrangement(payload) {
   const grid = document.getElementById('plattegrond');
   const typeSel = document.getElementById('indelingSelect');
 
-  // Backward compat: legacy array → objectvorm
+  // Backward compat: legacy array -> objectvorm
   if (Array.isArray(payload)) {
     payload = { type: typeSel?.value || 'h216', seats: payload, order: [] };
   }
   const type = payload?.type || typeSel?.value || 'h216';
 
-  // 1) Dropdown op juiste type zetten + 'change' dispatchen,
-  // zodat init.js → laadIndeling() álle themastates/klassen goed reset.
+  // 1) Dropdown op juiste type zetten + change dispatchen,
+  // zodat init.js -> laadIndeling() alle themastates/klassen goed reset.
   if (typeSel) {
     typeSel.value = type;
     typeSel.dispatchEvent(new Event('change', { bubbles: true }));
   }
 
-  // 2) Wacht even op de fade + render (init.js gebruikt ~200ms)
-  await sleep(250);
+  // 2) Wacht expliciet op "render klaar" vanuit init.js
+  await waitForRendered(type);
 
   // 3) Inhoud projecteren
   if (type === 'presentatievolgorde') {
@@ -164,13 +182,17 @@ async function applyArrangement(payload) {
       });
       grid.appendChild(ol);
     }
-    return; // geen seats bij lijst
+
+    window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
+      detail: { type, timestamp: Date.now() }
+    }));
+    return;
   }
 
   // Tafels invullen (h216/u008/groepjes/vijftallen)
   const seatsEls = Array.from(document.querySelectorAll('#plattegrond .tafel'));
   const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
-  const byId  = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
+  const byId = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
 
   (payload.seats || []).forEach((item, i) => {
     const key = (item.seatId != null && byId.has(String(item.seatId)))
@@ -179,6 +201,10 @@ async function applyArrangement(payload) {
     const el = byId.get(key) || byIdx.get(i);
     if (el) el.textContent = item.studentId || '';
   });
+
+  window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
+    detail: { type, timestamp: Date.now() }
+  }));
 }
 
 /* ---------- Presets: initialisatie ---------- */

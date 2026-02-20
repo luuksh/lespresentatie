@@ -415,7 +415,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
   });
 
   // ✅ Laden — stabiel, met validatie + onthoud "laatst gebruikt"
-  $btnLoad?.addEventListener('click', () => {
+  $btnLoad?.addEventListener('click', async () => {
     const classId = getCurrentClassId();
     const current = ensureSelection();
     if (!current) { alert('Geen preset geselecteerd.'); return; }
@@ -443,8 +443,13 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
 
     // Pas toe (met diepe kopie) en onthoud als laatst gebruikt
-    applyArrangement(structuredClone(arr));
-    try { store.setLastUsed(classId, current); } catch (e) { console.warn('setLastUsed faalde:', e); }
+    try {
+      await applyArrangement(structuredClone(arr));
+      store.setLastUsed(classId, current);
+    } catch (e) {
+      console.warn('Preset laden faalde:', e);
+      alert('Laden van preset is mislukt. Probeer opnieuw.');
+    }
   });
 
   // Hernoemen (ongewijzigd)
