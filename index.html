@@ -11,19 +11,6 @@
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
-  <header class="app-header" aria-label="Lesinformatie">
-    <div class="app-header-left">
-      <p class="eyebrow">Lespresentatie</p>
-      <h1>Klassenplattegrond</h1>
-      <p class="subtitle">Overzicht voor leerlingen. Bediening via docentpaneel links.</p>
-    </div>
-
-    <div class="lesson-status" id="lessonStatusBar">
-      <span class="status-chip" id="currentClassLabel">Klas: -</span>
-      <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
-    </div>
-  </header>
-
   <div id="opdrachtMount" class="floating-card opdracht-card">
     <iframe src="opdracht.html" title="Lesopdracht" id="opdrachtFrame"></iframe>
   </div>
@@ -107,6 +94,11 @@
           <div class="field">
             <span class="label">Klas</span>
             <select id="klasSelect"></select>
+          </div>
+
+          <div class="lesson-status in-topbar" id="lessonStatusBar">
+            <span class="status-chip" id="currentClassLabel">Klas: -</span>
+            <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
           </div>
 
           <div class="controls-row quick-board-actions">
