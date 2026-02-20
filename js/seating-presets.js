@@ -88,6 +88,52 @@ class PresetStore {
     this.state.classes[classId].lastUsedPreset = name || "";
     this.#save();
   }
+
+  // ✅ Nieuw: importeer presets voor een klas vanuit JSON
+  importClass(classId, jsonText, { overwrite = false } = {}) {
+    const parsed = JSON.parse(jsonText);
+    const source = parsed?.presets ?? parsed?.classes?.[classId]?.presets;
+
+    if (!source || typeof source !== "object") {
+      throw new Error("Geen presets gevonden in importbestand.");
+    }
+
+    if (!this.state.classes[classId]) {
+      this.state.classes[classId] = { presets: {}, lastUsedPreset: "" };
+    }
+
+    const cls = this.state.classes[classId];
+    const now = new Date().toISOString();
+    let imported = 0;
+    let skippedExisting = 0;
+    let skippedInvalid = 0;
+
+    for (const [name, value] of Object.entries(source)) {
+      const arrangement = value?.arrangement ?? value;
+
+      if (!isArrangementValid(arrangement)) {
+        skippedInvalid++;
+        continue;
+      }
+
+      if (!overwrite && cls.presets[name]) {
+        skippedExisting++;
+        continue;
+      }
+
+      cls.presets[name] = {
+        createdAt: cls.presets[name]?.createdAt || value?.createdAt || now,
+        updatedAt: now,
+        arrangement
+      };
+
+      cls.lastUsedPreset = name;
+      imported++;
+    }
+
+    this.#save();
+    return { imported, skippedExisting, skippedInvalid };
+  }
 }
 
 /* ===== Validatie & helpers ===== */
@@ -443,13 +489,12 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     try {
       const parsed = JSON.parse(text);
       const storeLocal = new PresetStore();
-      if (parsed && parsed.presets) {
-        storeLocal.importClass(getCurrentClassId(), JSON.stringify({presets:parsed.presets}), { overwrite });
-      } else {
-        storeLocal.importClass(getCurrentClassId(), text, { overwrite });
-      }
+      const result = parsed && parsed.presets
+        ? storeLocal.importClass(getCurrentClassId(), JSON.stringify({ presets: parsed.presets }), { overwrite })
+        : storeLocal.importClass(getCurrentClassId(), text, { overwrite });
+
       refill();
-      alert('Import voltooid.');
+      alert(`Import voltooid: ${result.imported} toegevoegd, ${result.skippedExisting} overgeslagen (bestaat al), ${result.skippedInvalid} ongeldig.`);
     } catch(err) {
       alert('Import mislukt: ' + err.message);
     } finally {

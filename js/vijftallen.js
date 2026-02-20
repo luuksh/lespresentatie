@@ -21,9 +21,10 @@ export function vijftallenIndeling(leerlingen, { shuffle = false } = {}) {
     badge.textContent = String(idx + 1);
     wrap.appendChild(badge);
 
-    g.forEach(naam => {
+    g.forEach((naam, seatIdx) => {
       const d = document.createElement('div');
       d.className = 'tafel';
+      d.dataset.seatId = `groep${idx + 1}-${seatIdx + 1}`;
       d.textContent = naam;
       wrap.appendChild(d);
     });

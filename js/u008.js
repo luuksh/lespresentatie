@@ -1,5 +1,4 @@
 export function u008Indeling(leerlingen) {
-  const shuffled = [...leerlingen].sort(() => Math.random() - 0.5);
   const grid = document.getElementById("plattegrond");
   grid.innerHTML = "";
 
@@ -18,8 +17,13 @@ export function u008Indeling(leerlingen) {
     kolom.style.gap = "2em";
 
     for (let r = 0; r < 4; r++) {
-      const namen = [shuffled[index++] || "-", shuffled[index++] || "-", shuffled[index++] || "-"];
-      kolom.appendChild(maakTafel(namen));
+      const namen = [
+        leerlingen[index++] || "-",
+        leerlingen[index++] || "-",
+        leerlingen[index++] || "-"
+      ];
+      const seatPrefix = `c${c + 1}r${r + 1}`;
+      kolom.appendChild(maakTafel(namen, seatPrefix));
     }
 
     rijContainer.appendChild(kolom);
@@ -32,24 +36,26 @@ export function u008Indeling(leerlingen) {
   rechterKolom.style.gap = "2em";
 
   for (let r = 0; r < 3; r++) {
-    const namen = [shuffled[index++] || "-", shuffled[index++] || "-"];
-    rechterKolom.appendChild(maakTafel(namen));
+    const namen = [leerlingen[index++] || "-", leerlingen[index++] || "-"];
+    const seatPrefix = `c3r${r + 1}`;
+    rechterKolom.appendChild(maakTafel(namen, seatPrefix));
   }
 
   rijContainer.appendChild(rechterKolom);
   grid.appendChild(rijContainer);
 }
 
-function maakTafel(namen) {
+function maakTafel(namen, seatPrefix) {
   const tafelContainer = document.createElement("div");
   tafelContainer.className = "duotafel fade-in";
 
   const tafels = document.createElement("div");
   tafels.className = "tafels";
 
-  namen.forEach(naam => {
+  namen.forEach((naam, idx) => {
     const tafel = document.createElement("div");
     tafel.className = "tafel";
+    tafel.dataset.seatId = `${seatPrefix}s${idx + 1}`;
     tafel.textContent = naam;
     tafels.appendChild(tafel);
   });

@@ -22,9 +22,10 @@ export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
     badge.textContent = String(idx + 1);
     groep.appendChild(badge);
 
-    g.forEach(naam => {
+    g.forEach((naam, seatIdx) => {
       const kaart = document.createElement("div");
       kaart.className = "tafel";
+      kaart.dataset.seatId = `groep${idx + 1}-${seatIdx + 1}`;
       kaart.textContent = naam;
       groep.appendChild(kaart);
     });
