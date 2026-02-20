@@ -6,19 +6,18 @@
   <title>Klas Timer</title>
   <style>
     :root {
-      --bg-1: #081226;
-      --bg-2: #0e1c34;
-      --panel: #0f223f;
-      --panel-soft: #132b4f;
-      --line: rgba(183, 209, 246, 0.24);
-      --text: #e8f1ff;
-      --muted: #aac0e3;
-      --accent: #4ec5ff;
-      --accent-2: #2999ff;
-      --ok: #39d98a;
-      --warn: #ffb954;
-      --danger: #ff6e6e;
-      --ring-track: rgba(180, 209, 255, 0.2);
+      --bg-1: #0f1d35;
+      --bg-2: #172b49;
+      --card: #1f365a;
+      --line: rgba(190, 212, 245, 0.28);
+      --text: #edf4ff;
+      --muted: #bdd0ee;
+      --accent: #64c5ff;
+      --accent-deep: #2b95f5;
+      --good: #39d78b;
+      --warn: #f5c15b;
+      --danger: #ff7171;
+      --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -27,30 +26,31 @@
     body {
       margin: 0;
       padding: 10px;
-      background:
-        radial-gradient(560px 280px at 20% 0%, #14335f 0%, transparent 65%),
-        linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+      font-family: var(--font-ui);
       color: var(--text);
-      font: 14px/1.35 "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(380px 220px at 20% 8%, rgba(71, 132, 218, 0.26), transparent 64%),
+        linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .timer {
-      width: min(320px, 100%);
-      background: linear-gradient(180deg, rgba(18, 40, 73, 0.96), rgba(11, 27, 51, 0.96));
+      width: min(360px, 100%);
+      border-radius: 20px;
       border: 1px solid var(--line);
-      border-radius: 16px;
+      background:
+        linear-gradient(180deg, rgba(43, 70, 111, 0.94), rgba(25, 43, 73, 0.94));
       box-shadow:
-        0 10px 24px rgba(4, 12, 28, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        0 14px 28px rgba(4, 12, 26, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
       padding: 12px;
       display: grid;
       gap: 10px;
     }
 
-    .top {
+    .head {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -59,76 +59,133 @@
 
     .title {
       margin: 0;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 900;
       letter-spacing: 0.01em;
-      font-weight: 800;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
 
-    .hotkeys {
-      font-size: 11px;
-      color: var(--muted);
-      border: 1px solid rgba(190, 214, 247, 0.25);
+    .kbd {
+      border: 1px solid rgba(190, 212, 245, 0.35);
       border-radius: 999px;
       padding: 3px 8px;
+      font-size: 11px;
+      color: var(--muted);
       white-space: nowrap;
     }
 
-    .dial {
-      width: 188px;
-      aspect-ratio: 1 / 1;
-      margin: 2px auto;
-      border-radius: 50%;
-      position: relative;
-      background: conic-gradient(var(--accent) calc(var(--pct, 0) * 1%), var(--ring-track) 0);
-      box-shadow:
-        0 0 0 1px rgba(195, 218, 252, 0.2) inset,
-        0 10px 22px rgba(6, 18, 39, 0.42);
-    }
-
-    .dial::after {
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 30%, #0f2443 0%, #0b1a31 72%);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.06),
-        inset 0 -8px 18px rgba(3, 10, 24, 0.46);
-    }
-
-    .digits {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
+    .clock-wrap {
       display: grid;
       place-items: center;
+      padding: 2px 0;
+    }
+
+    .clock {
+      position: relative;
+      width: 220px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 8px solid rgba(192, 215, 248, 0.28);
+      background:
+        radial-gradient(circle at 50% 35%, #203e67 0%, #132844 62%, #0f1f36 100%);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -14px 24px rgba(5, 12, 22, 0.45),
+        0 14px 24px rgba(7, 16, 31, 0.4);
+      overflow: hidden;
+    }
+
+    .tick {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 10px;
+      width: 3px;
+      height: 10px;
+      border-radius: 2px;
+      background: rgba(213, 227, 248, 0.55);
+      transform-origin: 50% calc(110px - 10px);
+    }
+
+    .tick.big {
+      height: 14px;
+      background: rgba(235, 244, 255, 0.78);
+    }
+
+    .progress {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(var(--accent) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.12) 0);
+      mix-blend-mode: screen;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .hand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 5px;
+      height: 78px;
+      border-radius: 5px;
+      background: linear-gradient(180deg, #b5ebff 0%, #45afff 80%);
+      transform-origin: 50% 88%;
+      transform: translate(-50%, -88%) rotate(var(--angle, 0deg));
+      box-shadow: 0 0 10px rgba(89, 191, 255, 0.32);
+      z-index: 2;
+    }
+
+    .hand::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #dff5ff;
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px rgba(118, 206, 255, 0.48);
+    }
+
+    .digital {
+      position: absolute;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%);
+      width: 150px;
+      border-radius: 10px;
+      border: 1px solid rgba(197, 218, 246, 0.26);
+      background: rgba(8, 20, 36, 0.42);
       text-align: center;
+      padding: 6px 8px 7px;
+      z-index: 3;
     }
 
     .time {
-      font-size: 52px;
+      font-size: 40px;
+      font-weight: 900;
       line-height: 1;
-      letter-spacing: 0.02em;
-      font-weight: 850;
       font-variant-numeric: tabular-nums;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      letter-spacing: 0.02em;
     }
 
     .state {
-      margin-top: 4px;
+      margin-top: 3px;
       font-size: 12px;
       color: var(--muted);
-      font-weight: 650;
+      font-weight: 700;
     }
 
     .panel {
-      border: 1px solid rgba(186, 212, 250, 0.2);
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(31, 58, 99, 0.42), rgba(22, 43, 79, 0.4));
-      padding: 9px;
+      border: 1px solid rgba(186, 210, 246, 0.24);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(26, 48, 82, 0.55), rgba(20, 37, 66, 0.5));
+      padding: 10px;
       display: grid;
       gap: 8px;
     }
@@ -138,14 +195,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 6px;
     }
-
-    .row {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .row.stretch > * { flex: 1; }
 
     .set {
       display: grid;
@@ -157,24 +206,22 @@
     .set label {
       font-size: 11px;
       color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 0.03em;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 800;
     }
 
     .set span {
-      color: var(--muted);
-      font-size: 14px;
       text-align: center;
-      font-weight: 700;
+      color: var(--muted);
+      font-weight: 800;
     }
 
     input[type="number"] {
-      width: 100%;
-      height: 34px;
+      height: 36px;
       border-radius: 10px;
-      border: 1px solid rgba(185, 212, 249, 0.28);
-      background: rgba(8, 20, 39, 0.45);
+      border: 1px solid rgba(186, 210, 246, 0.3);
+      background: rgba(8, 18, 33, 0.48);
       color: var(--text);
       text-align: center;
       font-size: 15px;
@@ -185,79 +232,94 @@
 
     input[type="number"]:focus {
       outline: none;
-      border-color: rgba(78, 197, 255, 0.78);
-      box-shadow: 0 0 0 2px rgba(78, 197, 255, 0.22);
+      border-color: rgba(100, 197, 255, 0.8);
+      box-shadow: 0 0 0 2px rgba(100, 197, 255, 0.22);
     }
 
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .row > * { flex: 1; }
+
     .btn {
-      height: 34px;
-      border: 1px solid rgba(186, 212, 250, 0.24);
+      height: 36px;
+      border: 1px solid rgba(186, 210, 246, 0.26);
       border-radius: 10px;
       color: var(--text);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 0.01em;
       cursor: pointer;
-      transition: transform 0.08s ease, border-color 0.14s ease, filter 0.16s ease;
+      transition: transform 0.08s ease, border-color 0.14s ease, filter 0.15s ease;
     }
 
-    .btn:hover { border-color: rgba(194, 221, 255, 0.45); }
+    .btn:hover { border-color: rgba(201, 224, 255, 0.52); }
     .btn:active { transform: translateY(1px); }
 
     .btn.primary {
-      color: #072140;
+      color: #06223f;
       border-color: transparent;
-      background: linear-gradient(180deg, var(--accent), var(--accent-2));
-      box-shadow: 0 8px 18px rgba(41, 153, 255, 0.26);
+      background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+      box-shadow: 0 8px 18px rgba(43, 149, 245, 0.28);
     }
 
     .btn.warn {
-      color: #3f2900;
+      color: #3d2a00;
       border-color: transparent;
-      background: linear-gradient(180deg, #ffd9a2, #ffb650);
+      background: linear-gradient(180deg, #ffd9a0, var(--warn));
     }
 
-    .btn.neutral {
-      background: linear-gradient(180deg, rgba(192, 215, 249, 0.16), rgba(192, 215, 249, 0.08));
+    .btn.ghost {
+      background: linear-gradient(180deg, rgba(196, 216, 247, 0.16), rgba(196, 216, 247, 0.08));
     }
 
-    .dial.complete {
-      animation: pulse 1s ease-in-out infinite;
+    .clock.done {
+      animation: glow 0.9s ease-in-out infinite;
+      border-color: rgba(255, 154, 154, 0.56);
       box-shadow:
-        0 0 0 6px rgba(255, 110, 110, 0.18),
-        0 0 38px rgba(255, 110, 110, 0.33);
+        0 0 0 5px rgba(255, 113, 113, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -14px 24px rgba(5, 12, 22, 0.45),
+        0 14px 24px rgba(7, 16, 31, 0.4);
     }
 
-    @keyframes pulse {
+    @keyframes glow {
       0% { transform: scale(1); }
-      50% { transform: scale(1.02); }
+      50% { transform: scale(1.015); }
       100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <div class="timer" role="timer" aria-live="polite">
-    <div class="top">
-      <h1 class="title">⏱ Klas-timer</h1>
-      <div class="hotkeys">spatie: start/pauze · R: reset</div>
+    <div class="head">
+      <h1 class="title">🕒 Kloktimer</h1>
+      <div class="kbd">spatie start/pauze · R reset</div>
     </div>
 
-    <div class="dial" id="ring" aria-label="Voortgang">
-      <div class="digits">
-        <div class="time" id="time">05:00</div>
-        <div class="state" id="state">Gepauzeerd</div>
+    <div class="clock-wrap">
+      <div class="clock" id="clock" aria-label="Aftelklok">
+        <div class="progress" id="ring"></div>
+        <div class="hand" id="hand"></div>
+        <div class="digital">
+          <div class="time" id="time">05:00</div>
+          <div class="state" id="state">Gepauzeerd</div>
+        </div>
       </div>
     </div>
 
     <div class="panel" aria-label="Timerbediening">
       <div class="quick">
-        <button class="btn neutral" data-pres="60">+1m</button>
-        <button class="btn neutral" data-pres="180">+3m</button>
-        <button class="btn neutral" data-pres="300">+5m</button>
-        <button class="btn neutral" data-pres="600">+10m</button>
-        <button class="btn neutral" data-pres="30">+30s</button>
-        <button class="btn neutral" data-pres="-30">−30s</button>
+        <button class="btn ghost" data-pres="60">+1m</button>
+        <button class="btn ghost" data-pres="180">+3m</button>
+        <button class="btn ghost" data-pres="300">+5m</button>
+        <button class="btn ghost" data-pres="600">+10m</button>
+        <button class="btn ghost" data-pres="30">+30s</button>
+        <button class="btn ghost" data-pres="-30">−30s</button>
       </div>
 
       <div class="set">
@@ -268,7 +330,7 @@
         <button class="btn warn" id="apply">Zet</button>
       </div>
 
-      <div class="row stretch">
+      <div class="row">
         <button class="btn primary" id="startPause">Start</button>
         <button class="btn" id="reset">Reset</button>
       </div>
@@ -284,6 +346,8 @@
     const timeEl = document.getElementById('time');
     const stateEl = document.getElementById('state');
     const ringEl = document.getElementById('ring');
+    const handEl = document.getElementById('hand');
+    const clockEl = document.getElementById('clock');
     const startBtn = document.getElementById('startPause');
     const resetBtn = document.getElementById('reset');
     const applyBtn = document.getElementById('apply');
@@ -314,10 +378,13 @@
       }
     }
 
-    function updateRing() {
-      const pct = total > 0 ? (total - remaining) / total : 0;
-      ringEl.style.setProperty('--pct', (pct * 100).toFixed(4));
-      ringEl.classList.toggle('complete', remaining === 0);
+    function updateClock() {
+      const done = total > 0 ? (total - remaining) / total : 0;
+      ringEl.style.setProperty('--pct', (done * 100).toFixed(4));
+
+      const angle = done * 360;
+      handEl.style.setProperty('--angle', `${angle}deg`);
+      clockEl.classList.toggle('done', remaining === 0);
     }
 
     function setFromInputs() {
@@ -329,7 +396,7 @@
       clearInterval(intervalId);
       startBtn.textContent = 'Start';
       updateDigits();
-      updateRing();
+      updateClock();
     }
 
     function applyPreset(delta) {
@@ -338,7 +405,7 @@
       if (!running) total = next;
       syncInputsFrom(!running ? total : remaining);
       updateDigits();
-      updateRing();
+      updateClock();
     }
 
     function tick() {
@@ -349,14 +416,14 @@
         running = false;
         startBtn.textContent = 'Start';
         updateDigits();
-        updateRing();
+        updateClock();
         if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
         return;
       }
 
       remaining -= 1;
       updateDigits();
-      updateRing();
+      updateClock();
     }
 
     function start() {
@@ -384,7 +451,7 @@
       startBtn.textContent = 'Start';
       syncInputsFrom(total);
       updateDigits();
-      updateRing();
+      updateClock();
     }
 
     startBtn.addEventListener('click', () => (running ? pause() : start()));
@@ -407,9 +474,19 @@
       }
     });
 
+    function drawTicks() {
+      for (let i = 0; i < 60; i++) {
+        const tick = document.createElement('div');
+        tick.className = `tick${i % 5 === 0 ? ' big' : ''}`;
+        tick.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
+        clockEl.appendChild(tick);
+      }
+    }
+
+    drawTicks();
     syncInputsFrom(total);
     updateDigits();
-    updateRing();
+    updateClock();
   </script>
 </body>
 </html>

@@ -6,95 +6,87 @@
   <title>Opdracht</title>
   <style>
     :root {
-      --accent: #1f5cc8;
-      --accent-deep: #143f8f;
-      --ink-900: #112341;
-      --ink-700: #3f5577;
-      --line: #c9d8ee;
-      --surface: #ffffff;
-      --surface-soft: #f5f9ff;
-      --bar-h: 106px;
+      --board-dark: #1a3d2d;
+      --board-mid: #24543f;
+      --chalk: #f4f8f1;
+      --chalk-soft: #cad8cb;
+      --line: rgba(212, 233, 220, 0.22);
       --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --font-chalk: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       background: transparent;
     }
 
     body {
-      min-height: var(--bar-h);
-      overflow: hidden;
+      min-height: 110px;
+      padding: 2px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-ui);
-      padding: 8px;
     }
 
-    .opdracht-shell {
-      position: relative;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 12px 10px;
-      border-radius: 20px;
-      border: 1px solid rgba(201, 216, 238, 0.95);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 255, 0.96));
-      box-shadow: 0 8px 20px rgba(17, 35, 65, 0.1);
-      backdrop-filter: blur(4px);
+    .board {
+      width: min(1260px, 96vw);
+      border-radius: 12px;
+      border: 2px solid #142f24;
+      background:
+        radial-gradient(1000px 260px at 50% -90px, rgba(147, 206, 170, 0.2), transparent 58%),
+        linear-gradient(180deg, var(--board-mid), var(--board-dark));
+      box-shadow:
+        inset 0 1px 0 rgba(214, 243, 224, 0.16),
+        inset 0 -10px 24px rgba(0, 0, 0, 0.24);
+      padding: 8px 12px;
+      display: grid;
+      gap: 6px;
+      justify-items: center;
     }
 
-    .eyebrow {
+    .label {
       margin: 0;
-      font-size: 12px;
+      color: var(--chalk-soft);
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--ink-700);
       line-height: 1;
     }
 
     .opdracht-menu {
       position: relative;
-      display: inline-block;
+      width: min(1180px, 94vw);
     }
 
     select {
-      display: inline-block;
-      width: 940px;
-      max-width: min(94vw, 1220px);
-      min-width: 560px;
-      white-space: nowrap;
-      font-size: clamp(34px, 3.2vw, 52px);
-      line-height: 1.06;
-      font-weight: 900;
-      padding: 16px 78px 18px 26px;
-      border: 2px solid var(--line);
-      border-radius: 16px;
-      background: var(--surface);
-      color: var(--ink-900);
-      cursor: pointer;
+      width: 100%;
+      height: 72px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(9, 21, 16, 0.22);
+      color: var(--chalk);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
       appearance: none;
       text-align: center;
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 900;
+      line-height: 1.1;
+      padding: 0 70px 0 20px;
+      cursor: pointer;
       box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.85),
-        0 5px 14px rgba(17, 35, 65, 0.12);
-      transition: border-color 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    select:hover {
-      border-color: #aec4e7;
+        inset 0 0 0 1px rgba(227, 246, 232, 0.08),
+        0 8px 14px rgba(0, 0, 0, 0.18);
     }
 
     select:focus {
       outline: none;
-      border-color: #7fa5e4;
+      border-color: rgba(222, 246, 227, 0.54);
       box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.9),
-        0 0 0 4px rgba(31, 92, 200, 0.18),
-        0 8px 18px rgba(17, 35, 65, 0.14);
+        inset 0 0 0 1px rgba(227, 246, 232, 0.15),
+        0 0 0 3px rgba(193, 232, 203, 0.2);
     }
 
     .opdracht-menu::after {
@@ -102,49 +94,56 @@
       position: absolute;
       right: 26px;
       top: 50%;
-      width: 14px;
-      height: 14px;
-      border-right: 4px solid var(--accent);
-      border-bottom: 4px solid var(--accent);
-      transform: translateY(-62%) rotate(45deg);
+      width: 13px;
+      height: 13px;
+      border-right: 3px solid #dbe9de;
+      border-bottom: 3px solid #dbe9de;
+      transform: translateY(-65%) rotate(45deg);
       pointer-events: none;
+      opacity: 0.9;
+    }
+
+    option {
+      color: #10271d;
+      background: #eff6f1;
+      font-size: 18px;
     }
 
     @media (max-width: 980px) {
       body {
-        min-height: 94px;
-        padding: 4px;
+        min-height: 92px;
       }
 
-      .opdracht-shell {
+      .board {
+        width: min(98vw, 1260px);
+        padding: 7px 8px;
+      }
+
+      .label {
+        font-size: 10px;
+      }
+
+      .opdracht-menu {
         width: 100%;
       }
 
-      .eyebrow {
-        font-size: 11px;
-      }
-
       select {
-        width: min(96vw, 940px);
-        min-width: 0;
-        font-size: clamp(22px, 5vw, 34px);
-        padding: 12px 56px 13px 16px;
-        border-radius: 14px;
+        height: 56px;
+        font-size: clamp(20px, 5vw, 30px);
+        padding: 0 52px 0 14px;
       }
 
       .opdracht-menu::after {
-        right: 18px;
-        width: 11px;
-        height: 11px;
-        border-right-width: 3px;
-        border-bottom-width: 3px;
+        right: 16px;
+        width: 10px;
+        height: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <section class="opdracht-shell" role="region" aria-label="Lesopdracht">
-    <p class="eyebrow">Huidige opdracht</p>
+  <section class="board" role="region" aria-label="Lesopdracht op schoolbord">
+    <p class="label">Opdracht op het bord</p>
 
     <div class="opdracht-menu">
       <select id="opdrachtSelect" aria-label="Kies een opdracht">
@@ -160,7 +159,7 @@
   <script>
     const select = document.getElementById('opdrachtSelect');
 
-    function resizeToLongestOption() {
+    function fitToLongest() {
       const probe = document.createElement('span');
       probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:-9999px;';
       document.body.appendChild(probe);
@@ -172,21 +171,19 @@
       for (const option of select.options) {
         if (option.text.length > longest.length) longest = option.text;
       }
-
       probe.textContent = longest;
 
-      const chromePadding = 110;
-      const desired = probe.offsetWidth + chromePadding;
-      const capped = Math.min(desired, Math.floor(window.innerWidth * 0.94));
-      const floor = Math.min(560, Math.floor(window.innerWidth * 0.9));
-      select.style.width = Math.max(floor, capped) + 'px';
+      const menu = document.querySelector('.opdracht-menu');
+      const available = menu.clientWidth;
+      const need = probe.offsetWidth + 120;
+      select.style.width = Math.min(available, need) + 'px';
 
       probe.remove();
     }
 
-    resizeToLongestOption();
-    window.addEventListener('resize', resizeToLongestOption);
-    select.addEventListener('change', resizeToLongestOption);
+    fitToLongest();
+    window.addEventListener('resize', fitToLongest);
+    select.addEventListener('change', fitToLongest);
   </script>
 </body>
 </html>
