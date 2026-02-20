@@ -4,6 +4,7 @@ import { initPresetUI } from './seating-presets.js';
 const modules = {
   h216:               () => import('./h216.js').then(m => m.h216Indeling),
   u008:               () => import('./u008.js').then(m => m.u008Indeling),
+  drievierdrie:       () => import('./drievierdrie.js').then(m => m.drieVierDrieIndeling),
   groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
   drietallen:         () => import('./drietallen.js').then(m => m.drietallenIndeling),
   vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
@@ -45,7 +46,7 @@ async function laadLeerlingen(klasnaam = "G1D") {
  * Laadt dynamisch de juiste indelingsfunctie en tekent de plattegrond.
  * Standaard: leerlingen worden willekeurig gezet.
  * Alleen bij het handmatig Laden van een preset (via applyArrangement) wordt niet gerandomized.
- * @param {"h216"|"u008"|"groepjes"|"vijftallen"|"presentatievolgorde"} type
+ * @param {"h216"|"u008"|"drievierdrie"|"groepjes"|"vijftallen"|"presentatievolgorde"} type
  * @param {string} klasnaam
  */
 export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
@@ -189,7 +190,7 @@ async function applyArrangement(payload) {
     return;
   }
 
-  // Tafels invullen (h216/u008/groepjes/vijftallen)
+  // Tafels invullen (h216/u008/drievierdrie/groepjes/vijftallen)
   const seatsEls = Array.from(document.querySelectorAll('#plattegrond .tafel'));
   const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
   const byId = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));

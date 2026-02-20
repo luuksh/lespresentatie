@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const kleuren = {
       h216: "#007bff",
       u008: "#28a745",
+      drievierdrie: "#0e9aa7",
       groepjes: "#e83e8c",
       drietallen: "#ff9800",
       vijftallen: "#9b59b6"
@@ -79,6 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const achtergronden = {
       h216: "#eef2f7",
       u008: "#eaf7ef",
+      drievierdrie: "#e7f8fa",
       groepjes: "#fdf2f7",
       drietallen: "#fff5e6",
       vijftallen: "#f3ecfb"
