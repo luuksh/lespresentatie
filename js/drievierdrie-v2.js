@@ -10,7 +10,7 @@ export function drieVierDrieIndeling(leerlingen) {
     const rijElement = document.createElement('div');
     rijElement.className = 'tafelrij';
     rijElement.style.flexWrap = 'nowrap';
-    rijElement.style.gap = '18px';
+    rijElement.style.gap = '30px';
 
     blokkenPerRij.forEach((aantalTafels, blok) => {
       const blokElement = document.createElement('div');
