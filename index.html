@@ -11,9 +11,18 @@
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
-  <div id="opdrachtMount" class="floating-card opdracht-card">
-    <iframe src="opdracht.html" title="Lesopdracht" id="opdrachtFrame"></iframe>
-  </div>
+  <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
+    <p class="opdracht-label">Opdracht op bord</p>
+    <div class="opdracht-menu">
+      <select id="opdrachtSelect" aria-label="Kies een opdracht">
+        <option>Lees in je leesboek</option>
+        <option>Zoek je plek en pak je spullen</option>
+        <option>Werk aan de opdracht. Klaar? Lees in je leesboek.</option>
+        <option>Overleg in tweetallen</option>
+        <option>Bereid je presentatie voor</option>
+      </select>
+    </div>
+  </section>
 
   <button id="drawerQuickToggle" class="drawer-quick-toggle" type="button" aria-label="Toon of verberg docentpaneel">
     Docentpaneel
@@ -110,9 +119,47 @@
     </div>
   </main>
 
-  <div id="timerDock" class="floating-card timer-card">
-    <iframe src="timer.html" title="Timer" id="timerFrame"></iframe>
-  </div>
+  <aside id="timerDock" class="clock-timer" role="timer" aria-live="polite">
+    <div class="timer-head">
+      <h2 class="timer-title">Kloktimer</h2>
+      <div class="timer-hotkeys">spatie start/pauze · R reset</div>
+    </div>
+
+    <div class="clock-wrap">
+      <div class="clock-face" id="clockFace" aria-label="Aftelklok">
+        <div class="clock-progress" id="clockProgress"></div>
+        <div class="clock-hand" id="clockHand"></div>
+        <div class="clock-digital">
+          <div class="clock-time" id="clockTime">05:00</div>
+          <div class="clock-state" id="clockState">Gepauzeerd</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timer-panel" aria-label="Timerbediening">
+      <div class="timer-quick">
+        <button class="timer-btn ghost" data-pres="60">+1m</button>
+        <button class="timer-btn ghost" data-pres="180">+3m</button>
+        <button class="timer-btn ghost" data-pres="300">+5m</button>
+        <button class="timer-btn ghost" data-pres="600">+10m</button>
+        <button class="timer-btn ghost" data-pres="30">+30s</button>
+        <button class="timer-btn ghost" data-pres="-30">−30s</button>
+      </div>
+
+      <div class="timer-set">
+        <label for="timerMin">Min</label>
+        <input id="timerMin" type="number" min="0" max="999" value="5" aria-label="Minuten" />
+        <span>:</span>
+        <input id="timerSec" type="number" min="0" max="59" value="0" aria-label="Seconden" />
+        <button class="timer-btn warn" id="timerApply">Zet</button>
+      </div>
+
+      <div class="timer-actions">
+        <button class="timer-btn primary" id="timerStartPause">Start</button>
+        <button class="timer-btn" id="timerReset">Reset</button>
+      </div>
+    </div>
+  </aside>
 
   <script>
     (() => {
@@ -441,47 +488,189 @@
   </script>
 
   <script>
-    function autosizeIframe(iframe) {
-      try {
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        if (!doc) return;
+    (() => {
+      const opdrachtSelect = document.getElementById('opdrachtSelect');
+      if (!opdrachtSelect) return;
 
-        const getH = () => {
-          const b = doc.body, e = doc.documentElement;
-          return Math.max(b.scrollHeight, b.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight);
-        };
+      function fitToLongest() {
+        const probe = document.createElement('span');
+        probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:-9999px;';
+        document.body.appendChild(probe);
 
-        const getW = () => {
-          const b = doc.body, e = doc.documentElement;
-          const contentW = Math.max(b.scrollWidth, e.scrollWidth, b.offsetWidth, e.offsetWidth);
-          const viewportCap = Math.floor(window.innerWidth * 0.96);
-          return Math.min(contentW, viewportCap);
-        };
+        const cs = getComputedStyle(opdrachtSelect);
+        probe.style.font = cs.font;
 
-        const set = () => {
-          iframe.style.height = getH() + 'px';
-          iframe.style.width = getW() + 'px';
-          window.fitBoardToViewport?.();
-        };
+        let longest = '';
+        for (const option of opdrachtSelect.options) {
+          if (option.text.length > longest.length) longest = option.text;
+        }
 
-        set();
-        const ro = new ResizeObserver(set); ro.observe(doc.documentElement);
-        const mo = new MutationObserver(set); mo.observe(doc, { childList: true, subtree: true, attributes: true, characterData: true });
-        window.addEventListener('resize', set);
-        iframe._cleanup = () => {
-          ro.disconnect();
-          mo.disconnect();
-          window.removeEventListener('resize', set);
-        };
-      } catch (e) {
-        // same-origin vereist; anders geen autosize mogelijk
+        probe.textContent = longest;
+        const wrap = opdrachtSelect.closest('.opdracht-menu');
+        const available = wrap ? wrap.clientWidth : window.innerWidth * 0.9;
+        const needed = probe.offsetWidth + 120;
+        opdrachtSelect.style.width = `${Math.min(available, needed)}px`;
+        probe.remove();
       }
-    }
 
+      fitToLongest();
+      window.addEventListener('resize', fitToLongest);
+      opdrachtSelect.addEventListener('change', fitToLongest);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      let total = 300;
+      let remaining = total;
+      let running = false;
+      let intervalId = null;
+
+      const clockFace = document.getElementById('clockFace');
+      const progress = document.getElementById('clockProgress');
+      const hand = document.getElementById('clockHand');
+      const timeEl = document.getElementById('clockTime');
+      const stateEl = document.getElementById('clockState');
+      const startBtn = document.getElementById('timerStartPause');
+      const resetBtn = document.getElementById('timerReset');
+      const applyBtn = document.getElementById('timerApply');
+      const minIn = document.getElementById('timerMin');
+      const secIn = document.getElementById('timerSec');
+
+      if (!clockFace || !progress || !hand || !timeEl || !stateEl) return;
+
+      const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+      function fmt(seconds) {
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      }
+
+      function syncInputsFrom(value) {
+        const m = Math.floor(value / 60);
+        const s = value % 60;
+        if (minIn) minIn.value = String(m);
+        if (secIn) secIn.value = String(s);
+      }
+
+      function updateDigits() {
+        timeEl.textContent = fmt(remaining);
+        if (remaining === 0 && !running) {
+          stateEl.textContent = 'Klaar';
+        } else {
+          stateEl.textContent = running ? 'Bezig' : 'Gepauzeerd';
+        }
+      }
+
+      function updateClock() {
+        const done = total > 0 ? (total - remaining) / total : 0;
+        progress.style.setProperty('--pct', (done * 100).toFixed(4));
+        hand.style.setProperty('--angle', `${(done * 360).toFixed(4)}deg`);
+        clockFace.classList.toggle('done', remaining === 0);
+      }
+
+      function setFromInputs() {
+        const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 999);
+        const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
+        total = m * 60 + s;
+        remaining = total;
+        running = false;
+        clearInterval(intervalId);
+        if (startBtn) startBtn.textContent = 'Start';
+        updateDigits();
+        updateClock();
+      }
+
+      function applyPreset(delta) {
+        const next = clamp(remaining + delta, 0, 999 * 60 + 59);
+        remaining = next;
+        if (!running) total = next;
+        syncInputsFrom(!running ? total : remaining);
+        updateDigits();
+        updateClock();
+      }
+
+      function tick() {
+        if (!running) return;
+        if (remaining <= 0) {
+          clearInterval(intervalId);
+          running = false;
+          if (startBtn) startBtn.textContent = 'Start';
+          updateDigits();
+          updateClock();
+          if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
+          return;
+        }
+        remaining -= 1;
+        updateDigits();
+        updateClock();
+      }
+
+      function start() {
+        if (remaining <= 0 && total > 0) remaining = total;
+        if (remaining <= 0) return;
+        running = true;
+        if (startBtn) startBtn.textContent = 'Pauze';
+        clearInterval(intervalId);
+        intervalId = setInterval(tick, 1000);
+        updateDigits();
+      }
+
+      function pause() {
+        running = false;
+        clearInterval(intervalId);
+        if (startBtn) startBtn.textContent = 'Start';
+        updateDigits();
+      }
+
+      function reset() {
+        running = false;
+        clearInterval(intervalId);
+        remaining = total;
+        if (startBtn) startBtn.textContent = 'Start';
+        syncInputsFrom(total);
+        updateDigits();
+        updateClock();
+      }
+
+      startBtn?.addEventListener('click', () => (running ? pause() : start()));
+      resetBtn?.addEventListener('click', reset);
+      applyBtn?.addEventListener('click', setFromInputs);
+
+      document.querySelectorAll('#timerDock [data-pres]').forEach(btn => {
+        btn.addEventListener('click', () => applyPreset(parseInt(btn.dataset.pres, 10)));
+      });
+
+      document.addEventListener('keydown', (e) => {
+        const activeTag = document.activeElement?.tagName;
+        if (activeTag === 'INPUT' || document.activeElement?.isContentEditable) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          running ? pause() : start();
+        }
+        if (e.key.toLowerCase() === 'r') {
+          e.preventDefault();
+          reset();
+        }
+      });
+
+      for (let i = 0; i < 60; i++) {
+        const tickEl = document.createElement('div');
+        tickEl.className = `clock-tick${i % 5 === 0 ? ' big' : ''}`;
+        tickEl.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
+        clockFace.appendChild(tickEl);
+      }
+
+      syncInputsFrom(total);
+      updateDigits();
+      updateClock();
+    })();
+  </script>
+
+  <script>
     window.addEventListener('load', () => {
-      autosizeIframe(document.getElementById('opdrachtFrame'));
-      autosizeIframe(document.getElementById('timerFrame'));
-      setTimeout(() => window.fitBoardToViewport?.(), 120);
+      setTimeout(() => window.fitBoardToViewport?.(), 100);
     });
   </script>
 </body>
