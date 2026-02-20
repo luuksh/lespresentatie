@@ -64,8 +64,12 @@ body {
 }
 
 #opdrachtMount {
-  margin: 0 auto 6px;
+  margin: 0 auto 8px;
   width: fit-content;
+  border-radius: 22px;
+  border: 1px solid #c8d7ec;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 22px rgba(17, 35, 65, 0.1);
 }
 
 #opdrachtMount iframe {
@@ -74,6 +78,7 @@ body {
   background: transparent;
   width: auto;
   max-width: min(1300px, calc(100vw - 90px));
+  border-radius: 20px;
 }
 
 #timerDock {
