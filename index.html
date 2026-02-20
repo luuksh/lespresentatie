@@ -29,19 +29,10 @@
         <div class="controls-row">
           <button id="save-absenties-btn" type="button" class="btn btn-primary">Opslaan absenties</button>
           <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
-        </div>
-
-        <div class="controls-row compact-actions">
-          <button id="btnShowcaseModeDrawer" type="button" class="btn btn-secondary">Showcase-modus</button>
           <button id="btnPrintLayoutDrawer" type="button" class="btn btn-secondary">Print / PDF</button>
         </div>
 
         <div id="save-status" class="status-text"></div>
-      </section>
-
-      <section class="card control-card">
-        <h2 class="panel-title">Weergave op bord</h2>
-        <p class="panel-help">Showcase verbergt bediening en toont alleen de leerlingweergave. Druk op <strong>Esc</strong> om terug te gaan.</p>
       </section>
 
       <section class="card control-card">
@@ -73,67 +64,66 @@
     </div>
   </aside>
 
-  <main class="layout">
-    <section class="plattegrond-frame">
-      <div class="print-meta" id="printMeta"></div>
+  <main class="layout" id="layoutRoot">
+    <div class="board-scaler" id="boardScaler">
+      <section class="plattegrond-frame" id="plattegrondFrame">
+        <div class="print-meta" id="printMeta"></div>
 
-      <div class="topbar" aria-label="Lesinstellingen">
-        <div class="controls-row controls-row-main">
-          <div class="field">
-            <span class="label">Indeling</span>
-            <select id="indelingSelect">
-              <option value="h216">H216</option>
-              <option value="u008">U008</option>
-              <option value="drietallen">Drietallen</option>
-              <option value="groepjes">Viertallen</option>
-              <option value="vijftallen">Vijftallen</option>
-              <option value="presentatievolgorde">Volgorde</option>
-            </select>
-          </div>
+        <div class="topbar" aria-label="Lesinstellingen">
+          <div class="controls-row controls-row-main">
+            <div class="field">
+              <span class="label">Indeling</span>
+              <select id="indelingSelect">
+                <option value="h216">H216</option>
+                <option value="u008">U008</option>
+                <option value="drietallen">Drietallen</option>
+                <option value="groepjes">Viertallen</option>
+                <option value="vijftallen">Vijftallen</option>
+                <option value="presentatievolgorde">Volgorde</option>
+              </select>
+            </div>
 
-          <div class="field">
-            <span class="label">Klas</span>
-            <select id="klasSelect"></select>
-          </div>
+            <div class="field">
+              <span class="label">Klas</span>
+              <select id="klasSelect"></select>
+            </div>
 
-          <div class="lesson-status in-topbar" id="lessonStatusBar">
-            <span class="status-chip" id="currentClassLabel">Klas: -</span>
-            <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
-          </div>
+            <div class="lesson-status in-topbar" id="lessonStatusBar">
+              <span class="status-chip" id="currentClassLabel">Klas: -</span>
+              <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
+            </div>
 
-          <div class="controls-row quick-board-actions">
-            <button id="btnShowcaseMode" type="button" class="btn btn-secondary">Showcase</button>
-            <button id="btnPrintLayout" type="button" class="btn btn-secondary">Print / PDF</button>
+            <div class="controls-row quick-board-actions">
+              <button id="btnPrintLayout" type="button" class="btn btn-secondary">Print / PDF</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="grid-wrapper">
-        <div class="bureau-rij">
-          <div class="leraar-bureau">Bureau leraar</div>
+        <div class="grid-wrapper">
+          <div class="bureau-rij">
+            <div class="leraar-bureau">Bureau leraar</div>
+          </div>
+          <div class="grid" id="plattegrond"></div>
         </div>
-        <div class="grid" id="plattegrond"></div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <div id="timerDock" class="floating-card timer-card">
     <iframe src="timer.html" title="Timer" id="timerFrame"></iframe>
   </div>
 
-  <div id="showcaseHint" class="showcase-hint" aria-live="polite">Showcase-modus actief · druk op Esc om terug te gaan</div>
-
   <script>
     (() => {
       const GRID_ID = 'plattegrond';
       const CARD_SELECTOR = '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
-      const roomSel  = document.getElementById('indelingSelect');
+      const roomSel = document.getElementById('indelingSelect');
       const classSel = document.getElementById('klasSelect');
 
       function clearUI() {
-        document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`)
-          .forEach(el => el.classList.remove('is-absent'));
+        document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`).forEach(el => el.classList.remove('is-absent'));
       }
+
       function attachDelegatedClick() {
         const grid = document.getElementById(GRID_ID);
         if (!grid) return;
@@ -143,21 +133,32 @@
           card.classList.toggle('is-absent');
         });
       }
+
       function watchGridChanges() {
         const grid = document.getElementById(GRID_ID);
         if (!grid) return;
         const mo = new MutationObserver(() => clearUI());
         mo.observe(grid, { childList: true, subtree: true });
       }
-      ['change','click','input'].forEach(evt => {
+
+      ['change', 'click', 'input'].forEach(evt => {
         roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
         classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
       });
+
       window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
-      const init = () => { attachDelegatedClick(); watchGridChanges(); setTimeout(clearUI, 0); };
+
+      const init = () => {
+        attachDelegatedClick();
+        watchGridChanges();
+        setTimeout(clearUI, 0);
+      };
+
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
-      } else { init(); }
+      } else {
+        init();
+      }
     })();
   </script>
 
@@ -167,57 +168,73 @@
       const CARD = '.tafel';
       const klasSel = document.getElementById('klasSelect');
       const statusEl = document.getElementById('save-status');
-      const key = `absenties_${new Date().toISOString().slice(0,10)}`;
+      const key = `absenties_${new Date().toISOString().slice(0, 10)}`;
 
-      function nowNL(){
-        return new Intl.DateTimeFormat('nl-NL',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date());
+      function nowNL() {
+        return new Intl.DateTimeFormat('nl-NL', {
+          year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+        }).format(new Date());
       }
-      function getAbsentNames(){
+
+      function getAbsentNames() {
         return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
-          .map(el=>el.innerText.trim()).filter(Boolean);
+          .map(el => el.innerText.trim())
+          .filter(Boolean);
       }
-      function saveSnapshot(){
+
+      function flash(msg) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.style.opacity = '1';
+        clearTimeout(flash.t);
+        flash.t = setTimeout(() => { statusEl.style.opacity = '0'; }, 2600);
+      }
+
+      function saveSnapshot() {
         const klas = klasSel?.value || 'onbekend';
         const names = getAbsentNames();
         let all = [];
         try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+
         const others = all.filter(e => e && e.klas !== klas);
+
         if (names.length === 0) {
           localStorage.setItem(key, JSON.stringify(others));
           flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
           return;
         }
+
         const entry = { klas, datetime: new Date().toISOString(), names };
         others.push(entry);
         localStorage.setItem(key, JSON.stringify(others));
         flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
       }
-      function flash(msg){
-        if(!statusEl) return;
-        statusEl.textContent = msg;
-        statusEl.style.opacity = '1';
-        clearTimeout(flash.t);
-        flash.t = setTimeout(() => { statusEl.style.opacity = '0'; }, 2800);
-      }
+
       document.getElementById('save-absenties-btn')?.addEventListener('click', saveSnapshot);
     })();
   </script>
 
   <script>
     (() => {
-      const container = document.querySelector('.plattegrond-frame');
+      const container = document.getElementById('plattegrondFrame');
       const btn = document.getElementById('toggle-view-btn');
       const LS_KEY = 'mirror_view_enabled';
       const indelingSel = document.getElementById('indelingSelect');
       const klasSel = document.getElementById('klasSelect');
 
-      function setMirror(on){
+      function setMirror(on) {
         container?.classList.toggle('mirror', on);
         try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
         if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
       }
-      function applyFromStorage(){ setMirror(localStorage.getItem(LS_KEY) === '1'); }
-      function toggleMirror(){ setMirror(!container?.classList.contains('mirror')); }
+
+      function applyFromStorage() {
+        setMirror(localStorage.getItem(LS_KEY) === '1');
+      }
+
+      function toggleMirror() {
+        setMirror(!container?.classList.contains('mirror'));
+      }
 
       btn?.addEventListener('click', toggleMirror);
       indelingSel?.addEventListener('change', () => setMirror(false));
@@ -225,17 +242,16 @@
 
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', applyFromStorage);
-      } else { applyFromStorage(); }
+      } else {
+        applyFromStorage();
+      }
     })();
   </script>
 
   <script>
     (() => {
-      const btnHeaderShowcase = document.getElementById('btnShowcaseMode');
-      const btnDrawerShowcase = document.getElementById('btnShowcaseModeDrawer');
       const btnHeaderPrint = document.getElementById('btnPrintLayout');
       const btnDrawerPrint = document.getElementById('btnPrintLayoutDrawer');
-      const hint = document.getElementById('showcaseHint');
       const body = document.body;
       const indelingSel = document.getElementById('indelingSelect');
       const klasSel = document.getElementById('klasSelect');
@@ -243,6 +259,10 @@
       const quickToggle = document.getElementById('drawerQuickToggle');
       const currentClassLabel = document.getElementById('currentClassLabel');
       const currentLayoutLabel = document.getElementById('currentLayoutLabel');
+      const boardScaler = document.getElementById('boardScaler');
+      const boardFrame = document.getElementById('plattegrondFrame');
+      const layoutRoot = document.getElementById('layoutRoot');
+      const grid = document.getElementById('plattegrond');
 
       function nowNL() {
         return new Intl.DateTimeFormat('nl-NL', {
@@ -260,35 +280,26 @@
         printMeta.textContent = `Klassenplattegrond · ${klas} · ${indeling} · ${nowNL()}`;
       }
 
-      async function enterFullscreen() {
-        if (document.fullscreenElement) return;
-        try { await document.documentElement.requestFullscreen(); } catch {}
-      }
+      function fitBoardToViewport() {
+        if (!boardScaler || !boardFrame || !layoutRoot) return;
 
-      async function exitFullscreen() {
-        if (!document.fullscreenElement) return;
-        try { await document.exitFullscreen(); } catch {}
-      }
+        boardFrame.style.transform = 'scale(1)';
+        boardScaler.style.height = 'auto';
 
-      async function setShowcase(on) {
-        body.classList.toggle('showcase-mode', on);
-        hint?.classList.toggle('visible', on);
+        const naturalW = boardFrame.scrollWidth;
+        const naturalH = boardFrame.scrollHeight;
 
-        const label = on ? 'Stop showcase' : 'Showcase';
-        if (btnHeaderShowcase) btnHeaderShowcase.textContent = label;
-        if (btnDrawerShowcase) btnDrawerShowcase.textContent = on ? 'Stop showcase-modus' : 'Showcase-modus';
+        const top = boardScaler.getBoundingClientRect().top;
+        const maxH = Math.max(220, window.innerHeight - top - 8);
+        const maxW = Math.max(320, layoutRoot.clientWidth - 2);
 
-        if (on) {
-          updateBoardLabels();
-          await enterFullscreen();
-        } else {
-          await exitFullscreen();
-        }
-      }
+        const scale = Math.min(1, maxW / naturalW, maxH / naturalH);
 
-      function toggleShowcase() {
-        const on = !body.classList.contains('showcase-mode');
-        setShowcase(on);
+        boardFrame.style.transform = `scale(${scale})`;
+        boardFrame.style.transformOrigin = 'top center';
+
+        boardScaler.style.width = `${Math.min(maxW, naturalW * scale)}px`;
+        boardScaler.style.height = `${naturalH * scale}px`;
       }
 
       function runPrint() {
@@ -300,66 +311,74 @@
         body.classList.toggle('drawer-open');
       }
 
-      btnHeaderShowcase?.addEventListener('click', toggleShowcase);
-      btnDrawerShowcase?.addEventListener('click', toggleShowcase);
       btnHeaderPrint?.addEventListener('click', runPrint);
       btnDrawerPrint?.addEventListener('click', runPrint);
       quickToggle?.addEventListener('click', toggleDrawerPin);
 
-      indelingSel?.addEventListener('change', updateBoardLabels);
-      klasSel?.addEventListener('change', updateBoardLabels);
+      indelingSel?.addEventListener('change', () => {
+        updateBoardLabels();
+        setTimeout(fitBoardToViewport, 80);
+      });
+
+      klasSel?.addEventListener('change', () => {
+        updateBoardLabels();
+        setTimeout(fitBoardToViewport, 80);
+      });
+
+      window.addEventListener('resize', fitBoardToViewport);
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && body.classList.contains('showcase-mode')) {
-          setShowcase(false);
-          return;
-        }
-        if ((e.key === 'd' || e.key === 'D') && !body.classList.contains('showcase-mode')) {
+        if ((e.key === 'd' || e.key === 'D')) {
           toggleDrawerPin();
         }
       });
 
-      document.addEventListener('fullscreenchange', () => {
-        if (!document.fullscreenElement && body.classList.contains('showcase-mode')) {
-          body.classList.remove('showcase-mode');
-          hint?.classList.remove('visible');
-          if (btnHeaderShowcase) btnHeaderShowcase.textContent = 'Showcase';
-          if (btnDrawerShowcase) btnDrawerShowcase.textContent = 'Showcase-modus';
-        }
-      });
+      if (grid) {
+        const mo = new MutationObserver(() => setTimeout(fitBoardToViewport, 30));
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+
+      window.fitBoardToViewport = fitBoardToViewport;
 
       updateBoardLabels();
+      setTimeout(fitBoardToViewport, 60);
     })();
   </script>
 
   <script>
-    function autosizeIframe(iframe){
-      try{
+    function autosizeIframe(iframe) {
+      try {
         const doc = iframe.contentDocument || iframe.contentWindow.document;
-        if(!doc) return;
+        if (!doc) return;
 
         const getH = () => {
           const b = doc.body, e = doc.documentElement;
           return Math.max(b.scrollHeight, b.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight);
         };
+
         const getW = () => {
           const b = doc.body, e = doc.documentElement;
           const contentW = Math.max(b.scrollWidth, e.scrollWidth, b.offsetWidth, e.offsetWidth);
-          const viewportCap = Math.floor(window.innerWidth * 0.98);
+          const viewportCap = Math.floor(window.innerWidth * 0.96);
           return Math.min(contentW, viewportCap);
         };
 
         const set = () => {
           iframe.style.height = getH() + 'px';
           iframe.style.width = getW() + 'px';
+          window.fitBoardToViewport?.();
         };
 
         set();
         const ro = new ResizeObserver(set); ro.observe(doc.documentElement);
-        const mo = new MutationObserver(set); mo.observe(doc, {childList:true, subtree:true, attributes:true, characterData:true});
+        const mo = new MutationObserver(set); mo.observe(doc, { childList: true, subtree: true, attributes: true, characterData: true });
         window.addEventListener('resize', set);
-        iframe._cleanup = () => { ro.disconnect(); mo.disconnect(); window.removeEventListener('resize', set); };
-      } catch(e){
+        iframe._cleanup = () => {
+          ro.disconnect();
+          mo.disconnect();
+          window.removeEventListener('resize', set);
+        };
+      } catch (e) {
         // same-origin vereist; anders geen autosize mogelijk
       }
     }
@@ -367,6 +386,7 @@
     window.addEventListener('load', () => {
       autosizeIframe(document.getElementById('opdrachtFrame'));
       autosizeIframe(document.getElementById('timerFrame'));
+      setTimeout(() => window.fitBoardToViewport?.(), 120);
     });
   </script>
 </body>
