@@ -8,10 +8,16 @@ export function drieVierDrieIndeling(leerlingen) {
   for (let rij = 0; rij < 3; rij++) {
     const rijElement = document.createElement('div');
     rijElement.className = 'tafelrij';
+    rijElement.style.flexWrap = 'nowrap';
+    rijElement.style.gap = '18px';
 
     blokkenPerRij.forEach((aantalTafels, blok) => {
       const blokElement = document.createElement('div');
       blokElement.className = 'tafels';
+      blokElement.style.display = 'flex';
+      blokElement.style.flexWrap = 'nowrap';
+      blokElement.style.gap = '6px';
+      blokElement.style.flex = '0 0 auto';
 
       for (let plek = 0; plek < aantalTafels; plek++) {
         const tafel = document.createElement('div');
