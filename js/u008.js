@@ -5,7 +5,7 @@ export function u008Indeling(leerlingen) {
   const rijContainer = document.createElement("div");
   rijContainer.style.display = "flex";
   rijContainer.style.justifyContent = "center";
-  rijContainer.style.gap = "2em";
+  rijContainer.style.gap = "3em";
 
   let index = 0;
 
@@ -14,7 +14,7 @@ export function u008Indeling(leerlingen) {
     const kolom = document.createElement("div");
     kolom.style.display = "flex";
     kolom.style.flexDirection = "column";
-    kolom.style.gap = "2em";
+    kolom.style.gap = "2.2em";
 
     for (let r = 0; r < 4; r++) {
       const namen = [
@@ -33,7 +33,7 @@ export function u008Indeling(leerlingen) {
   const rechterKolom = document.createElement("div");
   rechterKolom.style.display = "flex";
   rechterKolom.style.flexDirection = "column";
-  rechterKolom.style.gap = "2em";
+  rechterKolom.style.gap = "2.2em";
 
   for (let r = 0; r < 3; r++) {
     const namen = [leerlingen[index++] || "-", leerlingen[index++] || "-"];
