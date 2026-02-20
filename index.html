@@ -165,6 +165,100 @@
   <script>
     (() => {
       const GRID_ID = 'plattegrond';
+      const SEAT_SELECTOR = '.tafel';
+      let sourceSeat = null;
+
+      function clearDragState(grid) {
+        if (!grid) return;
+        grid.querySelectorAll(`${SEAT_SELECTOR}.drag-source, ${SEAT_SELECTOR}.drag-target`)
+          .forEach(el => el.classList.remove('drag-source', 'drag-target'));
+      }
+
+      function initDraggableSeats() {
+        document.querySelectorAll(`#${GRID_ID} ${SEAT_SELECTOR}`).forEach(el => {
+          el.draggable = true;
+        });
+      }
+
+      function swapSeats(a, b) {
+        if (!a || !b || a === b) return;
+
+        const aText = a.textContent;
+        const bText = b.textContent;
+
+        const aAbsent = a.classList.contains('is-absent');
+        const bAbsent = b.classList.contains('is-absent');
+
+        a.textContent = bText;
+        b.textContent = aText;
+
+        a.classList.toggle('is-absent', bAbsent);
+        b.classList.toggle('is-absent', aAbsent);
+      }
+
+      function initDnD() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+
+        initDraggableSeats();
+
+        grid.addEventListener('dragstart', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat || !grid.contains(seat)) return;
+
+          sourceSeat = seat;
+          seat.classList.add('drag-source');
+
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', seat.dataset.seatId || '');
+        });
+
+        grid.addEventListener('dragover', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat || !sourceSeat || seat === sourceSeat) return;
+
+          e.preventDefault();
+          seat.classList.add('drag-target');
+          e.dataTransfer.dropEffect = 'move';
+        });
+
+        grid.addEventListener('dragleave', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat) return;
+          seat.classList.remove('drag-target');
+        });
+
+        grid.addEventListener('drop', (e) => {
+          const targetSeat = e.target.closest(SEAT_SELECTOR);
+          if (!sourceSeat || !targetSeat || sourceSeat === targetSeat) return;
+
+          e.preventDefault();
+          swapSeats(sourceSeat, targetSeat);
+
+          clearDragState(grid);
+          sourceSeat = null;
+        });
+
+        grid.addEventListener('dragend', () => {
+          clearDragState(grid);
+          sourceSeat = null;
+        });
+
+        const mo = new MutationObserver(() => initDraggableSeats());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDnD);
+      } else {
+        initDnD();
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
       const CARD = '.tafel';
       const klasSel = document.getElementById('klasSelect');
       const statusEl = document.getElementById('save-status');
