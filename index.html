@@ -11,16 +11,16 @@
   <script type="module" src="js/init.js"></script>
 </head>
 <body>
-  <header class="app-header">
-    <div>
+  <header class="app-header" aria-label="Lesinformatie">
+    <div class="app-header-left">
       <p class="eyebrow">Lespresentatie</p>
       <h1>Klassenplattegrond</h1>
-      <p class="subtitle">Visuele, snelle en betrouwbare indeling voor in de klas.</p>
+      <p class="subtitle">Overzicht voor leerlingen. Bediening via docentpaneel links.</p>
     </div>
-    <div class="header-actions">
-      <div class="header-pill">Klik op een leerling om afwezig te markeren</div>
-      <button id="btnShowcaseMode" type="button" class="btn btn-secondary">Showcase-modus</button>
-      <button id="btnPrintLayout" type="button" class="btn btn-secondary">Print / PDF</button>
+
+    <div class="lesson-status" id="lessonStatusBar">
+      <span class="status-chip" id="currentClassLabel">Klas: -</span>
+      <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
     </div>
   </header>
 
@@ -28,18 +28,33 @@
     <iframe src="opdracht.html" title="Lesopdracht" id="opdrachtFrame"></iframe>
   </div>
 
-  <aside class="side-drawer left" aria-label="Bediening">
-    <button class="drawer-handle" aria-label="Open bediening">Bediening</button>
+  <button id="drawerQuickToggle" class="drawer-quick-toggle" type="button" aria-label="Toon of verberg docentpaneel">
+    Docentpaneel
+  </button>
+
+  <aside class="side-drawer left" aria-label="Docentpaneel">
+    <button class="drawer-handle" aria-label="Open docentpaneel">Docent</button>
     <div class="drawer-content">
       <section class="card control-card">
-        <h2 class="panel-title">Sessie</h2>
+        <h2 class="panel-title">Sessiebediening</h2>
+        <p class="panel-help">Deze knoppen zijn voor de docent en niet bedoeld voor leerlingen.</p>
+
         <div class="controls-row">
           <button id="save-absenties-btn" type="button" class="btn btn-primary">Opslaan absenties</button>
           <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
+        </div>
+
+        <div class="controls-row compact-actions">
           <button id="btnShowcaseModeDrawer" type="button" class="btn btn-secondary">Showcase-modus</button>
           <button id="btnPrintLayoutDrawer" type="button" class="btn btn-secondary">Print / PDF</button>
         </div>
+
         <div id="save-status" class="status-text"></div>
+      </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Weergave op bord</h2>
+        <p class="panel-help">Showcase verbergt bediening en toont alleen de leerlingweergave. Druk op <strong>Esc</strong> om terug te gaan.</p>
       </section>
 
       <section class="card control-card">
@@ -74,8 +89,9 @@
   <main class="layout">
     <section class="plattegrond-frame">
       <div class="print-meta" id="printMeta"></div>
-      <div class="topbar">
-        <div class="controls-row">
+
+      <div class="topbar" aria-label="Lesinstellingen">
+        <div class="controls-row controls-row-main">
           <div class="field">
             <span class="label">Indeling</span>
             <select id="indelingSelect">
@@ -91,6 +107,11 @@
           <div class="field">
             <span class="label">Klas</span>
             <select id="klasSelect"></select>
+          </div>
+
+          <div class="controls-row quick-board-actions">
+            <button id="btnShowcaseMode" type="button" class="btn btn-secondary">Showcase</button>
+            <button id="btnPrintLayout" type="button" class="btn btn-secondary">Print / PDF</button>
           </div>
         </div>
       </div>
@@ -196,7 +217,7 @@
       const btn = document.getElementById('toggle-view-btn');
       const LS_KEY = 'mirror_view_enabled';
       const indelingSel = document.getElementById('indelingSelect');
-      const klasSel     = document.getElementById('klasSelect');
+      const klasSel = document.getElementById('klasSelect');
 
       function setMirror(on){
         container?.classList.toggle('mirror', on);
@@ -227,6 +248,9 @@
       const indelingSel = document.getElementById('indelingSelect');
       const klasSel = document.getElementById('klasSelect');
       const printMeta = document.getElementById('printMeta');
+      const quickToggle = document.getElementById('drawerQuickToggle');
+      const currentClassLabel = document.getElementById('currentClassLabel');
+      const currentLayoutLabel = document.getElementById('currentLayoutLabel');
 
       function nowNL() {
         return new Intl.DateTimeFormat('nl-NL', {
@@ -234,9 +258,13 @@
         }).format(new Date());
       }
 
-      function updatePrintMeta() {
-        const indeling = indelingSel?.selectedOptions?.[0]?.textContent?.trim() || 'Onbekende indeling';
-        const klas = klasSel?.selectedOptions?.[0]?.textContent?.trim() || 'Onbekende klas';
+      function updateBoardLabels() {
+        const indeling = indelingSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
+        const klas = klasSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
+
+        if (currentClassLabel) currentClassLabel.textContent = `Klas: ${klas}`;
+        if (currentLayoutLabel) currentLayoutLabel.textContent = `Indeling: ${indeling}`;
+
         printMeta.textContent = `Klassenplattegrond · ${klas} · ${indeling} · ${nowNL()}`;
       }
 
@@ -254,12 +282,12 @@
         body.classList.toggle('showcase-mode', on);
         hint?.classList.toggle('visible', on);
 
-        const label = on ? 'Showcase uit' : 'Showcase-modus';
+        const label = on ? 'Stop showcase' : 'Showcase';
         if (btnHeaderShowcase) btnHeaderShowcase.textContent = label;
-        if (btnDrawerShowcase) btnDrawerShowcase.textContent = label;
+        if (btnDrawerShowcase) btnDrawerShowcase.textContent = on ? 'Stop showcase-modus' : 'Showcase-modus';
 
         if (on) {
-          updatePrintMeta();
+          updateBoardLabels();
           await enterFullscreen();
         } else {
           await exitFullscreen();
@@ -272,21 +300,30 @@
       }
 
       function runPrint() {
-        updatePrintMeta();
+        updateBoardLabels();
         window.print();
+      }
+
+      function toggleDrawerPin() {
+        body.classList.toggle('drawer-open');
       }
 
       btnHeaderShowcase?.addEventListener('click', toggleShowcase);
       btnDrawerShowcase?.addEventListener('click', toggleShowcase);
       btnHeaderPrint?.addEventListener('click', runPrint);
       btnDrawerPrint?.addEventListener('click', runPrint);
+      quickToggle?.addEventListener('click', toggleDrawerPin);
 
-      indelingSel?.addEventListener('change', updatePrintMeta);
-      klasSel?.addEventListener('change', updatePrintMeta);
+      indelingSel?.addEventListener('change', updateBoardLabels);
+      klasSel?.addEventListener('change', updateBoardLabels);
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && body.classList.contains('showcase-mode')) {
           setShowcase(false);
+          return;
+        }
+        if ((e.key === 'd' || e.key === 'D') && !body.classList.contains('showcase-mode')) {
+          toggleDrawerPin();
         }
       });
 
@@ -294,12 +331,12 @@
         if (!document.fullscreenElement && body.classList.contains('showcase-mode')) {
           body.classList.remove('showcase-mode');
           hint?.classList.remove('visible');
-          if (btnHeaderShowcase) btnHeaderShowcase.textContent = 'Showcase-modus';
+          if (btnHeaderShowcase) btnHeaderShowcase.textContent = 'Showcase';
           if (btnDrawerShowcase) btnDrawerShowcase.textContent = 'Showcase-modus';
         }
       });
 
-      updatePrintMeta();
+      updateBoardLabels();
     })();
   </script>
 
@@ -322,7 +359,7 @@
 
         const set = () => {
           iframe.style.height = getH() + 'px';
-          iframe.style.width  = getW() + 'px';
+          iframe.style.width = getW() + 'px';
         };
 
         set();
