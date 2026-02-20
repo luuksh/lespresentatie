@@ -4,7 +4,7 @@ import { initPresetUI } from './seating-presets.js';
 const modules = {
   h216:               () => import('./h216.js').then(m => m.h216Indeling),
   u008:               () => import('./u008.js').then(m => m.u008Indeling),
-  drievierdrie:       () => import('./drievierdrie.js').then(m => m.drieVierDrieIndeling),
+  drievierdrie:       () => import('./drievierdrie-v2.js').then(m => m.drieVierDrieIndeling),
   groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
   drietallen:         () => import('./drietallen.js').then(m => m.drietallenIndeling),
   vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
