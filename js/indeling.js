@@ -1,14 +1,16 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
+const MODULE_VERSION = '20260222-5';
+
 const modules = {
-  h216:               () => import('./h216.js').then(m => m.h216Indeling),
-  u008:               () => import('./u008.js').then(m => m.u008Indeling),
-  drievierdrie:       () => import('./drievierdrie-v2.js').then(m => m.drieVierDrieIndeling),
-  groepjes:           () => import('./groepjes.js').then(m => m.groepjesIndeling),
-  drietallen:         () => import('./drietallen.js').then(m => m.drietallenIndeling),
-  vijftallen:         () => import('./vijftallen.js').then(m => m.vijftallenIndeling),
-  presentatievolgorde:() => import('./presentatievolgorde.js').then(m => m.presentatievolgordeIndeling),
+  h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
+  u008:               () => import(`./u008.js?v=${MODULE_VERSION}`).then(m => m.u008Indeling),
+  drievierdrie:       () => import(`./drievierdrie-v2.js?v=${MODULE_VERSION}`).then(m => m.drieVierDrieIndeling),
+  groepjes:           () => import(`./groepjes.js?v=${MODULE_VERSION}`).then(m => m.groepjesIndeling),
+  drietallen:         () => import(`./drietallen.js?v=${MODULE_VERSION}`).then(m => m.drietallenIndeling),
+  vijftallen:         () => import(`./vijftallen.js?v=${MODULE_VERSION}`).then(m => m.vijftallenIndeling),
+  presentatievolgorde:() => import(`./presentatievolgorde.js?v=${MODULE_VERSION}`).then(m => m.presentatievolgordeIndeling),
 };
 
 /* ---------- Helpers ---------- */
