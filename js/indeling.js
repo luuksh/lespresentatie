@@ -1,6 +1,6 @@
 // js/indeling.js
-const MODULE_VERSION = '20260222-22';
-const AUTO_LAYOUT_KEY = 'lespresentatie.autolayouts.v1';
+const MODULE_VERSION = '20260222-23';
+const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -246,25 +246,27 @@ function getCurrentType() {
   return typeSel?.value || 'h216';
 }
 
-function getStorageBucketKey(classId, type) {
-  return `${classId}::${type}`;
+function getLayoutSelect() {
+  return document.getElementById('savedLayoutSelect');
 }
 
-function readLayoutStore() {
+function readSavedLayouts() {
   try {
-    const raw = localStorage.getItem(AUTO_LAYOUT_KEY);
+    const raw = localStorage.getItem(SAVED_LAYOUTS_KEY);
     const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed === 'object' ? parsed : {};
+    if (!parsed || typeof parsed !== 'object') return { version: 1, classes: {} };
+    if (!parsed.classes || typeof parsed.classes !== 'object') parsed.classes = {};
+    return parsed;
   } catch {
-    return {};
+    return { version: 1, classes: {} };
   }
 }
 
-function writeLayoutStore(store) {
+function writeSavedLayouts(store) {
   try {
-    localStorage.setItem(AUTO_LAYOUT_KEY, JSON.stringify(store));
+    localStorage.setItem(SAVED_LAYOUTS_KEY, JSON.stringify(store));
   } catch (err) {
-    console.warn('Automatisch opslaan mislukt:', err);
+    console.warn('Opslaan mislukt:', err);
   }
 }
 
@@ -305,6 +307,43 @@ function getCurrentArrangement() {
     groupTopics: readGroupTopics(),
     groupDates: readGroupDates()
   };
+}
+
+function ensureClassStore(store, classId) {
+  if (!store.classes[classId]) {
+    store.classes[classId] = { layouts: {}, selected: '' };
+  }
+  if (!store.classes[classId].layouts || typeof store.classes[classId].layouts !== 'object') {
+    store.classes[classId].layouts = {};
+  }
+  return store.classes[classId];
+}
+
+function refillSavedLayoutSelect() {
+  const select = getLayoutSelect();
+  if (!select) return;
+
+  const classId = getCurrentClassId();
+  const store = readSavedLayouts();
+  const cls = ensureClassStore(store, classId);
+  const names = Object.keys(cls.layouts).sort((a, b) => a.localeCompare(b, 'nl'));
+
+  select.innerHTML = '';
+  names.forEach((name) => {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    select.appendChild(opt);
+  });
+
+  if (!names.length) return;
+  if (cls.selected && names.includes(cls.selected)) {
+    select.value = cls.selected;
+  } else {
+    select.value = names[0];
+    cls.selected = names[0];
+    writeSavedLayouts(store);
+  }
 }
 
 function projectArrangementToCurrentGrid(payload) {
@@ -426,65 +465,106 @@ async function applyArrangement(payload) {
   projectArrangementToCurrentGrid(payload);
 }
 
-function loadAutoArrangementForCurrentContext() {
+function saveCurrentLayoutAs(name) {
   const classId = getCurrentClassId();
-  const type = getCurrentType();
-  const store = readLayoutStore();
-  return store[getStorageBucketKey(classId, type)] || null;
-}
-
-function saveAutoArrangementForCurrentContext() {
   const arrangement = getCurrentArrangement();
-  if (!arrangement || !arrangement.type || !arrangement.klasId) return;
+  if (!name || !arrangement) return;
 
-  const store = readLayoutStore();
-  store[getStorageBucketKey(arrangement.klasId, arrangement.type)] = arrangement;
-  writeLayoutStore(store);
+  const store = readSavedLayouts();
+  const cls = ensureClassStore(store, classId);
+  cls.layouts[name] = arrangement;
+  cls.selected = name;
+  writeSavedLayouts(store);
+  refillSavedLayoutSelect();
 }
 
-(function initAutoLayoutPersistence() {
+async function loadSelectedLayout() {
+  const select = getLayoutSelect();
+  if (!select || !select.value) {
+    alert('Kies eerst een opgeslagen plattegrond.');
+    return;
+  }
+
+  const classId = getCurrentClassId();
+  const store = readSavedLayouts();
+  const cls = ensureClassStore(store, classId);
+  const payload = cls.layouts[select.value];
+  if (!payload) {
+    alert('Plattegrond niet gevonden.');
+    return;
+  }
+
+  cls.selected = select.value;
+  writeSavedLayouts(store);
+  await applyArrangement(payload);
+}
+
+function deleteSelectedLayout() {
+  const select = getLayoutSelect();
+  if (!select || !select.value) {
+    alert('Kies eerst een opgeslagen plattegrond.');
+    return;
+  }
+
+  const classId = getCurrentClassId();
+  const store = readSavedLayouts();
+  const cls = ensureClassStore(store, classId);
+  const name = select.value;
+
+  if (!cls.layouts[name]) return;
+  delete cls.layouts[name];
+  if (cls.selected === name) cls.selected = '';
+  writeSavedLayouts(store);
+  refillSavedLayoutSelect();
+}
+
+(function initLayoutLibraryUI() {
   const klasSel = document.getElementById('klasSelect');
+  const btnSave = document.getElementById('btnLayoutSave');
+  const btnLoad = document.getElementById('btnLayoutLoad');
+  const btnDelete = document.getElementById('btnLayoutDelete');
+  const select = getLayoutSelect();
   const plattegrond = document.getElementById('plattegrond');
-  if (!klasSel || !plattegrond) return;
+  if (!klasSel || !select || !plattegrond) return;
 
   initTopicEditing();
 
-  let restoring = false;
-  let saveTimer = null;
+  btnSave?.addEventListener('click', () => {
+    const existing = select.value || '';
+    const name = prompt('Naam voor deze plattegrond:', existing);
+    if (!name) return;
 
-  const scheduleSave = () => {
-    if (restoring) return;
-    clearTimeout(saveTimer);
-    saveTimer = setTimeout(() => {
-      saveAutoArrangementForCurrentContext();
-    }, 160);
-  };
-
-  window.addEventListener('indeling:rendered', async () => {
-    const saved = loadAutoArrangementForCurrentContext();
-    if (!saved) return;
-
-    restoring = true;
-    try {
-      await applyArrangement(saved);
-    } finally {
-      restoring = false;
-    }
+    const classId = getCurrentClassId();
+    const store = readSavedLayouts();
+    const cls = ensureClassStore(store, classId);
+    if (cls.layouts[name] && !confirm(`Plattegrond "${name}" overschrijven?`)) return;
+    saveCurrentLayoutAs(name);
   });
 
-  window.addEventListener('indeling:arrangement-applied', scheduleSave);
-
-  const mo = new MutationObserver(() => {
-    scheduleSave();
+  btnLoad?.addEventListener('click', () => {
+    void loadSelectedLayout();
   });
-  mo.observe(plattegrond, { childList: true, subtree: true, characterData: true });
 
-  window.addEventListener('beforeunload', () => {
-    if (restoring) return;
-    saveAutoArrangementForCurrentContext();
+  btnDelete?.addEventListener('click', () => {
+    const name = select.value || '';
+    if (!name) return;
+    if (!confirm(`Plattegrond "${name}" verwijderen?`)) return;
+    deleteSelectedLayout();
+  });
+
+  select.addEventListener('change', () => {
+    const classId = getCurrentClassId();
+    const store = readSavedLayouts();
+    const cls = ensureClassStore(store, classId);
+    cls.selected = select.value || '';
+    writeSavedLayouts(store);
   });
 
   klasSel.addEventListener('change', () => {
     if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
+    setTimeout(refillSavedLayoutSelect, 40);
   });
+
+  window.addEventListener('indeling:rendered', refillSavedLayoutSelect);
+  refillSavedLayoutSelect();
 })();
