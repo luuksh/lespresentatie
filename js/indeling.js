@@ -1,7 +1,7 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
-const MODULE_VERSION = '20260222-6';
+const MODULE_VERSION = '20260222-7';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -81,11 +81,34 @@ function topicElements() {
   return Array.from(document.querySelectorAll('#plattegrond [data-topic-key]'));
 }
 
+function dateElements() {
+  return Array.from(document.querySelectorAll('#plattegrond [data-date-key]'));
+}
+
 function setTopicChipValue(chip, value) {
   const text = String(value || '').trim();
   chip.dataset.topic = text;
   chip.classList.toggle('is-empty', !text);
   chip.textContent = text || '+ onderwerp';
+}
+
+function formatDateLabel(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  const d = new Date(`${raw}T00:00:00`);
+  if (Number.isNaN(d.getTime())) return raw;
+  return new Intl.DateTimeFormat('nl-NL', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  }).format(d);
+}
+
+function setDateChipValue(chip, value) {
+  const raw = String(value || '').trim();
+  chip.dataset.date = raw;
+  chip.classList.toggle('is-empty', !raw);
+  chip.textContent = raw ? formatDateLabel(raw) : '+ datum';
 }
 
 function readGroupTopics() {
@@ -97,12 +120,30 @@ function readGroupTopics() {
     .filter(item => item.key && item.topic);
 }
 
+function readGroupDates() {
+  return dateElements()
+    .map(el => ({
+      key: el.dataset.dateKey || '',
+      date: (el.dataset.date || '').trim()
+    }))
+    .filter(item => item.key && item.date);
+}
+
 function applyGroupTopics(topics = []) {
   if (!Array.isArray(topics) || !topics.length) return;
   const map = new Map(topics.map(t => [String(t.key || ''), String(t.topic || '')]));
   topicElements().forEach(el => {
     const next = map.get(String(el.dataset.topicKey || ''));
     if (next != null) setTopicChipValue(el, next);
+  });
+}
+
+function applyGroupDates(dates = []) {
+  if (!Array.isArray(dates) || !dates.length) return;
+  const map = new Map(dates.map(t => [String(t.key || ''), String(t.date || '')]));
+  dateElements().forEach(el => {
+    const next = map.get(String(el.dataset.dateKey || ''));
+    if (next != null) setDateChipValue(el, next);
   });
 }
 
@@ -143,18 +184,69 @@ function beginTopicEdit(chip) {
   input.addEventListener('blur', commit, { once: true });
 }
 
+function beginDateEdit(chip) {
+  if (!chip || chip.classList.contains('editing')) return;
+  const current = String(chip.dataset.date || '');
+  const input = document.createElement('input');
+  input.type = 'date';
+  input.className = 'topic-edit-input date-edit-input';
+  input.value = current;
+
+  chip.classList.add('editing');
+  chip.replaceChildren(input);
+  input.focus();
+
+  const cancel = () => {
+    chip.classList.remove('editing');
+    setDateChipValue(chip, current);
+  };
+
+  const commit = () => {
+    chip.classList.remove('editing');
+    setDateChipValue(chip, input.value);
+  };
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      commit();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      cancel();
+    }
+  });
+
+  input.addEventListener('change', commit);
+  input.addEventListener('blur', commit, { once: true });
+}
+
 function initTopicEditing() {
   const grid = document.getElementById('plattegrond');
   if (!grid || grid.dataset.topicEditorInit === '1') return;
   grid.dataset.topicEditorInit = '1';
 
   grid.addEventListener('click', (e) => {
+    const dateChip = e.target.closest('[data-date-key]');
+    if (dateChip && grid.contains(dateChip)) {
+      beginDateEdit(dateChip);
+      return;
+    }
+
     const chip = e.target.closest('[data-topic-key]');
     if (!chip || !grid.contains(chip)) return;
     beginTopicEdit(chip);
   });
 
   grid.addEventListener('keydown', (e) => {
+    const dateChip = e.target.closest('[data-date-key]');
+    if (dateChip && grid.contains(dateChip)) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        beginDateEdit(dateChip);
+      }
+      return;
+    }
+
     const chip = e.target.closest('[data-topic-key]');
     if (!chip || !grid.contains(chip)) return;
     if (e.key === 'Enter' || e.key === ' ') {
@@ -184,7 +276,8 @@ function getCurrentArrangement() {
       savedAt: new Date().toISOString(),
       order: items,
       seats: [],
-      groupTopics: readGroupTopics()
+      groupTopics: readGroupTopics(),
+      groupDates: readGroupDates()
     };
   }
 
@@ -199,7 +292,8 @@ function getCurrentArrangement() {
     savedAt: new Date().toISOString(),
     seats,
     order: [],
-    groupTopics: readGroupTopics()
+    groupTopics: readGroupTopics(),
+    groupDates: readGroupDates()
   };
 }
 
@@ -268,6 +362,18 @@ async function applyArrangement(payload) {
         topic.tabIndex = 0;
         topic.textContent = '+ onderwerp';
 
+        const date = document.createElement('div');
+        date.className = 'presentatie-date date-chip is-empty';
+        date.dataset.dateKey = li.dataset.groupId;
+        date.dataset.date = '';
+        date.tabIndex = 0;
+        date.textContent = '+ datum';
+
+        const meta = document.createElement('div');
+        meta.className = 'presentatie-meta';
+        meta.appendChild(topic);
+        meta.appendChild(date);
+
         const nr = document.createElement('span');
         nr.className = 'nr';
         nr.textContent = idx + 1;
@@ -276,7 +382,7 @@ async function applyArrangement(payload) {
         nm.className = 'naam';
         nm.textContent = naam;
 
-        li.appendChild(topic);
+        li.appendChild(meta);
         li.appendChild(nr);
         li.appendChild(nm);
         ol.appendChild(li);
@@ -285,6 +391,7 @@ async function applyArrangement(payload) {
     }
 
     applyGroupTopics(payload.groupTopics || []);
+    applyGroupDates(payload.groupDates || []);
 
     window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
       detail: { type, timestamp: Date.now() }
@@ -306,6 +413,7 @@ async function applyArrangement(payload) {
   });
 
   applyGroupTopics(payload.groupTopics || []);
+  applyGroupDates(payload.groupDates || []);
 
   window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
     detail: { type, timestamp: Date.now() }

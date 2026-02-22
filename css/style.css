@@ -819,12 +819,20 @@ select:focus {
   animation: fadeIn 0.28s ease;
 }
 
-.topic-chip {
+.group-meta {
   position: absolute;
   left: 32px;
   right: 8px;
   top: -12px;
+  display: flex;
+  gap: 6px;
+  z-index: 4;
+}
+
+.topic-chip {
   min-height: 24px;
+  flex: 1 1 auto;
+  min-width: 0;
   padding: 3px 10px;
   border-radius: 999px;
   border: 1px solid rgba(151, 177, 212, 0.92);
@@ -841,18 +849,39 @@ select:focus {
   z-index: 4;
 }
 
-.topic-chip.is-empty {
+.topic-chip.is-empty,
+.date-chip.is-empty {
   color: #6a84aa;
   font-style: italic;
 }
 
-.topic-chip:focus-visible {
+.topic-chip:focus-visible,
+.date-chip:focus-visible {
   outline: 2px solid #5a87d7;
   outline-offset: 1px;
 }
 
-.topic-chip.editing {
+.topic-chip.editing,
+.date-chip.editing {
   padding: 2px 6px;
+}
+
+.date-chip {
+  min-height: 24px;
+  flex: 0 0 98px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(151, 177, 212, 0.92);
+  background: linear-gradient(180deg, #f8fbff, #eaf2ff);
+  color: #27446f;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .topic-edit-input {
@@ -906,10 +935,22 @@ select:focus {
   font-weight: 700;
 }
 
-.presentatie-topic.topic-chip {
+.presentatie-meta {
+  position: absolute;
   left: 8px;
   right: 8px;
   top: 5px;
+  display: flex;
+  gap: 6px;
+}
+
+.presentatie-topic.topic-chip {
+  position: static;
+}
+
+.presentatie-date.date-chip {
+  position: static;
+  flex-basis: 110px;
 }
 
 .presentatie-item .nr {

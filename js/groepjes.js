@@ -23,7 +23,19 @@ export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
     topic.dataset.topic = "";
     topic.tabIndex = 0;
     topic.textContent = "+ onderwerp";
-    groep.appendChild(topic);
+
+    const date = document.createElement("div");
+    date.className = "group-date date-chip is-empty";
+    date.dataset.dateKey = groep.dataset.groupId;
+    date.dataset.date = "";
+    date.tabIndex = 0;
+    date.textContent = "+ datum";
+
+    const meta = document.createElement("div");
+    meta.className = "group-meta";
+    meta.appendChild(topic);
+    meta.appendChild(date);
+    groep.appendChild(meta);
 
     g.forEach((naam, seatIdx) => {
       const kaart = document.createElement("div");

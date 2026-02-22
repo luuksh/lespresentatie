@@ -22,6 +22,18 @@ export function presentatievolgordeIndeling(leerlingen = []) {
     topic.tabIndex = 0;
     topic.textContent = '+ onderwerp';
 
+    const date = document.createElement('div');
+    date.className = 'presentatie-date date-chip is-empty';
+    date.dataset.dateKey = li.dataset.groupId;
+    date.dataset.date = '';
+    date.tabIndex = 0;
+    date.textContent = '+ datum';
+
+    const meta = document.createElement('div');
+    meta.className = 'presentatie-meta';
+    meta.appendChild(topic);
+    meta.appendChild(date);
+
     const nr = document.createElement('span');
     nr.className = 'nr';
     nr.textContent = idx + 1;
@@ -30,7 +42,7 @@ export function presentatievolgordeIndeling(leerlingen = []) {
     nm.className = 'naam';
     nm.textContent = naam;
 
-    li.appendChild(topic);
+    li.appendChild(meta);
     li.appendChild(nr);
     li.appendChild(nm);
     ol.appendChild(li);
