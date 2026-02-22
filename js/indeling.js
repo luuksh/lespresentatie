@@ -1,7 +1,7 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
-const MODULE_VERSION = '20260222-11';
+const MODULE_VERSION = '20260222-12';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -320,6 +320,42 @@ function waitForRendered(type, timeoutMs = 4000) {
   });
 }
 
+const DRAFT_PREFIX = 'lespresentatie.draft.v1';
+
+function activeClassId() {
+  const klasSel = document.getElementById('klasSelect');
+  return klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
+}
+
+function activeType() {
+  const typeSel = document.getElementById('indelingSelect');
+  return typeSel?.value || 'h216';
+}
+
+function draftKey(classId, type) {
+  return `${DRAFT_PREFIX}.${classId}.${type}`;
+}
+
+function saveDraftArrangement() {
+  const arr = getCurrentArrangement();
+  if (!arr || !arr.type) return;
+  const key = draftKey(arr.klasId || activeClassId(), arr.type || activeType());
+  const payload = { savedAt: new Date().toISOString(), arrangement: arr };
+  localStorage.setItem(key, JSON.stringify(payload));
+}
+
+function loadDraftArrangement(classId, type) {
+  const key = draftKey(classId, type);
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return parsed?.arrangement || null;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Past een opgeslagen opstelling toe.
  * - Zet eerst het juiste type in de dropdown en triggert de bestaande change-flow (laadIndeling).
@@ -439,6 +475,47 @@ async function applyArrangement(payload) {
     applyArrangement
   });
   initTopicEditing();
+
+  let savingTimer = null;
+  let restoringDraft = false;
+  const restoredDrafts = new Set();
+
+  function queueDraftSave() {
+    if (restoringDraft) return;
+    clearTimeout(savingTimer);
+    savingTimer = setTimeout(() => {
+      try { saveDraftArrangement(); } catch {}
+    }, 220);
+  }
+
+  window.addEventListener('indeling:arrangement-applied', queueDraftSave);
+  window.addEventListener('indeling:rendered', async (evt) => {
+    const type = evt?.detail?.type || activeType();
+    const klas = getCurrentClassId();
+    const key = `${klas}::${type}`;
+
+    queueDraftSave();
+    if (restoringDraft || restoredDrafts.has(key)) return;
+
+    const draft = loadDraftArrangement(klas, type);
+    if (!draft) return;
+
+    restoringDraft = true;
+    try {
+      await applyArrangement(structuredClone(draft));
+      restoredDrafts.add(key);
+    } catch (e) {
+      console.warn('Concept-herstel mislukt:', e);
+    } finally {
+      restoringDraft = false;
+    }
+  });
+
+  const mo = new MutationObserver(() => queueDraftSave());
+  mo.observe(plattegrond, { childList: true, subtree: true, characterData: true });
+  window.addEventListener('beforeunload', () => {
+    try { saveDraftArrangement(); } catch {}
+  });
 
   // bij klaswissel: lijst met presets verversen + laatst gebruikte onthouden
   klasSel.addEventListener('change', () => {
