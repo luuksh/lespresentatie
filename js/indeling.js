@@ -1,7 +1,7 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
-const MODULE_VERSION = '20260222-12';
+const MODULE_VERSION = '20260222-13';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -321,6 +321,7 @@ function waitForRendered(type, timeoutMs = 4000) {
 }
 
 const DRAFT_PREFIX = 'lespresentatie.draft.v1';
+const LAST_DRAFT_META_KEY = 'lespresentatie.draft.v1.lastmeta';
 
 function activeClassId() {
   const klasSel = document.getElementById('klasSelect');
@@ -339,9 +340,14 @@ function draftKey(classId, type) {
 function saveDraftArrangement() {
   const arr = getCurrentArrangement();
   if (!arr || !arr.type) return;
-  const key = draftKey(arr.klasId || activeClassId(), arr.type || activeType());
+  const classId = arr.klasId || activeClassId();
+  const type = arr.type || activeType();
+  const key = draftKey(classId, type);
   const payload = { savedAt: new Date().toISOString(), arrangement: arr };
   localStorage.setItem(key, JSON.stringify(payload));
+  try {
+    localStorage.setItem(LAST_DRAFT_META_KEY, JSON.stringify({ classId, type, savedAt: payload.savedAt }));
+  } catch {}
 }
 
 function loadDraftArrangement(classId, type) {

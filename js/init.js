@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const indelingSelect = document.getElementById("indelingSelect");
   const klasSelect = document.getElementById("klasSelect");
   const grid = document.getElementById("plattegrond");
+  const LAST_LAYOUT_KEY = "lespresentatie.lastLayoutType";
+  const LAST_DRAFT_META_KEY = "lespresentatie.draft.v1.lastmeta";
 
   // 🟩 Klassen ophalen en dropdown vullen
   try {
@@ -34,6 +36,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.error("Fout bij laden van klassen:", err);
     klasSelect.innerHTML = '<option>Fout bij laden</option>';
+  }
+
+  const hasClassOption = (value) => [...klasSelect.options].some(o => o.value === value);
+  const hasTypeOption = (value) => [...indelingSelect.options].some(o => o.value === value);
+
+  // Herstel primair: laatst bewerkte concept (klas + indelingstype)
+  let draftMeta = null;
+  try { draftMeta = JSON.parse(localStorage.getItem(LAST_DRAFT_META_KEY) || "null"); } catch {}
+
+  if (draftMeta?.classId && hasClassOption(draftMeta.classId)) {
+    klasSelect.value = draftMeta.classId;
+    localStorage.setItem("lastClassId", draftMeta.classId);
+  }
+
+  if (draftMeta?.type && hasTypeOption(draftMeta.type)) {
+    indelingSelect.value = draftMeta.type;
+    localStorage.setItem(LAST_LAYOUT_KEY, draftMeta.type);
+  } else {
+    const lastType = localStorage.getItem(LAST_LAYOUT_KEY);
+    if (lastType && hasTypeOption(lastType)) {
+      indelingSelect.value = lastType;
+    }
   }
 
   function dispatchRendered(type) {
@@ -86,7 +110,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // 📌 Event listeners
-  indelingSelect.addEventListener("change", laadIndeling);
+  indelingSelect.addEventListener("change", () => {
+    if (indelingSelect.value) localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value);
+    laadIndeling();
+  });
   klasSelect.addEventListener("change", () => {
     if (klasSelect.value) localStorage.setItem("lastClassId", klasSelect.value);
     laadIndeling();
@@ -94,5 +121,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 🚀 Initieel laden
   if (!indelingSelect.value) indelingSelect.value = "h216";
+  localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value);
   laadIndeling();
 });
