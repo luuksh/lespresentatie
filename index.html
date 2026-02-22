@@ -119,6 +119,182 @@
 
   </aside>
 
+  <section id="magisterAssistPanel" class="magister-assist" aria-label="Magister absentiehulp" hidden>
+    <header class="magister-assist-head">
+      <div>
+        <p class="magister-assist-kicker">Magister-hulp</p>
+        <h2 id="magisterAssistTitle" class="magister-assist-title">Klas -</h2>
+      </div>
+      <button id="closeMagisterAssistBtn" type="button" class="magister-assist-close" aria-label="Sluit absentiehulp">
+        ×
+      </button>
+    </header>
+    <div class="magister-assist-meta">
+      <span>Naam</span>
+      <span>AB</span>
+    </div>
+    <div id="magisterAssistRows" class="magister-assist-rows" aria-live="polite"></div>
+    <footer id="magisterAssistCount" class="magister-assist-count">Absent: 0</footer>
+  </section>
+
+  <script>
+    (() => {
+      const PANEL_ID = 'magisterAssistPanel';
+      const GRID_ID = 'plattegrond';
+      const CARD_SELECTOR = '.tafel';
+      const DATA_PATH = 'js/leerlingen_per_klas.json';
+
+      const panel = document.getElementById(PANEL_ID);
+      const closeBtn = document.getElementById('closeMagisterAssistBtn');
+      const classSel = document.getElementById('klasSelect');
+      const rowsEl = document.getElementById('magisterAssistRows');
+      const countEl = document.getElementById('magisterAssistCount');
+      const titleEl = document.getElementById('magisterAssistTitle');
+
+      const collator = new Intl.Collator('nl-NL', { sensitivity: 'base', numeric: true });
+      let rosterPromise = null;
+      let lastFocus = null;
+      let previousAbsentCount = 0;
+
+      function normalizeName(value) {
+        return String(value || '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function firstName(value) {
+        const clean = normalizeName(value);
+        if (!clean) return '';
+        return clean.split(' ')[0].toLocaleLowerCase('nl-NL');
+      }
+
+      function sortByFirstName(names = []) {
+        return [...names].sort((a, b) => {
+          const first = collator.compare(firstName(a), firstName(b));
+          if (first !== 0) return first;
+          return collator.compare(a, b);
+        });
+      }
+
+      async function readRoster() {
+        if (!rosterPromise) {
+          rosterPromise = fetch(DATA_PATH, { cache: 'no-cache' })
+            .then((res) => (res.ok ? res.json() : {}))
+            .catch(() => ({}));
+        }
+        return rosterPromise;
+      }
+
+      function currentClass() {
+        return classSel?.value || '';
+      }
+
+      function currentAbsentSet() {
+        return new Set(
+          Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`))
+            .map((el) => normalizeName(el.textContent))
+            .filter((name) => name && name !== '-')
+        );
+      }
+
+      function currentGridNames() {
+        return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`))
+          .map((el) => normalizeName(el.textContent))
+          .filter((name) => name && name !== '-');
+      }
+
+      function renderRows(names = [], absentSet = new Set()) {
+        if (!rowsEl) return;
+        const previousScroll = rowsEl.scrollTop;
+        if (!names.length) {
+          rowsEl.innerHTML = '<p class="magister-assist-empty">Geen leerlingen gevonden.</p>';
+          if (countEl) countEl.textContent = 'Absent: 0';
+          return;
+        }
+
+        rowsEl.innerHTML = names.map((name) => {
+          const absent = absentSet.has(name);
+          return `
+            <div class="magister-row${absent ? ' is-absent' : ''}">
+              <span class="magister-name">${name}</span>
+              <span class="magister-ab" aria-hidden="true">${absent ? '✓' : ''}</span>
+            </div>
+          `;
+        }).join('');
+
+        const absentCount = names.filter((name) => absentSet.has(name)).length;
+        if (countEl) countEl.textContent = `Absent: ${absentCount}`;
+        rowsEl.scrollTop = previousScroll;
+      }
+
+      async function refreshPanel() {
+        if (!panel || panel.hidden) return;
+
+        const klas = currentClass() || '-';
+        if (titleEl) titleEl.textContent = `Klas ${klas}`;
+
+        const rosterData = await readRoster();
+        const roster = Array.isArray(rosterData?.[klas]) ? rosterData[klas] : [];
+        const fallback = currentGridNames();
+        const names = sortByFirstName((roster.length ? roster : fallback).map(normalizeName).filter(Boolean));
+        renderRows(names, currentAbsentSet());
+      }
+
+      function showPanel() {
+        if (!panel) return;
+        lastFocus = document.activeElement;
+        panel.hidden = false;
+        document.body.classList.add('magister-assist-open');
+        refreshPanel();
+      }
+
+      function hidePanel() {
+        if (!panel) return;
+        panel.hidden = true;
+        document.body.classList.remove('magister-assist-open');
+        if (lastFocus instanceof HTMLElement) lastFocus.focus();
+      }
+
+      closeBtn?.addEventListener('click', hidePanel);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel && !panel.hidden) hidePanel();
+      });
+
+      const grid = document.getElementById(GRID_ID);
+      if (grid) {
+        const mo = new MutationObserver(() => {
+          const absentCount = currentAbsentSet().size;
+          const firstAbsentSelected = previousAbsentCount === 0 && absentCount > 0;
+
+          if (firstAbsentSelected && panel?.hidden) showPanel();
+          if (absentCount === 0) hidePanel();
+
+          previousAbsentCount = absentCount;
+          refreshPanel();
+        });
+        mo.observe(grid, {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      }
+
+      classSel?.addEventListener('change', () => {
+        previousAbsentCount = 0;
+        hidePanel();
+        setTimeout(refreshPanel, 0);
+      });
+
+      window.addEventListener('indeling:rendered', () => {
+        previousAbsentCount = currentAbsentSet().size;
+        if (previousAbsentCount === 0) hidePanel();
+        setTimeout(refreshPanel, 0);
+      });
+    })();
+  </script>
+
   <script>
     (() => {
       const GRID_ID = 'plattegrond';

@@ -676,6 +676,149 @@ select:focus {
   font-weight: 800;
 }
 
+.magister-assist {
+  position: fixed;
+  top: 96px;
+  right: 14px;
+  width: 320px;
+  height: min(76vh, 860px);
+  display: flex;
+  flex-direction: column;
+  z-index: 90;
+  border: 1px solid #bac8df;
+  border-radius: 14px;
+  background: #f8fbff;
+  box-shadow: 0 16px 30px rgba(12, 30, 56, 0.24);
+  overflow: hidden;
+}
+
+.magister-assist-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #d4deed;
+  background: linear-gradient(180deg, #edf3fc, #e2eaf8);
+}
+
+.magister-assist-kicker {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5b7396;
+}
+
+.magister-assist-title {
+  margin: 2px 0 0;
+  font-size: 18px;
+}
+
+.magister-assist-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #9db1d1;
+  border-radius: 999px;
+  background: #f5f8ff;
+  padding: 0;
+  color: #173c71;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.magister-assist-close:hover {
+  background: #e8effd;
+}
+
+.magister-assist-meta {
+  display: grid;
+  grid-template-columns: 1fr 54px;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px 0 12px;
+  border-bottom: 1px solid #d2ddec;
+  background: #ecf2fc;
+  color: #2f4f7d;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.magister-assist-rows {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.magister-row {
+  display: grid;
+  grid-template-columns: 1fr 54px;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid #e0e7f2;
+  color: #283342;
+}
+
+.magister-name {
+  min-width: 0;
+  padding: 0 8px 0 12px;
+  font-size: 20px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.magister-ab {
+  width: 38px;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid #c0cce0;
+  background: #f4f6fa;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: #08694a;
+  font-weight: 900;
+}
+
+.magister-row.is-absent {
+  background: #eaf4ff;
+}
+
+.magister-row.is-absent .magister-name {
+  color: #0a3d72;
+  font-weight: 700;
+}
+
+.magister-row.is-absent .magister-ab {
+  border-color: #6ba57f;
+  background: #edf9f1;
+}
+
+.magister-assist-count {
+  margin: 0;
+  padding: 7px 12px 8px;
+  border-top: 1px solid #d4deec;
+  background: #eef3fd;
+  font-size: 12px;
+  font-weight: 900;
+  color: #334f75;
+}
+
+.magister-assist-empty {
+  margin: 0;
+  padding: 12px;
+  color: #4d668a;
+  font-size: 13px;
+}
+
 .grid-wrapper {
   min-width: min(980px, calc(100vw - 180px));
   display: flex;
@@ -1170,6 +1313,7 @@ body.drawer-open .side-drawer.left {
 
   #opdrachtMount,
   #timerDock,
+  .magister-assist,
   .side-drawer,
   .drawer-quick-toggle {
     display: none !important;
@@ -1318,6 +1462,17 @@ body.drawer-open .side-drawer.left {
     width: 30px;
     right: -30px;
     height: 118px;
+  }
+
+  .magister-assist {
+    top: 74px;
+    right: 8px;
+    width: min(90vw, 360px);
+    height: min(74vh, 640px);
+  }
+
+  .magister-name {
+    font-size: 18px;
   }
 }
 
