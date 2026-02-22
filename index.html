@@ -265,14 +265,22 @@
 
       const grid = document.getElementById(GRID_ID);
       if (grid) {
+        grid.addEventListener('click', (e) => {
+          if (!e.target.closest(CARD_SELECTOR)) return;
+          setTimeout(() => {
+            const absentCount = currentAbsentSet().size;
+            const firstAbsentSelected = previousAbsentCount === 0 && absentCount > 0;
+
+            if (firstAbsentSelected && panel?.hidden && !dismissedForCurrentLayout) showPanel();
+            if (absentCount === 0) hidePanel(false);
+
+            previousAbsentCount = absentCount;
+            refreshPanel();
+          }, 0);
+        });
+
         const mo = new MutationObserver(() => {
-          const absentCount = currentAbsentSet().size;
-          const firstAbsentSelected = previousAbsentCount === 0 && absentCount > 0;
-
-          if (firstAbsentSelected && panel?.hidden && !dismissedForCurrentLayout) showPanel();
-          if (absentCount === 0) hidePanel(false);
-
-          previousAbsentCount = absentCount;
+          // Alleen inhoud bijwerken; openen gebeurt uitsluitend na een echte klik op een tafeltje.
           refreshPanel();
         });
         mo.observe(grid, {
@@ -300,6 +308,10 @@
       // Start altijd verborgen; pas tonen bij eerste absentieactie.
       hidePanel(false);
       previousAbsentCount = currentAbsentSet().size;
+      window.addEventListener('pageshow', () => {
+        hidePanel(false);
+        previousAbsentCount = currentAbsentSet().size;
+      });
     })();
   </script>
 
