@@ -144,26 +144,6 @@
       <div class="clock-scrub-hint">Sleep over de klok om tijd te zetten</div>
     </div>
 
-    <div class="timer-panel" aria-label="Timerbediening">
-      <div class="timer-nudge">
-        <button class="timer-chip" data-pres="-60" title="Min 1 minuut">−1m</button>
-        <button class="timer-chip" data-pres="-10" title="Min 10 seconden">−10s</button>
-        <button class="timer-chip" data-pres="10" title="Plus 10 seconden">+10s</button>
-        <button class="timer-chip" data-pres="60" title="Plus 1 minuut">+1m</button>
-      </div>
-
-      <div class="timer-edit">
-        <input id="timerMin" type="number" min="0" max="999" value="5" aria-label="Minuten" />
-        <span>:</span>
-        <input id="timerSec" type="number" min="0" max="59" value="0" aria-label="Seconden" />
-        <button class="timer-btn warn compact" id="timerApply">Zet</button>
-      </div>
-
-      <div class="timer-actions compact-actions">
-        <button class="timer-btn primary" id="timerStartPause">Start</button>
-        <button class="timer-btn" id="timerReset">Reset</button>
-      </div>
-    </div>
   </aside>
 
   <script>
@@ -536,11 +516,11 @@
       const hand = document.getElementById('clockHand');
       const timeEl = document.getElementById('clockTime');
       const stateEl = document.getElementById('clockState');
-      const startBtn = document.getElementById('timerStartPause');
-      const resetBtn = document.getElementById('timerReset');
-      const applyBtn = document.getElementById('timerApply');
-      const minIn = document.getElementById('timerMin');
-      const secIn = document.getElementById('timerSec');
+      const startBtn = null;
+      const resetBtn = null;
+      const applyBtn = null;
+      const minIn = null;
+      const secIn = null;
 
       const dial = document.getElementById('clockDial');
 
@@ -660,10 +640,6 @@
       startBtn?.addEventListener('click', () => (running ? pause() : start()));
       resetBtn?.addEventListener('click', reset);
       applyBtn?.addEventListener('click', setFromInputs);
-
-      document.querySelectorAll('#timerDock [data-pres]').forEach(btn => {
-        btn.addEventListener('click', () => applyPreset(parseInt(btn.dataset.pres, 10)));
-      });
 
       document.addEventListener('keydown', (e) => {
         const hardReload = (e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyR';

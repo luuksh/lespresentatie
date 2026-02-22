@@ -385,26 +385,6 @@
       <div class="scrub-hint">Sleep over de klok om tijd te zetten</div>
     </div>
 
-    <div class="panel" aria-label="Timerbediening">
-      <div class="nudge">
-        <button class="chip" data-pres="-60" title="Min 1 minuut">−1m</button>
-        <button class="chip" data-pres="-10" title="Min 10 seconden">−10s</button>
-        <button class="chip" data-pres="10" title="Plus 10 seconden">+10s</button>
-        <button class="chip" data-pres="60" title="Plus 1 minuut">+1m</button>
-      </div>
-
-      <div class="edit">
-        <input id="min" type="number" min="0" max="999" value="5" aria-label="Minuten" />
-        <span>:</span>
-        <input id="sec" type="number" min="0" max="59" value="0" aria-label="Seconden" />
-        <button class="btn warn compact" id="apply">Zet</button>
-      </div>
-
-      <div class="row compact-actions">
-        <button class="btn primary" id="startPause">Start</button>
-        <button class="btn" id="reset">Reset</button>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -419,11 +399,11 @@
     const handEl = document.getElementById('hand');
     const clockEl = document.getElementById('clock');
     const dialEl = document.getElementById('dial');
-    const startBtn = document.getElementById('startPause');
-    const resetBtn = document.getElementById('reset');
-    const applyBtn = document.getElementById('apply');
-    const minIn = document.getElementById('min');
-    const secIn = document.getElementById('sec');
+    const startBtn = null;
+    const resetBtn = null;
+    const applyBtn = null;
+    const minIn = null;
+    const secIn = null;
 
     const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
@@ -436,8 +416,8 @@
     function syncInputsFrom(value) {
       const m = Math.floor(value / 60);
       const s = value % 60;
-      minIn.value = String(m);
-      secIn.value = String(s);
+      if (minIn) minIn.value = String(m);
+      if (secIn) secIn.value = String(s);
     }
 
     function updateDigits() {
@@ -475,13 +455,13 @@
     }
 
     function setFromInputs() {
-      const m = clamp(parseInt(minIn.value, 10) || 0, 0, 999);
-      const s = clamp(parseInt(secIn.value, 10) || 0, 0, 59);
+      const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 999);
+      const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
       total = m * 60 + s;
       remaining = total;
       running = false;
       clearInterval(intervalId);
-      startBtn.textContent = 'Start';
+      if (startBtn) startBtn.textContent = 'Start';
       updateDigits();
       updateClock();
     }
@@ -501,7 +481,7 @@
       if (remaining <= 0) {
         clearInterval(intervalId);
         running = false;
-        startBtn.textContent = 'Start';
+        if (startBtn) startBtn.textContent = 'Start';
         updateDigits();
         updateClock();
         if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
@@ -518,7 +498,7 @@
       if (remaining <= 0) return;
 
       running = true;
-      startBtn.textContent = 'Pauze';
+      if (startBtn) startBtn.textContent = 'Pauze';
       clearInterval(intervalId);
       intervalId = setInterval(tick, 1000);
       updateDigits();
@@ -527,7 +507,7 @@
     function pause() {
       running = false;
       clearInterval(intervalId);
-      startBtn.textContent = 'Start';
+      if (startBtn) startBtn.textContent = 'Start';
       updateDigits();
     }
 
@@ -535,19 +515,15 @@
       running = false;
       clearInterval(intervalId);
       remaining = total;
-      startBtn.textContent = 'Start';
+      if (startBtn) startBtn.textContent = 'Start';
       syncInputsFrom(total);
       updateDigits();
       updateClock();
     }
 
-    startBtn.addEventListener('click', () => (running ? pause() : start()));
-    resetBtn.addEventListener('click', reset);
-    applyBtn.addEventListener('click', setFromInputs);
-
-    document.querySelectorAll('[data-pres]').forEach(btn => {
-      btn.addEventListener('click', () => applyPreset(parseInt(btn.dataset.pres, 10)));
-    });
+    startBtn?.addEventListener('click', () => (running ? pause() : start()));
+    resetBtn?.addEventListener('click', reset);
+    applyBtn?.addEventListener('click', setFromInputs);
 
     window.addEventListener('keydown', (e) => {
       const hardReload = (e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyR';
