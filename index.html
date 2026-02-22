@@ -155,6 +155,7 @@
       let rosterPromise = null;
       let lastFocus = null;
       let previousAbsentCount = 0;
+      let dismissedForCurrentLayout = false;
 
       function normalizeName(value) {
         return String(value || '')
@@ -248,14 +249,15 @@
         refreshPanel();
       }
 
-      function hidePanel() {
+      function hidePanel(markDismissed = false) {
         if (!panel) return;
         panel.hidden = true;
         document.body.classList.remove('magister-assist-open');
+        if (markDismissed) dismissedForCurrentLayout = true;
         if (lastFocus instanceof HTMLElement) lastFocus.focus();
       }
 
-      closeBtn?.addEventListener('click', hidePanel);
+      closeBtn?.addEventListener('click', () => hidePanel(true));
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && panel && !panel.hidden) hidePanel();
@@ -267,8 +269,8 @@
           const absentCount = currentAbsentSet().size;
           const firstAbsentSelected = previousAbsentCount === 0 && absentCount > 0;
 
-          if (firstAbsentSelected && panel?.hidden) showPanel();
-          if (absentCount === 0) hidePanel();
+          if (firstAbsentSelected && panel?.hidden && !dismissedForCurrentLayout) showPanel();
+          if (absentCount === 0) hidePanel(false);
 
           previousAbsentCount = absentCount;
           refreshPanel();
@@ -282,14 +284,16 @@
       }
 
       classSel?.addEventListener('change', () => {
+        dismissedForCurrentLayout = false;
         previousAbsentCount = 0;
-        hidePanel();
+        hidePanel(false);
         setTimeout(refreshPanel, 0);
       });
 
       window.addEventListener('indeling:rendered', () => {
+        dismissedForCurrentLayout = false;
         previousAbsentCount = currentAbsentSet().size;
-        if (previousAbsentCount === 0) hidePanel();
+        hidePanel(false);
         setTimeout(refreshPanel, 0);
       });
     })();
