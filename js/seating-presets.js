@@ -1,31 +1,13 @@
-const STORAGE_KEY = 'lespresentatie.presets.v2';
-const STORAGE_BACKUP_KEY = 'lespresentatie.presets.v2.backup';
-const VERSION = 2;
+const DB_NAME = 'lespresentatie';
+const DB_VERSION = 1;
+const PRESET_STORE = 'presets';
+const META_STORE = 'preset_meta';
 
 function deepClone(value) {
   try {
     return JSON.parse(JSON.stringify(value));
   } catch {
     return value;
-  }
-}
-
-function safeGet(key, fallback = null) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    return JSON.parse(raw);
-  } catch {
-    return fallback;
-  }
-}
-
-function safeSet(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-    return true;
-  } catch {
-    return false;
   }
 }
 
@@ -57,126 +39,180 @@ function downloadJSON(filename, payload) {
   URL.revokeObjectURL(url);
 }
 
-class PresetStore {
+class IndexedPresetStore {
   constructor() {
-    this.state = this.load();
+    this.dbPromise = this.open();
   }
 
-  blank() {
-    return { version: VERSION, classes: {} };
+  open() {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = () => {
+        const db = req.result;
+
+        if (!db.objectStoreNames.contains(PRESET_STORE)) {
+          const presetStore = db.createObjectStore(PRESET_STORE, { keyPath: ['classId', 'name'] });
+          presetStore.createIndex('by_class', 'classId', { unique: false });
+        }
+
+        if (!db.objectStoreNames.contains(META_STORE)) {
+          db.createObjectStore(META_STORE, { keyPath: 'classId' });
+        }
+      };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error || new Error('Kan presetdatabase niet openen.'));
+    });
   }
 
-  normalize(state) {
-    const out = state && typeof state === 'object' ? state : this.blank();
-    if (!out.version) out.version = VERSION;
-    if (!out.classes || typeof out.classes !== 'object') out.classes = {};
-    return out;
+  async tx(storeName, mode, run) {
+    const db = await this.dbPromise;
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction(storeName, mode);
+      const store = tx.objectStore(storeName);
+      let out;
+
+      tx.oncomplete = () => resolve(out);
+      tx.onerror = () => reject(tx.error || new Error('Database-transactie mislukt.'));
+      tx.onabort = () => reject(tx.error || new Error('Database-transactie afgebroken.'));
+
+      try {
+        out = run(store, tx);
+      } catch (err) {
+        tx.abort();
+        reject(err);
+      }
+    });
   }
 
-  load() {
-    const main = safeGet(STORAGE_KEY, null);
-    if (main && main.classes) return this.normalize(main);
-
-    const backup = safeGet(STORAGE_BACKUP_KEY, null);
-    if (backup && backup.classes) {
-      const normalized = this.normalize(backup);
-      this.saveState(normalized);
-      return normalized;
-    }
-
-    return this.blank();
+  reqToPromise(req) {
+    return new Promise((resolve, reject) => {
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error || new Error('Database-aanvraag mislukt.'));
+    });
   }
 
-  saveState(nextState = this.state) {
-    this.state = this.normalize(nextState);
-    const okMain = safeSet(STORAGE_KEY, this.state);
-    const okBackup = safeSet(STORAGE_BACKUP_KEY, this.state);
-    if (!okMain && !okBackup) {
-      throw new Error('Opslaan in browseropslag is mislukt.');
-    }
+  async list(classId) {
+    const db = await this.dbPromise;
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction(PRESET_STORE, 'readonly');
+      const store = tx.objectStore(PRESET_STORE);
+      const idx = store.index('by_class');
+      const req = idx.getAll(IDBKeyRange.only(classId));
+
+      req.onsuccess = () => {
+        const names = (req.result || [])
+          .map((row) => row.name)
+          .filter(Boolean)
+          .sort((a, b) => a.localeCompare(b, 'nl'));
+        resolve(names);
+      };
+      req.onerror = () => reject(req.error || new Error('Ophalen presets mislukt.'));
+    });
   }
 
-  ensureClass(classId) {
-    if (!this.state.classes[classId]) {
-      this.state.classes[classId] = { selectedPreset: '', presets: {} };
-    }
-    if (!this.state.classes[classId].presets || typeof this.state.classes[classId].presets !== 'object') {
-      this.state.classes[classId].presets = {};
-    }
-    return this.state.classes[classId];
+  async get(classId, name) {
+    return this.tx(PRESET_STORE, 'readonly', (store) => {
+      const req = store.get([classId, name]);
+      req.onsuccess = () => {};
+      req.onerror = () => {};
+      return this.reqToPromise(req);
+    });
   }
 
-  list(classId) {
-    const cls = this.state.classes[classId];
-    if (!cls) return [];
-    return Object.keys(cls.presets).sort((a, b) => a.localeCompare(b, 'nl'));
-  }
+  async upsert(classId, name, arrangement) {
+    if (!isArrangementValid(arrangement)) throw new Error('Deze opstelling kan niet worden opgeslagen.');
 
-  get(classId, name) {
-    return this.state.classes?.[classId]?.presets?.[name] || null;
-  }
-
-  upsert(classId, name, arrangement) {
-    const cls = this.ensureClass(classId);
+    const existing = await this.get(classId, name);
     const now = new Date().toISOString();
-    const existing = cls.presets[name];
-    cls.presets[name] = {
+    const record = {
+      classId,
+      name,
       createdAt: existing?.createdAt || now,
       updatedAt: now,
       arrangement: deepClone(arrangement)
     };
-    cls.selectedPreset = name;
-    this.saveState();
+
+    await this.tx(PRESET_STORE, 'readwrite', (store) => {
+      store.put(record);
+    });
+
+    await this.setSelected(classId, name);
   }
 
-  rename(classId, oldName, newName) {
-    const cls = this.ensureClass(classId);
-    if (!cls.presets[oldName]) return false;
-    if (cls.presets[newName]) throw new Error('Naam bestaat al.');
-    cls.presets[newName] = cls.presets[oldName];
-    delete cls.presets[oldName];
-    if (cls.selectedPreset === oldName) cls.selectedPreset = newName;
-    this.saveState();
-    return true;
+  async rename(classId, oldName, newName) {
+    if (oldName === newName) return;
+    const existing = await this.get(classId, oldName);
+    if (!existing) throw new Error('Preset niet gevonden.');
+
+    const clash = await this.get(classId, newName);
+    if (clash) throw new Error('Naam bestaat al.');
+
+    const updated = {
+      ...existing,
+      name: newName,
+      updatedAt: new Date().toISOString()
+    };
+
+    await this.tx(PRESET_STORE, 'readwrite', (store) => {
+      store.delete([classId, oldName]);
+      store.put(updated);
+    });
+
+    const selected = await this.selected(classId);
+    if (selected === oldName) await this.setSelected(classId, newName);
   }
 
-  remove(classId, name) {
-    const cls = this.ensureClass(classId);
-    if (!cls.presets[name]) return false;
-    delete cls.presets[name];
-    if (cls.selectedPreset === name) cls.selectedPreset = '';
-    this.saveState();
-    return true;
+  async remove(classId, name) {
+    await this.tx(PRESET_STORE, 'readwrite', (store) => {
+      store.delete([classId, name]);
+    });
+
+    const selected = await this.selected(classId);
+    if (selected === name) await this.setSelected(classId, '');
   }
 
-  selected(classId) {
-    return this.state.classes?.[classId]?.selectedPreset || '';
+  async selected(classId) {
+    const row = await this.tx(META_STORE, 'readonly', (store) => {
+      const req = store.get(classId);
+      return this.reqToPromise(req);
+    });
+    return row?.selectedPreset || '';
   }
 
-  setSelected(classId, name) {
-    const cls = this.ensureClass(classId);
-    cls.selectedPreset = name || '';
-    this.saveState();
+  async setSelected(classId, name) {
+    await this.tx(META_STORE, 'readwrite', (store) => {
+      store.put({ classId, selectedPreset: name || '' });
+    });
   }
 
-  exportClass(classId) {
-    const cls = this.ensureClass(classId);
+  async exportClass(classId) {
+    const names = await this.list(classId);
+    const presets = {};
+    for (const name of names) {
+      const row = await this.get(classId, name);
+      if (!row) continue;
+      presets[name] = {
+        createdAt: row.createdAt,
+        updatedAt: row.updatedAt,
+        arrangement: deepClone(row.arrangement)
+      };
+    }
+
     return {
-      version: VERSION,
+      version: 3,
       exportedAt: new Date().toISOString(),
       classId,
-      selectedPreset: cls.selectedPreset || '',
-      presets: deepClone(cls.presets)
+      selectedPreset: await this.selected(classId),
+      presets
     };
   }
 
-  importClass(classId, payload, { overwrite = false } = {}) {
+  async importClass(classId, payload, { overwrite = false } = {}) {
     const source = payload?.presets;
     if (!source || typeof source !== 'object') {
       throw new Error('Importbestand bevat geen presets.');
     }
 
-    const cls = this.ensureClass(classId);
     let imported = 0;
     let skippedExisting = 0;
     let skippedInvalid = 0;
@@ -188,28 +224,22 @@ class PresetStore {
         continue;
       }
 
-      if (!overwrite && cls.presets[name]) {
+      const exists = await this.get(classId, name);
+      if (exists && !overwrite) {
         skippedExisting++;
         continue;
       }
 
-      const now = new Date().toISOString();
-      cls.presets[name] = {
-        createdAt: cls.presets[name]?.createdAt || entry?.createdAt || now,
-        updatedAt: now,
-        arrangement: deepClone(arrangement)
-      };
-      cls.selectedPreset = name;
+      await this.upsert(classId, name, arrangement);
       imported++;
     }
 
-    this.saveState();
     return { imported, skippedExisting, skippedInvalid };
   }
 }
 
 export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyArrangement }) {
-  const store = new PresetStore();
+  const store = new IndexedPresetStore();
   const $sel = document.getElementById('presetSelect');
   const $btnLoad = document.getElementById('btnPresetLoad');
   const $btnSave = document.getElementById('btnPresetSave');
@@ -219,7 +249,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
   const $btnExport = document.getElementById('btnPresetExport');
   const $inpImport = document.getElementById('presetImport');
 
-  if (!$sel) return { refreshForClassChange: () => {} };
+  if (!$sel) return { refreshForClassChange: async () => {} };
 
   let isApplying = false;
 
@@ -233,10 +263,10 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     return $sel.options[0].value;
   }
 
-  function refill() {
+  async function refill() {
     const currentClass = classId();
-    const names = store.list(currentClass);
-    const preferred = store.selected(currentClass);
+    const names = await store.list(currentClass);
+    const preferred = await store.selected(currentClass);
 
     $sel.innerHTML = '';
     names.forEach((name) => {
@@ -247,24 +277,25 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     });
 
     if (!names.length) return;
+
     if (preferred && names.includes(preferred)) {
       $sel.value = preferred;
     } else {
       $sel.value = names[0];
-      store.setSelected(currentClass, names[0]);
+      await store.setSelected(currentClass, names[0]);
     }
   }
 
   async function loadNamed(name, { markAsSelected = true } = {}) {
     const currentClass = classId();
-    const data = store.get(currentClass, name);
-    if (!data) throw new Error('Preset niet gevonden.');
-    if (!isArrangementValid(data.arrangement)) throw new Error('Presetdata is ongeldig.');
+    const row = await store.get(currentClass, name);
+    if (!row) throw new Error('Preset niet gevonden.');
+    if (!isArrangementValid(row.arrangement)) throw new Error('Presetdata is ongeldig.');
 
     isApplying = true;
     try {
-      await applyArrangement(deepClone(data.arrangement));
-      if (markAsSelected) store.setSelected(currentClass, name);
+      await applyArrangement(deepClone(row.arrangement));
+      if (markAsSelected) await store.setSelected(currentClass, name);
       $sel.value = name;
     } finally {
       isApplying = false;
@@ -272,41 +303,43 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
   }
 
   async function autoApplySelectedForClass() {
+    if (isApplying) return;
     const currentClass = classId();
-    const name = store.selected(currentClass);
-    if (!name || isApplying) return;
+    const selected = await store.selected(currentClass);
+    if (!selected) return;
+
     try {
-      await loadNamed(name, { markAsSelected: false });
+      await loadNamed(selected, { markAsSelected: false });
     } catch (err) {
       console.warn('Auto-laden van preset mislukt:', err);
     }
   }
 
-  $sel.addEventListener('change', () => {
+  $sel.addEventListener('change', async () => {
     const v = selectedOptionValue();
     if (!v) return;
-    store.setSelected(classId(), v);
+    await store.setSelected(classId(), v);
   });
 
-  $btnSave?.addEventListener('click', () => {
+  $btnSave?.addEventListener('click', async () => {
     const currentClass = classId();
     const name = prompt('Naam voor deze opstelling:');
     if (!name) return;
 
-    const arrangement = getCurrentArrangement();
-    if (!isArrangementValid(arrangement)) {
-      alert('Deze opstelling kan niet worden opgeslagen.');
-      return;
+    try {
+      const arrangement = getCurrentArrangement();
+      if (await store.get(currentClass, name)) {
+        if (!confirm('Bestaat al. Overschrijven?')) return;
+      }
+      await store.upsert(currentClass, name, arrangement);
+      await refill();
+      $sel.value = name;
+    } catch (err) {
+      alert(`Opslaan mislukt: ${err.message || err}`);
     }
-
-    if (store.get(currentClass, name) && !confirm('Bestaat al. Overschrijven?')) return;
-
-    store.upsert(currentClass, name, arrangement);
-    refill();
-    $sel.value = name;
   });
 
-  $btnOverwrite?.addEventListener('click', () => {
+  $btnOverwrite?.addEventListener('click', async () => {
     const currentClass = classId();
     const name = selectedOptionValue();
     if (!name) {
@@ -316,15 +349,14 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
 
     if (!confirm(`Preset "${name}" overschrijven met de huidige indeling?`)) return;
 
-    const arrangement = getCurrentArrangement();
-    if (!isArrangementValid(arrangement)) {
-      alert('Deze opstelling kan niet worden opgeslagen.');
-      return;
+    try {
+      const arrangement = getCurrentArrangement();
+      await store.upsert(currentClass, name, arrangement);
+      await refill();
+      $sel.value = name;
+    } catch (err) {
+      alert(`Overschrijven mislukt: ${err.message || err}`);
     }
-
-    store.upsert(currentClass, name, arrangement);
-    refill();
-    $sel.value = name;
   });
 
   $btnLoad?.addEventListener('click', async () => {
@@ -337,12 +369,11 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     try {
       await loadNamed(name);
     } catch (err) {
-      console.error(err);
       alert(`Laden mislukt: ${err.message || err}`);
     }
   });
 
-  $btnRename?.addEventListener('click', () => {
+  $btnRename?.addEventListener('click', async () => {
     const currentClass = classId();
     const current = selectedOptionValue();
     if (!current) {
@@ -354,15 +385,15 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     if (!newName || newName === current) return;
 
     try {
-      store.rename(currentClass, current, newName);
-      refill();
+      await store.rename(currentClass, current, newName);
+      await refill();
       $sel.value = newName;
     } catch (err) {
       alert(`Hernoemen mislukt: ${err.message || err}`);
     }
   });
 
-  $btnDelete?.addEventListener('click', () => {
+  $btnDelete?.addEventListener('click', async () => {
     const currentClass = classId();
     const current = selectedOptionValue();
     if (!current) {
@@ -371,15 +402,13 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
     if (!confirm(`Preset "${current}" verwijderen?`)) return;
 
-    store.remove(currentClass, current);
-    refill();
+    await store.remove(currentClass, current);
+    await refill();
   });
 
-  $btnExport?.addEventListener('click', () => {
-    const currentClass = classId();
-    const payload = store.exportClass(currentClass);
-    const filename = `opstellingen-${currentClass}.json`;
-    downloadJSON(filename, payload);
+  $btnExport?.addEventListener('click', async () => {
+    const payload = await store.exportClass(classId());
+    downloadJSON(`opstellingen-${classId()}.json`, payload);
   });
 
   $inpImport?.addEventListener('change', async (e) => {
@@ -390,8 +419,8 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       const text = await file.text();
       const parsed = JSON.parse(text);
       const overwrite = confirm('Bestaande presets met dezelfde naam overschrijven?');
-      const result = store.importClass(classId(), parsed, { overwrite });
-      refill();
+      const result = await store.importClass(classId(), parsed, { overwrite });
+      await refill();
       alert(`Import klaar: ${result.imported} toegevoegd, ${result.skippedExisting} overgeslagen, ${result.skippedInvalid} ongeldig.`);
     } catch (err) {
       alert(`Import mislukt: ${err.message || err}`);
@@ -401,14 +430,14 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
   });
 
   async function refreshForClassChange() {
-    refill();
+    await refill();
     await autoApplySelectedForClass();
   }
 
-  refill();
-  setTimeout(() => {
-    autoApplySelectedForClass();
-  }, 0);
+  void (async () => {
+    await refill();
+    await autoApplySelectedForClass();
+  })();
 
   return { refreshForClassChange };
 }

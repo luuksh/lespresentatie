@@ -1,7 +1,7 @@
 // js/indeling.js
-import { initPresetUI } from './seating-presets.js?v=20260222-20';
+import { initPresetUI } from './seating-presets.js?v=20260222-21';
 
-const MODULE_VERSION = '20260222-20';
+const MODULE_VERSION = '20260222-21';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
