@@ -260,7 +260,7 @@
       closeBtn?.addEventListener('click', () => hidePanel(true));
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && panel && !panel.hidden) hidePanel();
+        if (e.key === 'Escape' && panel && !panel.hidden) hidePanel(true);
       });
 
       const grid = document.getElementById(GRID_ID);
@@ -296,6 +296,10 @@
         hidePanel(false);
         setTimeout(refreshPanel, 0);
       });
+
+      // Start altijd verborgen; pas tonen bij eerste absentieactie.
+      hidePanel(false);
+      previousAbsentCount = currentAbsentSet().size;
     })();
   </script>
 
