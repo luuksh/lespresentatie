@@ -1,4 +1,5 @@
 import { kiesIndeling } from './indeling.js';
+import { loadLastDraftMeta } from './draft-store.js?v=20260222-14';
 
 document.addEventListener("DOMContentLoaded", async () => {
   const indelingSelect = document.getElementById("indelingSelect");
@@ -43,7 +44,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Herstel primair: laatst bewerkte concept (klas + indelingstype)
   let draftMeta = null;
-  try { draftMeta = JSON.parse(localStorage.getItem(LAST_DRAFT_META_KEY) || "null"); } catch {}
+  try { draftMeta = await loadLastDraftMeta(); } catch {}
+  if (!draftMeta) {
+    try { draftMeta = JSON.parse(localStorage.getItem(LAST_DRAFT_META_KEY) || "null"); } catch {}
+  }
 
   if (draftMeta?.classId && hasClassOption(draftMeta.classId)) {
     klasSelect.value = draftMeta.classId;

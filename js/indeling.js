@@ -1,7 +1,8 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
+import { saveDraft, loadDraft } from './draft-store.js?v=20260222-14';
 
-const MODULE_VERSION = '20260222-13';
+const MODULE_VERSION = '20260222-14';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -337,20 +338,27 @@ function draftKey(classId, type) {
   return `${DRAFT_PREFIX}.${classId}.${type}`;
 }
 
-function saveDraftArrangement() {
+async function saveDraftArrangement() {
   const arr = getCurrentArrangement();
   if (!arr || !arr.type) return;
   const classId = arr.klasId || activeClassId();
   const type = arr.type || activeType();
   const key = draftKey(classId, type);
   const payload = { savedAt: new Date().toISOString(), arrangement: arr };
+  try {
+    await saveDraft(classId, type, arr, payload.savedAt);
+  } catch {}
   localStorage.setItem(key, JSON.stringify(payload));
   try {
     localStorage.setItem(LAST_DRAFT_META_KEY, JSON.stringify({ classId, type, savedAt: payload.savedAt }));
   } catch {}
 }
 
-function loadDraftArrangement(classId, type) {
+async function loadDraftArrangement(classId, type) {
+  try {
+    const fromDb = await loadDraft(classId, type);
+    if (fromDb) return fromDb;
+  } catch {}
   const key = draftKey(classId, type);
   try {
     const raw = localStorage.getItem(key);
@@ -358,8 +366,8 @@ function loadDraftArrangement(classId, type) {
     const parsed = JSON.parse(raw);
     return parsed?.arrangement || null;
   } catch {
-    return null;
-  }
+  return null;
+}
 }
 
 /**
@@ -503,7 +511,7 @@ async function applyArrangement(payload) {
     queueDraftSave();
     if (restoringDraft || restoredDrafts.has(key)) return;
 
-    const draft = loadDraftArrangement(klas, type);
+    const draft = await loadDraftArrangement(klas, type);
     if (!draft) return;
 
     restoringDraft = true;
