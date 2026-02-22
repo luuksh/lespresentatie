@@ -24,12 +24,6 @@ export function drietallenIndeling(leerlingen, { shuffle = false } = {}) {
     topic.textContent = '+ onderwerp';
     wrap.appendChild(topic);
 
-    // ▼ Badge met groepsnummer
-    const badge = document.createElement('div');
-    badge.className = 'group-badge';
-    badge.textContent = String(idx + 1);
-    wrap.appendChild(badge);
-
     g.forEach((naam, seatIdx) => {
       const d = document.createElement('div');
       d.className = 'tafel';

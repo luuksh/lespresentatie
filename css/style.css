@@ -881,23 +881,6 @@ select:focus {
 .groepje[data-size="5"],
 .groepje[data-size="6"] { grid-template-rows: repeat(3, auto); }
 
-.group-badge {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: 10px;
-  font-weight: 900;
-  background: linear-gradient(180deg, var(--primaire-kleur), var(--hover-kleur));
-  box-shadow: 0 6px 10px rgba(35, 88, 184, 0.24);
-  pointer-events: none;
-}
-
 .presentatie-lijst {
   list-style: none;
   margin: 0;
@@ -930,16 +913,20 @@ select:focus {
 }
 
 .presentatie-item .nr {
-  width: 24px;
-  height: 24px;
+  min-width: 34px;
+  height: 26px;
+  padding: 0 8px;
   border-radius: 999px;
+  border: 1px solid #8fb1df;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primaire-kleur);
-  color: #fff;
-  font-size: 11px;
+  background: linear-gradient(180deg, #e9f2ff, #cfe2ff);
+  color: #264a78;
+  font-size: 12px;
   font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 #plattegrond .tafel,
@@ -1103,7 +1090,6 @@ body.drawer-open .side-drawer.left {
 
 .plattegrond-frame.mirror #plattegrond .tafel,
 .plattegrond-frame.mirror #plattegrond .presentatie-item,
-.plattegrond-frame.mirror #plattegrond .group-badge,
 .plattegrond-frame.mirror .bureau-rij .leraar-bureau,
 .plattegrond-frame.mirror #plattegrond .groepje > * {
   transform: rotate(180deg);

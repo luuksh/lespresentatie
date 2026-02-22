@@ -25,12 +25,6 @@ export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
     topic.textContent = "+ onderwerp";
     groep.appendChild(topic);
 
-    // ▼ Badge met groepsnummer
-    const badge = document.createElement("div");
-    badge.className = "group-badge";
-    badge.textContent = String(idx + 1);
-    groep.appendChild(badge);
-
     g.forEach((naam, seatIdx) => {
       const kaart = document.createElement("div");
       kaart.className = "tafel";

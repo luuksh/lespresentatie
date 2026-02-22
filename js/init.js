@@ -36,30 +36,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     klasSelect.innerHTML = '<option>Fout bij laden</option>';
   }
 
-  // 🔢 Badges voor groepjes: zet nummers als er .groepje-containers zijn
-  function applyGroupNumbers() {
-    const container = document.getElementById('plattegrond');
-    if (!container) return;
-
-    // oude badges verwijderen
-    container.querySelectorAll('.group-badge').forEach(b => b.remove());
-
-    const groups = container.querySelectorAll('.groepje');
-    if (!groups.length) return;
-
-    let n = 1;
-    groups.forEach(g => {
-      // zekerheid: zorg dat we absoluut kunnen positioneren binnen de groep
-      if (getComputedStyle(g).position === 'static') {
-        g.style.position = 'relative';
-      }
-      const badge = document.createElement('div');
-      badge.className = 'group-badge';
-      badge.textContent = n++;
-      g.appendChild(badge);
-    });
-  }
-
   function dispatchRendered(type) {
     window.dispatchEvent(new CustomEvent('indeling:rendered', {
       detail: { type, timestamp: Date.now() }
@@ -103,7 +79,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       grid.innerHTML = "";
       await kiesIndeling(type, klasSelect.value); // tekent; standaard random in indeling.js
       setTimeout(() => {
-        applyGroupNumbers();  // type-onafhankelijk: zet nummers zodra er .groepje is
         grid.style.opacity = 1;
         dispatchRendered(type);
       }, 0);
