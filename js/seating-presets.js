@@ -421,6 +421,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
   const $btnDelete = document.getElementById('btnPresetDelete');
   const $btnExport = document.getElementById('btnPresetExport');
   const $inpImport = document.getElementById('presetImport');
+  let autoLoading = false;
 
   function refill() {
     const classId = getCurrentClassId();
@@ -452,6 +453,37 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
       }
     }
     return $sel.options[0].value;
+  }
+
+  function isArrangementLoadable(arr) {
+    return !!(
+      arr &&
+      (
+        (arr.type === 'presentatievolgorde' && Array.isArray(arr.order) && arr.order.length > 0) ||
+        (Array.isArray(arr.seats) && arr.seats.length > 0 && arr.seats.every(x => x && ('studentId' in x)))
+      )
+    );
+  }
+
+  async function applyLastUsedPreset(classId) {
+    if (autoLoading) return false;
+    const last = store.lastUsed(classId);
+    if (!last) return false;
+    const data = store.get(classId, last);
+    if (!data || !isArrangementLoadable(data.arrangement)) return false;
+
+    autoLoading = true;
+    try {
+      await applyArrangement(deepCloneJSON(data.arrangement));
+      if ($sel) $sel.value = last;
+      emitPresetDiag('auto-load', { classId, name: last, ok: true });
+      return true;
+    } catch (e) {
+      emitPresetDiag('auto-load', { classId, name: last, ok: false, error: String(e?.message || e) });
+      return false;
+    } finally {
+      autoLoading = false;
+    }
   }
 
   // Opslaan als… => opslaan + DIRECT Word-export (ongewijzigd)
@@ -511,12 +543,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
 
     // Hardere validatie om random fallback te voorkomen
     const arr = data.arrangement;
-    const valid =
-      arr &&
-      (
-        (arr.type === 'presentatievolgorde' && Array.isArray(arr.order) && arr.order.length > 0) ||
-        (Array.isArray(arr.seats) && arr.seats.length > 0 && arr.seats.every(x => x && ('studentId' in x)))
-      );
+    const valid = isArrangementLoadable(arr);
 
     if (!valid) {
       console.warn('Ongeldige/lege arrangement-data bij laden:', arr);
@@ -526,7 +553,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
 
     // Pas toe (met diepe kopie) en onthoud als laatst gebruikt
     try {
-      await applyArrangement(structuredClone(arr));
+      await applyArrangement(deepCloneJSON(arr));
       store.setLastUsed(classId, current);
       emitPresetDiag('ui-load', { classId, name: current, ok: true });
     } catch (e) {
@@ -591,7 +618,11 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
   });
 
-  function refreshForClassChange() { refill(); }
+  async function refreshForClassChange() {
+    refill();
+    await applyLastUsedPreset(getCurrentClassId());
+  }
   refill();
+  setTimeout(() => { applyLastUsedPreset(getCurrentClassId()); }, 0);
   return { refreshForClassChange };
 }
