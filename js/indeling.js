@@ -1,7 +1,7 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
-const MODULE_VERSION = '20260222-9';
+const MODULE_VERSION = '20260222-10';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -98,9 +98,8 @@ function formatDateLabel(value) {
   const d = new Date(`${raw}T00:00:00`);
   if (Number.isNaN(d.getTime())) return raw;
   return new Intl.DateTimeFormat('nl-NL', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
+    day: 'numeric',
+    month: 'long'
   }).format(d);
 }
 
