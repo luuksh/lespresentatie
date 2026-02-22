@@ -52,7 +52,7 @@ body {
   background:
     radial-gradient(1200px 460px at 50% -120px, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0) 66%),
     linear-gradient(180deg, #eef4fc 0%, #dfe8f4 52%, #d3deeb 100%);
-  padding: 10px calc(var(--timer-width) + 22px) 10px 12px;
+  padding: 10px 12px;
   position: relative;
 }
 
@@ -81,8 +81,8 @@ body::after {
 
 #opdrachtMount {
   margin: 0 auto 10px;
-  width: min(1320px, calc(100vw - var(--timer-width) - 56px));
-  max-width: calc(100vw - var(--timer-width) - 56px);
+  width: min(1320px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
   border-radius: 18px;
   border: 4px solid var(--wood-3);
   background: linear-gradient(150deg, #edcc9a, #c38b4c 50%, #9f6f34);
@@ -505,7 +505,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: min(1320px, calc(100vw - var(--timer-width) - 56px));
+  width: min(1320px, calc(100vw - 24px));
   margin: 0 auto;
 }
 
@@ -516,7 +516,7 @@ body::after {
 
 .plattegrond-frame {
   width: fit-content;
-  max-width: calc(100vw - var(--timer-width) - 56px);
+  max-width: calc(100vw - 24px);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-xl);
   background:
@@ -671,7 +671,7 @@ select:focus {
 }
 
 .grid-wrapper {
-  min-width: min(980px, calc(100vw - var(--timer-width) - 180px));
+  min-width: min(980px, calc(100vw - 180px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1136,7 +1136,7 @@ body.drawer-open .side-drawer.left {
   body { overflow: auto; }
 
   .grid-wrapper {
-    min-width: min(910px, calc(100vw - var(--timer-width) - 150px));
+    min-width: min(910px, calc(100vw - 150px));
   }
 
   .grid.groepjes-layout {
