@@ -2,6 +2,7 @@
 // Presets via localStorage + export naar Word (.doc) met publieksvriendelijke opmaak
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
+const STORAGE_BACKUP_KEY = 'lespresentatie.presets.v1.backup';
 const VERSION = 1;
 
 /**
@@ -22,23 +23,46 @@ const VERSION = 1;
 class PresetStore {
   constructor(storageKey = STORAGE_KEY) {
     this.key = storageKey;
+    this.backupKey = STORAGE_BACKUP_KEY;
     this.state = this.#load();
   }
   #blank() { return { version: VERSION, classes: {} }; }
-  #load() {
+  #isValidState(obj) {
+    return !!obj && typeof obj === 'object' && !!obj.classes && typeof obj.classes === 'object';
+  }
+  #normalizeState(obj) {
+    const out = obj && typeof obj === 'object' ? obj : this.#blank();
+    if (!out.version) out.version = VERSION;
+    if (!out.classes || typeof out.classes !== 'object') out.classes = {};
+    return out;
+  }
+  #parse(raw) {
+    if (!raw) return null;
     try {
-      const raw = localStorage.getItem(this.key);
-      if (!raw) return this.#blank();
       const parsed = JSON.parse(raw);
-      if (!parsed.version) parsed.version = 1;
-      if (!parsed.classes) parsed.classes = {};
-      return parsed;
-    } catch (e) {
-      console.warn('PresetStore load error, resetting', e);
-      return this.#blank();
+      if (!this.#isValidState(parsed)) return null;
+      return this.#normalizeState(parsed);
+    } catch {
+      return null;
     }
   }
-  #save() { localStorage.setItem(this.key, JSON.stringify(this.state)); }
+  #load() {
+    const primary = this.#parse(localStorage.getItem(this.key));
+    if (primary) return primary;
+
+    const backup = this.#parse(localStorage.getItem(this.backupKey));
+    if (backup) {
+      try { localStorage.setItem(this.key, JSON.stringify(backup)); } catch {}
+      return backup;
+    }
+
+    return this.#blank();
+  }
+  #save() {
+    const payload = JSON.stringify(this.state);
+    localStorage.setItem(this.key, payload);
+    try { localStorage.setItem(this.backupKey, payload); } catch {}
+  }
 
   list(classId) {
     const cls = this.state.classes[classId];
