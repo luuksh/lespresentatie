@@ -3,7 +3,13 @@
 
 const STORAGE_KEY = 'lespresentatie.presets.v1';
 const STORAGE_BACKUP_KEY = 'lespresentatie.presets.v1.backup';
+const STORAGE_SESSION_KEY = 'lespresentatie.presets.v1.session';
 const VERSION = 1;
+let memoryPresetState = null;
+
+function deepCloneJSON(value) {
+  try { return JSON.parse(JSON.stringify(value)); } catch { return value; }
+}
 
 /**
  * localStorage schema
@@ -24,6 +30,7 @@ class PresetStore {
   constructor(storageKey = STORAGE_KEY) {
     this.key = storageKey;
     this.backupKey = STORAGE_BACKUP_KEY;
+    this.sessionKey = STORAGE_SESSION_KEY;
     this.state = this.#load();
   }
   #blank() { return { version: VERSION, classes: {} }; }
@@ -46,22 +53,46 @@ class PresetStore {
       return null;
     }
   }
+  #safeGet(storage, key) {
+    try { return storage.getItem(key); } catch { return null; }
+  }
+  #safeSet(storage, key, value) {
+    try { storage.setItem(key, value); return true; } catch { return false; }
+  }
   #load() {
-    const primary = this.#parse(localStorage.getItem(this.key));
+    const primary = this.#parse(this.#safeGet(localStorage, this.key));
     if (primary) return primary;
 
-    const backup = this.#parse(localStorage.getItem(this.backupKey));
-    if (backup) {
-      try { localStorage.setItem(this.key, JSON.stringify(backup)); } catch {}
-      return backup;
+    const backup = this.#parse(this.#safeGet(localStorage, this.backupKey));
+    if (backup) return this.#repairAndReturn(backup);
+
+    const session = this.#parse(this.#safeGet(sessionStorage, this.sessionKey));
+    if (session) return this.#repairAndReturn(session);
+
+    if (memoryPresetState && this.#isValidState(memoryPresetState)) {
+      return this.#repairAndReturn(this.#normalizeState(deepCloneJSON(memoryPresetState)));
     }
 
     return this.#blank();
   }
+  #repairAndReturn(state) {
+    const normalized = this.#normalizeState(state);
+    const payload = JSON.stringify(normalized);
+    this.#safeSet(localStorage, this.key, payload);
+    this.#safeSet(localStorage, this.backupKey, payload);
+    this.#safeSet(sessionStorage, this.sessionKey, payload);
+    memoryPresetState = normalized;
+    return normalized;
+  }
   #save() {
     const payload = JSON.stringify(this.state);
-    localStorage.setItem(this.key, payload);
-    try { localStorage.setItem(this.backupKey, payload); } catch {}
+    const wrotePrimary = this.#safeSet(localStorage, this.key, payload);
+    this.#safeSet(localStorage, this.backupKey, payload);
+    this.#safeSet(sessionStorage, this.sessionKey, payload);
+    memoryPresetState = this.#normalizeState(deepCloneJSON(this.state));
+    if (!wrotePrimary) {
+      console.warn('PresetStore: localStorage write blocked, using fallback stores.');
+    }
   }
 
   list(classId) {
