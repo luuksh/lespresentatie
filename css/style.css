@@ -1072,6 +1072,30 @@ body.drawer-open .side-drawer.left {
   cursor: pointer;
 }
 
+#presetDebugBar {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 120;
+  width: min(360px, calc(100vw - 24px));
+  border: 1px solid rgba(129, 159, 201, 0.45);
+  border-radius: 12px;
+  background: rgba(8, 22, 38, 0.84);
+  color: #e5efff;
+  padding: 8px 10px;
+  font-size: 11px;
+  line-height: 1.35;
+  box-shadow: 0 8px 20px rgba(5, 12, 24, 0.42);
+  backdrop-filter: blur(4px);
+}
+
+#presetDebugBar b {
+  color: #b7d3ff;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .card {
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
@@ -1162,6 +1186,7 @@ body.drawer-open .side-drawer.left {
 
   #opdrachtMount,
   #timerDock,
+  #presetDebugBar,
   .side-drawer,
   .drawer-quick-toggle {
     display: none !important;

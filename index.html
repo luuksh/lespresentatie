@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <link rel="stylesheet" href="css/style.css?v=20260222-15" />
+  <link rel="stylesheet" href="css/style.css?v=20260222-16" />
 
-  <script type="module" src="js/indeling.js?v=20260222-15"></script>
-  <script type="module" src="js/init.js?v=20260222-15"></script>
+  <script type="module" src="js/indeling.js?v=20260222-16"></script>
+  <script type="module" src="js/init.js?v=20260222-16"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
@@ -140,6 +140,58 @@
     </div>
 
   </aside>
+
+  <div id="presetDebugBar" aria-live="polite">
+    <b>Preset Debug</b><br />
+    laden...
+  </div>
+
+  <script>
+    (() => {
+      const el = document.getElementById('presetDebugBar');
+      if (!el) return;
+
+      const MAIN = 'lespresentatie.presets.v1';
+      const BACKUP = 'lespresentatie.presets.v1.backup';
+      const SESSION = 'lespresentatie.presets.v1.session';
+
+      function safeGet(storage, key) {
+        try { return storage.getItem(key); } catch { return null; }
+      }
+
+      function parse(raw) {
+        if (!raw) return null;
+        try { return JSON.parse(raw); } catch { return null; }
+      }
+
+      function countPresets(state) {
+        if (!state?.classes) return 0;
+        let total = 0;
+        Object.values(state.classes).forEach(cls => {
+          total += Object.keys(cls?.presets || {}).length;
+        });
+        return total;
+      }
+
+      function update(extra = '') {
+        const main = parse(safeGet(localStorage, MAIN));
+        const backup = parse(safeGet(localStorage, BACKUP));
+        const session = parse(safeGet(sessionStorage, SESSION));
+        const line1 = `main:${main ? 'ok' : '-'} backup:${backup ? 'ok' : '-'} session:${session ? 'ok' : '-'}`;
+        const line2 = `presets main:${countPresets(main)} backup:${countPresets(backup)} session:${countPresets(session)}`;
+        el.innerHTML = `<b>Preset Debug</b><br>${line1}<br>${line2}${extra ? `<br>${extra}` : ''}`;
+      }
+
+      window.addEventListener('preset:diag', (e) => {
+        const d = e.detail || {};
+        const info = `${d.event || 'event'} ${d.source || ''}`.trim();
+        update(info);
+      });
+
+      update('start');
+      setInterval(() => update('poll'), 2500);
+    })();
+  </script>
 
   <script>
     (() => {

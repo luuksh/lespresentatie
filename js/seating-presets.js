@@ -11,6 +11,13 @@ function deepCloneJSON(value) {
   try { return JSON.parse(JSON.stringify(value)); } catch { return value; }
 }
 
+function emitPresetDiag(event, details = {}) {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new CustomEvent('preset:diag', {
+    detail: { event, at: new Date().toISOString(), ...details }
+  }));
+}
+
 /**
  * localStorage schema
  * {
@@ -61,18 +68,29 @@ class PresetStore {
   }
   #load() {
     const primary = this.#parse(this.#safeGet(localStorage, this.key));
-    if (primary) return primary;
+    if (primary) {
+      emitPresetDiag('load', { source: 'localStorage.primary' });
+      return primary;
+    }
 
     const backup = this.#parse(this.#safeGet(localStorage, this.backupKey));
-    if (backup) return this.#repairAndReturn(backup);
+    if (backup) {
+      emitPresetDiag('load', { source: 'localStorage.backup' });
+      return this.#repairAndReturn(backup);
+    }
 
     const session = this.#parse(this.#safeGet(sessionStorage, this.sessionKey));
-    if (session) return this.#repairAndReturn(session);
+    if (session) {
+      emitPresetDiag('load', { source: 'sessionStorage' });
+      return this.#repairAndReturn(session);
+    }
 
     if (memoryPresetState && this.#isValidState(memoryPresetState)) {
+      emitPresetDiag('load', { source: 'memory' });
       return this.#repairAndReturn(this.#normalizeState(deepCloneJSON(memoryPresetState)));
     }
 
+    emitPresetDiag('load', { source: 'blank' });
     return this.#blank();
   }
   #repairAndReturn(state) {
@@ -87,11 +105,18 @@ class PresetStore {
   #save() {
     const payload = JSON.stringify(this.state);
     const wrotePrimary = this.#safeSet(localStorage, this.key, payload);
-    this.#safeSet(localStorage, this.backupKey, payload);
-    this.#safeSet(sessionStorage, this.sessionKey, payload);
+    const wroteBackup = this.#safeSet(localStorage, this.backupKey, payload);
+    const wroteSession = this.#safeSet(sessionStorage, this.sessionKey, payload);
     memoryPresetState = this.#normalizeState(deepCloneJSON(this.state));
+    emitPresetDiag('save', {
+      primary: wrotePrimary,
+      backup: wroteBackup,
+      session: wroteSession,
+      classes: Object.keys(this.state.classes || {}).length
+    });
     if (!wrotePrimary) {
       console.warn('PresetStore: localStorage write blocked, using fallback stores.');
+      emitPresetDiag('warning', { message: 'localStorage primary write blocked' });
     }
   }
 
@@ -444,6 +469,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     }
 
     store.upsert(classId, name, arrangement);
+    emitPresetDiag('ui-save', { classId, name });
     refill();
 
     try { exportPresetAsDOC(classId, name, arrangement); }
@@ -463,6 +489,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     if (!isArrangementValid(arrangement)) { alert('Ongeldige opstelling.'); return; }
 
     store.upsert(classId, current, arrangement);
+    emitPresetDiag('ui-overwrite', { classId, name: current });
     refill();
 
     try { exportPresetAsDOC(classId, current, arrangement); }
@@ -501,8 +528,10 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     try {
       await applyArrangement(structuredClone(arr));
       store.setLastUsed(classId, current);
+      emitPresetDiag('ui-load', { classId, name: current, ok: true });
     } catch (e) {
       console.warn('Preset laden faalde:', e);
+      emitPresetDiag('ui-load', { classId, name: current, ok: false, error: String(e?.message || e) });
       alert('Laden van preset is mislukt. Probeer opnieuw.');
     }
   });
