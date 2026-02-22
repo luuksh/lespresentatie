@@ -13,6 +13,14 @@ export function presentatievolgordeIndeling(leerlingen = []) {
   leerlingen.forEach((naam, idx) => {
     const li = document.createElement('li');
     li.className = 'presentatie-item';
+    li.dataset.groupId = `volg${idx + 1}`;
+
+    const topic = document.createElement('div');
+    topic.className = 'presentatie-topic topic-chip is-empty';
+    topic.dataset.topicKey = li.dataset.groupId;
+    topic.dataset.topic = '';
+    topic.tabIndex = 0;
+    topic.textContent = '+ onderwerp';
 
     const nr = document.createElement('span');
     nr.className = 'nr';
@@ -22,6 +30,7 @@ export function presentatievolgordeIndeling(leerlingen = []) {
     nm.className = 'naam';
     nm.textContent = naam;
 
+    li.appendChild(topic);
     li.appendChild(nr);
     li.appendChild(nm);
     ol.appendChild(li);

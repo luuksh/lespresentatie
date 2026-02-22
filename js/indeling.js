@@ -75,6 +75,93 @@ if (typeof window !== 'undefined') {
 
 /* ---------- Presets: hooks ---------- */
 
+function topicElements() {
+  return Array.from(document.querySelectorAll('#plattegrond [data-topic-key]'));
+}
+
+function setTopicChipValue(chip, value) {
+  const text = String(value || '').trim();
+  chip.dataset.topic = text;
+  chip.classList.toggle('is-empty', !text);
+  chip.textContent = text || '+ onderwerp';
+}
+
+function readGroupTopics() {
+  return topicElements()
+    .map(el => ({
+      key: el.dataset.topicKey || '',
+      topic: (el.dataset.topic || '').trim()
+    }))
+    .filter(item => item.key && item.topic);
+}
+
+function applyGroupTopics(topics = []) {
+  if (!Array.isArray(topics) || !topics.length) return;
+  const map = new Map(topics.map(t => [String(t.key || ''), String(t.topic || '')]));
+  topicElements().forEach(el => {
+    const next = map.get(String(el.dataset.topicKey || ''));
+    if (next != null) setTopicChipValue(el, next);
+  });
+}
+
+function beginTopicEdit(chip) {
+  if (!chip || chip.classList.contains('editing')) return;
+  const current = String(chip.dataset.topic || '');
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'topic-edit-input';
+  input.value = current;
+  input.placeholder = 'Onderwerp...';
+
+  chip.classList.add('editing');
+  chip.replaceChildren(input);
+  input.focus();
+  input.select();
+
+  const cancel = () => {
+    chip.classList.remove('editing');
+    setTopicChipValue(chip, current);
+  };
+
+  const commit = () => {
+    chip.classList.remove('editing');
+    setTopicChipValue(chip, input.value);
+  };
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      commit();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      cancel();
+    }
+  });
+
+  input.addEventListener('blur', commit, { once: true });
+}
+
+function initTopicEditing() {
+  const grid = document.getElementById('plattegrond');
+  if (!grid || grid.dataset.topicEditorInit === '1') return;
+  grid.dataset.topicEditorInit = '1';
+
+  grid.addEventListener('click', (e) => {
+    const chip = e.target.closest('[data-topic-key]');
+    if (!chip || !grid.contains(chip)) return;
+    beginTopicEdit(chip);
+  });
+
+  grid.addEventListener('keydown', (e) => {
+    const chip = e.target.closest('[data-topic-key]');
+    if (!chip || !grid.contains(chip)) return;
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      beginTopicEdit(chip);
+    }
+  });
+}
+
 /**
  * Leest de huidige opstelling uit de DOM (#plattegrond).
  * Geeft een object terug met type + seats of order.
@@ -94,7 +181,8 @@ function getCurrentArrangement() {
       klasId,
       savedAt: new Date().toISOString(),
       order: items,
-      seats: []
+      seats: [],
+      groupTopics: readGroupTopics()
     };
   }
 
@@ -108,7 +196,8 @@ function getCurrentArrangement() {
     klasId,
     savedAt: new Date().toISOString(),
     seats,
-    order: []
+    order: [],
+    groupTopics: readGroupTopics()
   };
 }
 
@@ -168,6 +257,14 @@ async function applyArrangement(payload) {
       payload.order.forEach((naam, idx) => {
         const li = document.createElement('li');
         li.className = 'presentatie-item';
+        li.dataset.groupId = `volg${idx + 1}`;
+
+        const topic = document.createElement('div');
+        topic.className = 'presentatie-topic topic-chip is-empty';
+        topic.dataset.topicKey = li.dataset.groupId;
+        topic.dataset.topic = '';
+        topic.tabIndex = 0;
+        topic.textContent = '+ onderwerp';
 
         const nr = document.createElement('span');
         nr.className = 'nr';
@@ -177,12 +274,15 @@ async function applyArrangement(payload) {
         nm.className = 'naam';
         nm.textContent = naam;
 
+        li.appendChild(topic);
         li.appendChild(nr);
         li.appendChild(nm);
         ol.appendChild(li);
       });
       grid.appendChild(ol);
     }
+
+    applyGroupTopics(payload.groupTopics || []);
 
     window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
       detail: { type, timestamp: Date.now() }
@@ -202,6 +302,8 @@ async function applyArrangement(payload) {
     const el = byId.get(key) || byIdx.get(i);
     if (el) el.textContent = item.studentId || '';
   });
+
+  applyGroupTopics(payload.groupTopics || []);
 
   window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
     detail: { type, timestamp: Date.now() }
@@ -224,6 +326,7 @@ async function applyArrangement(payload) {
     getCurrentArrangement,
     applyArrangement
   });
+  initTopicEditing();
 
   // bij klaswissel: lijst met presets verversen + laatst gebruikte onthouden
   klasSel.addEventListener('change', () => {

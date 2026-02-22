@@ -13,8 +13,17 @@ export function groepjesIndeling(leerlingen, { shuffle = false } = {}) {
   groups.forEach((g, idx) => {
     const groep = document.createElement("div");
     groep.className = "groepje";
+    groep.dataset.groupId = `groep${idx + 1}`;
     // 4 of 5 (CSS gebruikt dit om het 5e tafeltje onder te zetten)
     groep.dataset.size = String(g.length);
+
+    const topic = document.createElement("div");
+    topic.className = "group-topic topic-chip is-empty";
+    topic.dataset.topicKey = groep.dataset.groupId;
+    topic.dataset.topic = "";
+    topic.tabIndex = 0;
+    topic.textContent = "+ onderwerp";
+    groep.appendChild(topic);
 
     // ▼ Badge met groepsnummer
     const badge = document.createElement("div");

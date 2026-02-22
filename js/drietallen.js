@@ -13,7 +13,16 @@ export function drietallenIndeling(leerlingen, { shuffle = false } = {}) {
   groups.forEach((g, idx) => {
     const wrap = document.createElement('div');
     wrap.className = 'groepje';
+    wrap.dataset.groupId = `groep${idx + 1}`;
     wrap.dataset.size = String(g.length); // 3 of 4
+
+    const topic = document.createElement('div');
+    topic.className = 'group-topic topic-chip is-empty';
+    topic.dataset.topicKey = wrap.dataset.groupId;
+    topic.dataset.topic = '';
+    topic.tabIndex = 0;
+    topic.textContent = '+ onderwerp';
+    wrap.appendChild(topic);
 
     // ▼ Badge met groepsnummer
     const badge = document.createElement('div');
