@@ -808,7 +808,7 @@ select:focus {
   position: relative;
   width: 206px;
   min-height: 120px;
-  padding: 22px 10px 10px;
+  padding: 10px;
   border-radius: var(--radius-md);
   border: 1px dashed #c3d2e9;
   background: linear-gradient(180deg, #fcfeff, #eef5ff);
@@ -820,14 +820,11 @@ select:focus {
 }
 
 .group-meta {
-  position: absolute;
-  left: 32px;
-  right: 8px;
-  top: -12px;
+  position: static;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
-  z-index: 4;
+  margin: 0 0 6px;
 }
 
 .topic-chip {
@@ -847,7 +844,7 @@ select:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: text;
-  z-index: 4;
+  z-index: 1;
 }
 
 .topic-chip.is-empty,
@@ -923,11 +920,12 @@ select:focus {
 .presentatie-item {
   position: relative;
   break-inside: avoid;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 8px;
   margin: 0 0 8px;
-  padding: 30px 8px 8px;
+  padding: 8px;
   border-radius: 11px;
   border: 1px solid var(--line);
   background: #fff;
@@ -937,13 +935,12 @@ select:focus {
 }
 
 .presentatie-meta {
-  position: absolute;
-  left: 8px;
-  right: 8px;
-  top: 5px;
+  position: static;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
+  margin-bottom: 2px;
 }
 
 .presentatie-topic.topic-chip {

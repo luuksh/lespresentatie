@@ -1,7 +1,7 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
 
-const MODULE_VERSION = '20260222-8';
+const MODULE_VERSION = '20260222-9';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -195,6 +195,9 @@ function beginDateEdit(chip) {
   chip.classList.add('editing');
   chip.replaceChildren(input);
   input.focus();
+  if (typeof input.showPicker === 'function') {
+    try { input.showPicker(); } catch (_) { /* no-op */ }
+  }
 
   const cancel = () => {
     chip.classList.remove('editing');
