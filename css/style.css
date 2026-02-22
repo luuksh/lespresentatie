@@ -52,7 +52,7 @@ body {
   background:
     radial-gradient(1200px 460px at 50% -120px, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0) 66%),
     linear-gradient(180deg, #eef4fc 0%, #dfe8f4 52%, #d3deeb 100%);
-  padding: 10px calc(var(--timer-width) + 22px) 10px 12px;
+  padding: 10px calc(var(--timer-width) + 22px) 10px calc(var(--timer-width) + 22px);
   position: relative;
 }
 
@@ -219,6 +219,14 @@ body::after {
   overflow: hidden;
   touch-action: none;
   cursor: crosshair;
+}
+
+.clock-face.edge-draggable {
+  cursor: grab;
+}
+
+.clock-face.dragging-dock {
+  cursor: grabbing;
 }
 
 .clock-bezel {

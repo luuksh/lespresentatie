@@ -523,6 +523,7 @@
       const secIn = null;
 
       const dial = document.getElementById('clockDial');
+      const timerDock = document.getElementById('timerDock');
 
       if (!clockFace || !progress || !hand || !timeEl || !stateEl || !dial) return;
 
@@ -668,20 +669,84 @@
         dial.appendChild(tickEl);
       }
 
-      let scrubbing = false;
-      const stopScrub = () => { scrubbing = false; };
+      let interactionMode = null;
+      let dragOffsetX = 0;
+      let dragOffsetY = 0;
+
+      function isNearClockEdge(clientX, clientY) {
+        const rect = clockFace.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        const dist = Math.hypot(dx, dy);
+        const radius = Math.min(rect.width, rect.height) / 2;
+        const edgeBand = 18;
+        return dist >= radius - edgeBand && dist <= radius + 10;
+      }
+
+      function moveDock(clientX, clientY) {
+        if (!timerDock) return;
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const dockRect = timerDock.getBoundingClientRect();
+        const maxLeft = Math.max(0, vw - dockRect.width);
+        const maxTop = Math.max(0, vh - dockRect.height);
+        const left = clamp(clientX - dragOffsetX, 0, maxLeft);
+        const top = clamp(clientY - dragOffsetY, 0, maxTop);
+        timerDock.style.left = `${left}px`;
+        timerDock.style.top = `${top}px`;
+      }
+
+      function setEdgeCursor(clientX, clientY) {
+        if (interactionMode) return;
+        clockFace.classList.toggle('edge-draggable', isNearClockEdge(clientX, clientY));
+      }
+
+      const stopInteraction = () => {
+        interactionMode = null;
+        clockFace.classList.remove('dragging-dock');
+      };
+
       clockFace.addEventListener('pointerdown', (e) => {
-        if (running) pause();
-        scrubbing = true;
+        e.preventDefault();
         clockFace.setPointerCapture(e.pointerId);
+
+        const canDragDock = timerDock && getComputedStyle(timerDock).position === 'fixed';
+        if (canDragDock && isNearClockEdge(e.clientX, e.clientY)) {
+          interactionMode = 'dock-drag';
+          const dockRect = timerDock.getBoundingClientRect();
+          timerDock.style.right = 'auto';
+          timerDock.style.bottom = 'auto';
+          timerDock.style.left = `${dockRect.left}px`;
+          timerDock.style.top = `${dockRect.top}px`;
+          dragOffsetX = e.clientX - dockRect.left;
+          dragOffsetY = e.clientY - dockRect.top;
+          clockFace.classList.add('dragging-dock');
+          moveDock(e.clientX, e.clientY);
+          return;
+        }
+
+        interactionMode = 'scrub';
+        if (running) pause();
         setByAngle(e.clientX, e.clientY);
       });
       clockFace.addEventListener('pointermove', (e) => {
-        if (!scrubbing) return;
+        if (interactionMode === 'dock-drag') {
+          moveDock(e.clientX, e.clientY);
+          return;
+        }
+        if (interactionMode !== 'scrub') {
+          setEdgeCursor(e.clientX, e.clientY);
+          return;
+        }
         setByAngle(e.clientX, e.clientY);
       });
-      clockFace.addEventListener('pointerup', stopScrub);
-      clockFace.addEventListener('pointercancel', stopScrub);
+      clockFace.addEventListener('pointerup', stopInteraction);
+      clockFace.addEventListener('pointercancel', stopInteraction);
+      clockFace.addEventListener('pointerleave', () => {
+        if (!interactionMode) clockFace.classList.remove('edge-draggable');
+      });
 
       syncInputsFrom(total);
       updateDigits();
