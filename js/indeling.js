@@ -1,7 +1,6 @@
 // js/indeling.js
-import { initPresetUI } from './seating-presets.js?v=20260222-21';
-
-const MODULE_VERSION = '20260222-21';
+const MODULE_VERSION = '20260222-22';
+const AUTO_LAYOUT_KEY = 'lespresentatie.autolayouts.v1';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -13,9 +12,6 @@ const modules = {
   presentatievolgorde:() => import(`./presentatievolgorde.js?v=${MODULE_VERSION}`).then(m => m.presentatievolgordeIndeling),
 };
 
-/* ---------- Helpers ---------- */
-
-// Fisher-Yates shuffle: maakt standaardopstelling willekeurig
 function shuffleInPlace(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -24,44 +20,29 @@ function shuffleInPlace(arr) {
   return arr;
 }
 
-/**
- * Haalt de leerlingenlijst op uit de JSON voor een gegeven klas.
- * @param {string} klasnaam - Bijv. "G1D"
- * @returns {Promise<string[]>}
- */
-async function laadLeerlingen(klasnaam = "G1D") {
+async function laadLeerlingen(klasnaam = 'G1D') {
   try {
-    const res = await fetch("js/leerlingen_per_klas.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error("Netwerkfout bij ophalen JSON");
+    const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
+    if (!res.ok) throw new Error('Netwerkfout bij ophalen JSON');
 
     const data = await res.json();
     const lijst = data[klasnaam];
     if (!Array.isArray(lijst)) throw new Error(`Klas ${klasnaam} niet gevonden of onjuist formaat`);
     return lijst;
   } catch (err) {
-    console.error("Fout bij laden leerlingen:", err);
+    console.error('Fout bij laden leerlingen:', err);
     return [];
   }
 }
 
-/**
- * Laadt dynamisch de juiste indelingsfunctie en tekent de plattegrond.
- * Standaard: leerlingen worden willekeurig gezet.
- * Alleen bij het handmatig Laden van een preset (via applyArrangement) wordt niet gerandomized.
- * @param {"h216"|"u008"|"drievierdrie"|"groepjes"|"vijftallen"|"presentatievolgorde"} type
- * @param {string} klasnaam
- */
-export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
+export async function kiesIndeling(type = 'h216', klasnaam = 'G1D') {
   const leerlingen = await laadLeerlingen(klasnaam);
-
-  // Maak standaardopstelling willekeurig
   const shuffled = shuffleInPlace([...leerlingen]);
-
   const moduleLader = modules[type] || modules.h216;
 
   try {
     const indeling = await moduleLader();
-    if (typeof indeling !== "function") throw new Error("Module bevat geen exporteerbare functie");
+    if (typeof indeling !== 'function') throw new Error('Module bevat geen exporteerbare functie');
     indeling(shuffled);
   } catch (err) {
     console.error(`Fout bij toepassen van indeling "${type}":`, err);
@@ -70,12 +51,9 @@ export async function kiesIndeling(type = "h216", klasnaam = "G1D") {
   }
 }
 
-// Maak kiesIndeling ook beschikbaar voor init.js (dat zonder import werkt)
 if (typeof window !== 'undefined') {
   window.kiesIndeling = kiesIndeling;
 }
-
-/* ---------- Presets: hooks ---------- */
 
 function topicElements() {
   return Array.from(document.querySelectorAll('#plattegrond [data-topic-key]'));
@@ -258,15 +236,41 @@ function initTopicEditing() {
   });
 }
 
-/**
- * Leest de huidige opstelling uit de DOM (#plattegrond).
- * Geeft een object terug met type + seats of order.
- */
-function getCurrentArrangement() {
-  const typeSel = document.getElementById('indelingSelect');
-  const type = typeSel?.value || 'h216';
+function getCurrentClassId() {
   const klasSel = document.getElementById('klasSelect');
-  const klasId = klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
+  return klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
+}
+
+function getCurrentType() {
+  const typeSel = document.getElementById('indelingSelect');
+  return typeSel?.value || 'h216';
+}
+
+function getStorageBucketKey(classId, type) {
+  return `${classId}::${type}`;
+}
+
+function readLayoutStore() {
+  try {
+    const raw = localStorage.getItem(AUTO_LAYOUT_KEY);
+    const parsed = raw ? JSON.parse(raw) : null;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeLayoutStore(store) {
+  try {
+    localStorage.setItem(AUTO_LAYOUT_KEY, JSON.stringify(store));
+  } catch (err) {
+    console.warn('Automatisch opslaan mislukt:', err);
+  }
+}
+
+function getCurrentArrangement() {
+  const type = getCurrentType();
+  const klasId = getCurrentClassId();
   const grid = document.getElementById('plattegrond');
   const domSnapshot = grid?.innerHTML || '';
 
@@ -303,65 +307,19 @@ function getCurrentArrangement() {
   };
 }
 
-function waitForRendered(type, timeoutMs = 4000) {
-  return new Promise((resolve) => {
-    let done = false;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      window.removeEventListener('indeling:rendered', onRendered);
-      clearTimeout(timer);
-      resolve();
-    };
-
-    const onRendered = (evt) => {
-      const renderedType = evt?.detail?.type;
-      if (!type || renderedType === type) finish();
-    };
-
-    const timer = setTimeout(finish, timeoutMs);
-    window.addEventListener('indeling:rendered', onRendered);
-  });
-}
-
-/**
- * Past een opgeslagen opstelling toe.
- * - Zet eerst het juiste type in de dropdown en triggert de bestaande change-flow (laadIndeling).
- * - Wacht op de re-render en projecteert daarna de opgeslagen inhoud.
- * - Voorkomt dat styling/klassen van de vorige indeling doorlekken.
- */
-async function applyArrangement(payload) {
+function projectArrangementToCurrentGrid(payload) {
   const grid = document.getElementById('plattegrond');
-  const typeSel = document.getElementById('indelingSelect');
+  const type = payload?.type || getCurrentType();
 
-  // Backward compat: legacy array -> objectvorm
-  if (Array.isArray(payload)) {
-    payload = { type: typeSel?.value || 'h216', seats: payload, order: [] };
-  }
-  const type = payload?.type || typeSel?.value || 'h216';
+  if (!grid || !payload) return;
 
-  // 1) Dropdown op juiste type zetten + change dispatchen,
-  // zodat init.js -> laadIndeling() alle themastates/klassen goed reset.
-  if (typeSel) {
-    typeSel.value = type;
-    typeSel.dispatchEvent(new Event('change', { bubbles: true }));
-  }
-
-  // 2) Wacht expliciet op "render klaar" vanuit init.js
-  await waitForRendered(type);
-
-  // 2b) Robuuste restore: als snapshot beschikbaar is, zet exact terug.
-  if (typeof payload?.domSnapshot === 'string' && payload.domSnapshot.trim()) {
+  if (typeof payload.domSnapshot === 'string' && payload.domSnapshot.trim()) {
     grid.innerHTML = payload.domSnapshot;
     applyGroupTopics(payload.groupTopics || []);
     applyGroupDates(payload.groupDates || []);
-    window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
-      detail: { type, timestamp: Date.now() }
-    }));
     return;
   }
 
-  // 3) Inhoud projecteren
   if (type === 'presentatievolgorde') {
     if (Array.isArray(payload.order) && payload.order.length) {
       grid.innerHTML = '';
@@ -409,14 +367,9 @@ async function applyArrangement(payload) {
 
     applyGroupTopics(payload.groupTopics || []);
     applyGroupDates(payload.groupDates || []);
-
-    window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
-      detail: { type, timestamp: Date.now() }
-    }));
     return;
   }
 
-  // Tafels invullen (h216/u008/drievierdrie/groepjes/vijftallen)
   const seatsEls = Array.from(document.querySelectorAll('#plattegrond .tafel'));
   const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
   const byId = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
@@ -431,36 +384,107 @@ async function applyArrangement(payload) {
 
   applyGroupTopics(payload.groupTopics || []);
   applyGroupDates(payload.groupDates || []);
-
-  window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
-    detail: { type, timestamp: Date.now() }
-  }));
 }
 
-/* ---------- Presets: initialisatie ---------- */
-(function initPresetsUI() {
+function waitForRendered(type, timeoutMs = 4000) {
+  return new Promise((resolve) => {
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      window.removeEventListener('indeling:rendered', onRendered);
+      clearTimeout(timer);
+      resolve();
+    };
+
+    const onRendered = (evt) => {
+      const renderedType = evt?.detail?.type;
+      if (!type || renderedType === type) finish();
+    };
+
+    const timer = setTimeout(finish, timeoutMs);
+    window.addEventListener('indeling:rendered', onRendered);
+  });
+}
+
+async function applyArrangement(payload) {
+  const typeSel = document.getElementById('indelingSelect');
+
+  if (Array.isArray(payload)) {
+    payload = { type: typeSel?.value || 'h216', seats: payload, order: [] };
+  }
+
+  const targetType = payload?.type || getCurrentType();
+  const currentType = getCurrentType();
+
+  if (targetType !== currentType && typeSel) {
+    typeSel.value = targetType;
+    typeSel.dispatchEvent(new Event('change', { bubbles: true }));
+    await waitForRendered(targetType);
+  }
+
+  projectArrangementToCurrentGrid(payload);
+}
+
+function loadAutoArrangementForCurrentContext() {
+  const classId = getCurrentClassId();
+  const type = getCurrentType();
+  const store = readLayoutStore();
+  return store[getStorageBucketKey(classId, type)] || null;
+}
+
+function saveAutoArrangementForCurrentContext() {
+  const arrangement = getCurrentArrangement();
+  if (!arrangement || !arrangement.type || !arrangement.klasId) return;
+
+  const store = readLayoutStore();
+  store[getStorageBucketKey(arrangement.klasId, arrangement.type)] = arrangement;
+  writeLayoutStore(store);
+}
+
+(function initAutoLayoutPersistence() {
   const klasSel = document.getElementById('klasSelect');
   const plattegrond = document.getElementById('plattegrond');
   if (!klasSel || !plattegrond) return;
 
-  function getCurrentClassId() {
-    const v = klasSel?.value?.trim();
-    return v || localStorage.getItem('lastClassId') || 'onbekend';
-  }
-
-  const presetUI = initPresetUI({
-    getCurrentClassId,
-    getCurrentArrangement,
-    applyArrangement
-  });
   initTopicEditing();
 
-  // bij klaswissel: lijst met presets verversen + laatst gebruikte onthouden
-  klasSel.addEventListener('change', () => {
-    if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
-    presetUI.refreshForClassChange();
+  let restoring = false;
+  let saveTimer = null;
+
+  const scheduleSave = () => {
+    if (restoring) return;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      saveAutoArrangementForCurrentContext();
+    }, 160);
+  };
+
+  window.addEventListener('indeling:rendered', async () => {
+    const saved = loadAutoArrangementForCurrentContext();
+    if (!saved) return;
+
+    restoring = true;
+    try {
+      await applyArrangement(saved);
+    } finally {
+      restoring = false;
+    }
   });
 
-  // kickstart: extra refresh zodra de klaslijst is gevuld
-  setTimeout(() => presetUI.refreshForClassChange(), 300);
+  window.addEventListener('indeling:arrangement-applied', scheduleSave);
+
+  const mo = new MutationObserver(() => {
+    scheduleSave();
+  });
+  mo.observe(plattegrond, { childList: true, subtree: true, characterData: true });
+
+  window.addEventListener('beforeunload', () => {
+    if (restoring) return;
+    saveAutoArrangementForCurrentContext();
+  });
+
+  klasSel.addEventListener('change', () => {
+    if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
+  });
 })();
