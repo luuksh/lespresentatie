@@ -39,12 +39,10 @@
     .timer {
       width: min(360px, 100%);
       border-radius: 20px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(43, 70, 111, 0.94), rgba(25, 43, 73, 0.94));
-      box-shadow:
-        0 14px 28px rgba(4, 12, 26, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
       padding: 12px;
       display: grid;
       gap: 10px;
@@ -236,36 +234,39 @@
     }
 
     .panel {
-      border: 1px solid rgba(186, 210, 246, 0.24);
+      border: 1px solid rgba(186, 210, 246, 0.16);
       border-radius: 14px;
-      background: linear-gradient(180deg, rgba(26, 48, 82, 0.55), rgba(20, 37, 66, 0.5));
-      padding: 10px;
+      background: rgba(11, 25, 43, 0.22);
+      padding: 8px;
       display: grid;
-      gap: 8px;
+      gap: 7px;
     }
 
-    .quick {
+    .nudge {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 6px;
     }
 
-    .set {
+    .chip {
+      height: 30px;
+      border: 1px solid rgba(186, 210, 246, 0.26);
+      border-radius: 999px;
+      color: #dcecff;
+      background: rgba(204, 223, 246, 0.12);
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .edit {
       display: grid;
-      grid-template-columns: auto 1fr auto 1fr auto;
+      grid-template-columns: 1fr auto 1fr auto;
       gap: 6px;
       align-items: center;
     }
 
-    .set label {
-      font-size: 11px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 800;
-    }
-
-    .set span {
+    .edit span {
       text-align: center;
       color: var(--muted);
       font-weight: 800;
@@ -288,6 +289,12 @@
       outline: none;
       border-color: rgba(100, 197, 255, 0.8);
       box-shadow: 0 0 0 2px rgba(100, 197, 255, 0.22);
+    }
+
+    .btn.compact {
+      height: 32px;
+      min-width: 48px;
+      padding: 0 10px;
     }
 
     .row {
@@ -329,6 +336,10 @@
 
     .btn.ghost {
       background: linear-gradient(180deg, rgba(196, 216, 247, 0.16), rgba(196, 216, 247, 0.08));
+    }
+
+    .compact-actions .btn {
+      height: 34px;
     }
 
     .clock.done {
@@ -375,24 +386,21 @@
     </div>
 
     <div class="panel" aria-label="Timerbediening">
-      <div class="quick">
-        <button class="btn ghost" data-pres="60">+1m</button>
-        <button class="btn ghost" data-pres="180">+3m</button>
-        <button class="btn ghost" data-pres="300">+5m</button>
-        <button class="btn ghost" data-pres="600">+10m</button>
-        <button class="btn ghost" data-pres="30">+30s</button>
-        <button class="btn ghost" data-pres="-30">−30s</button>
+      <div class="nudge">
+        <button class="chip" data-pres="-60" title="Min 1 minuut">−1m</button>
+        <button class="chip" data-pres="-10" title="Min 10 seconden">−10s</button>
+        <button class="chip" data-pres="10" title="Plus 10 seconden">+10s</button>
+        <button class="chip" data-pres="60" title="Plus 1 minuut">+1m</button>
       </div>
 
-      <div class="set">
-        <label for="min">Min</label>
+      <div class="edit">
         <input id="min" type="number" min="0" max="999" value="5" aria-label="Minuten" />
         <span>:</span>
         <input id="sec" type="number" min="0" max="59" value="0" aria-label="Seconden" />
-        <button class="btn warn" id="apply">Zet</button>
+        <button class="btn warn compact" id="apply">Zet</button>
       </div>
 
-      <div class="row">
+      <div class="row compact-actions">
         <button class="btn primary" id="startPause">Start</button>
         <button class="btn" id="reset">Reset</button>
       </div>

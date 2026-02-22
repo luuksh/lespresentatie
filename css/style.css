@@ -165,9 +165,10 @@ body::after {
 
 .clock-timer {
   border-radius: 20px;
-  border: 1px solid rgba(190, 212, 245, 0.28);
-  background: linear-gradient(180deg, rgba(43, 70, 111, 0.94), rgba(25, 43, 73, 0.94));
-  box-shadow: 0 14px 28px rgba(4, 12, 26, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
   padding: 12px;
   display: grid;
   gap: 10px;
@@ -374,36 +375,39 @@ body::after {
 }
 
 .timer-panel {
-  border: 1px solid rgba(186, 210, 246, 0.24);
+  border: 1px solid rgba(186, 210, 246, 0.16);
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(26, 48, 82, 0.55), rgba(20, 37, 66, 0.5));
-  padding: 10px;
+  background: rgba(11, 25, 43, 0.22);
+  padding: 8px;
   display: grid;
-  gap: 8px;
+  gap: 7px;
 }
 
-.timer-quick {
+.timer-nudge {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 6px;
 }
 
-.timer-set {
+.timer-chip {
+  height: 30px;
+  border: 1px solid rgba(186, 210, 246, 0.26);
+  border-radius: 999px;
+  color: #dcecff;
+  background: rgba(204, 223, 246, 0.12);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.timer-edit {
   display: grid;
-  grid-template-columns: auto 1fr auto 1fr auto;
+  grid-template-columns: 1fr auto 1fr auto;
   gap: 6px;
   align-items: center;
 }
 
-.timer-set label {
-  font-size: 11px;
-  color: #bdd0ee;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 800;
-}
-
-.timer-set span {
+.timer-edit span {
   text-align: center;
   color: #bdd0ee;
   font-weight: 800;
@@ -422,6 +426,12 @@ body::after {
   padding: 0 6px;
 }
 
+.timer-btn.compact {
+  height: 32px;
+  min-width: 48px;
+  padding: 0 10px;
+}
+
 #timerDock input[type="number"]:focus {
   outline: none;
   border-color: rgba(100, 197, 255, 0.8);
@@ -431,6 +441,10 @@ body::after {
 .timer-actions {
   display: flex;
   gap: 8px;
+}
+
+.compact-actions .timer-btn {
+  height: 34px;
 }
 
 .timer-actions > * { flex: 1; }
