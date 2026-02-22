@@ -1,8 +1,8 @@
 // js/indeling.js
 import { initPresetUI } from './seating-presets.js';
-import { saveDraft, loadDraft } from './draft-store.js?v=20260222-17';
+import { saveDraft, loadDraft } from './draft-store.js?v=20260222-18';
 
-const MODULE_VERSION = '20260222-17';
+const MODULE_VERSION = '20260222-18';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -268,6 +268,8 @@ function getCurrentArrangement() {
   const type = typeSel?.value || 'h216';
   const klasSel = document.getElementById('klasSelect');
   const klasId = klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
+  const grid = document.getElementById('plattegrond');
+  const domSnapshot = grid?.innerHTML || '';
 
   if (type === 'presentatievolgorde') {
     const items = Array.from(document.querySelectorAll('#plattegrond .presentatie-item .naam'))
@@ -279,6 +281,7 @@ function getCurrentArrangement() {
       savedAt: new Date().toISOString(),
       order: items,
       seats: [],
+      domSnapshot,
       groupTopics: readGroupTopics(),
       groupDates: readGroupDates()
     };
@@ -295,6 +298,7 @@ function getCurrentArrangement() {
     savedAt: new Date().toISOString(),
     seats,
     order: [],
+    domSnapshot,
     groupTopics: readGroupTopics(),
     groupDates: readGroupDates()
   };
@@ -395,6 +399,17 @@ async function applyArrangement(payload) {
 
   // 2) Wacht expliciet op "render klaar" vanuit init.js
   await waitForRendered(type);
+
+  // 2b) Robuuste restore: als snapshot beschikbaar is, zet exact terug.
+  if (typeof payload?.domSnapshot === 'string' && payload.domSnapshot.trim()) {
+    grid.innerHTML = payload.domSnapshot;
+    applyGroupTopics(payload.groupTopics || []);
+    applyGroupDates(payload.groupDates || []);
+    window.dispatchEvent(new CustomEvent('indeling:arrangement-applied', {
+      detail: { type, timestamp: Date.now() }
+    }));
+    return;
+  }
 
   // 3) Inhoud projecteren
   if (type === 'presentatievolgorde') {

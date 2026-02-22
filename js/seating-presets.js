@@ -459,6 +459,7 @@ export function initPresetUI({ getCurrentClassId, getCurrentArrangement, applyAr
     return !!(
       arr &&
       (
+        (typeof arr.domSnapshot === 'string' && arr.domSnapshot.trim().length > 0) ||
         (arr.type === 'presentatievolgorde' && Array.isArray(arr.order) && arr.order.length > 0) ||
         (Array.isArray(arr.seats) && arr.seats.length > 0 && arr.seats.every(x => x && ('studentId' in x)))
       )
