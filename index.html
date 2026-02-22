@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <link rel="stylesheet" href="css/style.css?v=20260222-18" />
+  <link rel="stylesheet" href="css/style.css?v=20260222-20" />
 
-  <script type="module" src="js/indeling.js?v=20260222-18"></script>
-  <script type="module" src="js/init.js?v=20260222-18"></script>
+  <script type="module" src="js/indeling.js?v=20260222-20"></script>
+  <script type="module" src="js/init.js?v=20260222-20"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
@@ -48,12 +48,12 @@
         <h2 class="panel-title">Opstellingen</h2>
 
         <div class="toolbar presets-panel">
-          <span class="presets-label">Preset</span>
+          <span class="presets-label">Opstelling</span>
           <select id="presetSelect" class="presets-select"></select>
 
           <div class="btn-group">
             <button id="btnPresetLoad" class="btn btn-secondary">Laden</button>
-            <button id="btnPresetSave" class="btn btn-primary">Opslaan als…</button>
+            <button id="btnPresetSave" class="btn btn-primary">Opslaan als</button>
             <button id="btnPresetOverwrite" class="btn btn-secondary">Overschrijven</button>
           </div>
 
@@ -63,7 +63,7 @@
           </div>
 
           <div class="btn-group">
-            <button id="btnPresetExport" class="btn btn-secondary">Export .doc</button>
+            <button id="btnPresetExport" class="btn btn-secondary">Export JSON</button>
             <label for="presetImport" class="btn btn-secondary import-label">Import JSON</label>
           </div>
 
@@ -140,58 +140,6 @@
     </div>
 
   </aside>
-
-  <div id="presetDebugBar" aria-live="polite">
-    <b>Preset Debug</b><br />
-    laden...
-  </div>
-
-  <script>
-    (() => {
-      const el = document.getElementById('presetDebugBar');
-      if (!el) return;
-
-      const MAIN = 'lespresentatie.presets.v1';
-      const BACKUP = 'lespresentatie.presets.v1.backup';
-      const SESSION = 'lespresentatie.presets.v1.session';
-
-      function safeGet(storage, key) {
-        try { return storage.getItem(key); } catch { return null; }
-      }
-
-      function parse(raw) {
-        if (!raw) return null;
-        try { return JSON.parse(raw); } catch { return null; }
-      }
-
-      function countPresets(state) {
-        if (!state?.classes) return 0;
-        let total = 0;
-        Object.values(state.classes).forEach(cls => {
-          total += Object.keys(cls?.presets || {}).length;
-        });
-        return total;
-      }
-
-      function update(extra = '') {
-        const main = parse(safeGet(localStorage, MAIN));
-        const backup = parse(safeGet(localStorage, BACKUP));
-        const session = parse(safeGet(sessionStorage, SESSION));
-        const line1 = `main:${main ? 'ok' : '-'} backup:${backup ? 'ok' : '-'} session:${session ? 'ok' : '-'}`;
-        const line2 = `presets main:${countPresets(main)} backup:${countPresets(backup)} session:${countPresets(session)}`;
-        el.innerHTML = `<b>Preset Debug</b><br>${line1}<br>${line2}${extra ? `<br>${extra}` : ''}`;
-      }
-
-      window.addEventListener('preset:diag', (e) => {
-        const d = e.detail || {};
-        const info = `${d.event || 'event'} ${d.source || ''}`.trim();
-        update(info);
-      });
-
-      update('start');
-      setInterval(() => update('poll'), 2500);
-    })();
-  </script>
 
   <script>
     (() => {
@@ -690,12 +638,6 @@
       applyBtn?.addEventListener('click', setFromInputs);
 
       document.addEventListener('keydown', (e) => {
-        const hardReload = (e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyR';
-        if (hardReload) {
-          window.location.reload();
-          return;
-        }
-
         const activeTag = document.activeElement?.tagName;
         if (activeTag === 'INPUT' || document.activeElement?.isContentEditable) return;
         if (e.code === 'Space') {

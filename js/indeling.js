@@ -1,8 +1,7 @@
 // js/indeling.js
-import { initPresetUI } from './seating-presets.js';
-import { saveDraft, loadDraft } from './draft-store.js?v=20260222-18';
+import { initPresetUI } from './seating-presets.js?v=20260222-20';
 
-const MODULE_VERSION = '20260222-18';
+const MODULE_VERSION = '20260222-20';
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -325,55 +324,6 @@ function waitForRendered(type, timeoutMs = 4000) {
   });
 }
 
-const DRAFT_PREFIX = 'lespresentatie.draft.v1';
-const LAST_DRAFT_META_KEY = 'lespresentatie.draft.v1.lastmeta';
-
-function activeClassId() {
-  const klasSel = document.getElementById('klasSelect');
-  return klasSel?.value || localStorage.getItem('lastClassId') || 'onbekend';
-}
-
-function activeType() {
-  const typeSel = document.getElementById('indelingSelect');
-  return typeSel?.value || 'h216';
-}
-
-function draftKey(classId, type) {
-  return `${DRAFT_PREFIX}.${classId}.${type}`;
-}
-
-async function saveDraftArrangement() {
-  const arr = getCurrentArrangement();
-  if (!arr || !arr.type) return;
-  const classId = arr.klasId || activeClassId();
-  const type = arr.type || activeType();
-  const key = draftKey(classId, type);
-  const payload = { savedAt: new Date().toISOString(), arrangement: arr };
-  try {
-    await saveDraft(classId, type, arr, payload.savedAt);
-  } catch {}
-  localStorage.setItem(key, JSON.stringify(payload));
-  try {
-    localStorage.setItem(LAST_DRAFT_META_KEY, JSON.stringify({ classId, type, savedAt: payload.savedAt }));
-  } catch {}
-}
-
-async function loadDraftArrangement(classId, type) {
-  try {
-    const fromDb = await loadDraft(classId, type);
-    if (fromDb) return fromDb;
-  } catch {}
-  const key = draftKey(classId, type);
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw);
-    return parsed?.arrangement || null;
-  } catch {
-  return null;
-}
-}
-
 /**
  * Past een opgeslagen opstelling toe.
  * - Zet eerst het juiste type in de dropdown en triggert de bestaande change-flow (laadIndeling).
@@ -504,47 +454,6 @@ async function applyArrangement(payload) {
     applyArrangement
   });
   initTopicEditing();
-
-  let savingTimer = null;
-  let restoringDraft = false;
-  const restoredDrafts = new Set();
-
-  function queueDraftSave() {
-    if (restoringDraft) return;
-    clearTimeout(savingTimer);
-    savingTimer = setTimeout(() => {
-      try { saveDraftArrangement(); } catch {}
-    }, 220);
-  }
-
-  window.addEventListener('indeling:arrangement-applied', queueDraftSave);
-  window.addEventListener('indeling:rendered', async (evt) => {
-    const type = evt?.detail?.type || activeType();
-    const klas = getCurrentClassId();
-    const key = `${klas}::${type}`;
-
-    queueDraftSave();
-    if (restoringDraft || restoredDrafts.has(key)) return;
-
-    const draft = await loadDraftArrangement(klas, type);
-    if (!draft) return;
-
-    restoringDraft = true;
-    try {
-      await applyArrangement(structuredClone(draft));
-      restoredDrafts.add(key);
-    } catch (e) {
-      console.warn('Concept-herstel mislukt:', e);
-    } finally {
-      restoringDraft = false;
-    }
-  });
-
-  const mo = new MutationObserver(() => queueDraftSave());
-  mo.observe(plattegrond, { childList: true, subtree: true, characterData: true });
-  window.addEventListener('beforeunload', () => {
-    try { saveDraftArrangement(); } catch {}
-  });
 
   // bij klaswissel: lijst met presets verversen + laatst gebruikte onthouden
   klasSel.addEventListener('change', () => {
