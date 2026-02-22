@@ -824,16 +824,17 @@ select:focus {
   left: 32px;
   right: 8px;
   top: -12px;
-  display: flex;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
   z-index: 4;
 }
 
 .topic-chip {
-  min-height: 24px;
+  min-height: 22px;
   flex: 1 1 auto;
   min-width: 0;
-  padding: 3px 10px;
+  padding: 2px 10px;
   border-radius: 999px;
   border: 1px solid rgba(151, 177, 212, 0.92);
   background: linear-gradient(180deg, #f8fbff, #eaf2ff);
@@ -867,9 +868,9 @@ select:focus {
 }
 
 .date-chip {
-  min-height: 24px;
-  flex: 0 0 98px;
-  padding: 3px 8px;
+  min-height: 22px;
+  flex: 1 1 auto;
+  padding: 2px 8px;
   border-radius: 999px;
   border: 1px solid rgba(151, 177, 212, 0.92);
   background: linear-gradient(180deg, #f8fbff, #eaf2ff);
@@ -940,8 +941,9 @@ select:focus {
   left: 8px;
   right: 8px;
   top: 5px;
-  display: flex;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
 
 .presentatie-topic.topic-chip {
