@@ -678,10 +678,11 @@ select:focus {
 
 .magister-assist {
   position: fixed;
-  top: 96px;
+  top: 52px;
+  bottom: 8px;
   right: 14px;
-  width: 320px;
-  height: min(76vh, 860px);
+  width: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   z-index: 90;
@@ -702,14 +703,14 @@ select:focus {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 6px 8px;
   border-bottom: 1px solid #c8c8c8;
   background: #eeeeee;
 }
 
 .magister-assist-kicker {
   margin: 0;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -718,20 +719,20 @@ select:focus {
 
 .magister-assist-title {
   margin: 2px 0 0;
-  font-size: 22px;
+  font-size: 12px;
   font-weight: 700;
   color: #212121;
 }
 
 .magister-assist-close {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   border: 1px solid #bcbcbc;
   border-radius: 2px;
   background: #f2f2f2;
   padding: 0;
   color: #313131;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 700;
   cursor: pointer;
@@ -745,14 +746,14 @@ select:focus {
 
 .magister-assist-meta {
   display: grid;
-  grid-template-columns: 1fr 54px;
+  grid-template-columns: 1fr 24px;
   align-items: center;
-  min-height: 32px;
-  padding: 0 10px 0 12px;
+  min-height: 18px;
+  padding: 0 6px 0 8px;
   border-bottom: 1px solid #c8c8c8;
   background: #efefef;
   color: #202020;
-  font-size: 38px;
+  font-size: 8px;
   font-weight: 700;
 }
 
@@ -764,19 +765,19 @@ select:focus {
 
 .magister-row {
   display: grid;
-  grid-template-columns: 1fr 54px;
+  grid-template-columns: 1fr 24px;
   align-items: center;
-  min-height: 56px;
+  min-height: 22px;
   border-bottom: 1px solid #cbcbcb;
   color: #2c2c2c;
 }
 
 .magister-name {
   min-width: 0;
-  padding: 0 8px 0 12px;
+  padding: 0 6px 0 8px;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 8px;
-  line-height: 1;
+  line-height: 1.15;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -784,15 +785,15 @@ select:focus {
 }
 
 .magister-ab {
-  width: 44px;
-  height: 44px;
+  width: 16px;
+  height: 16px;
   margin: 0 auto;
   border: 1px solid #c8c8c8;
   background: #f0f0f0;
   border-radius: 0;
   display: grid;
   place-items: center;
-  font-size: 28px;
+  font-size: 10px;
   color: #117c57;
   font-weight: 700;
 }
@@ -813,10 +814,10 @@ select:focus {
 
 .magister-assist-count {
   margin: 0;
-  padding: 7px 12px 8px;
+  padding: 3px 8px;
   border-top: 1px solid #c8c8c8;
   background: #ededed;
-  font-size: 28px;
+  font-size: 8px;
   font-weight: 700;
   color: #2d2d2d;
 }
@@ -1474,10 +1475,11 @@ body.drawer-open .side-drawer.left {
   }
 
   .magister-assist {
-    top: 74px;
+    top: 52px;
+    bottom: 8px;
     right: 8px;
-    width: min(90vw, 360px);
-    height: min(74vh, 640px);
+    width: min(90vw, 300px);
+    height: auto;
   }
 
   .magister-name {
