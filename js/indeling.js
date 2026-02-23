@@ -1,5 +1,5 @@
 // js/indeling.js
-const MODULE_VERSION = '20260223-04';
+const MODULE_VERSION = '20260223-05';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 
 const modules = {
@@ -370,6 +370,8 @@ function closeOverviewModal() {
 function initOverviewModal() {
   const { modal, text, btnCopy, btnClose } = getOverviewModalElements();
   if (!modal || !text || modal.dataset.init === '1') return;
+  modal.classList.remove('is-open');
+  modal.hidden = true;
   modal.dataset.init = '1';
 
   btnClose?.addEventListener('click', closeOverviewModal);
