@@ -1,5 +1,5 @@
 // js/indeling.js
-const MODULE_VERSION = '20260223-03';
+const MODULE_VERSION = '20260223-04';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 
 const modules = {
@@ -391,6 +391,14 @@ function initOverviewModal() {
   });
 }
 
+function updateGroupOverviewButtons(buttons = []) {
+  const show = isGroupLayoutType(getCurrentType());
+  buttons.forEach((btn) => {
+    if (!btn) return;
+    btn.hidden = !show;
+  });
+}
+
 function readSavedLayouts() {
   try {
     const raw = localStorage.getItem(SAVED_LAYOUTS_KEY);
@@ -661,6 +669,7 @@ function deleteSelectedLayout() {
 
 (function initLayoutLibraryUI() {
   const klasSel = document.getElementById('klasSelect');
+  const typeSel = document.getElementById('indelingSelect');
   const btnSave = document.getElementById('btnLayoutSave');
   const btnLoad = document.getElementById('btnLayoutLoad');
   const btnDelete = document.getElementById('btnLayoutDelete');
@@ -704,6 +713,10 @@ function deleteSelectedLayout() {
     openOverviewModal(overview.text);
   }));
 
+  typeSel?.addEventListener('change', () => {
+    setTimeout(() => updateGroupOverviewButtons(btnGroupOverviewOpen), 0);
+  });
+
   select.addEventListener('change', () => {
     const classId = getCurrentClassId();
     const store = readSavedLayouts();
@@ -717,6 +730,10 @@ function deleteSelectedLayout() {
     setTimeout(refillSavedLayoutSelect, 40);
   });
 
-  window.addEventListener('indeling:rendered', refillSavedLayoutSelect);
+  window.addEventListener('indeling:rendered', () => {
+    refillSavedLayoutSelect();
+    updateGroupOverviewButtons(btnGroupOverviewOpen);
+  });
+  updateGroupOverviewButtons(btnGroupOverviewOpen);
   refillSavedLayoutSelect();
 })();

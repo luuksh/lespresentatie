@@ -1279,28 +1279,6 @@ body.drawer-open .side-drawer.left {
   cursor: pointer;
 }
 
-.group-overview-fab {
-  position: fixed;
-  top: 96px;
-  left: 14px;
-  z-index: 115;
-  height: 40px;
-  border: 0;
-  border-radius: 999px;
-  padding: 0 14px;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  background: linear-gradient(180deg, #2d6ae2, #184ea8);
-  box-shadow: 0 10px 20px rgba(16, 41, 86, 0.35);
-  cursor: pointer;
-}
-
-.group-overview-fab:hover {
-  filter: brightness(1.06);
-}
-
 .card {
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
@@ -1401,8 +1379,7 @@ body.drawer-open .side-drawer.left {
   #timerDock,
   .magister-assist,
   .side-drawer,
-  .drawer-quick-toggle,
-  .group-overview-fab {
+  .drawer-quick-toggle {
     display: none !important;
   }
 
@@ -1563,10 +1540,6 @@ body.drawer-open .side-drawer.left {
     font-size: 8px;
   }
 
-  .group-overview-fab {
-    top: 72px;
-    left: 10px;
-  }
 }
 
 @media (max-width: 700px) {
