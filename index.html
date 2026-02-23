@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <link rel="stylesheet" href="css/style.css?v=20260222-23" />
+  <link rel="stylesheet" href="css/style.css?v=20260223-03" />
 
-  <script type="module" src="js/indeling.js?v=20260222-23"></script>
+  <script type="module" src="js/indeling.js?v=20260223-03"></script>
   <script type="module" src="js/init.js?v=20260222-23"></script>
 </head>
 <body>
@@ -26,6 +26,10 @@
 
   <button id="drawerQuickToggle" class="drawer-quick-toggle" type="button" aria-label="Toon of verberg docentpaneel">
     Docentpaneel
+  </button>
+
+  <button id="groupOverviewFab" type="button" class="group-overview-fab" data-action="group-overview-open">
+    Overzicht
   </button>
 
   <aside class="side-drawer left" aria-label="Docentpaneel">
@@ -48,6 +52,7 @@
             <button id="btnLayoutLoad" type="button" class="btn btn-secondary">Laden</button>
             <button id="btnLayoutSave" type="button" class="btn btn-primary">Opslaan als</button>
             <button id="btnLayoutDelete" type="button" class="btn btn-danger">Verwijderen</button>
+            <button type="button" class="btn btn-secondary" data-action="group-overview-open">Groep-overzicht</button>
           </div>
         </div>
       </section>
@@ -82,6 +87,11 @@
             <div class="lesson-status in-topbar" id="lessonStatusBar">
               <span class="status-chip" id="currentClassLabel">Klas: -</span>
               <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
+            </div>
+
+            <div class="field">
+              <span class="label">Agenda</span>
+              <button type="button" class="btn btn-secondary" data-action="group-overview-open">Overzicht</button>
             </div>
 
           </div>
@@ -135,6 +145,19 @@
     </div>
     <div id="magisterAssistRows" class="magister-assist-rows" aria-live="polite"></div>
     <footer id="magisterAssistCount" class="magister-assist-count">Absent: 0</footer>
+  </section>
+
+  <section id="groupOverviewModal" class="group-overview-modal" aria-label="Groepsoverzicht" hidden>
+    <div class="group-overview-dialog" role="dialog" aria-modal="true" aria-labelledby="groupOverviewTitle">
+      <header class="group-overview-head">
+        <h2 id="groupOverviewTitle" class="group-overview-title">Groepsoverzicht voor ELO</h2>
+      </header>
+      <textarea id="groupOverviewText" class="group-overview-text" readonly></textarea>
+      <div class="group-overview-actions">
+        <button id="btnGroupOverviewCopy" type="button" class="btn btn-primary">Kopiëren</button>
+        <button id="btnGroupOverviewClose" type="button" class="btn btn-secondary">Sluiten</button>
+      </div>
+    </div>
   </section>
 
   <script>

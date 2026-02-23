@@ -1,5 +1,5 @@
 // js/indeling.js
-const MODULE_VERSION = '20260222-23';
+const MODULE_VERSION = '20260223-03';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 
 const modules = {
@@ -248,6 +248,147 @@ function getCurrentType() {
 
 function getLayoutSelect() {
   return document.getElementById('savedLayoutSelect');
+}
+
+function isGroupLayoutType(type = getCurrentType()) {
+  return type === 'groepjes' || type === 'drietallen' || type === 'vijftallen' || type === 'presentatievolgorde';
+}
+
+function agendaDateLabel(raw) {
+  const value = String(raw || '').trim();
+  if (!value) return '(geen datum)';
+  return `${formatDateLabel(value)} (${value})`;
+}
+
+function buildGroupAgendaOverview() {
+  const type = getCurrentType();
+  if (!isGroupLayoutType(type)) {
+    return {
+      ok: false,
+      text: '',
+      reason: 'Dit overzicht werkt voor Drietallen, Viertallen, Vijftallen en Volgorde.'
+    };
+  }
+
+  const isVolgorde = type === 'presentatievolgorde';
+  const groups = isVolgorde
+    ? Array.from(document.querySelectorAll('#plattegrond .presentatie-item'))
+    : Array.from(document.querySelectorAll('#plattegrond .groepje'));
+
+  if (!groups.length) {
+    return {
+      ok: false,
+      text: '',
+      reason: isVolgorde
+        ? 'Geen volgorde-items gevonden op de huidige plattegrond.'
+        : 'Geen groepjes gevonden op de huidige plattegrond.'
+    };
+  }
+
+  const lines = [
+    `Klas: ${getCurrentClassId()}`,
+    `Indeling: ${type}`,
+    ''
+  ];
+
+  groups.forEach((group, idx) => {
+    const topic = (group.querySelector('[data-topic-key]')?.dataset.topic || '').trim();
+    const rawDate = (group.querySelector('[data-date-key]')?.dataset.date || '').trim();
+    const students = isVolgorde
+      ? Array.from(group.querySelectorAll('.naam'))
+        .map((el) => (el.textContent || '').trim())
+        .filter(Boolean)
+      : Array.from(group.querySelectorAll('.tafel'))
+        .map((el) => (el.textContent || '').trim())
+        .filter(Boolean);
+
+    lines.push(isVolgorde ? `Volgorde ${idx + 1}` : `Groep ${idx + 1}`);
+    lines.push(`Titel: ${topic || '(geen titel)'}`);
+    lines.push(`Datum: ${agendaDateLabel(rawDate)}`);
+    lines.push(isVolgorde ? `Leerling: ${students.join(', ') || '-'}` : `Leerlingen: ${students.join(', ') || '-'}`);
+    lines.push('');
+  });
+
+  return { ok: true, text: lines.join('\n').trim() };
+}
+
+async function copyToClipboard(text) {
+  const value = String(text || '');
+  if (!value) return false;
+
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch (_) {
+      // fallback below
+    }
+  }
+
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = value;
+    ta.setAttribute('readonly', 'true');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    const copied = document.execCommand('copy');
+    ta.remove();
+    return copied;
+  } catch (_) {
+    return false;
+  }
+}
+
+function getOverviewModalElements() {
+  return {
+    modal: document.getElementById('groupOverviewModal'),
+    text: document.getElementById('groupOverviewText'),
+    btnCopy: document.getElementById('btnGroupOverviewCopy'),
+    btnClose: document.getElementById('btnGroupOverviewClose')
+  };
+}
+
+function openOverviewModal(text) {
+  const { modal, text: textEl } = getOverviewModalElements();
+  if (!modal || !textEl) return;
+  textEl.value = String(text || '');
+  modal.hidden = false;
+  modal.classList.add('is-open');
+  textEl.focus();
+  textEl.select();
+}
+
+function closeOverviewModal() {
+  const { modal } = getOverviewModalElements();
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  modal.hidden = true;
+}
+
+function initOverviewModal() {
+  const { modal, text, btnCopy, btnClose } = getOverviewModalElements();
+  if (!modal || !text || modal.dataset.init === '1') return;
+  modal.dataset.init = '1';
+
+  btnClose?.addEventListener('click', closeOverviewModal);
+  btnCopy?.addEventListener('click', async () => {
+    const copied = await copyToClipboard(text.value);
+    if (copied) {
+      alert('Groepsoverzicht gekopieerd naar klembord.');
+      return;
+    }
+    window.prompt('Kopieer dit groepsoverzicht voor je ELO-agenda:', text.value);
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeOverviewModal();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeOverviewModal();
+  });
 }
 
 function readSavedLayouts() {
@@ -523,11 +664,13 @@ function deleteSelectedLayout() {
   const btnSave = document.getElementById('btnLayoutSave');
   const btnLoad = document.getElementById('btnLayoutLoad');
   const btnDelete = document.getElementById('btnLayoutDelete');
+  const btnGroupOverviewOpen = Array.from(document.querySelectorAll('[data-action="group-overview-open"]'));
   const select = getLayoutSelect();
   const plattegrond = document.getElementById('plattegrond');
   if (!klasSel || !select || !plattegrond) return;
 
   initTopicEditing();
+  initOverviewModal();
 
   btnSave?.addEventListener('click', () => {
     const existing = select.value || '';
@@ -551,6 +694,15 @@ function deleteSelectedLayout() {
     if (!confirm(`Plattegrond "${name}" verwijderen?`)) return;
     deleteSelectedLayout();
   });
+
+  btnGroupOverviewOpen.forEach((btn) => btn.addEventListener('click', () => {
+    const overview = buildGroupAgendaOverview();
+    if (!overview.ok) {
+      alert(overview.reason);
+      return;
+    }
+    openOverviewModal(overview.text);
+  }));
 
   select.addEventListener('change', () => {
     const classId = getCurrentClassId();
