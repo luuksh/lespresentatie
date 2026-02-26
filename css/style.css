@@ -1025,8 +1025,8 @@ select:focus {
 }
 
 .plattegrond-frame.is-group-layout .grid.groepjes-layout {
-  grid-template-columns: repeat(2, 236px);
-  gap: 14px;
+  grid-template-columns: repeat(3, 214px);
+  gap: 10px 12px;
 }
 
 .groepje {
@@ -1045,9 +1045,9 @@ select:focus {
 }
 
 .plattegrond-frame.is-group-layout .groepje {
-  width: 236px;
-  min-height: 134px;
-  padding: 11px;
+  width: 214px;
+  min-height: 122px;
+  padding: 9px;
 }
 
 .group-meta {
@@ -1138,9 +1138,9 @@ select:focus {
 }
 
 .plattegrond-frame.is-group-layout .groepje .tafel {
-  width: 102px;
-  height: 58px;
-  font-size: 13px;
+  width: 95px;
+  height: 54px;
+  font-size: 12px;
 }
 
 .groepje[data-size="5"],
