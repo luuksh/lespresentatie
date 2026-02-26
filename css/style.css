@@ -1483,6 +1483,9 @@ body.drawer-open .side-drawer.left {
     grid-template-columns: repeat(2, 206px);
   }
 
+}
+
+@media (max-width: 1240px) {
   .plattegrond-frame.is-group-layout .grid.groepjes-layout {
     grid-template-columns: repeat(3, 214px);
     gap: 10px 12px;
