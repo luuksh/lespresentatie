@@ -573,6 +573,7 @@
       const boardFrame = document.getElementById('plattegrondFrame');
       const layoutRoot = document.getElementById('layoutRoot');
       const grid = document.getElementById('plattegrond');
+      const groupLayoutTypes = new Set(['groepjes', 'drietallen', 'vijftallen']);
 
       function nowNL() {
         return new Intl.DateTimeFormat('nl-NL', {
@@ -592,6 +593,9 @@
 
       function fitBoardToViewport() {
         if (!boardScaler || !boardFrame || !layoutRoot) return;
+        const activeType = indelingSel?.value || '';
+        const isGroupLayout = groupLayoutTypes.has(activeType);
+        boardFrame.classList.toggle('is-group-layout', isGroupLayout);
 
         boardFrame.style.transform = 'scale(1)';
         boardScaler.style.height = 'auto';
@@ -603,7 +607,9 @@
         const maxH = Math.max(220, window.innerHeight - top - 8);
         const maxW = Math.max(320, layoutRoot.clientWidth - 2);
 
-        const scale = Math.min(1, maxW / naturalW, maxH / naturalH);
+        const scale = isGroupLayout
+          ? Math.min(1, maxW / naturalW)
+          : Math.min(1, maxW / naturalW, maxH / naturalH);
 
         boardFrame.style.transform = `scale(${scale})`;
         boardFrame.style.transformOrigin = 'top center';

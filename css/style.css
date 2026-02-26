@@ -1014,6 +1014,21 @@ select:focus {
   justify-content: center;
 }
 
+.plattegrond-frame.is-group-layout .grid-wrapper {
+  min-width: 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.plattegrond-frame.is-group-layout .bureau-rij {
+  justify-content: center;
+}
+
+.plattegrond-frame.is-group-layout .grid.groepjes-layout {
+  grid-template-columns: repeat(2, 236px);
+  gap: 14px;
+}
+
 .groepje {
   position: relative;
   width: 206px;
@@ -1027,6 +1042,12 @@ select:focus {
   grid-auto-rows: auto;
   gap: 7px;
   animation: fadeIn 0.28s ease;
+}
+
+.plattegrond-frame.is-group-layout .groepje {
+  width: 236px;
+  min-height: 134px;
+  padding: 11px;
 }
 
 .group-meta {
@@ -1114,6 +1135,12 @@ select:focus {
   width: 88px;
   height: 50px;
   font-size: 12px;
+}
+
+.plattegrond-frame.is-group-layout .groepje .tafel {
+  width: 102px;
+  height: 58px;
+  font-size: 13px;
 }
 
 .groepje[data-size="5"],
@@ -1520,6 +1547,19 @@ body.drawer-open .side-drawer.left {
     min-width: 0;
   }
 
+  .plattegrond-frame.is-group-layout .grid-wrapper {
+    width: 100%;
+  }
+
+  .plattegrond-frame.is-group-layout .grid.groepjes-layout {
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+    width: 100%;
+  }
+
+  .plattegrond-frame.is-group-layout .groepje {
+    width: 100%;
+  }
+
   .side-drawer.left {
     width: min(92vw, 360px);
     top: 8px;
@@ -1565,6 +1605,10 @@ body.drawer-open .side-drawer.left {
   .presentatie-lijst { column-count: 1; }
 
   .grid.groepjes-layout { grid-template-columns: 1fr; }
+
+  .plattegrond-frame.is-group-layout .grid.groepjes-layout {
+    grid-template-columns: 1fr;
+  }
 
   .tafel {
     width: 82px;
