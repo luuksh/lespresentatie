@@ -1155,6 +1155,14 @@ select:focus {
   column-gap: 14px;
 }
 
+.plattegrond-frame.is-group-layout .presentatie-lijst {
+  max-width: 1200px;
+  width: fit-content;
+  margin: 0 auto;
+  column-count: 4;
+  column-gap: 10px;
+}
+
 .presentatie-item {
   position: relative;
   break-inside: avoid;
@@ -1494,6 +1502,10 @@ body.drawer-open .side-drawer.left {
   .plattegrond-frame.is-group-layout .groepje {
     width: 214px;
   }
+
+  .plattegrond-frame.is-group-layout .presentatie-lijst {
+    column-count: 3;
+  }
 }
 
 @media (max-width: 980px) {
@@ -1572,6 +1584,12 @@ body.drawer-open .side-drawer.left {
     width: 100%;
   }
 
+  .plattegrond-frame.is-group-layout .presentatie-lijst {
+    width: 100%;
+    max-width: 100%;
+    column-count: 2;
+  }
+
   .side-drawer.left {
     width: min(92vw, 360px);
     top: 8px;
@@ -1620,6 +1638,10 @@ body.drawer-open .side-drawer.left {
 
   .plattegrond-frame.is-group-layout .grid.groepjes-layout {
     grid-template-columns: 1fr;
+  }
+
+  .plattegrond-frame.is-group-layout .presentatie-lijst {
+    column-count: 1;
   }
 
   .tafel {
