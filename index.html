@@ -80,11 +80,6 @@
               <select id="klasSelect"></select>
             </div>
 
-            <div class="lesson-status in-topbar" id="lessonStatusBar">
-              <span class="status-chip" id="currentClassLabel">Klas: -</span>
-              <span class="status-chip" id="currentLayoutLabel">Indeling: -</span>
-            </div>
-
           </div>
         </div>
 
@@ -567,8 +562,6 @@
       const klasSel = document.getElementById('klasSelect');
       const printMeta = document.getElementById('printMeta');
       const quickToggle = document.getElementById('drawerQuickToggle');
-      const currentClassLabel = document.getElementById('currentClassLabel');
-      const currentLayoutLabel = document.getElementById('currentLayoutLabel');
       const boardScaler = document.getElementById('boardScaler');
       const boardFrame = document.getElementById('plattegrondFrame');
       const layoutRoot = document.getElementById('layoutRoot');
@@ -584,9 +577,6 @@
       function updateBoardLabels() {
         const indeling = indelingSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
         const klas = klasSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
-
-        if (currentClassLabel) currentClassLabel.textContent = `Klas: ${klas}`;
-        if (currentLayoutLabel) currentLayoutLabel.textContent = `Indeling: ${indeling}`;
 
         printMeta.textContent = `Klassenplattegrond · ${klas} · ${indeling} · ${nowNL()}`;
       }
