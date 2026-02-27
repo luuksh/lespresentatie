@@ -1,5 +1,5 @@
 // js/indeling.js
-const MODULE_VERSION = '20260223-05';
+const MODULE_VERSION = '20260227-01';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 
 const modules = {
@@ -257,7 +257,210 @@ function isGroupLayoutType(type = getCurrentType()) {
 function agendaDateLabel(raw) {
   const value = String(raw || '').trim();
   if (!value) return '(geen datum)';
-  return `${formatDateLabel(value)} (${value})`;
+  return formatDateLabel(value);
+}
+
+function getSelectedLayoutTitle() {
+  const select = getLayoutSelect();
+  return String(select?.value || '').trim();
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function todayIsoDateLocal() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function normalizeToIsoDate(rawValue, fallbackYear = new Date().getFullYear()) {
+  const raw = String(rawValue || '').trim().toLowerCase();
+  if (!raw) return '';
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+
+  const ddmmyyyy = raw.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/);
+  if (ddmmyyyy) {
+    const day = String(Number(ddmmyyyy[1])).padStart(2, '0');
+    const month = String(Number(ddmmyyyy[2])).padStart(2, '0');
+    return `${ddmmyyyy[3]}-${month}-${day}`;
+  }
+
+  const ddmm = raw.match(/^(\d{1,2})[-/](\d{1,2})$/);
+  if (ddmm) {
+    const day = String(Number(ddmm[1])).padStart(2, '0');
+    const month = String(Number(ddmm[2])).padStart(2, '0');
+    return `${fallbackYear}-${month}-${day}`;
+  }
+
+  const monthIndex = {
+    januari: 1,
+    februari: 2,
+    maart: 3,
+    april: 4,
+    mei: 5,
+    juni: 6,
+    juli: 7,
+    augustus: 8,
+    september: 9,
+    oktober: 10,
+    november: 11,
+    december: 12
+  };
+
+  const nlText = raw.match(/^(\d{1,2})\s+([a-z]+)(?:\s+(\d{4}))?$/);
+  if (nlText) {
+    const day = String(Number(nlText[1])).padStart(2, '0');
+    const month = monthIndex[nlText[2]];
+    if (month) {
+      const year = nlText[3] ? Number(nlText[3]) : fallbackYear;
+      return `${year}-${String(month).padStart(2, '0')}-${day}`;
+    }
+  }
+
+  return '';
+}
+
+function collectTodayPresentationsFromSnapshot(projectName, payload, todayIso) {
+  const snapshot = String(payload?.domSnapshot || '').trim();
+  if (!snapshot) return [];
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(`<div id="snapshotRoot">${snapshot}</div>`, 'text/html');
+  const root = doc.getElementById('snapshotRoot');
+  if (!root) return [];
+
+  const result = [];
+  const fallbackYear = Number(todayIso.split('-')[0]) || new Date().getFullYear();
+  const items = Array.from(root.querySelectorAll('.groepje, .presentatie-item'));
+  items.forEach((item) => {
+    const dateEl = item.querySelector('[data-date-key]');
+    const rawDate = String(dateEl?.dataset?.date || dateEl?.textContent || '').trim();
+    if (normalizeToIsoDate(rawDate, fallbackYear) !== todayIso) return;
+
+    const topic = String(item.querySelector('[data-topic-key]')?.dataset?.topic || '').trim();
+    const students = item.classList.contains('presentatie-item')
+      ? Array.from(item.querySelectorAll('.naam'))
+        .map((el) => String(el.textContent || '').trim())
+        .filter((name) => name && name !== '-')
+      : Array.from(item.querySelectorAll('.tafel'))
+        .map((el) => String(el.textContent || '').trim())
+        .filter((name) => name && name !== '-');
+
+    result.push({
+      project: projectName,
+      topic,
+      students
+    });
+  });
+
+  return result;
+}
+
+function collectTodayPresentationsFromPayload(projectName, payload, todayIso) {
+  const type = String(payload?.type || '');
+  const topicMap = new Map((payload?.groupTopics || []).map((item) => [
+    String(item?.key || ''),
+    String(item?.topic || '').trim()
+  ]));
+  const dateMap = new Map((payload?.groupDates || []).map((item) => [
+    String(item?.key || ''),
+    String(item?.date || '').trim()
+  ]));
+  const result = [];
+  const fallbackYear = Number(todayIso.split('-')[0]) || new Date().getFullYear();
+
+  if (type === 'presentatievolgorde') {
+    const order = Array.isArray(payload?.order) ? payload.order : [];
+    order.forEach((name, idx) => {
+      const key = `volg${idx + 1}`;
+      if (normalizeToIsoDate(dateMap.get(key), fallbackYear) !== todayIso) return;
+      const student = String(name || '').trim();
+      result.push({
+        project: projectName,
+        topic: topicMap.get(key) || '',
+        students: student && student !== '-' ? [student] : []
+      });
+    });
+    return result;
+  }
+
+  const seats = Array.isArray(payload?.seats) ? payload.seats : [];
+  const studentsByGroup = new Map();
+  seats.forEach((seat) => {
+    const rawSeatId = String(seat?.seatId || '').trim();
+    const groupKey = rawSeatId.includes('-') ? rawSeatId.split('-')[0] : '';
+    if (!groupKey) return;
+    const name = String(seat?.studentId || '').trim();
+    if (!name || name === '-') return;
+    if (!studentsByGroup.has(groupKey)) studentsByGroup.set(groupKey, []);
+    studentsByGroup.get(groupKey).push(name);
+  });
+
+  dateMap.forEach((rawDate, key) => {
+    if (!key || normalizeToIsoDate(rawDate, fallbackYear) !== todayIso) return;
+    result.push({
+      project: projectName,
+      topic: topicMap.get(key) || '',
+      students: studentsByGroup.get(key) || []
+    });
+  });
+
+  return result;
+}
+
+function collectTodayPresentationsForClass(classId, todayIso = todayIsoDateLocal()) {
+  const store = readSavedLayouts();
+  const layouts = store?.classes?.[classId]?.layouts;
+  if (!layouts || typeof layouts !== 'object') return [];
+
+  const rows = [];
+  Object.entries(layouts).forEach(([projectName, payload]) => {
+    if (!payload || typeof payload !== 'object') return;
+    const fromSnapshot = collectTodayPresentationsFromSnapshot(projectName, payload, todayIso);
+    if (fromSnapshot.length) {
+      rows.push(...fromSnapshot);
+      return;
+    }
+    rows.push(...collectTodayPresentationsFromPayload(projectName, payload, todayIso));
+  });
+  return rows;
+}
+
+function renderPresentationNotice() {
+  const notice = document.getElementById('presentationNotice');
+  if (!notice) return;
+
+  const classId = getCurrentClassId();
+  const todayIso = todayIsoDateLocal();
+  const rows = collectTodayPresentationsForClass(classId, todayIso);
+
+  if (!rows.length) {
+    notice.hidden = true;
+    notice.innerHTML = '';
+    return;
+  }
+
+  const listItems = rows.map((row) => {
+    const topic = row.topic || '(geen onderwerp)';
+    const students = row.students.length ? row.students.join(', ') : '-';
+    return `<li class="presentation-notice-item"><strong>Project:</strong> ${escapeHtml(row.project)} · <strong>Onderwerp:</strong> ${escapeHtml(topic)} · <strong>Leerlingen:</strong> ${escapeHtml(students)}</li>`;
+  }).join('');
+
+  notice.innerHTML = `
+    <p class="presentation-notice-title">Presentaties vandaag (${escapeHtml(formatDateLabel(todayIso))})</p>
+    <ul class="presentation-notice-list">${listItems}</ul>
+  `;
+  notice.hidden = false;
 }
 
 function buildGroupAgendaOverview() {
@@ -288,6 +491,7 @@ function buildGroupAgendaOverview() {
   const lines = [
     `Klas: ${getCurrentClassId()}`,
     `Indeling: ${type}`,
+    `Project: ${getSelectedLayoutTitle() || '(geen opgeslagen plattegrond geselecteerd)'}`,
     ''
   ];
 
@@ -627,6 +831,7 @@ function saveCurrentLayoutAs(name) {
   cls.selected = name;
   writeSavedLayouts(store);
   refillSavedLayoutSelect();
+  renderPresentationNotice();
 }
 
 async function loadSelectedLayout() {
@@ -667,6 +872,7 @@ function deleteSelectedLayout() {
   if (cls.selected === name) cls.selected = '';
   writeSavedLayouts(store);
   refillSavedLayoutSelect();
+  renderPresentationNotice();
 }
 
 (function initLayoutLibraryUI() {
@@ -730,12 +936,15 @@ function deleteSelectedLayout() {
   klasSel.addEventListener('change', () => {
     if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
     setTimeout(refillSavedLayoutSelect, 40);
+    setTimeout(renderPresentationNotice, 40);
   });
 
   window.addEventListener('indeling:rendered', () => {
     refillSavedLayoutSelect();
     updateGroupOverviewButtons(btnGroupOverviewOpen);
+    renderPresentationNotice();
   });
   updateGroupOverviewButtons(btnGroupOverviewOpen);
   refillSavedLayoutSelect();
+  renderPresentationNotice();
 })();

@@ -542,6 +542,43 @@ body::after {
   border-bottom: 1px solid var(--line);
 }
 
+.presentation-notice {
+  margin: 0 0 10px;
+  border: 1px solid #cfe0f8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f6faff 0%, #ecf4ff 100%);
+  box-shadow: var(--shadow-xs);
+  padding: 10px 12px;
+}
+
+.presentation-notice[hidden] {
+  display: none !important;
+}
+
+.presentation-notice-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 900;
+  color: #1f3d66;
+}
+
+.presentation-notice-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.presentation-notice-item {
+  font-size: 13px;
+  line-height: 1.38;
+  color: #183252;
+}
+
+.presentation-notice-item strong {
+  font-weight: 900;
+}
+
 .controls-row {
   display: flex;
   flex-wrap: wrap;
@@ -1452,6 +1489,7 @@ body.drawer-open .side-drawer.left {
   }
 
   .topbar { display: none; }
+  .presentation-notice { display: none !important; }
 
   .grid-wrapper {
     min-width: 0;
