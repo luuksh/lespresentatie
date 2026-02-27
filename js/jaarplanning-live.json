@@ -1,0 +1,815 @@
+{
+  "updatedAt": "2026-02-27T20:28:32+01:00",
+  "entries": [
+    {
+      "classId": "1A",
+      "week": "37",
+      "items": [
+        "Leesclub - Les 01 - Start Leesclub",
+        "Leesclub - Les 02 - Bieb",
+        "Zinsbouwers - Les 01 – Welkom bij Zinsbouwers!​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "38",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 03 - Stillezen",
+        "Les 02 – Persoonsvorm (pv)​ + NL in de wereld"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "39",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 04 - Stillezen",
+        "Les 03 – Onderwerp (ow)​ & Taalfamilies",
+        "Escape Room Yde / BKK - Les 1 - Het Mysterie begint",
+        "Escape Room Yde / BKK - Les 2 – Weten wat we niet kunnen zien"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "40",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 05 - Stillezen",
+        "Les 04 – Pv + Onderwerp samen​",
+        "Escape Room Yde - Les 3 – Wat geloof jij?",
+        "Escape Room Yde - Les 4 – Een stem uit het moeras"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "41",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 06 - Stillezen",
+        "Les 05 – Werkwoordelijk gezegde (wg)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "42",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 07 - Stillezen",
+        "Les 06 - WG met hulpwerkwoorden",
+        "Netschrift en Zinsbouwers",
+        "Les 07 – Zelfstandig naamwoord (zn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "44",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 08 - Stillezen en Intro NL Leest",
+        "Les 08 – Lidwoord (lw)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "45",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 09 - Stillezen",
+        "Les 09 – Bijvoeglijk naamwoord (bn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "46",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 10 - Stillezen",
+        "Les 10 - Zn, lw, bn onderscheiden"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "47",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 11 - Stillezen",
+        "Les 11 – Lijdend voorwerp (lv)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1A",
+      "week": "48",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 12 - Stillezen",
+        "Les 12 - nwg"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "37",
+      "items": [
+        "Leesclub - Les 01 - Start Leesclub",
+        "Leesclub - Les 02 - Bieb",
+        "Zinsbouwers - Les 01 – Welkom bij Zinsbouwers!​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "38",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 03 - Stillezen",
+        "Les 02 – Persoonsvorm (pv)​ + NL in de wereld"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "39",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 04 - Stillezen",
+        "Les 03 – Onderwerp (ow)​ & Taalfamilies",
+        "Escape Room Yde / BKK - Les 1 - Het Mysterie begint",
+        "Escape Room Yde / BKK - Les 2 – Weten wat we niet kunnen zien"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "40",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 05 - Stillezen",
+        "Les 04 – Pv + Onderwerp samen​",
+        "Escape Room Yde - Les 3 – Wat geloof jij?",
+        "Escape Room Yde - Les 4 – Een stem uit het moeras"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "41",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 06 - Stillezen",
+        "Les 05 – Werkwoordelijk gezegde (wg)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "42",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 07 - Stillezen",
+        "Les 06 - WG met hulpwerkwoorden",
+        "Netschrift en Zinsbouwers",
+        "Les 07 – Zelfstandig naamwoord (zn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "44",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 08 - Stillezen en Intro NL Leest",
+        "Les 08 – Lidwoord (lw)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "45",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 09 - Stillezen",
+        "Les 09 – Bijvoeglijk naamwoord (bn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "46",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 10 - Stillezen",
+        "Les 10 - Zn, lw, bn onderscheiden"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "47",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 11 - Stillezen",
+        "Les 11 – Lijdend voorwerp (lv)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1B",
+      "week": "48",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 12 - Stillezen",
+        "Les 12 - nwg"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "37",
+      "items": [
+        "Leesclub - Les 01 - Start Leesclub",
+        "Leesclub - Les 02 - Bieb",
+        "Zinsbouwers - Les 01 – Welkom bij Zinsbouwers!​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "38",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 03 - Stillezen",
+        "Les 02 – Persoonsvorm (pv)​ + NL in de wereld"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "39",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 04 - Stillezen",
+        "Les 03 – Onderwerp (ow)​ & Taalfamilies",
+        "Escape Room Yde / BKK - Les 1 - Het Mysterie begint",
+        "Escape Room Yde / BKK - Les 2 – Weten wat we niet kunnen zien"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "40",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 05 - Stillezen",
+        "Les 04 – Pv + Onderwerp samen​",
+        "Escape Room Yde - Les 3 – Wat geloof jij?",
+        "Escape Room Yde - Les 4 – Een stem uit het moeras"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "41",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 06 - Stillezen",
+        "Les 05 – Werkwoordelijk gezegde (wg)​",
+        "Escape Room Yde - Les 5 – De Laatste Boodschap van Yde",
+        "Escape Room Yde - Les 6 – Wat weten we nu wél?"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "42",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 07 - Stillezen",
+        "Les 06 - WG met hulpwerkwoorden",
+        "Netschrift en Zinsbouwers",
+        "Les 07 – Zelfstandig naamwoord (zn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "44",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 08 - Stillezen en Intro NL Leest",
+        "Les 08 – Lidwoord (lw)​",
+        "Vosflix - Les 1: Intro",
+        "Vosflix - Les 2: Scriptstructuur & Plotverdeling"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "45",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 09 - Stillezen",
+        "Les 09 – Bijvoeglijk naamwoord (bn)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "46",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 10 - Stillezen",
+        "Les 10 - Zn, lw, bn onderscheiden"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "47",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 11 - Stillezen",
+        "Les 11 – Lijdend voorwerp (lv)​"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "1D",
+      "week": "48",
+      "items": [
+        "Leesclub en Zinsbouwers - Les 12 - Stillezen",
+        "Les 12 - nwg"
+      ],
+      "note": "0"
+    },
+    {
+      "classId": "3A",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3A",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3A",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3B",
+      "week": "2",
+      "items": [
+        "Faalfestival - Les 3 FF: Boeken en initiaal",
+        "0",
+        "Faalfestival - Les 3 FF: Leesles"
+      ],
+      "note": "Lijst van middeleeuwse symbolen met betekenis"
+    },
+    {
+      "classId": "3B",
+      "week": "3",
+      "items": [
+        "Faalfestival - Les 4: Informatieblok",
+        "0"
+      ]
+    },
+    {
+      "classId": "3B",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3B",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3B",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3B",
+      "week": "4",
+      "items": [
+        "Faalfestival - Les 4 FF: Leesles",
+        "0"
+      ]
+    },
+    {
+      "classId": "3B",
+      "week": "40",
+      "items": [
+        "Grenzen van Literatuur - Les 6 GvL: Perspectief",
+        "0",
+        "Grenzen van Literatuur - Les 7 GvL: Thema’s & Motieven"
+      ],
+      "note": "Peerfeedback geven:"
+    },
+    {
+      "classId": "3B",
+      "week": "41",
+      "items": [
+        "Grenzen van Literatuur - Les 8 GvL: Juryberaad & Poster maken",
+        "0"
+      ],
+      "note": "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie."
+    },
+    {
+      "classId": "3B",
+      "week": "49",
+      "items": [
+        "Faalfestival - Les 1 FF: Intro",
+        "0",
+        "Faalfestival - Les 2 FF: Letterkunde Middeleeuwen"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "2",
+      "items": [
+        "Faalfestival - Les 3 FF: Boeken en initiaal",
+        "0",
+        "Faalfestival - Les 3 FF: Leesles"
+      ],
+      "note": "Lijst van middeleeuwse symbolen met betekenis"
+    },
+    {
+      "classId": "3C",
+      "week": "3",
+      "items": [
+        "Leesclub - Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+        "0",
+        "Faalfestival - Les 4: Informatieblok"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3C",
+      "week": "4",
+      "items": [
+        "Faalfestival - Les 5: Eigenschappen + Levensles",
+        "0"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "40",
+      "items": [
+        "Grenzen van Literatuur - Les 6 GvL: Perspectief",
+        "0",
+        "Grenzen van Literatuur - Les 7 GvL: Thema’s & Motieven"
+      ],
+      "note": "Peerfeedback geven:"
+    },
+    {
+      "classId": "3C",
+      "week": "41",
+      "items": [
+        "Grenzen van Literatuur - Les 8 GvL: Juryberaad & Poster maken",
+        "0",
+        "Grenzen van Literatuur - Les 9 GvL: Juryuitslag"
+      ],
+      "note": "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie. | Reflectievragen"
+    },
+    {
+      "classId": "3C",
+      "week": "48",
+      "items": [
+        "Leesclub - Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+        "0"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "49",
+      "items": [
+        "Faalfestival - Les 1 FF: Intro",
+        "0",
+        "Faalfestival - Les 2 FF: Letterkunde Middeleeuwen"
+      ]
+    },
+    {
+      "classId": "3C",
+      "week": "50",
+      "items": [
+        "Leesclub - Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+        "0",
+        "Faalfestival - Les 2 FF: Leesles"
+      ]
+    },
+    {
+      "classId": "3D",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3D",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3D",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3E",
+      "week": "2",
+      "items": [
+        "Faalfestival - Les 3 FF: Boeken en initiaal",
+        "0",
+        "Faalfestival - Les 3 FF: Leesles"
+      ],
+      "note": "Lijst van middeleeuwse symbolen met betekenis"
+    },
+    {
+      "classId": "3E",
+      "week": "3",
+      "items": [
+        "Faalfestival - Les 4: Informatieblok",
+        "0"
+      ]
+    },
+    {
+      "classId": "3E",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3E",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3E",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3E",
+      "week": "4",
+      "items": [
+        "Faalfestival - Les 4 FF: Leesles",
+        "0"
+      ]
+    },
+    {
+      "classId": "3E",
+      "week": "40",
+      "items": [
+        "Grenzen van Literatuur - Les 6 GvL: Perspectief",
+        "0",
+        "Grenzen van Literatuur - Les 7 GvL: Thema’s & Motieven"
+      ],
+      "note": "Peerfeedback geven:"
+    },
+    {
+      "classId": "3E",
+      "week": "41",
+      "items": [
+        "Grenzen van Literatuur - Les 8 GvL: Juryberaad & Poster maken",
+        "0",
+        "Grenzen van Literatuur - Les 9 GvL: Juryuitslag"
+      ],
+      "note": "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie. | Reflectievragen"
+    },
+    {
+      "classId": "3E",
+      "week": "49",
+      "items": [
+        "Faalfestival - Les 1 FF: Intro",
+        "0",
+        "Faalfestival - Les 2 FF: Letterkunde Middeleeuwen"
+      ]
+    },
+    {
+      "classId": "3F",
+      "week": "2",
+      "items": [
+        "Faalfestival - Les 3 FF: Boeken en initiaal",
+        "0",
+        "Faalfestival - Les 3 FF: Leesles"
+      ],
+      "note": "Lijst van middeleeuwse symbolen met betekenis"
+    },
+    {
+      "classId": "3F",
+      "week": "3",
+      "items": [
+        "Faalfestival - Les 4: Informatieblok",
+        "0"
+      ]
+    },
+    {
+      "classId": "3F",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3F",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3F",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3F",
+      "week": "4",
+      "items": [
+        "Faalfestival - Les 4 FF: Leesles",
+        "0"
+      ]
+    },
+    {
+      "classId": "3F",
+      "week": "40",
+      "items": [
+        "Grenzen van Literatuur - Les 6 GvL: Perspectief",
+        "0",
+        "Grenzen van Literatuur - Les 7 GvL: Thema’s & Motieven"
+      ],
+      "note": "Peerfeedback geven:"
+    },
+    {
+      "classId": "3F",
+      "week": "41",
+      "items": [
+        "Grenzen van Literatuur - Les 8 GvL: Juryberaad & Poster maken",
+        "0",
+        "Grenzen van Literatuur - Les 9 GvL: Juryuitslag"
+      ],
+      "note": "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie. | Reflectievragen"
+    },
+    {
+      "classId": "3F",
+      "week": "49",
+      "items": [
+        "Faalfestival - Les 1 FF: Intro",
+        "0",
+        "Faalfestival - Les 2 FF: Letterkunde Middeleeuwen"
+      ]
+    },
+    {
+      "classId": "3G",
+      "week": "2",
+      "items": [
+        "Faalfestival - Les 3 FF: Boeken en initiaal",
+        "0",
+        "Faalfestival - Les 3 FF: Leesles"
+      ],
+      "note": "Lijst van middeleeuwse symbolen met betekenis"
+    },
+    {
+      "classId": "3G",
+      "week": "3",
+      "items": [
+        "Faalfestival - Les 4: Informatieblok",
+        "0"
+      ]
+    },
+    {
+      "classId": "3G",
+      "week": "37",
+      "items": [
+        "Startinfo - Informatie formatief werken & introductie jaarthema",
+        "1",
+        "Grenzen van Literatuur - Les 1 GVL: Jury vormen"
+      ]
+    },
+    {
+      "classId": "3G",
+      "week": "38",
+      "items": [
+        "Grenzen van Literatuur - Les 2 GvL: Spanning",
+        "1",
+        "Grenzen van Literatuur - Les 3 GvL: Ruimte"
+      ]
+    },
+    {
+      "classId": "3G",
+      "week": "39",
+      "items": [
+        "Grenzen van Literatuur - Les 4 GvL: Tijd",
+        "1",
+        "Grenzen van Literatuur - Les 5 GvL: Personages"
+      ],
+      "note": "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad). | https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+    },
+    {
+      "classId": "3G",
+      "week": "4",
+      "items": [
+        "Faalfestival - Les 4 FF: Leesles",
+        "0"
+      ]
+    },
+    {
+      "classId": "3G",
+      "week": "40",
+      "items": [
+        "Grenzen van Literatuur - Les 6 GvL: Perspectief",
+        "0",
+        "Grenzen van Literatuur - Les 7 GvL: Thema’s & Motieven"
+      ],
+      "note": "Peerfeedback geven:"
+    },
+    {
+      "classId": "3G",
+      "week": "41",
+      "items": [
+        "Grenzen van Literatuur - Les 8 GvL: Juryberaad & Poster maken",
+        "0",
+        "Grenzen van Literatuur - Les 9 GvL: Juryuitslag"
+      ],
+      "note": "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie. | Reflectievragen"
+    },
+    {
+      "classId": "3G",
+      "week": "49",
+      "items": [
+        "Faalfestival - Les 1 FF: Intro",
+        "0",
+        "Faalfestival - Les 2 FF: Letterkunde Middeleeuwen"
+      ]
+    }
+  ]
+}

@@ -597,6 +597,79 @@ body::after {
   gap: 4px;
 }
 
+.jaarplanning-panel {
+  margin-top: 10px;
+  border: 1px solid #cfe0f8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%);
+  box-shadow: var(--shadow-xs);
+  padding: 10px 12px;
+}
+
+.jaarplanning-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.jaarplanning-week {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 900;
+  color: #1b3c66;
+}
+
+.jaarplanning-refresh {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.jaarplanning-status {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #325175;
+}
+
+.jaarplanning-status[data-state="ok"] {
+  color: #1f6645;
+}
+
+.jaarplanning-status[data-state="warn"] {
+  color: #905a06;
+}
+
+.jaarplanning-status[data-state="error"] {
+  color: #9a2929;
+}
+
+.jaarplanning-items {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+}
+
+.jaarplanning-items li {
+  font-size: 13px;
+  line-height: 1.35;
+  color: #193355;
+}
+
+.jaarplanning-items .jaarplanning-note {
+  list-style: none;
+  margin-left: -18px;
+  color: #415d83;
+  font-style: italic;
+}
+
+.jaarplanning-last-update {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: #5d7597;
+}
+
 .label {
   font-size: 10px;
   font-weight: 900;
@@ -1403,6 +1476,28 @@ body.drawer-open .side-drawer.left {
   gap: 6px;
 }
 
+.jaarplanning-settings {
+  align-items: stretch;
+}
+
+.jaarplanning-source-input {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid #c3d2e8;
+  border-radius: var(--radius-sm);
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-950);
+  background: #fff;
+}
+
+.jaarplanning-source-input:focus {
+  outline: none;
+  border-color: #5a87d7;
+  box-shadow: 0 0 0 3px rgba(90, 135, 215, 0.2);
+}
+
 .status-text {
   min-height: 16px;
   margin-top: 8px;
@@ -1666,6 +1761,14 @@ body.drawer-open .side-drawer.left {
   select {
     width: 100%;
     min-width: 0;
+  }
+
+  .jaarplanning-head {
+    flex-wrap: wrap;
+  }
+
+  .jaarplanning-refresh {
+    width: 100%;
   }
 
   .quick-board-actions { justify-content: flex-start; }

@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klassenplattegrond</title>
 
-  <link rel="stylesheet" href="css/style.css?v=20260227-01" />
+  <link rel="stylesheet" href="css/style.css?v=20260227-02" />
 
+  <script>
+    window.APP_CONFIG = {
+      jaarplanningSourceUrl: 'js/jaarplanning-live.json'
+    };
+  </script>
   <script type="module" src="js/indeling.js?v=20260227-01"></script>
-  <script type="module" src="js/init.js?v=20260222-23"></script>
+  <script type="module" src="js/init.js?v=20260227-02"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
@@ -52,6 +57,24 @@
           </div>
         </div>
       </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Jaarplanning-koppeling</h2>
+        <p class="panel-help">Plak hier de URL van de live JSON-feed die vanuit SharePoint wordt bijgewerkt.</p>
+        <div class="toolbar jaarplanning-settings">
+          <input
+            id="jaarplanningSourceInput"
+            type="url"
+            class="jaarplanning-source-input"
+            placeholder="https://.../jaarplanning.json"
+            autocomplete="off"
+          />
+          <div class="btn-group">
+            <button id="jaarplanningSourceSave" type="button" class="btn btn-primary">Opslaan</button>
+            <button id="jaarplanningSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+          </div>
+        </div>
+      </section>
     </div>
   </aside>
 
@@ -81,6 +104,18 @@
             </div>
 
           </div>
+
+          <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
+            <div class="jaarplanning-head">
+              <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
+              <button id="jaarplanningRefreshBtn" type="button" class="btn btn-secondary jaarplanning-refresh">Ververs</button>
+            </div>
+            <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Niet gekoppeld</p>
+            <ul id="jaarplanningItems" class="jaarplanning-items">
+              <li>Koppel eerst een jaarplanning-bron in het docentpaneel.</li>
+            </ul>
+            <p id="jaarplanningLastUpdate" class="jaarplanning-last-update"></p>
+          </section>
         </div>
         <section id="presentationNotice" class="presentation-notice" aria-live="polite" hidden></section>
 
