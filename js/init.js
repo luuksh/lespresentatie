@@ -262,42 +262,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       String(week.weekNo).padStart(2, '0')
     ];
     const classWeeks = planningData[classId] || {};
-    let matchedWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
-    let weekData = matchedWeekKey ? classWeeks[matchedWeekKey] : null;
-
-    const weekNumberFromKey = (key) => {
-      const text = String(key || '').toUpperCase();
-      const iso = text.match(/W(\d{1,2})$/);
-      if (iso) return Number(iso[1]);
-      const plain = text.match(/^(\d{1,2})$/);
-      if (plain) return Number(plain[1]);
-      return null;
-    };
-
-    const pickFallbackWeek = () => {
-      const keyed = Object.keys(classWeeks)
-        .map((k) => ({ key: k, num: weekNumberFromKey(k) }))
-        .filter((x) => Number.isFinite(x.num) && classWeeks[x.key]?.items?.length);
-      if (!keyed.length) return null;
-      const sorted = keyed.sort((a, b) => a.num - b.num);
-      const next = sorted.find((x) => x.num >= week.weekNo);
-      return next || sorted[0];
-    };
+    const matchedWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
+    const weekData = matchedWeekKey ? classWeeks[matchedWeekKey] : null;
 
     if (!planningSourceUrl) {
       setPlanningItems(['Koppel eerst een jaarplanning-bron in het docentpaneel.']);
       if (planningLastUpdateEl) planningLastUpdateEl.textContent = '';
       setPlanningStatus('Niet gekoppeld', 'warn');
       return;
-    }
-
-    if (!weekData || !Array.isArray(weekData.items) || !weekData.items.length) {
-      const fallback = pickFallbackWeek();
-      if (fallback) {
-        matchedWeekKey = fallback.key;
-        weekData = classWeeks[matchedWeekKey];
-        planningWeekLabelEl.textContent = `Week ${fallback.num} (beschikbaar)`;
-      }
     }
 
     if (!weekData || !Array.isArray(weekData.items) || !weekData.items.length) {
@@ -315,11 +287,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
       planningLastUpdateEl.textContent = stamp;
     }
-    if (matchedWeekKey && !weekCandidates.includes(matchedWeekKey)) {
-      setPlanningStatus('Live gekoppeld (andere beschikbare week getoond)', 'warn');
-    } else {
-      setPlanningStatus('Live gekoppeld', 'ok');
-    }
+    setPlanningStatus('Live gekoppeld', 'ok');
   }
 
   async function fetchPlanning() {
