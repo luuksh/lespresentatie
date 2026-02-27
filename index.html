@@ -104,18 +104,6 @@
             </div>
 
           </div>
-
-          <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
-            <div class="jaarplanning-head">
-              <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
-              <button id="jaarplanningRefreshBtn" type="button" class="btn btn-secondary jaarplanning-refresh">Ververs</button>
-            </div>
-            <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Niet gekoppeld</p>
-            <ul id="jaarplanningItems" class="jaarplanning-items">
-              <li>Koppel eerst een jaarplanning-bron in het docentpaneel.</li>
-            </ul>
-            <p id="jaarplanningLastUpdate" class="jaarplanning-last-update"></p>
-          </section>
         </div>
         <section id="presentationNotice" class="presentation-notice" aria-live="polite" hidden></section>
 
@@ -128,6 +116,20 @@
       </section>
     </div>
   </main>
+
+  <aside id="jaarplanningWidget" class="jaarplanning-widget" aria-label="Weekprogramma">
+    <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
+      <div class="jaarplanning-head">
+        <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
+        <button id="jaarplanningRefreshBtn" type="button" class="btn btn-secondary jaarplanning-refresh">Ververs</button>
+      </div>
+      <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Niet gekoppeld</p>
+      <ul id="jaarplanningItems" class="jaarplanning-items">
+        <li>Koppel eerst een jaarplanning-bron in het docentpaneel.</li>
+      </ul>
+      <p id="jaarplanningLastUpdate" class="jaarplanning-last-update"></p>
+    </section>
+  </aside>
 
   <aside id="timerDock" class="clock-timer" role="timer" aria-live="polite">
     <div class="clock-wrap">

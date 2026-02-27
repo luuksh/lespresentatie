@@ -606,6 +606,20 @@ body::after {
   padding: 10px 12px;
 }
 
+.jaarplanning-widget {
+  position: fixed;
+  top: 330px;
+  right: 10px;
+  width: var(--timer-width);
+  z-index: 34;
+}
+
+.jaarplanning-widget .jaarplanning-panel {
+  margin-top: 0;
+  max-height: min(46vh, 440px);
+  overflow: auto;
+}
+
 .jaarplanning-head {
   display: flex;
   align-items: center;
@@ -1548,6 +1562,7 @@ body.drawer-open .side-drawer.left {
 
   #opdrachtMount,
   #timerDock,
+  #jaarplanningWidget,
   .magister-assist,
   .side-drawer,
   .drawer-quick-toggle {
@@ -1674,6 +1689,16 @@ body.drawer-open .side-drawer.left {
     position: static;
     width: min(360px, 100%);
     margin: 8px auto;
+  }
+
+  #jaarplanningWidget {
+    position: static;
+    width: min(360px, 100%);
+    margin: 8px auto;
+  }
+
+  .jaarplanning-widget .jaarplanning-panel {
+    max-height: none;
   }
 
   .layout {
