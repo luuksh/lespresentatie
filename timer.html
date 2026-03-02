@@ -478,7 +478,7 @@
 
     function updateTimerOverlay() {
       const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
-      const runDone = total > 0 ? (total - remaining) / total : 0;
+      const runDone = (total - remaining) / FULL_CIRCLE_SECONDS;
       const done = running ? runDone : selectionDone;
       const handAngle = (selectionStartDeg + done * 360) % 360;
       ringEl.style.setProperty('--start-angle', `${selectionStartDeg.toFixed(4)}deg`);
