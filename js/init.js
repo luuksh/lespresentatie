@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaSourceInput = document.getElementById('agendaSourceInput');
   const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
+  const agendaDebugBtn = document.getElementById('agendaDebugBtn');
+  const agendaDebugOutput = document.getElementById('agendaDebugOutput');
 
   let planningData = {};
   let planningUpdatedAt = '';
@@ -659,6 +661,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(index);
   }
 
+  function formatAgendaDebug(entries = [], now = new Date()) {
+    const classId = normalizeClassId(klasSelect?.value || '');
+    const classEntries = entries
+      .filter((entry) => entry.classId === classId)
+      .sort((a, b) => a.start - b.start);
+    const todayEntries = classEntries.filter((entry) => isSameLocalDay(entry.start, now));
+    const todayBest = findBestAgendaEntryForToday(classEntries, now);
+    const todayIndex = lessonNumberForWeek(entries, todayBest);
+    const header = [
+      `nu: ${now.toLocaleString('nl-NL')}`,
+      `geselecteerde klas: ${classId || '-'}`,
+      `gevonden agenda-events totaal: ${entries.length}`,
+      `events voor klas ${classId || '-'}: ${classEntries.length}`,
+      `events vandaag voor klas ${classId || '-'}: ${todayEntries.length}`,
+      `lesnummer deze week: ${todayIndex || 0} (${todayIndex ? lessonLetter(Math.min(todayIndex, 3)) : '-'})`
+    ];
+    if (!entries.length) {
+      return `${header.join('\n')}\n\nGeen agenda-events gelezen.`;
+    }
+    const lines = classEntries.map((entry, i) => {
+      const weekIndex = lessonNumberForWeek(entries, entry);
+      const date = entry.start.toLocaleDateString('nl-NL', { weekday: 'short', day: '2-digit', month: '2-digit' });
+      const from = entry.start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+      const to = entry.end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+      const mark = todayBest && entry.start.getTime() === todayBest.start.getTime() ? ' <== geselecteerd' : '';
+      return `${i + 1}. ${date} ${from}-${to} | klas=${entry.classId} | weekles=${weekIndex}${weekIndex ? ` (${lessonLetter(Math.min(weekIndex, 3))})` : ''}${mark}`;
+    });
+    return `${header.join('\n')}\n\n${lines.join('\n')}`;
+  }
+
   function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
     if (!Array.isArray(lessons) || !lessons.length) return [];
     if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) {
@@ -788,6 +820,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       }
+      if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+        agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+      }
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden agenda:', err);
@@ -795,6 +830,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaFetchedAt = '';
       activeAgendaClassId = '';
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+      if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+        agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+      }
       renderPlanning();
     }
   }
@@ -868,8 +906,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyAgendaSource('', true);
   });
 
+  agendaDebugBtn?.addEventListener('click', () => {
+    if (!agendaDebugOutput) return;
+    agendaDebugOutput.style.display = 'block';
+    agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+  });
+
   klasSelect?.addEventListener('change', () => {
     selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect.value);
+    if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+      agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+    }
     renderPlanning();
   });
   applyPlanningSource(resolvePlanningSourceUrl(), false);
