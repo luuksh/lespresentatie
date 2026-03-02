@@ -740,7 +740,12 @@
 
   <script>
     (() => {
-      let total = 45 * 60;
+      function getLiveBaseSeconds() {
+        const now = new Date();
+        return now.getMinutes() * 60 + now.getSeconds();
+      }
+
+      let total = getLiveBaseSeconds();
       let remaining = total;
       let running = false;
       let intervalId = null;
@@ -793,7 +798,7 @@
       }
 
       function setByAngle(clientX, clientY) {
-        if (total <= 0) total = 45 * 60;
+        if (total <= 0) total = getLiveBaseSeconds();
         const rect = clockFace.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         const cy = rect.top + rect.height / 2;
@@ -865,6 +870,7 @@
       function reset() {
         running = false;
         clearInterval(intervalId);
+        total = getLiveBaseSeconds();
         remaining = total;
         if (startBtn) startBtn.textContent = 'Start';
         syncInputsFrom(total);
