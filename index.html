@@ -187,6 +187,7 @@
 
     #timerDock .clock-progress {
       z-index: 1;
+      background: conic-gradient(from var(--start-angle, 0deg), #64c5ff calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.08) 0);
     }
 
     #timerDock .clock-live-hand {
@@ -803,6 +804,8 @@
       let running = false;
       let intervalId = null;
       let endAtMs = 0;
+      let latestLiveAngleDeg = 0;
+      let selectionStartDeg = 0;
 
       const clockFace = document.getElementById('clockFace');
       const liveProgress = document.getElementById('clockLiveProgress');
@@ -867,17 +870,21 @@
       function updateLiveClock() {
         const now = new Date();
         const liveDone = getLiveSecondsOfHour(now) / FULL_CIRCLE_SECONDS;
+        latestLiveAngleDeg = liveDone * 360;
         liveProgress.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
-        liveHand.style.setProperty('--live-angle', `${(liveDone * 360).toFixed(4)}deg`);
+        liveHand.style.setProperty('--live-angle', `${latestLiveAngleDeg.toFixed(4)}deg`);
         liveTimeEl.textContent = fmtHHMMSS(now);
+        if (!running && total === 0) selectionStartDeg = latestLiveAngleDeg;
       }
 
       function updateTimerOverlay() {
         const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
         const runDone = total > 0 ? (total - remaining) / total : 0;
         const done = running ? runDone : selectionDone;
+        const handAngle = (selectionStartDeg + done * 360) % 360;
+        progress.style.setProperty('--start-angle', `${selectionStartDeg.toFixed(4)}deg`);
         progress.style.setProperty('--pct', (done * 100).toFixed(4));
-        hand.style.setProperty('--angle', `${(done * 360).toFixed(4)}deg`);
+        hand.style.setProperty('--angle', `${handAngle.toFixed(4)}deg`);
         clockFace.classList.toggle('done', total > 0 && remaining === 0 && !running);
       }
 
@@ -894,8 +901,8 @@
         const dy = clientY - cy;
         let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
         if (angle < 0) angle += 360;
-        const done = angle / 360;
-        total = clamp(Math.round(FULL_CIRCLE_SECONDS * (1 - done)), 0, FULL_CIRCLE_SECONDS);
+        const selectedArc = (angle - selectionStartDeg + 360) % 360;
+        total = clamp(Math.round((selectedArc / 360) * FULL_CIRCLE_SECONDS), 0, FULL_CIRCLE_SECONDS);
         remaining = total;
         running = false;
         clearInterval(intervalId);
@@ -962,6 +969,7 @@
         clearInterval(intervalId);
         total = 0;
         remaining = 0;
+        selectionStartDeg = latestLiveAngleDeg;
         if (startBtn) startBtn.textContent = 'Start';
         syncInputsFrom(0);
         renderTimer();
@@ -1052,6 +1060,7 @@
 
         interactionMode = 'scrub';
         pause();
+        selectionStartDeg = latestLiveAngleDeg;
         setByAngle(e.clientX, e.clientY);
       });
       clockFace.addEventListener('pointermove', (e) => {
