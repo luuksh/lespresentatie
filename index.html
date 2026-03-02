@@ -9,7 +9,8 @@
 
   <script>
     window.APP_CONFIG = {
-      jaarplanningSourceUrl: 'js/jaarplanning-live.json'
+      jaarplanningSourceUrl: 'js/jaarplanning-live.json',
+      agendaSourceUrl: ''
     };
   </script>
   <script type="module" src="js/indeling.js?v=20260227-01"></script>
@@ -75,6 +76,24 @@
           </div>
         </div>
       </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Zermelo live agenda</h2>
+        <p class="panel-help">Plak hier de URL van je live agenda JSON. De app kiest dan automatisch je klas en de les A/B/C voor vandaag.</p>
+        <div class="toolbar jaarplanning-settings">
+          <input
+            id="agendaSourceInput"
+            type="url"
+            class="jaarplanning-source-input"
+            placeholder="https://.../agenda.json"
+            autocomplete="off"
+          />
+          <div class="btn-group">
+            <button id="agendaSourceSave" type="button" class="btn btn-primary">Opslaan</button>
+            <button id="agendaSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+          </div>
+        </div>
+      </section>
     </div>
   </aside>
 
@@ -117,7 +136,7 @@
     </div>
   </main>
 
-  <aside id="jaarplanningWidget" class="jaarplanning-widget" aria-label="Weekprogramma">
+  <aside id="jaarplanningWidget" class="jaarplanning-widget" aria-label="Programma vandaag">
     <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
       <div class="jaarplanning-head">
         <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
@@ -125,7 +144,7 @@
       </div>
       <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Niet gekoppeld</p>
       <ul id="jaarplanningItems" class="jaarplanning-items">
-        <li>Koppel eerst een jaarplanning-bron in het docentpaneel.</li>
+        <li>Koppel eerst een jaarplanning-bron en agenda-bron in het docentpaneel.</li>
       </ul>
       <p id="jaarplanningLastUpdate" class="jaarplanning-last-update"></p>
     </section>

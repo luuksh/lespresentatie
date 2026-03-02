@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('plattegrond');
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
   const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
+  const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
@@ -16,11 +17,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningSourceSaveBtn = document.getElementById('jaarplanningSourceSave');
   const planningSourceClearBtn = document.getElementById('jaarplanningSourceClear');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
+  const agendaSourceInput = document.getElementById('agendaSourceInput');
+  const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
+  const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
 
   let planningData = {};
   let planningUpdatedAt = '';
   let planningTimer = null;
   let planningSourceUrl = '';
+  let agendaTimer = null;
+  let agendaSourceUrl = '';
+  let agendaEntries = [];
+  let activeAgendaClassId = '';
+  let selectedLessonIndex = 0;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -118,6 +127,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(value || '').replace(/\s+/g, '').toUpperCase();
   }
 
+  function classIdAliases(classId) {
+    const cid = normalizeClassId(classId);
+    if (!cid) return [];
+    const aliases = new Set([cid]);
+    if (/^G\d[A-Z]$/.test(cid)) aliases.add(cid.slice(1));
+    if (/^\d[A-Z]$/.test(cid)) aliases.add(`G${cid}`);
+    const dotted = cid.match(/^(\d)\.(\d+)$/);
+    if (dotted) aliases.add(`${dotted[1]}G${dotted[2]}`);
+    const gym = cid.match(/^(\d)G(\d+)$/);
+    if (gym) aliases.add(`${gym[1]}.${gym[2]}`);
+    return [...aliases];
+  }
+
   function isoWeekInfo(date = new Date()) {
     const local = new Date(date.getFullYear(), date.getMonth(), date.getDate());
     const day = local.getDay() || 7;
@@ -148,17 +170,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     return text.split('\n').map((line) => line.trim()).filter(Boolean);
   }
 
+  function normalizeLessonRow(row) {
+    if (typeof row === 'string') {
+      const lesson = row.trim();
+      return lesson ? { project: '', lesson, url: '' } : null;
+    }
+    if (!row || typeof row !== 'object') return null;
+    const project = String(row.project ?? row.thema ?? '').trim();
+    const lesson = String(row.lesson ?? row.les ?? row.title ?? '').trim();
+    const url = String(row.url ?? row.link ?? '').trim();
+    if (!project && !lesson) return null;
+    return { project, lesson, url };
+  }
+
   function coerceLessons(value) {
-    if (!Array.isArray(value)) return [];
-    return value
-      .map((row) => {
-        const project = String(row?.project || '').trim();
-        const lesson = String(row?.lesson || '').trim();
-        const url = String(row?.url || '').trim();
-        if (!project && !lesson) return null;
-        return { project, lesson, url };
-      })
+    if (Array.isArray(value)) {
+      return value.map(normalizeLessonRow).filter(Boolean);
+    }
+    if (!value || typeof value !== 'object') return [];
+
+    const direct = normalizeLessonRow(value);
+    if (direct) return [direct];
+
+    const slots = ['a', 'b', 'c', 'A', 'B', 'C', '1', '2', '3']
+      .map((key) => normalizeLessonRow(value[key]))
       .filter(Boolean);
+    return slots;
   }
 
   function normalizePlanEntry(entry) {
@@ -211,22 +248,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function buildPlanningIndex(raw) {
     const index = {};
-    const classAliases = (classId) => {
-      const cid = normalizeClassId(classId);
-      if (!cid) return [];
-      const aliases = new Set([cid]);
-      if (/^G\d[A-Z]$/.test(cid)) aliases.add(cid.slice(1));
-      if (/^\d[A-Z]$/.test(cid)) aliases.add(`G${cid}`);
-      const dotted = cid.match(/^(\d)\.(\d+)$/);
-      if (dotted) aliases.add(`${dotted[1]}G${dotted[2]}`);
-      const gym = cid.match(/^(\d)G(\d+)$/);
-      if (gym) aliases.add(`${gym[1]}.${gym[2]}`);
-      return [...aliases];
-    };
     const addWeek = (classId, weekId, payload) => {
       const wid = String(weekId || '').trim().toUpperCase();
       if (!wid) return;
-      for (const cid of classAliases(classId)) {
+      for (const cid of classIdAliases(classId)) {
         if (!index[cid]) index[cid] = {};
         index[cid][wid] = normalizePlanEntry(payload);
       }
@@ -253,6 +278,277 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     return index;
+  }
+
+  function parseDateTime(value) {
+    if (!value) return null;
+    if (value instanceof Date && !Number.isNaN(value.getTime())) return value;
+    if (typeof value === 'number') {
+      const numericDate = new Date(value);
+      return Number.isNaN(numericDate.getTime()) ? null : numericDate;
+    }
+    const text = String(value).trim();
+    if (!text) return null;
+    const direct = new Date(text);
+    if (!Number.isNaN(direct.getTime())) return direct;
+    const normalized = text
+      .replace(/\./g, '-')
+      .replace(' ', 'T')
+      .replace(/(\+\d{2})(\d{2})$/, '$1:$2');
+    const retry = new Date(normalized);
+    return Number.isNaN(retry.getTime()) ? null : retry;
+  }
+
+  function pickClassId(value) {
+    if (Array.isArray(value)) {
+      for (const candidate of value) {
+        const found = pickClassId(candidate);
+        if (found) return found;
+      }
+      return '';
+    }
+    if (value && typeof value === 'object') {
+      return pickClassId(value.code ?? value.name ?? value.id ?? value.classId ?? '');
+    }
+    const raw = normalizeClassId(value);
+    if (!raw) return '';
+    const tokens = raw.split(/[,;/+]/).map((part) => part.trim()).filter(Boolean);
+    return tokens[0] || raw;
+  }
+
+  function flattenAgendaRows(raw) {
+    if (Array.isArray(raw)) return raw;
+    if (!raw || typeof raw !== 'object') return [];
+    const candidates = [raw.entries, raw.appointments, raw.items, raw.data, raw.response?.data];
+    for (const candidate of candidates) {
+      if (Array.isArray(candidate)) return candidate;
+    }
+    return [];
+  }
+
+  function normalizeAgendaEntry(row) {
+    if (!row || typeof row !== 'object') return null;
+    const classId = pickClassId(
+      row.classId
+      ?? row.klas
+      ?? row.class
+      ?? row.group
+      ?? row.groups
+      ?? row.studentGroup
+      ?? row.studentGroups
+      ?? row.branch
+      ?? ''
+    );
+    const start = parseDateTime(
+      row.start
+      ?? row.startTime
+      ?? row.startDateTime
+      ?? row.begin
+      ?? row.beginTime
+      ?? row.startDate
+      ?? row.beginDateTime
+      ?? ''
+    );
+    const end = parseDateTime(
+      row.end
+      ?? row.endTime
+      ?? row.endDateTime
+      ?? row.einde
+      ?? row.finish
+      ?? row.endDate
+      ?? ''
+    );
+    if (!classId || !start || !end) return null;
+    return { classId: normalizeClassId(classId), start, end, raw: row };
+  }
+
+  function decodeIcsText(value) {
+    return String(value || '')
+      .replace(/\\n/gi, '\n')
+      .replace(/\\,/g, ',')
+      .replace(/\\;/g, ';')
+      .replace(/\\\\/g, '\\')
+      .trim();
+  }
+
+  function unfoldIcsLines(text) {
+    const lines = String(text || '').split(/\r?\n/);
+    const unfolded = [];
+    for (const line of lines) {
+      if ((line.startsWith(' ') || line.startsWith('\t')) && unfolded.length) {
+        unfolded[unfolded.length - 1] += line.slice(1);
+      } else {
+        unfolded.push(line);
+      }
+    }
+    return unfolded;
+  }
+
+  function parseIcsDateValue(value) {
+    const raw = String(value || '').trim();
+    if (!raw) return null;
+
+    const dateOnly = raw.match(/^(\d{4})(\d{2})(\d{2})$/);
+    if (dateOnly) {
+      const [, y, m, d] = dateOnly;
+      return new Date(Number(y), Number(m) - 1, Number(d), 0, 0, 0, 0);
+    }
+
+    const dateTime = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})?(Z)?$/);
+    if (!dateTime) return null;
+    const [, y, m, d, hh, mm, ss = '00', isUtc] = dateTime;
+    if (isUtc) {
+      return new Date(Date.UTC(Number(y), Number(m) - 1, Number(d), Number(hh), Number(mm), Number(ss)));
+    }
+    return new Date(Number(y), Number(m) - 1, Number(d), Number(hh), Number(mm), Number(ss));
+  }
+
+  function extractClassIdFromText(value) {
+    const text = normalizeClassId(value);
+    if (!text) return '';
+    const patterns = [
+      /\bG\d[A-Z]\b/,
+      /\b\d[A-Z]\b/,
+      /\b\dG\d+\b/,
+      /\b\d\.\d+\b/
+    ];
+    for (const pattern of patterns) {
+      const match = text.match(pattern);
+      if (match) return match[0];
+    }
+    return '';
+  }
+
+  function parseIcsEvents(text) {
+    const lines = unfoldIcsLines(text);
+    const events = [];
+    let current = null;
+
+    for (const line of lines) {
+      if (!line) continue;
+      if (line === 'BEGIN:VEVENT') {
+        current = {};
+        continue;
+      }
+      if (line === 'END:VEVENT') {
+        if (current) events.push(current);
+        current = null;
+        continue;
+      }
+      if (!current) continue;
+
+      const splitIndex = line.indexOf(':');
+      if (splitIndex < 0) continue;
+      const left = line.slice(0, splitIndex);
+      const right = line.slice(splitIndex + 1);
+      const key = left.split(';')[0].toUpperCase();
+      const value = decodeIcsText(right);
+      if (!key) continue;
+      if (current[key]) current[key] = `${current[key]}\n${value}`;
+      else current[key] = value;
+    }
+
+    return events
+      .map((event) => {
+        const classId = pickClassId(event['X-CLASS'])
+          || extractClassIdFromText(event.SUMMARY)
+          || extractClassIdFromText(event.DESCRIPTION)
+          || extractClassIdFromText(event.CATEGORIES)
+          || extractClassIdFromText(event.LOCATION)
+          || '';
+        const start = parseIcsDateValue(event.DTSTART);
+        const end = parseIcsDateValue(event.DTEND);
+        if (!classId || !start || !end) return null;
+        return { classId: normalizeClassId(classId), start, end, raw: event };
+      })
+      .filter(Boolean);
+  }
+
+  function parseAgendaPayload(rawText, contentType = '') {
+    const ct = String(contentType || '').toLowerCase();
+    const text = String(rawText || '').trim();
+    if (!text) return [];
+
+    if (ct.includes('text/calendar') || text.includes('BEGIN:VCALENDAR')) {
+      return parseIcsEvents(text);
+    }
+
+    try {
+      const raw = JSON.parse(text);
+      return flattenAgendaRows(raw)
+        .map(normalizeAgendaEntry)
+        .filter(Boolean);
+    } catch {
+      return [];
+    }
+  }
+
+  function isSameLocalDay(a, b) {
+    return a.getFullYear() === b.getFullYear()
+      && a.getMonth() === b.getMonth()
+      && a.getDate() === b.getDate();
+  }
+
+  function findBestAgendaEntryForToday(entries, now = new Date()) {
+    const todayEntries = entries
+      .filter((entry) => isSameLocalDay(entry.start, now))
+      .sort((a, b) => a.start - b.start);
+    if (!todayEntries.length) return null;
+    const active = todayEntries.find((entry) => now >= entry.start && now <= entry.end);
+    if (active) return active;
+    const upcoming = todayEntries.find((entry) => entry.start >= now);
+    if (upcoming) return upcoming;
+    return todayEntries[todayEntries.length - 1];
+  }
+
+  function getWeekBounds(date = new Date()) {
+    const day = date.getDay() || 7;
+    const monday = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    monday.setDate(monday.getDate() - day + 1);
+    monday.setHours(0, 0, 0, 0);
+    const sunday = new Date(monday);
+    sunday.setDate(sunday.getDate() + 6);
+    sunday.setHours(23, 59, 59, 999);
+    return { monday, sunday };
+  }
+
+  function lessonNumberForWeek(entries, selectedEntry) {
+    if (!selectedEntry) return 0;
+    const { monday, sunday } = getWeekBounds(selectedEntry.start);
+    const inWeek = entries
+      .filter((entry) => entry.classId === selectedEntry.classId && entry.start >= monday && entry.start <= sunday)
+      .sort((a, b) => a.start - b.start);
+    const index = inWeek.findIndex((entry) => entry.start.getTime() === selectedEntry.start.getTime());
+    return index >= 0 ? index + 1 : 0;
+  }
+
+  function lessonNumberForClassToday(entries, classId, now = new Date()) {
+    const cid = normalizeClassId(classId);
+    if (!cid) return 0;
+    const classEntries = entries.filter((entry) => entry.classId === cid);
+    const selected = findBestAgendaEntryForToday(classEntries, now);
+    return lessonNumberForWeek(entries, selected);
+  }
+
+  function resolveAgendaSourceUrl() {
+    const fromStorage = String(localStorage.getItem(AGENDA_SOURCE_KEY) || '').trim();
+    if (fromStorage) return fromStorage;
+    return String(window.APP_CONFIG?.agendaSourceUrl || '').trim();
+  }
+
+  function selectClassFromAgenda(classId) {
+    const normalized = normalizeClassId(classId);
+    if (!normalized || !klasSelect) return false;
+    const aliases = classIdAliases(normalized);
+    const matchingValue = [...klasSelect.options].find((option) => aliases.includes(normalizeClassId(option.value)))?.value;
+    if (!matchingValue) return false;
+    if (klasSelect.value !== matchingValue) {
+      klasSelect.value = matchingValue;
+      klasSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    } else if (matchingValue) {
+      localStorage.setItem('lastClassId', matchingValue);
+    }
+    return true;
   }
 
   function resolvePlanningSourceUrl() {
@@ -325,10 +621,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  function lessonLetter(index) {
+    if (index === 1) return 'A';
+    if (index === 2) return 'B';
+    if (index === 3) return 'C';
+    return String(index);
+  }
+
+  function selectLessonsForToday(lessons, lessonIndex) {
+    if (!Array.isArray(lessons) || !lessons.length) return [];
+    if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) return lessons;
+    const mappedIndex = Math.min(3, lessonIndex);
+    const idx = Math.max(0, Math.min(lessons.length - 1, mappedIndex - 1));
+    return [lessons[idx]];
+  }
+
   function renderPlanning() {
     if (!planningItemsEl || !planningWeekLabelEl) return;
     const week = isoWeekInfo();
-    planningWeekLabelEl.textContent = week.label;
+    planningWeekLabelEl.textContent = `Programma vandaag · ${week.label}`;
 
     const classId = normalizeClassId(klasSelect?.value || '');
     const weekCandidates = [
@@ -352,7 +663,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    const hasLessons = Array.isArray(weekData?.lessons) && weekData.lessons.length > 0;
+    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex);
+    const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
 
     if (!weekData || (!hasLessons && !hasItems)) {
@@ -365,12 +677,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    setPlanningItems(weekData.items, weekData.note, weekData.lessons);
+    setPlanningItems(weekData.items, weekData.note, lessonSelection);
     if (planningLastUpdateEl) {
       const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
       planningLastUpdateEl.textContent = stamp;
     }
-    setPlanningStatus('Live gekoppeld', 'ok');
+    if (selectedLessonIndex > 0) {
+      const label = lessonLetter(Math.min(selectedLessonIndex, 3));
+      setPlanningStatus(`Live gekoppeld · Les ${label} (${selectedLessonIndex}e van deze week)`, 'ok');
+    } else {
+      setPlanningStatus('Live gekoppeld', 'ok');
+    }
   }
 
   async function fetchPlanning() {
@@ -395,10 +712,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  async function fetchAgenda() {
+    if (!agendaSourceUrl) {
+      agendaEntries = [];
+      activeAgendaClassId = '';
+      selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+      renderPlanning();
+      return;
+    }
+    try {
+      const url = new URL(agendaSourceUrl, window.location.href);
+      url.searchParams.set('_t', String(Date.now()));
+      const res = await fetch(url.toString(), { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const rawText = await res.text();
+      agendaEntries = parseAgendaPayload(rawText, res.headers.get('content-type') || '')
+        .sort((a, b) => a.start - b.start);
+
+      const bestEntry = findBestAgendaEntryForToday(agendaEntries, new Date());
+      activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
+      selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
+
+      if (activeAgendaClassId) {
+        selectClassFromAgenda(activeAgendaClassId);
+      } else {
+        selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+      }
+      renderPlanning();
+    } catch (err) {
+      console.error('Fout bij laden agenda:', err);
+      agendaEntries = [];
+      activeAgendaClassId = '';
+      selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+      renderPlanning();
+    }
+  }
+
   function resetPlanningTimer() {
     if (planningTimer) clearInterval(planningTimer);
     if (!planningSourceUrl) return;
     planningTimer = setInterval(fetchPlanning, PLAN_REFRESH_MS);
+  }
+
+  function resetAgendaTimer() {
+    if (agendaTimer) clearInterval(agendaTimer);
+    if (!agendaSourceUrl) return;
+    agendaTimer = setInterval(fetchAgenda, PLAN_REFRESH_MS);
   }
 
   function applyPlanningSource(url, persist = true) {
@@ -410,6 +769,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     resetPlanningTimer();
     fetchPlanning();
+  }
+
+  function applyAgendaSource(url, persist = true) {
+    agendaSourceUrl = String(url || '').trim();
+    if (agendaSourceInput) agendaSourceInput.value = agendaSourceUrl;
+    if (persist) {
+      if (agendaSourceUrl) localStorage.setItem(AGENDA_SOURCE_KEY, agendaSourceUrl);
+      else localStorage.removeItem(AGENDA_SOURCE_KEY);
+    }
+    resetAgendaTimer();
+    fetchAgenda();
   }
 
   planningSourceSaveBtn?.addEventListener('click', () => {
@@ -429,8 +799,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   planningRefreshBtn?.addEventListener('click', () => {
     fetchPlanning();
+    fetchAgenda();
   });
 
-  klasSelect?.addEventListener('change', renderPlanning);
+  agendaSourceSaveBtn?.addEventListener('click', () => {
+    applyAgendaSource(agendaSourceInput?.value || '', true);
+  });
+
+  agendaSourceInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      applyAgendaSource(agendaSourceInput.value, true);
+    }
+  });
+
+  agendaSourceClearBtn?.addEventListener('click', () => {
+    applyAgendaSource('', true);
+  });
+
+  klasSelect?.addEventListener('change', () => {
+    selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect.value);
+    renderPlanning();
+  });
   applyPlanningSource(resolvePlanningSourceUrl(), false);
+  applyAgendaSource(resolveAgendaSourceUrl(), false);
 });
