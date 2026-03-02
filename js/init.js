@@ -533,12 +533,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const activeNow = sorted.find((entry) => now >= entry.start && now <= entry.end);
     if (activeNow) return activeNow;
 
-    // 2) If no active class now, fall back to the most recently finished class.
+    // 2) If no active class now, prefer the next upcoming class.
+    const upcoming = sorted.find((entry) => entry.start >= now);
+    if (upcoming) return upcoming;
+
+    // 3) Final fallback: most recently finished class.
     const past = sorted.filter((entry) => entry.end <= now);
     if (past.length) return past[past.length - 1];
-
-    // 3) Final fallback: first upcoming class.
-    return sorted[0];
+    return null;
   }
 
   function getWeekBounds(date = new Date()) {
@@ -678,6 +680,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       .sort((a, b) => a.start - b.start);
     const todayEntries = classEntries.filter((entry) => isSameLocalDay(entry.start, now));
     const activeNow = classEntries.find((entry) => now >= entry.start && now <= entry.end);
+    const nextEntry = classEntries.find((entry) => entry.start >= now);
+    const pastEntries = classEntries.filter((entry) => entry.end <= now);
+    const chosenReason = activeNow
+      ? 'lopende les nu'
+      : nextEntry
+        ? 'eerstvolgende les'
+        : pastEntries.length
+          ? 'laatste afgelopen les'
+          : '-';
     const todayBest = findAgendaEntryForCurrentOrLast(classEntries, now);
     const todayIndex = lessonNumberForWeek(entries, todayBest);
     const header = [
@@ -691,6 +702,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `events voor klas ${classId || '-'}: ${classEntries.length}`,
       `events vandaag voor klas ${classId || '-'}: ${todayEntries.length}`,
       `lopende les nu: ${activeNow ? 'ja' : 'nee'}`,
+      `geselecteerd op basis van: ${chosenReason}`,
       `lesnummer deze week: ${todayIndex || 0} (${todayIndex ? lessonLetter(Math.min(todayIndex, 3)) : '-'})`
     ];
     if (!entries.length) {
