@@ -133,12 +133,22 @@
 
     .progress {
       position: absolute;
-      z-index: 0;
+      z-index: 1;
       inset: 8px;
       border-radius: 50%;
       background: conic-gradient(var(--accent) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.08) 0);
       mix-blend-mode: screen;
       opacity: 0.92;
+      pointer-events: none;
+    }
+
+    .live-progress {
+      position: absolute;
+      z-index: 0;
+      inset: 8px;
+      border-radius: 50%;
+      background: conic-gradient(rgba(212, 231, 255, 0.58) calc(var(--live-pct, 0) * 1%), rgba(164, 198, 245, 0.06) 0);
+      opacity: 0.44;
       pointer-events: none;
     }
 
@@ -153,7 +163,7 @@
       transform-origin: 50% 88%;
       transform: translate(-50%, -88%) rotate(var(--angle, 0deg));
       box-shadow: 0 0 10px rgba(89, 191, 255, 0.32);
-      z-index: 2;
+      z-index: 3;
     }
 
     .hand::after {
@@ -169,6 +179,21 @@
       box-shadow: 0 0 10px rgba(118, 206, 255, 0.48);
     }
 
+    .live-hand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3px;
+      height: 82px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, rgba(244, 250, 255, 0.95) 0%, rgba(192, 223, 255, 0.72) 80%);
+      transform-origin: 50% 88%;
+      transform: translate(-50%, -88%) rotate(var(--live-angle, 0deg));
+      box-shadow: 0 0 8px rgba(186, 223, 255, 0.25);
+      z-index: 2;
+      pointer-events: none;
+    }
+
     .hub {
       position: absolute;
       left: 50%;
@@ -176,7 +201,7 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      z-index: 4;
+      z-index: 6;
       transform: translate(-50%, -50%);
       background: radial-gradient(circle at 35% 35%, #f1fbff, #8ed3ff 65%, #4a97cc 100%);
       border: 1px solid rgba(255, 255, 255, 0.5);
@@ -184,7 +209,7 @@
 
     .numeral {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       font-size: 14px;
       font-weight: 900;
       letter-spacing: 0.02em;
@@ -208,7 +233,7 @@
       background: rgba(8, 20, 36, 0.42);
       text-align: center;
       padding: 6px 8px 7px;
-      z-index: 3;
+      z-index: 5;
     }
 
     .time {
@@ -224,6 +249,14 @@
       font-size: 12px;
       color: var(--muted);
       font-weight: 700;
+    }
+
+    .live-time {
+      margin-top: 2px;
+      font-size: 11px;
+      color: rgba(210, 228, 250, 0.9);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
     }
 
     .scrub-hint {
@@ -362,10 +395,12 @@
 <body>
   <div class="timer" role="timer" aria-live="polite">
     <div class="clock-wrap">
-      <div class="clock" id="clock" aria-label="Aftelklok">
+      <div class="clock" id="clock" aria-label="Live klok met timerlaag">
         <div class="bezel"></div>
+        <div class="live-progress" id="liveRing"></div>
         <div class="progress" id="ring"></div>
         <div class="dial" id="dial"></div>
+        <div class="live-hand" id="liveHand"></div>
         <div class="hand" id="hand"></div>
         <div class="hub"></div>
         <div class="numeral n12">12</div>
@@ -373,8 +408,9 @@
         <div class="numeral n6">6</div>
         <div class="numeral n9">9</div>
         <div class="digital">
-          <div class="time" id="time">45:00</div>
-          <div class="state" id="state">Gepauzeerd</div>
+          <div class="time" id="time">00:00</div>
+          <div class="state" id="state">Selecteer op de rand</div>
+          <div class="live-time" id="liveTime">--:--:--</div>
         </div>
       </div>
       <div class="kbd">spatie start/pauze · R/Esc reset</div>
@@ -383,20 +419,20 @@
   </div>
 
   <script>
-    function getLiveBaseSeconds() {
-      const now = new Date();
-      return now.getMinutes() * 60 + now.getSeconds();
-    }
+    const FULL_CIRCLE_SECONDS = 60 * 60;
 
-    let total = getLiveBaseSeconds();
-    let remaining = total;
+    let total = 0;
+    let remaining = 0;
     let running = false;
     let intervalId = null;
-    let liveMode = true;
+    let endAtMs = 0;
 
     const timeEl = document.getElementById('time');
     const stateEl = document.getElementById('state');
+    const liveTimeEl = document.getElementById('liveTime');
+    const liveRingEl = document.getElementById('liveRing');
     const ringEl = document.getElementById('ring');
+    const liveHandEl = document.getElementById('liveHand');
     const handEl = document.getElementById('hand');
     const clockEl = document.getElementById('clock');
     const dialEl = document.getElementById('dial');
@@ -408,10 +444,22 @@
 
     const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-    function fmt(seconds) {
+    function fmtMMSS(seconds) {
       const m = Math.floor(seconds / 60);
       const s = seconds % 60;
       return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    function fmtHHMMSS(now) {
+      return [
+        String(now.getHours()).padStart(2, '0'),
+        String(now.getMinutes()).padStart(2, '0'),
+        String(now.getSeconds()).padStart(2, '0'),
+      ].join(':');
+    }
+
+    function getLiveSecondsOfHour(now) {
+      return now.getMinutes() * 60 + now.getSeconds() + now.getMilliseconds() / 1000;
     }
 
     function syncInputsFrom(value) {
@@ -422,28 +470,42 @@
     }
 
     function updateDigits() {
-      timeEl.textContent = fmt(remaining);
-      if (remaining === 0 && !running) {
+      const shownSeconds = total > 0 || running ? remaining : 0;
+      timeEl.textContent = fmtMMSS(shownSeconds);
+      if (running) {
+        stateEl.textContent = 'Timer bezig';
+      } else if (total === 0) {
+        stateEl.textContent = 'Selecteer op de rand';
+      } else if (remaining === 0) {
         stateEl.textContent = 'Klaar';
-      } else if (liveMode && !running) {
-        stateEl.textContent = 'Live';
       } else {
-        stateEl.textContent = running ? 'Bezig' : 'Gepauzeerd';
+        stateEl.textContent = 'Timer gepauzeerd';
       }
     }
 
-    function updateClock() {
-      const done = total > 0 ? (total - remaining) / total : 0;
-      ringEl.style.setProperty('--pct', (done * 100).toFixed(4));
+    function updateLiveClock() {
+      const now = new Date();
+      const liveDone = getLiveSecondsOfHour(now) / FULL_CIRCLE_SECONDS;
+      liveRingEl.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
+      liveHandEl.style.setProperty('--live-angle', `${(liveDone * 360).toFixed(4)}deg`);
+      liveTimeEl.textContent = fmtHHMMSS(now);
+    }
 
-      const angle = done * 360;
-      handEl.style.setProperty('--angle', `${angle}deg`);
-      clockEl.classList.toggle('done', remaining === 0);
+    function updateTimerOverlay() {
+      const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
+      const runDone = total > 0 ? (total - remaining) / total : 0;
+      const done = running ? runDone : selectionDone;
+      ringEl.style.setProperty('--pct', (done * 100).toFixed(4));
+      handEl.style.setProperty('--angle', `${(done * 360).toFixed(4)}deg`);
+      clockEl.classList.toggle('done', total > 0 && remaining === 0 && !running);
+    }
+
+    function renderTimer() {
+      updateDigits();
+      updateTimerOverlay();
     }
 
     function setByAngle(clientX, clientY) {
-      liveMode = false;
-      if (total <= 0) total = getLiveBaseSeconds();
       const rect = clockEl.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
@@ -452,91 +514,76 @@
       let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
       if (angle < 0) angle += 360;
       const done = angle / 360;
-      remaining = clamp(Math.round(total * (1 - done)), 0, total);
-      syncInputsFrom(remaining);
-      updateDigits();
-      updateClock();
+      total = clamp(Math.round(FULL_CIRCLE_SECONDS * (1 - done)), 0, FULL_CIRCLE_SECONDS);
+      remaining = total;
+      running = false;
+      clearInterval(intervalId);
+      syncInputsFrom(total);
+      renderTimer();
     }
 
     function setFromInputs() {
-      liveMode = false;
-      const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 999);
+      const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 60);
       const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
-      total = m * 60 + s;
+      total = clamp(m * 60 + s, 0, FULL_CIRCLE_SECONDS);
       remaining = total;
       running = false;
       clearInterval(intervalId);
       if (startBtn) startBtn.textContent = 'Start';
-      updateDigits();
-      updateClock();
+      renderTimer();
     }
 
     function applyPreset(delta) {
-      liveMode = false;
-      const next = clamp(remaining + delta, 0, 999 * 60 + 59);
+      const next = clamp(remaining + delta, 0, FULL_CIRCLE_SECONDS);
       remaining = next;
-      if (!running) total = next;
+      total = running ? total : next;
+      if (running) endAtMs = Date.now() + remaining * 1000;
       syncInputsFrom(!running ? total : remaining);
-      updateDigits();
-      updateClock();
+      renderTimer();
     }
 
     function tick() {
       if (!running) return;
-
-      if (remaining <= 0) {
+      remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
+      if (remaining === 0) {
         clearInterval(intervalId);
         running = false;
         if (startBtn) startBtn.textContent = 'Start';
-        updateDigits();
-        updateClock();
+        renderTimer();
         if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
         return;
       }
-
-      remaining -= 1;
-      updateDigits();
-      updateClock();
+      renderTimer();
     }
 
     function start() {
-      if (remaining <= 0 && total > 0) remaining = total;
-      if (remaining <= 0) return;
-      liveMode = false;
-
+      if (total <= 0) return;
+      if (remaining <= 0) remaining = total;
       running = true;
+      endAtMs = Date.now() + remaining * 1000;
       if (startBtn) startBtn.textContent = 'Pauze';
       clearInterval(intervalId);
-      intervalId = setInterval(tick, 1000);
-      updateDigits();
+      intervalId = setInterval(tick, 200);
+      tick();
     }
 
     function pause() {
+      if (!running) return;
+      remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
       running = false;
       clearInterval(intervalId);
       if (startBtn) startBtn.textContent = 'Start';
-      updateDigits();
+      renderTimer();
     }
 
     function reset() {
       running = false;
       clearInterval(intervalId);
-      liveMode = true;
-      syncLiveClock();
+      total = 0;
+      remaining = 0;
       if (startBtn) startBtn.textContent = 'Start';
-      syncInputsFrom(total);
-      updateDigits();
-      updateClock();
-    }
-
-    function syncLiveClock() {
-      if (!liveMode || running) return;
-      const live = getLiveBaseSeconds();
-      total = live;
-      remaining = live;
-      syncInputsFrom(total);
-      updateDigits();
-      updateClock();
+      syncInputsFrom(0);
+      renderTimer();
     }
 
     startBtn?.addEventListener('click', () => (running ? pause() : start()));
@@ -574,7 +621,7 @@
     let scrubbing = false;
     const stopScrub = () => { scrubbing = false; };
     clockEl.addEventListener('pointerdown', (e) => {
-      if (running) pause();
+      pause();
       scrubbing = true;
       clockEl.setPointerCapture(e.pointerId);
       setByAngle(e.clientX, e.clientY);
@@ -587,8 +634,9 @@
     clockEl.addEventListener('pointercancel', stopScrub);
 
     drawTicks();
-    syncLiveClock();
-    setInterval(syncLiveClock, 250);
+    renderTimer();
+    updateLiveClock();
+    setInterval(updateLiveClock, 250);
   </script>
 </body>
 </html>

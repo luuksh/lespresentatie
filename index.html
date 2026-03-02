@@ -152,10 +152,12 @@
 
   <aside id="timerDock" class="clock-timer" role="timer" aria-live="polite">
     <div class="clock-wrap">
-      <div class="clock-face" id="clockFace" aria-label="Aftelklok">
+      <div class="clock-face" id="clockFace" aria-label="Live klok met timerlaag">
         <div class="clock-bezel"></div>
+        <div class="clock-live-progress" id="clockLiveProgress"></div>
         <div class="clock-progress" id="clockProgress"></div>
         <div class="clock-dial" id="clockDial"></div>
+        <div class="clock-live-hand" id="clockLiveHand"></div>
         <div class="clock-hand" id="clockHand"></div>
         <div class="clock-hub"></div>
         <div class="clock-numeral n12">12</div>
@@ -163,14 +165,68 @@
         <div class="clock-numeral n6">6</div>
         <div class="clock-numeral n9">9</div>
         <div class="clock-digital">
-          <div class="clock-time" id="clockTime">45:00</div>
-          <div class="clock-state" id="clockState">Gepauzeerd</div>
+          <div class="clock-time" id="clockTime">00:00</div>
+          <div class="clock-state" id="clockState">Selecteer op de rand</div>
+          <div class="clock-live-time" id="clockLiveTime">--:--:--</div>
         </div>
       </div>
       <div class="timer-hotkeys">spatie start/pauze · R/Esc reset</div>
     </div>
 
   </aside>
+
+  <style>
+    #timerDock .clock-live-progress {
+      position: absolute;
+      inset: 8px;
+      z-index: 0;
+      border-radius: 50%;
+      background: conic-gradient(rgba(212, 231, 255, 0.58) calc(var(--live-pct, 0) * 1%), rgba(164, 198, 245, 0.06) 0);
+      opacity: 0.44;
+    }
+
+    #timerDock .clock-progress {
+      z-index: 1;
+    }
+
+    #timerDock .clock-live-hand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 2;
+      width: 3px;
+      height: 82px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, rgba(244, 250, 255, 0.95) 0%, rgba(192, 223, 255, 0.72) 80%);
+      transform-origin: 50% 88%;
+      transform: translate(-50%, -88%) rotate(var(--live-angle, 0deg));
+      box-shadow: 0 0 8px rgba(186, 223, 255, 0.25);
+    }
+
+    #timerDock .clock-hand {
+      z-index: 3;
+    }
+
+    #timerDock .clock-numeral {
+      z-index: 4;
+    }
+
+    #timerDock .clock-digital {
+      z-index: 5;
+    }
+
+    #timerDock .clock-hub {
+      z-index: 6;
+    }
+
+    #timerDock .clock-live-time {
+      margin-top: 2px;
+      font-size: 11px;
+      color: rgba(210, 228, 250, 0.9);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
 
   <section id="magisterAssistPanel" class="magister-assist" aria-label="Magister absentiehulp" hidden>
     <header class="magister-assist-head">
@@ -740,22 +796,22 @@
 
   <script>
     (() => {
-      function getLiveBaseSeconds() {
-        const now = new Date();
-        return now.getMinutes() * 60 + now.getSeconds();
-      }
+      const FULL_CIRCLE_SECONDS = 60 * 60;
 
-      let total = getLiveBaseSeconds();
-      let remaining = total;
+      let total = 0;
+      let remaining = 0;
       let running = false;
       let intervalId = null;
-      let liveMode = true;
+      let endAtMs = 0;
 
       const clockFace = document.getElementById('clockFace');
+      const liveProgress = document.getElementById('clockLiveProgress');
       const progress = document.getElementById('clockProgress');
+      const liveHand = document.getElementById('clockLiveHand');
       const hand = document.getElementById('clockHand');
       const timeEl = document.getElementById('clockTime');
       const stateEl = document.getElementById('clockState');
+      const liveTimeEl = document.getElementById('clockLiveTime');
       const startBtn = null;
       const resetBtn = null;
       const applyBtn = null;
@@ -765,14 +821,26 @@
       const dial = document.getElementById('clockDial');
       const timerDock = document.getElementById('timerDock');
 
-      if (!clockFace || !progress || !hand || !timeEl || !stateEl || !dial) return;
+      if (!clockFace || !liveProgress || !progress || !liveHand || !hand || !timeEl || !stateEl || !liveTimeEl || !dial) return;
 
       const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-      function fmt(seconds) {
+      function fmtMMSS(seconds) {
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
         return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      }
+
+      function fmtHHMMSS(now) {
+        return [
+          String(now.getHours()).padStart(2, '0'),
+          String(now.getMinutes()).padStart(2, '0'),
+          String(now.getSeconds()).padStart(2, '0'),
+        ].join(':');
+      }
+
+      function getLiveSecondsOfHour(now) {
+        return now.getMinutes() * 60 + now.getSeconds() + now.getMilliseconds() / 1000;
       }
 
       function syncInputsFrom(value) {
@@ -783,26 +851,42 @@
       }
 
       function updateDigits() {
-        timeEl.textContent = fmt(remaining);
-        if (remaining === 0 && !running) {
+        const shownSeconds = total > 0 || running ? remaining : 0;
+        timeEl.textContent = fmtMMSS(shownSeconds);
+        if (running) {
+          stateEl.textContent = 'Timer bezig';
+        } else if (total === 0) {
+          stateEl.textContent = 'Selecteer op de rand';
+        } else if (remaining === 0) {
           stateEl.textContent = 'Klaar';
-        } else if (liveMode && !running) {
-          stateEl.textContent = 'Live';
         } else {
-          stateEl.textContent = running ? 'Bezig' : 'Gepauzeerd';
+          stateEl.textContent = 'Timer gepauzeerd';
         }
       }
 
-      function updateClock() {
-        const done = total > 0 ? (total - remaining) / total : 0;
+      function updateLiveClock() {
+        const now = new Date();
+        const liveDone = getLiveSecondsOfHour(now) / FULL_CIRCLE_SECONDS;
+        liveProgress.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
+        liveHand.style.setProperty('--live-angle', `${(liveDone * 360).toFixed(4)}deg`);
+        liveTimeEl.textContent = fmtHHMMSS(now);
+      }
+
+      function updateTimerOverlay() {
+        const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
+        const runDone = total > 0 ? (total - remaining) / total : 0;
+        const done = running ? runDone : selectionDone;
         progress.style.setProperty('--pct', (done * 100).toFixed(4));
         hand.style.setProperty('--angle', `${(done * 360).toFixed(4)}deg`);
-        clockFace.classList.toggle('done', remaining === 0);
+        clockFace.classList.toggle('done', total > 0 && remaining === 0 && !running);
+      }
+
+      function renderTimer() {
+        updateDigits();
+        updateTimerOverlay();
       }
 
       function setByAngle(clientX, clientY) {
-        liveMode = false;
-        if (total <= 0) total = getLiveBaseSeconds();
         const rect = clockFace.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         const cy = rect.top + rect.height / 2;
@@ -811,88 +895,76 @@
         let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
         if (angle < 0) angle += 360;
         const done = angle / 360;
-        remaining = clamp(Math.round(total * (1 - done)), 0, total);
-        syncInputsFrom(remaining);
-        updateDigits();
-        updateClock();
+        total = clamp(Math.round(FULL_CIRCLE_SECONDS * (1 - done)), 0, FULL_CIRCLE_SECONDS);
+        remaining = total;
+        running = false;
+        clearInterval(intervalId);
+        syncInputsFrom(total);
+        renderTimer();
       }
 
       function setFromInputs() {
-        liveMode = false;
-        const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 999);
+        const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 60);
         const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
-        total = m * 60 + s;
+        total = clamp(m * 60 + s, 0, FULL_CIRCLE_SECONDS);
         remaining = total;
         running = false;
         clearInterval(intervalId);
         if (startBtn) startBtn.textContent = 'Start';
-        updateDigits();
-        updateClock();
+        renderTimer();
       }
 
       function applyPreset(delta) {
-        liveMode = false;
-        const next = clamp(remaining + delta, 0, 999 * 60 + 59);
+        const next = clamp(remaining + delta, 0, FULL_CIRCLE_SECONDS);
         remaining = next;
-        if (!running) total = next;
+        total = running ? total : next;
+        if (running) endAtMs = Date.now() + remaining * 1000;
         syncInputsFrom(!running ? total : remaining);
-        updateDigits();
-        updateClock();
+        renderTimer();
       }
 
       function tick() {
         if (!running) return;
-        if (remaining <= 0) {
+        remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
+        if (remaining === 0) {
           clearInterval(intervalId);
           running = false;
           if (startBtn) startBtn.textContent = 'Start';
-          updateDigits();
-          updateClock();
+          renderTimer();
           if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
           return;
         }
-        remaining -= 1;
-        updateDigits();
-        updateClock();
+        renderTimer();
       }
 
       function start() {
-        if (remaining <= 0 && total > 0) remaining = total;
-        if (remaining <= 0) return;
-        liveMode = false;
+        if (total <= 0) return;
+        if (remaining <= 0) remaining = total;
         running = true;
+        endAtMs = Date.now() + remaining * 1000;
         if (startBtn) startBtn.textContent = 'Pauze';
         clearInterval(intervalId);
-        intervalId = setInterval(tick, 1000);
-        updateDigits();
+        intervalId = setInterval(tick, 200);
+        tick();
       }
 
       function pause() {
+        if (!running) return;
+        remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
         running = false;
         clearInterval(intervalId);
         if (startBtn) startBtn.textContent = 'Start';
-        updateDigits();
+        renderTimer();
       }
 
       function reset() {
         running = false;
         clearInterval(intervalId);
-        liveMode = true;
-        syncLiveClock();
+        total = 0;
+        remaining = 0;
         if (startBtn) startBtn.textContent = 'Start';
-        syncInputsFrom(total);
-        updateDigits();
-        updateClock();
-      }
-
-      function syncLiveClock() {
-        if (!liveMode || running) return;
-        const live = getLiveBaseSeconds();
-        total = live;
-        remaining = live;
-        syncInputsFrom(total);
-        updateDigits();
-        updateClock();
+        syncInputsFrom(0);
+        renderTimer();
       }
 
       startBtn?.addEventListener('click', () => (running ? pause() : start()));
@@ -979,7 +1051,7 @@
         }
 
         interactionMode = 'scrub';
-        if (running) pause();
+        pause();
         setByAngle(e.clientX, e.clientY);
       });
       clockFace.addEventListener('pointermove', (e) => {
@@ -999,8 +1071,9 @@
         if (!interactionMode) clockFace.classList.remove('edge-draggable');
       });
 
-      syncLiveClock();
-      setInterval(syncLiveClock, 250);
+      renderTimer();
+      updateLiveClock();
+      setInterval(updateLiveClock, 250);
     })();
   </script>
 
