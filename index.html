@@ -186,23 +186,24 @@
   <style>
     #timerDock .clock-live-progress {
       position: absolute;
-      inset: 8px;
-      z-index: 0;
+      inset: 10px;
+      z-index: 1;
       border-radius: 50%;
-      background: conic-gradient(rgba(212, 231, 255, 0.58) calc(var(--live-pct, 0) * 1%), rgba(164, 198, 245, 0.06) 0);
-      opacity: 0.44;
+      background: conic-gradient(rgba(227, 241, 255, 0.52) calc(var(--live-pct, 0) * 1%), rgba(164, 198, 245, 0.03) 0);
+      opacity: 0.52;
+      box-shadow: inset 0 0 0 1px rgba(208, 230, 255, 0.14);
     }
 
     #timerDock .clock-progress {
-      z-index: 1;
-      background: conic-gradient(from var(--start-angle, 0deg), #64c5ff calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.08) 0);
+      z-index: 2;
+      background: conic-gradient(from var(--start-angle, 0deg), rgba(108, 204, 255, 0.97) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.04) 0);
     }
 
     #timerDock .clock-live-hand {
       position: absolute;
       left: 50%;
       top: 50%;
-      z-index: 2;
+      z-index: 4;
       width: 3px;
       height: 84px;
       border-radius: 4px;
@@ -215,20 +216,20 @@
     }
 
     #timerDock .clock-hand {
-      z-index: 3;
+      z-index: 5;
       pointer-events: none;
     }
 
     #timerDock .clock-numeral {
-      z-index: 4;
-    }
-
-    #timerDock .clock-digital {
       z-index: 5;
     }
 
-    #timerDock .clock-hub {
+    #timerDock .clock-digital {
       z-index: 6;
+    }
+
+    #timerDock .clock-hub {
+      z-index: 7;
     }
 
   </style>
