@@ -318,6 +318,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     return tokens[0] || raw;
   }
 
+  function tokenizeClassText(value) {
+    return normalizeClassId(value)
+      .split(/[^A-Z0-9.]+/)
+      .map((token) => token.trim())
+      .filter(Boolean);
+  }
+
+  function inferClassIdFromText(value) {
+    const tokens = tokenizeClassText(value);
+    if (!tokens.length || !klasSelect?.options?.length) return '';
+    const tokenSet = new Set(tokens);
+    for (const option of [...klasSelect.options]) {
+      const canonical = normalizeClassId(option.value);
+      const aliases = classIdAliases(canonical);
+      if (aliases.some((alias) => tokenSet.has(normalizeClassId(alias)))) {
+        return canonical;
+      }
+    }
+    return '';
+  }
+
   function flattenAgendaRows(raw) {
     if (Array.isArray(raw)) return raw;
     if (!raw || typeof raw !== 'object') return [];
@@ -330,7 +351,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
-    const classId = pickClassId(
+    const explicitClass = pickClassId(
       row.classId
       ?? row.klas
       ?? row.class
@@ -341,6 +362,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? row.branch
       ?? ''
     );
+    const inferredClass = inferClassIdFromText(
+      `${row.summary || ''}\n${row.description || ''}\n${row.location || ''}\n${row.categories || ''}`
+    );
+    const classId = explicitClass || inferredClass;
     const start = parseDateTime(
       row.start
       ?? row.startTime
@@ -453,6 +478,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     return events
       .map((event) => {
         const classId = pickClassId(event['X-CLASS'])
+          || inferClassIdFromText(
+            `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`
+          )
           || extractClassIdFromText(event.SUMMARY)
           || extractClassIdFromText(event.DESCRIPTION)
           || extractClassIdFromText(event.CATEGORIES)
@@ -630,9 +658,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(index);
   }
 
-  function selectLessonsForToday(lessons, lessonIndex) {
+  function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
     if (!Array.isArray(lessons) || !lessons.length) return [];
-    if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) return lessons;
+    if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) {
+      return strictMatch ? [] : lessons;
+    }
     const mappedIndex = Math.min(3, lessonIndex);
     const idx = Math.max(0, Math.min(lessons.length - 1, mappedIndex - 1));
     return [lessons[idx]];
@@ -665,7 +695,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex);
+    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));
     const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
 
