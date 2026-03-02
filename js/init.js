@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaLastContentType = '';
   let agendaLastError = '';
   let activeAgendaClassId = '';
+  let activeAgendaEntry = null;
   let selectedLessonIndex = 0;
 
   try {
@@ -355,6 +356,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     return [];
   }
 
+  function extractRoomFromText(value) {
+    const text = String(value || '').toUpperCase();
+    if (!text) return '';
+    const patterns = [
+      /\b([A-Z]\d{3})\b/,
+      /\b([A-Z]_[A-Z0-9_]+)\b/,
+      /\b([A-Z]{2,3}\d{2,3})\b/
+    ];
+    for (const pattern of patterns) {
+      const match = text.match(pattern);
+      if (match) return match[1];
+    }
+    return '';
+  }
+
+  function agendaRoomLabel(entry) {
+    if (!entry) return '';
+    if (entry.room) return String(entry.room).toUpperCase();
+    const raw = entry.raw || {};
+    const room = extractRoomFromText(
+      `${raw.location || raw.LOCATION || raw.room || raw.lokaal || ''}\n${raw.summary || raw.SUMMARY || ''}\n${raw.description || raw.DESCRIPTION || ''}`
+    );
+    return room || '';
+  }
+
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
     const explicitClass = pickClassId(
@@ -391,8 +417,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? row.endDate
       ?? ''
     );
+    const room = extractRoomFromText(
+      `${row.location || row.room || row.lokaal || ''}\n${row.summary || ''}\n${row.description || ''}`
+    );
     if (!classId || !start || !end) return null;
-    return { classId: normalizeClassId(classId), start, end, raw: row };
+    return { classId: normalizeClassId(classId), start, end, room, raw: row };
   }
 
   function decodeIcsText(value) {
@@ -494,8 +523,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           || '';
         const start = parseIcsDateValue(event.DTSTART);
         const end = parseIcsDateValue(event.DTEND);
+        const room = extractRoomFromText(
+          `${event.LOCATION || ''}\n${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}`
+        );
         if (!classId || !start || !end) return null;
-        return { classId: normalizeClassId(classId), start, end, raw: event };
+        return { classId: normalizeClassId(classId), start, end, room, raw: event };
       })
       .filter(Boolean);
   }
@@ -691,6 +723,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           : '-';
     const todayBest = findAgendaEntryForCurrentOrLast(classEntries, now);
     const todayIndex = lessonNumberForWeek(entries, todayBest);
+    const selectedRoom = agendaRoomLabel(todayBest);
     const header = [
       `nu: ${now.toLocaleString('nl-NL')}`,
       `geselecteerde klas: ${classId || '-'}`,
@@ -703,6 +736,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `events vandaag voor klas ${classId || '-'}: ${todayEntries.length}`,
       `lopende les nu: ${activeNow ? 'ja' : 'nee'}`,
       `geselecteerd op basis van: ${chosenReason}`,
+      `geselecteerd lokaal: ${selectedRoom || '-'}`,
       `lesnummer deze week: ${todayIndex || 0} (${todayIndex ? lessonLetter(Math.min(todayIndex, 3)) : '-'})`
     ];
     if (!entries.length) {
@@ -788,9 +822,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const agendaStamp = agendaFetchedAt ? `Agenda sync: ${formatSyncTime(agendaFetchedAt)}` : '';
       planningLastUpdateEl.textContent = [syncStamp, sourceStamp, agendaStamp].filter(Boolean).join(' · ');
     }
-    if (selectedLessonIndex > 0) {
-      const label = lessonLetter(Math.min(selectedLessonIndex, 3));
-      setPlanningStatus(`Live gekoppeld · Les ${label} (${selectedLessonIndex}e van deze week)`, 'ok');
+    if (agendaSourceUrl && activeAgendaEntry) {
+      const room = agendaRoomLabel(activeAgendaEntry);
+      setPlanningStatus(room ? `Live gekoppeld · Lokaal ${room}` : 'Live gekoppeld · Lokaal onbekend', 'ok');
     } else if (agendaSourceUrl) {
       setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
@@ -828,6 +862,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastContentType = '';
       agendaLastError = '';
       activeAgendaClassId = '';
+      activeAgendaEntry = null;
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -851,11 +886,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
+      activeAgendaEntry = bestEntry || null;
       selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
 
       if (activeAgendaClassId) {
         selectClassFromAgenda(activeAgendaClassId);
       } else {
+        activeAgendaEntry = findAgendaEntryForCurrentOrLast(
+          agendaEntries.filter((entry) => entry.classId === normalizeClassId(klasSelect?.value || '')),
+          new Date()
+        );
         selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       }
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
@@ -870,6 +910,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastContentType = '';
       agendaLastError = err?.message ? String(err.message) : String(err);
       activeAgendaClassId = '';
+      activeAgendaEntry = null;
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -954,6 +995,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   klasSelect?.addEventListener('change', () => {
+    activeAgendaEntry = findAgendaEntryForCurrentOrLast(
+      agendaEntries.filter((entry) => entry.classId === normalizeClassId(klasSelect.value)),
+      new Date()
+    );
     selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect.value);
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
