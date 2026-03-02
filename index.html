@@ -167,7 +167,6 @@
         <div class="clock-digital">
           <div class="clock-time" id="clockTime">00:00</div>
           <div class="clock-state" id="clockState">Selecteer op de rand</div>
-          <div class="clock-live-time" id="clockLiveTime">--:--:--</div>
         </div>
       </div>
       <div class="timer-hotkeys">spatie start/pauze · R/Esc reset</div>
@@ -220,13 +219,6 @@
       z-index: 6;
     }
 
-    #timerDock .clock-live-time {
-      margin-top: 2px;
-      font-size: 11px;
-      color: rgba(210, 228, 250, 0.9);
-      font-weight: 700;
-      font-variant-numeric: tabular-nums;
-    }
   </style>
 
   <section id="magisterAssistPanel" class="magister-assist" aria-label="Magister absentiehulp" hidden>
@@ -814,7 +806,6 @@
       const hand = document.getElementById('clockHand');
       const timeEl = document.getElementById('clockTime');
       const stateEl = document.getElementById('clockState');
-      const liveTimeEl = document.getElementById('clockLiveTime');
       const startBtn = null;
       const resetBtn = null;
       const applyBtn = null;
@@ -824,7 +815,7 @@
       const dial = document.getElementById('clockDial');
       const timerDock = document.getElementById('timerDock');
 
-      if (!clockFace || !liveProgress || !progress || !liveHand || !hand || !timeEl || !stateEl || !liveTimeEl || !dial) return;
+      if (!clockFace || !liveProgress || !progress || !liveHand || !hand || !timeEl || !stateEl || !dial) return;
 
       const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
@@ -832,14 +823,6 @@
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
         return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-      }
-
-      function fmtHHMMSS(now) {
-        return [
-          String(now.getHours()).padStart(2, '0'),
-          String(now.getMinutes()).padStart(2, '0'),
-          String(now.getSeconds()).padStart(2, '0'),
-        ].join(':');
       }
 
       function getLiveSecondsOfHour(now) {
@@ -873,7 +856,6 @@
         latestLiveAngleDeg = liveDone * 360;
         liveProgress.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
         liveHand.style.setProperty('--live-angle', `${latestLiveAngleDeg.toFixed(4)}deg`);
-        liveTimeEl.textContent = fmtHHMMSS(now);
         if (!running && total === 0) selectionStartDeg = latestLiveAngleDeg;
       }
 

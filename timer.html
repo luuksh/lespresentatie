@@ -251,14 +251,6 @@
       font-weight: 700;
     }
 
-    .live-time {
-      margin-top: 2px;
-      font-size: 11px;
-      color: rgba(210, 228, 250, 0.9);
-      font-weight: 700;
-      font-variant-numeric: tabular-nums;
-    }
-
     .scrub-hint {
       font-size: 11px;
       font-weight: 700;
@@ -410,7 +402,6 @@
         <div class="digital">
           <div class="time" id="time">00:00</div>
           <div class="state" id="state">Selecteer op de rand</div>
-          <div class="live-time" id="liveTime">--:--:--</div>
         </div>
       </div>
       <div class="kbd">spatie start/pauze · R/Esc reset</div>
@@ -431,7 +422,6 @@
 
     const timeEl = document.getElementById('time');
     const stateEl = document.getElementById('state');
-    const liveTimeEl = document.getElementById('liveTime');
     const liveRingEl = document.getElementById('liveRing');
     const ringEl = document.getElementById('ring');
     const liveHandEl = document.getElementById('liveHand');
@@ -450,14 +440,6 @@
       const m = Math.floor(seconds / 60);
       const s = seconds % 60;
       return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-    }
-
-    function fmtHHMMSS(now) {
-      return [
-        String(now.getHours()).padStart(2, '0'),
-        String(now.getMinutes()).padStart(2, '0'),
-        String(now.getSeconds()).padStart(2, '0'),
-      ].join(':');
     }
 
     function getLiveSecondsOfHour(now) {
@@ -491,7 +473,6 @@
       latestLiveAngleDeg = liveDone * 360;
       liveRingEl.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
       liveHandEl.style.setProperty('--live-angle', `${latestLiveAngleDeg.toFixed(4)}deg`);
-      liveTimeEl.textContent = fmtHHMMSS(now);
       if (!running && total === 0) selectionStartDeg = latestLiveAngleDeg;
     }
 
