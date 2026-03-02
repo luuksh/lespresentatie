@@ -23,11 +23,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   let planningData = {};
   let planningUpdatedAt = '';
+  let planningFetchedAt = '';
   let planningTimer = null;
   let planningSourceUrl = '';
   let agendaTimer = null;
   let agendaSourceUrl = '';
   let agendaEntries = [];
+  let agendaFetchedAt = '';
   let activeAgendaClassId = '';
   let selectedLessonIndex = 0;
 
@@ -670,8 +672,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
       if (planningLastUpdateEl) {
-        const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
-        planningLastUpdateEl.textContent = stamp;
+        const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
+        const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
+        planningLastUpdateEl.textContent = [syncStamp, sourceStamp].filter(Boolean).join(' · ');
       }
       setPlanningStatus('Geen weekitems', 'warn');
       return;
@@ -679,12 +682,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     setPlanningItems(weekData.items, weekData.note, lessonSelection);
     if (planningLastUpdateEl) {
-      const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
-      planningLastUpdateEl.textContent = stamp;
+      const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
+      const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
+      const agendaStamp = agendaFetchedAt ? `Agenda sync: ${formatSyncTime(agendaFetchedAt)}` : '';
+      planningLastUpdateEl.textContent = [syncStamp, sourceStamp, agendaStamp].filter(Boolean).join(' · ');
     }
     if (selectedLessonIndex > 0) {
       const label = lessonLetter(Math.min(selectedLessonIndex, 3));
       setPlanningStatus(`Live gekoppeld · Les ${label} (${selectedLessonIndex}e van deze week)`, 'ok');
+    } else if (agendaSourceUrl) {
+      setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
       setPlanningStatus('Live gekoppeld', 'ok');
     }
@@ -703,7 +710,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const raw = await res.json();
       planningData = buildPlanningIndex(raw);
-      planningUpdatedAt = String(raw?.updatedAt || new Date().toISOString());
+      planningFetchedAt = new Date().toISOString();
+      planningUpdatedAt = String(raw?.updatedAt || '');
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden jaarplanning:', err);
@@ -728,6 +736,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const rawText = await res.text();
       agendaEntries = parseAgendaPayload(rawText, res.headers.get('content-type') || '')
         .sort((a, b) => a.start - b.start);
+      agendaFetchedAt = new Date().toISOString();
 
       const bestEntry = findBestAgendaEntryForToday(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
@@ -742,6 +751,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (err) {
       console.error('Fout bij laden agenda:', err);
       agendaEntries = [];
+      agendaFetchedAt = '';
       activeAgendaClassId = '';
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       renderPlanning();
