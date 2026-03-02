@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaSourceUrl = '';
   let agendaEntries = [];
   let agendaFetchedAt = '';
+  let agendaLastFetchStatus = '';
+  let agendaLastContentType = '';
+  let agendaLastError = '';
   let activeAgendaClassId = '';
   let selectedLessonIndex = 0;
 
@@ -672,6 +675,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const header = [
       `nu: ${now.toLocaleString('nl-NL')}`,
       `geselecteerde klas: ${classId || '-'}`,
+      `agenda bron: ${agendaSourceUrl || '(niet ingesteld)'}`,
+      `laatste fetch: ${agendaLastFetchStatus || '-'}`,
+      `content-type: ${agendaLastContentType || '-'}`,
+      `laatste fout: ${agendaLastError || '-'}`,
       `gevonden agenda-events totaal: ${entries.length}`,
       `events voor klas ${classId || '-'}: ${classEntries.length}`,
       `events vandaag voor klas ${classId || '-'}: ${todayEntries.length}`,
@@ -766,7 +773,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else if (agendaSourceUrl) {
       setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
-      setPlanningStatus('Live gekoppeld', 'ok');
+      setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
     }
   }
 
@@ -796,8 +803,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function fetchAgenda() {
     if (!agendaSourceUrl) {
       agendaEntries = [];
+      agendaLastFetchStatus = 'niet uitgevoerd (geen agenda-URL)';
+      agendaLastContentType = '';
+      agendaLastError = '';
       activeAgendaClassId = '';
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+      if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+        agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+      }
       renderPlanning();
       return;
     }
@@ -807,9 +820,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       const res = await fetch(url.toString(), { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const rawText = await res.text();
-      agendaEntries = parseAgendaPayload(rawText, res.headers.get('content-type') || '')
+      const contentType = res.headers.get('content-type') || '';
+      agendaEntries = parseAgendaPayload(rawText, contentType)
         .sort((a, b) => a.start - b.start);
       agendaFetchedAt = new Date().toISOString();
+      agendaLastFetchStatus = `ok (${res.status})`;
+      agendaLastContentType = contentType || '-';
+      agendaLastError = '';
 
       const bestEntry = findBestAgendaEntryForToday(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
@@ -828,6 +845,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       console.error('Fout bij laden agenda:', err);
       agendaEntries = [];
       agendaFetchedAt = '';
+      agendaLastFetchStatus = 'mislukt';
+      agendaLastContentType = '';
+      agendaLastError = err?.message ? String(err.message) : String(err);
       activeAgendaClassId = '';
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
