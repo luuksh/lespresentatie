@@ -653,10 +653,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningStatusEl.replaceChildren();
 
     if (options.room) {
-      const prefix = document.createElement('span');
-      prefix.className = 'jaarplanning-status-prefix';
-      prefix.textContent = `${message} `;
-      planningStatusEl.appendChild(prefix);
+      if (message) {
+        const prefix = document.createElement('span');
+        prefix.className = 'jaarplanning-status-prefix';
+        prefix.textContent = `${message} `;
+        planningStatusEl.appendChild(prefix);
+      }
 
       const badge = document.createElement('span');
       badge.className = 'jaarplanning-room-badge';
@@ -841,7 +843,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaSourceUrl && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
       if (room) {
-        setPlanningStatus('Live gekoppeld · Lokaal', 'ok', { room });
+        setPlanningStatus('', 'ok', { room });
       } else {
         setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
       }
