@@ -164,6 +164,7 @@
       transform: translate(-50%, -88%) rotate(var(--angle, 0deg));
       box-shadow: 0 0 10px rgba(89, 191, 255, 0.32);
       z-index: 3;
+      pointer-events: none;
     }
 
     .hand::after {
@@ -442,8 +443,10 @@
       return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
 
-    function getLiveSecondsOfHour(now) {
-      return now.getMinutes() * 60 + now.getSeconds() + now.getMilliseconds() / 1000;
+    function getLiveClockAngles(now) {
+      const minuteAngle = ((now.getMinutes() + now.getSeconds() / 60 + now.getMilliseconds() / 60000) / 60) * 360;
+      const hourAngle = (((now.getHours() % 12) + now.getMinutes() / 60 + now.getSeconds() / 3600) / 12) * 360;
+      return { minuteAngle, hourAngle };
     }
 
     function syncInputsFrom(value) {
@@ -469,10 +472,12 @@
 
     function updateLiveClock() {
       const now = new Date();
-      const liveDone = getLiveSecondsOfHour(now) / FULL_CIRCLE_SECONDS;
-      latestLiveAngleDeg = liveDone * 360;
+      const { minuteAngle, hourAngle } = getLiveClockAngles(now);
+      const liveDone = minuteAngle / 360;
+      latestLiveAngleDeg = minuteAngle;
       liveRingEl.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
       liveHandEl.style.setProperty('--live-angle', `${latestLiveAngleDeg.toFixed(4)}deg`);
+      handEl.style.setProperty('--angle', `${hourAngle.toFixed(4)}deg`);
       if (!running && total === 0) selectionStartDeg = latestLiveAngleDeg;
     }
 
@@ -480,10 +485,8 @@
       const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
       const runDone = (total - remaining) / FULL_CIRCLE_SECONDS;
       const done = running ? runDone : selectionDone;
-      const handAngle = (selectionStartDeg + done * 360) % 360;
       ringEl.style.setProperty('--start-angle', `${selectionStartDeg.toFixed(4)}deg`);
       ringEl.style.setProperty('--pct', (done * 100).toFixed(4));
-      handEl.style.setProperty('--angle', `${handAngle.toFixed(4)}deg`);
       clockEl.classList.toggle('done', total > 0 && remaining === 0 && !running);
     }
 
@@ -507,6 +510,17 @@
       clearInterval(intervalId);
       syncInputsFrom(total);
       renderTimer();
+    }
+
+    function isInScrubBand(clientX, clientY) {
+      const rect = clockEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = clientX - cx;
+      const dy = clientY - cy;
+      const dist = Math.hypot(dx, dy);
+      const radius = Math.min(rect.width, rect.height) / 2;
+      return dist >= radius - 42 && dist <= radius - 8;
     }
 
     function setFromInputs() {
@@ -609,6 +623,7 @@
     let scrubbing = false;
     const stopScrub = () => { scrubbing = false; };
     clockEl.addEventListener('pointerdown', (e) => {
+      if (!isInScrubBand(e.clientX, e.clientY)) return;
       pause();
       scrubbing = true;
       clockEl.setPointerCapture(e.pointerId);
