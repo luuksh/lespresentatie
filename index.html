@@ -1044,7 +1044,7 @@
       for (let i = 0; i < 60; i++) {
         const tickEl = document.createElement('div');
         tickEl.className = `clock-tick${i % 5 === 0 ? ' big' : ''}`;
-        tickEl.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
+        tickEl.style.setProperty('--tick-rot', `${i * 6}deg`);
         dial.appendChild(tickEl);
       }
 

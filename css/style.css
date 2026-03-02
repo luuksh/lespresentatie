@@ -292,13 +292,14 @@ body::after {
 .clock-tick {
   position: absolute;
   left: 50%;
-  top: 10px;
+  top: 50%;
   width: 2px;
   height: 10px;
   z-index: 2;
   border-radius: 2px;
   background: rgba(218, 232, 249, 0.6);
-  transform-origin: 50% calc(114px - 10px);
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) rotate(var(--tick-rot, 0deg)) translateY(-102px);
 }
 
 .clock-tick.big {
@@ -355,6 +356,8 @@ body::after {
 
 .clock-numeral {
   position: absolute;
+  left: 50%;
+  top: 50%;
   z-index: 4;
   font-size: 15px;
   font-weight: 900;
@@ -363,30 +366,23 @@ body::after {
   text-shadow:
     0 1px 1px rgba(4, 12, 23, 0.5),
     0 0 10px rgba(184, 226, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(var(--num-angle, 0deg)) translateY(-84px) rotate(calc(-1 * var(--num-angle, 0deg)));
 }
 
 .clock-numeral.n12 {
-  left: 50%;
-  top: 16px;
-  transform: translateX(-50%);
+  --num-angle: 0deg;
 }
 
 .clock-numeral.n3 {
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  --num-angle: 90deg;
 }
 
 .clock-numeral.n6 {
-  left: 50%;
-  bottom: 44px;
-  transform: translateX(-50%);
+  --num-angle: 180deg;
 }
 
 .clock-numeral.n9 {
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  --num-angle: 270deg;
 }
 
 .clock-digital {

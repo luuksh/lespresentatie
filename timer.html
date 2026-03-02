@@ -146,12 +146,13 @@
       position: absolute;
       z-index: 2;
       left: 50%;
-      top: 10px;
+      top: 50%;
       width: 2px;
       height: 10px;
       border-radius: 2px;
       background: rgba(218, 232, 249, 0.6);
-      transform-origin: 50% calc(114px - 10px);
+      transform-origin: 50% 50%;
+      transform: translate(-50%, -50%) rotate(var(--tick-rot, 0deg)) translateY(-102px);
     }
 
     .tick.big {
@@ -250,6 +251,8 @@
 
     .numeral {
       position: absolute;
+      left: 50%;
+      top: 50%;
       z-index: 5;
       font-size: 15px;
       font-weight: 900;
@@ -258,12 +261,13 @@
       text-shadow:
         0 1px 1px rgba(4, 12, 23, 0.5),
         0 0 10px rgba(184, 226, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(var(--num-angle, 0deg)) translateY(-84px) rotate(calc(-1 * var(--num-angle, 0deg)));
     }
 
-    .numeral.n12 { left: 50%; top: 16px; transform: translateX(-50%); }
-    .numeral.n3 { right: 16px; top: 50%; transform: translateY(-50%); }
-    .numeral.n6 { left: 50%; bottom: 44px; transform: translateX(-50%); }
-    .numeral.n9 { left: 16px; top: 50%; transform: translateY(-50%); }
+    .numeral.n12 { --num-angle: 0deg; }
+    .numeral.n3 { --num-angle: 90deg; }
+    .numeral.n6 { --num-angle: 180deg; }
+    .numeral.n9 { --num-angle: 270deg; }
 
     .digital {
       position: absolute;
@@ -718,7 +722,7 @@
       for (let i = 0; i < 60; i++) {
         const tick = document.createElement('div');
         tick.className = `tick${i % 5 === 0 ? ' big' : ''}`;
-        tick.style.transform = `translateX(-50%) rotate(${i * 6}deg)`;
+        tick.style.setProperty('--tick-rot', `${i * 6}deg`);
         dialEl.appendChild(tick);
       }
     }
