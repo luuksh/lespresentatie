@@ -568,8 +568,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function resolveAgendaSourceUrl() {
     const fromStorage = String(localStorage.getItem(AGENDA_SOURCE_KEY) || '').trim();
+    const fromWindow = String(window.APP_CONFIG?.agendaSourceUrl || '').trim();
+    const legacyBlockedZermelo = fromStorage.includes('zportal.nl/api/v3/ical');
+    if (legacyBlockedZermelo && fromWindow) return fromWindow;
     if (fromStorage) return fromStorage;
-    return String(window.APP_CONFIG?.agendaSourceUrl || '').trim();
+    return fromWindow;
   }
 
   function selectClassFromAgenda(classId) {
