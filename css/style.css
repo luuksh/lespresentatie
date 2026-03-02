@@ -333,9 +333,9 @@ body::after {
   left: 50%;
   top: 50%;
   z-index: 4;
-  width: 5px;
-  height: 82px;
-  border-radius: 6px;
+  width: 6px;
+  height: 64px;
+  border-radius: 7px;
   background: linear-gradient(180deg, #fefefe 0%, #dbf0ff 35%, #53bdff 100%);
   transform-origin: 50% 88%;
   transform: translate(-50%, -88%) rotate(var(--angle, 0deg));
