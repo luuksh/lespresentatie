@@ -420,6 +420,7 @@
     let endAtMs = 0;
     let latestLiveAngleDeg = 0;
     let selectionStartDeg = 0;
+    let bellAudioCtx = null;
 
     const timeEl = document.getElementById('time');
     const stateEl = document.getElementById('state');
@@ -467,6 +468,36 @@
         stateEl.textContent = 'Klaar';
       } else {
         stateEl.textContent = 'Timer gepauzeerd';
+      }
+    }
+
+    function playBell() {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      try {
+        bellAudioCtx = bellAudioCtx || new AudioCtx();
+        if (bellAudioCtx.state === 'suspended') bellAudioCtx.resume();
+        const start = bellAudioCtx.currentTime;
+        const end = start + 0.45;
+        const gain = bellAudioCtx.createGain();
+        const osc = bellAudioCtx.createOscillator();
+        const osc2 = bellAudioCtx.createOscillator();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(1318.5, start);
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(1760, start);
+        gain.gain.setValueAtTime(0.0001, start);
+        gain.gain.exponentialRampToValueAtTime(0.14, start + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, end);
+        osc.connect(gain);
+        osc2.connect(gain);
+        gain.connect(bellAudioCtx.destination);
+        osc.start(start);
+        osc2.start(start);
+        osc.stop(end);
+        osc2.stop(end);
+      } catch (err) {
+        // Ignore audio failures (browser policy or unsupported APIs).
       }
     }
 
@@ -550,8 +581,13 @@
         clearInterval(intervalId);
         running = false;
         if (startBtn) startBtn.textContent = 'Start';
-        renderTimer();
+        playBell();
         if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
+        total = 0;
+        remaining = 0;
+        selectionStartDeg = latestLiveAngleDeg;
+        syncInputsFrom(0);
+        renderTimer();
         return;
       }
       renderTimer();
