@@ -525,16 +525,20 @@ document.addEventListener('DOMContentLoaded', async () => {
       && a.getDate() === b.getDate();
   }
 
-  function findBestAgendaEntryForToday(entries, now = new Date()) {
-    const todayEntries = entries
-      .filter((entry) => isSameLocalDay(entry.start, now))
-      .sort((a, b) => a.start - b.start);
-    if (!todayEntries.length) return null;
-    const active = todayEntries.find((entry) => now >= entry.start && now <= entry.end);
-    if (active) return active;
-    const upcoming = todayEntries.find((entry) => entry.start >= now);
-    if (upcoming) return upcoming;
-    return todayEntries[todayEntries.length - 1];
+  function findAgendaEntryForCurrentOrLast(entries, now = new Date()) {
+    const sorted = [...entries].sort((a, b) => a.start - b.start);
+    if (!sorted.length) return null;
+
+    // 1) Class that is currently being taught right now.
+    const activeNow = sorted.find((entry) => now >= entry.start && now <= entry.end);
+    if (activeNow) return activeNow;
+
+    // 2) If no active class now, fall back to the most recently finished class.
+    const past = sorted.filter((entry) => entry.end <= now);
+    if (past.length) return past[past.length - 1];
+
+    // 3) Final fallback: first upcoming class.
+    return sorted[0];
   }
 
   function getWeekBounds(date = new Date()) {
@@ -562,7 +566,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cid = normalizeClassId(classId);
     if (!cid) return 0;
     const classEntries = entries.filter((entry) => entry.classId === cid);
-    const selected = findBestAgendaEntryForToday(classEntries, now);
+    const selected = findAgendaEntryForCurrentOrLast(classEntries, now);
     return lessonNumberForWeek(entries, selected);
   }
 
@@ -673,7 +677,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter((entry) => entry.classId === classId)
       .sort((a, b) => a.start - b.start);
     const todayEntries = classEntries.filter((entry) => isSameLocalDay(entry.start, now));
-    const todayBest = findBestAgendaEntryForToday(classEntries, now);
+    const activeNow = classEntries.find((entry) => now >= entry.start && now <= entry.end);
+    const todayBest = findAgendaEntryForCurrentOrLast(classEntries, now);
     const todayIndex = lessonNumberForWeek(entries, todayBest);
     const header = [
       `nu: ${now.toLocaleString('nl-NL')}`,
@@ -685,6 +690,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `gevonden agenda-events totaal: ${entries.length}`,
       `events voor klas ${classId || '-'}: ${classEntries.length}`,
       `events vandaag voor klas ${classId || '-'}: ${todayEntries.length}`,
+      `lopende les nu: ${activeNow ? 'ja' : 'nee'}`,
       `lesnummer deze week: ${todayIndex || 0} (${todayIndex ? lessonLetter(Math.min(todayIndex, 3)) : '-'})`
     ];
     if (!entries.length) {
@@ -831,7 +837,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastContentType = contentType || '-';
       agendaLastError = '';
 
-      const bestEntry = findBestAgendaEntryForToday(agendaEntries, new Date());
+      const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
       selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
 
