@@ -749,6 +749,7 @@
       let remaining = total;
       let running = false;
       let intervalId = null;
+      let liveMode = true;
 
       const clockFace = document.getElementById('clockFace');
       const progress = document.getElementById('clockProgress');
@@ -785,6 +786,8 @@
         timeEl.textContent = fmt(remaining);
         if (remaining === 0 && !running) {
           stateEl.textContent = 'Klaar';
+        } else if (liveMode && !running) {
+          stateEl.textContent = 'Live';
         } else {
           stateEl.textContent = running ? 'Bezig' : 'Gepauzeerd';
         }
@@ -798,6 +801,7 @@
       }
 
       function setByAngle(clientX, clientY) {
+        liveMode = false;
         if (total <= 0) total = getLiveBaseSeconds();
         const rect = clockFace.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
@@ -814,6 +818,7 @@
       }
 
       function setFromInputs() {
+        liveMode = false;
         const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 999);
         const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
         total = m * 60 + s;
@@ -826,6 +831,7 @@
       }
 
       function applyPreset(delta) {
+        liveMode = false;
         const next = clamp(remaining + delta, 0, 999 * 60 + 59);
         remaining = next;
         if (!running) total = next;
@@ -853,6 +859,7 @@
       function start() {
         if (remaining <= 0 && total > 0) remaining = total;
         if (remaining <= 0) return;
+        liveMode = false;
         running = true;
         if (startBtn) startBtn.textContent = 'Pauze';
         clearInterval(intervalId);
@@ -870,9 +877,19 @@
       function reset() {
         running = false;
         clearInterval(intervalId);
-        total = getLiveBaseSeconds();
-        remaining = total;
+        liveMode = true;
+        syncLiveClock();
         if (startBtn) startBtn.textContent = 'Start';
+        syncInputsFrom(total);
+        updateDigits();
+        updateClock();
+      }
+
+      function syncLiveClock() {
+        if (!liveMode || running) return;
+        const live = getLiveBaseSeconds();
+        total = live;
+        remaining = live;
         syncInputsFrom(total);
         updateDigits();
         updateClock();
@@ -982,9 +999,8 @@
         if (!interactionMode) clockFace.classList.remove('edge-draggable');
       });
 
-      syncInputsFrom(total);
-      updateDigits();
-      updateClock();
+      syncLiveClock();
+      setInterval(syncLiveClock, 250);
     })();
   </script>
 
