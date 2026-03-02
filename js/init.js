@@ -175,14 +175,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function normalizeLessonRow(row) {
     if (typeof row === 'string') {
       const lesson = row.trim();
-      return lesson ? { project: '', lesson, url: '' } : null;
+      return lesson ? { project: '', lesson, url: '', lessonKey: '' } : null;
     }
     if (!row || typeof row !== 'object') return null;
     const project = String(row.project ?? row.thema ?? '').trim();
     const lesson = String(row.lesson ?? row.les ?? row.title ?? '').trim();
     const url = String(row.url ?? row.link ?? '').trim();
+    const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson) return null;
-    return { project, lesson, url };
+    return { project, lesson, url, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -664,6 +665,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       return strictMatch ? [] : lessons;
     }
     const mappedIndex = Math.min(3, lessonIndex);
+    const mappedKey = lessonLetter(mappedIndex);
+
+    const keyedLessons = lessons.filter((l) => String(l?.lessonKey || '').trim());
+    if (keyedLessons.length) {
+      const keyedMatch = keyedLessons.find((l) => String(l.lessonKey || '').toUpperCase() === mappedKey);
+      if (keyedMatch) return [keyedMatch];
+      return strictMatch ? [] : keyedLessons;
+    }
+
     const idx = Math.max(0, Math.min(lessons.length - 1, mappedIndex - 1));
     return [lessons[idx]];
   }
@@ -697,7 +707,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));
     const hasLessons = lessonSelection.length > 0;
-    const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
+    const showWeekItems = !agendaSourceUrl;
+    const hasItems = showWeekItems && Array.isArray(weekData?.items) && weekData.items.length > 0;
 
     if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
@@ -710,7 +721,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    setPlanningItems(weekData.items, weekData.note, lessonSelection);
+    setPlanningItems(showWeekItems ? weekData.items : [], weekData.note, lessonSelection);
     if (planningLastUpdateEl) {
       const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
       const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';

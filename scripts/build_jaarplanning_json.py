@@ -139,6 +139,7 @@ def extract_entries(path):
             continue
 
         project = clean_cell(row.get("C", ""))
+        lesson_key = clean_cell(row.get("B", "")).upper()
         lesson = clean_cell(row.get("D", ""))
         lesson_url = hyperlinks.get(f"D{r}", "").strip()
         extra = clean_cell(row.get("E", ""))
@@ -150,6 +151,7 @@ def extract_entries(path):
             "project": project,
             "lesson": lesson,
             "url": lesson_url,
+            "lessonKey": lesson_key if lesson_key in {"A", "B", "C"} else "",
         }
         items = []
         if extra:
@@ -187,10 +189,13 @@ def merge_entries(entries):
         proj = str(lesson.get("project", "")).strip()
         les = str(lesson.get("lesson", "")).strip()
         url = str(lesson.get("url", "")).strip()
+        lkey = str(lesson.get("lessonKey", "")).strip().upper()
         if proj or les:
             candidate = {"project": proj, "lesson": les}
             if url:
                 candidate["url"] = url
+            if lkey in {"A", "B", "C"}:
+                candidate["lessonKey"] = lkey
             if candidate not in bucket["lessons"]:
                 bucket["lessons"].append(candidate)
         for it in e.get("items", []):
