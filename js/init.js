@@ -646,10 +646,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     }).format(date);
   }
 
-  function setPlanningStatus(message, state = 'info') {
+  function setPlanningStatus(message, state = 'info', options = {}) {
     if (!planningStatusEl) return;
-    planningStatusEl.textContent = message;
     planningStatusEl.dataset.state = state;
+    planningStatusEl.classList.toggle('has-room-badge', Boolean(options.room));
+    planningStatusEl.replaceChildren();
+
+    if (options.room) {
+      const prefix = document.createElement('span');
+      prefix.className = 'jaarplanning-status-prefix';
+      prefix.textContent = `${message} `;
+      planningStatusEl.appendChild(prefix);
+
+      const badge = document.createElement('span');
+      badge.className = 'jaarplanning-room-badge';
+      badge.textContent = String(options.room).toUpperCase();
+      planningStatusEl.appendChild(badge);
+      return;
+    }
+
+    planningStatusEl.textContent = message;
   }
 
   function setPlanningItems(items = [], note = '', lessons = []) {
@@ -824,7 +840,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     if (agendaSourceUrl && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
-      setPlanningStatus(room ? `Live gekoppeld · Lokaal ${room}` : 'Live gekoppeld · Lokaal onbekend', 'ok');
+      if (room) {
+        setPlanningStatus('Live gekoppeld · Lokaal', 'ok', { room });
+      } else {
+        setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
+      }
     } else if (agendaSourceUrl) {
       setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
