@@ -148,13 +148,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     return text.split('\n').map((line) => line.trim()).filter(Boolean);
   }
 
+  function coerceLessons(value) {
+    if (!Array.isArray(value)) return [];
+    return value
+      .map((row) => {
+        const project = String(row?.project || '').trim();
+        const lesson = String(row?.lesson || '').trim();
+        const url = String(row?.url || '').trim();
+        if (!project && !lesson) return null;
+        return { project, lesson, url };
+      })
+      .filter(Boolean);
+  }
+
   function normalizePlanEntry(entry) {
     if (Array.isArray(entry) || typeof entry === 'string') {
-      return { items: coerceItems(entry), note: '' };
+      return { lessons: [], items: coerceItems(entry), note: '' };
     }
     if (!entry || typeof entry !== 'object') {
-      return { items: [], note: '' };
+      return { lessons: [], items: [], note: '' };
     }
+    const lessons = coerceLessons(entry.lessons ?? entry.programmaItems ?? []);
     const items = coerceItems(
       entry.items
       ?? entry.programma
@@ -164,7 +178,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? ''
     );
     const note = String(entry.note ?? entry.opmerking ?? '').trim();
-    return { items, note };
+    return { lessons, items, note };
+  }
+
+  function mergePlanEntries(...entries) {
+    const merged = { lessons: [], items: [], note: '' };
+    const seenLessons = new Set();
+    const seenItems = new Set();
+    const notes = [];
+
+    for (const entry of entries) {
+      const normalized = normalizePlanEntry(entry);
+      for (const lesson of normalized.lessons) {
+        const key = JSON.stringify(lesson);
+        if (seenLessons.has(key)) continue;
+        seenLessons.add(key);
+        merged.lessons.push(lesson);
+      }
+      for (const item of normalized.items) {
+        if (seenItems.has(item)) continue;
+        seenItems.add(item);
+        merged.items.push(item);
+      }
+      if (normalized.note && !notes.includes(normalized.note)) {
+        notes.push(normalized.note);
+      }
+    }
+
+    if (notes.length) merged.note = notes.join(' | ');
+    return merged;
   }
 
   function buildPlanningIndex(raw) {
@@ -175,6 +217,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const aliases = new Set([cid]);
       if (/^G\d[A-Z]$/.test(cid)) aliases.add(cid.slice(1));
       if (/^\d[A-Z]$/.test(cid)) aliases.add(`G${cid}`);
+      const dotted = cid.match(/^(\d)\.(\d+)$/);
+      if (dotted) aliases.add(`${dotted[1]}G${dotted[2]}`);
+      const gym = cid.match(/^(\d)G(\d+)$/);
+      if (gym) aliases.add(`${gym[1]}.${gym[2]}`);
       return [...aliases];
     };
     const addWeek = (classId, weekId, payload) => {
@@ -233,9 +279,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningStatusEl.dataset.state = state;
   }
 
-  function setPlanningItems(items = [], note = '') {
+  function setPlanningItems(items = [], note = '', lessons = []) {
     if (!planningItemsEl) return;
     planningItemsEl.replaceChildren();
+    for (const lesson of lessons) {
+      const li = document.createElement('li');
+      li.className = 'jaarplanning-lesson-item';
+
+      const projectLine = document.createElement('p');
+      projectLine.className = 'jaarplanning-project';
+      projectLine.textContent = lesson.project ? `Project: ${lesson.project}` : 'Project: -';
+      li.appendChild(projectLine);
+
+      const lessonLine = document.createElement('p');
+      lessonLine.className = 'jaarplanning-lesson';
+      const prefix = document.createElement('span');
+      prefix.textContent = 'Les: ';
+      lessonLine.appendChild(prefix);
+      if (lesson.url) {
+        const link = document.createElement('a');
+        link.href = lesson.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = lesson.lesson || lesson.url;
+        lessonLine.appendChild(link);
+      } else {
+        const text = document.createElement('span');
+        text.textContent = lesson.lesson || '-';
+        lessonLine.appendChild(text);
+      }
+      li.appendChild(lessonLine);
+
+      planningItemsEl.appendChild(li);
+    }
     for (const item of items) {
       const li = document.createElement('li');
       li.textContent = item;
@@ -262,8 +338,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       String(week.weekNo).padStart(2, '0')
     ];
     const classWeeks = planningData[classId] || {};
-    const matchedWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
-    const weekData = matchedWeekKey ? classWeeks[matchedWeekKey] : null;
+    const allWeeks = planningData.ALL || {};
+    const classWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
+    const allWeekKey = weekCandidates.find((key) => Boolean(allWeeks[key])) || '';
+    const weekData = (classWeekKey || allWeekKey)
+      ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
+      : null;
 
     if (!planningSourceUrl) {
       setPlanningItems(['Koppel eerst een jaarplanning-bron in het docentpaneel.']);
@@ -272,7 +352,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    if (!weekData || !Array.isArray(weekData.items) || !weekData.items.length) {
+    const hasLessons = Array.isArray(weekData?.lessons) && weekData.lessons.length > 0;
+    const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
+
+    if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
       if (planningLastUpdateEl) {
         const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
@@ -282,7 +365,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    setPlanningItems(weekData.items, weekData.note);
+    setPlanningItems(weekData.items, weekData.note, weekData.lessons);
     if (planningLastUpdateEl) {
       const stamp = planningUpdatedAt ? `Laatste sync: ${formatSyncTime(planningUpdatedAt)}` : '';
       planningLastUpdateEl.textContent = stamp;

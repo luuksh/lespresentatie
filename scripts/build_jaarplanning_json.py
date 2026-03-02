@@ -2,12 +2,15 @@
 import argparse
 import datetime as dt
 import json
+import posixpath
 import re
 import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+REL_NS = "{http://schemas.openxmlformats.org/package/2006/relationships}"
+DOC_REL_NS = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
 
 
 def read_shared_strings(zf):
@@ -19,6 +22,39 @@ def read_shared_strings(zf):
         text = "".join((n.text or "") for n in si.findall(f".//{NS}t")).strip()
         out.append(text)
     return out
+
+
+def read_sheet_hyperlinks(zf, sheet_path):
+    links = {}
+    if sheet_path not in zf.namelist():
+        return links
+
+    sheet_root = ET.fromstring(zf.read(sheet_path))
+    rel_map = {}
+    rel_path = posixpath.join(
+        posixpath.dirname(sheet_path),
+        "_rels",
+        f"{posixpath.basename(sheet_path)}.rels",
+    )
+    if rel_path in zf.namelist():
+        rel_root = ET.fromstring(zf.read(rel_path))
+        for rel in rel_root.findall(f".//{REL_NS}Relationship"):
+            rel_id = rel.attrib.get("Id", "")
+            target = rel.attrib.get("Target", "")
+            if rel_id and target:
+                rel_map[rel_id] = target
+
+    for hl in sheet_root.findall(f".//{NS}hyperlinks/{NS}hyperlink"):
+        ref = hl.attrib.get("ref", "").strip()
+        if not ref:
+            continue
+        rid = hl.attrib.get(f"{DOC_REL_NS}id", "").strip()
+        location = hl.attrib.get("location", "").strip()
+        target = rel_map.get(rid, "") if rid else ""
+        url = target or location
+        if url:
+            links[ref] = url.strip()
+    return links
 
 
 def parse_sheet(zf, sheet_path, sst):
@@ -39,7 +75,8 @@ def parse_sheet(zf, sheet_path, sst):
                 idx = int(val)
                 val = sst[idx] if idx < len(sst) else ""
         rows.setdefault(row, {})[col] = str(val).strip()
-    return rows
+    hyperlinks = read_sheet_hyperlinks(zf, sheet_path)
+    return rows, hyperlinks
 
 
 def first_sheet_path(zf):
@@ -54,46 +91,86 @@ def first_sheet_path(zf):
 def extract_entries(path):
     with zipfile.ZipFile(path) as zf:
         sst = read_shared_strings(zf)
-        rows = parse_sheet(zf, first_sheet_path(zf), sst)
+        rows, hyperlinks = parse_sheet(zf, first_sheet_path(zf), sst)
 
     header = rows.get(1, {})
-    class_cols = []
+    note_col = None
     for col, value in header.items():
-        cid = value.strip().upper()
-        if re.fullmatch(r"[1-4][A-Z]", cid):
+        name = value.strip().lower()
+        if name in {"note", "notes", "opmerking", "opmerkingen", "notitie", "notities"}:
+            note_col = col
+            break
+
+    def col_to_index(col):
+        idx = 0
+        for ch in col:
+            idx = idx * 26 + (ord(ch) - ord("A") + 1)
+        return idx
+
+    class_cols = []
+    last_year = ""
+    for col, value in sorted(header.items(), key=lambda kv: col_to_index(kv[0])):
+        raw = value.strip().upper()
+        cid = ""
+        if re.fullmatch(r"[1-4][A-Z]", raw):
+            cid = raw
+            last_year = raw[0]
+        elif re.fullmatch(r"[1-4]\.\d+", raw):
+            cid = raw
+            last_year = raw[0]
+        elif re.fullmatch(r"[A-Z]", raw) and last_year:
+            cid = f"{last_year}{raw}"
+        if cid:
             class_cols.append((col, cid))
+
+    def clean_cell(value):
+        text = str(value or "").strip()
+        if text.upper() in {"0", "FALSE"}:
+            return ""
+        return text
 
     out = []
     current_week = ""
     for r in sorted(k for k in rows.keys() if k > 1):
         row = rows[r]
-        if row.get("A", "").strip():
-            current_week = row.get("A", "").strip()
+        if clean_cell(row.get("A", "")):
+            current_week = clean_cell(row.get("A", ""))
         if not current_week:
             continue
 
-        project = row.get("C", "").strip()
-        lesson = row.get("D", "").strip()
-        extra = row.get("E", "").strip()
-        note = row.get("L", "").strip()
+        project = clean_cell(row.get("C", ""))
+        lesson = clean_cell(row.get("D", ""))
+        lesson_url = hyperlinks.get(f"D{r}", "").strip()
+        extra = clean_cell(row.get("E", ""))
+        note = clean_cell(row.get(note_col, "")) if note_col else ""
         if not any([project, lesson, extra]):
             continue
 
+        lesson_obj = {
+            "project": project,
+            "lesson": lesson,
+            "url": lesson_url,
+        }
         items = []
-        main = " - ".join(x for x in [project, lesson] if x)
-        if main:
-            items.append(main)
         if extra:
             items.append(extra)
 
+        selected_classes = []
         for col, class_id in class_cols:
             flag = row.get(col, "").strip().upper()
-            if flag not in {"1", "1.0", "TRUE", "JA"}:
-                continue
+            if flag in {"1", "1.0", "TRUE", "JA"}:
+                selected_classes.append(class_id)
+
+        # Fallback: als er geen klasvlag actief is, geldt de rij voor alle
+        # klassen die in dit bestand voorkomen (bijv. alle G1-klassen).
+        target_classes = selected_classes if selected_classes else [cid for _, cid in class_cols]
+
+        for class_id in target_classes:
             out.append(
                 {
                     "classId": class_id,
                     "week": current_week,
+                    "lesson": lesson_obj,
                     "items": items,
                     "note": note,
                 }
@@ -105,7 +182,17 @@ def merge_entries(entries):
     merged = {}
     for e in entries:
         key = (e["classId"], str(e["week"]).strip())
-        bucket = merged.setdefault(key, {"items": [], "notes": []})
+        bucket = merged.setdefault(key, {"items": [], "notes": [], "lessons": []})
+        lesson = e.get("lesson") or {}
+        proj = str(lesson.get("project", "")).strip()
+        les = str(lesson.get("lesson", "")).strip()
+        url = str(lesson.get("url", "")).strip()
+        if proj or les:
+            candidate = {"project": proj, "lesson": les}
+            if url:
+                candidate["url"] = url
+            if candidate not in bucket["lessons"]:
+                bucket["lessons"].append(candidate)
         for it in e.get("items", []):
             t = it.strip()
             if t and t not in bucket["items"]:
@@ -119,7 +206,12 @@ def merge_entries(entries):
         "entries": [],
     }
     for (class_id, week), data in sorted(merged.items(), key=lambda x: (x[0][0], x[0][1])):
-        obj = {"classId": class_id, "week": week, "items": data["items"]}
+        obj = {
+            "classId": class_id,
+            "week": week,
+            "lessons": data["lessons"],
+            "items": data["items"],
+        }
         if data["notes"]:
             obj["note"] = " | ".join(data["notes"])
         payload["entries"].append(obj)
