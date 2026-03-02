@@ -163,7 +163,7 @@
         <div class="clock-numeral n6">6</div>
         <div class="clock-numeral n9">9</div>
         <div class="clock-digital">
-          <div class="clock-time" id="clockTime">05:00</div>
+          <div class="clock-time" id="clockTime">45:00</div>
           <div class="clock-state" id="clockState">Gepauzeerd</div>
         </div>
       </div>
@@ -740,7 +740,7 @@
 
   <script>
     (() => {
-      let total = 300;
+      let total = 45 * 60;
       let remaining = total;
       let running = false;
       let intervalId = null;
@@ -793,7 +793,7 @@
       }
 
       function setByAngle(clientX, clientY) {
-        if (total <= 0) total = 300;
+        if (total <= 0) total = 45 * 60;
         const rect = clockFace.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         const cy = rect.top + rect.height / 2;
