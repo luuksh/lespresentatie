@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-02T13:01:25+01:00",
+  "updatedAt": "2026-03-02T22:24:55+01:00",
   "entries": [
     {
       "classId": "1A",
@@ -6218,7 +6218,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -6229,15 +6230,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6246,11 +6242,6 @@
       "classId": "3A",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -6779,7 +6770,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -6790,15 +6782,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6807,11 +6794,6 @@
       "classId": "3B",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -7434,7 +7416,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -7445,15 +7428,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -7462,11 +7440,6 @@
       "classId": "3C",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -8125,7 +8098,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -8136,15 +8110,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -8153,11 +8122,6 @@
       "classId": "3D",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -8686,7 +8650,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -8697,15 +8662,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -8714,11 +8674,6 @@
       "classId": "3E",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -9347,7 +9302,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -9358,15 +9314,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9375,11 +9326,6 @@
       "classId": "3F",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -10008,7 +9954,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -10019,15 +9966,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -10036,11 +9978,6 @@
       "classId": "3G",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -10662,14 +10599,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -10687,17 +10625,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10709,17 +10650,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10731,17 +10675,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10753,17 +10700,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10775,17 +10725,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10810,17 +10763,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -10843,17 +10799,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11449,14 +11408,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -11474,17 +11434,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11496,17 +11459,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11518,17 +11484,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11540,17 +11509,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11562,17 +11534,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11597,17 +11572,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -11630,17 +11608,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12236,14 +12217,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -12261,17 +12243,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12283,17 +12268,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12305,17 +12293,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12327,17 +12318,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12349,17 +12343,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12384,17 +12381,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -12417,17 +12417,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13023,14 +13026,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -13048,17 +13052,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13070,17 +13077,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13092,17 +13102,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13114,17 +13127,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13136,17 +13152,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13171,17 +13190,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13204,17 +13226,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13940,14 +13965,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -13965,17 +13991,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -13987,17 +14016,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14009,17 +14041,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14031,17 +14066,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14053,17 +14091,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14088,17 +14129,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14121,17 +14165,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14857,14 +14904,15 @@
       "week": "10",
       "lessons": [
         {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
@@ -14882,17 +14930,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14904,17 +14955,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14926,17 +14980,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Schrijfstijl",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Schrijfstijl",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14948,17 +15005,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -14970,17 +15030,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -15005,17 +15068,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Schrijfstijl",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
@@ -15038,17 +15104,20 @@
       "lessons": [
         {
           "project": "Boekenclub",
-          "lesson": "",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "A"
         },
         {
           "project": "Taalmakers",
-          "lesson": "",
+          "lesson": "Invloed",
+          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
           "lessonKey": "B"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Boekenclub",
+          "lesson": "Heel veel lezen",
+          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
           "lessonKey": "C"
         }
       ],
