@@ -873,24 +873,39 @@
           bellAudioCtx = bellAudioCtx || new AudioCtx();
           if (bellAudioCtx.state === 'suspended') bellAudioCtx.resume();
           const start = bellAudioCtx.currentTime;
-          const end = start + 0.45;
-          const gain = bellAudioCtx.createGain();
-          const osc = bellAudioCtx.createOscillator();
-          const osc2 = bellAudioCtx.createOscillator();
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(1318.5, start);
-          osc2.type = 'triangle';
-          osc2.frequency.setValueAtTime(1760, start);
-          gain.gain.setValueAtTime(0.0001, start);
-          gain.gain.exponentialRampToValueAtTime(0.14, start + 0.015);
-          gain.gain.exponentialRampToValueAtTime(0.0001, end);
-          osc.connect(gain);
-          osc2.connect(gain);
-          gain.connect(bellAudioCtx.destination);
-          osc.start(start);
-          osc2.start(start);
-          osc.stop(end);
-          osc2.stop(end);
+          const master = bellAudioCtx.createGain();
+          master.gain.value = 0.95;
+          master.connect(bellAudioCtx.destination);
+
+          const strike = (at, strength = 1) => {
+            const end = at + 0.95;
+            const tone = bellAudioCtx.createOscillator();
+            const tone2 = bellAudioCtx.createOscillator();
+            const body = bellAudioCtx.createOscillator();
+            const gain = bellAudioCtx.createGain();
+            tone.type = 'triangle';
+            tone2.type = 'sine';
+            body.type = 'sine';
+            tone.frequency.setValueAtTime(1318.5, at);
+            tone2.frequency.setValueAtTime(1760, at);
+            body.frequency.setValueAtTime(880, at);
+            gain.gain.setValueAtTime(0.0001, at);
+            gain.gain.exponentialRampToValueAtTime(0.19 * strength, at + 0.018);
+            gain.gain.exponentialRampToValueAtTime(0.0001, end);
+            tone.connect(gain);
+            tone2.connect(gain);
+            body.connect(gain);
+            gain.connect(master);
+            tone.start(at);
+            tone2.start(at);
+            body.start(at);
+            tone.stop(end);
+            tone2.stop(end);
+            body.stop(end);
+          };
+
+          strike(start, 1);
+          strike(start + 0.34, 0.74);
         } catch (err) {
           // Ignore audio failures (browser policy or unsupported APIs).
         }
