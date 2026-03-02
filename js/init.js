@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
   const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
+  const LOCAL_LINKS_KEY = 'lespresentatie.preferLocalLessonLinks';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningSourceSaveBtn = document.getElementById('jaarplanningSourceSave');
   const planningSourceClearBtn = document.getElementById('jaarplanningSourceClear');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
+  const planningLocalLinksToggle = document.getElementById('jaarplanningLocalLinksToggle');
   const agendaSourceInput = document.getElementById('agendaSourceInput');
   const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeAgendaEntry = null;
   let selectedLessonIndex = 0;
   let clockMarkerTimer = null;
+  let preferLocalLessonLinks = false;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -182,15 +185,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   function normalizeLessonRow(row) {
     if (typeof row === 'string') {
       const lesson = row.trim();
-      return lesson ? { project: '', lesson, url: '', lessonKey: '' } : null;
+      return lesson ? {
+        project: '', lesson, url: '', localUrl: '', lessonKey: ''
+      } : null;
     }
     if (!row || typeof row !== 'object') return null;
     const project = String(row.project ?? row.thema ?? '').trim();
     const lesson = String(row.lesson ?? row.les ?? row.title ?? '').trim();
     const url = String(row.url ?? row.link ?? '').trim();
+    const localUrl = String(
+      row.localUrl
+      ?? row.local_url
+      ?? row.localLink
+      ?? row.lokaalUrl
+      ?? row.local
+      ?? ''
+    ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson) return null;
-    return { project, lesson, url, lessonKey };
+    return { project, lesson, url, localUrl, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -664,6 +677,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     return fromWindow;
   }
 
+  function resolveLocalLinksPreference() {
+    const fromStorage = String(localStorage.getItem(LOCAL_LINKS_KEY) || '').trim().toLowerCase();
+    if (fromStorage === 'true') return true;
+    if (fromStorage === 'false') return false;
+    return Boolean(window.APP_CONFIG?.preferLocalLessonLinks);
+  }
+
+  function normalizeLessonUrl(rawUrl) {
+    const value = String(rawUrl || '').trim();
+    if (!value) return '';
+    if (/^[a-z][a-z0-9+.-]*:/i.test(value)) return value;
+
+    const pathStyle = value.replace(/\\/g, '/');
+    if (/^[a-zA-Z]:\//.test(pathStyle)) {
+      return encodeURI(`file:///${pathStyle}`);
+    }
+    if (pathStyle.startsWith('//')) {
+      return encodeURI(`file:${pathStyle}`);
+    }
+    if (pathStyle.startsWith('/')) {
+      return encodeURI(`file://${pathStyle}`);
+    }
+    return value;
+  }
+
+  function resolveLessonLink(lesson) {
+    const remoteUrl = normalizeLessonUrl(lesson?.url || '');
+    const localUrl = normalizeLessonUrl(lesson?.localUrl || '');
+    if (preferLocalLessonLinks && localUrl) return localUrl;
+    return remoteUrl || localUrl;
+  }
+
   function formatSyncTime(iso) {
     const date = new Date(iso);
     if (Number.isNaN(date.getTime())) return '';
@@ -716,12 +761,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       const prefix = document.createElement('span');
       prefix.textContent = 'Les: ';
       lessonLine.appendChild(prefix);
-      if (lesson.url) {
+      const lessonHref = resolveLessonLink(lesson);
+      if (lessonHref) {
         const link = document.createElement('a');
-        link.href = lesson.url;
+        link.href = lessonHref;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = lesson.lesson || lesson.url;
+        link.textContent = lesson.lesson || lessonHref;
         lessonLine.appendChild(link);
       } else {
         const text = document.createElement('span');
@@ -821,8 +867,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function renderPlanning() {
     if (!planningItemsEl || !planningWeekLabelEl) return;
-    const week = isoWeekInfo();
-    planningWeekLabelEl.textContent = `Programma vandaag · ${week.label}`;
+    const now = new Date();
+    const isActiveLessonNow = Boolean(
+      activeAgendaEntry
+      && now >= activeAgendaEntry.start
+      && now <= activeAgendaEntry.end
+    );
+    const planAnchorDate = (agendaSourceUrl && activeAgendaEntry?.start)
+      ? activeAgendaEntry.start
+      : now;
+    const week = isoWeekInfo(planAnchorDate);
+    const title = (agendaSourceUrl && activeAgendaEntry && !isActiveLessonNow)
+      ? 'Programma volgende les'
+      : 'Programma vandaag';
+    planningWeekLabelEl.textContent = `${title} · ${week.label}`;
 
     const classId = normalizeClassId(klasSelect?.value || '');
     const weekCandidates = [
@@ -996,6 +1054,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchPlanning();
   }
 
+  function applyLocalLinksPreference(enabled, persist = true) {
+    preferLocalLessonLinks = Boolean(enabled);
+    if (planningLocalLinksToggle) {
+      planningLocalLinksToggle.checked = preferLocalLessonLinks;
+    }
+    if (persist) {
+      localStorage.setItem(LOCAL_LINKS_KEY, String(preferLocalLessonLinks));
+    }
+    renderPlanning();
+  }
+
   function applyAgendaSource(url, persist = true) {
     agendaSourceUrl = String(url || '').trim();
     if (agendaSourceInput) agendaSourceInput.value = agendaSourceUrl;
@@ -1025,6 +1094,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   planningRefreshBtn?.addEventListener('click', () => {
     fetchPlanning();
     fetchAgenda();
+  });
+
+  planningLocalLinksToggle?.addEventListener('change', () => {
+    applyLocalLinksPreference(planningLocalLinksToggle.checked, true);
   });
 
   agendaSourceSaveBtn?.addEventListener('click', () => {
@@ -1060,6 +1133,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPlanning();
     updateClockMarkerTarget(new Date());
   });
+  applyLocalLinksPreference(resolveLocalLinksPreference(), false);
   applyPlanningSource(resolvePlanningSourceUrl(), false);
   applyAgendaSource(resolveAgendaSourceUrl(), false);
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
