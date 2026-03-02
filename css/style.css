@@ -131,7 +131,7 @@ body::after {
   font-size: clamp(28px, 3.2vw, 44px);
   font-weight: 900;
   line-height: 1.1;
-  padding: 0 66px 0 20px;
+  padding: 0 66px;
   cursor: pointer;
   box-shadow:
     inset 0 0 0 1px rgba(227, 246, 232, 0.08),
@@ -307,6 +307,25 @@ body::after {
   height: 18px;
   background: rgba(244, 250, 255, 0.94);
   box-shadow: 0 0 6px rgba(204, 232, 255, 0.44);
+}
+
+.clock-lesson-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 18px;
+  border-radius: 3px;
+  z-index: 4;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) rotate(var(--lesson-angle, 0deg)) translateY(-102px);
+  background: linear-gradient(180deg, #ffc0c0 0%, #ff5353 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 190, 190, 0.55),
+    0 0 10px rgba(255, 78, 78, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
 }
 
 .clock-hand {

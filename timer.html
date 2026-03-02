@@ -162,6 +162,25 @@
       box-shadow: 0 0 6px rgba(204, 232, 255, 0.44);
     }
 
+    .lesson-marker {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4px;
+      height: 18px;
+      border-radius: 3px;
+      z-index: 4;
+      transform-origin: 50% 50%;
+      transform: translate(-50%, -50%) rotate(var(--lesson-angle, 0deg)) translateY(-102px);
+      background: linear-gradient(180deg, #ffc0c0 0%, #ff5353 100%);
+      box-shadow:
+        0 0 0 1px rgba(255, 190, 190, 0.55),
+        0 0 10px rgba(255, 78, 78, 0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 120ms ease;
+    }
+
     .progress {
       position: absolute;
       z-index: 2;
@@ -449,6 +468,7 @@
         <div class="live-progress" id="liveRing"></div>
         <div class="progress" id="ring"></div>
         <div class="dial" id="dial"></div>
+        <div class="lesson-marker" id="clockLessonMarker"></div>
         <div class="live-hand" id="liveHand"></div>
         <div class="hand" id="hand"></div>
         <div class="hub"></div>
@@ -484,6 +504,7 @@
     const ringEl = document.getElementById('ring');
     const liveHandEl = document.getElementById('liveHand');
     const handEl = document.getElementById('hand');
+    const lessonMarkerEl = document.getElementById('clockLessonMarker');
     const clockEl = document.getElementById('clock');
     const dialEl = document.getElementById('dial');
     const startBtn = null;
@@ -525,6 +546,28 @@
       } else {
         stateEl.textContent = 'Timer gepauzeerd';
       }
+    }
+
+    function clearLessonMarker() {
+      if (!lessonMarkerEl) return;
+      lessonMarkerEl.style.opacity = '0';
+      lessonMarkerEl.removeAttribute('title');
+      lessonMarkerEl.dataset.mode = 'none';
+    }
+
+    function setLessonMarkerFromEnd(endDate, mode = 'none') {
+      if (!lessonMarkerEl || !(endDate instanceof Date) || Number.isNaN(endDate.getTime())) {
+        clearLessonMarker();
+        return;
+      }
+      const angle = ((endDate.getMinutes() + endDate.getSeconds() / 60) / 60) * 360;
+      lessonMarkerEl.style.setProperty('--lesson-angle', `${angle.toFixed(4)}deg`);
+      lessonMarkerEl.style.opacity = '1';
+      lessonMarkerEl.dataset.mode = mode;
+      const timeLabel = endDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+      lessonMarkerEl.title = mode === 'current'
+        ? `Einde huidige les: ${timeLabel}`
+        : `Einde volgende les: ${timeLabel}`;
     }
 
     function playBell() {
@@ -743,6 +786,18 @@
     });
     clockEl.addEventListener('pointerup', stopScrub);
     clockEl.addEventListener('pointercancel', stopScrub);
+
+    window.addEventListener('agenda:clock-marker-update', (event) => {
+      const detail = event?.detail || {};
+      const endIso = String(detail.end || '').trim();
+      const mode = String(detail.mode || 'none');
+      if (!endIso || mode === 'none') {
+        clearLessonMarker();
+        return;
+      }
+      const endDate = new Date(endIso);
+      setLessonMarkerFromEnd(endDate, mode);
+    });
 
     drawTicks();
     renderTimer();

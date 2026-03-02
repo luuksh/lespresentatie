@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeAgendaClassId = '';
   let activeAgendaEntry = null;
   let selectedLessonIndex = 0;
+  let clockMarkerTimer = null;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -575,6 +576,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     return null;
   }
 
+  function findAgendaEntryForCurrentOrNext(entries, now = new Date()) {
+    const sorted = [...entries].sort((a, b) => a.start - b.start);
+    if (!sorted.length) return null;
+    const activeNow = sorted.find((entry) => now >= entry.start && now <= entry.end);
+    if (activeNow) return activeNow;
+    return sorted.find((entry) => entry.start >= now) || null;
+  }
+
+  function updateClockMarkerTarget(now = new Date()) {
+    const classId = normalizeClassId(klasSelect?.value || '');
+    const classEntries = classId
+      ? agendaEntries.filter((entry) => entry.classId === classId)
+      : [];
+    const target = findAgendaEntryForCurrentOrNext(classEntries, now);
+    const mode = target
+      ? (now >= target.start && now <= target.end ? 'current' : 'next')
+      : 'none';
+
+    window.dispatchEvent(new CustomEvent('agenda:clock-marker-update', {
+      detail: {
+        classId,
+        mode,
+        start: target ? target.start.toISOString() : '',
+        end: target ? target.end.toISOString() : ''
+      }
+    }));
+  }
+
   function getWeekBounds(date = new Date()) {
     const day = date.getDay() || 7;
     const monday = new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -890,6 +919,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderPlanning();
+      updateClockMarkerTarget(new Date());
       return;
     }
     try {
@@ -924,6 +954,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderPlanning();
+      updateClockMarkerTarget(new Date());
     } catch (err) {
       console.error('Fout bij laden agenda:', err);
       agendaEntries = [];
@@ -938,6 +969,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderPlanning();
+      updateClockMarkerTarget(new Date());
     }
   }
 
@@ -1026,7 +1058,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
     renderPlanning();
+    updateClockMarkerTarget(new Date());
   });
   applyPlanningSource(resolvePlanningSourceUrl(), false);
   applyAgendaSource(resolveAgendaSourceUrl(), false);
+  if (clockMarkerTimer) clearInterval(clockMarkerTimer);
+  clockMarkerTimer = setInterval(() => updateClockMarkerTarget(new Date()), 30 * 1000);
+  updateClockMarkerTarget(new Date());
 });
