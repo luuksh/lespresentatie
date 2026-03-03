@@ -196,9 +196,47 @@ def extract_entries(path):
 
     def clean_cell(value):
         text = str(value or "").strip()
+        if text.startswith("'"):
+            text = text[1:].strip()
         if text.upper() in {"0", "FALSE"}:
             return ""
         return text
+
+    def looks_like_local_path(text):
+        t = clean_cell(text)
+        if not t:
+            return False
+        u = t.upper()
+        return (
+            u.startswith("FILE:///")
+            or u.startswith("/USERS/")
+            or u.startswith("\\\\")
+            or re.match(r"^[A-Z]:[\\/]", t) is not None
+            or "ONEDRIVE" in u
+        )
+
+    def infer_local_url(row, row_index):
+        # 1) Explicit local-url column takes precedence.
+        if local_url_col:
+            direct = clean_cell(row.get(local_url_col, "")) or hyperlinks.get(f"{local_url_col}{row_index}", "").strip()
+            if looks_like_local_path(direct):
+                return direct
+
+        # 2) Scan all non-core columns for local path-like values.
+        core_cols = {"A", "B", "C", "D", "E", note_col or ""}
+        for col, value in row.items():
+            if col in core_cols:
+                continue
+            if looks_like_local_path(value):
+                return clean_cell(value)
+
+        # 3) Fallback: hyperlinks on the row that look local.
+        for ref, url in hyperlinks.items():
+            if not ref.endswith(str(row_index)):
+                continue
+            if looks_like_local_path(url):
+                return clean_cell(url)
+        return ""
 
     out = []
     current_week = ""
@@ -213,12 +251,7 @@ def extract_entries(path):
         lesson_key = clean_cell(row.get("B", "")).upper()
         lesson = clean_cell(row.get("D", ""))
         lesson_url = hyperlinks.get(f"D{r}", "").strip()
-        lesson_local_url = ""
-        if local_url_col:
-            lesson_local_url = (
-                clean_cell(row.get(local_url_col, ""))
-                or hyperlinks.get(f"{local_url_col}{r}", "").strip()
-            )
+        lesson_local_url = infer_local_url(row, r)
         extra = clean_cell(row.get("E", ""))
         note = clean_cell(row.get(note_col, "")) if note_col else ""
         if not any([project, lesson, extra]):
