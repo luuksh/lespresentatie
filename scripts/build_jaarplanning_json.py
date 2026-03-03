@@ -95,11 +95,23 @@ def extract_entries(path):
 
     header = rows.get(1, {})
     note_col = None
+    local_url_col = None
     for col, value in header.items():
         name = value.strip().lower()
         if name in {"note", "notes", "opmerking", "opmerkingen", "notitie", "notities"}:
             note_col = col
-            break
+            continue
+        if name in {
+            "localurl",
+            "local_url",
+            "local link",
+            "local-link",
+            "lokale link",
+            "lokaal link",
+            "lokaal bestand",
+            "lokaalbestand",
+        }:
+            local_url_col = col
 
     def col_to_index(col):
         idx = 0
@@ -142,6 +154,12 @@ def extract_entries(path):
         lesson_key = clean_cell(row.get("B", "")).upper()
         lesson = clean_cell(row.get("D", ""))
         lesson_url = hyperlinks.get(f"D{r}", "").strip()
+        lesson_local_url = ""
+        if local_url_col:
+            lesson_local_url = (
+                clean_cell(row.get(local_url_col, ""))
+                or hyperlinks.get(f"{local_url_col}{r}", "").strip()
+            )
         extra = clean_cell(row.get("E", ""))
         note = clean_cell(row.get(note_col, "")) if note_col else ""
         if not any([project, lesson, extra]):
@@ -153,6 +171,8 @@ def extract_entries(path):
             "url": lesson_url,
             "lessonKey": lesson_key if lesson_key in {"A", "B", "C"} else "",
         }
+        if lesson_local_url:
+            lesson_obj["localUrl"] = lesson_local_url
         items = []
         if extra:
             items.append(extra)
@@ -189,11 +209,14 @@ def merge_entries(entries):
         proj = str(lesson.get("project", "")).strip()
         les = str(lesson.get("lesson", "")).strip()
         url = str(lesson.get("url", "")).strip()
+        local_url = str(lesson.get("localUrl", "")).strip()
         lkey = str(lesson.get("lessonKey", "")).strip().upper()
         if proj or les:
             candidate = {"project": proj, "lesson": les}
             if url:
                 candidate["url"] = url
+            if local_url:
+                candidate["localUrl"] = local_url
             if lkey in {"A", "B", "C"}:
                 candidate["lessonKey"] = lkey
             if candidate not in bucket["lessons"]:
