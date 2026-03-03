@@ -2,16 +2,59 @@
 import argparse
 import datetime as dt
 import json
+import os
 import posixpath
 import re
 from urllib.parse import parse_qs, urlparse
 import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from functools import lru_cache
+import unicodedata
 
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 REL_NS = "{http://schemas.openxmlformats.org/package/2006/relationships}"
 DOC_REL_NS = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+
+ONEDRIVE_BASE = Path.home() / "Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General"
+LOCAL_FILE_EXTENSIONS = {
+    ".ppt",
+    ".pptx",
+    ".pptm",
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".docm",
+    ".xls",
+    ".xlsx",
+    ".xlsm",
+    ".key",
+    ".pages",
+    ".numbers",
+}
+STOPWORDS = {
+    "de",
+    "het",
+    "een",
+    "en",
+    "of",
+    "van",
+    "voor",
+    "met",
+    "aan",
+    "op",
+    "in",
+    "bij",
+    "naar",
+    "door",
+    "te",
+    "tot",
+    "uit",
+    "les",
+    "week",
+    "project",
+    "ff",
+}
 
 
 def read_shared_strings(zf):
@@ -298,7 +341,178 @@ def extract_entries(path):
     return out
 
 
-def merge_entries(entries):
+def normalize_text(value):
+    text = unicodedata.normalize("NFKD", str(value or ""))
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return " ".join(text.split()).strip()
+
+
+def lesson_number(text):
+    m = re.search(r"\bles\s*(\d+)\b", normalize_text(text))
+    if not m:
+        return ""
+    return m.group(1)
+
+
+def keyword_tokens(text):
+    tokens = []
+    for t in normalize_text(text).split():
+        if t in STOPWORDS or len(t) <= 2 or t.isdigit():
+            continue
+        tokens.append(t)
+    return tokens
+
+
+def grade_roots(grade, source_files):
+    out = []
+    for raw in source_files:
+        p = Path(raw).expanduser()
+        if not p.exists():
+            continue
+        parent = p.parent
+        if re.search(rf"(?:^|[ /]){grade}\s*nederlands(?:$|[ /])", str(parent), re.IGNORECASE):
+            out.append(parent)
+        gp = parent / f"{grade} Nederlands"
+        if gp.exists():
+            out.append(gp)
+
+    gp = ONEDRIVE_BASE / f"{grade} Nederlands"
+    if gp.exists():
+        out.append(gp)
+
+    if ONEDRIVE_BASE.exists():
+        for child in ONEDRIVE_BASE.iterdir():
+            if not child.is_dir():
+                continue
+            if re.search(rf"\b{grade}\s*nederlands\b", child.name, re.IGNORECASE):
+                out.append(child)
+
+    dedup = []
+    seen = set()
+    for p in out:
+        key = str(p.resolve()) if p.exists() else str(p)
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(p)
+    return dedup
+
+
+@lru_cache(maxsize=16)
+def index_grade_files_cached(cache_key):
+    roots = [Path(p) for p in cache_key.split("||") if p]
+    files = []
+    for root in roots:
+        if not root.exists():
+            continue
+        for dirpath, _, filenames in os.walk(root):
+            for name in filenames:
+                path = Path(dirpath) / name
+                if path.suffix.lower() not in LOCAL_FILE_EXTENSIONS:
+                    continue
+                full = str(path)
+                files.append(
+                    {
+                        "path": full,
+                        "norm_path": normalize_text(full),
+                        "norm_name": normalize_text(path.stem),
+                    }
+                )
+    return files
+
+
+def resolve_local_file_for_lesson(lesson, class_id, source_files):
+    cid = str(class_id or "").strip().upper()
+    if not cid or cid[0] not in "1234":
+        return ""
+    grade = cid[0]
+    roots = grade_roots(grade, tuple(source_files))
+    if not roots:
+        return ""
+    cache_key = "||".join(str(p) for p in roots)
+    files = index_grade_files_cached(cache_key)
+    if not files:
+        return ""
+
+    project = str(lesson.get("project", "")).strip()
+    lesson_title = str(lesson.get("lesson", "")).strip()
+    pnorm = normalize_text(project)
+    lnorm = normalize_text(lesson_title)
+    lnum = lesson_number(lesson_title)
+    keys = keyword_tokens(project) + keyword_tokens(lesson_title)
+    # keep order but unique
+    keys = list(dict.fromkeys(keys))
+
+    # Prefer current project folder if we can identify it.
+    preferred_roots = []
+    if pnorm:
+        for r in roots:
+            candidate = r / project
+            if candidate.exists() and candidate.is_dir():
+                preferred_roots.append(candidate)
+        if not preferred_roots:
+            for r in roots:
+                for child in r.iterdir():
+                    if not child.is_dir():
+                        continue
+                    cnorm = normalize_text(child.name)
+                    if pnorm and (pnorm in cnorm or cnorm in pnorm):
+                        preferred_roots.append(child)
+
+    best = ("", -10_000)
+    for record in files:
+        path = record["path"]
+        norm_path = record["norm_path"]
+        norm_name = record["norm_name"]
+        score = 0
+
+        if preferred_roots:
+            if any(str(Path(path)).startswith(str(root)) for root in preferred_roots):
+                score += 120
+            else:
+                score -= 40
+        elif pnorm and pnorm in norm_path:
+            score += 50
+
+        if " archief " in f" {norm_path} ":
+            score -= 15
+
+        if lnum:
+            if re.search(rf"\bles\s*{re.escape(lnum)}\b", norm_name):
+                score += 90
+            elif re.search(rf"\bles\s*{re.escape(lnum)}\b", norm_path):
+                score += 50
+
+        if lnorm and lnorm in norm_name:
+            score += 70
+        elif lnorm and lnorm in norm_path:
+            score += 35
+
+        for token in keys:
+            if re.search(rf"\b{re.escape(token)}\b", norm_name):
+                score += 16
+            elif re.search(rf"\b{re.escape(token)}\b", norm_path):
+                score += 8
+
+        if path.lower().endswith(".pptx"):
+            score += 12
+        elif path.lower().endswith(".pdf"):
+            score += 6
+
+        if score > best[1]:
+            best = (path, score)
+
+    # Minimal confidence threshold to avoid random matches.
+    if best[1] < 70:
+        return ""
+    return best[0]
+
+
+def merge_entries(entries, source_files=None):
+    source_files = tuple(source_files or ())
+
     def learning_tool_id(raw_url):
         text = str(raw_url or "").strip()
         if not text:
@@ -340,6 +554,16 @@ def merge_entries(entries):
             learned = id_to_local.get(lid, "") if lid else ""
         if learned:
             lesson["localUrl"] = learned
+
+    # Still missing? Try to infer from local OneDrive structure.
+    for item in entries:
+        lesson = item.get("lesson") or {}
+        local_url = str(lesson.get("localUrl", "")).strip()
+        if local_url:
+            continue
+        inferred = resolve_local_file_for_lesson(lesson, item.get("classId", ""), source_files)
+        if inferred:
+            lesson["localUrl"] = inferred
 
     merged = {}
     for e in entries:
@@ -404,7 +628,7 @@ def main():
             raise FileNotFoundError(f"Bestand niet gevonden: {path}")
         all_entries.extend(extract_entries(path))
 
-    payload = merge_entries(all_entries)
+    payload = merge_entries(all_entries, source_files=args.xlsx)
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
