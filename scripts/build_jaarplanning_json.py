@@ -75,6 +75,11 @@ def parse_sheet(zf, sheet_path, sst):
             if t == "s" and val.isdigit():
                 idx = int(val)
                 val = sst[idx] if idx < len(sst) else ""
+        elif t == "inlineStr":
+            val = "".join((n.text or "") for n in cell.findall(f".//{NS}is/{NS}t")).strip()
+        else:
+            # Sometimes text is present in <is><t> without explicit inlineStr type.
+            val = "".join((n.text or "") for n in cell.findall(f".//{NS}is/{NS}t")).strip()
         rows.setdefault(row, {})[col] = str(val).strip()
     hyperlinks = read_sheet_hyperlinks(zf, sheet_path)
     return rows, hyperlinks
