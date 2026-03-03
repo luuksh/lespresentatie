@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T08:39:23+01:00",
+  "updatedAt": "2026-03-03T09:04:14+01:00",
   "entries": [
     {
       "classId": "1A",
@@ -57,7 +57,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1A",
@@ -524,9 +527,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -548,9 +549,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -574,9 +573,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -624,9 +621,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -636,11 +631,21 @@
           "project": "Leesclub en Zinsbouwers",
           "lesson": "Les 06 - Stillezen",
           "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -662,9 +667,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -686,11 +689,21 @@
           "lesson": "Les 08 - Stillezen en Intro NL Leest",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
           "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -714,9 +727,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -740,9 +751,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -766,9 +775,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -792,9 +799,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1A",
@@ -1027,7 +1032,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1B",
@@ -1494,9 +1502,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1518,9 +1524,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1544,9 +1548,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1594,9 +1596,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1606,11 +1606,21 @@
           "project": "Leesclub en Zinsbouwers",
           "lesson": "Les 06 - Stillezen",
           "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1632,9 +1642,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1656,11 +1664,21 @@
           "lesson": "Les 08 - Stillezen en Intro NL Leest",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
           "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1684,9 +1702,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1710,9 +1726,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1736,9 +1750,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1762,9 +1774,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1B",
@@ -1997,7 +2007,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1C",
@@ -2443,8 +2456,38 @@
     },
     {
       "classId": "1C",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Les 01 - Start Leesclub",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17022",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
+          "lesson": "Les 02 - Bieb",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17023",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Zinsbouwers",
+          "lesson": "Les 01 – Welkom bij Zinsbouwers!​",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17071",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
       "week": "38",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 03 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39B)",
@@ -2453,6 +2496,30 @@
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39C)",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 04 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 1 - Het Mysterie begint",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16998",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 2 – Weten wat we niet kunnen zien",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16999",
           "lessonKey": "C"
         }
       ],
@@ -2484,12 +2551,70 @@
     },
     {
       "classId": "1C",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 05 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 3 – Wat geloof jij?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17000",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 4 – Een stem uit het moeras",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17001",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 06 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
       "week": "42",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 07 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "lessonKey": "B"
+        },
+        {
+          "project": "Netschrift en Zinsbouwers",
+          "lesson": "",
+          "lessonKey": "C"
         }
       ],
       "items": []
@@ -2507,8 +2632,38 @@
     },
     {
       "classId": "1C",
+      "week": "44",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 08 - Stillezen en Intro NL Leest",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
       "week": "45",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 09 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Vosflix",
           "lesson": "Les 3: Dialoog, Personages & Regie",
@@ -2529,6 +2684,11 @@
       "week": "46",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 10 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 5: Kostuums, Decor & Rekwisieten",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17067",
@@ -2548,6 +2708,11 @@
       "week": "47",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 11 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 7: Opnamedag 1",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17069",
@@ -2566,6 +2731,11 @@
       "classId": "1C",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 12 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Les 13 - NL Leest Verwerking",
@@ -2812,7 +2982,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1D",
@@ -3279,9 +3452,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3303,9 +3474,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3329,9 +3498,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3379,9 +3546,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3405,9 +3570,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3429,9 +3592,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3467,9 +3628,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3493,9 +3652,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3519,9 +3676,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3545,9 +3700,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3571,9 +3724,7 @@
           "lessonKey": "C"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "1D",
@@ -3806,7 +3957,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1E",
@@ -4252,8 +4406,38 @@
     },
     {
       "classId": "1E",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Les 01 - Start Leesclub",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17022",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
+          "lesson": "Les 02 - Bieb",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17023",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Zinsbouwers",
+          "lesson": "Les 01 – Welkom bij Zinsbouwers!​",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17071",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1E",
       "week": "38",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 03 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39B)",
@@ -4262,6 +4446,30 @@
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39C)",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1E",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 04 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 1 - Het Mysterie begint",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16998",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 2 – Weten wat we niet kunnen zien",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16999",
           "lessonKey": "C"
         }
       ],
@@ -4293,12 +4501,70 @@
     },
     {
       "classId": "1E",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 05 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 3 – Wat geloof jij?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17000",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 4 – Een stem uit het moeras",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17001",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1E",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 06 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1E",
       "week": "42",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 07 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "lessonKey": "B"
+        },
+        {
+          "project": "Netschrift en Zinsbouwers",
+          "lesson": "",
+          "lessonKey": "C"
         }
       ],
       "items": []
@@ -4316,8 +4582,38 @@
     },
     {
       "classId": "1E",
+      "week": "44",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 08 - Stillezen en Intro NL Leest",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1E",
       "week": "45",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 09 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Vosflix",
           "lesson": "Les 3: Dialoog, Personages & Regie",
@@ -4338,6 +4634,11 @@
       "week": "46",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 10 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 5: Kostuums, Decor & Rekwisieten",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17067",
@@ -4357,6 +4658,11 @@
       "week": "47",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 11 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 7: Opnamedag 1",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17069",
@@ -4375,6 +4681,11 @@
       "classId": "1E",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 12 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Les 13 - NL Leest Verwerking",
@@ -4621,7 +4932,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1F",
@@ -5067,8 +5381,38 @@
     },
     {
       "classId": "1F",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Les 01 - Start Leesclub",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17022",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
+          "lesson": "Les 02 - Bieb",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17023",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Zinsbouwers",
+          "lesson": "Les 01 – Welkom bij Zinsbouwers!​",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17071",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1F",
       "week": "38",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 03 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39B)",
@@ -5077,6 +5421,30 @@
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39C)",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1F",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 04 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 1 - Het Mysterie begint",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16998",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 2 – Weten wat we niet kunnen zien",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16999",
           "lessonKey": "C"
         }
       ],
@@ -5108,12 +5476,70 @@
     },
     {
       "classId": "1F",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 05 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 3 – Wat geloof jij?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17000",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 4 – Een stem uit het moeras",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17001",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1F",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 06 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1F",
       "week": "42",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 07 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "lessonKey": "B"
+        },
+        {
+          "project": "Netschrift en Zinsbouwers",
+          "lesson": "",
+          "lessonKey": "C"
         }
       ],
       "items": []
@@ -5131,8 +5557,38 @@
     },
     {
       "classId": "1F",
+      "week": "44",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 08 - Stillezen en Intro NL Leest",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1F",
       "week": "45",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 09 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Vosflix",
           "lesson": "Les 3: Dialoog, Personages & Regie",
@@ -5153,6 +5609,11 @@
       "week": "46",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 10 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 5: Kostuums, Decor & Rekwisieten",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17067",
@@ -5172,6 +5633,11 @@
       "week": "47",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 11 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 7: Opnamedag 1",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17069",
@@ -5190,6 +5656,11 @@
       "classId": "1F",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 12 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Les 13 - NL Leest Verwerking",
@@ -5436,7 +5907,10 @@
           "lessonKey": "C"
         }
       ],
-      "items": []
+      "items": [
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 1- Welkom in Taaltopia.pptx'",
+        "/Users/luukhijne/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General/1 Nederlands/Taaltopia/Les 2 - De basis van jullie taal.pptx'"
+      ]
     },
     {
       "classId": "1G",
@@ -5882,8 +6356,38 @@
     },
     {
       "classId": "1G",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Les 01 - Start Leesclub",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17022",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
+          "lesson": "Les 02 - Bieb",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17023",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Zinsbouwers",
+          "lesson": "Les 01 – Welkom bij Zinsbouwers!​",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17071",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1G",
       "week": "38",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 03 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39B)",
@@ -5892,6 +6396,30 @@
         {
           "project": "Escape Room Yde / BKK",
           "lesson": "(zie 39C)",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1G",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 04 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 1 - Het Mysterie begint",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16998",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde / BKK",
+          "lesson": "Les 2 – Weten wat we niet kunnen zien",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=16999",
           "lessonKey": "C"
         }
       ],
@@ -5923,12 +6451,70 @@
     },
     {
       "classId": "1G",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 05 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 3 – Wat geloof jij?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17000",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 4 – Een stem uit het moeras",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17001",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1G",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 06 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 5 – De Laatste Boodschap van Yde",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17002",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Escape Room Yde",
+          "lesson": "Les 6 – Wat weten we nu wél?",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17003",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1G",
       "week": "42",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 07 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "lessonKey": "B"
+        },
+        {
+          "project": "Netschrift en Zinsbouwers",
+          "lesson": "",
+          "lessonKey": "C"
         }
       ],
       "items": []
@@ -5946,8 +6532,38 @@
     },
     {
       "classId": "1G",
+      "week": "44",
+      "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 08 - Stillezen en Intro NL Leest",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17024",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 1: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17062",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Vosflix",
+          "lesson": "Les 2: Scriptstructuur & Plotverdeling",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17064",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1G",
       "week": "45",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 09 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Vosflix",
           "lesson": "Les 3: Dialoog, Personages & Regie",
@@ -5968,6 +6584,11 @@
       "week": "46",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 10 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 5: Kostuums, Decor & Rekwisieten",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17067",
@@ -5987,6 +6608,11 @@
       "week": "47",
       "lessons": [
         {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 11 - Stillezen",
+          "lessonKey": "A"
+        },
+        {
           "project": "Vosflix",
           "lesson": "Les 7: Opnamedag 1",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17069",
@@ -6005,6 +6631,11 @@
       "classId": "1G",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub en Zinsbouwers",
+          "lesson": "Les 12 - Stillezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Les 13 - NL Leest Verwerking",
@@ -6230,15 +6861,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6247,11 +6873,6 @@
       "classId": "3A",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -6933,15 +7554,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6950,11 +7566,6 @@
       "classId": "3B",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -7636,15 +8247,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -7653,11 +8259,6 @@
       "classId": "3C",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -8339,15 +8940,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -8356,11 +8952,6 @@
       "classId": "3D",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -9042,15 +9633,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9059,11 +9645,6 @@
       "classId": "3E",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -9745,15 +10326,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9762,11 +10338,6 @@
       "classId": "3F",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -10448,15 +11019,10 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Leesclub",
+          "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "B"
         }
       ],
       "items": []
@@ -10465,11 +11031,6 @@
       "classId": "3G",
       "week": "12",
       "lessons": [
-        {
-          "project": "Faalfestival",
-          "lesson": "",
-          "lessonKey": "A"
-        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
