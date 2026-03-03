@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import posixpath
 import re
+from urllib.parse import parse_qs, urlparse
 import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -293,6 +294,48 @@ def extract_entries(path):
 
 
 def merge_entries(entries):
+    def learning_tool_id(raw_url):
+        text = str(raw_url or "").strip()
+        if not text:
+            return ""
+        try:
+            parsed = urlparse(text)
+            params = parse_qs(parsed.query or "")
+            lid = (params.get("LearningToolElementId") or [""])[0].strip()
+            return lid
+        except Exception:
+            return ""
+
+    # Learn local-path mappings from provided examples:
+    # - exact remote URL -> local path
+    # - itslearning LearningToolElementId -> local path
+    url_to_local = {}
+    id_to_local = {}
+    for item in entries:
+        lesson = item.get("lesson") or {}
+        remote_url = str(lesson.get("url", "")).strip()
+        local_url = str(lesson.get("localUrl", "")).strip()
+        if not (remote_url and local_url):
+            continue
+        url_to_local.setdefault(remote_url, local_url)
+        lid = learning_tool_id(remote_url)
+        if lid:
+            id_to_local.setdefault(lid, local_url)
+
+    # Fill missing localUrl by learned mappings.
+    for item in entries:
+        lesson = item.get("lesson") or {}
+        remote_url = str(lesson.get("url", "")).strip()
+        local_url = str(lesson.get("localUrl", "")).strip()
+        if local_url or not remote_url:
+            continue
+        learned = url_to_local.get(remote_url, "")
+        if not learned:
+            lid = learning_tool_id(remote_url)
+            learned = id_to_local.get(lid, "") if lid else ""
+        if learned:
+            lesson["localUrl"] = learned
+
     merged = {}
     for e in entries:
         key = (e["classId"], str(e["week"]).strip())
