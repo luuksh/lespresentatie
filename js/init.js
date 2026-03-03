@@ -724,16 +724,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  async function openLocalViaBridge(fileUrl) {
+  function bridgeOpenUrlForFile(fileUrl) {
     const path = fileUrlToPath(fileUrl);
-    if (!path) return false;
-    const endpoint = `${LOCAL_FILE_BRIDGE_URL}?path=${encodeURIComponent(path)}`;
-    try {
-      const response = await fetch(endpoint, { method: 'GET', mode: 'cors' });
-      return response.ok;
-    } catch {
-      return false;
-    }
+    if (!path) return '';
+    return `${LOCAL_FILE_BRIDGE_URL}?path=${encodeURIComponent(path)}`;
   }
 
   function formatSyncTime(iso) {
@@ -791,22 +785,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       const lessonHref = resolveLessonLink(lesson);
       if (lessonHref) {
         const link = document.createElement('a');
-        link.href = lessonHref;
-        if (!isLocalFileUrl(lessonHref)) {
+        if (isLocalFileUrl(lessonHref)) {
+          const bridgeUrl = bridgeOpenUrlForFile(lessonHref);
+          link.href = bridgeUrl || lessonHref;
+          link.target = '_self';
+        } else {
+          link.href = lessonHref;
           link.target = '_blank';
           link.rel = 'noopener noreferrer';
         }
         link.textContent = lesson.lesson || lessonHref;
-        if (isLocalFileUrl(lessonHref)) {
-          link.addEventListener('click', async (event) => {
-            event.preventDefault();
-            const opened = await openLocalViaBridge(lessonHref);
-            if (!opened) {
-              // Fallback: may be blocked by browser, but still worth trying.
-              window.location.href = lessonHref;
-            }
-          });
-        }
         lessonLine.appendChild(link);
       } else {
         const text = document.createElement('span');
