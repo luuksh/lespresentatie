@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const LOCAL_LINKS_KEY = 'lespresentatie.preferLocalLessonLinks';
+  const LOCAL_FILE_BRIDGE_URL = 'http://127.0.0.1:17373/open';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
@@ -709,6 +710,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     return remoteUrl || localUrl;
   }
 
+  function isLocalFileUrl(url) {
+    return /^file:\/\//i.test(String(url || '').trim());
+  }
+
+  function fileUrlToPath(url) {
+    try {
+      const parsed = new URL(String(url || '').trim());
+      if (parsed.protocol !== 'file:') return '';
+      return decodeURIComponent(parsed.pathname || '');
+    } catch {
+      return '';
+    }
+  }
+
+  async function openLocalViaBridge(fileUrl) {
+    const path = fileUrlToPath(fileUrl);
+    if (!path) return false;
+    const endpoint = `${LOCAL_FILE_BRIDGE_URL}?path=${encodeURIComponent(path)}`;
+    try {
+      const response = await fetch(endpoint, { method: 'GET', mode: 'cors' });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+
   function formatSyncTime(iso) {
     const date = new Date(iso);
     if (Number.isNaN(date.getTime())) return '';
@@ -765,9 +792,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (lessonHref) {
         const link = document.createElement('a');
         link.href = lessonHref;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
+        if (!isLocalFileUrl(lessonHref)) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
         link.textContent = lesson.lesson || lessonHref;
+        if (isLocalFileUrl(lessonHref)) {
+          link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            const opened = await openLocalViaBridge(lessonHref);
+            if (!opened) {
+              // Fallback: may be blocked by browser, but still worth trying.
+              window.location.href = lessonHref;
+            }
+          });
+        }
         lessonLine.appendChild(link);
       } else {
         const text = document.createElement('span');
