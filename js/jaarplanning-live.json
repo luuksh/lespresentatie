@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T07:35:12+01:00",
+  "updatedAt": "2026-03-03T08:14:19+01:00",
   "entries": [
     {
       "classId": "1A",
@@ -6218,8 +6218,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -6230,10 +6229,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6242,6 +6246,11 @@
       "classId": "3A",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -6770,8 +6779,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -6782,10 +6790,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -6794,6 +6807,11 @@
       "classId": "3B",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -7416,8 +7434,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -7428,10 +7445,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -7440,6 +7462,11 @@
       "classId": "3C",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -8098,8 +8125,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -8110,10 +8136,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -8122,6 +8153,11 @@
       "classId": "3D",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -8650,8 +8686,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -8662,10 +8697,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -8674,6 +8714,11 @@
       "classId": "3E",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -9302,8 +9347,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -9314,10 +9358,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9326,6 +9375,11 @@
       "classId": "3F",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
@@ -9954,8 +10008,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Faalbattle",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
+          "lesson": "Les 10 FF: Faalbattle",
           "lessonKey": "B"
         }
       ],
@@ -9966,10 +10019,15 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
+          "project": "Leesclub",
           "lesson": "Moralicious dinsdag 10 maart!",
           "url": "https://bcou-my.sharepoint.com/:p:/g/personal/h_vlaming_cgu_nl/IQBc8pv2MT47Tpxf3R1k9y1MAdY-wFtghhxYaPXGYR_BQmY?CID=65f86be7-ad51-1d5c-1b31-7f38766b2600&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNjAyMTMwMDEuMDgiLCJPUyI6Ik1hYyBPUyBYIHVuZGVmaW5lZCJ9",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 10 FF: Faalbattle",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9978,6 +10036,11 @@
       "classId": "3G",
       "week": "12",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 11 FF: Reflectie",
+          "lessonKey": "A"
+        },
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
