@@ -79,19 +79,68 @@ def parse_sheet(zf, sheet_path, sst):
     return rows, hyperlinks
 
 
-def first_sheet_path(zf):
-    sheets = sorted(
-        p for p in zf.namelist() if p.startswith("xl/worksheets/sheet") and p.endswith(".xml")
-    )
+def workbook_sheets(zf):
+    wb_path = "xl/workbook.xml"
+    rels_path = "xl/_rels/workbook.xml.rels"
+    if wb_path not in zf.namelist() or rels_path not in zf.namelist():
+        return []
+
+    wb_root = ET.fromstring(zf.read(wb_path))
+    rel_root = ET.fromstring(zf.read(rels_path))
+    rel_map = {}
+    for rel in rel_root.findall(f".//{REL_NS}Relationship"):
+        rel_id = rel.attrib.get("Id", "")
+        target = rel.attrib.get("Target", "")
+        if rel_id and target:
+            rel_map[rel_id] = target
+
+    out = []
+    for sheet in wb_root.findall(f".//{NS}sheets/{NS}sheet"):
+        name = sheet.attrib.get("name", "").strip()
+        rid = sheet.attrib.get(f"{DOC_REL_NS}id", "").strip()
+        target = rel_map.get(rid, "").strip()
+        if not target:
+            continue
+        if target.startswith("/"):
+            path = target.lstrip("/")
+        elif target.startswith("xl/"):
+            path = target
+        else:
+            path = posixpath.normpath(posixpath.join("xl", target))
+        out.append((name, path))
+    return out
+
+
+def preferred_sheet_path(zf):
+    sheets = workbook_sheets(zf)
     if not sheets:
-        raise RuntimeError("Geen worksheet gevonden in XLSX")
-    return sheets[0]
+        candidates = sorted(
+            p for p in zf.namelist() if p.startswith("xl/worksheets/sheet") and p.endswith(".xml")
+        )
+        if not candidates:
+            raise RuntimeError("Geen worksheet gevonden in XLSX")
+        return candidates[0]
+
+    priorities = [
+        lambda n: n.strip().lower() == "jaaroverzicht (2)",
+        lambda n: "(2)" in n.lower() and "jaaroverzicht" in n.lower(),
+        lambda n: n.strip().lower() == "jaaroverzicht",
+    ]
+    for rule in priorities:
+        for name, path in sheets:
+            if rule(name) and path in zf.namelist():
+                return path
+
+    for _, path in sheets:
+        if path in zf.namelist():
+            return path
+    raise RuntimeError("Worksheet pad uit workbook.xml niet gevonden in XLSX")
 
 
 def extract_entries(path):
     with zipfile.ZipFile(path) as zf:
         sst = read_shared_strings(zf)
-        rows, hyperlinks = parse_sheet(zf, first_sheet_path(zf), sst)
+        rows, hyperlinks = parse_sheet(zf, preferred_sheet_path(zf), sst)
 
     header = rows.get(1, {})
     note_col = None
@@ -134,6 +183,16 @@ def extract_entries(path):
             cid = f"{last_year}{raw}"
         if cid:
             class_cols.append((col, cid))
+
+    # Sommige jaarplanning-bestanden bevatten geen expliciete klasvlag-kolommen.
+    # Dan leiden we de jaarlaag af uit de bestandsnaam en laten de rij gelden
+    # voor alle parallelklassen binnen die laag.
+    if not class_cols:
+        name_upper = path.name.upper()
+        m_grade = re.search(r"G([1-4])", name_upper)
+        if m_grade:
+            grade = m_grade.group(1)
+            class_cols = [(f"_AUTO_{letter}", f"{grade}{letter}") for letter in "ABCDEFG"]
 
     def clean_cell(value):
         text = str(value or "").strip()

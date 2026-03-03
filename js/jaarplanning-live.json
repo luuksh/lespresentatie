@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-03T08:14:19+01:00",
+  "updatedAt": "2026-03-03T08:39:23+01:00",
   "entries": [
     {
       "classId": "1A",
@@ -6218,7 +6218,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -6236,7 +6237,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -6248,7 +6249,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -6376,6 +6377,26 @@
         }
       ],
       "items": []
+    },
+    {
+      "classId": "3A",
+      "week": "2",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 3 FF: Boeken en initiaal",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17120",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 3 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3A",
@@ -6546,6 +6567,25 @@
     },
     {
       "classId": "3A",
+      "week": "3",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 4: Informatieblok",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3A",
       "week": "30",
       "lessons": [
         {
@@ -6583,9 +6623,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3A",
@@ -6604,9 +6642,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3A",
@@ -6626,7 +6662,69 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+      ]
+    },
+    {
+      "classId": "3A",
+      "week": "4",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 4 FF: Leesles",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3A",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 6 GvL: Perspectief",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17132",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 7 GvL: Thema’s & Motieven",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17133",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "Peerfeedback geven:"
+      ]
+    },
+    {
+      "classId": "3A",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 8 GvL: Juryberaad & Poster maken",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17134",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 9 GvL: Juryuitslag",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17135",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
       ]
     },
     {
@@ -6646,8 +6744,32 @@
       "lessons": [
         {
           "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17137",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3A",
+      "week": "49",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 1 FF: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17118",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17119",
           "lessonKey": "B"
         }
       ],
@@ -6674,6 +6796,24 @@
     },
     {
       "classId": "3A",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3A",
       "week": "51",
       "lessons": [
         {
@@ -6683,7 +6823,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3A",
@@ -6779,7 +6921,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -6797,7 +6940,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -6809,7 +6952,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -6954,7 +7097,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3B",
@@ -7128,6 +7273,12 @@
       "week": "3",
       "lessons": [
         {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
@@ -7175,9 +7326,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3B",
@@ -7196,9 +7345,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3B",
@@ -7218,7 +7365,8 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
       ]
     },
     {
@@ -7229,6 +7377,12 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -7250,7 +7404,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Peerfeedback geven:"
+      ]
     },
     {
       "classId": "3B",
@@ -7261,9 +7417,18 @@
           "lesson": "Les 8 GvL: Juryberaad & Poster maken",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17134",
           "lessonKey": "A"
+        },
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 9 GvL: Juryuitslag",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17135",
+          "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
+      ]
     },
     {
       "classId": "3B",
@@ -7280,6 +7445,11 @@
       "classId": "3B",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
@@ -7329,6 +7499,24 @@
     },
     {
       "classId": "3B",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3B",
       "week": "51",
       "lessons": [
         {
@@ -7338,7 +7526,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3B",
@@ -7434,7 +7624,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -7452,7 +7643,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -7464,7 +7655,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -7609,7 +7800,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3C",
@@ -7836,9 +8029,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3C",
@@ -7857,9 +8048,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3C",
@@ -7879,13 +8068,19 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
       ]
     },
     {
       "classId": "3C",
       "week": "4",
       "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 4 FF: Leesles",
+          "lessonKey": "A"
+        },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
@@ -7912,7 +8107,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Peerfeedback geven:"
+      ]
     },
     {
       "classId": "3C",
@@ -7931,7 +8128,10 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
+      ]
     },
     {
       "classId": "3C",
@@ -8029,7 +8229,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3C",
@@ -8125,7 +8327,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -8143,7 +8346,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -8155,7 +8358,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -8283,6 +8486,26 @@
         }
       ],
       "items": []
+    },
+    {
+      "classId": "3D",
+      "week": "2",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 3 FF: Boeken en initiaal",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17120",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 3 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3D",
@@ -8453,6 +8676,25 @@
     },
     {
       "classId": "3D",
+      "week": "3",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 4: Informatieblok",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3D",
       "week": "30",
       "lessons": [
         {
@@ -8490,9 +8732,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3D",
@@ -8511,9 +8751,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3D",
@@ -8533,7 +8771,69 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
+      ]
+    },
+    {
+      "classId": "3D",
+      "week": "4",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 4 FF: Leesles",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3D",
+      "week": "40",
+      "lessons": [
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 6 GvL: Perspectief",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17132",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 7 GvL: Thema’s & Motieven",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17133",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "Peerfeedback geven:"
+      ]
+    },
+    {
+      "classId": "3D",
+      "week": "41",
+      "lessons": [
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 8 GvL: Juryberaad & Poster maken",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17134",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Grenzen van Literatuur",
+          "lesson": "Les 9 GvL: Juryuitslag",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17135",
+          "lessonKey": "B"
+        }
+      ],
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
       ]
     },
     {
@@ -8553,8 +8853,32 @@
       "lessons": [
         {
           "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17137",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3D",
+      "week": "49",
+      "lessons": [
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 1 FF: Intro",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17118",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17119",
           "lessonKey": "B"
         }
       ],
@@ -8581,6 +8905,24 @@
     },
     {
       "classId": "3D",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3D",
       "week": "51",
       "lessons": [
         {
@@ -8590,7 +8932,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3D",
@@ -8686,7 +9030,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -8704,7 +9049,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -8716,7 +9061,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -8861,7 +9206,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3E",
@@ -9035,6 +9382,12 @@
       "week": "3",
       "lessons": [
         {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
@@ -9082,9 +9435,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3E",
@@ -9103,9 +9454,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3E",
@@ -9125,7 +9474,8 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
       ]
     },
     {
@@ -9136,6 +9486,12 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9157,7 +9513,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Peerfeedback geven:"
+      ]
     },
     {
       "classId": "3E",
@@ -9176,7 +9534,10 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
+      ]
     },
     {
       "classId": "3E",
@@ -9193,6 +9554,11 @@
       "classId": "3E",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
@@ -9242,6 +9608,24 @@
     },
     {
       "classId": "3E",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3E",
       "week": "51",
       "lessons": [
         {
@@ -9251,7 +9635,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3E",
@@ -9347,7 +9733,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -9365,7 +9752,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -9377,7 +9764,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -9522,7 +9909,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3F",
@@ -9696,6 +10085,12 @@
       "week": "3",
       "lessons": [
         {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
@@ -9743,9 +10138,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3F",
@@ -9764,9 +10157,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3F",
@@ -9786,7 +10177,8 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
       ]
     },
     {
@@ -9797,6 +10189,12 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -9818,7 +10216,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Peerfeedback geven:"
+      ]
     },
     {
       "classId": "3F",
@@ -9837,7 +10237,10 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
+      ]
     },
     {
       "classId": "3F",
@@ -9854,6 +10257,11 @@
       "classId": "3F",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
@@ -9903,6 +10311,24 @@
     },
     {
       "classId": "3F",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3F",
       "week": "51",
       "lessons": [
         {
@@ -9912,7 +10338,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3F",
@@ -10008,7 +10436,8 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "Les 11 FF: Faalbattle",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17126",
           "lessonKey": "B"
         }
       ],
@@ -10026,7 +10455,7 @@
         },
         {
           "project": "Faalfestival",
-          "lesson": "Les 10 FF: Faalbattle",
+          "lesson": "",
           "lessonKey": "B"
         }
       ],
@@ -10038,7 +10467,7 @@
       "lessons": [
         {
           "project": "Faalfestival",
-          "lesson": "Les 11 FF: Reflectie",
+          "lesson": "",
           "lessonKey": "A"
         },
         {
@@ -10183,7 +10612,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Lijst van middeleeuwse symbolen met betekenis"
+      ]
     },
     {
       "classId": "3G",
@@ -10357,6 +10788,12 @@
       "week": "3",
       "lessons": [
         {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 7: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
@@ -10404,9 +10841,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3G",
@@ -10425,9 +10860,7 @@
           "lessonKey": "B"
         }
       ],
-      "items": [
-        "1"
-      ]
+      "items": []
     },
     {
       "classId": "3G",
@@ -10447,7 +10880,8 @@
         }
       ],
       "items": [
-        "1"
+        "Volgende les: ideeen uitwerken >> opdracht: ruimtebeschrijving evt. uitbreiden met vertraging en dan met cliffhanger, en dan flashback. (3E: cliffhanger/flashback bijna af in klad).",
+        "https://deschrijfschool.be/creatief-schrijven/deze-vragen-stelde-marcel-proust-aan-zijn-personages/"
       ]
     },
     {
@@ -10458,6 +10892,12 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 5: Eigenschappen + Levensles",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17124",
+          "lessonKey": "B"
         }
       ],
       "items": []
@@ -10479,7 +10919,9 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "Peerfeedback geven:"
+      ]
     },
     {
       "classId": "3G",
@@ -10498,7 +10940,10 @@
           "lessonKey": "B"
         }
       ],
-      "items": []
+      "items": [
+        "> Elkaars werk nakijken op alle aspecten + goedlopende zinnen en spelling. Dat blad moet je in je netschrift bewaren; heel belangrijk! Daarna in netschrift, met creatieve verzorging daaromheen. Ik kijk je werk daarna na op je verbeterde versie.",
+        "Reflectievragen"
+      ]
     },
     {
       "classId": "3G",
@@ -10515,6 +10960,11 @@
       "classId": "3G",
       "week": "48",
       "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 1: Boekenpitches + club boekenpaar kiezen",
+          "lessonKey": "A"
+        },
         {
           "project": "Leesclub",
           "lesson": "Leesclubbijeenkomst 2: Naar de bieb",
@@ -10564,6 +11014,24 @@
     },
     {
       "classId": "3G",
+      "week": "50",
+      "lessons": [
+        {
+          "project": "Leesclub",
+          "lesson": "Leesclubbijeenkomst 6: Boekenpaar 1 boek 2",
+          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17139",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 2 FF: Leesles",
+          "lessonKey": "B"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "3G",
       "week": "51",
       "lessons": [
         {
@@ -10573,7 +11041,9 @@
           "lessonKey": "A"
         }
       ],
-      "items": []
+      "items": [
+        "Feedback- en -forwardpunten"
+      ]
     },
     {
       "classId": "3G",
@@ -10641,5120 +11111,6 @@
       "lessons": [
         {
           "project": "CGU-week 2",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.1",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.2",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.3",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "Uitleg vak Nederlands",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17948"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "37",
-      "lessons": [
-        {
-          "project": "Literair Landschap",
-          "lesson": "Les 1: Groepjes maken",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24188",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24195",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 2: Big Five",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24196",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "38",
-      "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Zie week 39A",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Zie week 39B",
-          "lessonKey": "B"
-        },
-        {
-          "project": "PersoonlijkheidBKK",
-          "lesson": "Zie week 39C",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "39",
-      "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Les 2: Samenvoegen",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24189",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Les 3: Ballondebat",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24197",
-          "lessonKey": "B"
-        },
-        {
-          "project": "PersoonlijkheidBKK",
-          "lesson": "Les 4: Eigen experiment",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24198",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18059",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 4: Personages",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25194",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 5: Perspectief",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25194",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 6: Spanning",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25195",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 7: Tijd en Ruimte",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25195",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid (2 representaties in schrift)"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 8: Thema",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25193",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.4",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "Uitleg vak Nederlands",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=17948"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "37",
-      "lessons": [
-        {
-          "project": "Literair Landschap",
-          "lesson": "Les 1: Groepjes maken",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24188",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24195",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 2: Big Five",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24196",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "38",
-      "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Zie week 39A",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Zie week 39B",
-          "lessonKey": "B"
-        },
-        {
-          "project": "PersoonlijkheidBKK",
-          "lesson": "Zie week 39C",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "39",
-      "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Les 2: Samenvoegen",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24189",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Les 3: Ballondebat",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24197",
-          "lessonKey": "B"
-        },
-        {
-          "project": "PersoonlijkheidBKK",
-          "lesson": "Les 4: Eigen experiment",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24198",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18059",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 4: Personages",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25194",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 5: Perspectief",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25194",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 6: Spanning",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25195",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 7: Tijd en Ruimte",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25195",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid (2 representaties in schrift)"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 8: Thema",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=25193",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.5",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "10",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "11",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "12",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "13",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "14",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "15",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Spreekopdracht"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "17",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "19",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Invloed",
-          "url": "https://bcou.sharepoint.com/:p:/r/sites/CGU-AFD-Nederlands/_layouts/15/Doc.aspx?sourcedoc=%7BEFBEDB37-00E8-4886-9928-86748C4AF465%7D&file=Thema%20invloed.pptx&fromShare=true&action=edit&mobileredirect=true",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Heel veel lezen",
-          "url": "https://bcou-my.sharepoint.com/:p:/r/personal/l_hijne_cgu_nl/_layouts/15/Doc.aspx?sourcedoc=%7B1AF851D5-C603-45D4-8965-489C8CD6C3C6%7D&file=Over%20vijf%20jaar%20zie%20je%20het%20verschil.pptx&action=edit&mobileredirect=true",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "2",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Kennismaken met canonieke gedichten",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 1 en 2",
-        "Presentaties 4G5&4G4: groep 3"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "20",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "21",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijfschrift af"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "23",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "24",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Leesvaardigheid afsluiten literatuur"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "25",
-      "lessons": [
-        {
-          "project": "Boekenclub",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "28",
-      "lessons": [
-        {
-          "project": "Toetsweek",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "3",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Bekend gedicht kiezen + aemulatio",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 4 en 5"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "4",
-      "lessons": [
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Poëzie",
-          "lesson": "Voordracht",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Presentaties 4G5&4G4: groep 6 en 7"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "40",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24343",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 2: Social media",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24344",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "41",
-      "lessons": [
-        {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24345",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Technologie",
-          "lesson": "Les 4: Technologie en identiteit",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=24346",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "42",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=18060",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=27291",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "45",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "46",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "47",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "48",
-      "lessons": [
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "49",
-      "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=31444",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Feedback-en-forwardpunten"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "50",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "url": "https://cgulearn.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=28387",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "51",
-      "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "6",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "lessonKey": "C"
-        }
-      ],
-      "items": [
-        "Schrijven tekst in toetsmodus",
-        "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4.6",
-      "week": "7",
-      "lessons": [
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Schrijfstijl",
-          "lesson": "",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": ""
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
           "lesson": ""
         }
       ],
