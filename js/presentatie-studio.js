@@ -152,6 +152,45 @@ function saveStudio() {
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
 }
 
+function markerDeckSlideCount(presentation) {
+  const decks = presentation?.markerDecks;
+  if (!decks || typeof decks !== 'object') return 0;
+  let total = 0;
+  for (const deck of Object.values(decks)) {
+    if (Array.isArray(deck)) total += deck.length;
+  }
+  return total;
+}
+
+function mergePreferRicherBase(baseDoc, storedDoc) {
+  const base = ensureProjectPresentations(baseDoc);
+  const stored = ensureProjectPresentations(storedDoc);
+  const merged = normalizeDoc(stored);
+
+  if (!merged.presentations || typeof merged.presentations !== 'object') {
+    merged.presentations = {};
+  }
+
+  for (const [deckId, basePres] of Object.entries(base.presentations || {})) {
+    const localPres = merged.presentations[deckId];
+    if (!localPres || typeof localPres !== 'object') {
+      merged.presentations[deckId] = structuredClone(basePres);
+      continue;
+    }
+
+    const baseCount = markerDeckSlideCount(basePres);
+    const localCount = markerDeckSlideCount(localPres);
+    const baseMarkers = Object.keys(basePres.markers || {}).length;
+    const localMarkers = Object.keys(localPres.markers || {}).length;
+
+    if (baseCount > localCount || baseMarkers > localMarkers) {
+      merged.presentations[deckId] = structuredClone(basePres);
+    }
+  }
+
+  return ensureProjectPresentations(merged);
+}
+
 function markerRowsForProject(projectName) {
   const deckId = projectDeckId(projectName);
   const pres = state.doc.presentations[deckId];
@@ -304,8 +343,10 @@ async function boot() {
   try {
     const baseRaw = await fetchJson(BASE_SOURCE);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
-    const seed = fromStorage ? JSON.parse(fromStorage) : baseRaw;
-    state.doc = ensureProjectPresentations(seed);
+    const seed = fromStorage ? JSON.parse(fromStorage) : null;
+    state.doc = seed
+      ? mergePreferRicherBase(baseRaw, seed)
+      : ensureProjectPresentations(baseRaw);
     fillProjects(state.doc);
     if (state.projects.length) projectSelect.value = state.projects[0];
     saveStudio();
