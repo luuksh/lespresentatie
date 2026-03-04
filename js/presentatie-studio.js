@@ -8,19 +8,15 @@ const deckTitleInput = document.getElementById('deckTitleInput');
 const deckSubtitleInput = document.getElementById('deckSubtitleInput');
 const markerBody = document.getElementById('markerBody');
 const statusLine = document.getElementById('statusLine');
-const previewMarkerSelect = document.getElementById('previewMarkerSelect');
-const previewPrevBtn = document.getElementById('previewPrevBtn');
-const previewNextBtn = document.getElementById('previewNextBtn');
-const previewCounter = document.getElementById('previewCounter');
-const previewStage = document.getElementById('previewStage');
+
+const AUTOSAVE_DELAY_MS = 700;
 
 const state = {
   doc: { entries: [], presentations: {}, updatedAt: '' },
   projects: [],
-  previewSlides: [],
-  previewMarkerMap: {},
-  previewIndex: 0,
 };
+
+let autosaveTimer = null;
 
 function setStatus(message, isError = false) {
   statusLine.textContent = message;
@@ -332,98 +328,14 @@ function parseSlides(text) {
   return slides;
 }
 
-function toSafeHtml(text) {
-  return String(text || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-
-function buildWorkingPresentation(projectName) {
-  const deckId = projectDeckId(projectName);
-  const base = state.doc.presentations[deckId];
-  if (!base) return null;
-
-  const working = structuredClone(base);
-  working.title = String(deckTitleInput.value || '').trim() || projectName;
-  working.subtitle = String(deckSubtitleInput.value || '').trim() || projectName;
-  if (!working.markerDecks || typeof working.markerDecks !== 'object') working.markerDecks = {};
-
-  for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
-    const markerId = String(textarea.dataset.marker || '').trim();
-    if (!markerId) continue;
-    working.markerDecks[markerId] = parseSlides(textarea.value);
-  }
-
-  const markerOrder = markerRowsForProject(projectName).map((row) => row.markerId);
-  compilePresentationFromMarkerDecks(working, markerOrder, projectName);
-  return working;
-}
-
-function renderPreviewSlide() {
-  if (!previewStage || !previewCounter || !previewPrevBtn || !previewNextBtn) return;
-  const slides = state.previewSlides;
-  if (!slides.length) {
-    previewStage.innerHTML = '<p class="preview-empty">Geen preview beschikbaar.</p>';
-    previewCounter.textContent = '0 / 0';
-    previewPrevBtn.disabled = true;
-    previewNextBtn.disabled = true;
-    return;
-  }
-
-  const idx = Math.max(0, Math.min(slides.length - 1, state.previewIndex));
-  state.previewIndex = idx;
-  const slide = slides[idx] || {};
-  if (String(slide.type || 'title') === 'bullets') {
-    const items = Array.isArray(slide.items) ? slide.items : [];
-    previewStage.innerHTML = `
-      <h4 class="preview-title">${toSafeHtml(slide.title || 'Slide')}</h4>
-      ${slide.subtitle ? `<p class="preview-subtitle">${toSafeHtml(slide.subtitle)}</p>` : ''}
-      <ul class="preview-bullets">${items.map((item) => `<li>${toSafeHtml(item)}</li>`).join('')}</ul>
-    `;
-  } else {
-    previewStage.innerHTML = `
-      <h4 class="preview-title">${toSafeHtml(slide.title || 'Slide')}</h4>
-      ${slide.subtitle ? `<p class="preview-subtitle">${toSafeHtml(slide.subtitle)}</p>` : ''}
-    `;
-  }
-
-  previewCounter.textContent = `${idx + 1} / ${slides.length}`;
-  previewPrevBtn.disabled = idx <= 0;
-  previewNextBtn.disabled = idx >= slides.length - 1;
-}
-
-function refreshPreview(projectName, keepIndex = true) {
-  if (!previewMarkerSelect) return;
-  const working = buildWorkingPresentation(projectName);
-  if (!working) return;
-  const prevIdx = state.previewIndex;
-  state.previewSlides = Array.isArray(working.slides) ? working.slides : [];
-  state.previewMarkerMap = working.markers || {};
-
-  const markerOptions = markerRowsForProject(projectName).map((row) => row.markerId);
-  const selected = String(previewMarkerSelect.value || '').trim();
-  previewMarkerSelect.innerHTML = '';
-  for (const markerId of markerOptions) {
-    const option = document.createElement('option');
-    option.value = markerId;
-    option.textContent = markerId;
-    previewMarkerSelect.appendChild(option);
-  }
-
-  if (markerOptions.length) {
-    const active = markerOptions.includes(selected) ? selected : markerOptions[0];
-    previewMarkerSelect.value = active;
-    const markerIdx = Number(state.previewMarkerMap[active]);
-    state.previewIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
-  } else {
-    state.previewIndex = keepIndex ? prevIdx : 0;
-  }
-
-  if (keepIndex && !previewMarkerSelect.value) {
-    state.previewIndex = prevIdx;
-  }
-  renderPreviewSlide();
+function queueAutoSave() {
+  const project = String(projectSelect.value || '').trim();
+  if (!project) return;
+  if (autosaveTimer) clearTimeout(autosaveTimer);
+  autosaveTimer = window.setTimeout(() => {
+    autosaveTimer = null;
+    saveProject({ auto: true });
+  }, AUTOSAVE_DELAY_MS);
 }
 
 function renderProject() {
@@ -453,12 +365,11 @@ function renderProject() {
   }
 
   for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
-    textarea.addEventListener('input', () => refreshPreview(project, true));
+    textarea.addEventListener('input', queueAutoSave);
   }
-  refreshPreview(project, false);
 }
 
-function saveProject() {
+function saveProject({ auto = false } = {}) {
   const project = String(projectSelect.value || '').trim();
   if (!project) return;
   const deckId = projectDeckId(project);
@@ -478,8 +389,8 @@ function saveProject() {
   compilePresentationFromMarkerDecks(pres, markerOrder, project);
 
   saveStudio();
-  refreshPreview(project, true);
-  setStatus(`Project opgeslagen: ${project}.`);
+  if (auto) setStatus(`Automatisch opgeslagen: ${project}.`);
+  else setStatus(`Project opgeslagen: ${project}.`);
 }
 
 function fillProjects(doc) {
@@ -519,34 +430,8 @@ async function boot() {
 }
 
 projectSelect.addEventListener('change', renderProject);
-saveProjectBtn.addEventListener('click', saveProject);
-deckTitleInput.addEventListener('input', () => {
-  const project = String(projectSelect.value || '').trim();
-  if (project) refreshPreview(project, true);
-});
-deckSubtitleInput.addEventListener('input', () => {
-  const project = String(projectSelect.value || '').trim();
-  if (project) refreshPreview(project, true);
-});
-if (previewPrevBtn) {
-  previewPrevBtn.addEventListener('click', () => {
-    state.previewIndex = Math.max(0, state.previewIndex - 1);
-    renderPreviewSlide();
-  });
-}
-if (previewNextBtn) {
-  previewNextBtn.addEventListener('click', () => {
-    state.previewIndex = Math.min(Math.max(0, state.previewSlides.length - 1), state.previewIndex + 1);
-    renderPreviewSlide();
-  });
-}
-if (previewMarkerSelect) {
-  previewMarkerSelect.addEventListener('change', () => {
-    const markerId = String(previewMarkerSelect.value || '').trim();
-    const idx = Number(state.previewMarkerMap?.[markerId]);
-    state.previewIndex = Number.isInteger(idx) ? idx : 0;
-    renderPreviewSlide();
-  });
-}
+saveProjectBtn.addEventListener('click', () => saveProject({ auto: false }));
+deckTitleInput.addEventListener('input', queueAutoSave);
+deckSubtitleInput.addEventListener('input', queueAutoSave);
 
 boot();
