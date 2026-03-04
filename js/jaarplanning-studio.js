@@ -3,8 +3,6 @@ const BASE_SOURCE = 'js/jaarplanning-live.json';
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
-const resetStudioBtn = document.getElementById('resetStudioBtn');
-const exportStudioBtn = document.getElementById('exportStudioBtn');
 const editorTitle = document.getElementById('editorTitle');
 const sheetBody = document.getElementById('sheetBody');
 const statusLine = document.getElementById('statusLine');
@@ -287,27 +285,6 @@ function saveAll() {
   setStatus(`Alles opgeslagen voor jaarlaag ${selectedLayer()}.`);
 }
 
-function exportStudio() {
-  const blob = new Blob([`${JSON.stringify(state.doc, null, 2)}\n`], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'jaarplanning-studio-export.json';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-  setStatus('Export gemaakt.');
-}
-
-async function resetStudio() {
-  localStorage.removeItem(STUDIO_KEY);
-  state.doc = collapseToYearLayerDoc(state.baseDoc);
-  saveStudio();
-  renderSheet();
-  setStatus('Studio teruggezet naar basisplanning.');
-}
-
 function fillLayerOptions(layers) {
   classSelect.innerHTML = '';
   for (const layer of layers) {
@@ -346,8 +323,6 @@ async function boot() {
 }
 
 saveAllBtn.addEventListener('click', saveAll);
-exportStudioBtn.addEventListener('click', exportStudio);
-resetStudioBtn.addEventListener('click', resetStudio);
 classSelect.addEventListener('change', renderSheet);
 
 boot();
