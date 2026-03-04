@@ -934,9 +934,67 @@ document.addEventListener('DOMContentLoaded', async () => {
   function buildPresentationTarget(lesson) {
     const title = String(lesson?.lesson || '').trim() || 'Presentatie';
     const project = String(lesson?.project || '').trim();
-    const presentationId = String(lesson?.presentationId || '').trim();
-    const markerId = String(lesson?.presentationMarkerId || '').trim();
-    return { title, project, presentationId, markerId };
+    const presentationIdRaw = String(lesson?.presentationId || '').trim();
+    const markerIdRaw = String(lesson?.presentationMarkerId || '').trim();
+    const fallbackProjectDeckId = project ? projectDeckId(project) : '';
+    const fallbackMarkerId = title ? lessonMarkerId(title) : '';
+    return {
+      title,
+      project,
+      presentationId: presentationIdRaw || fallbackProjectDeckId,
+      markerId: markerIdRaw || fallbackMarkerId,
+      fallbackProjectDeckId,
+      fallbackMarkerId,
+    };
+  }
+
+  function resolveInternalPresentation(target) {
+    if (!target || !planningPresentations || typeof planningPresentations !== 'object') {
+      return { presentation: null, markerId: '' };
+    }
+
+    const candidatePresentationIds = [];
+    const pushUnique = (value) => {
+      const id = String(value || '').trim();
+      if (!id || candidatePresentationIds.includes(id)) return;
+      candidatePresentationIds.push(id);
+    };
+
+    pushUnique(target.presentationId);
+    pushUnique(target.fallbackProjectDeckId);
+    if (target.project) {
+      pushUnique(projectDeckId(target.project));
+      const byProjectName = Object.values(planningPresentations).find((pres) =>
+        pres
+        && typeof pres === 'object'
+        && String(pres.presentationType || '').trim() === 'project-overview'
+        && String(pres.project || '').trim() === String(target.project || '').trim()
+      );
+      pushUnique(byProjectName?.id);
+    }
+
+    const candidateMarkerIds = [];
+    const pushMarker = (value) => {
+      const marker = String(value || '').trim();
+      if (!marker || candidateMarkerIds.includes(marker)) return;
+      candidateMarkerIds.push(marker);
+    };
+    pushMarker(target.markerId);
+    pushMarker(target.fallbackMarkerId);
+    pushMarker(target.title ? lessonMarkerId(target.title) : '');
+
+    for (const pid of candidatePresentationIds) {
+      const internal = planningPresentations[pid];
+      if (!internal || typeof internal !== 'object') continue;
+      for (const markerId of candidateMarkerIds) {
+        if (internal?.markers && Object.prototype.hasOwnProperty.call(internal.markers, markerId)) {
+          return { presentation: internal, markerId };
+        }
+      }
+      return { presentation: internal, markerId: '' };
+    }
+
+    return { presentation: null, markerId: '' };
   }
 
   function renderInternalSlide() {
@@ -981,10 +1039,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       : target.title;
     if (presentationEmbedTitle) presentationEmbedTitle.textContent = titleText;
 
-    const internal = target.presentationId ? planningPresentations[target.presentationId] : null;
+    const resolved = resolveInternalPresentation(target);
+    const internal = resolved.presentation;
     if (internal) {
       activePresentation = internal;
-      const markerIdx = Number(internal?.markers?.[target.markerId]);
+      const markerIdx = Number(internal?.markers?.[resolved.markerId || target.markerId]);
       activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
       if (presentationInternal) presentationInternal.hidden = false;
       if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
