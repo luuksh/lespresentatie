@@ -162,6 +162,11 @@ function markerDeckSlideCount(presentation) {
   return total;
 }
 
+function presentationImportVersion(presentation) {
+  const value = Number(presentation?.importVersion || 0);
+  return Number.isFinite(value) ? value : 0;
+}
+
 function mergePreferRicherBase(baseDoc, storedDoc) {
   const base = ensureProjectPresentations(baseDoc);
   const stored = ensureProjectPresentations(storedDoc);
@@ -182,8 +187,14 @@ function mergePreferRicherBase(baseDoc, storedDoc) {
     const localCount = markerDeckSlideCount(localPres);
     const baseMarkers = Object.keys(basePres.markers || {}).length;
     const localMarkers = Object.keys(localPres.markers || {}).length;
+    const baseVersion = presentationImportVersion(basePres);
+    const localVersion = presentationImportVersion(localPres);
 
-    if (baseCount > localCount || baseMarkers > localMarkers) {
+    if (
+      baseVersion > localVersion
+      || baseCount > localCount
+      || baseMarkers > localMarkers
+    ) {
       merged.presentations[deckId] = structuredClone(basePres);
     }
   }
