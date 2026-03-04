@@ -61,7 +61,7 @@
 
       <section class="card control-card">
         <h2 class="panel-title">Jaarplanning-koppeling</h2>
-        <p class="panel-help">Plak hier de URL van de live JSON-feed die vanuit SharePoint wordt bijgewerkt.</p>
+        <p class="panel-help">Interne standaardbron: <code>js/jaarplanning-live.json</code>. Alleen aanpassen als je bewust een andere interne URL wilt gebruiken.</p>
         <label class="panel-help" style="display:block; margin: 8px 0 4px;">
           <input id="jaarplanningLocalLinksToggle" type="checkbox" />
           Open leslinks lokaal op dit apparaat (docent)
@@ -76,8 +76,32 @@
           />
           <div class="btn-group">
             <button id="jaarplanningSourceSave" type="button" class="btn btn-primary">Opslaan</button>
-            <button id="jaarplanningSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+            <button id="jaarplanningSourceClear" type="button" class="btn btn-secondary">Reset naar intern</button>
           </div>
+        </div>
+      </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Jaarplanning intern bewerken</h2>
+        <p class="panel-help">Bewerk items voor de geselecteerde klas en huidige week. Elke regel is een apart weekitem.</p>
+        <p id="jaarplanningEditorMeta" class="panel-help"></p>
+        <textarea
+          id="jaarplanningEditorItems"
+          class="jaarplanning-source-input"
+          rows="6"
+          placeholder="Item 1&#10;Item 2&#10;Item 3"
+        ></textarea>
+        <input
+          id="jaarplanningEditorNote"
+          type="text"
+          class="jaarplanning-source-input"
+          placeholder="Optionele notitie"
+          autocomplete="off"
+          style="margin-top:8px;"
+        />
+        <div class="btn-group" style="margin-top:8px;">
+          <button id="jaarplanningEditorSave" type="button" class="btn btn-primary">Week opslaan</button>
+          <button id="jaarplanningEditorClear" type="button" class="btn btn-secondary">Week leegmaken</button>
         </div>
       </section>
 

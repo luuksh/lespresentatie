@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('plattegrond');
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
   const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
+  const PLAN_OVERRIDES_KEY = 'lespresentatie.jaarplanningOverrides';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const LOCAL_LINKS_KEY = 'lespresentatie.preferLocalLessonLinks';
   const LOCAL_FILE_BRIDGE_URL = 'http://127.0.0.1:17373/open';
@@ -18,6 +19,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningSourceInput = document.getElementById('jaarplanningSourceInput');
   const planningSourceSaveBtn = document.getElementById('jaarplanningSourceSave');
   const planningSourceClearBtn = document.getElementById('jaarplanningSourceClear');
+  const planningEditorMeta = document.getElementById('jaarplanningEditorMeta');
+  const planningEditorItems = document.getElementById('jaarplanningEditorItems');
+  const planningEditorNote = document.getElementById('jaarplanningEditorNote');
+  const planningEditorSaveBtn = document.getElementById('jaarplanningEditorSave');
+  const planningEditorClearBtn = document.getElementById('jaarplanningEditorClear');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
   const planningLocalLinksToggle = document.getElementById('jaarplanningLocalLinksToggle');
   const agendaSourceInput = document.getElementById('agendaSourceInput');
@@ -45,6 +51,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   let planningFetchedAt = '';
   let planningTimer = null;
   let planningSourceUrl = '';
+  let planningSourceFallbackTried = false;
+  let planningOverrides = {};
   let agendaTimer = null;
   let agendaSourceUrl = '';
   let agendaEntries = [];
@@ -147,6 +155,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   klasSelect.addEventListener('change', () => {
     if (klasSelect.value) localStorage.setItem('lastClassId', klasSelect.value);
     laadIndeling();
+    refreshPlanningEditor();
   });
 
   if (!indelingSelect.value) indelingSelect.value = 'h216';
@@ -189,6 +198,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fmt = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'short' });
     const label = `Week ${weekNo} (${fmt.format(monday)} t/m ${fmt.format(sunday)})`;
     return { id, weekNo, label };
+  }
+
+  function currentWeekCandidates(date = new Date()) {
+    const week = isoWeekInfo(date);
+    return {
+      week,
+      keys: [
+        week.id,
+        `W${String(week.weekNo).padStart(2, '0')}`,
+        String(week.weekNo),
+        String(week.weekNo).padStart(2, '0')
+      ]
+    };
+  }
+
+  function overrideKey(classId, weekKey) {
+    const cid = normalizeClassId(classId);
+    const wid = String(weekKey || '').trim().toUpperCase();
+    if (!cid || !wid) return '';
+    return `${cid}__${wid}`;
+  }
+
+  function getPlanningOverride(classId, weekKeys = []) {
+    const aliases = classIdAliases(classId);
+    for (const alias of aliases) {
+      for (const wk of weekKeys) {
+        const key = overrideKey(alias, wk);
+        if (key && planningOverrides[key]) return planningOverrides[key];
+      }
+    }
+    return null;
   }
 
   function coerceItems(value) {
@@ -711,6 +751,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     return fromWindow;
   }
 
+  function defaultPlanningSourceUrl() {
+    return String(window.APP_CONFIG?.jaarplanningSourceUrl || 'js/jaarplanning-live.json').trim();
+  }
+
+  function loadPlanningOverrides() {
+    const raw = String(localStorage.getItem(PLAN_OVERRIDES_KEY) || '').trim();
+    if (!raw) return {};
+    try {
+      const parsed = JSON.parse(raw);
+      return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function savePlanningOverrides() {
+    localStorage.setItem(PLAN_OVERRIDES_KEY, JSON.stringify(planningOverrides));
+  }
+
   function resolveLocalLinksPreference() {
     const fromStorage = String(localStorage.getItem(LOCAL_LINKS_KEY) || '').trim().toLowerCase();
     if (fromStorage === 'true') return true;
@@ -1071,31 +1130,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     const planAnchorDate = (agendaSourceUrl && activeAgendaEntry?.start)
       ? activeAgendaEntry.start
       : now;
-    const week = isoWeekInfo(planAnchorDate);
+    const weekInfo = currentWeekCandidates(planAnchorDate);
+    const week = weekInfo.week;
     const title = (agendaSourceUrl && activeAgendaEntry && !isActiveLessonNow)
       ? 'Programma volgende les'
       : 'Programma vandaag';
     planningWeekLabelEl.textContent = `${title} · ${week.label}`;
 
     const classId = normalizeClassId(klasSelect?.value || '');
-    const weekCandidates = [
-      week.id,
-      `W${String(week.weekNo).padStart(2, '0')}`,
-      String(week.weekNo),
-      String(week.weekNo).padStart(2, '0')
-    ];
+    const weekCandidates = weekInfo.keys;
     const classWeeks = planningData[classId] || {};
     const allWeeks = planningData.ALL || {};
     const classWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
     const allWeekKey = weekCandidates.find((key) => Boolean(allWeeks[key])) || '';
-    const weekData = (classWeekKey || allWeekKey)
+    const baseWeekData = (classWeekKey || allWeekKey)
       ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
       : null;
+    const overrideData = getPlanningOverride(classId, weekCandidates);
+    const weekData = overrideData
+      ? mergePlanEntries(baseWeekData, overrideData)
+      : baseWeekData;
 
     if (!planningSourceUrl) {
       setPlanningItems(['Koppel eerst een jaarplanning-bron in het docentpaneel.']);
       if (planningLastUpdateEl) planningLastUpdateEl.textContent = '';
       setPlanningStatus('Niet gekoppeld', 'warn');
+      refreshPlanningEditor();
       return;
     }
 
@@ -1112,6 +1172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         planningLastUpdateEl.textContent = [syncStamp, sourceStamp].filter(Boolean).join(' · ');
       }
       setPlanningStatus('Geen weekitems', 'warn');
+      refreshPlanningEditor();
       return;
     }
 
@@ -1134,6 +1195,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
     }
+    refreshPlanningEditor();
   }
 
   async function fetchPlanning() {
@@ -1157,8 +1219,20 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden jaarplanning:', err);
+      const fallback = defaultPlanningSourceUrl();
+      const canFallback = Boolean(
+        fallback
+        && !planningSourceFallbackTried
+        && String(planningSourceUrl || '').trim() !== fallback
+      );
+      if (canFallback) {
+        planningSourceFallbackTried = true;
+        applyPlanningSource(fallback, false);
+        return;
+      }
       setPlanningStatus('Synchronisatie mislukt', 'error');
       setPlanningItems(['Kon de jaarplanning niet laden. Controleer de bron-URL.']);
+      refreshPlanningEditor();
     }
   }
 
@@ -1263,6 +1337,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPlanning();
   }
 
+  function activeWeekContext() {
+    const now = new Date();
+    const anchor = (agendaSourceUrl && activeAgendaEntry?.start) ? activeAgendaEntry.start : now;
+    const weekInfo = currentWeekCandidates(anchor);
+    const classId = normalizeClassId(klasSelect?.value || '');
+    return { classId, weekInfo };
+  }
+
+  function refreshPlanningEditor() {
+    if (!planningEditorMeta || !planningEditorItems || !planningEditorNote) return;
+    const { classId, weekInfo } = activeWeekContext();
+    if (!classId) {
+      planningEditorMeta.textContent = 'Geen klas geselecteerd.';
+      planningEditorItems.value = '';
+      planningEditorNote.value = '';
+      return;
+    }
+
+    const override = getPlanningOverride(classId, weekInfo.keys);
+    const classWeeks = planningData[classId] || {};
+    const allWeeks = planningData.ALL || {};
+    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
+    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
+    const base = (classWeekKey || allWeekKey)
+      ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
+      : { lessons: [], items: [], note: '' };
+    const merged = override ? mergePlanEntries(base, override) : base;
+
+    planningEditorMeta.textContent = `Klas ${classId} · week ${weekInfo.week.weekNo}`;
+    planningEditorItems.value = (merged.items || []).join('\n');
+    planningEditorNote.value = String(merged.note || '');
+  }
+
   function applyAgendaSource(url, persist = true) {
     agendaSourceUrl = String(url || '').trim();
     if (agendaSourceInput) agendaSourceInput.value = agendaSourceUrl;
@@ -1275,18 +1382,46 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   planningSourceSaveBtn?.addEventListener('click', () => {
+    planningSourceFallbackTried = false;
     applyPlanningSource(planningSourceInput?.value || '', true);
   });
 
   planningSourceInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
+      planningSourceFallbackTried = false;
       applyPlanningSource(planningSourceInput.value, true);
     }
   });
 
   planningSourceClearBtn?.addEventListener('click', () => {
-    applyPlanningSource('', true);
+    planningSourceFallbackTried = false;
+    applyPlanningSource(defaultPlanningSourceUrl(), true);
+  });
+
+  planningEditorSaveBtn?.addEventListener('click', () => {
+    const { classId, weekInfo } = activeWeekContext();
+    const weekKey = String(weekInfo.week.weekNo);
+    const key = overrideKey(classId, weekKey);
+    if (!key) return;
+    planningOverrides[key] = {
+      items: String(planningEditorItems?.value || '')
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean),
+      note: String(planningEditorNote?.value || '').trim(),
+    };
+    savePlanningOverrides();
+    renderPlanning();
+  });
+
+  planningEditorClearBtn?.addEventListener('click', () => {
+    const { classId, weekInfo } = activeWeekContext();
+    const key = overrideKey(classId, String(weekInfo.week.weekNo));
+    if (!key) return;
+    delete planningOverrides[key];
+    savePlanningOverrides();
+    renderPlanning();
   });
 
   planningRefreshBtn?.addEventListener('click', () => {
@@ -1367,7 +1502,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPlanning();
     updateClockMarkerTarget(new Date());
   });
+  planningOverrides = loadPlanningOverrides();
   applyLocalLinksPreference(resolveLocalLinksPreference(), false);
+  planningSourceFallbackTried = false;
   applyPlanningSource(resolvePlanningSourceUrl(), false);
   applyAgendaSource(resolveAgendaSourceUrl(), false);
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
