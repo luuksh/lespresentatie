@@ -256,14 +256,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -505,14 +507,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -629,14 +633,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -1294,14 +1300,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -1543,14 +1551,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -1667,14 +1677,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -2332,14 +2344,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -2581,14 +2595,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -2705,14 +2721,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -3370,14 +3388,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -3619,14 +3639,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -3743,14 +3765,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -4408,14 +4432,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -4657,14 +4683,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -4781,14 +4809,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -5446,14 +5476,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -5695,14 +5727,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -5819,14 +5853,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -6484,14 +6520,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 1: Intro",
-          "presentationId": "droomschool-les-1-intro-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 2: Realiteitscheck",
-          "presentationId": "droomschool-les-2-realiteitscheck-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-realiteitscheck"
         }
       ],
       "items": []
@@ -6733,14 +6771,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 3: Projectplan",
-          "presentationId": "droomschool-les-3-projectplan-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-projectplan"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 4: Projectbeschrijving",
-          "presentationId": "droomschool-les-4-projectbeschrijving-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-projectbeschrijving"
         }
       ],
       "items": []
@@ -6857,14 +6897,16 @@
         {
           "project": "Droomschool",
           "lesson": "Les 5: Pitch voorbereiden",
-          "presentationId": "droomschool-les-5-pitch-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-droomschool",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-pitch-voorbereiden"
         },
         {
           "project": "Droomschool",
           "lesson": "Les 6: Presentaties & Reflectie",
-          "presentationId": "droomschool-les-6-presentaties-reflectie-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-droomschool",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presentaties-reflectie"
         }
       ],
       "items": []
@@ -27599,6 +27641,813 @@
         "marker-les-11-generale-repetitie-presentaties": 99,
         "marker-les-12-presentaties": 107,
         "marker-les-13-presentaties": 115
+      }
+    },
+    "project-droomschool": {
+      "id": "project-droomschool",
+      "presentationType": "project-overview",
+      "title": "Droomschool",
+      "subtitle": "Droomschool",
+      "project": "Droomschool",
+      "importVersion": 2026030406,
+      "markerDecks": {
+        "marker-les-1-intro": [
+          {
+            "type": "bullets",
+            "title": "Les 1 – Wat kan beter op school?",
+            "subtitle": "",
+            "items": [
+              "Projectstart: Verbeter het CGU"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom dit project?",
+            "subtitle": "",
+            "items": [
+              "Jij kunt als leerling het CGU echt verbeteren!",
+              "We werken in teams en eindigen met een échte pitch.",
+              "Het winnende idee voeren we ook echt uit!",
+              "Vandaag: wat zou jij willen veranderen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vorm teams van 3 à 4 leerlingen",
+            "subtitle": "",
+            "items": [
+              "Zorg voor een gevarieerde groep (diverse kwaliteiten).",
+              "Iedereen krijgt later een rol: onderzoeker, schrijver, presentator, enz.",
+              "Schrijf je groepsleden op in je schrift."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Brainstorm – Wat kan beter op het CGU?",
+            "subtitle": "",
+            "items": [
+              "Denk aan thema’s: sfeer, pauzes, lessen, lokalen, duurzaamheid…",
+              "Bedenk minstens 5 ideeën per groepje.",
+              "Schrijf ze duidelijk op groot papier of digitaal.",
+              "Klaar? Hang op of lever in bij docent."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kies je Top 3",
+            "subtitle": "",
+            "items": [
+              "Welke drie ideeën zijn het sterkst?",
+              "Denk aan:",
+              "Is het haalbaar op korte termijn?",
+              "Is het echt een verbetering voor de school?",
+              "Is het uitvoerbaar voor jullie groepje?",
+              "Bespreek in de groep en maak een top 3."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Deel je ideeën met de klas",
+            "subtitle": "",
+            "items": [
+              "Ieder groepje noemt hun 3 ideeën.",
+              "Docent verzamelt alle ideeën op het bord.",
+              "Herken je ideeën van andere groepjes?",
+              "Vraag om uitleg bij onduidelijke voorstellen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kies één idee per groep",
+            "subtitle": "",
+            "items": [
+              "Dit idee ga je in de volgende lessen uitwerken.",
+              "Noteer jullie keuze + motivatie.",
+              "Lever dit schriftelijk in (kort verslagje).",
+              "Vanaf volgende les: realiteitscheck!"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Voorbereiding voor volgende keer",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-2-realiteitscheck": [
+          {
+            "type": "title",
+            "title": "Droomschool: verbeter het CGU",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Concretiseer: werk je plan uit",
+            "subtitle": "",
+            "items": [
+              "Wie, wat, waar, hoe, wanneer, hoe lang?",
+              "Wat is ervoor nodig?",
+              "Hoeveel zou het kosten?",
+              "Daarna:",
+              "Wie zou je hiervoor kunnen spreken?",
+              "Wie kan jullie verder helpen?",
+              "Hoe kunnen jullie contact leggen?",
+              "Daarna:",
+              "Wat is nu jullie eerste stap om meer informatie te verzamelen?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Haalbaar?",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-3-projectplan": [
+          {
+            "type": "bullets",
+            "title": "Les 3 Projectplan schrijven",
+            "subtitle": "",
+            "items": [
+              "Van idee naar plan: hoe voeren we het écht uit?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat leer je vandaag?",
+            "subtitle": "",
+            "items": [
+              "Een concreet uitvoeringsplan opstellen",
+              "Duidelijke stappen, verantwoordelijkheden en planning",
+              "Obstakels voorzien en oplossingen bedenken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Een goed projectplan bevat:",
+            "subtitle": "",
+            "items": [
+              "Probleem en doel",
+              "Oplossing (jullie idee)",
+              "Stappenplan / tijdlijn",
+              "Wie doet wat?",
+              "Wat hebben we nodig?",
+              "Wat zijn mogelijke obstakels en oplossingen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag: invullen projectplan",
+            "subtitle": "",
+            "items": [
+              "Gebruik het werkblad of digitaal formulier",
+              "Werk nauwkeurig en volledig",
+              "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
+              "Maak je plan duidelijk en concreet"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tussentijdse feedback",
+            "subtitle": "",
+            "items": [
+              "Ruil je plan met een ander groepje",
+              "Beoordeel elkaars plan op:",
+              "Duidelijkheid",
+              "Realisme",
+              "Originaliteit",
+              "Volledigheid",
+              "Geef tips + tops terug aan elkaar"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werk feedback in je plan",
+            "subtitle": "",
+            "items": [
+              "Verwerk de feedback in je eigen plan",
+              "Check nog eens de onderdelen van het plan",
+              "Lever de definitieve versie digitaal of op papier in"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Volgende les: schrijf je pitch!",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-4-projectbeschrijving": [
+          {
+            "type": "bullets",
+            "title": "Les 4 Projectbeschrijving schrijven",
+            "subtitle": "",
+            "items": [
+              "Vertel helder wat jullie willen verbeteren en waarom"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat leer je vandaag?",
+            "subtitle": "",
+            "items": [
+              "Jullie project helder en overtuigend opschrijven",
+              "Leren hoe je anderen enthousiast maakt met tekst",
+              "Een tekst maken die geschikt is voor de jury én voor op papier of online"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat moet erin staan?",
+            "subtitle": "",
+            "items": [
+              "Titel van het project",
+              "Inleiding Wat is het probleem op school?",
+              "Ons idee Wat gaan wij doen?",
+              "Waarom dit idee? Motiveer je keuze",
+              "Hoe werkt het? Leg praktisch uit wat je gaat doen",
+              "Slot Waarom moet dit gekozen worden?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag!",
+            "subtitle": "",
+            "items": [
+              "Gebruik pen/papier of een laptop",
+              "Werk samen aan één tekst, maar met ieders input",
+              "Let op: schrijf helder, overtuigend en zonder spelfouten",
+              "Gebruik de feedback uit vorige lessen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Klasgenoot = redacteur",
+            "subtitle": "",
+            "items": [
+              "Wissel teksten uit met een ander groepje",
+              "Lees kritisch en geef feedback op:",
+              "Begrijpelijkheid",
+              "Overtuigingskracht",
+              "Taalgebruik",
+              "Logische opbouw",
+              "Pas je tekst daarna aan"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Definitieve versie inleveren",
+            "subtitle": "",
+            "items": [
+              "Zet je namen en klas erbij",
+              "Lever de tekst in als Word/PDF (digitaal) of print",
+              "Deze tekst gebruiken jullie bij de pitch én in de projectpresentatie"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Volgende les: de pitch voorbereiden!",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-5-pitch-voorbereiden": [
+          {
+            "type": "bullets",
+            "title": "Les 5 – Pitch voorbereiden en oefenen",
+            "subtitle": "",
+            "items": [
+              "Overtuig de jury met jullie idee!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat leer je vandaag?",
+            "subtitle": "",
+            "items": [
+              "Een korte en krachtige pitch maken",
+              "Spreekvaardigheid en presentatievaardigheden oefenen",
+              "Gebruik van ondersteunende middelen plannen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een goede pitch?",
+            "subtitle": "",
+            "items": [
+              "Kort (max. 2 minuten)",
+              "Enthousiast en overtuigend gebracht",
+              "Iedereen van de groep doet mee",
+              "Helder: wat is het probleem, jullie idee en waarom dat goed is",
+              "Mag ondersteund worden met beeld, voorwerpen of PowerPoint"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 – Schrijf samen je pitch",
+            "subtitle": "",
+            "items": [
+              "Gebruik de projectbeschrijving als basis",
+              "Maak de tekst levendig, helder en actief",
+              "Verdeel wie welk deel zegt (iedereen spreekt!)",
+              "Oefen het hardop en pas aan waar nodig"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2 – Oefenen, oefenen, oefenen!",
+            "subtitle": "",
+            "items": [
+              "Oefen minstens drie keer hardop",
+              "Let op stemgebruik, oogcontact, lichaamstaal",
+              "Vraag een ander groepje om jullie feedback te geven",
+              "Probeer het met en zonder hulpmiddelen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Verbeteren met feedback",
+            "subtitle": "",
+            "items": [
+              "Pas tekst en uitvoering aan op basis van tips",
+              "Zorg dat timing goed is (max. 2 minuten!)",
+              "Check of je hulpmiddelen werken (beelden, materialen, slides)"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Voorbereiden op de pitchdag",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-6-presentaties-reflectie": [
+          {
+            "type": "bullets",
+            "title": "Les 6 Presentatie aan de jury & evaluatie",
+            "subtitle": "",
+            "items": [
+              "Tijd om te schitteren!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat gaan we doen?",
+            "subtitle": "",
+            "items": [
+              "Jullie project presenteren aan de jury",
+              "Ervaren hoe het is om een echt idee te verdedigen",
+              "Reflecteren op het project: wat ging goed, wat kan beter?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe werkt de jurering?",
+            "subtitle": "",
+            "items": [
+              "Elke groep krijgt 2 minuten voor de pitch",
+              "Daarna 2 minuten voor vragen van de jury",
+              "De jury beoordeelt op:",
+              "Originaliteit",
+              "Haalbaarheid",
+              "Overtuigingskracht",
+              "Samenwerking"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Laatste check voor je groep",
+            "subtitle": "",
+            "items": [
+              "Is iedereen aanwezig en voorbereid?",
+              "Heb je je hulpmiddelen bij je?",
+              "Kun je alle tekst zonder briefje?",
+              "Wees ontspannen je kent je project!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie Succesmomenten",
+            "subtitle": "",
+            "items": [
+              "Wat ging goed in het project?",
+              "Waar zijn jullie trots op?",
+              "Welke rol paste goed bij jou?",
+              "Wat hebben jullie goed opgelost als groep?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie Verbeterpunten",
+            "subtitle": "",
+            "items": [
+              "Wat liep niet zo soepel?",
+              "Waar zou je volgende keer anders beginnen?",
+              "Wat heb je geleerd over samenwerken?",
+              "Wat neem je mee naar een volgend project?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Bedankt voor jullie inzet!",
+            "subtitle": ""
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Droomschool",
+          "subtitle": "Droomschool"
+        },
+        {
+          "type": "bullets",
+          "title": "Les 1 – Wat kan beter op school?",
+          "subtitle": "",
+          "items": [
+            "Projectstart: Verbeter het CGU"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom dit project?",
+          "subtitle": "",
+          "items": [
+            "Jij kunt als leerling het CGU echt verbeteren!",
+            "We werken in teams en eindigen met een échte pitch.",
+            "Het winnende idee voeren we ook echt uit!",
+            "Vandaag: wat zou jij willen veranderen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vorm teams van 3 à 4 leerlingen",
+          "subtitle": "",
+          "items": [
+            "Zorg voor een gevarieerde groep (diverse kwaliteiten).",
+            "Iedereen krijgt later een rol: onderzoeker, schrijver, presentator, enz.",
+            "Schrijf je groepsleden op in je schrift."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Brainstorm – Wat kan beter op het CGU?",
+          "subtitle": "",
+          "items": [
+            "Denk aan thema’s: sfeer, pauzes, lessen, lokalen, duurzaamheid…",
+            "Bedenk minstens 5 ideeën per groepje.",
+            "Schrijf ze duidelijk op groot papier of digitaal.",
+            "Klaar? Hang op of lever in bij docent."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies je Top 3",
+          "subtitle": "",
+          "items": [
+            "Welke drie ideeën zijn het sterkst?",
+            "Denk aan:",
+            "Is het haalbaar op korte termijn?",
+            "Is het echt een verbetering voor de school?",
+            "Is het uitvoerbaar voor jullie groepje?",
+            "Bespreek in de groep en maak een top 3."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Deel je ideeën met de klas",
+          "subtitle": "",
+          "items": [
+            "Ieder groepje noemt hun 3 ideeën.",
+            "Docent verzamelt alle ideeën op het bord.",
+            "Herken je ideeën van andere groepjes?",
+            "Vraag om uitleg bij onduidelijke voorstellen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies één idee per groep",
+          "subtitle": "",
+          "items": [
+            "Dit idee ga je in de volgende lessen uitwerken.",
+            "Noteer jullie keuze + motivatie.",
+            "Lever dit schriftelijk in (kort verslagje).",
+            "Vanaf volgende les: realiteitscheck!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Voorbereiding voor volgende keer",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Droomschool: verbeter het CGU",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Concretiseer: werk je plan uit",
+          "subtitle": "",
+          "items": [
+            "Wie, wat, waar, hoe, wanneer, hoe lang?",
+            "Wat is ervoor nodig?",
+            "Hoeveel zou het kosten?",
+            "Daarna:",
+            "Wie zou je hiervoor kunnen spreken?",
+            "Wie kan jullie verder helpen?",
+            "Hoe kunnen jullie contact leggen?",
+            "Daarna:",
+            "Wat is nu jullie eerste stap om meer informatie te verzamelen?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Haalbaar?",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 3 Projectplan schrijven",
+          "subtitle": "",
+          "items": [
+            "Van idee naar plan: hoe voeren we het écht uit?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "items": [
+            "Een concreet uitvoeringsplan opstellen",
+            "Duidelijke stappen, verantwoordelijkheden en planning",
+            "Obstakels voorzien en oplossingen bedenken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Een goed projectplan bevat:",
+          "subtitle": "",
+          "items": [
+            "Probleem en doel",
+            "Oplossing (jullie idee)",
+            "Stappenplan / tijdlijn",
+            "Wie doet wat?",
+            "Wat hebben we nodig?",
+            "Wat zijn mogelijke obstakels en oplossingen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag: invullen projectplan",
+          "subtitle": "",
+          "items": [
+            "Gebruik het werkblad of digitaal formulier",
+            "Werk nauwkeurig en volledig",
+            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
+            "Maak je plan duidelijk en concreet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse feedback",
+          "subtitle": "",
+          "items": [
+            "Ruil je plan met een ander groepje",
+            "Beoordeel elkaars plan op:",
+            "Duidelijkheid",
+            "Realisme",
+            "Originaliteit",
+            "Volledigheid",
+            "Geef tips + tops terug aan elkaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werk feedback in je plan",
+          "subtitle": "",
+          "items": [
+            "Verwerk de feedback in je eigen plan",
+            "Check nog eens de onderdelen van het plan",
+            "Lever de definitieve versie digitaal of op papier in"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les: schrijf je pitch!",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 4 Projectbeschrijving schrijven",
+          "subtitle": "",
+          "items": [
+            "Vertel helder wat jullie willen verbeteren en waarom"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "items": [
+            "Jullie project helder en overtuigend opschrijven",
+            "Leren hoe je anderen enthousiast maakt met tekst",
+            "Een tekst maken die geschikt is voor de jury én voor op papier of online"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet erin staan?",
+          "subtitle": "",
+          "items": [
+            "Titel van het project",
+            "Inleiding Wat is het probleem op school?",
+            "Ons idee Wat gaan wij doen?",
+            "Waarom dit idee? Motiveer je keuze",
+            "Hoe werkt het? Leg praktisch uit wat je gaat doen",
+            "Slot Waarom moet dit gekozen worden?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag!",
+          "subtitle": "",
+          "items": [
+            "Gebruik pen/papier of een laptop",
+            "Werk samen aan één tekst, maar met ieders input",
+            "Let op: schrijf helder, overtuigend en zonder spelfouten",
+            "Gebruik de feedback uit vorige lessen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Klasgenoot = redacteur",
+          "subtitle": "",
+          "items": [
+            "Wissel teksten uit met een ander groepje",
+            "Lees kritisch en geef feedback op:",
+            "Begrijpelijkheid",
+            "Overtuigingskracht",
+            "Taalgebruik",
+            "Logische opbouw",
+            "Pas je tekst daarna aan"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Definitieve versie inleveren",
+          "subtitle": "",
+          "items": [
+            "Zet je namen en klas erbij",
+            "Lever de tekst in als Word/PDF (digitaal) of print",
+            "Deze tekst gebruiken jullie bij de pitch én in de projectpresentatie"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les: de pitch voorbereiden!",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 5 – Pitch voorbereiden en oefenen",
+          "subtitle": "",
+          "items": [
+            "Overtuig de jury met jullie idee!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "items": [
+            "Een korte en krachtige pitch maken",
+            "Spreekvaardigheid en presentatievaardigheden oefenen",
+            "Gebruik van ondersteunende middelen plannen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een goede pitch?",
+          "subtitle": "",
+          "items": [
+            "Kort (max. 2 minuten)",
+            "Enthousiast en overtuigend gebracht",
+            "Iedereen van de groep doet mee",
+            "Helder: wat is het probleem, jullie idee en waarom dat goed is",
+            "Mag ondersteund worden met beeld, voorwerpen of PowerPoint"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 – Schrijf samen je pitch",
+          "subtitle": "",
+          "items": [
+            "Gebruik de projectbeschrijving als basis",
+            "Maak de tekst levendig, helder en actief",
+            "Verdeel wie welk deel zegt (iedereen spreekt!)",
+            "Oefen het hardop en pas aan waar nodig"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2 – Oefenen, oefenen, oefenen!",
+          "subtitle": "",
+          "items": [
+            "Oefen minstens drie keer hardop",
+            "Let op stemgebruik, oogcontact, lichaamstaal",
+            "Vraag een ander groepje om jullie feedback te geven",
+            "Probeer het met en zonder hulpmiddelen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Verbeteren met feedback",
+          "subtitle": "",
+          "items": [
+            "Pas tekst en uitvoering aan op basis van tips",
+            "Zorg dat timing goed is (max. 2 minuten!)",
+            "Check of je hulpmiddelen werken (beelden, materialen, slides)"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Voorbereiden op de pitchdag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 6 Presentatie aan de jury & evaluatie",
+          "subtitle": "",
+          "items": [
+            "Tijd om te schitteren!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat gaan we doen?",
+          "subtitle": "",
+          "items": [
+            "Jullie project presenteren aan de jury",
+            "Ervaren hoe het is om een echt idee te verdedigen",
+            "Reflecteren op het project: wat ging goed, wat kan beter?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe werkt de jurering?",
+          "subtitle": "",
+          "items": [
+            "Elke groep krijgt 2 minuten voor de pitch",
+            "Daarna 2 minuten voor vragen van de jury",
+            "De jury beoordeelt op:",
+            "Originaliteit",
+            "Haalbaarheid",
+            "Overtuigingskracht",
+            "Samenwerking"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste check voor je groep",
+          "subtitle": "",
+          "items": [
+            "Is iedereen aanwezig en voorbereid?",
+            "Heb je je hulpmiddelen bij je?",
+            "Kun je alle tekst zonder briefje?",
+            "Wees ontspannen je kent je project!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie Succesmomenten",
+          "subtitle": "",
+          "items": [
+            "Wat ging goed in het project?",
+            "Waar zijn jullie trots op?",
+            "Welke rol paste goed bij jou?",
+            "Wat hebben jullie goed opgelost als groep?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie Verbeterpunten",
+          "subtitle": "",
+          "items": [
+            "Wat liep niet zo soepel?",
+            "Waar zou je volgende keer anders beginnen?",
+            "Wat heb je geleerd over samenwerken?",
+            "Wat neem je mee naar een volgend project?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Bedankt voor jullie inzet!",
+          "subtitle": ""
+        }
+      ],
+      "markers": {
+        "marker-les-1-intro": 1,
+        "marker-les-2-realiteitscheck": 9,
+        "marker-les-3-projectplan": 12,
+        "marker-les-4-projectbeschrijving": 19,
+        "marker-les-5-pitch-voorbereiden": 26,
+        "marker-les-6-presentaties-reflectie": 33
       }
     }
   }
