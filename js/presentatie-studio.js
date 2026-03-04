@@ -2,7 +2,6 @@ const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
 
 const projectSelect = document.getElementById('projectSelect');
-const generateInternalBtn = document.getElementById('generateInternalBtn');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
 const projectTitle = document.getElementById('projectTitle');
 const deckTitleInput = document.getElementById('deckTitleInput');
@@ -208,36 +207,6 @@ function saveProject() {
   setStatus(`Project opgeslagen: ${project}.`);
 }
 
-function generateInternalVersion() {
-  const project = String(projectSelect.value || '').trim();
-  if (!project) return;
-  const deckId = projectDeckId(project);
-  const pres = state.doc.presentations[deckId];
-  if (!pres) return;
-
-  for (const [markerId, idxRaw] of Object.entries(pres.markers || {})) {
-    const idx = Number(idxRaw);
-    if (!Number.isInteger(idx) || !pres.slides[idx]) continue;
-    const markerLabel = markerId.replace(/^marker-/, '').replace(/-/g, ' ');
-    pres.slides[idx].type = 'bullets';
-    if (!String(pres.slides[idx].title || '').trim()) {
-      pres.slides[idx].title = markerLabel;
-    }
-    if (!Array.isArray(pres.slides[idx].items) || !pres.slides[idx].items.length) {
-      pres.slides[idx].items = [
-        'Doel van de les',
-        'Kernactiviteit',
-        'Verwerking',
-        'Afsluiting / reflectie',
-      ];
-    }
-  }
-
-  saveStudio();
-  renderProject();
-  setStatus(`Interne versie gegenereerd voor project: ${project}.`);
-}
-
 function fillProjects(doc) {
   const projects = [...new Set(
     (doc.entries || [])
@@ -274,6 +243,5 @@ async function boot() {
 
 projectSelect.addEventListener('change', renderProject);
 saveProjectBtn.addEventListener('click', saveProject);
-generateInternalBtn.addEventListener('click', generateInternalVersion);
 
 boot();
