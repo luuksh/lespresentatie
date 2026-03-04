@@ -707,6 +707,7 @@
       const boardFrame = document.getElementById('plattegrondFrame');
       const layoutRoot = document.getElementById('layoutRoot');
       const grid = document.getElementById('plattegrond');
+      const deskRow = document.querySelector('.bureau-rij');
       const groupLayoutTypes = new Set(['groepjes', 'drietallen', 'vijftallen', 'presentatievolgorde']);
 
       function nowNL() {
@@ -730,6 +731,18 @@
 
         boardFrame.style.transform = 'scale(1)';
         boardScaler.style.height = 'auto';
+        if (deskRow && grid) {
+          const isPresentationList = activeType === 'presentatievolgorde';
+          if (isPresentationList) {
+            deskRow.style.width = '100%';
+          } else {
+            const contentW = Math.ceil(grid.scrollWidth || 0);
+            deskRow.style.width = contentW > 0 ? `${contentW}px` : 'auto';
+          }
+          deskRow.style.maxWidth = '100%';
+          deskRow.style.marginLeft = 'auto';
+          deskRow.style.marginRight = 'auto';
+        }
 
         const naturalW = boardFrame.scrollWidth;
         const naturalH = boardFrame.scrollHeight;
