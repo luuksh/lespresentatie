@@ -237,7 +237,11 @@ function markerRowsForProject(projectName) {
   const fallbackOrder = Object.keys(pres.markers || {}).sort((a, b) =>
     a.localeCompare(b, 'nl', { numeric: true, sensitivity: 'base' })
   );
-  const markerOrder = (orderedMarkerIds.length ? orderedMarkerIds : fallbackOrder).sort((a, b) => {
+  const baseOrder = orderedMarkerIds.length ? [...orderedMarkerIds] : [...fallbackOrder];
+  for (const markerId of fallbackOrder) {
+    if (!seen.has(markerId)) baseOrder.push(markerId);
+  }
+  const markerOrder = baseOrder.sort((a, b) => {
     const aNum = lessonNumberFor(a);
     const bNum = lessonNumberFor(b);
     if (aNum !== bNum) return aNum - bNum;

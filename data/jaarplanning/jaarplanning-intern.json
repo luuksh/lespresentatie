@@ -237,8 +237,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -283,14 +284,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -1296,8 +1299,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -1342,14 +1346,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -2355,8 +2361,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -2401,14 +2408,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -3414,8 +3423,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -3460,14 +3470,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -4473,8 +4485,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -4519,14 +4532,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -5532,8 +5547,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -5578,14 +5594,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -6591,8 +6609,9 @@
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
-          "presentationId": "nutspot-les-2-interviewdag-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-interviewdag"
         }
       ],
       "items": []
@@ -6637,14 +6656,16 @@
         {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
-          "presentationId": "nutspot-les-3-interview-uitwerking-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-nutspot",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
-          "presentationId": "nutspot-les-4-herschrijven-en-presenteren-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-nutspot",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
         }
       ],
       "items": []
@@ -31408,6 +31429,603 @@
         "marker-les-7-printen": 70,
         "marker-les-8-presentatie": 77,
         "marker-les-9-reflectie": 84
+      }
+    },
+    "project-nutspot": {
+      "id": "project-nutspot",
+      "presentationType": "project-overview",
+      "title": "Nutspot",
+      "subtitle": "Nutspot",
+      "project": "Nutspot",
+      "importVersion": 2026030411,
+      "markerDecks": {
+        "marker-les-1-intro": [
+          {
+            "type": "title",
+            "title": "Les 1 – Het nut van school",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom ga jij naar school?",
+            "subtitle": "",
+            "items": [
+              "Wat leer je er echt?",
+              "Wat is het nut?",
+              "Deze week gaan we dat onderzoeken én iemand interviewen over zijn of haar visie!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 – Lezen",
+            "subtitle": "",
+            "items": [
+              "Lees de tekst 'Wat is het nut van school?' (boekje blz. 1).",
+              "Onderstreep wat jij opvallend vindt.",
+              "Wat herken je zelf? Wat vind je juist vreemd?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2 – Begrippen",
+            "subtitle": "",
+            "items": [
+              "Begrippen:",
+              "participeren",
+              "aanzienlijk",
+              "onderscheid",
+              "noodzakelijk",
+              "analyseren",
+              "Maak de voorbeeldvragen in duo's en bespreek kort klassikaal."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Het interviewproject",
+            "subtitle": "",
+            "items": [
+              "Eindopdracht: interview een ander over het nut van school",
+              "Het wordt een diepgaand gesprek met echte antwoorden. Geen 'even invullen'!",
+              "Je werkt in groepjes van 3 en hebt elk een duidelijke rol:",
+              "Interviewvoorbereider",
+              "Interviewer",
+              "Redacteur (uitwerking)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4 – Groepjes & rollen",
+            "subtitle": "",
+            "items": [
+              "Vorm groepjes van 3 leerlingen",
+              "Spreek goed af wie:",
+              "de voorbereider is",
+              "de interviewer is",
+              "de redacteur is",
+              "Noteer dit op het werkblad of in je schrift"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 5 – Interviewvragen bedenken",
+            "subtitle": "",
+            "items": [
+              "Bedenk met je groep minstens 5 goede vragen",
+              "Voorbeelden:",
+              "Wat vond u het meest leerzaam op school?",
+              "Wat hielp later in uw leven of werk?",
+              "Wat zou u willen veranderen aan school?",
+              "Vindt u school belangrijk? Waarom?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende les: het interview!",
+            "subtitle": "",
+            "items": [
+              "Alles gebeurt in de les",
+              "Volgende les: interview uitvoeren!",
+              "Denk alvast na:",
+              "Wie gaan jullie interviewen?",
+              "Hoe zorgen jullie dat het gesprek écht diepgang heeft?"
+            ]
+          }
+        ],
+        "marker-les-2-interviewdag": [
+          {
+            "type": "title",
+            "title": "Les 2 – Het interview uitvoeren",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag voeren jullie je interview uit!",
+            "subtitle": "",
+            "items": [
+              "Herinner je de rolverdeling nog?",
+              "De voorbereider controleert de vragenlijst",
+              "De interviewer voert het gesprek",
+              "De redacteur zorgt voor goede notities of opname"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 – Check je vragenlijst",
+            "subtitle": "",
+            "items": [
+              "Hebben jullie minstens 5 goede vragen?",
+              "Zijn de vragen open? (dus niet ja/nee)",
+              "Zit er minstens één verdiepingsvraag bij?",
+              "Bijv. 'Wat betekent dat voor u?' of 'Kunt u daar een voorbeeld van geven?'"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2 – Spreek goed af",
+            "subtitle": "",
+            "items": [
+              "Wie leidt het gesprek?",
+              "Wie let op tijd en afronding?",
+              "Hoe leggen jullie het gesprek vast? (schrijven of opnemen)",
+              "Let op: vraag altijd toestemming bij een opname."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Tijd voor het interview",
+            "subtitle": "",
+            "items": [
+              "Jullie hebben ongeveer 25–30 minuten voor het interview.",
+              "Zoek een rustige plek.",
+              "Stel je netjes voor en vertel waarom je dit gesprek doet.",
+              "Durf door te vragen. Wees nieuwsgierig.",
+              "Laat iemand zich echt gehoord voelen!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4 – Terug in de klas",
+            "subtitle": "",
+            "items": [
+              "Interview klaar?",
+              "Noteer alvast 2 citaten of uitspraken die je interessant vond.",
+              "Bedenk alvast welk onderwerp of welke zin je zou willen uitwerken.",
+              "Volgende les: we gaan écht schrijven!"
+            ]
+          }
+        ],
+        "marker-les-3-interview-uitwerking": [
+          {
+            "type": "title",
+            "title": "Les 3 – Analyse en structuur",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag gaan jullie het interview uitwerken.",
+            "subtitle": "",
+            "items": [
+              "Herinner je rol:",
+              "Redacteur leidt de uitwerking",
+              "Iedereen helpt mee met inhoud en formulering",
+              "Werk samen, maar houd focus!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 – Analyse: wat valt op?",
+            "subtitle": "",
+            "items": [
+              "Lees samen het hele interview terug",
+              "Onderstreep de 3 meest interessante uitspraken of meningen",
+              "Bedenk: welk beeld van 'het nut van school' komt hieruit naar voren?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2 – Koppel aan begrippen",
+            "subtitle": "",
+            "items": [
+              "Gebruik de begrippen uit les 1:",
+              "participeren",
+              "aanzienlijk",
+              "onderscheid",
+              "noodzakelijk",
+              "analyseren",
+              "Komen deze begrippen terug in het antwoord van jullie geïnterviewde?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Kies een vorm",
+            "subtitle": "",
+            "items": [
+              "Kies hoe jullie het interview gaan uitwerken:",
+              "Verslag in lopende tekst",
+              "Met citaten, analyse en conclusie",
+              "Q&A (vraag-antwoord)",
+              "Met korte inleiding en reflectie",
+              "Persoonlijk verslag",
+              "Wat heb jij geleerd van dit gesprek?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4 – Begin met schrijven",
+            "subtitle": "",
+            "items": [
+              "Werk in jullie gekozen vorm:",
+              "Start met de inleiding: wie, wat, waarom",
+              "Verwerk de citaten en analyse",
+              "Eindig met een reflectie of conclusie",
+              "Volgende les: herschrijven en afronden!"
+            ]
+          }
+        ],
+        "marker-les-4-herschrijven-en-presenteren": [
+          {
+            "type": "title",
+            "title": "Les 4 – Interview afronden",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag maken jullie het interview echt af:",
+            "subtitle": "",
+            "items": [
+              "Duidelijke structuur",
+              "Goede formulering",
+              "Correct Nederlands",
+              "Redacteur leidt de herschrijfronde!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 – Herschrijftips",
+            "subtitle": "",
+            "items": [
+              "Tips:",
+              "Begin met een heldere inleiding: wie sprak je en waarom?",
+              "Gebruik korte alinea’s",
+              "Werk met citaten en toelichting",
+              "Eindig met een conclusie of reflectie",
+              "Check spelling en zinsbouw"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2 – Check de begrippen",
+            "subtitle": "",
+            "items": [
+              "Controleer of jullie de volgende woorden in de tekst verwerkt hebben:",
+              "participeren",
+              "aanzienlijk",
+              "onderscheid",
+              "noodzakelijk",
+              "analyseren",
+              "(of op een goede manier uitgelegd zonder het woord letterlijk te noemen)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Presentatie (indien tijd)",
+            "subtitle": "",
+            "items": [
+              "Bereid een korte presentatie voor:",
+              "Wie spraken jullie?",
+              "Wat was opvallend of leerzaam?",
+              "Wat vonden jullie zelf van het gesprek?",
+              "Duur: max. 2 minuten per groep"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4 – Wat vond jij zelf?",
+            "subtitle": "",
+            "items": [
+              "Schrijf individueel in 3 zinnen:",
+              "Wat heb jij geleerd over het nut van school?",
+              "Heeft het interview jouw mening veranderd?",
+              "Wat wil je zelf later (leren of doen)?"
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Nutspot",
+          "subtitle": "Nutspot"
+        },
+        {
+          "type": "title",
+          "title": "Les 1 – Het nut van school",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom ga jij naar school?",
+          "subtitle": "",
+          "items": [
+            "Wat leer je er echt?",
+            "Wat is het nut?",
+            "Deze week gaan we dat onderzoeken én iemand interviewen over zijn of haar visie!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 – Lezen",
+          "subtitle": "",
+          "items": [
+            "Lees de tekst 'Wat is het nut van school?' (boekje blz. 1).",
+            "Onderstreep wat jij opvallend vindt.",
+            "Wat herken je zelf? Wat vind je juist vreemd?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2 – Begrippen",
+          "subtitle": "",
+          "items": [
+            "Begrippen:",
+            "participeren",
+            "aanzienlijk",
+            "onderscheid",
+            "noodzakelijk",
+            "analyseren",
+            "Maak de voorbeeldvragen in duo's en bespreek kort klassikaal."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Het interviewproject",
+          "subtitle": "",
+          "items": [
+            "Eindopdracht: interview een ander over het nut van school",
+            "Het wordt een diepgaand gesprek met echte antwoorden. Geen 'even invullen'!",
+            "Je werkt in groepjes van 3 en hebt elk een duidelijke rol:",
+            "Interviewvoorbereider",
+            "Interviewer",
+            "Redacteur (uitwerking)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4 – Groepjes & rollen",
+          "subtitle": "",
+          "items": [
+            "Vorm groepjes van 3 leerlingen",
+            "Spreek goed af wie:",
+            "de voorbereider is",
+            "de interviewer is",
+            "de redacteur is",
+            "Noteer dit op het werkblad of in je schrift"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 5 – Interviewvragen bedenken",
+          "subtitle": "",
+          "items": [
+            "Bedenk met je groep minstens 5 goede vragen",
+            "Voorbeelden:",
+            "Wat vond u het meest leerzaam op school?",
+            "Wat hielp later in uw leven of werk?",
+            "Wat zou u willen veranderen aan school?",
+            "Vindt u school belangrijk? Waarom?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende les: het interview!",
+          "subtitle": "",
+          "items": [
+            "Alles gebeurt in de les",
+            "Volgende les: interview uitvoeren!",
+            "Denk alvast na:",
+            "Wie gaan jullie interviewen?",
+            "Hoe zorgen jullie dat het gesprek écht diepgang heeft?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 2 – Het interview uitvoeren",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag voeren jullie je interview uit!",
+          "subtitle": "",
+          "items": [
+            "Herinner je de rolverdeling nog?",
+            "De voorbereider controleert de vragenlijst",
+            "De interviewer voert het gesprek",
+            "De redacteur zorgt voor goede notities of opname"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 – Check je vragenlijst",
+          "subtitle": "",
+          "items": [
+            "Hebben jullie minstens 5 goede vragen?",
+            "Zijn de vragen open? (dus niet ja/nee)",
+            "Zit er minstens één verdiepingsvraag bij?",
+            "Bijv. 'Wat betekent dat voor u?' of 'Kunt u daar een voorbeeld van geven?'"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2 – Spreek goed af",
+          "subtitle": "",
+          "items": [
+            "Wie leidt het gesprek?",
+            "Wie let op tijd en afronding?",
+            "Hoe leggen jullie het gesprek vast? (schrijven of opnemen)",
+            "Let op: vraag altijd toestemming bij een opname."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Tijd voor het interview",
+          "subtitle": "",
+          "items": [
+            "Jullie hebben ongeveer 25–30 minuten voor het interview.",
+            "Zoek een rustige plek.",
+            "Stel je netjes voor en vertel waarom je dit gesprek doet.",
+            "Durf door te vragen. Wees nieuwsgierig.",
+            "Laat iemand zich echt gehoord voelen!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4 – Terug in de klas",
+          "subtitle": "",
+          "items": [
+            "Interview klaar?",
+            "Noteer alvast 2 citaten of uitspraken die je interessant vond.",
+            "Bedenk alvast welk onderwerp of welke zin je zou willen uitwerken.",
+            "Volgende les: we gaan écht schrijven!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 3 – Analyse en structuur",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag gaan jullie het interview uitwerken.",
+          "subtitle": "",
+          "items": [
+            "Herinner je rol:",
+            "Redacteur leidt de uitwerking",
+            "Iedereen helpt mee met inhoud en formulering",
+            "Werk samen, maar houd focus!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 – Analyse: wat valt op?",
+          "subtitle": "",
+          "items": [
+            "Lees samen het hele interview terug",
+            "Onderstreep de 3 meest interessante uitspraken of meningen",
+            "Bedenk: welk beeld van 'het nut van school' komt hieruit naar voren?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2 – Koppel aan begrippen",
+          "subtitle": "",
+          "items": [
+            "Gebruik de begrippen uit les 1:",
+            "participeren",
+            "aanzienlijk",
+            "onderscheid",
+            "noodzakelijk",
+            "analyseren",
+            "Komen deze begrippen terug in het antwoord van jullie geïnterviewde?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Kies een vorm",
+          "subtitle": "",
+          "items": [
+            "Kies hoe jullie het interview gaan uitwerken:",
+            "Verslag in lopende tekst",
+            "Met citaten, analyse en conclusie",
+            "Q&A (vraag-antwoord)",
+            "Met korte inleiding en reflectie",
+            "Persoonlijk verslag",
+            "Wat heb jij geleerd van dit gesprek?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4 – Begin met schrijven",
+          "subtitle": "",
+          "items": [
+            "Werk in jullie gekozen vorm:",
+            "Start met de inleiding: wie, wat, waarom",
+            "Verwerk de citaten en analyse",
+            "Eindig met een reflectie of conclusie",
+            "Volgende les: herschrijven en afronden!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 4 – Interview afronden",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag maken jullie het interview echt af:",
+          "subtitle": "",
+          "items": [
+            "Duidelijke structuur",
+            "Goede formulering",
+            "Correct Nederlands",
+            "Redacteur leidt de herschrijfronde!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 – Herschrijftips",
+          "subtitle": "",
+          "items": [
+            "Tips:",
+            "Begin met een heldere inleiding: wie sprak je en waarom?",
+            "Gebruik korte alinea’s",
+            "Werk met citaten en toelichting",
+            "Eindig met een conclusie of reflectie",
+            "Check spelling en zinsbouw"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2 – Check de begrippen",
+          "subtitle": "",
+          "items": [
+            "Controleer of jullie de volgende woorden in de tekst verwerkt hebben:",
+            "participeren",
+            "aanzienlijk",
+            "onderscheid",
+            "noodzakelijk",
+            "analyseren",
+            "(of op een goede manier uitgelegd zonder het woord letterlijk te noemen)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Presentatie (indien tijd)",
+          "subtitle": "",
+          "items": [
+            "Bereid een korte presentatie voor:",
+            "Wie spraken jullie?",
+            "Wat was opvallend of leerzaam?",
+            "Wat vonden jullie zelf van het gesprek?",
+            "Duur: max. 2 minuten per groep"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4 – Wat vond jij zelf?",
+          "subtitle": "",
+          "items": [
+            "Schrijf individueel in 3 zinnen:",
+            "Wat heb jij geleerd over het nut van school?",
+            "Heeft het interview jouw mening veranderd?",
+            "Wat wil je zelf later (leren of doen)?"
+          ]
+        }
+      ],
+      "markers": {
+        "marker-les-1-intro": 1,
+        "marker-les-2-interviewdag": 9,
+        "marker-les-3-interview-uitwerking": 15,
+        "marker-les-4-herschrijven-en-presenteren": 21
       }
     }
   }
