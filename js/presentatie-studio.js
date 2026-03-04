@@ -196,15 +196,33 @@ function markerRowsForProject(projectName) {
   const pres = state.doc.presentations[deckId];
   if (!pres || !pres.markers) return [];
 
+  const orderedMarkerIds = [];
+  const seen = new Set();
+  for (const entry of state.doc.entries || []) {
+    for (const lesson of entry?.lessons || []) {
+      if (String(lesson?.project || '').trim() !== projectName) continue;
+      const markerId = String(lesson?.presentationMarkerId || lessonMarkerId(lesson?.lesson || '')).trim();
+      if (!markerId || seen.has(markerId)) continue;
+      seen.add(markerId);
+      orderedMarkerIds.push(markerId);
+    }
+  }
+
   const rows = [];
-  for (const [markerId, slideIndexRaw] of Object.entries(pres.markers)) {
+  const fallbackOrder = Object.keys(pres.markers || {}).sort((a, b) =>
+    a.localeCompare(b, 'nl', { numeric: true, sensitivity: 'base' })
+  );
+  const markerOrder = orderedMarkerIds.length ? orderedMarkerIds : fallbackOrder;
+
+  for (const markerId of markerOrder) {
+    if (!(markerId in (pres.markers || {}))) continue;
+    const slideIndexRaw = pres.markers[markerId];
     const idx = Number(slideIndexRaw);
     const deck = Array.isArray(pres.markerDecks?.[markerId])
       ? pres.markerDecks[markerId]
       : (Number.isInteger(idx) && pres.slides?.[idx] ? [pres.slides[idx]] : []);
     rows.push({ markerId, slides: deck });
   }
-  rows.sort((a, b) => a.markerId.localeCompare(b.markerId));
   return rows;
 }
 
@@ -315,7 +333,7 @@ function saveProject() {
     pres.markerDecks[markerId] = parseSlides(textarea.value);
   }
 
-  const markerOrder = Object.keys(pres.markers || {}).sort((a, b) => a.localeCompare(b));
+  const markerOrder = markerRowsForProject(project).map((row) => row.markerId);
   compilePresentationFromMarkerDecks(pres, markerOrder, project);
 
   saveStudio();
