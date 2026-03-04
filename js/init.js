@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
   const PLAN_OVERRIDES_KEY = 'lespresentatie.jaarplanningOverrides';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
-  const LOCAL_LINKS_KEY = 'lespresentatie.preferLocalLessonLinks';
-  const LOCAL_FILE_BRIDGE_URL = 'http://127.0.0.1:17373/open';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningEditorSaveBtn = document.getElementById('jaarplanningEditorSave');
   const planningEditorClearBtn = document.getElementById('jaarplanningEditorClear');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
-  const planningLocalLinksToggle = document.getElementById('jaarplanningLocalLinksToggle');
   const agendaSourceInput = document.getElementById('agendaSourceInput');
   const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
@@ -35,7 +32,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const presentationEmbedTitle = document.getElementById('presentationEmbedTitle');
   const presentationEmbedFrame = document.getElementById('presentationEmbedFrame');
   const presentationEmbedFallback = document.getElementById('presentationEmbedFallback');
-  const presentationEmbedHint = document.getElementById('presentationEmbedHint');
   const presentationOpenBtn = document.getElementById('presentationOpenBtn');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
   const presentationFullscreenBtn = document.getElementById('presentationFullscreenBtn');
@@ -64,7 +60,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeAgendaEntry = null;
   let selectedLessonIndex = 0;
   let clockMarkerTimer = null;
-  let preferLocalLessonLinks = false;
   let isPresentationOpen = false;
   let activePresentation = null;
   let activeSlideIndex = 0;
@@ -244,30 +239,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof row === 'string') {
       const lesson = row.trim();
       return lesson ? {
-        project: '', lesson, url: '', localUrl: '', embedUrl: '', lessonKey: ''
+        project: '', lesson, lessonKey: ''
       } : null;
     }
     if (!row || typeof row !== 'object') return null;
     const project = String(row.project ?? row.thema ?? '').trim();
     const lesson = String(row.lesson ?? row.les ?? row.title ?? '').trim();
-    const url = String(row.url ?? row.link ?? '').trim();
-    const localUrl = String(
-      row.localUrl
-      ?? row.local_url
-      ?? row.localLink
-      ?? row.lokaalUrl
-      ?? row.local
-      ?? ''
-    ).trim();
-    const embedUrl = String(
-      row.embedUrl
-      ?? row.embed_url
-      ?? row.embedLink
-      ?? row.embed
-      ?? row.onedriveEmbed
-      ?? row.sharepointEmbed
-      ?? ''
-    ).trim();
     const presentationId = String(
       row.presentationId
       ?? row.presentation_id
@@ -277,7 +254,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson) return null;
-    return { project, lesson, url, localUrl, embedUrl, presentationId, lessonKey };
+    return { project, lesson, presentationId, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -770,68 +747,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     localStorage.setItem(PLAN_OVERRIDES_KEY, JSON.stringify(planningOverrides));
   }
 
-  function resolveLocalLinksPreference() {
-    const fromStorage = String(localStorage.getItem(LOCAL_LINKS_KEY) || '').trim().toLowerCase();
-    if (fromStorage === 'true') return true;
-    if (fromStorage === 'false') return false;
-    return Boolean(window.APP_CONFIG?.preferLocalLessonLinks);
-  }
-
-  function normalizeLessonUrl(rawUrl) {
-    const value = String(rawUrl || '').trim();
-    if (!value) return '';
-    if (/^[a-z][a-z0-9+.-]*:/i.test(value)) return value;
-
-    const pathStyle = value.replace(/\\/g, '/');
-    if (/^[a-zA-Z]:\//.test(pathStyle)) {
-      return encodeURI(`file:///${pathStyle}`);
-    }
-    if (pathStyle.startsWith('//')) {
-      return encodeURI(`file:${pathStyle}`);
-    }
-    if (pathStyle.startsWith('/')) {
-      return encodeURI(`file://${pathStyle}`);
-    }
-    return value;
-  }
-
-  function resolveLessonLink(lesson) {
-    const remoteUrl = normalizeLessonUrl(lesson?.url || '');
-    const localUrl = normalizeLessonUrl(lesson?.localUrl || '');
-    if (preferLocalLessonLinks && localUrl) return localUrl;
-    return remoteUrl || localUrl;
-  }
-
-  function isLocalFileUrl(url) {
-    return /^file:\/\//i.test(String(url || '').trim());
-  }
-
-  function fileUrlToPath(url) {
-    try {
-      const parsed = new URL(String(url || '').trim());
-      if (parsed.protocol !== 'file:') return '';
-      return decodeURIComponent(parsed.pathname || '');
-    } catch {
-      return '';
-    }
-  }
-
-  function bridgeOpenUrlForFile(fileUrl) {
-    const path = fileUrlToPath(fileUrl);
-    if (!path) return '';
-    return `${LOCAL_FILE_BRIDGE_URL}?path=${encodeURIComponent(path)}`;
-  }
-
-  function buildPresentationTarget(lesson, lessonHref) {
-    const href = String(lessonHref || '').trim();
-    const explicitEmbed = normalizeLessonUrl(lesson?.embedUrl || '');
-    const isLocal = isLocalFileUrl(href);
-    const openUrl = isLocal ? (bridgeOpenUrlForFile(href) || href) : href;
-    const embedUrl = explicitEmbed || (isLocal ? '' : openUrl);
+  function buildPresentationTarget(lesson) {
     const title = String(lesson?.lesson || '').trim() || 'Presentatie';
     const project = String(lesson?.project || '').trim();
     const presentationId = String(lesson?.presentationId || '').trim();
-    return { title, project, openUrl, embedUrl, isLocal, presentationId };
+    return { title, project, presentationId };
   }
 
   function renderInternalSlide() {
@@ -876,17 +796,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       : target.title;
     if (presentationEmbedTitle) presentationEmbedTitle.textContent = titleText;
 
-    if (presentationOpenBtn && target.openUrl) {
-      presentationOpenBtn.href = target.openUrl;
-      if (target.isLocal) {
-        presentationOpenBtn.target = '_self';
-        presentationOpenBtn.rel = '';
-      } else {
-        presentationOpenBtn.target = '_blank';
-        presentationOpenBtn.rel = 'noopener noreferrer';
-      }
-    }
-
     const internal = target.presentationId ? planningPresentations[target.presentationId] : null;
     if (internal) {
       activePresentation = internal;
@@ -901,18 +810,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     activePresentation = null;
     activeSlideIndex = 0;
     if (presentationInternal) presentationInternal.hidden = true;
-    if (target.embedUrl) {
-      if (presentationEmbedFrame) presentationEmbedFrame.src = target.embedUrl;
-      if (presentationEmbedFrame) presentationEmbedFrame.hidden = false;
-      if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
-    } else {
-      if (presentationEmbedFrame) presentationEmbedFrame.removeAttribute('src');
-      if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
-      if (presentationEmbedHint) {
-        presentationEmbedHint.textContent = 'Lokale presentatie: gebruik de knop om te openen in PowerPoint.';
-      }
-      if (presentationEmbedFallback) presentationEmbedFallback.hidden = false;
-    }
+    if (presentationEmbedFrame) presentationEmbedFrame.removeAttribute('src');
+    if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
+    if (presentationEmbedFallback) presentationEmbedFallback.hidden = false;
+    if (presentationOpenBtn) presentationOpenBtn.hidden = true;
   }
 
   function openPresentationPanel(target) {
@@ -994,19 +895,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       const prefix = document.createElement('span');
       prefix.textContent = 'Les: ';
       lessonLine.appendChild(prefix);
-      const lessonHref = resolveLessonLink(lesson);
-      if (lessonHref) {
+      if (lesson.presentationId && planningPresentations[lesson.presentationId]) {
         const link = document.createElement('a');
-        const target = buildPresentationTarget(lesson, lessonHref);
-        if (isLocalFileUrl(lessonHref)) {
-          link.href = target.openUrl || lessonHref;
-          link.target = '_self';
-        } else {
-          link.href = target.openUrl || lessonHref;
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-        }
-        link.textContent = lesson.lesson || lessonHref;
+        const target = buildPresentationTarget(lesson);
+        link.href = '#';
+        link.textContent = lesson.lesson || 'Open interne presentatie';
         link.addEventListener('click', (event) => {
           if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
           event.preventDefault();
@@ -1035,10 +928,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     if (isPresentationOpen) {
-      const firstLesson = lessons.find((lesson) => Boolean(resolveLessonLink(lesson)));
+      const firstLesson = lessons.find((lesson) => Boolean(lesson.presentationId && planningPresentations[lesson.presentationId]));
       if (firstLesson) {
-        const href = resolveLessonLink(firstLesson);
-        openPresentationPanel(buildPresentationTarget(firstLesson, href));
+        openPresentationPanel(buildPresentationTarget(firstLesson));
       } else {
         closePresentationPanel();
       }
@@ -1326,17 +1218,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchPlanning();
   }
 
-  function applyLocalLinksPreference(enabled, persist = true) {
-    preferLocalLessonLinks = Boolean(enabled);
-    if (planningLocalLinksToggle) {
-      planningLocalLinksToggle.checked = preferLocalLessonLinks;
-    }
-    if (persist) {
-      localStorage.setItem(LOCAL_LINKS_KEY, String(preferLocalLessonLinks));
-    }
-    renderPlanning();
-  }
-
   function activeWeekContext() {
     const now = new Date();
     const anchor = (agendaSourceUrl && activeAgendaEntry?.start) ? activeAgendaEntry.start : now;
@@ -1465,10 +1346,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  planningLocalLinksToggle?.addEventListener('change', () => {
-    applyLocalLinksPreference(planningLocalLinksToggle.checked, true);
-  });
-
   agendaSourceSaveBtn?.addEventListener('click', () => {
     applyAgendaSource(agendaSourceInput?.value || '', true);
   });
@@ -1503,7 +1380,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateClockMarkerTarget(new Date());
   });
   planningOverrides = loadPlanningOverrides();
-  applyLocalLinksPreference(resolveLocalLinksPreference(), false);
   planningSourceFallbackTried = false;
   applyPlanningSource(resolvePlanningSourceUrl(), false);
   applyAgendaSource(resolveAgendaSourceUrl(), false);

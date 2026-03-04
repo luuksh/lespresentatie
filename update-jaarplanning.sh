@@ -4,116 +4,33 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT_DIR"
 
-BUILD_SCRIPT="scripts/build_jaarplanning_json.py"
 BUILD_INTERNAL_SCRIPT="scripts/build_jaarplanning_internal.py"
 OUT_JSON="js/jaarplanning-live.json"
 PLAN_DIR_DEFAULT="data/jaarplanning"
 INTERNAL_SOURCE_DEFAULT="$PLAN_DIR_DEFAULT/jaarplanning-intern.json"
-ONEDRIVE_BASE="$HOME/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General"
 
 NO_PUSH=0
 if [[ "${1:-}" == "--no-push" ]]; then
   NO_PUSH=1
 fi
 
-SOURCE_MODE="${JAARPLANNING_SOURCE:-auto}"
-
-find_grade_file() {
-  local grade="$1"
-  local env_var="JAARPLANNING_G${grade}_FILE"
-  local env_path="${!env_var:-}"
-  if [[ -n "$env_path" && -f "$env_path" ]] && is_valid_xlsx "$env_path"; then
-    echo "$env_path"
-    return 0
-  fi
-
-  local candidates=(
-    "$ROOT_DIR/$PLAN_DIR_DEFAULT/Jaarplanning G${grade}.xlsx"
-    "$ONEDRIVE_BASE/${grade} Nederlands/Jaarplanning G${grade}.xlsx"
-  )
-  local c
-  for c in "${candidates[@]}"; do
-    if [[ -f "$c" ]] && is_valid_xlsx "$c"; then
-      echo "$c"
-      return 0
-    fi
-  done
-
-  if [[ -d "$ONEDRIVE_BASE" ]]; then
-    local found
-    found="$(find "$ONEDRIVE_BASE" -maxdepth 4 -type f -name "Jaarplanning G${grade}.xlsx" | head -n 1 || true)"
-    if [[ -n "$found" && -f "$found" ]] && is_valid_xlsx "$found"; then
-      echo "$found"
-      return 0
-    fi
-  fi
-
-  return 1
-}
-
-is_valid_xlsx() {
-  local file_path="$1"
-  python3 - "$file_path" <<'PY' >/dev/null 2>&1
-import sys, zipfile
-p = sys.argv[1]
-try:
-    with zipfile.ZipFile(p) as zf:
-        zf.namelist()
-except Exception:
-    raise SystemExit(1)
-raise SystemExit(0)
-PY
-}
-
-if [[ ! -f "$BUILD_SCRIPT" ]]; then
-  echo "Fout: build script ontbreekt: $BUILD_SCRIPT" >&2
-  exit 1
-fi
 if [[ ! -f "$BUILD_INTERNAL_SCRIPT" ]]; then
   echo "Fout: build script ontbreekt: $BUILD_INTERNAL_SCRIPT" >&2
   exit 1
 fi
 
 INTERNAL_SOURCE="${JAARPLANNING_INTERNAL_FILE:-$ROOT_DIR/$INTERNAL_SOURCE_DEFAULT}"
-USED_SOURCE_MODE="$SOURCE_MODE"
-
-if [[ "$SOURCE_MODE" == "internal" ]] || { [[ "$SOURCE_MODE" == "auto" ]] && [[ -f "$INTERNAL_SOURCE" ]]; }; then
-  USED_SOURCE_MODE="internal"
-  echo "Bronmodus: internal"
-  echo "Bronbestand: $INTERNAL_SOURCE"
-  python3 "$BUILD_INTERNAL_SCRIPT" -i "$INTERNAL_SOURCE" -o "$OUT_JSON"
-elif [[ "$SOURCE_MODE" == "excel" ]] || [[ "$SOURCE_MODE" == "auto" ]]; then
-  USED_SOURCE_MODE="excel"
-
-  G1_FILE="$(find_grade_file 1 || true)"
-  G3_FILE="$(find_grade_file 3 || true)"
-  G4_FILE="$(find_grade_file 4 || true)"
-
-  for f in "$G1_FILE" "$G3_FILE"; do
-    if [[ ! -f "$f" ]]; then
-      echo "Fout: ontbrekend bestand voor verplichte jaarplanning (G1/G3)." >&2
-      echo "Zoekpaden: intern '$ROOT_DIR/$PLAN_DIR_DEFAULT' en OneDrive '$ONEDRIVE_BASE'" >&2
-      exit 1
-    fi
-  done
-
-  INPUTS=("$G1_FILE" "$G3_FILE")
-  if [[ -f "$G4_FILE" ]]; then
-    INPUTS+=("$G4_FILE")
-  fi
-
-  echo "Bronmodus: excel"
-  echo "Bronbestanden:"
-  printf ' - %s\n' "${INPUTS[@]}"
-  echo "Bouwen van $OUT_JSON ..."
-  python3 "$BUILD_SCRIPT" "${INPUTS[@]}" -o "$OUT_JSON"
-else
-  echo "Fout: onbekende JAARPLANNING_SOURCE='$SOURCE_MODE' (gebruik auto|internal|excel)." >&2
-  exit 2
+if [[ ! -f "$INTERNAL_SOURCE" ]]; then
+  echo "Fout: intern bronbestand niet gevonden: $INTERNAL_SOURCE" >&2
+  exit 1
 fi
 
+echo "Bronmodus: internal"
+echo "Bronbestand: $INTERNAL_SOURCE"
+python3 "$BUILD_INTERNAL_SCRIPT" -i "$INTERNAL_SOURCE" -o "$OUT_JSON"
+
 if git diff --quiet -- "$OUT_JSON"; then
-  echo "Geen wijzigingen in $OUT_JSON (modus: $USED_SOURCE_MODE). Klaar."
+  echo "Geen wijzigingen in $OUT_JSON. Klaar."
   exit 0
 fi
 
