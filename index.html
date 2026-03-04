@@ -80,6 +80,7 @@
       <section class="card control-card">
         <h2 class="panel-title">Jaarplanning intern bewerken</h2>
         <p class="panel-help">Bewerk items voor de geselecteerde klas en huidige week. Elke regel is een apart weekitem.</p>
+        <p class="panel-help">Tip: koppel eerst <code>data/jaarplanning/jaarplanning-intern.json</code> en sla daarna direct op in dat bestand.</p>
         <p id="jaarplanningEditorMeta" class="panel-help"></p>
         <textarea
           id="jaarplanningEditorItems"
@@ -99,6 +100,11 @@
           <button id="jaarplanningEditorSave" type="button" class="btn btn-primary">Week opslaan</button>
           <button id="jaarplanningEditorClear" type="button" class="btn btn-secondary">Week leegmaken</button>
         </div>
+        <div class="btn-group" style="margin-top:8px;">
+          <button id="jaarplanningEditorPickFile" type="button" class="btn btn-secondary">Koppel bronbestand</button>
+          <button id="jaarplanningEditorWriteFile" type="button" class="btn btn-primary">Opslaan naar bronbestand</button>
+        </div>
+        <p id="jaarplanningEditorFileStatus" class="panel-help" style="margin-top:8px;"></p>
       </section>
 
       <section class="card control-card">

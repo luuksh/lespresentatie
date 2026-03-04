@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningEditorNote = document.getElementById('jaarplanningEditorNote');
   const planningEditorSaveBtn = document.getElementById('jaarplanningEditorSave');
   const planningEditorClearBtn = document.getElementById('jaarplanningEditorClear');
+  const planningEditorPickFileBtn = document.getElementById('jaarplanningEditorPickFile');
+  const planningEditorWriteFileBtn = document.getElementById('jaarplanningEditorWriteFile');
+  const planningEditorFileStatus = document.getElementById('jaarplanningEditorFileStatus');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
   const agendaSourceInput = document.getElementById('agendaSourceInput');
   const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
@@ -49,6 +52,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   let planningSourceUrl = '';
   let planningSourceFallbackTried = false;
   let planningOverrides = {};
+  let planningEditorSourceDoc = null;
+  let planningEditorSourceHandle = null;
   let agendaTimer = null;
   let agendaSourceUrl = '';
   let agendaEntries = [];
@@ -1251,6 +1256,69 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningEditorNote.value = String(merged.note || '');
   }
 
+  function setEditorFileStatus(message, isError = false) {
+    if (!planningEditorFileStatus) return;
+    planningEditorFileStatus.textContent = message;
+    planningEditorFileStatus.style.color = isError ? '#9f1d1d' : '';
+  }
+
+  function canonicalClassId(rawClassId) {
+    const normalized = normalizeClassId(rawClassId);
+    const prefixed = normalized.match(/^G([1-4][A-Z])$/);
+    if (prefixed) return prefixed[1];
+    return normalized;
+  }
+
+  function currentEditorPayload() {
+    return {
+      items: String(planningEditorItems?.value || '')
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean),
+      note: String(planningEditorNote?.value || '').trim(),
+    };
+  }
+
+  function updateEditorOverride() {
+    const { classId, weekInfo } = activeWeekContext();
+    const weekKey = String(weekInfo.week.weekNo);
+    const key = overrideKey(classId, weekKey);
+    if (!key) return null;
+    planningOverrides[key] = currentEditorPayload();
+    savePlanningOverrides();
+    return { classId, weekKey };
+  }
+
+  function upsertEditorEntryInSource(doc) {
+    if (!doc || typeof doc !== 'object') return false;
+    if (!Array.isArray(doc.entries)) doc.entries = [];
+
+    const { classId, weekInfo } = activeWeekContext();
+    const canonicalClass = canonicalClassId(classId);
+    const weekKey = String(weekInfo.week.weekNo);
+    if (!canonicalClass || !weekKey) return false;
+
+    const payload = currentEditorPayload();
+    let target = doc.entries.find((entry) => (
+      entry
+      && normalizeClassId(entry.classId) === normalizeClassId(canonicalClass)
+      && String(entry.week || '').trim() === weekKey
+    ));
+
+    if (!target) {
+      target = { classId: canonicalClass, week: weekKey, lessons: [], items: [] };
+      doc.entries.push(target);
+    }
+
+    target.classId = canonicalClass;
+    target.week = weekKey;
+    target.items = payload.items;
+    if (payload.note) target.note = payload.note;
+    else delete target.note;
+
+    return true;
+  }
+
   function applyAgendaSource(url, persist = true) {
     agendaSourceUrl = String(url || '').trim();
     if (agendaSourceInput) agendaSourceInput.value = agendaSourceUrl;
@@ -1281,19 +1349,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   planningEditorSaveBtn?.addEventListener('click', () => {
-    const { classId, weekInfo } = activeWeekContext();
-    const weekKey = String(weekInfo.week.weekNo);
-    const key = overrideKey(classId, weekKey);
-    if (!key) return;
-    planningOverrides[key] = {
-      items: String(planningEditorItems?.value || '')
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean),
-      note: String(planningEditorNote?.value || '').trim(),
-    };
-    savePlanningOverrides();
+    const updated = updateEditorOverride();
+    if (!updated) return;
     renderPlanning();
+    setEditorFileStatus(`Week opgeslagen in app: ${updated.classId} week ${updated.weekKey}.`);
   });
 
   planningEditorClearBtn?.addEventListener('click', () => {
@@ -1303,6 +1362,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     delete planningOverrides[key];
     savePlanningOverrides();
     renderPlanning();
+    setEditorFileStatus(`Week teruggezet naar brondata: ${classId} week ${weekInfo.week.weekNo}.`);
+  });
+
+  planningEditorPickFileBtn?.addEventListener('click', async () => {
+    if (typeof window.showOpenFilePicker !== 'function') {
+      setEditorFileStatus('Deze browser ondersteunt geen bestandskoppeling. Gebruik Chrome/Edge.', true);
+      return;
+    }
+    try {
+      const [handle] = await window.showOpenFilePicker({
+        multiple: false,
+        types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }],
+      });
+      if (!handle) return;
+      const file = await handle.getFile();
+      const text = await file.text();
+      const doc = JSON.parse(text);
+      if (!doc || typeof doc !== 'object' || !Array.isArray(doc.entries)) {
+        throw new Error('Geen geldig jaarplanning-bronbestand (entries ontbreekt).');
+      }
+      planningEditorSourceHandle = handle;
+      planningEditorSourceDoc = doc;
+      setEditorFileStatus(`Bronbestand gekoppeld: ${file.name}`);
+    } catch (err) {
+      if (err?.name === 'AbortError') return;
+      setEditorFileStatus(`Koppelen mislukt: ${err?.message || err}`, true);
+    }
+  });
+
+  planningEditorWriteFileBtn?.addEventListener('click', async () => {
+    if (!planningEditorSourceHandle || !planningEditorSourceDoc) {
+      setEditorFileStatus('Koppel eerst een bronbestand.', true);
+      return;
+    }
+    const updated = upsertEditorEntryInSource(planningEditorSourceDoc);
+    if (!updated) {
+      setEditorFileStatus('Kon wijziging niet toepassen op bronbestand.', true);
+      return;
+    }
+    try {
+      const writable = await planningEditorSourceHandle.createWritable();
+      await writable.write(`${JSON.stringify(planningEditorSourceDoc, null, 2)}\n`);
+      await writable.close();
+      updateEditorOverride();
+      renderPlanning();
+      const { classId, weekInfo } = activeWeekContext();
+      setEditorFileStatus(`Opgeslagen naar bronbestand: ${classId} week ${weekInfo.week.weekNo}.`);
+    } catch (err) {
+      setEditorFileStatus(`Opslaan mislukt: ${err?.message || err}`, true);
+    }
   });
 
   planningRefreshBtn?.addEventListener('click', () => {
@@ -1380,6 +1489,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateClockMarkerTarget(new Date());
   });
   planningOverrides = loadPlanningOverrides();
+  setEditorFileStatus('Nog geen bronbestand gekoppeld.');
   planningSourceFallbackTried = false;
   applyPlanningSource(resolvePlanningSourceUrl(), false);
   applyAgendaSource(resolveAgendaSourceUrl(), false);
