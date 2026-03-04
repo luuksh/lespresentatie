@@ -109,7 +109,7 @@ select {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 980px;
+  min-width: 860px;
 }
 
 .markers-table th,
@@ -137,7 +137,7 @@ select {
 
 .marker-textarea {
   width: 100%;
-  min-height: 70px;
+  min-height: 160px;
   border: 1px solid #c6d7ef;
   border-radius: 8px;
   padding: 6px 8px;

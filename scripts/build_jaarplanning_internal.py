@@ -41,7 +41,7 @@ def normalize_lesson(row: object) -> dict:
         "project": str(row.get("project", "")).strip(),
         "lesson": str(row.get("lesson", "")).strip(),
     }
-    for key in ("lessonKey", "presentationId"):
+    for key in ("lessonKey", "presentationId", "presentationMarkerId"):
         value = str(row.get(key, "")).strip()
         if value:
             out[key] = value

@@ -62,9 +62,41 @@ function collectProjectMarkers(doc) {
   return out;
 }
 
+function compilePresentationFromMarkerDecks(presentation, orderedMarkers, projectName) {
+  const titleSlide = {
+    type: 'title',
+    title: String(presentation.title || projectName).trim() || projectName,
+    subtitle: String(presentation.subtitle || projectName).trim() || projectName,
+  };
+  const slides = [titleSlide];
+  const markers = {};
+
+  for (const markerId of orderedMarkers) {
+    const deck = Array.isArray(presentation.markerDecks?.[markerId])
+      ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
+      : [];
+    if (!deck.length) continue;
+    markers[markerId] = slides.length;
+    for (const slide of deck) {
+      slides.push({
+        type: String(slide.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
+        title: String(slide.title || '').trim(),
+        subtitle: String(slide.subtitle || '').trim(),
+        items: Array.isArray(slide.items)
+          ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+          : [],
+      });
+    }
+  }
+
+  presentation.slides = slides;
+  presentation.markers = markers;
+}
+
 function ensureProjectPresentations(doc) {
   const safe = normalizeDoc(doc);
   const bundles = collectProjectMarkers(safe);
+
   for (const [deckId, bundle] of Object.entries(bundles)) {
     const current = safe.presentations[deckId] && typeof safe.presentations[deckId] === 'object'
       ? safe.presentations[deckId]
@@ -73,25 +105,37 @@ function ensureProjectPresentations(doc) {
       id: deckId,
       presentationType: 'project-overview',
       title: bundle.project,
+      subtitle: bundle.project,
       project: bundle.project,
+      markerDecks: {},
       slides: [],
       markers: {},
     };
+
     presentation.id = deckId;
     presentation.presentationType = 'project-overview';
     presentation.project = bundle.project;
-    if (!Array.isArray(presentation.slides)) presentation.slides = [];
-    if (!presentation.markers || typeof presentation.markers !== 'object') presentation.markers = {};
-    if (!presentation.slides.length) {
-      presentation.slides.push({ type: 'title', title: bundle.project, subtitle: bundle.project });
+    presentation.title = String(presentation.title || bundle.project).trim() || bundle.project;
+    presentation.subtitle = String(presentation.subtitle || bundle.project).trim() || bundle.project;
+    if (!presentation.markerDecks || typeof presentation.markerDecks !== 'object') {
+      presentation.markerDecks = {};
     }
+
     for (const [markerId, lessonTitle] of bundle.markers.entries()) {
-      if (Number.isInteger(presentation.markers[markerId])) continue;
-      presentation.slides.push({ type: 'title', title: lessonTitle, subtitle: bundle.project });
-      presentation.markers[markerId] = presentation.slides.length - 1;
+      const existingDeck = presentation.markerDecks[markerId];
+      if (Array.isArray(existingDeck) && existingDeck.length) continue;
+      presentation.markerDecks[markerId] = [{
+        type: 'title',
+        title: lessonTitle,
+        subtitle: bundle.project,
+        items: [],
+      }];
     }
+
+    compilePresentationFromMarkerDecks(presentation, [...bundle.markers.keys()], bundle.project);
     safe.presentations[deckId] = presentation;
   }
+
   return safe;
 }
 
@@ -112,21 +156,81 @@ function markerRowsForProject(projectName) {
   const deckId = projectDeckId(projectName);
   const pres = state.doc.presentations[deckId];
   if (!pres || !pres.markers) return [];
+
   const rows = [];
   for (const [markerId, slideIndexRaw] of Object.entries(pres.markers)) {
     const idx = Number(slideIndexRaw);
-    const slide = Number.isInteger(idx) ? pres.slides?.[idx] : null;
-    rows.push({
-      markerId,
-      slideIndex: Number.isInteger(idx) ? idx : 0,
-      type: String(slide?.type || 'title').trim() || 'title',
-      title: String(slide?.title || '').trim(),
-      subtitle: String(slide?.subtitle || '').trim(),
-      bullets: Array.isArray(slide?.items) ? slide.items.map((x) => String(x || '').trim()).filter(Boolean) : [],
-    });
+    const deck = Array.isArray(pres.markerDecks?.[markerId])
+      ? pres.markerDecks[markerId]
+      : (Number.isInteger(idx) && pres.slides?.[idx] ? [pres.slides[idx]] : []);
+    rows.push({ markerId, slides: deck });
   }
   rows.sort((a, b) => a.markerId.localeCompare(b.markerId));
   return rows;
+}
+
+function serializeSlides(slides) {
+  const parts = [];
+  const safeSlides = Array.isArray(slides) ? slides : [];
+  for (const slide of safeSlides) {
+    const type = String(slide?.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title';
+    const title = String(slide?.title || '').trim();
+    const subtitle = String(slide?.subtitle || '').trim();
+    const items = Array.isArray(slide?.items) ? slide.items.map((x) => String(x || '').trim()).filter(Boolean) : [];
+
+    const lines = [`[${type}] ${title}`.trim()];
+    if (subtitle) lines.push(`subtitle: ${subtitle}`);
+    for (const item of items) lines.push(`- ${item}`);
+    parts.push(lines.join('\n'));
+  }
+  return parts.join('\n---\n');
+}
+
+function parseSlides(text) {
+  const chunks = String(text || '')
+    .split(/\n\s*---\s*\n/g)
+    .map((chunk) => chunk.trim())
+    .filter(Boolean);
+  const slides = [];
+
+  for (const chunk of chunks) {
+    const lines = chunk.split('\n').map((line) => line.trim()).filter(Boolean);
+    if (!lines.length) continue;
+
+    let type = 'title';
+    let title = '';
+    let subtitle = '';
+    const items = [];
+
+    const head = lines[0].match(/^\[(title|bullets)\]\s*(.*)$/i);
+    if (head) {
+      type = head[1].toLowerCase() === 'bullets' ? 'bullets' : 'title';
+      title = String(head[2] || '').trim();
+    } else {
+      title = lines[0];
+    }
+
+    for (const line of lines.slice(1)) {
+      const sub = line.match(/^subtitle\s*:\s*(.*)$/i);
+      if (sub) {
+        subtitle = String(sub[1] || '').trim();
+        continue;
+      }
+      const bullet = line.match(/^[-*]\s+(.*)$/);
+      if (bullet) {
+        items.push(String(bullet[1] || '').trim());
+      }
+    }
+
+    const slide = { type, title, subtitle, items };
+    if (slide.type === 'title') delete slide.items;
+    slides.push(slide);
+  }
+
+  if (!slides.length) {
+    return [{ type: 'title', title: 'Nieuwe slide', subtitle: '', items: [] }];
+  }
+  return slides;
 }
 
 function renderProject() {
@@ -138,25 +242,19 @@ function renderProject() {
 
   projectTitle.textContent = `Overzicht · ${project}`;
   deckTitleInput.value = String(pres.title || project);
-  const titleSlide = Array.isArray(pres.slides) ? pres.slides[0] : null;
-  deckSubtitleInput.value = String(titleSlide?.subtitle || project);
+  deckSubtitleInput.value = String(pres.subtitle || project);
 
   const rows = markerRowsForProject(project);
   markerBody.innerHTML = '';
   for (const row of rows) {
     const tr = document.createElement('tr');
-    const bulletText = row.bullets.join('\n').replace(/"/g, '&quot;');
+    const text = serializeSlides(row.slides)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
     tr.innerHTML = `
       <td>${row.markerId}</td>
-      <td>
-        <select class=\"marker-input\" data-marker=\"${row.markerId}\" data-field=\"type\">
-          <option value=\"title\" ${row.type === 'title' ? 'selected' : ''}>Titel</option>
-          <option value=\"bullets\" ${row.type === 'bullets' ? 'selected' : ''}>Bullets</option>
-        </select>
-      </td>
-      <td><input class="marker-input" data-marker="${row.markerId}" data-field="title" value="${row.title.replace(/"/g, '&quot;')}" /></td>
-      <td><input class="marker-input" data-marker="${row.markerId}" data-field="subtitle" value="${row.subtitle.replace(/"/g, '&quot;')}" /></td>
-      <td><textarea class=\"marker-textarea\" data-marker=\"${row.markerId}\" data-field=\"items\">${bulletText}</textarea></td>
+      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[title] Intro\\nsubtitle: ...\\n---\\n[bullets] Kern\\n- punt 1\\n- punt 2">${text}</textarea></td>
     `;
     markerBody.appendChild(tr);
   }
@@ -170,38 +268,16 @@ function saveProject() {
   if (!pres) return;
 
   pres.title = String(deckTitleInput.value || '').trim() || project;
-  if (!Array.isArray(pres.slides) || !pres.slides.length) {
-    pres.slides = [{ type: 'title', title: pres.title, subtitle: project }];
-  }
-  pres.slides[0] = {
-    ...(pres.slides[0] || {}),
-    type: String(pres.slides[0]?.type || 'title'),
-    title: pres.title,
-    subtitle: String(deckSubtitleInput.value || '').trim() || project,
-  };
+  pres.subtitle = String(deckSubtitleInput.value || '').trim() || project;
 
-  for (const input of markerBody.querySelectorAll('.marker-input')) {
-    const markerId = String(input.dataset.marker || '');
-    const field = String(input.dataset.field || '');
-    const idx = Number(pres.markers?.[markerId]);
-    if (!markerId || !Number.isInteger(idx) || !pres.slides[idx]) continue;
-    if (field === 'type') {
-      const raw = String(input.value || '').trim().toLowerCase();
-      pres.slides[idx].type = raw === 'bullets' ? 'bullets' : 'title';
-    }
-    if (field === 'title') pres.slides[idx].title = String(input.value || '').trim();
-    if (field === 'subtitle') pres.slides[idx].subtitle = String(input.value || '').trim();
+  for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
+    const markerId = String(textarea.dataset.marker || '');
+    if (!markerId) continue;
+    pres.markerDecks[markerId] = parseSlides(textarea.value);
   }
-  for (const input of markerBody.querySelectorAll('.marker-textarea')) {
-    const markerId = String(input.dataset.marker || '');
-    const idx = Number(pres.markers?.[markerId]);
-    if (!markerId || !Number.isInteger(idx) || !pres.slides[idx]) continue;
-    const items = String(input.value || '')
-      .split('\\n')
-      .map((line) => line.trim())
-      .filter(Boolean);
-    pres.slides[idx].items = items;
-  }
+
+  const markerOrder = Object.keys(pres.markers || {}).sort((a, b) => a.localeCompare(b));
+  compilePresentationFromMarkerDecks(pres, markerOrder, project);
 
   saveStudio();
   setStatus(`Project opgeslagen: ${project}.`);
@@ -234,7 +310,7 @@ async function boot() {
     if (state.projects.length) projectSelect.value = state.projects[0];
     saveStudio();
     renderProject();
-    setStatus('Presentatiestudio klaar.');
+    setStatus('Presentatiestudio klaar. Meerdere slides per les-marker actief.');
   } catch (err) {
     console.error(err);
     setStatus(`Fout bij laden: ${err?.message || err}`, true);

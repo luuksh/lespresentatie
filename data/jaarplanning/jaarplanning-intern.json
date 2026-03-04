@@ -51,14 +51,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -76,14 +78,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -101,14 +105,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -1083,14 +1089,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -1108,14 +1116,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -1133,14 +1143,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -2115,14 +2127,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -2140,14 +2154,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -2165,14 +2181,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -3147,14 +3165,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -3172,14 +3192,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -3197,14 +3219,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -4179,14 +4203,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -4204,14 +4230,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -4229,14 +4257,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -5211,14 +5241,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -5236,14 +5268,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -5261,14 +5295,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -6243,14 +6279,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 1 - Welkom in Taaltopia",
-          "presentationId": "taaltopia-les-1-welkom-in-taaltopia-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 2 - De basis van jullie taal",
-          "presentationId": "taaltopia-les-2-de-basis-van-jullie-taal-les-2",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
         }
       ],
       "items": []
@@ -6268,14 +6306,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en grammatica",
-          "presentationId": "taaltopia-les-3-woorden-en-grammatica-les-3",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 4 - Afronden en feedback",
-          "presentationId": "taaltopia-les-4-afronden-en-feedback-les-4",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
         }
       ],
       "items": []
@@ -6293,14 +6333,16 @@
         {
           "project": "Taaltopia",
           "lesson": "Les 5 - Presentaties voorbereiden",
-          "presentationId": "taaltopia-les-5-presentaties-voorbereiden-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Presenteren en reflecteren",
-          "presentationId": "taaltopia-les-6-presenteren-en-reflecteren-les-6",
-          "lessonKey": "C"
+          "presentationId": "project-taaltopia",
+          "lessonKey": "C",
+          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
         }
       ],
       "items": []
@@ -21491,6 +21533,1512 @@
           ]
         }
       ]
+    },
+    "project-taaltopia": {
+      "id": "project-taaltopia",
+      "presentationType": "project-overview",
+      "title": "Taaltopia",
+      "subtitle": "Taaltopia",
+      "project": "Taaltopia",
+      "markerDecks": {
+        "marker-les-1-welkom-in-taaltopia": [
+          {
+            "type": "bullets",
+            "title": "Les 1 - Welkom in",
+            "subtitle": "",
+            "items": [
+              "Taaltopia"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Een ontdekkingsreis langs zelfbedachte talen, mysterieuze klanken en geheime grammatica's.",
+            "subtitle": "",
+            "items": [
+              "Vandaag ontdek je wat taal is, wat je ermee kunt – en hoe je er zelf één maakt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Startactiviteit",
+            "subtitle": "",
+            "items": [
+              "🎭 De Taaltopia Challenge:",
+              "Iedereen krijgt 2 minuten om een compleet verzonnen taal te spreken – verzin woorden, klanken en gebaren!",
+              "Daarna stemt de klas: welke taal klinkt als een geheimtaal? Welke lijkt op een oertaal?",
+              "→ Laat hiermee zien hoe belangrijk structuur, klank en betekenis zijn in een taal."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat gaan we doen?",
+            "subtitle": "",
+            "items": [
+              "Je gaat met een groepje een eigen taal ontwerpen",
+              "Doelen",
+              ":",
+              "–",
+              "Inzicht",
+              "krijgen",
+              "in de",
+              "opbouw",
+              "van",
+              "een",
+              "taal",
+              "–",
+              "Begrijpen",
+              "hoe",
+              "communicatie",
+              "werkt",
+              "– Leren",
+              "samenwerken",
+              "–",
+              "Ontdekken",
+              "welke",
+              "rol",
+              "bij",
+              "jou",
+              "past"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kunsttalen: kennen jullie deze?",
+            "subtitle": "",
+            "items": [
+              "Elvish (Lord of the Rings)",
+              "Klingon (Star Trek)",
+              "Parseltongue",
+              "(Harry Potter)",
+              "Dothraki (Game of Thrones)",
+              "Esperanto",
+              "Eptaal"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Planning & Rollen",
+            "subtitle": "",
+            "items": [
+              "6 lessen (",
+              "geen",
+              "huiswerk",
+              "):",
+              "alles",
+              "in de les",
+              "Werk in",
+              "groepjes",
+              "van 4",
+              "Rollen:",
+              "–",
+              "Voorzitter",
+              "–",
+              "Tijdbewaker",
+              "+",
+              "reflectie",
+              "–",
+              "Notulist",
+              "–",
+              "Presentator",
+              "/interviewer",
+              "Iedereen",
+              "bedenkt",
+              "mee",
+              "aan",
+              "de",
+              "inhoud"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag: eerste stappen!",
+            "subtitle": "",
+            "items": [
+              "1. Waarvoor maak je de taal? Wie gaat 'm spreken?",
+              "2. Hoe klinkt je taal (klanken, emoties, sfeer)?",
+              "→ Bedenk de basis en noteer ideeën",
+              "Volgende les: de echte bouw van je taal!"
+            ]
+          }
+        ],
+        "marker-les-2-de-basis-van-jullie-taal": [
+          {
+            "type": "title",
+            "title": "Les 2 – De Basis van Jullie Taal",
+            "subtitle": "",
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag",
+            "subtitle": "",
+            "items": [
+              "beginnen",
+              "we",
+              "echt",
+              "met het",
+              "bouwen",
+              "van je eigen taal!",
+              "Doelen",
+              "vandaag",
+              ":",
+              "–",
+              "Bedenken",
+              "waaróm",
+              "je",
+              "deze",
+              "taal",
+              "maakt",
+              "–",
+              "Beschrijven",
+              "voor",
+              "wie",
+              "de taal is",
+              "– De",
+              "klank",
+              "en",
+              "sfeer",
+              "van je taal",
+              "bepalen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1 & 2 (samen lezen)",
+            "subtitle": "",
+            "items": [
+              "Lees de projectopdracht samen in je groepje",
+              "Bedenk",
+              ":",
+              "–",
+              "Waarom",
+              "maak",
+              "je",
+              "deze",
+              "taal?",
+              "– Voor",
+              "wie",
+              "is",
+              "deze",
+              "taal",
+              "bedoeld",
+              "?",
+              "– Welke",
+              "rol",
+              "heeft",
+              "iedereen",
+              "in de",
+              "groep",
+              "?",
+              "Vul",
+              "dit",
+              "samen",
+              "in op",
+              "jullie",
+              "werkblad",
+              "/ A4-opzet"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe klinkt jouw taal?",
+            "subtitle": "",
+            "items": [
+              "Hard of",
+              "zacht",
+              "?",
+              "Zangerig",
+              "of",
+              "robotachtig",
+              "?",
+              "Hoe",
+              "klinkt",
+              "woede",
+              "? Hoe",
+              "klinkt",
+              "blijdschap",
+              "?",
+              "Spreek",
+              "een",
+              "paar",
+              "klanken",
+              "hardop",
+              "uit",
+              "in je",
+              "groep",
+              "Notuleer",
+              "de",
+              "belangrijkste",
+              "klanken",
+              ", regels",
+              "en",
+              "sfeer"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Samenwerking in de les",
+            "subtitle": "",
+            "items": [
+              "Tijd: 35 minuten groepswerk",
+              "Notulist",
+              "houdt",
+              "het",
+              "overzicht",
+              "bij",
+              "Tijdbewaker",
+              "let op de",
+              "voortgang",
+              "Voorzitter",
+              "houdt",
+              "het",
+              "overleg",
+              "vlot",
+              "en",
+              "eerlijk",
+              "Iedereen",
+              "denkt",
+              "actief",
+              "mee"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Laatste 10 minuten",
+            "subtitle": "",
+            "items": []
+          }
+        ],
+        "marker-les-3-woorden-en-grammatica": [
+          {
+            "type": "title",
+            "title": "Les 3 – Woorden en grammatica",
+            "subtitle": "",
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag",
+            "subtitle": "",
+            "items": [
+              "geef",
+              "je",
+              "jullie",
+              "taal",
+              "écht",
+              "vorm",
+              "!",
+              "Doelen",
+              "vandaag",
+              ":",
+              "–",
+              "Woorden",
+              "verzinnen",
+              "voor",
+              "jullie",
+              "taal",
+              "– Een mini-",
+              "woordenlijst",
+              "opstellen",
+              "– Begin",
+              "maken",
+              "met",
+              "grammatica",
+              ": hoe bouw je",
+              "zinnen",
+              "op?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3 – Woordenlijst",
+            "subtitle": "",
+            "items": [
+              "Begin met 10",
+              "kernwoorden",
+              "(",
+              "veelgebruikte",
+              "woorden",
+              ")",
+              "Denk",
+              "aan",
+              ":",
+              "ik",
+              ",",
+              "jij",
+              ", hallo, eten,",
+              "weggaan",
+              ", lief, boos,",
+              "gevaar",
+              "Kies",
+              "bij",
+              "ieder",
+              "woord",
+              "een",
+              "passende",
+              "klank",
+              "Spreek",
+              "ze",
+              "hardop",
+              "uit",
+              "–",
+              "klinkt",
+              "het",
+              "geloofwaardig",
+              "voor",
+              "jullie",
+              "taal?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Oefen je taal in een gesprekje",
+            "subtitle": "",
+            "items": [
+              "Schrijf",
+              "samen",
+              "een",
+              "kort",
+              "dialoogje",
+              "van 4–6",
+              "zinnen",
+              "in",
+              "jullie",
+              "taal",
+              "Laat",
+              "daarin",
+              "emoties",
+              ",",
+              "begroeting",
+              ",",
+              "en",
+              "een",
+              "actie",
+              "zien",
+              "Vertaal",
+              "het",
+              "onder",
+              "de",
+              "tekst",
+              "terug",
+              "naar",
+              "het",
+              "Nederlands",
+              "Check:",
+              "kun",
+              "je de",
+              "zinnen",
+              "ook",
+              "echt",
+              "uitspreken",
+              "?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4 – Grammatica opzetten",
+            "subtitle": "",
+            "items": [
+              "Bedenk",
+              ":",
+              "– Is er",
+              "een",
+              "vaste",
+              "woordvolgorde",
+              "?",
+              "– Hoe",
+              "maak",
+              "je",
+              "meervoud",
+              "?",
+              "– Hoe",
+              "vervoeg",
+              "je",
+              "werkwoorden",
+              "?",
+              "– Hoe",
+              "geef",
+              "je",
+              "emoties",
+              "aan",
+              "of",
+              "vragen",
+              "?",
+              "Laat het",
+              "aansluiten",
+              "bij",
+              "jullie",
+              "klanken",
+              "en",
+              "logica"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag!",
+            "subtitle": "",
+            "items": [
+              "30 minuten werktijd",
+              "–",
+              "Woordenlijst",
+              "+",
+              "gesprekje",
+              "opstellen",
+              "– Begin",
+              "grammatica",
+              "opschrijven",
+              "–",
+              "Notulist",
+              "verwerkt",
+              "alles",
+              "op het A4’tje",
+              "– Andere",
+              "groepsleden",
+              "denken",
+              "en",
+              "spreken",
+              "actief",
+              "mee"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Einde van de les",
+            "subtitle": "",
+            "items": []
+          }
+        ],
+        "marker-les-4-afronden-en-feedback": [
+          {
+            "type": "title",
+            "title": "Les 4 – Afronden & Feedback",
+            "subtitle": "",
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen",
+            "subtitle": "",
+            "items": [
+              "vandaag",
+              ":",
+              "– Taal",
+              "volledig",
+              "afmaken",
+              "(",
+              "woorden",
+              "+",
+              "grammatica",
+              ")",
+              "–",
+              "Presentatie",
+              "voorbereiden",
+              "(",
+              "talkshow",
+              "of interview)",
+              "– Feedback",
+              "geven",
+              "op",
+              "elkaar",
+              "via",
+              "tussenpresentaties"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag!",
+            "subtitle": "",
+            "items": [
+              "Eerste",
+              "helft",
+              "van de les:",
+              "– Werk",
+              "aan",
+              "de",
+              "afronding",
+              "van",
+              "jullie",
+              "taal",
+              "– Check de criteria: wat",
+              "moet",
+              "er",
+              "allemaal",
+              "op het A4",
+              "staan",
+              "?",
+              "– Begin",
+              "alvast",
+              "met de",
+              "opzet",
+              "van",
+              "jullie",
+              "presentatie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tussentijdse evaluatie",
+            "subtitle": "",
+            "items": [
+              "Halverwege",
+              "de les:",
+              "– Jullie",
+              "vormen",
+              "duo’s met",
+              "een",
+              "ander",
+              "groepje",
+              "– Vertel",
+              "elkaar",
+              "over je taal tot nu toe",
+              "–",
+              "Geef",
+              "elkaar",
+              "feedback met",
+              "behulp",
+              "van",
+              "een",
+              "rubric",
+              "📋 Elke",
+              "groep",
+              "vult",
+              "de rubric in",
+              "voor",
+              "het",
+              "andere",
+              "groepje"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijd voor reflectie",
+            "subtitle": "",
+            "items": [
+              "Tijdbewaker schrijft kort een voortgangsverslag",
+              "Reflecteer",
+              "met je",
+              "groep",
+              "op de",
+              "samenwerking",
+              "tot nu toe",
+              "– Wat",
+              "gaat",
+              "goed",
+              "?",
+              "– Wat",
+              "kan",
+              "beter",
+              "?",
+              "Noteer",
+              "1 tip",
+              "en",
+              "1 top per",
+              "groepslid"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende keer: presentaties!",
+            "subtitle": "",
+            "items": [
+              "Bereid alvast een talkshow of interview voor",
+              "– Wie stelt de vragen?",
+              "– Hoe breng je je taal overtuigend over?",
+              "Zorg dat jullie A4 bijna af is – presentatie = inlevermoment"
+            ]
+          }
+        ],
+        "marker-les-5-presentaties-voorbereiden": [
+          {
+            "type": "title",
+            "title": "Les 5 – Presentaties voorbereiden",
+            "subtitle": "",
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen vandaag:",
+            "subtitle": "",
+            "items": [
+              "– Presentatievorm kiezen en oefenen",
+              "– A4 afronden en controleren",
+              "– Oefenen met spreken over je taal"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kies een presentatievorm",
+            "subtitle": "",
+            "items": [
+              "Kies: interview of talkshow",
+              "– Een van jullie is presentator/interviewer",
+              "– De anderen zijn taalontwerpers of 'sprekers van de taal'",
+              "Bedenk goede vragen en antwoorden over jullie taal",
+              "Verwerk belangrijke onderdelen: klank, grammatica, doelgroep"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Laatste check: jullie A4",
+            "subtitle": "",
+            "items": [
+              "Controleer of het volgende op jullie A4 staat:",
+              "– Doelgroep en functie van de taal",
+              "– Klanken en sfeer",
+              "– Woordenlijst met betekenis",
+              "– Grammatica",
+              "– Kort voorbeeldgesprek"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijd om te oefenen",
+            "subtitle": "",
+            "items": [
+              "Neem 20 minuten de tijd om je presentatie voor te bereiden",
+              "Oefen het gesprek hardop in je groep",
+              "Let op: spreek duidelijk en geef uitleg",
+              "Denk aan samenwerking: iedereen komt aan bod"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Laatste 10 minuten",
+            "subtitle": "",
+            "items": []
+          }
+        ],
+        "marker-les-6-presenteren-en-reflecteren": [
+          {
+            "type": "title",
+            "title": "Les 6 – Presenteren & Reflecteren",
+            "subtitle": "",
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen vandaag:",
+            "subtitle": "",
+            "items": [
+              "– Elkaar presenteren wat je hebt gemaakt",
+              "– Verschillen en overeenkomsten ontdekken",
+              "– Terugblikken op wat je hebt geleerd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De presentaties",
+            "subtitle": "",
+            "items": [
+              "Iedere groep presenteert zijn taal in een interview of talkshow",
+              "Let op:",
+              "– Iedereen komt aan bod",
+              "– Spreek duidelijk en leg uit",
+              "– Gebruik jullie A4 als ondersteuning",
+              "Publiek luistert actief en stelt na afloop een vraag"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat doet het publiek?",
+            "subtitle": "",
+            "items": [
+              "Je noteert per groep:",
+              "– Wat vond je opvallend aan deze taal?",
+              "– Wat verschilde sterk van het Nederlands?",
+              "– Wat werkte goed aan de presentatie?",
+              "Gebruik dit bij de gezamenlijke nabespreking"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Terugkijken op je leerdoelen",
+            "subtitle": "",
+            "items": [
+              "Wat heb jij geleerd over:",
+              "– Hoe een taal is opgebouwd?",
+              "– Hoe communicatie werkt?",
+              "– Samenwerken in een groep?",
+              "– De rol die je hebt gehad?",
+              "Schrijf per onderdeel een korte reflectie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie op je rol",
+            "subtitle": "",
+            "items": [
+              "Je krijgt een blad met jouw rol bovenaan",
+              "Jouw groepsgenoten geven:",
+              "– Eén tip (wat kon beter?)",
+              "– Eén top (wat ging goed?)",
+              "Daarna schrijf je zelf een korte reflectie",
+              "Lever dit blad in bij je docent"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tot slot",
+            "subtitle": "",
+            "items": [
+              "Bedankt voor jullie inzet!",
+              "Je hebt niet alleen een taal gebouwd,",
+              "maar ook veel geleerd over taal, samenwerken en presenteren.",
+              "Hopelijk kijk je met trots terug op je werk in Taaltopia."
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Taaltopia",
+          "subtitle": "Taaltopia"
+        },
+        {
+          "type": "bullets",
+          "title": "Les 1 - Welkom in",
+          "subtitle": "",
+          "items": [
+            "Taaltopia"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Een ontdekkingsreis langs zelfbedachte talen, mysterieuze klanken en geheime grammatica's.",
+          "subtitle": "",
+          "items": [
+            "Vandaag ontdek je wat taal is, wat je ermee kunt – en hoe je er zelf één maakt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Startactiviteit",
+          "subtitle": "",
+          "items": [
+            "🎭 De Taaltopia Challenge:",
+            "Iedereen krijgt 2 minuten om een compleet verzonnen taal te spreken – verzin woorden, klanken en gebaren!",
+            "Daarna stemt de klas: welke taal klinkt als een geheimtaal? Welke lijkt op een oertaal?",
+            "→ Laat hiermee zien hoe belangrijk structuur, klank en betekenis zijn in een taal."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat gaan we doen?",
+          "subtitle": "",
+          "items": [
+            "Je gaat met een groepje een eigen taal ontwerpen",
+            "Doelen",
+            ":",
+            "–",
+            "Inzicht",
+            "krijgen",
+            "in de",
+            "opbouw",
+            "van",
+            "een",
+            "taal",
+            "–",
+            "Begrijpen",
+            "hoe",
+            "communicatie",
+            "werkt",
+            "– Leren",
+            "samenwerken",
+            "–",
+            "Ontdekken",
+            "welke",
+            "rol",
+            "bij",
+            "jou",
+            "past"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kunsttalen: kennen jullie deze?",
+          "subtitle": "",
+          "items": [
+            "Elvish (Lord of the Rings)",
+            "Klingon (Star Trek)",
+            "Parseltongue",
+            "(Harry Potter)",
+            "Dothraki (Game of Thrones)",
+            "Esperanto",
+            "Eptaal"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Planning & Rollen",
+          "subtitle": "",
+          "items": [
+            "6 lessen (",
+            "geen",
+            "huiswerk",
+            "):",
+            "alles",
+            "in de les",
+            "Werk in",
+            "groepjes",
+            "van 4",
+            "Rollen:",
+            "–",
+            "Voorzitter",
+            "–",
+            "Tijdbewaker",
+            "+",
+            "reflectie",
+            "–",
+            "Notulist",
+            "–",
+            "Presentator",
+            "/interviewer",
+            "Iedereen",
+            "bedenkt",
+            "mee",
+            "aan",
+            "de",
+            "inhoud"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag: eerste stappen!",
+          "subtitle": "",
+          "items": [
+            "1. Waarvoor maak je de taal? Wie gaat 'm spreken?",
+            "2. Hoe klinkt je taal (klanken, emoties, sfeer)?",
+            "→ Bedenk de basis en noteer ideeën",
+            "Volgende les: de echte bouw van je taal!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 2 – De Basis van Jullie Taal",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag",
+          "subtitle": "",
+          "items": [
+            "beginnen",
+            "we",
+            "echt",
+            "met het",
+            "bouwen",
+            "van je eigen taal!",
+            "Doelen",
+            "vandaag",
+            ":",
+            "–",
+            "Bedenken",
+            "waaróm",
+            "je",
+            "deze",
+            "taal",
+            "maakt",
+            "–",
+            "Beschrijven",
+            "voor",
+            "wie",
+            "de taal is",
+            "– De",
+            "klank",
+            "en",
+            "sfeer",
+            "van je taal",
+            "bepalen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1 & 2 (samen lezen)",
+          "subtitle": "",
+          "items": [
+            "Lees de projectopdracht samen in je groepje",
+            "Bedenk",
+            ":",
+            "–",
+            "Waarom",
+            "maak",
+            "je",
+            "deze",
+            "taal?",
+            "– Voor",
+            "wie",
+            "is",
+            "deze",
+            "taal",
+            "bedoeld",
+            "?",
+            "– Welke",
+            "rol",
+            "heeft",
+            "iedereen",
+            "in de",
+            "groep",
+            "?",
+            "Vul",
+            "dit",
+            "samen",
+            "in op",
+            "jullie",
+            "werkblad",
+            "/ A4-opzet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe klinkt jouw taal?",
+          "subtitle": "",
+          "items": [
+            "Hard of",
+            "zacht",
+            "?",
+            "Zangerig",
+            "of",
+            "robotachtig",
+            "?",
+            "Hoe",
+            "klinkt",
+            "woede",
+            "? Hoe",
+            "klinkt",
+            "blijdschap",
+            "?",
+            "Spreek",
+            "een",
+            "paar",
+            "klanken",
+            "hardop",
+            "uit",
+            "in je",
+            "groep",
+            "Notuleer",
+            "de",
+            "belangrijkste",
+            "klanken",
+            ", regels",
+            "en",
+            "sfeer"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Samenwerking in de les",
+          "subtitle": "",
+          "items": [
+            "Tijd: 35 minuten groepswerk",
+            "Notulist",
+            "houdt",
+            "het",
+            "overzicht",
+            "bij",
+            "Tijdbewaker",
+            "let op de",
+            "voortgang",
+            "Voorzitter",
+            "houdt",
+            "het",
+            "overleg",
+            "vlot",
+            "en",
+            "eerlijk",
+            "Iedereen",
+            "denkt",
+            "actief",
+            "mee"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Laatste 10 minuten",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 3 – Woorden en grammatica",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag",
+          "subtitle": "",
+          "items": [
+            "geef",
+            "je",
+            "jullie",
+            "taal",
+            "écht",
+            "vorm",
+            "!",
+            "Doelen",
+            "vandaag",
+            ":",
+            "–",
+            "Woorden",
+            "verzinnen",
+            "voor",
+            "jullie",
+            "taal",
+            "– Een mini-",
+            "woordenlijst",
+            "opstellen",
+            "– Begin",
+            "maken",
+            "met",
+            "grammatica",
+            ": hoe bouw je",
+            "zinnen",
+            "op?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3 – Woordenlijst",
+          "subtitle": "",
+          "items": [
+            "Begin met 10",
+            "kernwoorden",
+            "(",
+            "veelgebruikte",
+            "woorden",
+            ")",
+            "Denk",
+            "aan",
+            ":",
+            "ik",
+            ",",
+            "jij",
+            ", hallo, eten,",
+            "weggaan",
+            ", lief, boos,",
+            "gevaar",
+            "Kies",
+            "bij",
+            "ieder",
+            "woord",
+            "een",
+            "passende",
+            "klank",
+            "Spreek",
+            "ze",
+            "hardop",
+            "uit",
+            "–",
+            "klinkt",
+            "het",
+            "geloofwaardig",
+            "voor",
+            "jullie",
+            "taal?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefen je taal in een gesprekje",
+          "subtitle": "",
+          "items": [
+            "Schrijf",
+            "samen",
+            "een",
+            "kort",
+            "dialoogje",
+            "van 4–6",
+            "zinnen",
+            "in",
+            "jullie",
+            "taal",
+            "Laat",
+            "daarin",
+            "emoties",
+            ",",
+            "begroeting",
+            ",",
+            "en",
+            "een",
+            "actie",
+            "zien",
+            "Vertaal",
+            "het",
+            "onder",
+            "de",
+            "tekst",
+            "terug",
+            "naar",
+            "het",
+            "Nederlands",
+            "Check:",
+            "kun",
+            "je de",
+            "zinnen",
+            "ook",
+            "echt",
+            "uitspreken",
+            "?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4 – Grammatica opzetten",
+          "subtitle": "",
+          "items": [
+            "Bedenk",
+            ":",
+            "– Is er",
+            "een",
+            "vaste",
+            "woordvolgorde",
+            "?",
+            "– Hoe",
+            "maak",
+            "je",
+            "meervoud",
+            "?",
+            "– Hoe",
+            "vervoeg",
+            "je",
+            "werkwoorden",
+            "?",
+            "– Hoe",
+            "geef",
+            "je",
+            "emoties",
+            "aan",
+            "of",
+            "vragen",
+            "?",
+            "Laat het",
+            "aansluiten",
+            "bij",
+            "jullie",
+            "klanken",
+            "en",
+            "logica"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag!",
+          "subtitle": "",
+          "items": [
+            "30 minuten werktijd",
+            "–",
+            "Woordenlijst",
+            "+",
+            "gesprekje",
+            "opstellen",
+            "– Begin",
+            "grammatica",
+            "opschrijven",
+            "–",
+            "Notulist",
+            "verwerkt",
+            "alles",
+            "op het A4’tje",
+            "– Andere",
+            "groepsleden",
+            "denken",
+            "en",
+            "spreken",
+            "actief",
+            "mee"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Einde van de les",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 4 – Afronden & Feedback",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen",
+          "subtitle": "",
+          "items": [
+            "vandaag",
+            ":",
+            "– Taal",
+            "volledig",
+            "afmaken",
+            "(",
+            "woorden",
+            "+",
+            "grammatica",
+            ")",
+            "–",
+            "Presentatie",
+            "voorbereiden",
+            "(",
+            "talkshow",
+            "of interview)",
+            "– Feedback",
+            "geven",
+            "op",
+            "elkaar",
+            "via",
+            "tussenpresentaties"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag!",
+          "subtitle": "",
+          "items": [
+            "Eerste",
+            "helft",
+            "van de les:",
+            "– Werk",
+            "aan",
+            "de",
+            "afronding",
+            "van",
+            "jullie",
+            "taal",
+            "– Check de criteria: wat",
+            "moet",
+            "er",
+            "allemaal",
+            "op het A4",
+            "staan",
+            "?",
+            "– Begin",
+            "alvast",
+            "met de",
+            "opzet",
+            "van",
+            "jullie",
+            "presentatie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse evaluatie",
+          "subtitle": "",
+          "items": [
+            "Halverwege",
+            "de les:",
+            "– Jullie",
+            "vormen",
+            "duo’s met",
+            "een",
+            "ander",
+            "groepje",
+            "– Vertel",
+            "elkaar",
+            "over je taal tot nu toe",
+            "–",
+            "Geef",
+            "elkaar",
+            "feedback met",
+            "behulp",
+            "van",
+            "een",
+            "rubric",
+            "📋 Elke",
+            "groep",
+            "vult",
+            "de rubric in",
+            "voor",
+            "het",
+            "andere",
+            "groepje"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijd voor reflectie",
+          "subtitle": "",
+          "items": [
+            "Tijdbewaker schrijft kort een voortgangsverslag",
+            "Reflecteer",
+            "met je",
+            "groep",
+            "op de",
+            "samenwerking",
+            "tot nu toe",
+            "– Wat",
+            "gaat",
+            "goed",
+            "?",
+            "– Wat",
+            "kan",
+            "beter",
+            "?",
+            "Noteer",
+            "1 tip",
+            "en",
+            "1 top per",
+            "groepslid"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende keer: presentaties!",
+          "subtitle": "",
+          "items": [
+            "Bereid alvast een talkshow of interview voor",
+            "– Wie stelt de vragen?",
+            "– Hoe breng je je taal overtuigend over?",
+            "Zorg dat jullie A4 bijna af is – presentatie = inlevermoment"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 5 – Presentaties voorbereiden",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen vandaag:",
+          "subtitle": "",
+          "items": [
+            "– Presentatievorm kiezen en oefenen",
+            "– A4 afronden en controleren",
+            "– Oefenen met spreken over je taal"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies een presentatievorm",
+          "subtitle": "",
+          "items": [
+            "Kies: interview of talkshow",
+            "– Een van jullie is presentator/interviewer",
+            "– De anderen zijn taalontwerpers of 'sprekers van de taal'",
+            "Bedenk goede vragen en antwoorden over jullie taal",
+            "Verwerk belangrijke onderdelen: klank, grammatica, doelgroep"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste check: jullie A4",
+          "subtitle": "",
+          "items": [
+            "Controleer of het volgende op jullie A4 staat:",
+            "– Doelgroep en functie van de taal",
+            "– Klanken en sfeer",
+            "– Woordenlijst met betekenis",
+            "– Grammatica",
+            "– Kort voorbeeldgesprek"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijd om te oefenen",
+          "subtitle": "",
+          "items": [
+            "Neem 20 minuten de tijd om je presentatie voor te bereiden",
+            "Oefen het gesprek hardop in je groep",
+            "Let op: spreek duidelijk en geef uitleg",
+            "Denk aan samenwerking: iedereen komt aan bod"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Laatste 10 minuten",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 6 – Presenteren & Reflecteren",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen vandaag:",
+          "subtitle": "",
+          "items": [
+            "– Elkaar presenteren wat je hebt gemaakt",
+            "– Verschillen en overeenkomsten ontdekken",
+            "– Terugblikken op wat je hebt geleerd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De presentaties",
+          "subtitle": "",
+          "items": [
+            "Iedere groep presenteert zijn taal in een interview of talkshow",
+            "Let op:",
+            "– Iedereen komt aan bod",
+            "– Spreek duidelijk en leg uit",
+            "– Gebruik jullie A4 als ondersteuning",
+            "Publiek luistert actief en stelt na afloop een vraag"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat doet het publiek?",
+          "subtitle": "",
+          "items": [
+            "Je noteert per groep:",
+            "– Wat vond je opvallend aan deze taal?",
+            "– Wat verschilde sterk van het Nederlands?",
+            "– Wat werkte goed aan de presentatie?",
+            "Gebruik dit bij de gezamenlijke nabespreking"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Terugkijken op je leerdoelen",
+          "subtitle": "",
+          "items": [
+            "Wat heb jij geleerd over:",
+            "– Hoe een taal is opgebouwd?",
+            "– Hoe communicatie werkt?",
+            "– Samenwerken in een groep?",
+            "– De rol die je hebt gehad?",
+            "Schrijf per onderdeel een korte reflectie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie op je rol",
+          "subtitle": "",
+          "items": [
+            "Je krijgt een blad met jouw rol bovenaan",
+            "Jouw groepsgenoten geven:",
+            "– Eén tip (wat kon beter?)",
+            "– Eén top (wat ging goed?)",
+            "Daarna schrijf je zelf een korte reflectie",
+            "Lever dit blad in bij je docent"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tot slot",
+          "subtitle": "",
+          "items": [
+            "Bedankt voor jullie inzet!",
+            "Je hebt niet alleen een taal gebouwd,",
+            "maar ook veel geleerd over taal, samenwerken en presenteren.",
+            "Hopelijk kijk je met trots terug op je werk in Taaltopia."
+          ]
+        }
+      ],
+      "markers": {
+        "marker-les-1-welkom-in-taaltopia": 1,
+        "marker-les-2-de-basis-van-jullie-taal": 8,
+        "marker-les-3-woorden-en-grammatica": 14,
+        "marker-les-4-afronden-en-feedback": 21,
+        "marker-les-5-presentaties-voorbereiden": 27,
+        "marker-les-6-presenteren-en-reflecteren": 33
+      }
     }
   }
 }

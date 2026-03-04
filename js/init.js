@@ -286,6 +286,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         project: bundle.project,
         slides: [],
         markers: {},
+        markerDecks: {},
       };
       presentation.id = deckId;
       presentation.presentationType = 'project-overview';
@@ -293,26 +294,47 @@ document.addEventListener('DOMContentLoaded', async () => {
       presentation.title = String(presentation.title || bundle.project).trim() || bundle.project;
       if (!Array.isArray(presentation.slides)) presentation.slides = [];
       if (!presentation.markers || typeof presentation.markers !== 'object') presentation.markers = {};
-
-      if (!presentation.slides.length) {
-        presentation.slides.push({
-          type: 'title',
-          title: presentation.title,
-          subtitle: bundle.project,
-        });
+      if (!presentation.markerDecks || typeof presentation.markerDecks !== 'object') {
+        presentation.markerDecks = {};
       }
 
       for (const [markerId, lessonTitle] of bundle.markers.entries()) {
-        if (Number.isInteger(presentation.markers[markerId])) continue;
-        const slide = {
+        const existingDeck = presentation.markerDecks[markerId];
+        if (Array.isArray(existingDeck) && existingDeck.length) continue;
+        presentation.markerDecks[markerId] = [{
           type: 'title',
           title: lessonTitle,
           subtitle: bundle.project,
-        };
-        presentation.slides.push(slide);
-        presentation.markers[markerId] = presentation.slides.length - 1;
+        }];
       }
 
+      const titleSlide = {
+        type: 'title',
+        title: presentation.title,
+        subtitle: bundle.project,
+      };
+      const rebuiltSlides = [titleSlide];
+      const rebuiltMarkers = {};
+      for (const markerId of bundle.markers.keys()) {
+        const markerSlides = Array.isArray(presentation.markerDecks[markerId])
+          ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
+          : [];
+        if (!markerSlides.length) continue;
+        rebuiltMarkers[markerId] = rebuiltSlides.length;
+        for (const slide of markerSlides) {
+          rebuiltSlides.push({
+            type: String(slide.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
+            title: String(slide.title || '').trim(),
+            subtitle: String(slide.subtitle || '').trim(),
+            items: Array.isArray(slide.items)
+              ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+              : [],
+          });
+        }
+      }
+
+      presentation.slides = rebuiltSlides;
+      presentation.markers = rebuiltMarkers;
       safeDoc.presentations[deckId] = presentation;
     }
     return safeDoc;
