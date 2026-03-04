@@ -5,14 +5,18 @@ ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT_DIR"
 
 BUILD_SCRIPT="scripts/build_jaarplanning_json.py"
+BUILD_INTERNAL_SCRIPT="scripts/build_jaarplanning_internal.py"
 OUT_JSON="js/jaarplanning-live.json"
 PLAN_DIR_DEFAULT="data/jaarplanning"
+INTERNAL_SOURCE_DEFAULT="$PLAN_DIR_DEFAULT/jaarplanning-intern.json"
 ONEDRIVE_BASE="$HOME/Library/CloudStorage/OneDrive-WillibrordStichting/CGU-AFD-Nederlands - General"
 
 NO_PUSH=0
 if [[ "${1:-}" == "--no-push" ]]; then
   NO_PUSH=1
 fi
+
+SOURCE_MODE="${JAARPLANNING_SOURCE:-auto}"
 
 find_grade_file() {
   local grade="$1"
@@ -65,31 +69,51 @@ if [[ ! -f "$BUILD_SCRIPT" ]]; then
   echo "Fout: build script ontbreekt: $BUILD_SCRIPT" >&2
   exit 1
 fi
-
-G1_FILE="$(find_grade_file 1 || true)"
-G3_FILE="$(find_grade_file 3 || true)"
-G4_FILE="$(find_grade_file 4 || true)"
-
-for f in "$G1_FILE" "$G3_FILE"; do
-  if [[ ! -f "$f" ]]; then
-    echo "Fout: ontbrekend bestand voor verplichte jaarplanning (G1/G3)." >&2
-    echo "Zoekpaden: OneDrive '$ONEDRIVE_BASE' en '$ROOT_DIR/$PLAN_DIR_DEFAULT'" >&2
-    exit 1
-  fi
-done
-
-INPUTS=("$G1_FILE" "$G3_FILE")
-if [[ -f "$G4_FILE" ]]; then
-  INPUTS+=("$G4_FILE")
+if [[ ! -f "$BUILD_INTERNAL_SCRIPT" ]]; then
+  echo "Fout: build script ontbreekt: $BUILD_INTERNAL_SCRIPT" >&2
+  exit 1
 fi
 
-echo "Bronbestanden:"
-printf ' - %s\n' "${INPUTS[@]}"
-echo "Bouwen van $OUT_JSON ..."
-python3 "$BUILD_SCRIPT" "${INPUTS[@]}" -o "$OUT_JSON"
+INTERNAL_SOURCE="${JAARPLANNING_INTERNAL_FILE:-$ROOT_DIR/$INTERNAL_SOURCE_DEFAULT}"
+USED_SOURCE_MODE="$SOURCE_MODE"
+
+if [[ "$SOURCE_MODE" == "internal" ]] || { [[ "$SOURCE_MODE" == "auto" ]] && [[ -f "$INTERNAL_SOURCE" ]]; }; then
+  USED_SOURCE_MODE="internal"
+  echo "Bronmodus: internal"
+  echo "Bronbestand: $INTERNAL_SOURCE"
+  python3 "$BUILD_INTERNAL_SCRIPT" -i "$INTERNAL_SOURCE" -o "$OUT_JSON"
+elif [[ "$SOURCE_MODE" == "excel" ]] || [[ "$SOURCE_MODE" == "auto" ]]; then
+  USED_SOURCE_MODE="excel"
+
+  G1_FILE="$(find_grade_file 1 || true)"
+  G3_FILE="$(find_grade_file 3 || true)"
+  G4_FILE="$(find_grade_file 4 || true)"
+
+  for f in "$G1_FILE" "$G3_FILE"; do
+    if [[ ! -f "$f" ]]; then
+      echo "Fout: ontbrekend bestand voor verplichte jaarplanning (G1/G3)." >&2
+      echo "Zoekpaden: intern '$ROOT_DIR/$PLAN_DIR_DEFAULT' en OneDrive '$ONEDRIVE_BASE'" >&2
+      exit 1
+    fi
+  done
+
+  INPUTS=("$G1_FILE" "$G3_FILE")
+  if [[ -f "$G4_FILE" ]]; then
+    INPUTS+=("$G4_FILE")
+  fi
+
+  echo "Bronmodus: excel"
+  echo "Bronbestanden:"
+  printf ' - %s\n' "${INPUTS[@]}"
+  echo "Bouwen van $OUT_JSON ..."
+  python3 "$BUILD_SCRIPT" "${INPUTS[@]}" -o "$OUT_JSON"
+else
+  echo "Fout: onbekende JAARPLANNING_SOURCE='$SOURCE_MODE' (gebruik auto|internal|excel)." >&2
+  exit 2
+fi
 
 if git diff --quiet -- "$OUT_JSON"; then
-  echo "Geen wijzigingen in $OUT_JSON. Klaar."
+  echo "Geen wijzigingen in $OUT_JSON (modus: $USED_SOURCE_MODE). Klaar."
   exit 0
 fi
 
