@@ -3,7 +3,6 @@ const BASE_SOURCE = 'js/jaarplanning-live.json';
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
-const clearLayerBtn = document.getElementById('clearLayerBtn');
 const resetStudioBtn = document.getElementById('resetStudioBtn');
 const exportStudioBtn = document.getElementById('exportStudioBtn');
 const editorTitle = document.getElementById('editorTitle');
@@ -283,14 +282,6 @@ function onCellChange(event) {
   setStatus(`Gewijzigd: jaarlaag ${layer}, week ${week}.`);
 }
 
-function clearLayer() {
-  const layer = selectedLayer();
-  state.doc.entries = state.doc.entries.filter((entry) => gradeLayerFromClassId(entry.classId) !== layer);
-  saveStudio();
-  renderSheet();
-  setStatus(`Jaarlaag ${layer} leeggemaakt.`);
-}
-
 function saveAll() {
   saveStudio();
   setStatus(`Alles opgeslagen voor jaarlaag ${selectedLayer()}.`);
@@ -355,7 +346,6 @@ async function boot() {
 }
 
 saveAllBtn.addEventListener('click', saveAll);
-clearLayerBtn.addEventListener('click', clearLayer);
 exportStudioBtn.addEventListener('click', exportStudio);
 resetStudioBtn.addEventListener('click', resetStudio);
 classSelect.addEventListener('change', renderSheet);
