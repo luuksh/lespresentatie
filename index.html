@@ -728,36 +728,39 @@
         const activeType = indelingSel?.value || '';
         const isGroupLayout = groupLayoutTypes.has(activeType);
         boardFrame.classList.toggle('is-group-layout', isGroupLayout);
+        const top = boardScaler.getBoundingClientRect().top;
+        const maxH = Math.max(320, window.innerHeight - top - 8);
+        const maxW = Math.max(320, layoutRoot.clientWidth - 2);
+        const compact = window.matchMedia('(max-width: 980px)').matches;
 
         boardFrame.style.transform = 'scale(1)';
-        boardScaler.style.height = 'auto';
+        boardFrame.style.transformOrigin = 'top center';
+
+        if (compact) {
+          boardFrame.style.width = '100%';
+          boardFrame.style.height = 'auto';
+          boardFrame.style.minHeight = '0';
+          boardScaler.style.width = '100%';
+          boardScaler.style.height = 'auto';
+        } else {
+          boardFrame.style.width = '100%';
+          boardFrame.style.height = '100%';
+          boardFrame.style.minHeight = `${maxH}px`;
+          boardScaler.style.width = `${maxW}px`;
+          boardScaler.style.height = `${maxH}px`;
+        }
+
         if (deskRow && grid) {
-          const isPresentationList = activeType === 'presentatievolgorde';
-          if (isPresentationList) {
-            deskRow.style.width = '100%';
-          } else {
-            const contentW = Math.ceil(grid.scrollWidth || 0);
-            deskRow.style.width = contentW > 0 ? `${contentW}px` : 'auto';
-          }
+          const rows = Array.from(grid.querySelectorAll('.tafelrij'));
+          const widestRow = rows.length
+            ? Math.max(...rows.map((row) => Math.ceil(row.scrollWidth || 0)))
+            : Math.ceil(grid.scrollWidth || 0);
+          const targetWidth = Math.max(0, Math.min(widestRow, grid.clientWidth || widestRow));
+          deskRow.style.width = targetWidth > 0 ? `${targetWidth}px` : '100%';
           deskRow.style.maxWidth = '100%';
           deskRow.style.marginLeft = 'auto';
           deskRow.style.marginRight = 'auto';
         }
-
-        const naturalW = boardFrame.scrollWidth;
-        const naturalH = boardFrame.scrollHeight;
-
-        const top = boardScaler.getBoundingClientRect().top;
-        const maxH = Math.max(220, window.innerHeight - top - 8);
-        const maxW = Math.max(320, layoutRoot.clientWidth - 2);
-
-        const scale = Math.min(1, maxW / naturalW, maxH / naturalH);
-
-        boardFrame.style.transform = `scale(${scale})`;
-        boardFrame.style.transformOrigin = 'top center';
-
-        boardScaler.style.width = `${Math.min(maxW, naturalW * scale)}px`;
-        boardScaler.style.height = `${naturalH * scale}px`;
       }
 
       function runPrint() {

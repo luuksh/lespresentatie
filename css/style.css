@@ -614,6 +614,9 @@ body::after {
 .plattegrond-front {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .plattegrond-frame.is-flipped .plattegrond-front {
@@ -1375,21 +1378,24 @@ select:focus {
 .grid-wrapper {
   width: 100%;
   min-width: 0;
-  min-height: clamp(700px, calc(100vh - 230px), 980px);
+  min-height: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   padding: 18px 18px 14px;
   border-radius: 18px;
   background: linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
   border: 1px solid #dbe4f2;
+  overflow: auto;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: max-content;
+  width: 100%;
   max-width: 100%;
   gap: 22px;
   transition: opacity 0.28s ease;
@@ -1405,6 +1411,8 @@ select:focus {
   margin: 0 0 14px;
   display: flex;
   justify-content: flex-start;
+  pointer-events: none;
+  user-select: none;
 }
 
 .leraar-bureau {
@@ -1427,6 +1435,7 @@ select:focus {
 
 .tafelrij {
   display: flex;
+  width: 100%;
   justify-content: center;
   gap: 36px;
   flex-wrap: nowrap;
@@ -1501,6 +1510,7 @@ select:focus {
 
 .grid.groepjes-layout {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(5, 232px);
   gap: 14px;
   align-items: start;
@@ -2012,7 +2022,7 @@ body.drawer-open .side-drawer.left {
 
   .grid-wrapper {
     min-width: min(1000px, calc(100vw - 120px));
-    min-height: clamp(620px, calc(100vh - 230px), 860px);
+    min-height: 0;
   }
 
   .tafelrij {
