@@ -66,6 +66,62 @@ h3 { margin: 8px 0; font-size: 14px; }
   align-content: start;
 }
 
+.preview-controls {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.preview-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.preview-counter {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.preview-stage {
+  border: 1px solid #cddcf2;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 210px;
+  background: linear-gradient(180deg, #f6faff 0%, #eef4ff 100%);
+}
+
+.preview-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #102746;
+}
+
+.preview-subtitle {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #3f5d87;
+}
+
+.preview-bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+  color: #1a3458;
+}
+
+.preview-empty {
+  margin: 0;
+  font-size: 13px;
+  color: #3f5d87;
+}
+
 .field { display: grid; gap: 6px; }
 .field span { font-size: 12px; font-weight: 700; color: var(--muted); }
 
