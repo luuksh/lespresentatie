@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
   const agendaDebugBtn = document.getElementById('agendaDebugBtn');
   const agendaDebugOutput = document.getElementById('agendaDebugOutput');
+  const plattegrondFrame = document.getElementById('plattegrondFrame');
+  const presentationEmbedTitle = document.getElementById('presentationEmbedTitle');
+  const presentationEmbedFrame = document.getElementById('presentationEmbedFrame');
+  const presentationEmbedFallback = document.getElementById('presentationEmbedFallback');
+  const presentationEmbedHint = document.getElementById('presentationEmbedHint');
+  const presentationOpenBtn = document.getElementById('presentationOpenBtn');
+  const presentationBackBtn = document.getElementById('presentationBackBtn');
 
   let planningData = {};
   let planningUpdatedAt = '';
@@ -43,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let selectedLessonIndex = 0;
   let clockMarkerTimer = null;
   let preferLocalLessonLinks = false;
+  let isPresentationOpen = false;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -730,6 +738,59 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${LOCAL_FILE_BRIDGE_URL}?path=${encodeURIComponent(path)}`;
   }
 
+  function buildPresentationTarget(lesson, lessonHref) {
+    const href = String(lessonHref || '').trim();
+    const isLocal = isLocalFileUrl(href);
+    const openUrl = isLocal ? (bridgeOpenUrlForFile(href) || href) : href;
+    const embedUrl = isLocal ? '' : openUrl;
+    const title = String(lesson?.lesson || '').trim() || 'Presentatie';
+    const project = String(lesson?.project || '').trim();
+    return { title, project, openUrl, embedUrl, isLocal };
+  }
+
+  function applyPresentationTarget(target) {
+    if (!target) return;
+    const titleText = target.project
+      ? `${target.project} · ${target.title}`
+      : target.title;
+    if (presentationEmbedTitle) presentationEmbedTitle.textContent = titleText;
+
+    if (presentationOpenBtn && target.openUrl) {
+      presentationOpenBtn.href = target.openUrl;
+      if (target.isLocal) {
+        presentationOpenBtn.target = '_self';
+        presentationOpenBtn.rel = '';
+      } else {
+        presentationOpenBtn.target = '_blank';
+        presentationOpenBtn.rel = 'noopener noreferrer';
+      }
+    }
+
+    if (target.embedUrl) {
+      if (presentationEmbedFrame) presentationEmbedFrame.src = target.embedUrl;
+      if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
+    } else {
+      if (presentationEmbedFrame) presentationEmbedFrame.removeAttribute('src');
+      if (presentationEmbedHint) {
+        presentationEmbedHint.textContent = 'Lokale presentatie: gebruik de knop om te openen in PowerPoint.';
+      }
+      if (presentationEmbedFallback) presentationEmbedFallback.hidden = false;
+    }
+  }
+
+  function openPresentationPanel(target) {
+    if (!plattegrondFrame || !target) return;
+    applyPresentationTarget(target);
+    plattegrondFrame.classList.add('is-flipped');
+    isPresentationOpen = true;
+  }
+
+  function closePresentationPanel() {
+    if (!plattegrondFrame) return;
+    plattegrondFrame.classList.remove('is-flipped');
+    isPresentationOpen = false;
+  }
+
   function formatSyncTime(iso) {
     const date = new Date(iso);
     if (Number.isNaN(date.getTime())) return '';
@@ -785,16 +846,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       const lessonHref = resolveLessonLink(lesson);
       if (lessonHref) {
         const link = document.createElement('a');
+        const target = buildPresentationTarget(lesson, lessonHref);
         if (isLocalFileUrl(lessonHref)) {
-          const bridgeUrl = bridgeOpenUrlForFile(lessonHref);
-          link.href = bridgeUrl || lessonHref;
+          link.href = target.openUrl || lessonHref;
           link.target = '_self';
         } else {
-          link.href = lessonHref;
+          link.href = target.openUrl || lessonHref;
           link.target = '_blank';
           link.rel = 'noopener noreferrer';
         }
         link.textContent = lesson.lesson || lessonHref;
+        link.addEventListener('click', (event) => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          openPresentationPanel(target);
+        });
         lessonLine.appendChild(link);
       } else {
         const text = document.createElement('span');
@@ -815,6 +881,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       noteLi.className = 'jaarplanning-note';
       noteLi.textContent = `Opmerking: ${note}`;
       planningItemsEl.appendChild(noteLi);
+    }
+
+    if (isPresentationOpen) {
+      const firstLesson = lessons.find((lesson) => Boolean(resolveLessonLink(lesson)));
+      if (firstLesson) {
+        const href = resolveLessonLink(firstLesson);
+        openPresentationPanel(buildPresentationTarget(firstLesson, href));
+      } else {
+        closePresentationPanel();
+      }
     }
   }
 
@@ -1121,6 +1197,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   planningRefreshBtn?.addEventListener('click', () => {
     fetchPlanning();
     fetchAgenda();
+  });
+
+  presentationBackBtn?.addEventListener('click', () => {
+    closePresentationPanel();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && isPresentationOpen) {
+      closePresentationPanel();
+    }
   });
 
   planningLocalLinksToggle?.addEventListener('change', () => {
