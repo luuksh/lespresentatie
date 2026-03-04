@@ -61,46 +61,10 @@
 
       <section class="card control-card">
         <h2 class="panel-title">Jaarplanning Studio</h2>
-        <p class="panel-help">Volledig intern bewerken. Geen externe bronbestanden of koppelingen.</p>
-        <div class="toolbar jaarplanning-settings">
-          <select id="jaarplanningStudioClassSelect" class="jaarplanning-source-input"></select>
-          <input
-            id="jaarplanningStudioWeekInput"
-            type="number"
-            min="1"
-            max="53"
-            class="jaarplanning-source-input"
-            placeholder="Week"
-          />
+        <p class="panel-help">Open de volledige studio in een aparte pagina.</p>
+        <div class="btn-group">
+          <a href="jaarplanning-studio.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Jaarplanning Studio</a>
         </div>
-        <p id="jaarplanningEditorMeta" class="panel-help"></p>
-        <textarea
-          id="jaarplanningEditorLessons"
-          class="jaarplanning-source-input"
-          rows="5"
-          placeholder="A | Project | Les&#10;B | Project | Les&#10;C | Project | Les"
-        ></textarea>
-        <textarea
-          id="jaarplanningEditorItems"
-          class="jaarplanning-source-input"
-          rows="5"
-          placeholder="Item 1&#10;Item 2&#10;Item 3"
-          style="margin-top:8px;"
-        ></textarea>
-        <input
-          id="jaarplanningEditorNote"
-          type="text"
-          class="jaarplanning-source-input"
-          placeholder="Optionele notitie"
-          autocomplete="off"
-          style="margin-top:8px;"
-        />
-        <div class="btn-group" style="margin-top:8px;">
-          <button id="jaarplanningEditorSave" type="button" class="btn btn-primary">Week opslaan</button>
-          <button id="jaarplanningEditorClear" type="button" class="btn btn-secondary">Week leegmaken</button>
-          <button id="jaarplanningStudioReset" type="button" class="btn btn-secondary">Studio reset</button>
-        </div>
-        <p id="jaarplanningEditorFileStatus" class="panel-help" style="margin-top:8px;">Studio nog niet aangepast.</p>
       </section>
 
       <section class="card control-card">

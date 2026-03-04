@@ -1471,6 +1471,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderPlanning();
 
   applyAgendaSource(resolveAgendaSourceUrl(), false);
+  window.addEventListener('storage', (event) => {
+    if (event.key !== PLAN_STUDIO_KEY) return;
+    const latest = loadPlanningStudioFromStorage();
+    if (!latest) return;
+    planningStudio = latest;
+    rebuildPlanningFromStudio();
+    renderPlanning();
+  });
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
   clockMarkerTimer = setInterval(() => updateClockMarkerTarget(new Date()), 30 * 1000);
   updateClockMarkerTarget(new Date());

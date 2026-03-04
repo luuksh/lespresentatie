@@ -4,7 +4,7 @@ De jaarplanning werkt volledig intern via de Jaarplanning Studio in de app.
 
 ## Studio gebruik
 
-1. Open in het docentpaneel `Jaarplanning Studio`.
+1. Open `jaarplanning-studio.html`.
 2. Kies klas en week.
 3. Bewerk:
    - `Lessen` (regelvorm: `A | Project | Les`)
@@ -25,3 +25,4 @@ Wil je de studio-stand ook naar de repo publiceren:
 
 - Geen OneDrive, geen PowerPoint-koppeling, geen Microsoft-diensten.
 - Geen bronbestand-koppeling nodig in de UI.
+- Het docentpaneel bevat alleen een knop naar de aparte Studio-pagina.

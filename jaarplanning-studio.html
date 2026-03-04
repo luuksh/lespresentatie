@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaarplanning Studio</title>
+  <link rel="stylesheet" href="css/jaarplanning-studio.css?v=20260304-01" />
+  <script type="module" src="js/jaarplanning-studio.js?v=20260304-01"></script>
+</head>
+<body>
+  <main class="studio-layout">
+    <header class="studio-header">
+      <div>
+        <p class="studio-kicker">Intern Platform</p>
+        <h1>Jaarplanning Studio</h1>
+      </div>
+      <div class="studio-actions">
+        <button id="resetStudioBtn" type="button" class="btn btn-secondary">Studio reset</button>
+        <button id="exportStudioBtn" type="button" class="btn btn-secondary">Export JSON</button>
+      </div>
+    </header>
+
+    <section class="studio-grid">
+      <aside class="studio-card studio-sidebar">
+        <h2>Klas & week</h2>
+        <label class="field">
+          <span>Klas</span>
+          <select id="classSelect"></select>
+        </label>
+        <label class="field">
+          <span>Week</span>
+          <input id="weekInput" type="number" min="1" max="53" />
+        </label>
+        <div class="btn-row">
+          <button id="prevWeekBtn" type="button" class="btn btn-secondary">Vorige week</button>
+          <button id="nextWeekBtn" type="button" class="btn btn-secondary">Volgende week</button>
+        </div>
+        <h3>Bestaande weken</h3>
+        <div id="weekList" class="week-list"></div>
+      </aside>
+
+      <section class="studio-card studio-editor">
+        <h2 id="editorTitle">Editor</h2>
+        <label class="field">
+          <span>Lessen</span>
+          <textarea id="lessonsInput" rows="8" placeholder="A | Project | Les\nB | Project | Les\nC | Project | Les"></textarea>
+        </label>
+        <label class="field">
+          <span>Items</span>
+          <textarea id="itemsInput" rows="8" placeholder="Item 1\nItem 2\nItem 3"></textarea>
+        </label>
+        <label class="field">
+          <span>Notitie</span>
+          <input id="noteInput" type="text" placeholder="Optionele notitie" />
+        </label>
+        <div class="btn-row">
+          <button id="saveWeekBtn" type="button" class="btn btn-primary">Week opslaan</button>
+          <button id="clearWeekBtn" type="button" class="btn btn-danger">Week leegmaken</button>
+        </div>
+        <p id="statusLine" class="status-line">Studio laden...</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
