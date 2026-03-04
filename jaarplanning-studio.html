@@ -22,40 +22,37 @@
 
     <section class="studio-grid">
       <aside class="studio-card studio-sidebar">
-        <h2>Jaarlaag & week</h2>
+        <h2>Jaarlaag</h2>
         <label class="field">
           <span>Jaarlaag</span>
           <select id="classSelect"></select>
         </label>
-        <label class="field">
-          <span>Week</span>
-          <input id="weekInput" type="number" min="1" max="53" />
-        </label>
+        <p class="status-line">Alle klassen binnen deze jaarlaag delen dezelfde planning.</p>
         <div class="btn-row">
-          <button id="prevWeekBtn" type="button" class="btn btn-secondary">Vorige week</button>
-          <button id="nextWeekBtn" type="button" class="btn btn-secondary">Volgende week</button>
+          <button id="saveAllBtn" type="button" class="btn btn-primary">Alles opslaan</button>
+          <button id="clearLayerBtn" type="button" class="btn btn-danger">Jaarlaag leegmaken</button>
         </div>
-        <h3>Bestaande weken</h3>
-        <div id="weekList" class="week-list"></div>
       </aside>
 
       <section class="studio-card studio-editor">
-        <h2 id="editorTitle">Editor</h2>
-        <label class="field">
-          <span>Lessen</span>
-          <textarea id="lessonsInput" rows="8" placeholder="A | Project | Les\nB | Project | Les\nC | Project | Les"></textarea>
-        </label>
-        <label class="field">
-          <span>Items</span>
-          <textarea id="itemsInput" rows="8" placeholder="Item 1\nItem 2\nItem 3"></textarea>
-        </label>
-        <label class="field">
-          <span>Notitie</span>
-          <input id="noteInput" type="text" placeholder="Optionele notitie" />
-        </label>
-        <div class="btn-row">
-          <button id="saveWeekBtn" type="button" class="btn btn-primary">Week opslaan</button>
-          <button id="clearWeekBtn" type="button" class="btn btn-danger">Week leegmaken</button>
+        <h2 id="editorTitle">Jaarplanning Raster</h2>
+        <div class="sheet-wrap">
+          <table class="sheet" id="sheetTable">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>A Project</th>
+                <th>A Les</th>
+                <th>B Project</th>
+                <th>B Les</th>
+                <th>C Project</th>
+                <th>C Les</th>
+                <th>Items</th>
+                <th>Notitie</th>
+              </tr>
+            </thead>
+            <tbody id="sheetBody"></tbody>
+          </table>
         </div>
         <p id="statusLine" class="status-line">Studio laden...</p>
       </section>

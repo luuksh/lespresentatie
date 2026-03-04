@@ -2,24 +2,18 @@ const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
 
 const classSelect = document.getElementById('classSelect');
-const weekInput = document.getElementById('weekInput');
-const prevWeekBtn = document.getElementById('prevWeekBtn');
-const nextWeekBtn = document.getElementById('nextWeekBtn');
-const weekList = document.getElementById('weekList');
-const editorTitle = document.getElementById('editorTitle');
-const lessonsInput = document.getElementById('lessonsInput');
-const itemsInput = document.getElementById('itemsInput');
-const noteInput = document.getElementById('noteInput');
-const saveWeekBtn = document.getElementById('saveWeekBtn');
-const clearWeekBtn = document.getElementById('clearWeekBtn');
+const saveAllBtn = document.getElementById('saveAllBtn');
+const clearLayerBtn = document.getElementById('clearLayerBtn');
 const resetStudioBtn = document.getElementById('resetStudioBtn');
 const exportStudioBtn = document.getElementById('exportStudioBtn');
+const editorTitle = document.getElementById('editorTitle');
+const sheetBody = document.getElementById('sheetBody');
 const statusLine = document.getElementById('statusLine');
 
 const state = {
   baseDoc: { entries: [], presentations: {}, updatedAt: '' },
   doc: { entries: [], presentations: {}, updatedAt: '' },
-  classes: [],
+  layers: [],
 };
 
 function setStatus(message, isError = false) {
@@ -48,15 +42,6 @@ function gradeLayerFromClassId(rawClassId) {
     if (match) return match[1];
   }
   return '';
-}
-
-function currentIsoWeek() {
-  const now = new Date();
-  const utc = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-  const day = utc.getUTCDay() || 7;
-  utc.setUTCDate(utc.getUTCDate() + 4 - day);
-  const yearStart = new Date(Date.UTC(utc.getUTCFullYear(), 0, 1));
-  return Math.ceil((((utc - yearStart) / 86400000) + 1) / 7);
 }
 
 function normalizeDoc(raw) {
@@ -133,62 +118,90 @@ async function fetchJson(path) {
   return res.json();
 }
 
-function classesFromDoc(doc) {
+function layersFromDoc(doc) {
   return [...new Set(doc.entries.map((e) => gradeLayerFromClassId(e.classId)).filter(Boolean))].sort();
 }
 
-function parseLessons(text) {
-  return String(text || '')
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .map((line) => {
-      const parts = line.split('|').map((p) => p.trim());
-      if (parts.length >= 3) {
-        const [slot, project, lesson] = parts;
-        const row = { project, lesson };
-        if (/^[ABC]$/i.test(slot)) row.lessonKey = slot.toUpperCase();
-        return row;
-      }
-      if (parts.length === 2) {
-        const [project, lesson] = parts;
-        return { project, lesson };
-      }
-      return { project: parts[0], lesson: '' };
-    })
-    .filter((row) => String(row.project || '').trim() || String(row.lesson || '').trim());
-}
-
-function formatLessons(lessons) {
-  return (Array.isArray(lessons) ? lessons : []).map((lesson) => {
-    const slot = String(lesson?.lessonKey || '').trim().toUpperCase();
-    const project = String(lesson?.project || '').trim();
-    const title = String(lesson?.lesson || '').trim();
-    return slot ? `${slot} | ${project} | ${title}` : `${project} | ${title}`;
-  }).join('\n');
-}
-
-function weekCandidates(weekNo) {
-  const week = String(Math.max(1, Math.min(53, Number(weekNo) || 1)));
-  const padded = String(Number(week)).padStart(2, '0');
-  const year = new Date().getFullYear();
-  return [week, padded, `W${padded}`, `${year}-W${padded}`];
-}
-
-function selectedClass() {
+function selectedLayer() {
   return gradeLayerFromClassId(classSelect.value);
 }
 
-function selectedWeek() {
-  return Math.max(1, Math.min(53, Number(weekInput.value) || currentIsoWeek()));
+function parseWeek(weekRaw) {
+  const cleaned = String(weekRaw || '').trim().toUpperCase();
+  if (!cleaned) return NaN;
+  if (/^\d+$/.test(cleaned)) return Number(cleaned);
+  const mW = cleaned.match(/^W(\d{1,2})$/);
+  if (mW) return Number(mW[1]);
+  const mIso = cleaned.match(/^\d{4}-W(\d{1,2})$/);
+  if (mIso) return Number(mIso[1]);
+  return NaN;
 }
 
-function findEntry(classId, weekNo) {
-  const wk = weekCandidates(weekNo);
+function findLayerWeekEntry(layer, week) {
   return state.doc.entries.find((entry) => (
-    normalizeClassId(entry.classId) === normalizeClassId(classId)
-    && wk.includes(String(entry.week || '').trim().toUpperCase())
+    gradeLayerFromClassId(entry.classId) === layer && parseWeek(entry.week) === week
   )) || null;
+}
+
+function normalizeWeekEntry(layer, week, entry) {
+  const e = entry || { classId: layer, week: String(week), lessons: [], items: [] };
+  if (!Array.isArray(e.lessons)) e.lessons = [];
+  if (!Array.isArray(e.items)) e.items = [];
+  e.classId = layer;
+  e.week = String(week);
+  return e;
+}
+
+function lessonParts(entry) {
+  const out = {
+    A: { project: '', lesson: '' },
+    B: { project: '', lesson: '' },
+    C: { project: '', lesson: '' },
+  };
+  const lessons = Array.isArray(entry?.lessons) ? entry.lessons : [];
+  const fallback = [];
+  for (const lesson of lessons) {
+    const key = String(lesson?.lessonKey || '').trim().toUpperCase();
+    const project = String(lesson?.project || '').trim();
+    const title = String(lesson?.lesson || '').trim();
+    if (['A', 'B', 'C'].includes(key)) {
+      out[key] = { project, lesson: title };
+    } else {
+      fallback.push({ project, lesson: title });
+    }
+  }
+  for (const key of ['A', 'B', 'C']) {
+    if (!out[key].project && !out[key].lesson && fallback.length) {
+      out[key] = fallback.shift();
+    }
+  }
+  return out;
+}
+
+function setLesson(entry, slot, field, value) {
+  const cleaned = String(value || '').trim();
+  if (!Array.isArray(entry.lessons)) entry.lessons = [];
+  let lesson = entry.lessons.find((row) => String(row?.lessonKey || '').toUpperCase() === slot);
+  if (!lesson) {
+    lesson = { lessonKey: slot, project: '', lesson: '' };
+    entry.lessons.push(lesson);
+  }
+  lesson[field] = cleaned;
+  entry.lessons = entry.lessons.filter((row) => {
+    const project = String(row?.project || '').trim();
+    const title = String(row?.lesson || '').trim();
+    return project || title;
+  });
+}
+
+function setItems(entry, value) {
+  entry.items = String(value || '').split('\n').map((line) => line.trim()).filter(Boolean);
+}
+
+function setNote(entry, value) {
+  const note = String(value || '').trim();
+  if (note) entry.note = note;
+  else delete entry.note;
 }
 
 function saveStudio() {
@@ -196,84 +209,91 @@ function saveStudio() {
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
 }
 
-function renderWeekList() {
-  const cid = selectedClass();
-  const weeks = state.doc.entries
-    .filter((entry) => normalizeClassId(entry.classId) === cid)
-    .map((entry) => Number(String(entry.week).replace(/[^0-9]/g, '')))
-    .filter((n) => Number.isFinite(n) && n >= 1 && n <= 53);
-  const uniqueWeeks = [...new Set(weeks)].sort((a, b) => a - b);
+function renderSheet() {
+  const layer = selectedLayer();
+  editorTitle.textContent = `Jaarplanning Raster · jaarlaag ${layer}`;
+  sheetBody.innerHTML = '';
 
-  weekList.innerHTML = '';
-  if (!uniqueWeeks.length) {
-    weekList.innerHTML = '<p class="status-line">Nog geen weken voor deze klas.</p>';
-    return;
-  }
+  for (let week = 1; week <= 53; week += 1) {
+    const entry = normalizeWeekEntry(layer, week, findLayerWeekEntry(layer, week));
+    const parts = lessonParts(entry);
+    const tr = document.createElement('tr');
 
-  for (const week of uniqueWeeks) {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = `week-btn${week === selectedWeek() ? ' active' : ''}`;
-    btn.textContent = `Week ${week}`;
-    btn.addEventListener('click', () => {
-      weekInput.value = String(week);
-      renderEditor();
-    });
-    weekList.appendChild(btn);
+    const weekCell = document.createElement('td');
+    weekCell.className = 'week-col';
+    weekCell.textContent = `W${String(week).padStart(2, '0')}`;
+    tr.appendChild(weekCell);
+
+    const makeInputCell = (value, slot, field, multiline = false) => {
+      const td = document.createElement('td');
+      const el = multiline ? document.createElement('textarea') : document.createElement('input');
+      el.className = `sheet-cell${multiline ? ' multiline' : ''}`;
+      el.value = value;
+      el.dataset.week = String(week);
+      el.dataset.slot = slot;
+      el.dataset.field = field;
+      el.addEventListener('change', onCellChange);
+      td.appendChild(el);
+      return td;
+    };
+
+    tr.appendChild(makeInputCell(parts.A.project, 'A', 'project'));
+    tr.appendChild(makeInputCell(parts.A.lesson, 'A', 'lesson'));
+    tr.appendChild(makeInputCell(parts.B.project, 'B', 'project'));
+    tr.appendChild(makeInputCell(parts.B.lesson, 'B', 'lesson'));
+    tr.appendChild(makeInputCell(parts.C.project, 'C', 'project'));
+    tr.appendChild(makeInputCell(parts.C.lesson, 'C', 'lesson'));
+    tr.appendChild(makeInputCell((entry.items || []).join('\n'), 'ITEMS', 'items', true));
+    tr.appendChild(makeInputCell(String(entry.note || ''), 'NOTE', 'note', true));
+
+    sheetBody.appendChild(tr);
   }
 }
 
-function renderEditor() {
-  const cid = selectedClass();
-  const week = selectedWeek();
-  const entry = findEntry(cid, week);
-  editorTitle.textContent = `Editor · jaarlaag ${cid} · week ${week}`;
-  lessonsInput.value = formatLessons(entry?.lessons || []);
-  itemsInput.value = (entry?.items || []).join('\n');
-  noteInput.value = String(entry?.note || '');
-  renderWeekList();
-}
+function onCellChange(event) {
+  const target = event.target;
+  const layer = selectedLayer();
+  const week = Number(target.dataset.week || '0');
+  if (!layer || !week) return;
 
-function saveWeek() {
-  const cid = selectedClass();
-  const week = selectedWeek();
-  const existing = findEntry(cid, week);
-  const payload = {
-    classId: cid,
-    week: String(week),
-    lessons: parseLessons(lessonsInput.value),
-    items: String(itemsInput.value).split('\n').map((line) => line.trim()).filter(Boolean),
-  };
-  const note = String(noteInput.value || '').trim();
-  if (note) payload.note = note;
+  let entry = findLayerWeekEntry(layer, week);
+  if (!entry) {
+    entry = normalizeWeekEntry(layer, week, null);
+    state.doc.entries.push(entry);
+  }
 
-  if (existing) {
-    existing.classId = payload.classId;
-    existing.week = payload.week;
-    existing.lessons = payload.lessons;
-    existing.items = payload.items;
-    if (payload.note) existing.note = payload.note;
-    else delete existing.note;
-  } else {
-    state.doc.entries.push(payload);
+  const slot = String(target.dataset.slot || '');
+  const field = String(target.dataset.field || '');
+  if (slot === 'ITEMS') {
+    setItems(entry, target.value);
+  } else if (slot === 'NOTE') {
+    setNote(entry, target.value);
+  } else if (['A', 'B', 'C'].includes(slot) && (field === 'project' || field === 'lesson')) {
+    setLesson(entry, slot, field, target.value);
+  }
+
+  const hasLessons = Array.isArray(entry.lessons) && entry.lessons.length > 0;
+  const hasItems = Array.isArray(entry.items) && entry.items.length > 0;
+  const hasNote = Boolean(String(entry.note || '').trim());
+  if (!hasLessons && !hasItems && !hasNote) {
+    state.doc.entries = state.doc.entries.filter((row) => row !== entry);
   }
 
   saveStudio();
-  renderEditor();
-  setStatus(`Opgeslagen: jaarlaag ${cid} week ${week}.`);
+  setStatus(`Gewijzigd: jaarlaag ${layer}, week ${week}.`);
 }
 
-function clearWeek() {
-  const cid = selectedClass();
-  const week = selectedWeek();
-  const wk = weekCandidates(week);
-  state.doc.entries = state.doc.entries.filter((entry) => !(
-    normalizeClassId(entry.classId) === cid
-    && wk.includes(String(entry.week || '').trim().toUpperCase())
-  ));
+function clearLayer() {
+  const layer = selectedLayer();
+  state.doc.entries = state.doc.entries.filter((entry) => gradeLayerFromClassId(entry.classId) !== layer);
   saveStudio();
-  renderEditor();
-  setStatus(`Leeggemaakt: jaarlaag ${cid} week ${week}.`);
+  renderSheet();
+  setStatus(`Jaarlaag ${layer} leeggemaakt.`);
+}
+
+function saveAll() {
+  saveStudio();
+  setStatus(`Alles opgeslagen voor jaarlaag ${selectedLayer()}.`);
 }
 
 function exportStudio() {
@@ -291,19 +311,18 @@ function exportStudio() {
 
 async function resetStudio() {
   localStorage.removeItem(STUDIO_KEY);
-  state.doc = normalizeDoc(state.baseDoc);
-  weekInput.value = String(currentIsoWeek());
+  state.doc = collapseToYearLayerDoc(state.baseDoc);
   saveStudio();
-  renderEditor();
+  renderSheet();
   setStatus('Studio teruggezet naar basisplanning.');
 }
 
-function fillClassOptions(classes) {
+function fillLayerOptions(layers) {
   classSelect.innerHTML = '';
-  for (const cid of classes) {
+  for (const layer of layers) {
     const option = document.createElement('option');
-    option.value = cid;
-    option.textContent = `Jaarlaag ${cid}`;
+    option.value = layer;
+    option.textContent = `Jaarlaag ${layer}`;
     classSelect.appendChild(option);
   }
 }
@@ -317,40 +336,28 @@ async function boot() {
 
     state.baseDoc = collapseToYearLayerDoc(baseRaw);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
-    state.doc = fromStorage
-      ? collapseToYearLayerDoc(JSON.parse(fromStorage))
-      : collapseToYearLayerDoc(baseRaw);
+    state.doc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : collapseToYearLayerDoc(baseRaw);
 
-    const uiClasses = Object.keys(classRaw || {}).map((cid) => gradeLayerFromClassId(cid));
-    const allClasses = [...new Set([...uiClasses, ...classesFromDoc(state.doc)])].filter(Boolean).sort();
-    state.classes = allClasses;
+    const uiLayers = Object.keys(classRaw || {}).map((cid) => gradeLayerFromClassId(cid)).filter(Boolean);
+    const allLayers = [...new Set([...uiLayers, ...layersFromDoc(state.doc)])].sort();
+    state.layers = allLayers;
 
-    fillClassOptions(allClasses);
-    classSelect.value = allClasses[0] || '1';
-    weekInput.value = String(currentIsoWeek());
+    fillLayerOptions(allLayers);
+    classSelect.value = allLayers[0] || '1';
 
     saveStudio();
-    renderEditor();
-    setStatus('Studio klaar. Wijzigingen zijn intern opgeslagen.');
+    renderSheet();
+    setStatus('Studio klaar. Excel-overzicht actief.');
   } catch (err) {
     console.error(err);
     setStatus(`Fout bij laden studio: ${err?.message || err}`, true);
   }
 }
 
-saveWeekBtn.addEventListener('click', saveWeek);
-clearWeekBtn.addEventListener('click', clearWeek);
+saveAllBtn.addEventListener('click', saveAll);
+clearLayerBtn.addEventListener('click', clearLayer);
 exportStudioBtn.addEventListener('click', exportStudio);
 resetStudioBtn.addEventListener('click', resetStudio);
-classSelect.addEventListener('change', renderEditor);
-weekInput.addEventListener('input', renderEditor);
-prevWeekBtn.addEventListener('click', () => {
-  weekInput.value = String(Math.max(1, selectedWeek() - 1));
-  renderEditor();
-});
-nextWeekBtn.addEventListener('click', () => {
-  weekInput.value = String(Math.min(53, selectedWeek() + 1));
-  renderEditor();
-});
+classSelect.addEventListener('change', renderSheet);
 
 boot();
