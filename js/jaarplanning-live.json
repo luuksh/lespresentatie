@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T09:12:01+01:00",
+  "updatedAt": "2026-03-04T09:29:34+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -7288,13 +7288,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -7307,7 +7309,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -7452,13 +7455,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -7655,7 +7660,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -7752,13 +7758,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -7845,13 +7853,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -7870,7 +7880,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -7889,7 +7900,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -7929,13 +7941,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -7954,7 +7968,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -8003,13 +8018,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -8022,7 +8039,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -8167,13 +8185,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -8370,7 +8390,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -8467,13 +8488,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -8560,13 +8583,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -8585,7 +8610,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -8604,7 +8630,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -8644,13 +8671,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -8669,7 +8698,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -8718,13 +8748,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -8737,7 +8769,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -8882,13 +8915,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -9085,7 +9120,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -9182,13 +9218,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -9275,13 +9313,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -9300,7 +9340,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -9319,7 +9360,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -9359,13 +9401,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -9384,7 +9428,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -9433,13 +9478,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -9452,7 +9499,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -9597,13 +9645,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -9800,7 +9850,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -9897,13 +9948,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -9990,13 +10043,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -10015,7 +10070,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -10034,7 +10090,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -10074,13 +10131,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -10099,7 +10158,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -10148,13 +10208,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -10167,7 +10229,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -10312,13 +10375,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -10515,7 +10580,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -10612,13 +10678,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -10705,13 +10773,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -10730,7 +10800,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -10749,7 +10820,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -10789,13 +10861,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -10814,7 +10888,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -10863,13 +10938,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -10882,7 +10959,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -11027,13 +11105,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -11230,7 +11310,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -11327,13 +11408,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -11420,13 +11503,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -11445,7 +11530,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -11464,7 +11550,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -11504,13 +11591,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -11529,7 +11618,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -11578,13 +11668,15 @@
           "project": "Faalfestival",
           "lesson": "Les 10 FF: Faalbattle oefenen + Faalbattle",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-10-ff-faalbattle-oefenen-faalbattle-les-10"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-10-ff-faalbattle-oefenen-faalbattle"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 11 FF: Faalbattle",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-11-ff-faalbattle-les-11"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-11-ff-faalbattle"
         }
       ],
       "items": []
@@ -11597,7 +11689,8 @@
           "project": "Faalfestival",
           "lesson": "Moralicious dinsdag 10 maart!",
           "lessonKey": "A",
-          "presentationId": "faalfestival-moralicious-dinsdag-10-maart"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
         }
       ],
       "items": []
@@ -11742,13 +11835,15 @@
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Boeken en initiaal",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-3-ff-boeken-en-initiaal-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-boeken-en-initiaal"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 3 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-3-ff-leesles-les-3"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-3-ff-leesles"
         }
       ],
       "items": [
@@ -11945,7 +12040,8 @@
           "project": "Faalfestival",
           "lesson": "Les 4: Informatieblok",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-4-informatieblok-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-informatieblok"
         }
       ],
       "items": []
@@ -12042,13 +12138,15 @@
           "project": "Faalfestival",
           "lesson": "Les 4 FF: Leesles",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-4-ff-leesles-les-4"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-4-ff-leesles"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 5: Eigenschappen + Levensles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-5-eigenschappen-levensles-les-5"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-5-eigenschappen-levensles"
         }
       ],
       "items": []
@@ -12135,13 +12233,15 @@
           "project": "Faalfestival",
           "lesson": "Les 1 FF: Intro",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-1-ff-intro-les-1"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-1-ff-intro"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Letterkunde Middeleeuwen",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-letterkunde-middeleeuwen-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-letterkunde-middeleeuwen"
         }
       ],
       "items": []
@@ -12160,7 +12260,8 @@
           "project": "Faalfestival",
           "lesson": "Les 6: Fragment / Faalervaring hertaling",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-6-fragment-faalervaring-hertaling-les-6"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
         }
       ],
       "items": []
@@ -12179,7 +12280,8 @@
           "project": "Faalfestival",
           "lesson": "Les 2 FF: Leesles",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-2-ff-leesles-les-2"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-2-ff-leesles"
         }
       ],
       "items": []
@@ -12219,13 +12321,15 @@
           "project": "Faalfestival",
           "lesson": "Les 7: Creatieve verwerking",
           "lessonKey": "A",
-          "presentationId": "faalfestival-les-7-creatieve-verwerking-les-7"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-7-creatieve-verwerking"
         },
         {
           "project": "Faalfestival",
           "lesson": "Les 8 FF: Poster afmaken",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-8-ff-poster-afmaken-les-8"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-8-ff-poster-afmaken"
         }
       ],
       "items": []
@@ -12244,7 +12348,8 @@
           "project": "Faalfestival",
           "lesson": "Les 9 FF: Poster afmaken + Posterpresentaties",
           "lessonKey": "B",
-          "presentationId": "faalfestival-les-9-ff-poster-afmaken-posterpresentaties-les-9"
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-9-ff-poster-afmaken-posterpresentaties"
         }
       ],
       "items": []
@@ -23039,6 +23144,4478 @@
         "marker-les-4-afronden-en-feedback": 21,
         "marker-les-5-presentaties-voorbereiden": 27,
         "marker-les-6-presenteren-en-reflecteren": 33
+      }
+    },
+    "project-faalfestival": {
+      "id": "project-faalfestival",
+      "presentationType": "project-overview",
+      "title": "Faalfestival",
+      "subtitle": "Faalfestival",
+      "project": "Faalfestival",
+      "markerDecks": {
+        "marker-les-10-ff-faalbattle-oefenen-faalbattle": [
+          {
+            "type": "title",
+            "title": "Hertalen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "(Vraag hertalen aan de klas)",
+            "subtitle": "",
+            "items": [
+              "We inventariseren op het bord..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middelnederlands hertalen",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "Clisis",
+              ": samentrekking: 'het",
+              "sweert",
+              "' wordt '",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+              "gaen",
+              "(gaan),",
+              "wair",
+              "(waar)",
+              "Voorlezen helpt!",
+              "WNT"
+            ]
+          }
+        ],
+        "marker-les-11-ff-faalbattle": [
+          {
+            "type": "title",
+            "title": "Hertalen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "(Vraag hertalen aan de klas)",
+            "subtitle": "",
+            "items": [
+              "We inventariseren op het bord..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middelnederlands hertalen",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "Clisis",
+              ": samentrekking: 'het",
+              "sweert",
+              "' wordt '",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+              "gaen",
+              "(gaan),",
+              "wair",
+              "(waar)",
+              "Voorlezen helpt!",
+              "WNT"
+            ]
+          }
+        ],
+        "marker-moralicious-dinsdag-10-maart": [
+          {
+            "type": "title",
+            "title": "Moralicious dinsdag 10 maart!",
+            "subtitle": "Faalfestival"
+          }
+        ],
+        "marker-les-3-ff-boeken-en-initiaal": [
+          {
+            "type": "bullets",
+            "title": "Les 3: Initialen",
+            "subtitle": "",
+            "items": [
+              "Zelf",
+              "een",
+              "middeleeuws",
+              "initiaal",
+              "ontwerpen",
+              "1/12/2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Leerdoelen",
+            "subtitle": "",
+            "items": [
+              "Weten",
+              "wat initialen en miniaturen zijn",
+              "Symboliek",
+              "herkennen",
+              "Eigen",
+              "initiaal",
+              "ontwerpen",
+              "in",
+              "middeleeuwse",
+              "stijl",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijdsplanning",
+            "subtitle": "",
+            "items": [
+              "10 min: uitleg + voorbeelden",
+              "10 min: inspiratie & symboliek kiezen",
+              "60 min: ontwerp maken",
+              "10 min: tentoonstelling & reflectie",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een initiaal of miniatuur?",
+            "subtitle": "",
+            "items": [
+              "Initiaal = grote beginletter",
+              "Miniatuur = kleine afbeelding in handschrift",
+              "Beide vaak rijk versierd met kleuren en goud",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "weetjes",
+            "subtitle": "",
+            "items": [
+              "‘",
+              "Miniatuur",
+              "’",
+              "komt",
+              "van",
+              "minium",
+              "(rood pigment)",
+              "Sommige",
+              "pigmenten",
+              "waren",
+              "duurder",
+              "dan",
+              "goud",
+              "Marges",
+              "soms",
+              "vol vreemde",
+              "figuurtjes",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom waren ze belangrijk?",
+            "subtitle": "",
+            "items": [
+              "Structuur in tekst",
+              "Statussymbool voor rijke opdrachtgevers",
+              "Devotie of religieuze symboliek",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stijlkenmerken",
+            "subtitle": "",
+            "items": [
+              "Veel blauw, rood, goud",
+              "Versieringen: dieren, planten, draken",
+              "Gotisch (hoekig) of Romaans (rond)",
+              "Rijke randversiering",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe werd het gemaakt?",
+            "subtitle": "",
+            "items": [
+              "1. Perkament van kalfshuid",
+              "2. Schets met potlood",
+              "3. Inktlijnen met ganzenveer",
+              "4. Kleur met pigmenten",
+              "5. Goud met bladgoud",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wie maakte ze?",
+            "subtitle": "",
+            "items": [
+              "Scribenten = tekstschrijvers",
+              "Illuminatoren = versierders",
+              "Werkten in kloosters of ateliers voor de kerk of adel",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Symboliek",
+            "subtitle": "",
+            "items": [
+              "Draak =",
+              "kwaad",
+              "Lam = Christus",
+              "Wijnrank",
+              "=",
+              "leven",
+              "Uil",
+              "=",
+              "wijsheid",
+              "of",
+              "dwaasheid",
+              "Bladgoud",
+              "=",
+              "goddelijke",
+              "glans",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht: eigen initiaal maken",
+            "subtitle": "",
+            "items": [
+              "Stap 1: Kies een letter",
+              "Stap 2: Gotisch of Romaans?",
+              "Stap 3: Versier met symbolen",
+              "Stap 4: Omlijnen & inkleuren",
+              "Benodigdheden: papier, kleurpotloden, fineliner",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Samenwerking: wie doet wat?",
+            "subtitle": "",
+            "items": [
+              "Je",
+              "werkt",
+              "in",
+              "groepjes",
+              "van",
+              "vier",
+              "aan",
+              "één",
+              "initiaal",
+              ".",
+              "Iedereen",
+              "heeft",
+              "een",
+              "vaste",
+              "rol",
+              ".",
+              "1.",
+              "Tekenaar",
+              "–",
+              "Tekent",
+              "de",
+              "initiaal",
+              "met",
+              "potlood",
+              "–",
+              "Voert",
+              "de",
+              "ideeën",
+              "van de",
+              "groep",
+              "uit",
+              "2. Stijl-",
+              "en",
+              "vormexpert",
+              "– Kiest:",
+              "gotisch",
+              "of",
+              "romaans",
+              ".",
+              "Heeft",
+              "de",
+              "fineliner",
+              ".",
+              "– Let op",
+              "lijnen",
+              ",",
+              "vormen",
+              "en",
+              "versiering",
+              "3.",
+              "Symboliekexpert",
+              "– Kiest",
+              "minimaal",
+              "2",
+              "symbolen",
+              "– Weet wat ze",
+              "betekenen",
+              "–",
+              "Bepaalt",
+              "kleuren",
+              "(",
+              "goud",
+              ", rood,",
+              "blauw",
+              ")",
+              "4.",
+              "Inhoudelijk",
+              "controleur",
+              "–",
+              "Controleert",
+              "of het",
+              "werk",
+              "echt",
+              "middeleeuws",
+              "is",
+              "–",
+              "Kleurt",
+              "de",
+              "initiaal",
+              "in.",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tentoonstelling & reflectie",
+            "subtitle": "",
+            "items": [
+              "Iedereen legt werk neer",
+              "Loop langs elkaar",
+              "Wat valt op?",
+              "Welke symboliek zie je?",
+              "Stem voor 'meest middeleeuws'",
+              "12-1-2026"
+            ]
+          }
+        ],
+        "marker-les-3-ff-leesles": [
+          {
+            "type": "bullets",
+            "title": "Les 3: Initialen",
+            "subtitle": "",
+            "items": [
+              "Zelf",
+              "een",
+              "middeleeuws",
+              "initiaal",
+              "ontwerpen",
+              "1/12/2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Leerdoelen",
+            "subtitle": "",
+            "items": [
+              "Weten",
+              "wat initialen en miniaturen zijn",
+              "Symboliek",
+              "herkennen",
+              "Eigen",
+              "initiaal",
+              "ontwerpen",
+              "in",
+              "middeleeuwse",
+              "stijl",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijdsplanning",
+            "subtitle": "",
+            "items": [
+              "10 min: uitleg + voorbeelden",
+              "10 min: inspiratie & symboliek kiezen",
+              "60 min: ontwerp maken",
+              "10 min: tentoonstelling & reflectie",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een initiaal of miniatuur?",
+            "subtitle": "",
+            "items": [
+              "Initiaal = grote beginletter",
+              "Miniatuur = kleine afbeelding in handschrift",
+              "Beide vaak rijk versierd met kleuren en goud",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "weetjes",
+            "subtitle": "",
+            "items": [
+              "‘",
+              "Miniatuur",
+              "’",
+              "komt",
+              "van",
+              "minium",
+              "(rood pigment)",
+              "Sommige",
+              "pigmenten",
+              "waren",
+              "duurder",
+              "dan",
+              "goud",
+              "Marges",
+              "soms",
+              "vol vreemde",
+              "figuurtjes",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom waren ze belangrijk?",
+            "subtitle": "",
+            "items": [
+              "Structuur in tekst",
+              "Statussymbool voor rijke opdrachtgevers",
+              "Devotie of religieuze symboliek",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stijlkenmerken",
+            "subtitle": "",
+            "items": [
+              "Veel blauw, rood, goud",
+              "Versieringen: dieren, planten, draken",
+              "Gotisch (hoekig) of Romaans (rond)",
+              "Rijke randversiering",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe werd het gemaakt?",
+            "subtitle": "",
+            "items": [
+              "1. Perkament van kalfshuid",
+              "2. Schets met potlood",
+              "3. Inktlijnen met ganzenveer",
+              "4. Kleur met pigmenten",
+              "5. Goud met bladgoud",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wie maakte ze?",
+            "subtitle": "",
+            "items": [
+              "Scribenten = tekstschrijvers",
+              "Illuminatoren = versierders",
+              "Werkten in kloosters of ateliers voor de kerk of adel",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Symboliek",
+            "subtitle": "",
+            "items": [
+              "Draak =",
+              "kwaad",
+              "Lam = Christus",
+              "Wijnrank",
+              "=",
+              "leven",
+              "Uil",
+              "=",
+              "wijsheid",
+              "of",
+              "dwaasheid",
+              "Bladgoud",
+              "=",
+              "goddelijke",
+              "glans",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht: eigen initiaal maken",
+            "subtitle": "",
+            "items": [
+              "Stap 1: Kies een letter",
+              "Stap 2: Gotisch of Romaans?",
+              "Stap 3: Versier met symbolen",
+              "Stap 4: Omlijnen & inkleuren",
+              "Benodigdheden: papier, kleurpotloden, fineliner",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Samenwerking: wie doet wat?",
+            "subtitle": "",
+            "items": [
+              "Je",
+              "werkt",
+              "in",
+              "groepjes",
+              "van",
+              "vier",
+              "aan",
+              "één",
+              "initiaal",
+              ".",
+              "Iedereen",
+              "heeft",
+              "een",
+              "vaste",
+              "rol",
+              ".",
+              "1.",
+              "Tekenaar",
+              "–",
+              "Tekent",
+              "de",
+              "initiaal",
+              "met",
+              "potlood",
+              "–",
+              "Voert",
+              "de",
+              "ideeën",
+              "van de",
+              "groep",
+              "uit",
+              "2. Stijl-",
+              "en",
+              "vormexpert",
+              "– Kiest:",
+              "gotisch",
+              "of",
+              "romaans",
+              ".",
+              "Heeft",
+              "de",
+              "fineliner",
+              ".",
+              "– Let op",
+              "lijnen",
+              ",",
+              "vormen",
+              "en",
+              "versiering",
+              "3.",
+              "Symboliekexpert",
+              "– Kiest",
+              "minimaal",
+              "2",
+              "symbolen",
+              "– Weet wat ze",
+              "betekenen",
+              "–",
+              "Bepaalt",
+              "kleuren",
+              "(",
+              "goud",
+              ", rood,",
+              "blauw",
+              ")",
+              "4.",
+              "Inhoudelijk",
+              "controleur",
+              "–",
+              "Controleert",
+              "of het",
+              "werk",
+              "echt",
+              "middeleeuws",
+              "is",
+              "–",
+              "Kleurt",
+              "de",
+              "initiaal",
+              "in.",
+              "12-1-2026"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tentoonstelling & reflectie",
+            "subtitle": "",
+            "items": [
+              "Iedereen legt werk neer",
+              "Loop langs elkaar",
+              "Wat valt op?",
+              "Welke symboliek zie je?",
+              "Stem voor 'meest middeleeuws'",
+              "12-1-2026"
+            ]
+          }
+        ],
+        "marker-les-4-informatieblok": [
+          {
+            "type": "bullets",
+            "title": "Les 4: Hoofsheid is",
+            "subtitle": "",
+            "items": [
+              "een ernstig spel",
+              "Hoe hoofs ben jij?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is hoofsheid precies?",
+            "subtitle": "",
+            "items": [
+              "Lees het uitgedeelde fragment.",
+              "Wat is hoofsheid?",
+              "Welke concrete gedragsregels horen daarbij?",
+              "Maak een document aan",
+              "Schrijflab",
+              "3.0 en daarin formuleer je het antwoord."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe hoofs ben jij?",
+            "subtitle": "",
+            "items": [
+              "Welke gedragsregels hebben wij nu nog die aansluiten op het hoofse ideaal?",
+              "Hoe ga jij je de komende week nog hoofser gedragen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe hoofs is je personage?",
+            "subtitle": "",
+            "items": [
+              "Voldoet",
+              "je personage",
+              "aan",
+              "het",
+              "middeleeuwse",
+              "ideaal",
+              "? Leg",
+              "uit"
+            ]
+          }
+        ],
+        "marker-les-4-ff-leesles": [
+          {
+            "type": "bullets",
+            "title": "Les 4: Hoofsheid is",
+            "subtitle": "",
+            "items": [
+              "een ernstig spel",
+              "Hoe hoofs ben jij?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is hoofsheid precies?",
+            "subtitle": "",
+            "items": [
+              "Lees het uitgedeelde fragment.",
+              "Wat is hoofsheid?",
+              "Welke concrete gedragsregels horen daarbij?",
+              "Maak een document aan",
+              "Schrijflab",
+              "3.0 en daarin formuleer je het antwoord."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe hoofs ben jij?",
+            "subtitle": "",
+            "items": [
+              "Welke gedragsregels hebben wij nu nog die aansluiten op het hoofse ideaal?",
+              "Hoe ga jij je de komende week nog hoofser gedragen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe hoofs is je personage?",
+            "subtitle": "",
+            "items": [
+              "Voldoet",
+              "je personage",
+              "aan",
+              "het",
+              "middeleeuwse",
+              "ideaal",
+              "? Leg",
+              "uit"
+            ]
+          }
+        ],
+        "marker-les-5-eigenschappen-levensles": [
+          {
+            "type": "bullets",
+            "title": "Les 5: Hertalen",
+            "subtitle": "",
+            "items": [
+              "Zelf een stukje Middelnederlands hertalen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Leerdoelen",
+            "subtitle": "",
+            "items": [
+              "Je weet wat Middelnederlands is",
+              "Je herkent kenmerken en valkuilen",
+              "Je kunt een tekst hertalen naar modern Nederlands"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is Middelnederlands?",
+            "subtitle": "",
+            "items": [
+              "Oudste vorm van het Nederlands (ca. 1200–1500)",
+              "Geen standaardtaal: regionale varianten",
+              "Gebruikt in verhalen, liederen, kronieken",
+              "Geschreven zoals men sprak"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kenmerken van Middelnederlands",
+            "subtitle": "",
+            "items": [
+              "•",
+              "Andere spelling:",
+              "bv",
+              ". 'scone' (",
+              "schone",
+              "), '",
+              "ontfaen",
+              "' (",
+              "ontvangen",
+              ")",
+              "•",
+              "Uitgangen",
+              ": 'des",
+              "conincs",
+              "' = van de",
+              "koning",
+              ", '",
+              "haren",
+              "herten",
+              "' =",
+              "haar",
+              "hart",
+              "•",
+              "Klankovereenkomsten",
+              "met Duits of Engels: 'ich', '",
+              "dat",
+              "', '",
+              "minne",
+              "'",
+              "•",
+              "Valse",
+              "vrienden",
+              ":",
+              "•",
+              "'",
+              "schoon",
+              "' =",
+              "mooi",
+              "(",
+              "niet",
+              ":",
+              "netjes",
+              ")",
+              "• '",
+              "vrouwe",
+              "' = dame /",
+              "adellijke",
+              "vrouw (",
+              "niet",
+              ":",
+              "gewoon",
+              "vrouw)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom is het belangrijk?",
+            "subtitle": "",
+            "items": [
+              "Voorloper van onze taal",
+              "Inzicht in taalverandering",
+              "Inzicht in middeleeuwse denkwereld",
+              "Taalhistorisch",
+              "én cultureel erfgoed"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voorbeeld",
+            "subtitle": "",
+            "items": [
+              "Middelnederlands:",
+              "“Dat es ene vrouwe scone ende soet, die in haren herten goet.”",
+              "Modern Nederlands:",
+              "“Zij is een mooie, zachtaardige vrouw met een goed hart.”"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe hertaal je?",
+            "subtitle": "",
+            "items": [
+              "1. Lees hardop (klankherkenning)",
+              "2. Zoek bekende woorden",
+              "3. Let op zinsvolgorde",
+              "4. Herschrijf pas na letterlijke vertaling",
+              "5. Behoud betekenis en toon"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Taaltrucs & hulptips",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: 'niet en…' bv. “ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "”",
+              "Clisis",
+              ": samentrekking → 'het",
+              "sweert",
+              "' = '’",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: '",
+              "gaen",
+              "', '",
+              "wair",
+              "' i.p.v. 'gaan', 'waar'",
+              "Voorlezen helpt enorm!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Oefening samen",
+            "subtitle": "",
+            "items": [
+              "Voorbeeld:",
+              "“Die ridder quam met ghereet en speere, al te paerde bi den dore.”",
+              "Vraag:",
+              "- Wat betekenen: 'ghereet', 'al te paerde', 'bi den dore'?",
+              "- Samen hertalen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht: zelf hertalen",
+            "subtitle": "",
+            "items": [
+              "Fragment van 4 regels",
+              "Zoek betekenis op",
+              "Letterlijk vertalen → vloeiend herschrijven",
+              "Tijd: 35 minuten, individueel of in tweetallen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie",
+            "subtitle": "",
+            "items": [
+              "Wat vond je moeilijk?",
+              "Welke strategie werkte goed?",
+              "Wat viel mee?",
+              "Wat helpt bij hertalen?"
+            ]
+          }
+        ],
+        "marker-les-1-ff-intro": [
+          {
+            "type": "bullets",
+            "title": "Les",
+            "subtitle": "",
+            "items": [
+              "1: Het",
+              "grote",
+              "middeleeuwse",
+              "Faalfestival",
+              "Waarom",
+              "falen",
+              "middeleeuwse",
+              "personages",
+              "zo",
+              "hard",
+              "?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Het onderzoek",
+            "subtitle": "",
+            "items": [
+              "We gaan verschillende personages uit middeleeuwse verhalen bestuderen om te onderzoeken hoe goed ze zijn in falen.",
+              "Welke mislukkingen hebben ze in hun leven, welke domme stappen zetten ze, welke onhandige beslissingen nemen ze? En hoe gaan ze om met hun problemen.",
+              "Wat is uiteindelijk de oplossing? Wat brengt al dit falen hen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat weten we al van de middeleeuwen?",
+            "subtitle": "",
+            "items": [
+              "Schrijf in 3 minuten op waar je allemaal aan denkt bij het begrip middeleeuwen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wie zijn die falende personages?",
+            "subtitle": "",
+            "items": [
+              "Karel ende Elegast uit",
+              "Karel ende Elegast",
+              "Beatrijs uit",
+              "Beatrijs",
+              "Mariken van",
+              "Nieumeghen",
+              "uit",
+              "Mariken van",
+              "Nieumeghen",
+              "Walewein uit",
+              "De roman van Walewein",
+              "Brandaan",
+              "uit",
+              "De reis van Sint",
+              "Brandaan",
+              "Reynaert",
+              "uit",
+              "Van den vos",
+              "Reynaerde",
+              "Floris uit",
+              "Floris ende",
+              "Blancefloer"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Karel",
+            "subtitle": "",
+            "items": [
+              "Hij diste zijn beste vriend en werd een dief..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Beatrijs",
+            "subtitle": "",
+            "items": [
+              "Ze ging ervandoor met een foute man..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mariken",
+            "subtitle": "",
+            "items": [
+              "Zij",
+              "ging",
+              "ervandoor",
+              "met de",
+              "duivel",
+              "zelf",
+              "..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Walewein",
+            "subtitle": "",
+            "items": [
+              "Hij moest een zwevend schaakbord achtervolgen en nog meer rare",
+              "challenges",
+              "doen..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Brandaan",
+            "subtitle": "",
+            "items": [
+              "Hij",
+              "maakte",
+              "God",
+              "kwaad",
+              "door",
+              "aan",
+              "de",
+              "schepping",
+              "te",
+              "twijfelen",
+              "..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reynaert",
+            "subtitle": "",
+            "items": [
+              "Hij",
+              "belazerde",
+              "echt",
+              "iedereen..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Floris",
+            "subtitle": "",
+            "items": [
+              "Hij",
+              "dacht",
+              "dat",
+              "de",
+              "liefde",
+              "van",
+              "zijn",
+              "leven",
+              "dood",
+              "was",
+              "en",
+              "moest",
+              "allerlei",
+              "ingewikkelde",
+              "toeren",
+              "uithalen",
+              "om",
+              "haar",
+              "terug",
+              "te",
+              "vinden",
+              "..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Het Faalfestival",
+            "subtitle": "",
+            "items": [
+              "Aan het eind van ons onderzoek werpen we onze personages in de ring voor een",
+              "faalbattle",
+              ":",
+              "wie is de absolute middeleeuwse faalbaas?",
+              "Welke personages hebben de meeste \"potentiële\" faalervaringen in hun leven en gaan daar ook het best mee om?",
+              "Iedereen houdt een pleidooi (ballondebat) om uiteindelijk uit te maken wie de",
+              "faalbattle",
+              "wint. Zorg ervoor dat je argumenten verzamelt die jouw pleidooi bekrachtigen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Onderzoek: Middeleeuwse poster (1)",
+            "subtitle": "",
+            "items": [
+              "Je verzamelt informatie over je personage en je maakt een poster/affiche over de faalkracht van je personage.",
+              "Je poster ziet er middeleeuws uit en bevat de volgende onderdelen:",
+              "een informatief blokje met informatie over het verhaal: bij welk genre hoort het en wat houdt dat genre in, wanneer geschreven, waar ligt het handschrift? Wie zijn de hoofdrolspelers in het verhaal. Korte samenvatting van het verhaal.",
+              "een initiaal die passend is bij het personage.",
+              "eigenschappen en kwaliteiten van je personage",
+              "een overzicht van alle faalervaringen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Onderzoek: Middeleeuwse poster (2)",
+            "subtitle": "",
+            "items": [
+              "4. een fragment uit de middeleeuwse tekst en dat",
+              "hertaal",
+              "je naar het Nederlands (je kiest een faalervaring, of juist een stukje tekst waarin de levensles van het verhaal duidelijk wordt, of een stukje waarin je duidelijk de eigenschappen van het personage terugziet.)",
+              "5. een levensles uit het verhaal (want falen is leren!)",
+              "6. een creatieve verwerking van een verhaalfragment: kies een gebeurtenis uit het verhaal. Hoe zou deze er vandaag de dag uitzien? Schrijf een verhaalfragment waarin je dit idee uitwerkt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe kom je aan de benodigde informatie?",
+            "subtitle": "",
+            "items": [
+              "Je bekijkt",
+              "www.literatuurgeschiedenis.nl",
+              "en je zoekt informatie over jouw personage.",
+              "Je zoekt uit wat de verhaallijn is van jouw boek.",
+              "Je leest een fragment uit een jeugdboek over jouw tekst.",
+              "Je bekijkt filmpjes en je luistert een podcast.",
+              "Je zoekt de middeleeuwse tekst op waar je een fragment uithaalt.",
+              "In de les leer je alles over de initiaal, het hertalen van",
+              "middelnederlands",
+              "en handige basiskennis over de middeleeuwen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "We werken samen!",
+            "subtitle": "",
+            "items": [
+              "Dat betekent dat we elk onderdeel van de poster samen bedenken en uitwerken -> dus niet onderdelen verdelen!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Geef je voorkeurspersonage door!",
+            "subtitle": "",
+            "items": [
+              "Maak een top-3 van jouw",
+              "voorkeursperonages",
+              ". Licht in 3-5 zinnen je top-3 toe.",
+              "De docent maakt groepjes."
+            ]
+          }
+        ],
+        "marker-les-2-ff-letterkunde-middeleeuwen": [
+          {
+            "type": "bullets",
+            "title": "Les",
+            "subtitle": "",
+            "items": [
+              "2: De",
+              "middeleeuwen",
+              "Waren",
+              "ze",
+              "wel",
+              "zo",
+              "duister",
+              "als",
+              "mensen",
+              "vaak",
+              "denken?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
+            "subtitle": "",
+            "items": [
+              "We inventariseren op het bord..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrouwen hadden niets te zeggen...",
+            "subtitle": "",
+            "items": [
+              "Vikingvrouwen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Archeologen bepaalden eeuwenlang het",
+            "subtitle": "",
+            "items": [
+              "geslacht",
+              "van een Viking op basis van",
+              "objecten",
+              "(wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
+              "Er bestaan ruim 30",
+              "graven",
+              "met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
+              "In",
+              "Birka",
+              "(graf Bj581) is een vrouw als",
+              "volwaardige krijger",
+              "begraven: paard, wapens, strategisch speelbord → elite-krijger.",
+              "Er zijn tientallen",
+              "afbeeldingen",
+              "van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
+              "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
+              "De iconische “",
+              "Vikingvrouw met sleutels",
+              "” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
+              "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
+              "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
+              "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
+              "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch",
+              "."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Er waren steeds heksenjachten...",
+            "subtitle": "",
+            "items": [
+              "nkingen heksenvervolging"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "In Europa vonden in de late middeleeuwen en",
+            "subtitle": "",
+            "items": [
+              "vroegmoderne tijd",
+              "grootschalige heksenvervolgingen plaats.",
+              "De vervolging trof vooral vrouwen, die gezien werden als",
+              "zondebokken",
+              "in tijden van angst, onzekerheid en maatschappelijke spanningen.",
+              "In Nederland werden ongeveer",
+              "250",
+              "mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
+              "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
+              "Het thema laat zien hoe snel een samenleving kan",
+              "radicaliseren",
+              "wanneer angst, bijgeloof en macht samenkomen.",
+              "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De middeleeuwen waren vies en alles lag stil...",
+            "subtitle": "",
+            "items": [
+              "Er gebeurde juist van alles"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middeleeuwen waren",
+            "subtitle": "",
+            "items": [
+              "géén stilstan",
+              "d: wielploeg,",
+              "spinnewiel",
+              ", mechanische klok, stijgbeugel, windmolen-innovaties,",
+              "drukpers",
+              "(1450).",
+              "Door klimaatverbetering (950–1250) bloeit landbouw →",
+              "enorme bevolkingsgroei",
+              "(Engeland: 1,5 → 3 miljoen).",
+              "Wereldhandel",
+              "groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding &",
+              "bankieren",
+              "naar Europa",
+              "Architectuur wordt licht en ruim:",
+              "gotiek",
+              "(Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
+              "Hygiëne vóór 1300 eigenlijk best goed:",
+              "dagelijks handen wassen",
+              ", twee keer per maand baden.",
+              "Magna",
+              "Carta",
+              "(1215) → begin van",
+              "rechtsbescherming",
+              "(vooral voor elite, maar toch historisch belangrijk).",
+              "Universiteiten ontstaan vanaf 1088:",
+              "Bologna",
+              ", daarna heel Europa → onderwijs buiten kloosters.",
+              "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch",
+              "."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middeleeuwen in het kort",
+            "subtitle": "",
+            "items": [
+              "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
+              "Theocentrisme",
+              "(maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
+              "Kruistochten",
+              "Ontstaan ambachten en steden rond rivieren"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Taalontwikkeling",
+            "subtitle": "",
+            "items": [
+              "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
+              "Wat weet je daarvan?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Taalboom",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Ontwikkeling Nederlands",
+            "subtitle": "",
+            "items": [
+              "Wat valt je op als je naar de",
+              "dialogen",
+              "luistert? Wat hoor je allemaal terug?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "Hebban olla vogala"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opgeschreven ca. 1100 door een",
+            "subtitle": "",
+            "items": [
+              "Vlaamse monnik in Engeland, als pennenproef",
+              "(testje van de schrijfpen).",
+              "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is",
+              "mengvorm",
+              ": Oudnederlands / Oudengels.",
+              "Onze literatuur was vóór 1100 vooral",
+              "mondeling",
+              ": liederen, verhalen → pas later op schrift gezet.",
+              "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar",
+              "weinig",
+              "van bewaard.",
+              "In Europa bestonden al oudere volkstalige teksten:",
+              "Hildebrandslied",
+              "(Duits, 800),",
+              "Beowulf",
+              "(Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
+              "Het versje toont:",
+              "hoe schrijvers toen werkten met ganzenveer,",
+              "hoe taal evolueerde,",
+              "en dat liefde een tijdloos thema is.",
+              "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
+              "Conclusie: “",
+              "Hebban",
+              "olla",
+              "vogala",
+              "…” is klein, maar cultureel enorm belangrijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De ridderroman:",
+              "Voorhoofs",
+              "Hoofs",
+              "Satire"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De geestelijke roman",
+              "Mariamirakel",
+              "Mystiek",
+              "Exempelen",
+              "Heiligenlevens"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De wereldlijke literatuur",
+              "Abele spelen",
+              "Rederijkers"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat valt op in de verhalen?",
+            "subtitle": "",
+            "items": [
+              "Rijm",
+              "Getallensymboliek",
+              "Kleurensymboliek",
+              "Hemelse en aardse liefde",
+              "Christelijk geloof",
+              "Koning en onderdanen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middelnederlands hertalen",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "Clisis",
+              ": samentrekking: 'het",
+              "sweert",
+              "' wordt '",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+              "gaen",
+              "(gaan),",
+              "wair",
+              "(waar)",
+              "Voorlezen helpt!",
+              "WNT"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Boeken",
+            "subtitle": "",
+            "items": [
+              "Het maken van een boek",
+              ",",
+              "wat een werk",
+              "Een revolutionaire uitvinding",
+              "Miniaturen en initialen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Parchment",
+            "subtitle": "",
+            "items": [
+              "/ perkament:",
+              "Gemaakt van",
+              "dierenhuid",
+              "(kalf, geit, schaap).",
+              "Dagenlang weken, ontharen, schrapen, opnieuw schrapen →",
+              "arbeidsintensief en duur",
+              ".",
+              "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
+              "Resultaat: extreem duurzaam;",
+              "kan 1000+ jaar meegaan",
+              ".",
+              "Schrijven / scriptorium:",
+              "Scribe",
+              "gebruikt",
+              "ganzenveer",
+              ", aangescherpt en gespleten voor inkttrek.",
+              "Lijnen worden met een",
+              "passer/liniaal",
+              "in het perkament gedrukt.",
+              "Inkt van",
+              "galnoten",
+              "of lamp black (roet).",
+              "Fouten worden letterlijk",
+              "weggekrast",
+              "→ perkament kan dat aan.",
+              "Illuminatie / miniatuur:",
+              "Eerst goud aanbrengen",
+              "(met gesso of gom), dan kleuren.",
+              "Pigmenten uit mineralen & planten",
+              "; lagen van licht → donker.",
+              "Wit en zwart voor details en diepte.",
+              "Miniaturen waren",
+              "prestigeobjecten",
+              ", soms duurder dan het boek zelf.",
+              "Binding:",
+              "Katernen met",
+              "linnen draad",
+              "op leren riemen genaaid.",
+              "Houten kaften, leren omslag",
+              ", later soms fluweel, edelmetaal, reliëf.",
+              "Gespen",
+              "om het boek vlak en droog te houden.",
+              "Resultaat: een boek als kunstvoorwerp en statusobject."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Memento",
+            "subtitle": "",
+            "items": [
+              "Mori",
+              "Vraag",
+              "God",
+              "dat",
+              "Hij",
+              "mij",
+              "wilt",
+              "vergeven",
+              "!",
+              "Reynaert"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Trouw",
+            "subtitle": "",
+            "items": [
+              "Hij mag",
+              "doodvallen",
+              "die",
+              "mij",
+              "adviseert",
+              "/",
+              "dat",
+              "ik",
+              "de",
+              "koning",
+              "schade",
+              "zal",
+              "berokkenen",
+              ".",
+              "Elegast"
+            ]
+          }
+        ],
+        "marker-les-6-fragment-faalervaring-hertaling": [
+          {
+            "type": "title",
+            "title": "Les 6: Fragment / Faalervaring hertaling",
+            "subtitle": "Faalfestival"
+          }
+        ],
+        "marker-les-2-ff-leesles": [
+          {
+            "type": "bullets",
+            "title": "Les",
+            "subtitle": "",
+            "items": [
+              "2: De",
+              "middeleeuwen",
+              "Waren",
+              "ze",
+              "wel",
+              "zo",
+              "duister",
+              "als",
+              "mensen",
+              "vaak",
+              "denken?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
+            "subtitle": "",
+            "items": [
+              "We inventariseren op het bord..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrouwen hadden niets te zeggen...",
+            "subtitle": "",
+            "items": [
+              "Vikingvrouwen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Archeologen bepaalden eeuwenlang het",
+            "subtitle": "",
+            "items": [
+              "geslacht",
+              "van een Viking op basis van",
+              "objecten",
+              "(wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
+              "Er bestaan ruim 30",
+              "graven",
+              "met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
+              "In",
+              "Birka",
+              "(graf Bj581) is een vrouw als",
+              "volwaardige krijger",
+              "begraven: paard, wapens, strategisch speelbord → elite-krijger.",
+              "Er zijn tientallen",
+              "afbeeldingen",
+              "van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
+              "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
+              "De iconische “",
+              "Vikingvrouw met sleutels",
+              "” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
+              "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
+              "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
+              "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
+              "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch",
+              "."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Er waren steeds heksenjachten...",
+            "subtitle": "",
+            "items": [
+              "nkingen heksenvervolging"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "In Europa vonden in de late middeleeuwen en",
+            "subtitle": "",
+            "items": [
+              "vroegmoderne tijd",
+              "grootschalige heksenvervolgingen plaats.",
+              "De vervolging trof vooral vrouwen, die gezien werden als",
+              "zondebokken",
+              "in tijden van angst, onzekerheid en maatschappelijke spanningen.",
+              "In Nederland werden ongeveer",
+              "250",
+              "mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
+              "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
+              "Het thema laat zien hoe snel een samenleving kan",
+              "radicaliseren",
+              "wanneer angst, bijgeloof en macht samenkomen.",
+              "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De middeleeuwen waren vies en alles lag stil...",
+            "subtitle": "",
+            "items": [
+              "Er gebeurde juist van alles"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middeleeuwen waren",
+            "subtitle": "",
+            "items": [
+              "géén stilstan",
+              "d: wielploeg,",
+              "spinnewiel",
+              ", mechanische klok, stijgbeugel, windmolen-innovaties,",
+              "drukpers",
+              "(1450).",
+              "Door klimaatverbetering (950–1250) bloeit landbouw →",
+              "enorme bevolkingsgroei",
+              "(Engeland: 1,5 → 3 miljoen).",
+              "Wereldhandel",
+              "groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding &",
+              "bankieren",
+              "naar Europa",
+              "Architectuur wordt licht en ruim:",
+              "gotiek",
+              "(Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
+              "Hygiëne vóór 1300 eigenlijk best goed:",
+              "dagelijks handen wassen",
+              ", twee keer per maand baden.",
+              "Magna",
+              "Carta",
+              "(1215) → begin van",
+              "rechtsbescherming",
+              "(vooral voor elite, maar toch historisch belangrijk).",
+              "Universiteiten ontstaan vanaf 1088:",
+              "Bologna",
+              ", daarna heel Europa → onderwijs buiten kloosters.",
+              "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch",
+              "."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middeleeuwen in het kort",
+            "subtitle": "",
+            "items": [
+              "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
+              "Theocentrisme",
+              "(maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
+              "Kruistochten",
+              "Ontstaan ambachten en steden rond rivieren"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Taalontwikkeling",
+            "subtitle": "",
+            "items": [
+              "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
+              "Wat weet je daarvan?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Taalboom",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Ontwikkeling Nederlands",
+            "subtitle": "",
+            "items": [
+              "Wat valt je op als je naar de",
+              "dialogen",
+              "luistert? Wat hoor je allemaal terug?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "Hebban olla vogala"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opgeschreven ca. 1100 door een",
+            "subtitle": "",
+            "items": [
+              "Vlaamse monnik in Engeland, als pennenproef",
+              "(testje van de schrijfpen).",
+              "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is",
+              "mengvorm",
+              ": Oudnederlands / Oudengels.",
+              "Onze literatuur was vóór 1100 vooral",
+              "mondeling",
+              ": liederen, verhalen → pas later op schrift gezet.",
+              "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar",
+              "weinig",
+              "van bewaard.",
+              "In Europa bestonden al oudere volkstalige teksten:",
+              "Hildebrandslied",
+              "(Duits, 800),",
+              "Beowulf",
+              "(Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
+              "Het versje toont:",
+              "hoe schrijvers toen werkten met ganzenveer,",
+              "hoe taal evolueerde,",
+              "en dat liefde een tijdloos thema is.",
+              "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
+              "Conclusie: “",
+              "Hebban",
+              "olla",
+              "vogala",
+              "…” is klein, maar cultureel enorm belangrijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De ridderroman:",
+              "Voorhoofs",
+              "Hoofs",
+              "Satire"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De geestelijke roman",
+              "Mariamirakel",
+              "Mystiek",
+              "Exempelen",
+              "Heiligenlevens"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nederlandse letterkunde",
+            "subtitle": "",
+            "items": [
+              "De wereldlijke literatuur",
+              "Abele spelen",
+              "Rederijkers"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat valt op in de verhalen?",
+            "subtitle": "",
+            "items": [
+              "Rijm",
+              "Getallensymboliek",
+              "Kleurensymboliek",
+              "Hemelse en aardse liefde",
+              "Christelijk geloof",
+              "Koning en onderdanen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middelnederlands hertalen",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "Clisis",
+              ": samentrekking: 'het",
+              "sweert",
+              "' wordt '",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+              "gaen",
+              "(gaan),",
+              "wair",
+              "(waar)",
+              "Voorlezen helpt!",
+              "WNT"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Boeken",
+            "subtitle": "",
+            "items": [
+              "Het maken van een boek",
+              ",",
+              "wat een werk",
+              "Een revolutionaire uitvinding",
+              "Miniaturen en initialen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Parchment",
+            "subtitle": "",
+            "items": [
+              "/ perkament:",
+              "Gemaakt van",
+              "dierenhuid",
+              "(kalf, geit, schaap).",
+              "Dagenlang weken, ontharen, schrapen, opnieuw schrapen →",
+              "arbeidsintensief en duur",
+              ".",
+              "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
+              "Resultaat: extreem duurzaam;",
+              "kan 1000+ jaar meegaan",
+              ".",
+              "Schrijven / scriptorium:",
+              "Scribe",
+              "gebruikt",
+              "ganzenveer",
+              ", aangescherpt en gespleten voor inkttrek.",
+              "Lijnen worden met een",
+              "passer/liniaal",
+              "in het perkament gedrukt.",
+              "Inkt van",
+              "galnoten",
+              "of lamp black (roet).",
+              "Fouten worden letterlijk",
+              "weggekrast",
+              "→ perkament kan dat aan.",
+              "Illuminatie / miniatuur:",
+              "Eerst goud aanbrengen",
+              "(met gesso of gom), dan kleuren.",
+              "Pigmenten uit mineralen & planten",
+              "; lagen van licht → donker.",
+              "Wit en zwart voor details en diepte.",
+              "Miniaturen waren",
+              "prestigeobjecten",
+              ", soms duurder dan het boek zelf.",
+              "Binding:",
+              "Katernen met",
+              "linnen draad",
+              "op leren riemen genaaid.",
+              "Houten kaften, leren omslag",
+              ", later soms fluweel, edelmetaal, reliëf.",
+              "Gespen",
+              "om het boek vlak en droog te houden.",
+              "Resultaat: een boek als kunstvoorwerp en statusobject."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Memento",
+            "subtitle": "",
+            "items": [
+              "Mori",
+              "Vraag",
+              "God",
+              "dat",
+              "Hij",
+              "mij",
+              "wilt",
+              "vergeven",
+              "!",
+              "Reynaert"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Trouw",
+            "subtitle": "",
+            "items": [
+              "Hij mag",
+              "doodvallen",
+              "die",
+              "mij",
+              "adviseert",
+              "/",
+              "dat",
+              "ik",
+              "de",
+              "koning",
+              "schade",
+              "zal",
+              "berokkenen",
+              ".",
+              "Elegast"
+            ]
+          }
+        ],
+        "marker-les-7-creatieve-verwerking": [
+          {
+            "type": "title",
+            "title": "Hertalen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "(Vraag hertalen aan de klas)",
+            "subtitle": "",
+            "items": [
+              "We inventariseren op het bord..."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Middelnederlands hertalen",
+            "subtitle": "",
+            "items": [
+              "Dubbele ontkenning: ende",
+              "minen",
+              "sin",
+              "niet en",
+              "vertare",
+              "Clisis",
+              ": samentrekking: 'het",
+              "sweert",
+              "' wordt '",
+              "tsweert",
+              "'",
+              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+              "gaen",
+              "(gaan),",
+              "wair",
+              "(waar)",
+              "Voorlezen helpt!",
+              "WNT"
+            ]
+          }
+        ],
+        "marker-les-8-ff-poster-afmaken": [
+          {
+            "type": "bullets",
+            "title": "Les 8: Poster afmaken & presentatie voorbereiden",
+            "subtitle": "",
+            "items": [
+              "Vandaag werk je verder aan je poster en bereid je de presentatie en het ballondebat voor."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Planning van vandaag",
+            "subtitle": "",
+            "items": [
+              "Tijdsverdeling:",
+              "5 min:",
+              "uitleg",
+              "35 min: posters",
+              "afmaken",
+              "20 min:",
+              "voorbereiding",
+              "pleidooi",
+              "&",
+              "presentatie",
+              "10 min:",
+              "feedbackronde",
+              "met",
+              "andere",
+              "groep",
+              "10 min:",
+              "opruimen",
+              "en",
+              "inleveren"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Poster aanvullen -complete versie",
+            "subtitle": "",
+            "items": [
+              "Vandaag maak je je poster helemaal af. Dit zijn alle onderdelen die erop moeten staan:"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Informatief blokje",
+            "subtitle": "",
+            "items": [
+              "Zet kort op je poster:",
+              "Genre van het verhaal",
+              "Herkomst (land, tijd, auteur indien bekend)",
+              "Hoofdrolspelers",
+              "Korte samenvatting (max. 5 zinnen)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Initiaal ontwerpen",
+            "subtitle": "",
+            "items": [
+              "Ontwerp een grote beginletter die past bij jouw personage.",
+              "Gebruik kleur en symbolen",
+              "De letter zegt iets over het karakter",
+              "Middeleeuwse stijl (zoals in kloosterhandschriften)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Eigenschappen",
+            "subtitle": "",
+            "items": [
+              "Wat voor type is jouw personage?",
+              "Noem minstens 3 eigenschappen of kwaliteiten",
+              "Laat zien wanneer het misgaat: wat faalt er?",
+              "Wat leert het personage daarvan?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Faalervaring",
+            "subtitle": "",
+            "items": [
+              "Kies een fragment waarin:",
+              "het personage faalt,",
+              "of een levensles zichtbaar is,",
+              "of het karakter duidelijk blijkt.",
+              "Beschrijf het fragment in eigen woorden; leg uit wat er gebeurt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "5. Levensles uit het verhaal",
+            "subtitle": "",
+            "items": [
+              "Wat kunnen we leren van dit verhaal?",
+              "Formuleer een duidelijke, relevante les",
+              "Koppel het aan het personage of de situatie",
+              "Bijv. 'Wie liegt, komt zichzelf tegen.' of 'Fouten maken is de weg naar wijsheid.'"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "6. Creatieve verwerking: heden",
+            "subtitle": "",
+            "items": [
+              "Verwerk een gebeurtenis uit het verhaal in een modern jasje:",
+              "Kies een moment (bijv. een val, een misstap, een verleiding...)",
+              "Hoe zou dat er nu uitzien?",
+              "Schrijf een kort fragment alsof het nú gebeurt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Checklist: alles op je poster?",
+            "subtitle": "",
+            "items": [
+              "Informatief blokje",
+              "Initiaal",
+              "Eigenschappen",
+              "&",
+              "faalervaringen",
+              "Fragment +",
+              "hertaling",
+              "+",
+              "uitleg",
+              "Levensles",
+              "Creatieve",
+              "verwerking",
+              "in het",
+              "heden",
+              "Alles",
+              "compleet",
+              ", middeleeuwse, creatief",
+              "én",
+              "verzorgd",
+              "? Dan ben je",
+              "klaar",
+              "!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voorbereiding ballondebat – Ronde 1",
+            "subtitle": "",
+            "items": [
+              "Wie is de ultieme faalbaas?",
+              "Maak een pleidooi (1 minuut):",
+              "Hoe gaat jouw personage om met falen?",
+              "Wat leert hij/zij? Is de les nog relevant?",
+              "Welke eigenschappen helpen bij falen?",
+              "Is er een modern equivalent of rolmodel?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voorbereiding ballondebat – Ronde 2",
+            "subtitle": "",
+            "items": [
+              "Hoe win je van je tegenstanders?",
+              "Verzamel info over andere personages:",
+              "Waarom zijn zij géén echte faalbazen?",
+              "Welke zwaktes hebben zij?",
+              "Hoe kun je ze overtuigend tegenspreken?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voorbereiding posterpresentatie",
+            "subtitle": "",
+            "items": [
+              "Wat vertel je bij de poster?",
+              "1. Wie is je personage en wat zijn zijn/haar eigenschappen?",
+              "2. Wat is het belangrijkste faalmoment?",
+              "3. Hoe zie je het genre terug?",
+              "4. Wat is de levensles – en is die nog actueel?",
+              "5. Hoe hebben jullie het verhaal gemoderniseerd?"
+            ]
+          }
+        ],
+        "marker-les-9-ff-poster-afmaken-posterpresentaties": [
+          {
+            "type": "bullets",
+            "title": "Les 9 – Posterpresentaties",
+            "subtitle": "",
+            "items": [
+              "Vandaag presenteren jullie de posters."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voor de presentatoren",
+            "subtitle": "",
+            "items": [
+              "Vertel bij je poster:",
+              "Wie is je personage",
+              "en",
+              "wat",
+              "zijn",
+              "zijn",
+              "/",
+              "haar",
+              "eigenschappen",
+              "?",
+              "Wat is het",
+              "belangrijkste",
+              "faalmoment",
+              "?",
+              "Hoe",
+              "zie",
+              "je het genre",
+              "terug",
+              "in het",
+              "verhaal",
+              "?",
+              "Wat is de",
+              "levensles",
+              "en",
+              "is die",
+              "nog",
+              "relevant?",
+              "Hoe",
+              "hebben",
+              "jullie",
+              "het",
+              "verhaal",
+              "gemoderniseerd",
+              "?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voor het publiek",
+            "subtitle": "",
+            "items": [
+              "Kijk en noteer:",
+              "1a. Wie",
+              "zijn",
+              "jullie",
+              "twee",
+              "grootste",
+              "concurrenten",
+              "(qua",
+              "faalkracht",
+              ")?",
+              "1b. Geef per personage twee redenen waarom zij sterk zijn.",
+              "1c. Hoe ga je",
+              "tóch",
+              "van ze",
+              "winnen",
+              "in de",
+              "faalbattle",
+              "?",
+              "2. Welke",
+              "levensles",
+              "vond",
+              "jij",
+              "persoonlijk",
+              "waardevol",
+              "?",
+              "➤ Leg in 2–5",
+              "zinnen",
+              "uit",
+              "waarom",
+              "die",
+              "bij",
+              "jou",
+              "past."
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Faalfestival",
+          "subtitle": "Faalfestival"
+        },
+        {
+          "type": "title",
+          "title": "Hertalen",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "(Vraag hertalen aan de klas)",
+          "subtitle": "",
+          "items": [
+            "We inventariseren op het bord..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middelnederlands hertalen",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "Clisis",
+            ": samentrekking: 'het",
+            "sweert",
+            "' wordt '",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+            "gaen",
+            "(gaan),",
+            "wair",
+            "(waar)",
+            "Voorlezen helpt!",
+            "WNT"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Hertalen",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "(Vraag hertalen aan de klas)",
+          "subtitle": "",
+          "items": [
+            "We inventariseren op het bord..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middelnederlands hertalen",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "Clisis",
+            ": samentrekking: 'het",
+            "sweert",
+            "' wordt '",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+            "gaen",
+            "(gaan),",
+            "wair",
+            "(waar)",
+            "Voorlezen helpt!",
+            "WNT"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Moralicious dinsdag 10 maart!",
+          "subtitle": "Faalfestival",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Les 3: Initialen",
+          "subtitle": "",
+          "items": [
+            "Zelf",
+            "een",
+            "middeleeuws",
+            "initiaal",
+            "ontwerpen",
+            "1/12/2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Leerdoelen",
+          "subtitle": "",
+          "items": [
+            "Weten",
+            "wat initialen en miniaturen zijn",
+            "Symboliek",
+            "herkennen",
+            "Eigen",
+            "initiaal",
+            "ontwerpen",
+            "in",
+            "middeleeuwse",
+            "stijl",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdsplanning",
+          "subtitle": "",
+          "items": [
+            "10 min: uitleg + voorbeelden",
+            "10 min: inspiratie & symboliek kiezen",
+            "60 min: ontwerp maken",
+            "10 min: tentoonstelling & reflectie",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een initiaal of miniatuur?",
+          "subtitle": "",
+          "items": [
+            "Initiaal = grote beginletter",
+            "Miniatuur = kleine afbeelding in handschrift",
+            "Beide vaak rijk versierd met kleuren en goud",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "weetjes",
+          "subtitle": "",
+          "items": [
+            "‘",
+            "Miniatuur",
+            "’",
+            "komt",
+            "van",
+            "minium",
+            "(rood pigment)",
+            "Sommige",
+            "pigmenten",
+            "waren",
+            "duurder",
+            "dan",
+            "goud",
+            "Marges",
+            "soms",
+            "vol vreemde",
+            "figuurtjes",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom waren ze belangrijk?",
+          "subtitle": "",
+          "items": [
+            "Structuur in tekst",
+            "Statussymbool voor rijke opdrachtgevers",
+            "Devotie of religieuze symboliek",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stijlkenmerken",
+          "subtitle": "",
+          "items": [
+            "Veel blauw, rood, goud",
+            "Versieringen: dieren, planten, draken",
+            "Gotisch (hoekig) of Romaans (rond)",
+            "Rijke randversiering",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe werd het gemaakt?",
+          "subtitle": "",
+          "items": [
+            "1. Perkament van kalfshuid",
+            "2. Schets met potlood",
+            "3. Inktlijnen met ganzenveer",
+            "4. Kleur met pigmenten",
+            "5. Goud met bladgoud",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wie maakte ze?",
+          "subtitle": "",
+          "items": [
+            "Scribenten = tekstschrijvers",
+            "Illuminatoren = versierders",
+            "Werkten in kloosters of ateliers voor de kerk of adel",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Symboliek",
+          "subtitle": "",
+          "items": [
+            "Draak =",
+            "kwaad",
+            "Lam = Christus",
+            "Wijnrank",
+            "=",
+            "leven",
+            "Uil",
+            "=",
+            "wijsheid",
+            "of",
+            "dwaasheid",
+            "Bladgoud",
+            "=",
+            "goddelijke",
+            "glans",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht: eigen initiaal maken",
+          "subtitle": "",
+          "items": [
+            "Stap 1: Kies een letter",
+            "Stap 2: Gotisch of Romaans?",
+            "Stap 3: Versier met symbolen",
+            "Stap 4: Omlijnen & inkleuren",
+            "Benodigdheden: papier, kleurpotloden, fineliner",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Samenwerking: wie doet wat?",
+          "subtitle": "",
+          "items": [
+            "Je",
+            "werkt",
+            "in",
+            "groepjes",
+            "van",
+            "vier",
+            "aan",
+            "één",
+            "initiaal",
+            ".",
+            "Iedereen",
+            "heeft",
+            "een",
+            "vaste",
+            "rol",
+            ".",
+            "1.",
+            "Tekenaar",
+            "–",
+            "Tekent",
+            "de",
+            "initiaal",
+            "met",
+            "potlood",
+            "–",
+            "Voert",
+            "de",
+            "ideeën",
+            "van de",
+            "groep",
+            "uit",
+            "2. Stijl-",
+            "en",
+            "vormexpert",
+            "– Kiest:",
+            "gotisch",
+            "of",
+            "romaans",
+            ".",
+            "Heeft",
+            "de",
+            "fineliner",
+            ".",
+            "– Let op",
+            "lijnen",
+            ",",
+            "vormen",
+            "en",
+            "versiering",
+            "3.",
+            "Symboliekexpert",
+            "– Kiest",
+            "minimaal",
+            "2",
+            "symbolen",
+            "– Weet wat ze",
+            "betekenen",
+            "–",
+            "Bepaalt",
+            "kleuren",
+            "(",
+            "goud",
+            ", rood,",
+            "blauw",
+            ")",
+            "4.",
+            "Inhoudelijk",
+            "controleur",
+            "–",
+            "Controleert",
+            "of het",
+            "werk",
+            "echt",
+            "middeleeuws",
+            "is",
+            "–",
+            "Kleurt",
+            "de",
+            "initiaal",
+            "in.",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tentoonstelling & reflectie",
+          "subtitle": "",
+          "items": [
+            "Iedereen legt werk neer",
+            "Loop langs elkaar",
+            "Wat valt op?",
+            "Welke symboliek zie je?",
+            "Stem voor 'meest middeleeuws'",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 3: Initialen",
+          "subtitle": "",
+          "items": [
+            "Zelf",
+            "een",
+            "middeleeuws",
+            "initiaal",
+            "ontwerpen",
+            "1/12/2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Leerdoelen",
+          "subtitle": "",
+          "items": [
+            "Weten",
+            "wat initialen en miniaturen zijn",
+            "Symboliek",
+            "herkennen",
+            "Eigen",
+            "initiaal",
+            "ontwerpen",
+            "in",
+            "middeleeuwse",
+            "stijl",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdsplanning",
+          "subtitle": "",
+          "items": [
+            "10 min: uitleg + voorbeelden",
+            "10 min: inspiratie & symboliek kiezen",
+            "60 min: ontwerp maken",
+            "10 min: tentoonstelling & reflectie",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een initiaal of miniatuur?",
+          "subtitle": "",
+          "items": [
+            "Initiaal = grote beginletter",
+            "Miniatuur = kleine afbeelding in handschrift",
+            "Beide vaak rijk versierd met kleuren en goud",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "weetjes",
+          "subtitle": "",
+          "items": [
+            "‘",
+            "Miniatuur",
+            "’",
+            "komt",
+            "van",
+            "minium",
+            "(rood pigment)",
+            "Sommige",
+            "pigmenten",
+            "waren",
+            "duurder",
+            "dan",
+            "goud",
+            "Marges",
+            "soms",
+            "vol vreemde",
+            "figuurtjes",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom waren ze belangrijk?",
+          "subtitle": "",
+          "items": [
+            "Structuur in tekst",
+            "Statussymbool voor rijke opdrachtgevers",
+            "Devotie of religieuze symboliek",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stijlkenmerken",
+          "subtitle": "",
+          "items": [
+            "Veel blauw, rood, goud",
+            "Versieringen: dieren, planten, draken",
+            "Gotisch (hoekig) of Romaans (rond)",
+            "Rijke randversiering",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe werd het gemaakt?",
+          "subtitle": "",
+          "items": [
+            "1. Perkament van kalfshuid",
+            "2. Schets met potlood",
+            "3. Inktlijnen met ganzenveer",
+            "4. Kleur met pigmenten",
+            "5. Goud met bladgoud",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wie maakte ze?",
+          "subtitle": "",
+          "items": [
+            "Scribenten = tekstschrijvers",
+            "Illuminatoren = versierders",
+            "Werkten in kloosters of ateliers voor de kerk of adel",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Symboliek",
+          "subtitle": "",
+          "items": [
+            "Draak =",
+            "kwaad",
+            "Lam = Christus",
+            "Wijnrank",
+            "=",
+            "leven",
+            "Uil",
+            "=",
+            "wijsheid",
+            "of",
+            "dwaasheid",
+            "Bladgoud",
+            "=",
+            "goddelijke",
+            "glans",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht: eigen initiaal maken",
+          "subtitle": "",
+          "items": [
+            "Stap 1: Kies een letter",
+            "Stap 2: Gotisch of Romaans?",
+            "Stap 3: Versier met symbolen",
+            "Stap 4: Omlijnen & inkleuren",
+            "Benodigdheden: papier, kleurpotloden, fineliner",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Samenwerking: wie doet wat?",
+          "subtitle": "",
+          "items": [
+            "Je",
+            "werkt",
+            "in",
+            "groepjes",
+            "van",
+            "vier",
+            "aan",
+            "één",
+            "initiaal",
+            ".",
+            "Iedereen",
+            "heeft",
+            "een",
+            "vaste",
+            "rol",
+            ".",
+            "1.",
+            "Tekenaar",
+            "–",
+            "Tekent",
+            "de",
+            "initiaal",
+            "met",
+            "potlood",
+            "–",
+            "Voert",
+            "de",
+            "ideeën",
+            "van de",
+            "groep",
+            "uit",
+            "2. Stijl-",
+            "en",
+            "vormexpert",
+            "– Kiest:",
+            "gotisch",
+            "of",
+            "romaans",
+            ".",
+            "Heeft",
+            "de",
+            "fineliner",
+            ".",
+            "– Let op",
+            "lijnen",
+            ",",
+            "vormen",
+            "en",
+            "versiering",
+            "3.",
+            "Symboliekexpert",
+            "– Kiest",
+            "minimaal",
+            "2",
+            "symbolen",
+            "– Weet wat ze",
+            "betekenen",
+            "–",
+            "Bepaalt",
+            "kleuren",
+            "(",
+            "goud",
+            ", rood,",
+            "blauw",
+            ")",
+            "4.",
+            "Inhoudelijk",
+            "controleur",
+            "–",
+            "Controleert",
+            "of het",
+            "werk",
+            "echt",
+            "middeleeuws",
+            "is",
+            "–",
+            "Kleurt",
+            "de",
+            "initiaal",
+            "in.",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tentoonstelling & reflectie",
+          "subtitle": "",
+          "items": [
+            "Iedereen legt werk neer",
+            "Loop langs elkaar",
+            "Wat valt op?",
+            "Welke symboliek zie je?",
+            "Stem voor 'meest middeleeuws'",
+            "12-1-2026"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 4: Hoofsheid is",
+          "subtitle": "",
+          "items": [
+            "een ernstig spel",
+            "Hoe hoofs ben jij?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is hoofsheid precies?",
+          "subtitle": "",
+          "items": [
+            "Lees het uitgedeelde fragment.",
+            "Wat is hoofsheid?",
+            "Welke concrete gedragsregels horen daarbij?",
+            "Maak een document aan",
+            "Schrijflab",
+            "3.0 en daarin formuleer je het antwoord."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe hoofs ben jij?",
+          "subtitle": "",
+          "items": [
+            "Welke gedragsregels hebben wij nu nog die aansluiten op het hoofse ideaal?",
+            "Hoe ga jij je de komende week nog hoofser gedragen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe hoofs is je personage?",
+          "subtitle": "",
+          "items": [
+            "Voldoet",
+            "je personage",
+            "aan",
+            "het",
+            "middeleeuwse",
+            "ideaal",
+            "? Leg",
+            "uit"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 4: Hoofsheid is",
+          "subtitle": "",
+          "items": [
+            "een ernstig spel",
+            "Hoe hoofs ben jij?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is hoofsheid precies?",
+          "subtitle": "",
+          "items": [
+            "Lees het uitgedeelde fragment.",
+            "Wat is hoofsheid?",
+            "Welke concrete gedragsregels horen daarbij?",
+            "Maak een document aan",
+            "Schrijflab",
+            "3.0 en daarin formuleer je het antwoord."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe hoofs ben jij?",
+          "subtitle": "",
+          "items": [
+            "Welke gedragsregels hebben wij nu nog die aansluiten op het hoofse ideaal?",
+            "Hoe ga jij je de komende week nog hoofser gedragen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe hoofs is je personage?",
+          "subtitle": "",
+          "items": [
+            "Voldoet",
+            "je personage",
+            "aan",
+            "het",
+            "middeleeuwse",
+            "ideaal",
+            "? Leg",
+            "uit"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 5: Hertalen",
+          "subtitle": "",
+          "items": [
+            "Zelf een stukje Middelnederlands hertalen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Leerdoelen",
+          "subtitle": "",
+          "items": [
+            "Je weet wat Middelnederlands is",
+            "Je herkent kenmerken en valkuilen",
+            "Je kunt een tekst hertalen naar modern Nederlands"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is Middelnederlands?",
+          "subtitle": "",
+          "items": [
+            "Oudste vorm van het Nederlands (ca. 1200–1500)",
+            "Geen standaardtaal: regionale varianten",
+            "Gebruikt in verhalen, liederen, kronieken",
+            "Geschreven zoals men sprak"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kenmerken van Middelnederlands",
+          "subtitle": "",
+          "items": [
+            "•",
+            "Andere spelling:",
+            "bv",
+            ". 'scone' (",
+            "schone",
+            "), '",
+            "ontfaen",
+            "' (",
+            "ontvangen",
+            ")",
+            "•",
+            "Uitgangen",
+            ": 'des",
+            "conincs",
+            "' = van de",
+            "koning",
+            ", '",
+            "haren",
+            "herten",
+            "' =",
+            "haar",
+            "hart",
+            "•",
+            "Klankovereenkomsten",
+            "met Duits of Engels: 'ich', '",
+            "dat",
+            "', '",
+            "minne",
+            "'",
+            "•",
+            "Valse",
+            "vrienden",
+            ":",
+            "•",
+            "'",
+            "schoon",
+            "' =",
+            "mooi",
+            "(",
+            "niet",
+            ":",
+            "netjes",
+            ")",
+            "• '",
+            "vrouwe",
+            "' = dame /",
+            "adellijke",
+            "vrouw (",
+            "niet",
+            ":",
+            "gewoon",
+            "vrouw)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom is het belangrijk?",
+          "subtitle": "",
+          "items": [
+            "Voorloper van onze taal",
+            "Inzicht in taalverandering",
+            "Inzicht in middeleeuwse denkwereld",
+            "Taalhistorisch",
+            "én cultureel erfgoed"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorbeeld",
+          "subtitle": "",
+          "items": [
+            "Middelnederlands:",
+            "“Dat es ene vrouwe scone ende soet, die in haren herten goet.”",
+            "Modern Nederlands:",
+            "“Zij is een mooie, zachtaardige vrouw met een goed hart.”"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe hertaal je?",
+          "subtitle": "",
+          "items": [
+            "1. Lees hardop (klankherkenning)",
+            "2. Zoek bekende woorden",
+            "3. Let op zinsvolgorde",
+            "4. Herschrijf pas na letterlijke vertaling",
+            "5. Behoud betekenis en toon"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taaltrucs & hulptips",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: 'niet en…' bv. “ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "”",
+            "Clisis",
+            ": samentrekking → 'het",
+            "sweert",
+            "' = '’",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: '",
+            "gaen",
+            "', '",
+            "wair",
+            "' i.p.v. 'gaan', 'waar'",
+            "Voorlezen helpt enorm!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefening samen",
+          "subtitle": "",
+          "items": [
+            "Voorbeeld:",
+            "“Die ridder quam met ghereet en speere, al te paerde bi den dore.”",
+            "Vraag:",
+            "- Wat betekenen: 'ghereet', 'al te paerde', 'bi den dore'?",
+            "- Samen hertalen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht: zelf hertalen",
+          "subtitle": "",
+          "items": [
+            "Fragment van 4 regels",
+            "Zoek betekenis op",
+            "Letterlijk vertalen → vloeiend herschrijven",
+            "Tijd: 35 minuten, individueel of in tweetallen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie",
+          "subtitle": "",
+          "items": [
+            "Wat vond je moeilijk?",
+            "Welke strategie werkte goed?",
+            "Wat viel mee?",
+            "Wat helpt bij hertalen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les",
+          "subtitle": "",
+          "items": [
+            "1: Het",
+            "grote",
+            "middeleeuwse",
+            "Faalfestival",
+            "Waarom",
+            "falen",
+            "middeleeuwse",
+            "personages",
+            "zo",
+            "hard",
+            "?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Het onderzoek",
+          "subtitle": "",
+          "items": [
+            "We gaan verschillende personages uit middeleeuwse verhalen bestuderen om te onderzoeken hoe goed ze zijn in falen.",
+            "Welke mislukkingen hebben ze in hun leven, welke domme stappen zetten ze, welke onhandige beslissingen nemen ze? En hoe gaan ze om met hun problemen.",
+            "Wat is uiteindelijk de oplossing? Wat brengt al dit falen hen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat weten we al van de middeleeuwen?",
+          "subtitle": "",
+          "items": [
+            "Schrijf in 3 minuten op waar je allemaal aan denkt bij het begrip middeleeuwen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wie zijn die falende personages?",
+          "subtitle": "",
+          "items": [
+            "Karel ende Elegast uit",
+            "Karel ende Elegast",
+            "Beatrijs uit",
+            "Beatrijs",
+            "Mariken van",
+            "Nieumeghen",
+            "uit",
+            "Mariken van",
+            "Nieumeghen",
+            "Walewein uit",
+            "De roman van Walewein",
+            "Brandaan",
+            "uit",
+            "De reis van Sint",
+            "Brandaan",
+            "Reynaert",
+            "uit",
+            "Van den vos",
+            "Reynaerde",
+            "Floris uit",
+            "Floris ende",
+            "Blancefloer"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Karel",
+          "subtitle": "",
+          "items": [
+            "Hij diste zijn beste vriend en werd een dief..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Beatrijs",
+          "subtitle": "",
+          "items": [
+            "Ze ging ervandoor met een foute man..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mariken",
+          "subtitle": "",
+          "items": [
+            "Zij",
+            "ging",
+            "ervandoor",
+            "met de",
+            "duivel",
+            "zelf",
+            "..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Walewein",
+          "subtitle": "",
+          "items": [
+            "Hij moest een zwevend schaakbord achtervolgen en nog meer rare",
+            "challenges",
+            "doen..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Brandaan",
+          "subtitle": "",
+          "items": [
+            "Hij",
+            "maakte",
+            "God",
+            "kwaad",
+            "door",
+            "aan",
+            "de",
+            "schepping",
+            "te",
+            "twijfelen",
+            "..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reynaert",
+          "subtitle": "",
+          "items": [
+            "Hij",
+            "belazerde",
+            "echt",
+            "iedereen..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Floris",
+          "subtitle": "",
+          "items": [
+            "Hij",
+            "dacht",
+            "dat",
+            "de",
+            "liefde",
+            "van",
+            "zijn",
+            "leven",
+            "dood",
+            "was",
+            "en",
+            "moest",
+            "allerlei",
+            "ingewikkelde",
+            "toeren",
+            "uithalen",
+            "om",
+            "haar",
+            "terug",
+            "te",
+            "vinden",
+            "..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Het Faalfestival",
+          "subtitle": "",
+          "items": [
+            "Aan het eind van ons onderzoek werpen we onze personages in de ring voor een",
+            "faalbattle",
+            ":",
+            "wie is de absolute middeleeuwse faalbaas?",
+            "Welke personages hebben de meeste \"potentiële\" faalervaringen in hun leven en gaan daar ook het best mee om?",
+            "Iedereen houdt een pleidooi (ballondebat) om uiteindelijk uit te maken wie de",
+            "faalbattle",
+            "wint. Zorg ervoor dat je argumenten verzamelt die jouw pleidooi bekrachtigen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Onderzoek: Middeleeuwse poster (1)",
+          "subtitle": "",
+          "items": [
+            "Je verzamelt informatie over je personage en je maakt een poster/affiche over de faalkracht van je personage.",
+            "Je poster ziet er middeleeuws uit en bevat de volgende onderdelen:",
+            "een informatief blokje met informatie over het verhaal: bij welk genre hoort het en wat houdt dat genre in, wanneer geschreven, waar ligt het handschrift? Wie zijn de hoofdrolspelers in het verhaal. Korte samenvatting van het verhaal.",
+            "een initiaal die passend is bij het personage.",
+            "eigenschappen en kwaliteiten van je personage",
+            "een overzicht van alle faalervaringen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Onderzoek: Middeleeuwse poster (2)",
+          "subtitle": "",
+          "items": [
+            "4. een fragment uit de middeleeuwse tekst en dat",
+            "hertaal",
+            "je naar het Nederlands (je kiest een faalervaring, of juist een stukje tekst waarin de levensles van het verhaal duidelijk wordt, of een stukje waarin je duidelijk de eigenschappen van het personage terugziet.)",
+            "5. een levensles uit het verhaal (want falen is leren!)",
+            "6. een creatieve verwerking van een verhaalfragment: kies een gebeurtenis uit het verhaal. Hoe zou deze er vandaag de dag uitzien? Schrijf een verhaalfragment waarin je dit idee uitwerkt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe kom je aan de benodigde informatie?",
+          "subtitle": "",
+          "items": [
+            "Je bekijkt",
+            "www.literatuurgeschiedenis.nl",
+            "en je zoekt informatie over jouw personage.",
+            "Je zoekt uit wat de verhaallijn is van jouw boek.",
+            "Je leest een fragment uit een jeugdboek over jouw tekst.",
+            "Je bekijkt filmpjes en je luistert een podcast.",
+            "Je zoekt de middeleeuwse tekst op waar je een fragment uithaalt.",
+            "In de les leer je alles over de initiaal, het hertalen van",
+            "middelnederlands",
+            "en handige basiskennis over de middeleeuwen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "We werken samen!",
+          "subtitle": "",
+          "items": [
+            "Dat betekent dat we elk onderdeel van de poster samen bedenken en uitwerken -> dus niet onderdelen verdelen!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Geef je voorkeurspersonage door!",
+          "subtitle": "",
+          "items": [
+            "Maak een top-3 van jouw",
+            "voorkeursperonages",
+            ". Licht in 3-5 zinnen je top-3 toe.",
+            "De docent maakt groepjes."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les",
+          "subtitle": "",
+          "items": [
+            "2: De",
+            "middeleeuwen",
+            "Waren",
+            "ze",
+            "wel",
+            "zo",
+            "duister",
+            "als",
+            "mensen",
+            "vaak",
+            "denken?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
+          "subtitle": "",
+          "items": [
+            "We inventariseren op het bord..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrouwen hadden niets te zeggen...",
+          "subtitle": "",
+          "items": [
+            "Vikingvrouwen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Archeologen bepaalden eeuwenlang het",
+          "subtitle": "",
+          "items": [
+            "geslacht",
+            "van een Viking op basis van",
+            "objecten",
+            "(wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
+            "Er bestaan ruim 30",
+            "graven",
+            "met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
+            "In",
+            "Birka",
+            "(graf Bj581) is een vrouw als",
+            "volwaardige krijger",
+            "begraven: paard, wapens, strategisch speelbord → elite-krijger.",
+            "Er zijn tientallen",
+            "afbeeldingen",
+            "van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
+            "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
+            "De iconische “",
+            "Vikingvrouw met sleutels",
+            "” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
+            "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
+            "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
+            "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
+            "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch",
+            "."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Er waren steeds heksenjachten...",
+          "subtitle": "",
+          "items": [
+            "nkingen heksenvervolging"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "In Europa vonden in de late middeleeuwen en",
+          "subtitle": "",
+          "items": [
+            "vroegmoderne tijd",
+            "grootschalige heksenvervolgingen plaats.",
+            "De vervolging trof vooral vrouwen, die gezien werden als",
+            "zondebokken",
+            "in tijden van angst, onzekerheid en maatschappelijke spanningen.",
+            "In Nederland werden ongeveer",
+            "250",
+            "mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
+            "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
+            "Het thema laat zien hoe snel een samenleving kan",
+            "radicaliseren",
+            "wanneer angst, bijgeloof en macht samenkomen.",
+            "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De middeleeuwen waren vies en alles lag stil...",
+          "subtitle": "",
+          "items": [
+            "Er gebeurde juist van alles"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middeleeuwen waren",
+          "subtitle": "",
+          "items": [
+            "géén stilstan",
+            "d: wielploeg,",
+            "spinnewiel",
+            ", mechanische klok, stijgbeugel, windmolen-innovaties,",
+            "drukpers",
+            "(1450).",
+            "Door klimaatverbetering (950–1250) bloeit landbouw →",
+            "enorme bevolkingsgroei",
+            "(Engeland: 1,5 → 3 miljoen).",
+            "Wereldhandel",
+            "groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding &",
+            "bankieren",
+            "naar Europa",
+            "Architectuur wordt licht en ruim:",
+            "gotiek",
+            "(Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
+            "Hygiëne vóór 1300 eigenlijk best goed:",
+            "dagelijks handen wassen",
+            ", twee keer per maand baden.",
+            "Magna",
+            "Carta",
+            "(1215) → begin van",
+            "rechtsbescherming",
+            "(vooral voor elite, maar toch historisch belangrijk).",
+            "Universiteiten ontstaan vanaf 1088:",
+            "Bologna",
+            ", daarna heel Europa → onderwijs buiten kloosters.",
+            "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch",
+            "."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middeleeuwen in het kort",
+          "subtitle": "",
+          "items": [
+            "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
+            "Theocentrisme",
+            "(maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
+            "Kruistochten",
+            "Ontstaan ambachten en steden rond rivieren"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalontwikkeling",
+          "subtitle": "",
+          "items": [
+            "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
+            "Wat weet je daarvan?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Taalboom",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Ontwikkeling Nederlands",
+          "subtitle": "",
+          "items": [
+            "Wat valt je op als je naar de",
+            "dialogen",
+            "luistert? Wat hoor je allemaal terug?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "Hebban olla vogala"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opgeschreven ca. 1100 door een",
+          "subtitle": "",
+          "items": [
+            "Vlaamse monnik in Engeland, als pennenproef",
+            "(testje van de schrijfpen).",
+            "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is",
+            "mengvorm",
+            ": Oudnederlands / Oudengels.",
+            "Onze literatuur was vóór 1100 vooral",
+            "mondeling",
+            ": liederen, verhalen → pas later op schrift gezet.",
+            "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar",
+            "weinig",
+            "van bewaard.",
+            "In Europa bestonden al oudere volkstalige teksten:",
+            "Hildebrandslied",
+            "(Duits, 800),",
+            "Beowulf",
+            "(Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
+            "Het versje toont:",
+            "hoe schrijvers toen werkten met ganzenveer,",
+            "hoe taal evolueerde,",
+            "en dat liefde een tijdloos thema is.",
+            "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
+            "Conclusie: “",
+            "Hebban",
+            "olla",
+            "vogala",
+            "…” is klein, maar cultureel enorm belangrijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De ridderroman:",
+            "Voorhoofs",
+            "Hoofs",
+            "Satire"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De geestelijke roman",
+            "Mariamirakel",
+            "Mystiek",
+            "Exempelen",
+            "Heiligenlevens"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De wereldlijke literatuur",
+            "Abele spelen",
+            "Rederijkers"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat valt op in de verhalen?",
+          "subtitle": "",
+          "items": [
+            "Rijm",
+            "Getallensymboliek",
+            "Kleurensymboliek",
+            "Hemelse en aardse liefde",
+            "Christelijk geloof",
+            "Koning en onderdanen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middelnederlands hertalen",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "Clisis",
+            ": samentrekking: 'het",
+            "sweert",
+            "' wordt '",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+            "gaen",
+            "(gaan),",
+            "wair",
+            "(waar)",
+            "Voorlezen helpt!",
+            "WNT"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Boeken",
+          "subtitle": "",
+          "items": [
+            "Het maken van een boek",
+            ",",
+            "wat een werk",
+            "Een revolutionaire uitvinding",
+            "Miniaturen en initialen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Parchment",
+          "subtitle": "",
+          "items": [
+            "/ perkament:",
+            "Gemaakt van",
+            "dierenhuid",
+            "(kalf, geit, schaap).",
+            "Dagenlang weken, ontharen, schrapen, opnieuw schrapen →",
+            "arbeidsintensief en duur",
+            ".",
+            "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
+            "Resultaat: extreem duurzaam;",
+            "kan 1000+ jaar meegaan",
+            ".",
+            "Schrijven / scriptorium:",
+            "Scribe",
+            "gebruikt",
+            "ganzenveer",
+            ", aangescherpt en gespleten voor inkttrek.",
+            "Lijnen worden met een",
+            "passer/liniaal",
+            "in het perkament gedrukt.",
+            "Inkt van",
+            "galnoten",
+            "of lamp black (roet).",
+            "Fouten worden letterlijk",
+            "weggekrast",
+            "→ perkament kan dat aan.",
+            "Illuminatie / miniatuur:",
+            "Eerst goud aanbrengen",
+            "(met gesso of gom), dan kleuren.",
+            "Pigmenten uit mineralen & planten",
+            "; lagen van licht → donker.",
+            "Wit en zwart voor details en diepte.",
+            "Miniaturen waren",
+            "prestigeobjecten",
+            ", soms duurder dan het boek zelf.",
+            "Binding:",
+            "Katernen met",
+            "linnen draad",
+            "op leren riemen genaaid.",
+            "Houten kaften, leren omslag",
+            ", later soms fluweel, edelmetaal, reliëf.",
+            "Gespen",
+            "om het boek vlak en droog te houden.",
+            "Resultaat: een boek als kunstvoorwerp en statusobject."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Memento",
+          "subtitle": "",
+          "items": [
+            "Mori",
+            "Vraag",
+            "God",
+            "dat",
+            "Hij",
+            "mij",
+            "wilt",
+            "vergeven",
+            "!",
+            "Reynaert"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Trouw",
+          "subtitle": "",
+          "items": [
+            "Hij mag",
+            "doodvallen",
+            "die",
+            "mij",
+            "adviseert",
+            "/",
+            "dat",
+            "ik",
+            "de",
+            "koning",
+            "schade",
+            "zal",
+            "berokkenen",
+            ".",
+            "Elegast"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 6: Fragment / Faalervaring hertaling",
+          "subtitle": "Faalfestival",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Les",
+          "subtitle": "",
+          "items": [
+            "2: De",
+            "middeleeuwen",
+            "Waren",
+            "ze",
+            "wel",
+            "zo",
+            "duister",
+            "als",
+            "mensen",
+            "vaak",
+            "denken?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
+          "subtitle": "",
+          "items": [
+            "We inventariseren op het bord..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrouwen hadden niets te zeggen...",
+          "subtitle": "",
+          "items": [
+            "Vikingvrouwen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Archeologen bepaalden eeuwenlang het",
+          "subtitle": "",
+          "items": [
+            "geslacht",
+            "van een Viking op basis van",
+            "objecten",
+            "(wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
+            "Er bestaan ruim 30",
+            "graven",
+            "met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
+            "In",
+            "Birka",
+            "(graf Bj581) is een vrouw als",
+            "volwaardige krijger",
+            "begraven: paard, wapens, strategisch speelbord → elite-krijger.",
+            "Er zijn tientallen",
+            "afbeeldingen",
+            "van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
+            "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
+            "De iconische “",
+            "Vikingvrouw met sleutels",
+            "” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
+            "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
+            "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
+            "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
+            "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch",
+            "."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Er waren steeds heksenjachten...",
+          "subtitle": "",
+          "items": [
+            "nkingen heksenvervolging"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "In Europa vonden in de late middeleeuwen en",
+          "subtitle": "",
+          "items": [
+            "vroegmoderne tijd",
+            "grootschalige heksenvervolgingen plaats.",
+            "De vervolging trof vooral vrouwen, die gezien werden als",
+            "zondebokken",
+            "in tijden van angst, onzekerheid en maatschappelijke spanningen.",
+            "In Nederland werden ongeveer",
+            "250",
+            "mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
+            "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
+            "Het thema laat zien hoe snel een samenleving kan",
+            "radicaliseren",
+            "wanneer angst, bijgeloof en macht samenkomen.",
+            "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De middeleeuwen waren vies en alles lag stil...",
+          "subtitle": "",
+          "items": [
+            "Er gebeurde juist van alles"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middeleeuwen waren",
+          "subtitle": "",
+          "items": [
+            "géén stilstan",
+            "d: wielploeg,",
+            "spinnewiel",
+            ", mechanische klok, stijgbeugel, windmolen-innovaties,",
+            "drukpers",
+            "(1450).",
+            "Door klimaatverbetering (950–1250) bloeit landbouw →",
+            "enorme bevolkingsgroei",
+            "(Engeland: 1,5 → 3 miljoen).",
+            "Wereldhandel",
+            "groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding &",
+            "bankieren",
+            "naar Europa",
+            "Architectuur wordt licht en ruim:",
+            "gotiek",
+            "(Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
+            "Hygiëne vóór 1300 eigenlijk best goed:",
+            "dagelijks handen wassen",
+            ", twee keer per maand baden.",
+            "Magna",
+            "Carta",
+            "(1215) → begin van",
+            "rechtsbescherming",
+            "(vooral voor elite, maar toch historisch belangrijk).",
+            "Universiteiten ontstaan vanaf 1088:",
+            "Bologna",
+            ", daarna heel Europa → onderwijs buiten kloosters.",
+            "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch",
+            "."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middeleeuwen in het kort",
+          "subtitle": "",
+          "items": [
+            "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
+            "Theocentrisme",
+            "(maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
+            "Kruistochten",
+            "Ontstaan ambachten en steden rond rivieren"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalontwikkeling",
+          "subtitle": "",
+          "items": [
+            "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
+            "Wat weet je daarvan?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Taalboom",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Ontwikkeling Nederlands",
+          "subtitle": "",
+          "items": [
+            "Wat valt je op als je naar de",
+            "dialogen",
+            "luistert? Wat hoor je allemaal terug?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "Hebban olla vogala"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opgeschreven ca. 1100 door een",
+          "subtitle": "",
+          "items": [
+            "Vlaamse monnik in Engeland, als pennenproef",
+            "(testje van de schrijfpen).",
+            "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is",
+            "mengvorm",
+            ": Oudnederlands / Oudengels.",
+            "Onze literatuur was vóór 1100 vooral",
+            "mondeling",
+            ": liederen, verhalen → pas later op schrift gezet.",
+            "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar",
+            "weinig",
+            "van bewaard.",
+            "In Europa bestonden al oudere volkstalige teksten:",
+            "Hildebrandslied",
+            "(Duits, 800),",
+            "Beowulf",
+            "(Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
+            "Het versje toont:",
+            "hoe schrijvers toen werkten met ganzenveer,",
+            "hoe taal evolueerde,",
+            "en dat liefde een tijdloos thema is.",
+            "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
+            "Conclusie: “",
+            "Hebban",
+            "olla",
+            "vogala",
+            "…” is klein, maar cultureel enorm belangrijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De ridderroman:",
+            "Voorhoofs",
+            "Hoofs",
+            "Satire"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De geestelijke roman",
+            "Mariamirakel",
+            "Mystiek",
+            "Exempelen",
+            "Heiligenlevens"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nederlandse letterkunde",
+          "subtitle": "",
+          "items": [
+            "De wereldlijke literatuur",
+            "Abele spelen",
+            "Rederijkers"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat valt op in de verhalen?",
+          "subtitle": "",
+          "items": [
+            "Rijm",
+            "Getallensymboliek",
+            "Kleurensymboliek",
+            "Hemelse en aardse liefde",
+            "Christelijk geloof",
+            "Koning en onderdanen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middelnederlands hertalen",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "Clisis",
+            ": samentrekking: 'het",
+            "sweert",
+            "' wordt '",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+            "gaen",
+            "(gaan),",
+            "wair",
+            "(waar)",
+            "Voorlezen helpt!",
+            "WNT"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Boeken",
+          "subtitle": "",
+          "items": [
+            "Het maken van een boek",
+            ",",
+            "wat een werk",
+            "Een revolutionaire uitvinding",
+            "Miniaturen en initialen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Parchment",
+          "subtitle": "",
+          "items": [
+            "/ perkament:",
+            "Gemaakt van",
+            "dierenhuid",
+            "(kalf, geit, schaap).",
+            "Dagenlang weken, ontharen, schrapen, opnieuw schrapen →",
+            "arbeidsintensief en duur",
+            ".",
+            "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
+            "Resultaat: extreem duurzaam;",
+            "kan 1000+ jaar meegaan",
+            ".",
+            "Schrijven / scriptorium:",
+            "Scribe",
+            "gebruikt",
+            "ganzenveer",
+            ", aangescherpt en gespleten voor inkttrek.",
+            "Lijnen worden met een",
+            "passer/liniaal",
+            "in het perkament gedrukt.",
+            "Inkt van",
+            "galnoten",
+            "of lamp black (roet).",
+            "Fouten worden letterlijk",
+            "weggekrast",
+            "→ perkament kan dat aan.",
+            "Illuminatie / miniatuur:",
+            "Eerst goud aanbrengen",
+            "(met gesso of gom), dan kleuren.",
+            "Pigmenten uit mineralen & planten",
+            "; lagen van licht → donker.",
+            "Wit en zwart voor details en diepte.",
+            "Miniaturen waren",
+            "prestigeobjecten",
+            ", soms duurder dan het boek zelf.",
+            "Binding:",
+            "Katernen met",
+            "linnen draad",
+            "op leren riemen genaaid.",
+            "Houten kaften, leren omslag",
+            ", later soms fluweel, edelmetaal, reliëf.",
+            "Gespen",
+            "om het boek vlak en droog te houden.",
+            "Resultaat: een boek als kunstvoorwerp en statusobject."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Memento",
+          "subtitle": "",
+          "items": [
+            "Mori",
+            "Vraag",
+            "God",
+            "dat",
+            "Hij",
+            "mij",
+            "wilt",
+            "vergeven",
+            "!",
+            "Reynaert"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Trouw",
+          "subtitle": "",
+          "items": [
+            "Hij mag",
+            "doodvallen",
+            "die",
+            "mij",
+            "adviseert",
+            "/",
+            "dat",
+            "ik",
+            "de",
+            "koning",
+            "schade",
+            "zal",
+            "berokkenen",
+            ".",
+            "Elegast"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Hertalen",
+          "subtitle": "",
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "(Vraag hertalen aan de klas)",
+          "subtitle": "",
+          "items": [
+            "We inventariseren op het bord..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Middelnederlands hertalen",
+          "subtitle": "",
+          "items": [
+            "Dubbele ontkenning: ende",
+            "minen",
+            "sin",
+            "niet en",
+            "vertare",
+            "Clisis",
+            ": samentrekking: 'het",
+            "sweert",
+            "' wordt '",
+            "tsweert",
+            "'",
+            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker:",
+            "gaen",
+            "(gaan),",
+            "wair",
+            "(waar)",
+            "Voorlezen helpt!",
+            "WNT"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 8: Poster afmaken & presentatie voorbereiden",
+          "subtitle": "",
+          "items": [
+            "Vandaag werk je verder aan je poster en bereid je de presentatie en het ballondebat voor."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Planning van vandaag",
+          "subtitle": "",
+          "items": [
+            "Tijdsverdeling:",
+            "5 min:",
+            "uitleg",
+            "35 min: posters",
+            "afmaken",
+            "20 min:",
+            "voorbereiding",
+            "pleidooi",
+            "&",
+            "presentatie",
+            "10 min:",
+            "feedbackronde",
+            "met",
+            "andere",
+            "groep",
+            "10 min:",
+            "opruimen",
+            "en",
+            "inleveren"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Poster aanvullen -complete versie",
+          "subtitle": "",
+          "items": [
+            "Vandaag maak je je poster helemaal af. Dit zijn alle onderdelen die erop moeten staan:"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Informatief blokje",
+          "subtitle": "",
+          "items": [
+            "Zet kort op je poster:",
+            "Genre van het verhaal",
+            "Herkomst (land, tijd, auteur indien bekend)",
+            "Hoofdrolspelers",
+            "Korte samenvatting (max. 5 zinnen)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Initiaal ontwerpen",
+          "subtitle": "",
+          "items": [
+            "Ontwerp een grote beginletter die past bij jouw personage.",
+            "Gebruik kleur en symbolen",
+            "De letter zegt iets over het karakter",
+            "Middeleeuwse stijl (zoals in kloosterhandschriften)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Eigenschappen",
+          "subtitle": "",
+          "items": [
+            "Wat voor type is jouw personage?",
+            "Noem minstens 3 eigenschappen of kwaliteiten",
+            "Laat zien wanneer het misgaat: wat faalt er?",
+            "Wat leert het personage daarvan?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Faalervaring",
+          "subtitle": "",
+          "items": [
+            "Kies een fragment waarin:",
+            "het personage faalt,",
+            "of een levensles zichtbaar is,",
+            "of het karakter duidelijk blijkt.",
+            "Beschrijf het fragment in eigen woorden; leg uit wat er gebeurt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "5. Levensles uit het verhaal",
+          "subtitle": "",
+          "items": [
+            "Wat kunnen we leren van dit verhaal?",
+            "Formuleer een duidelijke, relevante les",
+            "Koppel het aan het personage of de situatie",
+            "Bijv. 'Wie liegt, komt zichzelf tegen.' of 'Fouten maken is de weg naar wijsheid.'"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "6. Creatieve verwerking: heden",
+          "subtitle": "",
+          "items": [
+            "Verwerk een gebeurtenis uit het verhaal in een modern jasje:",
+            "Kies een moment (bijv. een val, een misstap, een verleiding...)",
+            "Hoe zou dat er nu uitzien?",
+            "Schrijf een kort fragment alsof het nú gebeurt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Checklist: alles op je poster?",
+          "subtitle": "",
+          "items": [
+            "Informatief blokje",
+            "Initiaal",
+            "Eigenschappen",
+            "&",
+            "faalervaringen",
+            "Fragment +",
+            "hertaling",
+            "+",
+            "uitleg",
+            "Levensles",
+            "Creatieve",
+            "verwerking",
+            "in het",
+            "heden",
+            "Alles",
+            "compleet",
+            ", middeleeuwse, creatief",
+            "én",
+            "verzorgd",
+            "? Dan ben je",
+            "klaar",
+            "!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorbereiding ballondebat – Ronde 1",
+          "subtitle": "",
+          "items": [
+            "Wie is de ultieme faalbaas?",
+            "Maak een pleidooi (1 minuut):",
+            "Hoe gaat jouw personage om met falen?",
+            "Wat leert hij/zij? Is de les nog relevant?",
+            "Welke eigenschappen helpen bij falen?",
+            "Is er een modern equivalent of rolmodel?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorbereiding ballondebat – Ronde 2",
+          "subtitle": "",
+          "items": [
+            "Hoe win je van je tegenstanders?",
+            "Verzamel info over andere personages:",
+            "Waarom zijn zij géén echte faalbazen?",
+            "Welke zwaktes hebben zij?",
+            "Hoe kun je ze overtuigend tegenspreken?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorbereiding posterpresentatie",
+          "subtitle": "",
+          "items": [
+            "Wat vertel je bij de poster?",
+            "1. Wie is je personage en wat zijn zijn/haar eigenschappen?",
+            "2. Wat is het belangrijkste faalmoment?",
+            "3. Hoe zie je het genre terug?",
+            "4. Wat is de levensles – en is die nog actueel?",
+            "5. Hoe hebben jullie het verhaal gemoderniseerd?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 9 – Posterpresentaties",
+          "subtitle": "",
+          "items": [
+            "Vandaag presenteren jullie de posters."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voor de presentatoren",
+          "subtitle": "",
+          "items": [
+            "Vertel bij je poster:",
+            "Wie is je personage",
+            "en",
+            "wat",
+            "zijn",
+            "zijn",
+            "/",
+            "haar",
+            "eigenschappen",
+            "?",
+            "Wat is het",
+            "belangrijkste",
+            "faalmoment",
+            "?",
+            "Hoe",
+            "zie",
+            "je het genre",
+            "terug",
+            "in het",
+            "verhaal",
+            "?",
+            "Wat is de",
+            "levensles",
+            "en",
+            "is die",
+            "nog",
+            "relevant?",
+            "Hoe",
+            "hebben",
+            "jullie",
+            "het",
+            "verhaal",
+            "gemoderniseerd",
+            "?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voor het publiek",
+          "subtitle": "",
+          "items": [
+            "Kijk en noteer:",
+            "1a. Wie",
+            "zijn",
+            "jullie",
+            "twee",
+            "grootste",
+            "concurrenten",
+            "(qua",
+            "faalkracht",
+            ")?",
+            "1b. Geef per personage twee redenen waarom zij sterk zijn.",
+            "1c. Hoe ga je",
+            "tóch",
+            "van ze",
+            "winnen",
+            "in de",
+            "faalbattle",
+            "?",
+            "2. Welke",
+            "levensles",
+            "vond",
+            "jij",
+            "persoonlijk",
+            "waardevol",
+            "?",
+            "➤ Leg in 2–5",
+            "zinnen",
+            "uit",
+            "waarom",
+            "die",
+            "bij",
+            "jou",
+            "past."
+          ]
+        }
+      ],
+      "markers": {
+        "marker-les-10-ff-faalbattle-oefenen-faalbattle": 1,
+        "marker-les-11-ff-faalbattle": 4,
+        "marker-moralicious-dinsdag-10-maart": 7,
+        "marker-les-3-ff-boeken-en-initiaal": 8,
+        "marker-les-3-ff-leesles": 21,
+        "marker-les-4-informatieblok": 34,
+        "marker-les-4-ff-leesles": 38,
+        "marker-les-5-eigenschappen-levensles": 42,
+        "marker-les-1-ff-intro": 53,
+        "marker-les-2-ff-letterkunde-middeleeuwen": 70,
+        "marker-les-6-fragment-faalervaring-hertaling": 93,
+        "marker-les-2-ff-leesles": 94,
+        "marker-les-7-creatieve-verwerking": 117,
+        "marker-les-8-ff-poster-afmaken": 120,
+        "marker-les-9-ff-poster-afmaken-posterpresentaties": 133
       }
     }
   }
