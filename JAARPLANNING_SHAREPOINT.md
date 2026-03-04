@@ -35,3 +35,17 @@ De app leest een JSON-feed met deze structuur:
 ## Opmerking
 
 Als SharePoint-authenticatie actief is, moeten leerlingen met schoolaccount ingelogd zijn om de feed te kunnen lezen.
+
+## Alternatief: GitHub als bron
+
+Als je geen SharePoint wilt gebruiken maar wel een interne link:
+
+1. Werk de Excelplanningen bij.
+2. Draai:
+
+```bash
+./update-jaarplanning.sh
+```
+
+3. Gebruik als bron-URL in de app:
+`https://raw.githubusercontent.com/luuksh/lespresentatie/main/js/jaarplanning-live.json`
