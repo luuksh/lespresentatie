@@ -22731,59 +22731,149 @@
       "title": "Faalfestival",
       "subtitle": "Faalfestival",
       "project": "Faalfestival",
-      "importVersion": 2026030404,
+      "importVersion": 2026030412,
       "markerDecks": {
         "marker-les-10-ff-faalbattle-oefenen-faalbattle": [
           {
             "type": "title",
-            "title": "Hertalen",
-            "subtitle": ""
+            "title": "Les 10 - Oefenen Faalbattle",
+            "subtitle": "Faalfestival"
           },
           {
             "type": "bullets",
-            "title": "(Vraag hertalen aan de klas)",
-            "subtitle": "",
+            "title": "Wat is de Faalbattle (ballondebat)?",
+            "subtitle": "Format van de battle",
             "items": [
-              "We inventariseren op het bord..."
+              "Jullie zitten figuurlijk in een luchtballon met alle hoofdpersonages.",
+              "Doel: de klas overtuigen dat juist jullie hoofdpersonage uit het mandje moet worden gegooid.",
+              "Het personage met de meeste stemmen ligt eruit.",
+              "Het groepje van dat personage wint de Faalbattle."
             ]
           },
           {
             "type": "bullets",
-            "title": "Middelnederlands hertalen",
-            "subtitle": "",
+            "title": "Hoofddoel van vandaag",
+            "subtitle": "3 kwartier oefenen",
             "items": [
-              "Dubbele ontkenning: ende minen sin niet en vertare",
-              "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-              "Voorlezen helpt!",
-              "WNT"
+              "Bereid met je groepje een overtuigende en sterke performance voor.",
+              "Gebruik de argumenten van jullie poster: waarom is dit personage de grootste mislukkeling?",
+              "Je mag afwijken van de poster als dat je verhaal sterker maakt.",
+              "Laat zien dat jullie klaar zijn voor de battle van volgende les."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tweede doel: entertainment",
+            "subtitle": "Maak er een show van",
+            "items": [
+              "Dit is geen standaard presentatie.",
+              "De klas moet betrokken blijven: humor, timing, energie en lef.",
+              "Niemand mag in slaap vallen: maak het levendig en verrassend.",
+              "Overtuigen + entertainen = maximale impact."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkvorm tijdens het oefenen",
+            "subtitle": "7 groepjes",
+            "items": [
+              "Verdeel rollen binnen je groep: opener, argumentatie, tegenargument, afsluiter.",
+              "Oefen hardop met elkaar en scherp je tekst aan.",
+              "Bespreek hoe je de klas wilt overtuigen én vermaken.",
+              "Neem je poster als basis, maar kies wat op het podium het beste werkt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Laatste 10 minuten: generale repetitie",
+            "subtitle": "Voorproefje voor het echie",
+            "items": [
+              "Drie willekeurige leerlingen worden aangewezen.",
+              "Zij presenteren alvast hun deel voor de klas.",
+              "Het groepje mag erbij komen staan en de poster meenemen.",
+              "Doel: ervaring opdoen, feedback pakken, klaar voor les 11."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Check-out voor einde les",
+            "subtitle": "Klaar voor de battle?",
+            "items": [
+              "Hebben jullie 3 sterke argumenten klaar?",
+              "Is duidelijk wie wat zegt?",
+              "Zit er entertainment in jullie optreden?",
+              "Zijn jullie klaar om morgen de klas te winnen?"
             ]
           }
         ],
         "marker-les-11-ff-faalbattle": [
           {
             "type": "title",
-            "title": "Hertalen",
-            "subtitle": ""
+            "title": "Les 11 - Faalbattle",
+            "subtitle": "Faalfestival"
           },
           {
             "type": "bullets",
-            "title": "(Vraag hertalen aan de klas)",
-            "subtitle": "",
+            "title": "Doel van vandaag",
+            "subtitle": "Battle-dag",
             "items": [
-              "We inventariseren op het bord..."
+              "Iedere groep overtuigt de klas dat hun hoofdpersonage uit de ballon moet.",
+              "De klas stemt welk personage eruit gaat.",
+              "Het groepje van dat personage is de winnaar van de Faalbattle."
             ]
           },
           {
             "type": "bullets",
-            "title": "Middelnederlands hertalen",
-            "subtitle": "",
+            "title": "Spelregels Faalbattle",
+            "subtitle": "Ballondebat",
             "items": [
-              "Dubbele ontkenning: ende minen sin niet en vertare",
-              "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-              "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-              "Voorlezen helpt!",
-              "WNT"
+              "Gebruik de kern van je poster als argumentatie.",
+              "Je hoeft niet letterlijk de postertekst voor te lezen.",
+              "Presenteer duidelijk, krachtig en met overtuiging.",
+              "Reageer scherp op andere groepen als dat past binnen de tijd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Beoordelingsfocus",
+            "subtitle": "Overtuigen + entertainen",
+            "items": [
+              "Inhoud: sterke argumenten waarom dit personage de grootste mislukkeling is.",
+              "Performance: energie, timing, podiumpresence, humor.",
+              "Publiek: de klas moet betrokken blijven en mee willen stemmen.",
+              "Samenwerking: jullie treden op als team."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Praktisch verloop (45 min)",
+            "subtitle": "7 groepjes",
+            "items": [
+              "Korte opening en uitleg stemronde.",
+              "Groepen presenteren om de beurt.",
+              "Stemmen en uitslag: welk personage wordt uit de ballon gegooid?",
+              "Afsluiting: winnend groepje en korte reflectie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Publiek heeft ook een taak",
+            "subtitle": "Actief luisteren",
+            "items": [
+              "Luister scherp naar argumenten en tegenargumenten.",
+              "Let op: wie overtuigt echt én maakt er een show van?",
+              "Stem op basis van inhoud én impact.",
+              "Speel eerlijk, maar kritisch."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Einde",
+            "subtitle": "Faalfestival",
+            "items": [
+              "Welk personage is eruit gestemd?",
+              "Waarom werkte deze groep het sterkst?",
+              "Wat neem je mee voor je volgende presentatie?"
             ]
           }
         ],
@@ -24091,58 +24181,151 @@
         },
         {
           "type": "title",
-          "title": "Hertalen",
-          "subtitle": ""
+          "title": "Les 10 - Oefenen Faalbattle",
+          "subtitle": "Faalfestival",
+          "items": []
         },
         {
           "type": "bullets",
-          "title": "(Vraag hertalen aan de klas)",
-          "subtitle": "",
+          "title": "Wat is de Faalbattle (ballondebat)?",
+          "subtitle": "Format van de battle",
           "items": [
-            "We inventariseren op het bord..."
+            "Jullie zitten figuurlijk in een luchtballon met alle hoofdpersonages.",
+            "Doel: de klas overtuigen dat juist jullie hoofdpersonage uit het mandje moet worden gegooid.",
+            "Het personage met de meeste stemmen ligt eruit.",
+            "Het groepje van dat personage wint de Faalbattle."
           ]
         },
         {
           "type": "bullets",
-          "title": "Middelnederlands hertalen",
-          "subtitle": "",
+          "title": "Hoofddoel van vandaag",
+          "subtitle": "3 kwartier oefenen",
           "items": [
-            "Dubbele ontkenning: ende minen sin niet en vertare",
-            "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-            "Voorlezen helpt!",
-            "WNT"
+            "Bereid met je groepje een overtuigende en sterke performance voor.",
+            "Gebruik de argumenten van jullie poster: waarom is dit personage de grootste mislukkeling?",
+            "Je mag afwijken van de poster als dat je verhaal sterker maakt.",
+            "Laat zien dat jullie klaar zijn voor de battle van volgende les."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tweede doel: entertainment",
+          "subtitle": "Maak er een show van",
+          "items": [
+            "Dit is geen standaard presentatie.",
+            "De klas moet betrokken blijven: humor, timing, energie en lef.",
+            "Niemand mag in slaap vallen: maak het levendig en verrassend.",
+            "Overtuigen + entertainen = maximale impact."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkvorm tijdens het oefenen",
+          "subtitle": "7 groepjes",
+          "items": [
+            "Verdeel rollen binnen je groep: opener, argumentatie, tegenargument, afsluiter.",
+            "Oefen hardop met elkaar en scherp je tekst aan.",
+            "Bespreek hoe je de klas wilt overtuigen én vermaken.",
+            "Neem je poster als basis, maar kies wat op het podium het beste werkt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste 10 minuten: generale repetitie",
+          "subtitle": "Voorproefje voor het echie",
+          "items": [
+            "Drie willekeurige leerlingen worden aangewezen.",
+            "Zij presenteren alvast hun deel voor de klas.",
+            "Het groepje mag erbij komen staan en de poster meenemen.",
+            "Doel: ervaring opdoen, feedback pakken, klaar voor les 11."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Check-out voor einde les",
+          "subtitle": "Klaar voor de battle?",
+          "items": [
+            "Hebben jullie 3 sterke argumenten klaar?",
+            "Is duidelijk wie wat zegt?",
+            "Zit er entertainment in jullie optreden?",
+            "Zijn jullie klaar om morgen de klas te winnen?"
           ]
         },
         {
           "type": "title",
-          "title": "Hertalen",
-          "subtitle": ""
+          "title": "Les 11 - Faalbattle",
+          "subtitle": "Faalfestival",
+          "items": []
         },
         {
           "type": "bullets",
-          "title": "(Vraag hertalen aan de klas)",
-          "subtitle": "",
+          "title": "Doel van vandaag",
+          "subtitle": "Battle-dag",
           "items": [
-            "We inventariseren op het bord..."
+            "Iedere groep overtuigt de klas dat hun hoofdpersonage uit de ballon moet.",
+            "De klas stemt welk personage eruit gaat.",
+            "Het groepje van dat personage is de winnaar van de Faalbattle."
           ]
         },
         {
           "type": "bullets",
-          "title": "Middelnederlands hertalen",
-          "subtitle": "",
+          "title": "Spelregels Faalbattle",
+          "subtitle": "Ballondebat",
           "items": [
-            "Dubbele ontkenning: ende minen sin niet en vertare",
-            "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-            "Voorlezen helpt!",
-            "WNT"
+            "Gebruik de kern van je poster als argumentatie.",
+            "Je hoeft niet letterlijk de postertekst voor te lezen.",
+            "Presenteer duidelijk, krachtig en met overtuiging.",
+            "Reageer scherp op andere groepen als dat past binnen de tijd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Beoordelingsfocus",
+          "subtitle": "Overtuigen + entertainen",
+          "items": [
+            "Inhoud: sterke argumenten waarom dit personage de grootste mislukkeling is.",
+            "Performance: energie, timing, podiumpresence, humor.",
+            "Publiek: de klas moet betrokken blijven en mee willen stemmen.",
+            "Samenwerking: jullie treden op als team."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Praktisch verloop (45 min)",
+          "subtitle": "7 groepjes",
+          "items": [
+            "Korte opening en uitleg stemronde.",
+            "Groepen presenteren om de beurt.",
+            "Stemmen en uitslag: welk personage wordt uit de ballon gegooid?",
+            "Afsluiting: winnend groepje en korte reflectie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Publiek heeft ook een taak",
+          "subtitle": "Actief luisteren",
+          "items": [
+            "Luister scherp naar argumenten en tegenargumenten.",
+            "Let op: wie overtuigt echt én maakt er een show van?",
+            "Stem op basis van inhoud én impact.",
+            "Speel eerlijk, maar kritisch."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Einde",
+          "subtitle": "Faalfestival",
+          "items": [
+            "Welk personage is eruit gestemd?",
+            "Waarom werkte deze groep het sterkst?",
+            "Wat neem je mee voor je volgende presentatie?"
           ]
         },
         {
           "type": "title",
           "title": "Moralicious dinsdag 10 maart!",
-          "subtitle": "Faalfestival"
+          "subtitle": "Faalfestival",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24357,7 +24540,8 @@
         {
           "type": "title",
           "title": "Les 4: Hoofsheid is een ernstig spel",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24390,7 +24574,8 @@
         {
           "type": "title",
           "title": "Les 4: Hoofsheid is een ernstig spel",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24544,7 +24729,8 @@
         {
           "type": "title",
           "title": "Les 1: Het grote middeleeuwse Faalfestival",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24700,7 +24886,8 @@
         {
           "type": "title",
           "title": "Les 2: De middeleeuwen",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24799,7 +24986,8 @@
         {
           "type": "title",
           "title": "Taalboom",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -24949,12 +25137,14 @@
         {
           "type": "title",
           "title": "Les 6: Fragment / Faalervaring hertaling",
-          "subtitle": "Faalfestival"
+          "subtitle": "Faalfestival",
+          "items": []
         },
         {
           "type": "title",
           "title": "Les 2: De middeleeuwen",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -25053,7 +25243,8 @@
         {
           "type": "title",
           "title": "Taalboom",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -25203,7 +25394,8 @@
         {
           "type": "title",
           "title": "Hertalen",
-          "subtitle": ""
+          "subtitle": "",
+          "items": []
         },
         {
           "type": "bullets",
@@ -25411,20 +25603,20 @@
       ],
       "markers": {
         "marker-les-10-ff-faalbattle-oefenen-faalbattle": 1,
-        "marker-les-11-ff-faalbattle": 4,
-        "marker-moralicious-dinsdag-10-maart": 7,
-        "marker-les-3-ff-boeken-en-initiaal": 8,
-        "marker-les-3-ff-leesles": 21,
-        "marker-les-4-informatieblok": 34,
-        "marker-les-4-ff-leesles": 38,
-        "marker-les-5-eigenschappen-levensles": 42,
-        "marker-les-1-ff-intro": 53,
-        "marker-les-2-ff-letterkunde-middeleeuwen": 70,
-        "marker-les-6-fragment-faalervaring-hertaling": 93,
-        "marker-les-2-ff-leesles": 94,
-        "marker-les-7-creatieve-verwerking": 117,
-        "marker-les-8-ff-poster-afmaken": 120,
-        "marker-les-9-ff-poster-afmaken-posterpresentaties": 133
+        "marker-les-11-ff-faalbattle": 8,
+        "marker-moralicious-dinsdag-10-maart": 15,
+        "marker-les-3-ff-boeken-en-initiaal": 16,
+        "marker-les-3-ff-leesles": 29,
+        "marker-les-4-informatieblok": 42,
+        "marker-les-4-ff-leesles": 46,
+        "marker-les-5-eigenschappen-levensles": 50,
+        "marker-les-1-ff-intro": 61,
+        "marker-les-2-ff-letterkunde-middeleeuwen": 78,
+        "marker-les-6-fragment-faalervaring-hertaling": 101,
+        "marker-les-2-ff-leesles": 102,
+        "marker-les-7-creatieve-verwerking": 125,
+        "marker-les-8-ff-poster-afmaken": 128,
+        "marker-les-9-ff-poster-afmaken-posterpresentaties": 141
       }
     },
     "project-v-rede": {
