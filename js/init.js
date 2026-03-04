@@ -718,6 +718,69 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(window.APP_CONFIG?.jaarplanningSourceUrl || 'js/jaarplanning-live.json').trim();
   }
 
+  function gradeLayerFromClassId(rawClassId) {
+    const cid = normalizeClassId(rawClassId);
+    if (!cid) return '';
+    const patterns = [
+      /^G([1-6])[A-Z]$/,
+      /^([1-6])[A-Z]$/,
+      /^([1-6])\.\d+$/,
+      /^([1-6])G\d+$/,
+      /^([1-6])$/,
+    ];
+    for (const pattern of patterns) {
+      const match = cid.match(pattern);
+      if (match) return match[1];
+    }
+    return '';
+  }
+
+  function collapseToYearLayerDoc(doc) {
+    const source = normalizeStudioDoc(doc);
+    const merged = new Map();
+
+    for (const entry of source.entries || []) {
+      const grade = gradeLayerFromClassId(entry.classId);
+      if (!grade) continue;
+      const week = String(entry.week || '').trim();
+      if (!week) continue;
+      const key = `${grade}__${week}`;
+      if (!merged.has(key)) {
+        merged.set(key, { classId: grade, week, lessons: [], items: [], notes: [] });
+      }
+      const bucket = merged.get(key);
+      for (const lesson of Array.isArray(entry.lessons) ? entry.lessons : []) {
+        const fingerprint = JSON.stringify(lesson || {});
+        if (!bucket.lessons.some((it) => JSON.stringify(it || {}) === fingerprint)) {
+          bucket.lessons.push(lesson);
+        }
+      }
+      for (const item of Array.isArray(entry.items) ? entry.items : []) {
+        const text = String(item || '').trim();
+        if (text && !bucket.items.includes(text)) bucket.items.push(text);
+      }
+      const note = String(entry.note || '').trim();
+      if (note && !bucket.notes.includes(note)) bucket.notes.push(note);
+    }
+
+    const entries = [...merged.values()].map((row) => {
+      const out = {
+        classId: row.classId,
+        week: row.week,
+        lessons: row.lessons,
+        items: row.items,
+      };
+      if (row.notes.length) out.note = row.notes.join(' | ');
+      return out;
+    });
+
+    return {
+      ...source,
+      entries,
+      updatedAt: source.updatedAt || new Date().toISOString(),
+    };
+  }
+
   function normalizeStudioDoc(raw) {
     const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
     if (!Array.isArray(doc.entries)) doc.entries = [];
@@ -741,7 +804,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function rebuildPlanningFromStudio() {
-    const doc = normalizeStudioDoc(planningStudio || {});
+    const doc = collapseToYearLayerDoc(planningStudio || {});
     planningStudio = doc;
     planningData = buildPlanningIndex(doc);
     planningPresentations = doc.presentations || {};
@@ -1032,13 +1095,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningWeekLabelEl.textContent = `${title} · ${week.label}`;
 
     const classId = normalizeClassId(klasSelect?.value || '');
+    const gradeId = gradeLayerFromClassId(classId);
     const weekCandidates = weekInfo.keys;
     const classWeeks = planningData[classId] || {};
+    const gradeWeeks = planningData[gradeId] || {};
     const allWeeks = planningData.ALL || {};
     const classWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
+    const gradeWeekKey = weekCandidates.find((key) => Boolean(gradeWeeks[key])) || '';
     const allWeekKey = weekCandidates.find((key) => Boolean(allWeeks[key])) || '';
-    const weekData = (classWeekKey || allWeekKey)
-      ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
+    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
+      ? mergePlanEntries(
+        allWeekKey ? allWeeks[allWeekKey] : null,
+        gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
+        classWeekKey ? classWeeks[classWeekKey] : null,
+      )
       : null;
 
     const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));

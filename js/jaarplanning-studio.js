@@ -33,6 +33,23 @@ function normalizeClassId(raw) {
   return prefixed ? prefixed[1] : text;
 }
 
+function gradeLayerFromClassId(rawClassId) {
+  const cid = normalizeClassId(rawClassId);
+  if (!cid) return '';
+  const patterns = [
+    /^G([1-6])[A-Z]$/,
+    /^([1-6])[A-Z]$/,
+    /^([1-6])\.\d+$/,
+    /^([1-6])G\d+$/,
+    /^([1-6])$/,
+  ];
+  for (const pattern of patterns) {
+    const match = cid.match(pattern);
+    if (match) return match[1];
+  }
+  return '';
+}
+
 function currentIsoWeek() {
   const now = new Date();
   const utc = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
@@ -62,6 +79,52 @@ function normalizeDoc(raw) {
   return doc;
 }
 
+function collapseToYearLayerDoc(doc) {
+  const source = normalizeDoc(doc);
+  const merged = new Map();
+
+  for (const entry of source.entries || []) {
+    const grade = gradeLayerFromClassId(entry.classId);
+    if (!grade) continue;
+    const week = String(entry.week || '').trim();
+    if (!week) continue;
+    const key = `${grade}__${week}`;
+    if (!merged.has(key)) {
+      merged.set(key, { classId: grade, week, lessons: [], items: [], notes: [] });
+    }
+    const bucket = merged.get(key);
+    for (const lesson of Array.isArray(entry.lessons) ? entry.lessons : []) {
+      const fingerprint = JSON.stringify(lesson || {});
+      if (!bucket.lessons.some((it) => JSON.stringify(it || {}) === fingerprint)) {
+        bucket.lessons.push(lesson);
+      }
+    }
+    for (const item of Array.isArray(entry.items) ? entry.items : []) {
+      const text = String(item || '').trim();
+      if (text && !bucket.items.includes(text)) bucket.items.push(text);
+    }
+    const note = String(entry.note || '').trim();
+    if (note && !bucket.notes.includes(note)) bucket.notes.push(note);
+  }
+
+  const entries = [...merged.values()].map((row) => {
+    const out = {
+      classId: row.classId,
+      week: row.week,
+      lessons: row.lessons,
+      items: row.items,
+    };
+    if (row.notes.length) out.note = row.notes.join(' | ');
+    return out;
+  });
+
+  return {
+    ...source,
+    entries,
+    updatedAt: source.updatedAt || new Date().toISOString(),
+  };
+}
+
 async function fetchJson(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set('_t', String(Date.now()));
@@ -71,7 +134,7 @@ async function fetchJson(path) {
 }
 
 function classesFromDoc(doc) {
-  return [...new Set(doc.entries.map((e) => normalizeClassId(e.classId)).filter(Boolean))].sort();
+  return [...new Set(doc.entries.map((e) => gradeLayerFromClassId(e.classId)).filter(Boolean))].sort();
 }
 
 function parseLessons(text) {
@@ -113,7 +176,7 @@ function weekCandidates(weekNo) {
 }
 
 function selectedClass() {
-  return normalizeClassId(classSelect.value);
+  return gradeLayerFromClassId(classSelect.value);
 }
 
 function selectedWeek() {
@@ -164,7 +227,7 @@ function renderEditor() {
   const cid = selectedClass();
   const week = selectedWeek();
   const entry = findEntry(cid, week);
-  editorTitle.textContent = `Editor · ${cid} · week ${week}`;
+  editorTitle.textContent = `Editor · jaarlaag ${cid} · week ${week}`;
   lessonsInput.value = formatLessons(entry?.lessons || []);
   itemsInput.value = (entry?.items || []).join('\n');
   noteInput.value = String(entry?.note || '');
@@ -197,7 +260,7 @@ function saveWeek() {
 
   saveStudio();
   renderEditor();
-  setStatus(`Opgeslagen: ${cid} week ${week}.`);
+  setStatus(`Opgeslagen: jaarlaag ${cid} week ${week}.`);
 }
 
 function clearWeek() {
@@ -210,7 +273,7 @@ function clearWeek() {
   ));
   saveStudio();
   renderEditor();
-  setStatus(`Leeggemaakt: ${cid} week ${week}.`);
+  setStatus(`Leeggemaakt: jaarlaag ${cid} week ${week}.`);
 }
 
 function exportStudio() {
@@ -240,7 +303,7 @@ function fillClassOptions(classes) {
   for (const cid of classes) {
     const option = document.createElement('option');
     option.value = cid;
-    option.textContent = cid;
+    option.textContent = `Jaarlaag ${cid}`;
     classSelect.appendChild(option);
   }
 }
@@ -252,16 +315,18 @@ async function boot() {
       fetchJson('js/leerlingen_per_klas.json'),
     ]);
 
-    state.baseDoc = normalizeDoc(baseRaw);
+    state.baseDoc = collapseToYearLayerDoc(baseRaw);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
-    state.doc = fromStorage ? normalizeDoc(JSON.parse(fromStorage)) : normalizeDoc(baseRaw);
+    state.doc = fromStorage
+      ? collapseToYearLayerDoc(JSON.parse(fromStorage))
+      : collapseToYearLayerDoc(baseRaw);
 
-    const uiClasses = Object.keys(classRaw || {}).map((cid) => normalizeClassId(cid));
+    const uiClasses = Object.keys(classRaw || {}).map((cid) => gradeLayerFromClassId(cid));
     const allClasses = [...new Set([...uiClasses, ...classesFromDoc(state.doc)])].filter(Boolean).sort();
     state.classes = allClasses;
 
     fillClassOptions(allClasses);
-    classSelect.value = allClasses[0] || '1A';
+    classSelect.value = allClasses[0] || '1';
     weekInput.value = String(currentIsoWeek());
 
     saveStudio();

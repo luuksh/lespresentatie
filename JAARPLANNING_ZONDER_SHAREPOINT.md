@@ -1,11 +1,12 @@
 # Interne Jaarplanning
 
 De jaarplanning werkt volledig intern via de Jaarplanning Studio in de app.
+Elke jaarlaag heeft nu één centrale planning (bijv. één planning voor alle brugklassen).
 
 ## Studio gebruik
 
 1. Open `jaarplanning-studio.html`.
-2. Kies klas en week.
+2. Kies jaarlaag en week.
 3. Bewerk:
    - `Lessen` (regelvorm: `A | Project | Les`)
    - `Items` (1 regel = 1 item)
