@@ -33,8 +33,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const presentationOpenBtn = document.getElementById('presentationOpenBtn');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
   const presentationFullscreenBtn = document.getElementById('presentationFullscreenBtn');
+  const presentationInternal = document.getElementById('presentationInternal');
+  const presentationInternalStage = document.getElementById('presentationInternalStage');
+  const presentationPrevBtn = document.getElementById('presentationPrevBtn');
+  const presentationNextBtn = document.getElementById('presentationNextBtn');
+  const presentationSlideCounter = document.getElementById('presentationSlideCounter');
 
   let planningData = {};
+  let planningPresentations = {};
   let planningUpdatedAt = '';
   let planningFetchedAt = '';
   let planningTimer = null;
@@ -52,6 +58,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   let clockMarkerTimer = null;
   let preferLocalLessonLinks = false;
   let isPresentationOpen = false;
+  let activePresentation = null;
+  let activeSlideIndex = 0;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -196,7 +204,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof row === 'string') {
       const lesson = row.trim();
       return lesson ? {
-        project: '', lesson, url: '', localUrl: '', lessonKey: ''
+        project: '', lesson, url: '', localUrl: '', embedUrl: '', lessonKey: ''
       } : null;
     }
     if (!row || typeof row !== 'object') return null;
@@ -211,9 +219,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? row.local
       ?? ''
     ).trim();
+    const embedUrl = String(
+      row.embedUrl
+      ?? row.embed_url
+      ?? row.embedLink
+      ?? row.embed
+      ?? row.onedriveEmbed
+      ?? row.sharepointEmbed
+      ?? ''
+    ).trim();
+    const presentationId = String(
+      row.presentationId
+      ?? row.presentation_id
+      ?? row.deckId
+      ?? row.deck_id
+      ?? ''
+    ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson) return null;
-    return { project, lesson, url, localUrl, lessonKey };
+    return { project, lesson, url, localUrl, embedUrl, presentationId, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -741,12 +765,49 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function buildPresentationTarget(lesson, lessonHref) {
     const href = String(lessonHref || '').trim();
+    const explicitEmbed = normalizeLessonUrl(lesson?.embedUrl || '');
     const isLocal = isLocalFileUrl(href);
     const openUrl = isLocal ? (bridgeOpenUrlForFile(href) || href) : href;
-    const embedUrl = isLocal ? '' : openUrl;
+    const embedUrl = explicitEmbed || (isLocal ? '' : openUrl);
     const title = String(lesson?.lesson || '').trim() || 'Presentatie';
     const project = String(lesson?.project || '').trim();
-    return { title, project, openUrl, embedUrl, isLocal };
+    const presentationId = String(lesson?.presentationId || '').trim();
+    return { title, project, openUrl, embedUrl, isLocal, presentationId };
+  }
+
+  function renderInternalSlide() {
+    if (!presentationInternalStage || !activePresentation) return;
+    const slides = Array.isArray(activePresentation.slides) ? activePresentation.slides : [];
+    if (!slides.length) {
+      presentationInternalStage.innerHTML = '<p class="presentation-slide-subtitle">Geen slides gevonden.</p>';
+      if (presentationSlideCounter) presentationSlideCounter.textContent = '0 / 0';
+      return;
+    }
+    const idx = Math.max(0, Math.min(slides.length - 1, activeSlideIndex));
+    activeSlideIndex = idx;
+    const slide = slides[idx] || {};
+
+    if (slide.type === 'bullets') {
+      const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
+      const items = Array.isArray(slide.items) ? slide.items : [];
+      presentationInternalStage.innerHTML = `
+        <h2 class="presentation-slide-title">${title}</h2>
+        <ul class="presentation-slide-bullets">
+          ${items.map((item) => `<li>${String(item || '').trim()}</li>`).join('')}
+        </ul>
+      `;
+    } else {
+      const title = String(slide.title || activePresentation.title || 'Presentatie').trim();
+      const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
+      presentationInternalStage.innerHTML = `
+        <h1 class="presentation-slide-title">${title}</h1>
+        ${subtitle ? `<p class="presentation-slide-subtitle">${subtitle}</p>` : ''}
+      `;
+    }
+
+    if (presentationSlideCounter) presentationSlideCounter.textContent = `${idx + 1} / ${slides.length}`;
+    if (presentationPrevBtn) presentationPrevBtn.disabled = idx <= 0;
+    if (presentationNextBtn) presentationNextBtn.disabled = idx >= slides.length - 1;
   }
 
   function applyPresentationTarget(target) {
@@ -767,11 +828,27 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
 
+    const internal = target.presentationId ? planningPresentations[target.presentationId] : null;
+    if (internal) {
+      activePresentation = internal;
+      activeSlideIndex = 0;
+      if (presentationInternal) presentationInternal.hidden = false;
+      if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
+      if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
+      renderInternalSlide();
+      return;
+    }
+
+    activePresentation = null;
+    activeSlideIndex = 0;
+    if (presentationInternal) presentationInternal.hidden = true;
     if (target.embedUrl) {
       if (presentationEmbedFrame) presentationEmbedFrame.src = target.embedUrl;
+      if (presentationEmbedFrame) presentationEmbedFrame.hidden = false;
       if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
     } else {
       if (presentationEmbedFrame) presentationEmbedFrame.removeAttribute('src');
+      if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
       if (presentationEmbedHint) {
         presentationEmbedHint.textContent = 'Lokale presentatie: gebruik de knop om te openen in PowerPoint.';
       }
@@ -1072,6 +1149,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const raw = await res.json();
       planningData = buildPlanningIndex(raw);
+      planningPresentations = raw?.presentations && typeof raw.presentations === 'object'
+        ? raw.presentations
+        : {};
       planningFetchedAt = new Date().toISOString();
       planningUpdatedAt = String(raw?.updatedAt || '');
       renderPlanning();
@@ -1220,10 +1300,33 @@ document.addEventListener('DOMContentLoaded', async () => {
   presentationFullscreenBtn?.addEventListener('click', () => {
     togglePresentationFullscreen();
   });
+  presentationPrevBtn?.addEventListener('click', () => {
+    if (!activePresentation) return;
+    activeSlideIndex = Math.max(0, activeSlideIndex - 1);
+    renderInternalSlide();
+  });
+  presentationNextBtn?.addEventListener('click', () => {
+    if (!activePresentation) return;
+    const total = Array.isArray(activePresentation.slides) ? activePresentation.slides.length : 0;
+    activeSlideIndex = Math.min(Math.max(0, total - 1), activeSlideIndex + 1);
+    renderInternalSlide();
+  });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && isPresentationOpen) {
       closePresentationPanel();
+    }
+    if (isPresentationOpen && activePresentation) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        activeSlideIndex = Math.max(0, activeSlideIndex - 1);
+        renderInternalSlide();
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        const total = Array.isArray(activePresentation.slides) ? activePresentation.slides.length : 0;
+        activeSlideIndex = Math.min(Math.max(0, total - 1), activeSlideIndex + 1);
+        renderInternalSlide();
+      }
     }
   });
 

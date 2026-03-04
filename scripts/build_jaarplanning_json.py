@@ -194,6 +194,7 @@ def extract_entries(path):
     header = rows.get(1, {})
     note_col = None
     local_url_col = None
+    embed_url_col = None
     for col, value in header.items():
         name = value.strip().lower()
         if name in {"note", "notes", "opmerking", "opmerkingen", "notitie", "notities"}:
@@ -210,6 +211,20 @@ def extract_entries(path):
             "lokaalbestand",
         }:
             local_url_col = col
+            continue
+        if name in {
+            "embedurl",
+            "embed_url",
+            "embed link",
+            "embed-link",
+            "embed",
+            "onedrive embed",
+            "onedrive-embed",
+            "sharepoint embed",
+            "sharepoint-embed",
+            "presentatie embed",
+        }:
+            embed_url_col = col
 
     def col_to_index(col):
         idx = 0
@@ -287,6 +302,13 @@ def extract_entries(path):
                 return clean_cell(url)
         return ""
 
+    def infer_embed_url(row, row_index):
+        if embed_url_col:
+            direct = clean_cell(row.get(embed_url_col, "")) or hyperlinks.get(f"{embed_url_col}{row_index}", "").strip()
+            if direct:
+                return direct
+        return ""
+
     out = []
     current_week = ""
     for r in sorted(k for k in rows.keys() if k > 1):
@@ -301,6 +323,7 @@ def extract_entries(path):
         lesson = clean_cell(row.get("D", ""))
         lesson_url = hyperlinks.get(f"D{r}", "").strip()
         lesson_local_url = infer_local_url(row, r)
+        lesson_embed_url = infer_embed_url(row, r)
         extra = clean_cell(row.get("E", ""))
         note = clean_cell(row.get(note_col, "")) if note_col else ""
         if not any([project, lesson, extra]):
@@ -314,6 +337,8 @@ def extract_entries(path):
         }
         if lesson_local_url:
             lesson_obj["localUrl"] = lesson_local_url
+        if lesson_embed_url:
+            lesson_obj["embedUrl"] = lesson_embed_url
         items = []
         if extra:
             items.append(extra)
@@ -347,6 +372,12 @@ def normalize_text(value):
     text = text.lower()
     text = re.sub(r"[^a-z0-9]+", " ", text)
     return " ".join(text.split()).strip()
+
+
+def slugify(value):
+    text = normalize_text(value).replace(" ", "-")
+    text = re.sub(r"-{2,}", "-", text).strip("-")
+    return text or "item"
 
 
 def lesson_number(text):
@@ -566,6 +597,8 @@ def merge_entries(entries, source_files=None):
             lesson["localUrl"] = inferred
 
     merged = {}
+    presentations = {}
+    presentation_ids_seen = set()
     for e in entries:
         key = (e["classId"], str(e["week"]).strip())
         bucket = merged.setdefault(key, {"items": [], "notes": [], "lessons": []})
@@ -574,17 +607,57 @@ def merge_entries(entries, source_files=None):
         les = str(lesson.get("lesson", "")).strip()
         url = str(lesson.get("url", "")).strip()
         local_url = str(lesson.get("localUrl", "")).strip()
+        embed_url = str(lesson.get("embedUrl", "")).strip()
         lkey = str(lesson.get("lessonKey", "")).strip().upper()
         if proj or les:
+            lesson_key_bits = [
+                slugify(proj),
+                slugify(les),
+            ]
+            lnum = lesson_number(les)
+            if lnum:
+                lesson_key_bits.append(f"les-{lnum}")
+            pid_base = "-".join([bit for bit in lesson_key_bits if bit]).strip("-")
+            presentation_id = pid_base or f"les-{len(presentation_ids_seen) + 1}"
+            candidate_id = presentation_id
+            suffix = 2
+            while candidate_id in presentation_ids_seen and candidate_id not in presentations:
+                candidate_id = f"{presentation_id}-{suffix}"
+                suffix += 1
+            presentation_id = candidate_id
+            presentation_ids_seen.add(presentation_id)
+
             candidate = {"project": proj, "lesson": les}
             if url:
                 candidate["url"] = url
             if local_url:
                 candidate["localUrl"] = local_url
+            if embed_url:
+                candidate["embedUrl"] = embed_url
+            candidate["presentationId"] = presentation_id
             if lkey in {"A", "B", "C"}:
                 candidate["lessonKey"] = lkey
             if candidate not in bucket["lessons"]:
                 bucket["lessons"].append(candidate)
+
+            if presentation_id not in presentations:
+                presentations[presentation_id] = {
+                    "id": presentation_id,
+                    "title": les or proj or "Presentatie",
+                    "project": proj,
+                    "slides": [
+                        {
+                            "type": "title",
+                            "title": les or "Presentatie",
+                            "subtitle": proj or "",
+                        },
+                        {
+                            "type": "bullets",
+                            "title": "Vandaag",
+                            "items": ["Startopdracht", "Kernactiviteit", "Afronding / reflectie"],
+                        },
+                    ],
+                }
         for it in e.get("items", []):
             t = it.strip()
             if t and t not in bucket["items"]:
@@ -596,6 +669,7 @@ def merge_entries(entries, source_files=None):
     payload = {
         "updatedAt": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
         "entries": [],
+        "presentations": presentations,
     }
     for (class_id, week), data in sorted(merged.items(), key=lambda x: (x[0][0], x[0][1])):
         obj = {
