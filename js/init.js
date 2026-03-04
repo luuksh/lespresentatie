@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const presentationEmbedHint = document.getElementById('presentationEmbedHint');
   const presentationOpenBtn = document.getElementById('presentationOpenBtn');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
+  const presentationFullscreenBtn = document.getElementById('presentationFullscreenBtn');
 
   let planningData = {};
   let planningUpdatedAt = '';
@@ -791,6 +792,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     isPresentationOpen = false;
   }
 
+  async function togglePresentationFullscreen() {
+    const target = presentationEmbedFrame || plattegrondFrame;
+    if (!target) return;
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      } else {
+        await target.requestFullscreen();
+      }
+    } catch (err) {
+      console.warn('Fullscreen niet beschikbaar:', err);
+    }
+  }
+
   function formatSyncTime(iso) {
     const date = new Date(iso);
     if (Number.isNaN(date.getTime())) return '';
@@ -1201,6 +1216,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   presentationBackBtn?.addEventListener('click', () => {
     closePresentationPanel();
+  });
+  presentationFullscreenBtn?.addEventListener('click', () => {
+    togglePresentationFullscreen();
   });
 
   document.addEventListener('keydown', (event) => {
