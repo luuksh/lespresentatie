@@ -207,23 +207,42 @@ function markerRowsForProject(projectName) {
   const pres = state.doc.presentations[deckId];
   if (!pres || !pres.markers) return [];
 
+  const markerLessonTitle = new Map();
   const orderedMarkerIds = [];
   const seen = new Set();
   for (const entry of state.doc.entries || []) {
     for (const lesson of entry?.lessons || []) {
       if (String(lesson?.project || '').trim() !== projectName) continue;
-      const markerId = String(lesson?.presentationMarkerId || lessonMarkerId(lesson?.lesson || '')).trim();
+      const lessonTitle = String(lesson?.lesson || '').trim();
+      const markerId = String(lesson?.presentationMarkerId || lessonMarkerId(lessonTitle)).trim();
       if (!markerId || seen.has(markerId)) continue;
       seen.add(markerId);
+      if (lessonTitle && !markerLessonTitle.has(markerId)) {
+        markerLessonTitle.set(markerId, lessonTitle);
+      }
       orderedMarkerIds.push(markerId);
     }
+  }
+
+  function lessonNumberFor(markerId) {
+    const title = String(markerLessonTitle.get(markerId) || '').trim();
+    const titleMatch = title.match(/\bles\s*([0-9]+)\b/i);
+    if (titleMatch) return Number(titleMatch[1]);
+    const markerMatch = String(markerId).match(/(?:^|-)les-([0-9]+)(?:-|$)/i);
+    if (markerMatch) return Number(markerMatch[1]);
+    return Number.POSITIVE_INFINITY;
   }
 
   const rows = [];
   const fallbackOrder = Object.keys(pres.markers || {}).sort((a, b) =>
     a.localeCompare(b, 'nl', { numeric: true, sensitivity: 'base' })
   );
-  const markerOrder = orderedMarkerIds.length ? orderedMarkerIds : fallbackOrder;
+  const markerOrder = (orderedMarkerIds.length ? orderedMarkerIds : fallbackOrder).sort((a, b) => {
+    const aNum = lessonNumberFor(a);
+    const bNum = lessonNumberFor(b);
+    if (aNum !== bNum) return aNum - bNum;
+    return a.localeCompare(b, 'nl', { numeric: true, sensitivity: 'base' });
+  });
 
   for (const markerId of markerOrder) {
     if (!(markerId in (pres.markers || {}))) continue;
