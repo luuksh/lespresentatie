@@ -127,6 +127,10 @@ body::after {
     0 8px 14px rgba(0, 0, 0, 0.18);
 }
 
+#opdrachtSelect option {
+  text-align: center;
+}
+
 #opdrachtSelect:focus {
   border-color: rgba(222, 246, 227, 0.54);
   box-shadow:
@@ -2088,7 +2092,7 @@ body.drawer-open .side-drawer.left {
   #opdrachtSelect {
     height: 50px;
     font-size: clamp(18px, 4.4vw, 27px);
-    padding: 0 52px 0 14px;
+    padding: 0 52px;
   }
 
   .opdracht-menu::after {
