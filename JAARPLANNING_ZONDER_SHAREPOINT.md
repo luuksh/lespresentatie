@@ -14,6 +14,13 @@ Elke jaarlaag heeft nu één centrale planning (bijv. één planning voor alle b
 4. Klik `Week opslaan`.
 5. Wijzigingen zijn direct intern actief en gekoppeld aan programma van (volgende) les.
 
+## Project-overzichtspresentaties
+
+- Per project wordt automatisch één overzichtspresentatie gebruikt.
+- Elke les krijgt daarin een markerpoint (slidepositie).
+- Vanuit het lesblok opent de presentatie direct op de markerpoint van die les.
+- Bewerken van projectpresentaties en markerpoints kan via `presentatie-studio.html`.
+
 ## Publiceren naar GitHub (optioneel)
 
 Wil je de studio-stand ook naar de repo publiceren:

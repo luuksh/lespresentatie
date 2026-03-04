@@ -228,6 +228,96 @@ document.addEventListener('DOMContentLoaded', async () => {
     return text.split('\n').map((line) => line.trim()).filter(Boolean);
   }
 
+  function slugify(value) {
+    return String(value || '')
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'item';
+  }
+
+  function projectDeckId(projectName) {
+    return `project-${slugify(projectName)}`;
+  }
+
+  function lessonMarkerId(lessonName) {
+    return `marker-${slugify(lessonName)}`;
+  }
+
+  function ensureProjectOverviewPresentations(doc) {
+    const safeDoc = normalizeStudioDoc(doc);
+    if (!safeDoc.presentations || typeof safeDoc.presentations !== 'object') {
+      safeDoc.presentations = {};
+    }
+
+    const projectMarkers = {};
+    for (const entry of safeDoc.entries || []) {
+      if (!entry || typeof entry !== 'object') continue;
+      if (!Array.isArray(entry.lessons)) continue;
+      for (const lesson of entry.lessons) {
+        if (!lesson || typeof lesson !== 'object') continue;
+        const project = String(lesson.project || '').trim();
+        const lessonTitle = String(lesson.lesson || '').trim();
+        if (!project || !lessonTitle) continue;
+
+        const deckId = projectDeckId(project);
+        const markerId = lessonMarkerId(lessonTitle);
+        lesson.presentationId = deckId;
+        lesson.presentationMarkerId = markerId;
+
+        if (!projectMarkers[deckId]) {
+          projectMarkers[deckId] = { project, markers: new Map() };
+        }
+        if (!projectMarkers[deckId].markers.has(markerId)) {
+          projectMarkers[deckId].markers.set(markerId, lessonTitle);
+        }
+      }
+    }
+
+    for (const [deckId, bundle] of Object.entries(projectMarkers)) {
+      const existing = safeDoc.presentations[deckId] && typeof safeDoc.presentations[deckId] === 'object'
+        ? safeDoc.presentations[deckId]
+        : null;
+      const presentation = existing || {
+        id: deckId,
+        presentationType: 'project-overview',
+        title: bundle.project,
+        project: bundle.project,
+        slides: [],
+        markers: {},
+      };
+      presentation.id = deckId;
+      presentation.presentationType = 'project-overview';
+      presentation.project = bundle.project;
+      presentation.title = String(presentation.title || bundle.project).trim() || bundle.project;
+      if (!Array.isArray(presentation.slides)) presentation.slides = [];
+      if (!presentation.markers || typeof presentation.markers !== 'object') presentation.markers = {};
+
+      if (!presentation.slides.length) {
+        presentation.slides.push({
+          type: 'title',
+          title: presentation.title,
+          subtitle: bundle.project,
+        });
+      }
+
+      for (const [markerId, lessonTitle] of bundle.markers.entries()) {
+        if (Number.isInteger(presentation.markers[markerId])) continue;
+        const slide = {
+          type: 'title',
+          title: lessonTitle,
+          subtitle: bundle.project,
+        };
+        presentation.slides.push(slide);
+        presentation.markers[markerId] = presentation.slides.length - 1;
+      }
+
+      safeDoc.presentations[deckId] = presentation;
+    }
+    return safeDoc;
+  }
+
   function normalizeLessonRow(row) {
     if (typeof row === 'string') {
       const lesson = row.trim();
@@ -245,9 +335,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? row.deck_id
       ?? ''
     ).trim();
+    const presentationMarkerId = String(
+      row.presentationMarkerId
+      ?? row.presentation_marker_id
+      ?? row.markerId
+      ?? row.marker_id
+      ?? ''
+    ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson) return null;
-    return { project, lesson, presentationId, lessonKey };
+    return { project, lesson, presentationId, presentationMarkerId, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -804,7 +901,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function rebuildPlanningFromStudio() {
-    const doc = collapseToYearLayerDoc(planningStudio || {});
+    const doc = ensureProjectOverviewPresentations(collapseToYearLayerDoc(planningStudio || {}));
     planningStudio = doc;
     planningData = buildPlanningIndex(doc);
     planningPresentations = doc.presentations || {};
@@ -816,7 +913,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const title = String(lesson?.lesson || '').trim() || 'Presentatie';
     const project = String(lesson?.project || '').trim();
     const presentationId = String(lesson?.presentationId || '').trim();
-    return { title, project, presentationId };
+    const markerId = String(lesson?.presentationMarkerId || '').trim();
+    return { title, project, presentationId, markerId };
   }
 
   function renderInternalSlide() {
@@ -864,7 +962,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const internal = target.presentationId ? planningPresentations[target.presentationId] : null;
     if (internal) {
       activePresentation = internal;
-      activeSlideIndex = 0;
+      const markerIdx = Number(internal?.markers?.[target.markerId]);
+      activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
       if (presentationInternal) presentationInternal.hidden = false;
       if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
       if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
