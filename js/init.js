@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let isPresentationOpen = false;
   let activePresentation = null;
   let activeSlideIndex = 0;
+  let lastRenderedSlideIndex = -1;
 
   try {
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
@@ -1046,43 +1047,62 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!presentationInternalStage || !activePresentation) return;
     const slides = Array.isArray(activePresentation.slides) ? activePresentation.slides : [];
     if (!slides.length) {
-      presentationInternalStage.innerHTML = '<p class="presentation-slide-subtitle">Geen slides gevonden.</p>';
+      presentationInternalStage.innerHTML = '<article class="presentation-slide-card"><p class="presentation-slide-subtitle">Geen slides gevonden.</p></article>';
       if (presentationSlideCounter) presentationSlideCounter.textContent = '0 / 0';
+      lastRenderedSlideIndex = -1;
       return;
     }
     const idx = Math.max(0, Math.min(slides.length - 1, activeSlideIndex));
     activeSlideIndex = idx;
     const slide = slides[idx] || {};
+    const direction = lastRenderedSlideIndex < 0 || idx === lastRenderedSlideIndex
+      ? ''
+      : (idx > lastRenderedSlideIndex ? 'is-forward' : 'is-backward');
+
+    presentationInternalStage.classList.remove('is-forward', 'is-backward', 'is-animating');
+    void presentationInternalStage.offsetWidth;
+    if (direction) {
+      presentationInternalStage.classList.add(direction, 'is-animating');
+      window.setTimeout(() => {
+        presentationInternalStage.classList.remove('is-animating');
+      }, 360);
+    }
 
     if (slide.type === 'bullets') {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
       const items = Array.isArray(slide.items) ? slide.items : [];
       presentationInternalStage.innerHTML = `
-        <h2 class="presentation-slide-title">${title}</h2>
-        <ul class="presentation-slide-bullets">
-          ${items.map((item) => `<li>${String(item || '').trim()}</li>`).join('')}
-        </ul>
+        <article class="presentation-slide-card">
+          <h2 class="presentation-slide-title">${title}</h2>
+          <ul class="presentation-slide-bullets">
+            ${items.map((item) => `<li>${String(item || '').trim()}</li>`).join('')}
+          </ul>
+        </article>
       `;
     } else {
       const title = String(slide.title || activePresentation.title || 'Presentatie').trim();
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       presentationInternalStage.innerHTML = `
-        <h1 class="presentation-slide-title">${title}</h1>
-        ${subtitle ? `<p class="presentation-slide-subtitle">${subtitle}</p>` : ''}
+        <article class="presentation-slide-card">
+          <h1 class="presentation-slide-title">${title}</h1>
+          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitle}</p>` : ''}
+        </article>
       `;
     }
 
     if (presentationSlideCounter) presentationSlideCounter.textContent = `${idx + 1} / ${slides.length}`;
     if (presentationPrevBtn) presentationPrevBtn.disabled = idx <= 0;
     if (presentationNextBtn) presentationNextBtn.disabled = idx >= slides.length - 1;
+    lastRenderedSlideIndex = idx;
   }
 
   function renderInternalNotice(message) {
     if (!presentationInternalStage) return;
-    presentationInternalStage.innerHTML = `<p class="presentation-slide-subtitle">${String(message || '').trim()}</p>`;
+    presentationInternalStage.innerHTML = `<article class="presentation-slide-card"><p class="presentation-slide-subtitle">${String(message || '').trim()}</p></article>`;
     if (presentationSlideCounter) presentationSlideCounter.textContent = '0 / 0';
     if (presentationPrevBtn) presentationPrevBtn.disabled = true;
     if (presentationNextBtn) presentationNextBtn.disabled = true;
+    lastRenderedSlideIndex = -1;
   }
 
   function applyPresentationTarget(target) {
@@ -1098,6 +1118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       activePresentation = internal;
       const markerIdx = Number(internal?.markers?.[resolved.markerId || target.markerId]);
       activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
+      lastRenderedSlideIndex = -1;
       if (presentationInternal) presentationInternal.hidden = false;
       renderInternalSlide();
       return;
