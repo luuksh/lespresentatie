@@ -31,9 +31,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaDebugOutput = document.getElementById('agendaDebugOutput');
   const plattegrondFrame = document.getElementById('plattegrondFrame');
   const presentationEmbedTitle = document.getElementById('presentationEmbedTitle');
-  const presentationEmbedFrame = document.getElementById('presentationEmbedFrame');
-  const presentationEmbedFallback = document.getElementById('presentationEmbedFallback');
-  const presentationOpenBtn = document.getElementById('presentationOpenBtn');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
   const presentationFullscreenBtn = document.getElementById('presentationFullscreenBtn');
   const presentationInternal = document.getElementById('presentationInternal');
@@ -1080,6 +1077,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (presentationNextBtn) presentationNextBtn.disabled = idx >= slides.length - 1;
   }
 
+  function renderInternalNotice(message) {
+    if (!presentationInternalStage) return;
+    presentationInternalStage.innerHTML = `<p class="presentation-slide-subtitle">${String(message || '').trim()}</p>`;
+    if (presentationSlideCounter) presentationSlideCounter.textContent = '0 / 0';
+    if (presentationPrevBtn) presentationPrevBtn.disabled = true;
+    if (presentationNextBtn) presentationNextBtn.disabled = true;
+  }
+
   function applyPresentationTarget(target) {
     if (!target) return;
     const titleText = target.project
@@ -1094,19 +1099,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       const markerIdx = Number(internal?.markers?.[resolved.markerId || target.markerId]);
       activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
       if (presentationInternal) presentationInternal.hidden = false;
-      if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
-      if (presentationEmbedFallback) presentationEmbedFallback.hidden = true;
       renderInternalSlide();
       return;
     }
 
     activePresentation = null;
     activeSlideIndex = 0;
-    if (presentationInternal) presentationInternal.hidden = true;
-    if (presentationEmbedFrame) presentationEmbedFrame.removeAttribute('src');
-    if (presentationEmbedFrame) presentationEmbedFrame.hidden = true;
-    if (presentationEmbedFallback) presentationEmbedFallback.hidden = false;
-    if (presentationOpenBtn) presentationOpenBtn.hidden = true;
+    if (presentationInternal) presentationInternal.hidden = false;
+    renderInternalNotice('Interne presentatie niet gevonden voor deze lesmarker.');
   }
 
   function openPresentationPanel(target) {
@@ -1123,7 +1123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   async function togglePresentationFullscreen() {
-    const target = presentationEmbedFrame || plattegrondFrame;
+    const target = presentationInternal || plattegrondFrame;
     if (!target) return;
     try {
       if (document.fullscreenElement) {
