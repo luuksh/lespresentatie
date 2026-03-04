@@ -1380,7 +1380,7 @@ select:focus {
 }
 
 .grid-wrapper {
-  min-width: min(1300px, calc(100vw - 120px));
+  min-width: min(1460px, calc(100vw - 96px));
   min-height: clamp(620px, calc(100vh - 260px), 920px);
   display: flex;
   flex-direction: column;
@@ -1395,14 +1395,20 @@ select:focus {
 .grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 18px;
+  align-items: flex-start;
+  width: fit-content;
+  gap: 20px;
   transition: opacity 0.28s ease;
+}
+
+.grid.presentatie-layout {
+  width: 100%;
+  align-items: stretch;
 }
 
 .bureau-rij {
   width: 100%;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   display: flex;
   justify-content: flex-start;
 }
@@ -1428,7 +1434,7 @@ select:focus {
 .tafelrij {
   display: flex;
   justify-content: center;
-  gap: 34px;
+  gap: 42px;
   flex-wrap: nowrap;
 }
 
@@ -1441,13 +1447,13 @@ select:focus {
 
 .tafels {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .tafel {
   position: relative;
-  width: 100px;
-  height: 60px;
+  width: 112px;
+  height: 68px;
   border-radius: 10px;
   border: 2px solid var(--desk-edge);
   background:
@@ -1457,7 +1463,7 @@ select:focus {
   justify-content: center;
   text-align: center;
   padding: 4px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.1;
   font-weight: 800;
   color: #27374f;
@@ -1470,10 +1476,10 @@ select:focus {
 .tafel::after {
   content: "";
   position: absolute;
-  left: 20px;
-  right: 20px;
+  left: 24px;
+  right: 24px;
   bottom: -10px;
-  height: 9px;
+  height: 10px;
   border-radius: 6px;
   background: linear-gradient(180deg, #95abc6, var(--chair));
   box-shadow: 0 2px 3px rgba(36, 54, 79, 0.28);
@@ -1501,32 +1507,32 @@ select:focus {
 
 .grid.groepjes-layout {
   display: grid;
-  grid-template-columns: repeat(3, 206px);
-  gap: 12px;
+  grid-template-columns: repeat(5, 232px);
+  gap: 14px;
   align-items: start;
   justify-content: center;
 }
 
 .plattegrond-frame.is-group-layout .grid-wrapper {
-  min-width: 0;
-  width: fit-content;
+  min-width: min(1460px, calc(100vw - 96px));
+  width: 100%;
   max-width: 100%;
 }
 
 .plattegrond-frame.is-group-layout .bureau-rij {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .plattegrond-frame.is-group-layout .grid.groepjes-layout {
-  grid-template-columns: repeat(4, 220px);
-  gap: 10px;
+  grid-template-columns: repeat(5, 232px);
+  gap: 14px;
 }
 
 .groepje {
   position: relative;
-  width: 206px;
-  min-height: 120px;
-  padding: 10px;
+  width: 232px;
+  min-height: 132px;
+  padding: 12px;
   border-radius: var(--radius-md);
   border: 1px dashed #c3d2e9;
   background: linear-gradient(180deg, #fcfeff, #eef5ff);
@@ -1538,9 +1544,9 @@ select:focus {
 }
 
 .plattegrond-frame.is-group-layout .groepje {
-  width: 220px;
-  min-height: 124px;
-  padding: 9px;
+  width: 232px;
+  min-height: 132px;
+  padding: 12px;
 }
 
 .group-meta {
@@ -1625,15 +1631,15 @@ select:focus {
 }
 
 .groepje .tafel {
-  width: 88px;
-  height: 50px;
-  font-size: 12px;
+  width: 104px;
+  height: 58px;
+  font-size: 13px;
 }
 
 .plattegrond-frame.is-group-layout .groepje .tafel {
-  width: 98px;
-  height: 54px;
-  font-size: 12px;
+  width: 104px;
+  height: 58px;
+  font-size: 13px;
 }
 
 .groepje[data-size="5"],
@@ -1643,17 +1649,19 @@ select:focus {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: 1040px;
-  column-count: 3;
-  column-gap: 14px;
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .plattegrond-frame.is-group-layout .presentatie-lijst {
-  max-width: 1200px;
-  width: fit-content;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  column-count: 4;
-  column-gap: 10px;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .presentatie-item {
@@ -1663,7 +1671,7 @@ select:focus {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 8px;
-  margin: 0 0 8px;
+  margin: 0;
   padding: 8px;
   border-radius: 11px;
   border: 1px solid var(--line);
@@ -2013,24 +2021,60 @@ body.drawer-open .side-drawer.left {
     min-height: clamp(560px, calc(100vh - 240px), 780px);
   }
 
+  .tafelrij {
+    gap: 34px;
+  }
+
+  .tafel {
+    width: 102px;
+    height: 62px;
+    font-size: 14px;
+  }
+
   .grid.groepjes-layout {
-    grid-template-columns: repeat(2, 206px);
+    grid-template-columns: repeat(4, 220px);
+  }
+
+  .plattegrond-frame.is-group-layout .grid.groepjes-layout {
+    grid-template-columns: repeat(4, 220px);
+  }
+
+  .groepje,
+  .plattegrond-frame.is-group-layout .groepje {
+    width: 220px;
+    min-height: 128px;
+    padding: 10px;
+  }
+
+  .groepje .tafel,
+  .plattegrond-frame.is-group-layout .groepje .tafel {
+    width: 98px;
+    height: 54px;
+    font-size: 12px;
+  }
+
+  .presentatie-lijst,
+  .plattegrond-frame.is-group-layout .presentatie-lijst {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
 }
 
 @media (max-width: 1240px) {
+  .grid.groepjes-layout,
   .plattegrond-frame.is-group-layout .grid.groepjes-layout {
     grid-template-columns: repeat(3, 214px);
     gap: 10px 12px;
   }
 
+  .groepje,
   .plattegrond-frame.is-group-layout .groepje {
     width: 214px;
   }
 
+  .presentatie-lijst,
   .plattegrond-frame.is-group-layout .presentatie-lijst {
-    column-count: 3;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -2122,10 +2166,11 @@ body.drawer-open .side-drawer.left {
     width: 100%;
   }
 
+  .presentatie-lijst,
   .plattegrond-frame.is-group-layout .presentatie-lijst {
     width: 100%;
     max-width: 100%;
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .side-drawer.left {
@@ -2178,7 +2223,7 @@ body.drawer-open .side-drawer.left {
 
   .quick-board-actions { justify-content: flex-start; }
 
-  .presentatie-lijst { column-count: 1; }
+  .presentatie-lijst { grid-template-columns: 1fr; }
 
   .grid.groepjes-layout { grid-template-columns: 1fr; }
 
@@ -2187,7 +2232,7 @@ body.drawer-open .side-drawer.left {
   }
 
   .plattegrond-frame.is-group-layout .presentatie-lijst {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 
   .tafel {

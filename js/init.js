@@ -125,8 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.documentElement.style.setProperty('--hover-kleur', kleuren[type] || '#005fc1');
     document.documentElement.style.setProperty('--achtergrond', achtergronden[type] || '#eef2f7');
 
-    grid.classList.remove('groepjes-layout');
+    grid.classList.remove('groepjes-layout', 'presentatie-layout');
     if (type === 'groepjes') grid.classList.add('groepjes-layout');
+    if (type === 'presentatievolgorde') grid.classList.add('presentatie-layout');
 
     grid.style.opacity = 0;
     setTimeout(async () => {
