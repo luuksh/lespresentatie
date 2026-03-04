@@ -17,14 +17,18 @@ Wil je dat iedereen intern dezelfde planning ziet via een link, zonder Outlook:
 
 ## Werkwijze
 
-1. Bewaar je Excelbestanden lokaal (bijv. G1, G3, straks G4).
-2. Draai dit commando:
+1. Interne bronbestanden staan in `data/jaarplanning/`:
+   - `Jaarplanning G1.xlsx`
+   - `Jaarplanning G3.xlsx`
+   - `Jaarplanning G4.xlsx`
+2. Bewerk die bestanden intern.
+3. Draai dit commando:
 
 ```bash
-python3 scripts/build_jaarplanning_json.py "/pad/naar/Jaarplanning G1.xlsx" "/pad/naar/Jaarplanning G3.xlsx" -o js/jaarplanning-live.json
+./update-jaarplanning.sh --no-push
 ```
 
-3. De app leest automatisch `js/jaarplanning-live.json`.
+4. De app leest automatisch `js/jaarplanning-live.json`.
 
 ## Opmerking
 

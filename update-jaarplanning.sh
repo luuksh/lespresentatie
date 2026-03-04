@@ -24,8 +24,8 @@ find_grade_file() {
   fi
 
   local candidates=(
-    "$ONEDRIVE_BASE/${grade} Nederlands/Jaarplanning G${grade}.xlsx"
     "$ROOT_DIR/$PLAN_DIR_DEFAULT/Jaarplanning G${grade}.xlsx"
+    "$ONEDRIVE_BASE/${grade} Nederlands/Jaarplanning G${grade}.xlsx"
   )
   local c
   for c in "${candidates[@]}"; do
