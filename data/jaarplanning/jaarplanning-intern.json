@@ -7321,8 +7321,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -7334,8 +7335,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -7353,8 +7355,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -7372,14 +7375,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -7409,8 +7414,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -7434,14 +7440,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -7482,8 +7490,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -7495,14 +7504,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -7514,14 +7525,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -8051,8 +8064,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -8064,8 +8078,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -8083,8 +8098,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -8102,14 +8118,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -8139,8 +8157,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -8164,14 +8183,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -8212,8 +8233,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -8225,14 +8247,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -8244,14 +8268,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -8781,8 +8807,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -8794,8 +8821,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -8813,8 +8841,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -8832,14 +8861,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -8869,8 +8900,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -8894,14 +8926,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -8942,8 +8976,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -8955,14 +8990,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -8974,14 +9011,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -9511,8 +9550,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -9524,8 +9564,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -9543,8 +9584,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -9562,14 +9604,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -9599,8 +9643,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -9624,14 +9669,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -9672,8 +9719,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -9685,14 +9733,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -9704,14 +9754,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -10241,8 +10293,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -10254,8 +10307,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -10273,8 +10327,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -10292,14 +10347,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -10329,8 +10386,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -10354,14 +10412,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -10402,8 +10462,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -10415,14 +10476,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -10434,14 +10497,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -10971,8 +11036,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -10984,8 +11050,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -11003,8 +11070,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -11022,14 +11090,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -11059,8 +11129,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -11084,14 +11155,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -11132,8 +11205,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -11145,14 +11219,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -11164,14 +11240,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -11701,8 +11779,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "v-rede-les-1-v-rede-introductie-les-1",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         }
       ],
       "items": []
@@ -11714,8 +11793,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 2 V-rede: Framing & Connotatie",
-          "presentationId": "v-rede-les-2-v-rede-framing-connotatie-les-2",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
           "project": "Leesclub",
@@ -11733,8 +11813,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
-          "presentationId": "v-rede-les-3-v-rede-stijlfiguren-frame-maken-les-3",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
           "project": "Leesclub",
@@ -11752,14 +11833,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
-          "presentationId": "v-rede-les-4-v-rede-frames-delen-actualiteit-les-4",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
           "project": "V-rede",
           "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "v-rede-les-5-v-rede-discussie-reflectie-les-5",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         }
       ],
       "items": []
@@ -11789,8 +11872,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "v-rede-les-6-v-rede-ethos-pathos-logos-les-6",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         }
       ],
       "items": []
@@ -11814,14 +11898,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
-          "presentationId": "v-rede-les-7-v-rede-brainstorm-stijlfiguren-les-7",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
           "project": "V-rede",
           "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "v-rede-les-8-v-rede-eerste-versie-schrijven-les-8",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         }
       ],
       "items": []
@@ -11862,8 +11948,9 @@
         {
           "project": "V-rede",
           "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "v-rede-les-9-v-rede-herschrijven-les-9",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         }
       ],
       "items": []
@@ -11875,14 +11962,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 10: Oefenen voordracht",
-          "presentationId": "v-rede-les-10-oefenen-voordracht-les-10",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
           "project": "V-rede",
           "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "v-rede-les-11-generale-repetitie-presentaties-les-11",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         }
       ],
       "items": []
@@ -11894,14 +11983,16 @@
         {
           "project": "V-rede",
           "lesson": "Les 12: Presentaties",
-          "presentationId": "v-rede-les-12-presentaties-les-12",
-          "lessonKey": "A"
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
           "project": "V-rede",
           "lesson": "Les 13: Presentaties",
-          "presentationId": "v-rede-les-13-presentaties-les-13",
-          "lessonKey": "B"
+          "presentationId": "project-v-rede",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-les-13-presentaties"
         }
       ],
       "items": []
@@ -25166,6 +25257,2348 @@
         "marker-les-7-creatieve-verwerking": 117,
         "marker-les-8-ff-poster-afmaken": 120,
         "marker-les-9-ff-poster-afmaken-posterpresentaties": 133
+      }
+    },
+    "project-v-rede": {
+      "id": "project-v-rede",
+      "presentationType": "project-overview",
+      "title": "V-rede",
+      "subtitle": "V-rede",
+      "project": "V-rede",
+      "importVersion": 2026030405,
+      "markerDecks": {
+        "marker-les-1-v-rede-introductie": [
+          {
+            "type": "bullets",
+            "title": "Les 1 De kracht van een speech: Wat is een V-rede?",
+            "subtitle": "",
+            "items": [
+              "De stem van verandering",
+              "De jouwe binnenkort ook?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van vandaag",
+            "subtitle": "",
+            "items": [
+              "Je weet wat een V-rede is",
+              "Je ziet waarom een speech indruk maakt",
+              "Je oefent met het verwoorden van een maatschappelijk probleem"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een V-rede?",
+            "subtitle": "",
+            "items": [
+              "Een korte, krachtige speech (150 sec)",
+              "Je spreekt over een maatschappelijk probleem",
+              "Je presenteert ook een oplossing",
+              "Je gebruikt stijlfiguren en een overtuigend frame"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Fragment bekijken",
+            "subtitle": "",
+            "items": [
+              "▶ Fragment Denzel Washington, Greta Thunberg of Martin Luther King",
+              "Let op:",
+              "Wat valt je op aan haar/zijn toon, stijl, inhoud?",
+              "Welke emoties roept het op?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat maakt een speech krachtig?",
+            "subtitle": "",
+            "items": [
+              "Bespreek klassikaal:",
+              "Wat onthoud je van de speech?",
+              "Waarom kwam het binnen?",
+              "Hoe spreekt de spreker je aan (woorden, stem, houding)?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mini-opdracht",
+            "subtitle": "",
+            "items": [
+              "In tweetallen:",
+              "1. Kies een maatschappelijk probleem dat jullie raakt.",
+              "2. Formuleer er samen één krachtige zin over (max 15 woorden).",
+              "Voorbeeld: \"Iedere leerling moet gelijke kansen krijgen – ook zonder geld of steun thuis.\""
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Delen & bespreken",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik module",
+            "subtitle": "",
+            "items": [
+              "In de komende weken:",
+              "Leer je hoe je een frame kiest",
+              "Oefen je stijlfiguren",
+              "Schrijf je je eigen V-rede",
+              "En... presenteer je hem voor de klas!"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Exit ticket",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Tot volgende les!",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-2-v-rede-framing-connotatie": [
+          {
+            "type": "bullets",
+            "title": "Les 2 Wat zie jij? Framing in de media",
+            "subtitle": "",
+            "items": [
+              "Beïnvloed door taal",
+              "De kracht van woorden",
+              "Hoe kijk jij naar nieuws?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Denotatie & connotatie",
+            "subtitle": "",
+            "items": [
+              "Voorbeeld:",
+              "‘Vluchteling’ vs. ‘gelukszoeker’",
+              "Denotatie = letterlijke betekenis",
+              "Connotatie = gevoelswaarde / bijbetekenis",
+              "Vraag: Welke woorden ken jij met sterke connotatie?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is framing?",
+            "subtitle": "",
+            "items": [
+              "Een frame is een bril waardoor je kijkt",
+              "Door woord of beeldkeuze beïnvloed je de lezer",
+              "Voorbeeld:",
+              "‘Villasubsidie’ vs. ‘hypotheekrenteaftrek’"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Framing herkennen: voorbeelden",
+            "subtitle": "",
+            "items": [
+              "Opdracht:",
+              "1. Bekijk 3 nieuwsfragmenten (NOS, Telegraaf, De Speld)",
+              "2. Wat is het frame?",
+              "3. Hoe zou jij het anders framen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht 1: Woorden analyseren",
+            "subtitle": "",
+            "items": [
+              "Werkblad:",
+              "Denotatie (letterlijke betekenis)",
+              "Connotatie (positief/negatief)",
+              "Voorbeelden:",
+              "Activist",
+              "Rebel",
+              "Vluchteling",
+              "Milieuheld"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht 2: Framing in de media",
+            "subtitle": "",
+            "items": [
+              "In tweetallen:",
+              "Zoek 2 nieuwsberichten",
+              "Waar zie je framing?",
+              "Wat is het doel?",
+              "Positieve of negatieve lading?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nabespreking",
+            "subtitle": "",
+            "items": [
+              "Klassikaal:",
+              "Wat viel op?",
+              "Welke frames waren sterk?",
+              "Wat ga je voortaan anders lezen?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Reflectievraag",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Vooruitblik volgende les",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-3-v-rede-stijlfiguren-frame-maken": [
+          {
+            "type": "bullets",
+            "title": "Les 3 Klinkt als waarheid – framing met stijl",
+            "subtitle": "",
+            "items": [
+              "Taal als overtuigingskracht",
+              "Framing met een vleugje stijl",
+              "Hoe overdrijf jij professioneel?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een stijlfiguur?",
+            "subtitle": "",
+            "items": [
+              "Een trucje van taal om iets krachtiger of beeldender te maken",
+              "Veelgebruikt in nieuws, reclame en memes"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De vier belangrijkste stijlfiguren",
+            "subtitle": "",
+            "items": [
+              "1. Eufemisme – verzachtende uitdrukking",
+              "2. Metafoor – beeldspraak zonder 'als'",
+              "3. Hyperbool – sterke overdrijving",
+              "4. Alliteratie – herhaling van beginletters"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Fragment: Promenade of De Speld",
+            "subtitle": "",
+            "items": [
+              "▶ Kijkfragment tonen (humoristische nieuwsframing)",
+              "Opdracht:",
+              "Welke stijlfiguren zie je?",
+              "Hoe versterken ze het frame?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mini-opdracht: oefenzinnen",
+            "subtitle": "",
+            "items": [
+              "Kies een onderwerp (bv. school, klimaat, politiek)",
+              "Schrijf per stijlfiguur één zin:",
+              "Hyperbool",
+              "Eufemisme",
+              "Metafoor",
+              "Alliteratie",
+              "Deel met je buur en geef feedback"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoofdopdracht: maak je eigen frame",
+            "subtitle": "",
+            "items": [
+              "Kies een actueel onderwerp",
+              "Bepaal standpunt en framing (positief/negatief)",
+              "Schrijf kort nieuwsbericht (100 woorden)",
+              "Gebruik min. 3 stijlfiguren",
+              "Bedenk kop en kies evt. een beeld"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Uitwisselen & bespreken",
+            "subtitle": "",
+            "items": [
+              "Lees elkaars bericht",
+              "Welke emoties roept het op?",
+              "Herken je de stijlfiguren?",
+              "Is het frame duidelijk?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectievragen",
+            "subtitle": "",
+            "items": [
+              "Wat doet stijl met overtuigingskracht?",
+              "Welke stijlfiguur vond jij het sterkst?",
+              "Wanneer is een frame misleidend?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik volgende les",
+            "subtitle": "",
+            "items": [
+              "Volgende keer:",
+              "We delen onze frames",
+              "We zoeken een actueel onderwerp",
+              "We leren framing gebruiken in debat"
+            ]
+          }
+        ],
+        "marker-les-4-v-rede-frames-delen-actualiteit": [
+          {
+            "type": "bullets",
+            "title": "Les 4 De werkelijkheid in een jasje",
+            "subtitle": "",
+            "items": [
+              "Eén onderwerp, twee verhalen",
+              "Wat zien we… en wat missen we?",
+              "Framing in de praktijk"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Terugblik: wat is framing ook alweer?",
+            "subtitle": "",
+            "items": [
+              "Taal die het verhaal bepaalt",
+              "Een bril waardoor je kijkt naar de werkelijkheid",
+              "Werkt via beeld, woordkeuze en herhaling",
+              "Vraag: Noem een voorbeeld van framing uit vorige les"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Frames presenteren (in drietallen)",
+            "subtitle": "",
+            "items": [
+              "Opdracht:",
+              "1. Lees je nieuwsbericht voor",
+              "2. Benoem:",
+              "Wat is het frame?",
+              "Welke stijlfiguren zie je?",
+              "Hoe effectief is het?",
+              "3. Schrijf tips voor verbetering"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Klassikale terugkoppeling",
+            "subtitle": "",
+            "items": [
+              "Wat werkte goed?",
+              "Welke stijlfiguren vielen op?",
+              "Wanneer raakt een frame echt?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Actualiteit: dubbele framing",
+            "subtitle": "",
+            "items": [
+              "Nieuwe opdracht:",
+              "Kies een actueel onderwerp (bv. TikTok, boeren, klimaat)",
+              "Frame het twee keer:",
+              "Positief frame",
+              "Negatief frame",
+              "Gebruik steeds 2 stijlfiguren"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Koppelopdracht",
+            "subtitle": "",
+            "items": [
+              "Tweetallen:",
+              "Bedenk bij één onderwerp:",
+              "1 positief frame",
+              "1 negatief frame",
+              "Formuleer 2 koppen + mini-berichtjes (elk max. 50 woorden)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Presenteren & bespreken",
+            "subtitle": "",
+            "items": [
+              "Laat enkele duo’s presenteren",
+              "Bespreek:",
+              "Welke overtuigt het meest?",
+              "Wat maakt het krachtig?",
+              "Kun je framing herkennen in echte media?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie",
+            "subtitle": "",
+            "items": [
+              "Wat heb je geleerd vandaag?",
+              "Wanneer is framing manipulatie?",
+              "Is het altijd slecht om te framen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "We gaan in debat!",
+              "Rollen: journalist, politicus, reclamemaker",
+              "Framing als overtuigingsmiddel en discussiepunt"
+            ]
+          }
+        ],
+        "marker-les-5-v-rede-discussie-reflectie": [
+          {
+            "type": "bullets",
+            "title": "Les 5 Framing: slim, nodig of manipulatief?",
+            "subtitle": "",
+            "items": [
+              "Beïnvloeden of misleiden?",
+              "Jouw stem in het debat",
+              "Wat doet taal met jou?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Stellingen over framing",
+            "subtitle": "",
+            "items": [
+              "Bespreek in tweetallen:",
+              "\"Framing is altijd manipulatie\"",
+              "\"Zonder framing krijg je geen aandacht\"",
+              "\"Leerlingen moeten leren framing te doorzien\"",
+              "Gebruik je naamkaartje: ‘eens’ of ‘oneens’"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Rollenverdeling voor debat",
+            "subtitle": "",
+            "items": [
+              "Jij bent:",
+              "Journalist",
+              "Politicus",
+              "Reclamemaker",
+              "Voorbereiding: 2 minuten met kernargumenten"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Rollenspel: framing verdedigen of bekritiseren",
+            "subtitle": "",
+            "items": [
+              "Opdracht:",
+              "Voer een minidebat vanuit je rol",
+              "Gebruik framing/stijlfiguren als wapen of kritiekpunt",
+              "Blijf in je rol, ook als je het er niet mee eens bent"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nabespreking rollenspel",
+            "subtitle": "",
+            "items": [
+              "Bespreek:",
+              "Welke rol overtuigde het meest?",
+              "Wanneer werkte framing goed?",
+              "Wanneer voelde het onethisch?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Media-analyse (indien tijd)",
+            "subtitle": "",
+            "items": [
+              "Bekijk een actueel nieuwsitem",
+              "Opdracht:",
+              "Welke framing zie je?",
+              "Welke woorden/beelden zorgen daarvoor?",
+              "Hoe wapen je jezelf als lezer?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie",
+            "subtitle": "",
+            "items": [
+              "Individuele opdracht:",
+              "Wat vind jij van framing?",
+              "Nuttig hulpmiddel of gevaarlijk wapen?",
+              "Wanneer zou jij framing gebruiken of vermijden?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Vanaf volgende les:",
+              "Begin je aan je eigen V-rede",
+              "Je kiest je onderwerp",
+              "En leert je publiek overtuigen met taal"
+            ]
+          }
+        ],
+        "marker-les-6-v-rede-ethos-pathos-logos": [
+          {
+            "type": "bullets",
+            "title": "Les 6 Hoe overtuig jij? De drie pijlers van een goede speech",
+            "subtitle": "",
+            "items": [
+              "Overtuigen is een kunst",
+              "Met hoofd, hart én karakter",
+              "Leren van Aristoteles"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een V-rede ook alweer?",
+            "subtitle": "",
+            "items": [
+              "Korte, krachtige speech (150 sec)",
+              "Gaat over maatschappelijk probleem",
+              "Bevat oplossing + overtuigingskracht",
+              "Gebaseerd op ethos, pathos en logos"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aristoteles’ overtuigingsmiddelen",
+            "subtitle": "",
+            "items": [
+              "Ethos = geloofwaardigheid",
+              "Pathos = emotie",
+              "Logos = logica",
+              "Vraag: Wanneer gebruik jij deze in het dagelijks leven?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voorbeeldfragment analyse",
+            "subtitle": "",
+            "items": [
+              "▶ Fragment",
+              "Opdracht in tweetallen:",
+              "Waar zie je ethos?",
+              "Waar pathos?",
+              "Waar logos?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe gebruik je ethos?",
+            "subtitle": "",
+            "items": [
+              "Voorbeelden:",
+              "Ervaring tonen",
+              "Een autoriteit citeren",
+              "Je toon aanpassen aan het publiek",
+              "Mini-opdracht: schrijf 1 ethos-zin over jouw onderwerp"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe gebruik je pathos?",
+            "subtitle": "",
+            "items": [
+              "Voorbeelden:",
+              "Emotioneel voorbeeld",
+              "Beeldende woorden",
+              "Schuldgevoel of trots oproepen",
+              "Mini-opdracht: schrijf 1 pathos-zin"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe gebruik je logos?",
+            "subtitle": "",
+            "items": [
+              "Voorbeelden:",
+              "Statistieken of feiten",
+              "Logische redenering",
+              "Mini-opdracht: schrijf 1 logos-zin"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Delen en vergelijken",
+            "subtitle": "",
+            "items": [
+              "Bespreek klassikaal:",
+              "Welke zinnen werken goed?",
+              "Welke combinatie is het krachtigst?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Je kiest jouw onderwerp",
+              "Je begint met de opbouw van jouw V-rede",
+              "Je oefent met stijlfiguren en framing"
+            ]
+          }
+        ],
+        "marker-les-7-v-rede-brainstorm-stijlfiguren": [
+          {
+            "type": "bullets",
+            "title": "Les 7 Waar wil jij voor spreken?",
+            "subtitle": "",
+            "items": [
+              "Wat raakt jou?",
+              "Jij hebt een stem",
+              "Start jouw V-rede vandaag"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Wat raakt jou in de wereld?",
+            "subtitle": "",
+            "items": [
+              "Opdracht:",
+              "Schrijf 3 maatschappelijke kwesties op",
+              "Bespreek met buur: welke kies je en waarom?",
+              "Voorbeelden:",
+              "Klimaat",
+              "Racisme",
+              "Sociale media",
+              "Armoede"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Keuze en verdiepingsvragen",
+            "subtitle": "",
+            "items": [
+              "Kies jouw onderwerp en beantwoord:",
+              "Waarom raakt dit mij?",
+              "Wie wil ik overtuigen?",
+              "Welke oplossing wil ik voorstellen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Herhaling stijlfiguren",
+            "subtitle": "",
+            "items": [
+              "Alliteratie",
+              "Metafoor",
+              "Eufemisme",
+              "Hyperbool",
+              "Vraag: welke passen goed bij jouw onderwerp?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Oefening stijlfiguren maken",
+            "subtitle": "",
+            "items": [
+              "Over jouw onderwerp:",
+              "1 hyperbool",
+              "1 metafoor",
+              "1 eufemisme",
+              "1 alliteratie",
+              "→ Max 1 zin per stijlfiguur"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Peer feedback",
+            "subtitle": "",
+            "items": [
+              "Wissel uit met je buur:",
+              "Herken je de stijlfiguren?",
+              "Wat overtuigt het meest?",
+              "Tip voor verbetering?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Sterke zinnen delen",
+            "subtitle": "",
+            "items": [
+              "Klassikaal:",
+              "Welke zin was het sterkst?",
+              "Waarom is die effectief?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Begin je met de eerste versie van je V-rede",
+              "Je krijgt structuur en schrijftips"
+            ]
+          }
+        ],
+        "marker-les-8-v-rede-eerste-versie-schrijven": [
+          {
+            "type": "bullets",
+            "title": "Les 8 Jouw stem telt – begin je V-rede",
+            "subtitle": "",
+            "items": [
+              "Schrijven met overtuiging",
+              "Jouw boodschap telt",
+              "Start vandaag met jouw V-rede"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Wat moet er in je V-rede?",
+            "subtitle": "",
+            "items": [
+              "Checklist:",
+              "Maatschappelijk probleem",
+              "Ethos, pathos, logos",
+              "Min. 3 stijlfiguren",
+              "Structuur: opening – kern – slot",
+              "Tussen 200-300 woorden"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opbouw van een sterke speech",
+            "subtitle": "",
+            "items": [
+              "Structuur:",
+              "Pakkende opening (vraag, anekdote, uitspraak)",
+              "Kern: probleem + argumenten + oplossing",
+              "Slot: oproep, droom, uitsmijter",
+              "Vraag: Wat zou jouw openingszin zijn?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Framing en stijl",
+            "subtitle": "",
+            "items": [
+              "Kies je frame: positief of negatief?",
+              "Toon en woordkeuze maken het verschil",
+              "Gebruik stijlfiguren zoals drieslag, metafoor, hyperbool"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Schrijftijd: begin aan je eerste versie",
+            "subtitle": "",
+            "items": [
+              "Tips:",
+              "Gebruik je notities van vorige les",
+              "Werk op laptop of schrift",
+              "Focus eerst op inhoud"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hulpvragen bij het schrijven",
+            "subtitle": "",
+            "items": [
+              "Voor wie schrijf ik dit?",
+              "Waarom is dit belangrijk?",
+              "Wat moet het publiek onthouden?",
+              "Welk gevoel wil ik oproepen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tussentijdse tip: praat hardop",
+            "subtitle": "",
+            "items": [
+              "Lees je tekst (of fragmenten) hardop:",
+              "Klinkt het natuurlijk?",
+              "Waar stokt het?",
+              "Welke zinnen hebben kracht?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Inlevermoment / opslaan",
+            "subtitle": "",
+            "items": [
+              "Sla je eerste versie goed op",
+              "Bewaar je notities",
+              "Volgende keer: herschrijven!"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Feedback ontvangen",
+              "Openingszin en slot verbeteren",
+              "Je V-rede krachtiger maken"
+            ]
+          }
+        ],
+        "marker-les-9-v-rede-herschrijven": [
+          {
+            "type": "bullets",
+            "title": "Les 9 Van ruwe tekst naar rake speech",
+            "subtitle": "",
+            "items": [
+              "Herschrijven = versterken",
+              "Jouw woorden, scherper",
+              "Focus op stijl en impact"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Feedbackronde in tweetallen",
+            "subtitle": "",
+            "items": [
+              "Gebruik feedbackformulier:",
+              "Onderwerp duidelijk?",
+              "Ethos, pathos, logos?",
+              "Stijlfiguren herkenbaar?",
+              "Wat werkt goed? Wat kan beter?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Herzien van de opening",
+            "subtitle": "",
+            "items": [
+              "Voorbeelden:",
+              "\"Iedere dag gebeurt dit opnieuw...\"",
+              "\"Stel je voor dat jij...\"",
+              "\"Drie woorden: stress, stilte, strijd.\"",
+              "Opdracht:",
+              "Schrijf 2 nieuwe openingszinnen",
+              "Kies de krachtigste"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Slotzin versterken",
+            "subtitle": "",
+            "items": [
+              "Tips:",
+              "Herhaal je boodschap",
+              "Eindig krachtig: oproep, droom, klapzin",
+              "Voorbeelden:",
+              "\"Laten we samen het verschil maken.\"",
+              "\"Ook jij kunt vandaag beginnen.\"",
+              "Opdracht: herschrijf je slot"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Structuur verbeteren",
+            "subtitle": "",
+            "items": [
+              "Vragen:",
+              "Klopt je volgorde?",
+              "Loopt het logisch over?",
+              "Opdracht:",
+              "Herorden alinea’s of voeg verbindingszinnen toe"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stijl aanscherpen",
+            "subtitle": "",
+            "items": [
+              "Checklist:",
+              "Effectieve stijlfiguren?",
+              "Actieve taal?",
+              "Variatie in zinnen?",
+              "Opdracht:",
+              "Herschrijf 3 zinnen krachtiger"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Herschrijven in stilte",
+            "subtitle": "",
+            "items": [
+              "Werk zelfstandig:",
+              "Gebruik alle feedback",
+              "Verbeter opening, slot, stijl, samenhang"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Inleveren & afronden",
+            "subtitle": "",
+            "items": [
+              "Sla op met duidelijke bestandsnaam",
+              "Lever in (Magister, Teams of Drive)",
+              "Bewaar ook voor volgende les"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Je oefent je V-rede hardop",
+              "Let op stem, houding en timing"
+            ]
+          }
+        ],
+        "marker-les-10-oefenen-voordracht": [
+          {
+            "type": "bullets",
+            "title": "Les 10 Oefen je V-rede",
+            "subtitle": "",
+            "items": [
+              "Spreek met impact",
+              "Jouw stem telt",
+              "Oefen voor het podium"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Wat maakt een voordracht krachtig?",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Stemgebruik oefenen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Houding & gebaren oefenen",
+            "subtitle": "",
+            "items": [
+              "Oefen in tweetallen:",
+              "Staand spreken",
+              "Let op:",
+              "Oogcontact",
+              "Pauzes",
+              "Gebaren",
+              "→ Partner geeft tips"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voor jezelf oefenen",
+            "subtitle": "",
+            "items": [
+              "Zoek een rustige plek",
+              "Lees je V-rede hardop (ca. 2,5 min)",
+              "Gebruik stopwatch",
+              "Noteer verbeterpunten"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mini-presentaties in groepjes",
+            "subtitle": "",
+            "items": [
+              "Groepjes van 3",
+              "Ieder leest voor",
+              "Anderen geven 2 tops & 1 tip",
+              "Gebruik observatieformulier"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Verbeterpunten verwerken",
+            "subtitle": "",
+            "items": [
+              "Herschrijf waar nodig",
+              "Pas tempo/zinnen aan",
+              "Oefen opnieuw (eventueel opnemen)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Extra oefentip",
+            "subtitle": "",
+            "items": [
+              "Film jezelf thuis",
+              "Kijk terug zonder geluid → lichaamstaal",
+              "Kijk mét geluid → stem & tempo",
+              "Vraag externe feedback"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Je presenteert je V-rede voor de klas",
+              "Compliment & tip van klasgenoten",
+              "Tijd voor applaus!"
+            ]
+          }
+        ],
+        "marker-les-11-generale-repetitie-presentaties": [
+          {
+            "type": "bullets",
+            "title": "Les 11 Laat je horen – de generale repetitie",
+            "subtitle": "",
+            "items": [
+              "Oefenen voor publiek",
+              "Feedback geven én krijgen",
+              "Klaarstomen voor het echte werk"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Waarom oefenen voor publiek helpt",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Feedbackregels",
+            "subtitle": "",
+            "items": [
+              "Gebruik 'tops & tips':",
+              "2 complimenten (tops)",
+              "1 verbeterpunt (tip)",
+              "Let op:",
+              "Inhoud & overtuiging",
+              "Stijlfiguren",
+              "Presentatie (stem, houding, tempo)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Presenteren in groepjes",
+            "subtitle": "",
+            "items": [
+              "Groepjes van 3 of 4",
+              "Ieder houdt de V-rede (2–2,5 min)",
+              "Klasgenoten geven feedback via formulier"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Zelfreflectie na je voordracht",
+            "subtitle": "",
+            "items": [
+              "Schrijf op:",
+              "Waar ben ik tevreden over?",
+              "Wat wil ik nog verbeteren?",
+              "Wat heb ik geleerd van de feedback?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Extra oefening voor thuis",
+            "subtitle": "",
+            "items": [
+              "Oefen met stopwatch",
+              "Vraag feedback thuis of oefen voor de spiegel",
+              "Let op timing, stem, gebaren",
+              "Herhaal je opening en slot extra goed"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vooruitblik",
+            "subtitle": "",
+            "items": [
+              "Volgende les:",
+              "Je presenteert je V-rede voor de klas",
+              "Compliment en tip van klasgenoten",
+              "Samen vieren we jullie stem!"
+            ]
+          }
+        ],
+        "marker-les-12-presentaties": [
+          {
+            "type": "bullets",
+            "title": "Les 12 Jouw moment – de V-rede",
+            "subtitle": "",
+            "items": [
+              "Spreek met lef",
+              "Krijg applaus en feedback",
+              "Laat je stem horen"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Doel van vandaag",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Verloop van de les",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Afspraken tijdens het luisteren",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Complimentenschema",
+            "subtitle": "",
+            "items": [
+              "Per leerling:",
+              "1 inhoudelijk compliment",
+              "1 presentatie-compliment",
+              "1 tip (bijv. stijl, helderheid, tempo)",
+              "→ Invullen op formulier"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Presentaties beginnen!",
+            "subtitle": ""
+          },
+          {
+            "type": "title",
+            "title": "Na de laatste spreker",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Einde en terugblik",
+            "subtitle": "",
+            "items": [
+              "Iedereen sprak met overtuiging",
+              "Compliment voor lef, stem en inzet!",
+              "Laat je stem nooit onbenut"
+            ]
+          }
+        ],
+        "marker-les-13-presentaties": [
+          {
+            "type": "title",
+            "title": "Les 13: Presentaties",
+            "subtitle": "V-rede"
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "V-rede",
+          "subtitle": "V-rede"
+        },
+        {
+          "type": "bullets",
+          "title": "Les 1 De kracht van een speech: Wat is een V-rede?",
+          "subtitle": "",
+          "items": [
+            "De stem van verandering",
+            "De jouwe binnenkort ook?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van vandaag",
+          "subtitle": "",
+          "items": [
+            "Je weet wat een V-rede is",
+            "Je ziet waarom een speech indruk maakt",
+            "Je oefent met het verwoorden van een maatschappelijk probleem"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een V-rede?",
+          "subtitle": "",
+          "items": [
+            "Een korte, krachtige speech (150 sec)",
+            "Je spreekt over een maatschappelijk probleem",
+            "Je presenteert ook een oplossing",
+            "Je gebruikt stijlfiguren en een overtuigend frame"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Fragment bekijken",
+          "subtitle": "",
+          "items": [
+            "▶ Fragment Denzel Washington, Greta Thunberg of Martin Luther King",
+            "Let op:",
+            "Wat valt je op aan haar/zijn toon, stijl, inhoud?",
+            "Welke emoties roept het op?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat maakt een speech krachtig?",
+          "subtitle": "",
+          "items": [
+            "Bespreek klassikaal:",
+            "Wat onthoud je van de speech?",
+            "Waarom kwam het binnen?",
+            "Hoe spreekt de spreker je aan (woorden, stem, houding)?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mini-opdracht",
+          "subtitle": "",
+          "items": [
+            "In tweetallen:",
+            "1. Kies een maatschappelijk probleem dat jullie raakt.",
+            "2. Formuleer er samen één krachtige zin over (max 15 woorden).",
+            "Voorbeeld: \"Iedere leerling moet gelijke kansen krijgen – ook zonder geld of steun thuis.\""
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Delen & bespreken",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik module",
+          "subtitle": "",
+          "items": [
+            "In de komende weken:",
+            "Leer je hoe je een frame kiest",
+            "Oefen je stijlfiguren",
+            "Schrijf je je eigen V-rede",
+            "En... presenteer je hem voor de klas!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Exit ticket",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Tot volgende les!",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 2 Wat zie jij? Framing in de media",
+          "subtitle": "",
+          "items": [
+            "Beïnvloed door taal",
+            "De kracht van woorden",
+            "Hoe kijk jij naar nieuws?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Denotatie & connotatie",
+          "subtitle": "",
+          "items": [
+            "Voorbeeld:",
+            "‘Vluchteling’ vs. ‘gelukszoeker’",
+            "Denotatie = letterlijke betekenis",
+            "Connotatie = gevoelswaarde / bijbetekenis",
+            "Vraag: Welke woorden ken jij met sterke connotatie?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is framing?",
+          "subtitle": "",
+          "items": [
+            "Een frame is een bril waardoor je kijkt",
+            "Door woord of beeldkeuze beïnvloed je de lezer",
+            "Voorbeeld:",
+            "‘Villasubsidie’ vs. ‘hypotheekrenteaftrek’"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Framing herkennen: voorbeelden",
+          "subtitle": "",
+          "items": [
+            "Opdracht:",
+            "1. Bekijk 3 nieuwsfragmenten (NOS, Telegraaf, De Speld)",
+            "2. Wat is het frame?",
+            "3. Hoe zou jij het anders framen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht 1: Woorden analyseren",
+          "subtitle": "",
+          "items": [
+            "Werkblad:",
+            "Denotatie (letterlijke betekenis)",
+            "Connotatie (positief/negatief)",
+            "Voorbeelden:",
+            "Activist",
+            "Rebel",
+            "Vluchteling",
+            "Milieuheld"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht 2: Framing in de media",
+          "subtitle": "",
+          "items": [
+            "In tweetallen:",
+            "Zoek 2 nieuwsberichten",
+            "Waar zie je framing?",
+            "Wat is het doel?",
+            "Positieve of negatieve lading?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nabespreking",
+          "subtitle": "",
+          "items": [
+            "Klassikaal:",
+            "Wat viel op?",
+            "Welke frames waren sterk?",
+            "Wat ga je voortaan anders lezen?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Reflectievraag",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Vooruitblik volgende les",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Les 3 Klinkt als waarheid – framing met stijl",
+          "subtitle": "",
+          "items": [
+            "Taal als overtuigingskracht",
+            "Framing met een vleugje stijl",
+            "Hoe overdrijf jij professioneel?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een stijlfiguur?",
+          "subtitle": "",
+          "items": [
+            "Een trucje van taal om iets krachtiger of beeldender te maken",
+            "Veelgebruikt in nieuws, reclame en memes"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De vier belangrijkste stijlfiguren",
+          "subtitle": "",
+          "items": [
+            "1. Eufemisme – verzachtende uitdrukking",
+            "2. Metafoor – beeldspraak zonder 'als'",
+            "3. Hyperbool – sterke overdrijving",
+            "4. Alliteratie – herhaling van beginletters"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Fragment: Promenade of De Speld",
+          "subtitle": "",
+          "items": [
+            "▶ Kijkfragment tonen (humoristische nieuwsframing)",
+            "Opdracht:",
+            "Welke stijlfiguren zie je?",
+            "Hoe versterken ze het frame?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mini-opdracht: oefenzinnen",
+          "subtitle": "",
+          "items": [
+            "Kies een onderwerp (bv. school, klimaat, politiek)",
+            "Schrijf per stijlfiguur één zin:",
+            "Hyperbool",
+            "Eufemisme",
+            "Metafoor",
+            "Alliteratie",
+            "Deel met je buur en geef feedback"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoofdopdracht: maak je eigen frame",
+          "subtitle": "",
+          "items": [
+            "Kies een actueel onderwerp",
+            "Bepaal standpunt en framing (positief/negatief)",
+            "Schrijf kort nieuwsbericht (100 woorden)",
+            "Gebruik min. 3 stijlfiguren",
+            "Bedenk kop en kies evt. een beeld"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Uitwisselen & bespreken",
+          "subtitle": "",
+          "items": [
+            "Lees elkaars bericht",
+            "Welke emoties roept het op?",
+            "Herken je de stijlfiguren?",
+            "Is het frame duidelijk?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectievragen",
+          "subtitle": "",
+          "items": [
+            "Wat doet stijl met overtuigingskracht?",
+            "Welke stijlfiguur vond jij het sterkst?",
+            "Wanneer is een frame misleidend?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik volgende les",
+          "subtitle": "",
+          "items": [
+            "Volgende keer:",
+            "We delen onze frames",
+            "We zoeken een actueel onderwerp",
+            "We leren framing gebruiken in debat"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 4 De werkelijkheid in een jasje",
+          "subtitle": "",
+          "items": [
+            "Eén onderwerp, twee verhalen",
+            "Wat zien we… en wat missen we?",
+            "Framing in de praktijk"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Terugblik: wat is framing ook alweer?",
+          "subtitle": "",
+          "items": [
+            "Taal die het verhaal bepaalt",
+            "Een bril waardoor je kijkt naar de werkelijkheid",
+            "Werkt via beeld, woordkeuze en herhaling",
+            "Vraag: Noem een voorbeeld van framing uit vorige les"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Frames presenteren (in drietallen)",
+          "subtitle": "",
+          "items": [
+            "Opdracht:",
+            "1. Lees je nieuwsbericht voor",
+            "2. Benoem:",
+            "Wat is het frame?",
+            "Welke stijlfiguren zie je?",
+            "Hoe effectief is het?",
+            "3. Schrijf tips voor verbetering"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Klassikale terugkoppeling",
+          "subtitle": "",
+          "items": [
+            "Wat werkte goed?",
+            "Welke stijlfiguren vielen op?",
+            "Wanneer raakt een frame echt?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Actualiteit: dubbele framing",
+          "subtitle": "",
+          "items": [
+            "Nieuwe opdracht:",
+            "Kies een actueel onderwerp (bv. TikTok, boeren, klimaat)",
+            "Frame het twee keer:",
+            "Positief frame",
+            "Negatief frame",
+            "Gebruik steeds 2 stijlfiguren"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Koppelopdracht",
+          "subtitle": "",
+          "items": [
+            "Tweetallen:",
+            "Bedenk bij één onderwerp:",
+            "1 positief frame",
+            "1 negatief frame",
+            "Formuleer 2 koppen + mini-berichtjes (elk max. 50 woorden)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Presenteren & bespreken",
+          "subtitle": "",
+          "items": [
+            "Laat enkele duo’s presenteren",
+            "Bespreek:",
+            "Welke overtuigt het meest?",
+            "Wat maakt het krachtig?",
+            "Kun je framing herkennen in echte media?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie",
+          "subtitle": "",
+          "items": [
+            "Wat heb je geleerd vandaag?",
+            "Wanneer is framing manipulatie?",
+            "Is het altijd slecht om te framen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "We gaan in debat!",
+            "Rollen: journalist, politicus, reclamemaker",
+            "Framing als overtuigingsmiddel en discussiepunt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 5 Framing: slim, nodig of manipulatief?",
+          "subtitle": "",
+          "items": [
+            "Beïnvloeden of misleiden?",
+            "Jouw stem in het debat",
+            "Wat doet taal met jou?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Stellingen over framing",
+          "subtitle": "",
+          "items": [
+            "Bespreek in tweetallen:",
+            "\"Framing is altijd manipulatie\"",
+            "\"Zonder framing krijg je geen aandacht\"",
+            "\"Leerlingen moeten leren framing te doorzien\"",
+            "Gebruik je naamkaartje: ‘eens’ of ‘oneens’"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Rollenverdeling voor debat",
+          "subtitle": "",
+          "items": [
+            "Jij bent:",
+            "Journalist",
+            "Politicus",
+            "Reclamemaker",
+            "Voorbereiding: 2 minuten met kernargumenten"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Rollenspel: framing verdedigen of bekritiseren",
+          "subtitle": "",
+          "items": [
+            "Opdracht:",
+            "Voer een minidebat vanuit je rol",
+            "Gebruik framing/stijlfiguren als wapen of kritiekpunt",
+            "Blijf in je rol, ook als je het er niet mee eens bent"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nabespreking rollenspel",
+          "subtitle": "",
+          "items": [
+            "Bespreek:",
+            "Welke rol overtuigde het meest?",
+            "Wanneer werkte framing goed?",
+            "Wanneer voelde het onethisch?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Media-analyse (indien tijd)",
+          "subtitle": "",
+          "items": [
+            "Bekijk een actueel nieuwsitem",
+            "Opdracht:",
+            "Welke framing zie je?",
+            "Welke woorden/beelden zorgen daarvoor?",
+            "Hoe wapen je jezelf als lezer?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie",
+          "subtitle": "",
+          "items": [
+            "Individuele opdracht:",
+            "Wat vind jij van framing?",
+            "Nuttig hulpmiddel of gevaarlijk wapen?",
+            "Wanneer zou jij framing gebruiken of vermijden?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Vanaf volgende les:",
+            "Begin je aan je eigen V-rede",
+            "Je kiest je onderwerp",
+            "En leert je publiek overtuigen met taal"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 6 Hoe overtuig jij? De drie pijlers van een goede speech",
+          "subtitle": "",
+          "items": [
+            "Overtuigen is een kunst",
+            "Met hoofd, hart én karakter",
+            "Leren van Aristoteles"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een V-rede ook alweer?",
+          "subtitle": "",
+          "items": [
+            "Korte, krachtige speech (150 sec)",
+            "Gaat over maatschappelijk probleem",
+            "Bevat oplossing + overtuigingskracht",
+            "Gebaseerd op ethos, pathos en logos"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aristoteles’ overtuigingsmiddelen",
+          "subtitle": "",
+          "items": [
+            "Ethos = geloofwaardigheid",
+            "Pathos = emotie",
+            "Logos = logica",
+            "Vraag: Wanneer gebruik jij deze in het dagelijks leven?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorbeeldfragment analyse",
+          "subtitle": "",
+          "items": [
+            "▶ Fragment",
+            "Opdracht in tweetallen:",
+            "Waar zie je ethos?",
+            "Waar pathos?",
+            "Waar logos?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe gebruik je ethos?",
+          "subtitle": "",
+          "items": [
+            "Voorbeelden:",
+            "Ervaring tonen",
+            "Een autoriteit citeren",
+            "Je toon aanpassen aan het publiek",
+            "Mini-opdracht: schrijf 1 ethos-zin over jouw onderwerp"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe gebruik je pathos?",
+          "subtitle": "",
+          "items": [
+            "Voorbeelden:",
+            "Emotioneel voorbeeld",
+            "Beeldende woorden",
+            "Schuldgevoel of trots oproepen",
+            "Mini-opdracht: schrijf 1 pathos-zin"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe gebruik je logos?",
+          "subtitle": "",
+          "items": [
+            "Voorbeelden:",
+            "Statistieken of feiten",
+            "Logische redenering",
+            "Mini-opdracht: schrijf 1 logos-zin"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Delen en vergelijken",
+          "subtitle": "",
+          "items": [
+            "Bespreek klassikaal:",
+            "Welke zinnen werken goed?",
+            "Welke combinatie is het krachtigst?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Je kiest jouw onderwerp",
+            "Je begint met de opbouw van jouw V-rede",
+            "Je oefent met stijlfiguren en framing"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 7 Waar wil jij voor spreken?",
+          "subtitle": "",
+          "items": [
+            "Wat raakt jou?",
+            "Jij hebt een stem",
+            "Start jouw V-rede vandaag"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Wat raakt jou in de wereld?",
+          "subtitle": "",
+          "items": [
+            "Opdracht:",
+            "Schrijf 3 maatschappelijke kwesties op",
+            "Bespreek met buur: welke kies je en waarom?",
+            "Voorbeelden:",
+            "Klimaat",
+            "Racisme",
+            "Sociale media",
+            "Armoede"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Keuze en verdiepingsvragen",
+          "subtitle": "",
+          "items": [
+            "Kies jouw onderwerp en beantwoord:",
+            "Waarom raakt dit mij?",
+            "Wie wil ik overtuigen?",
+            "Welke oplossing wil ik voorstellen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Herhaling stijlfiguren",
+          "subtitle": "",
+          "items": [
+            "Alliteratie",
+            "Metafoor",
+            "Eufemisme",
+            "Hyperbool",
+            "Vraag: welke passen goed bij jouw onderwerp?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefening stijlfiguren maken",
+          "subtitle": "",
+          "items": [
+            "Over jouw onderwerp:",
+            "1 hyperbool",
+            "1 metafoor",
+            "1 eufemisme",
+            "1 alliteratie",
+            "→ Max 1 zin per stijlfiguur"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Peer feedback",
+          "subtitle": "",
+          "items": [
+            "Wissel uit met je buur:",
+            "Herken je de stijlfiguren?",
+            "Wat overtuigt het meest?",
+            "Tip voor verbetering?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Sterke zinnen delen",
+          "subtitle": "",
+          "items": [
+            "Klassikaal:",
+            "Welke zin was het sterkst?",
+            "Waarom is die effectief?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Begin je met de eerste versie van je V-rede",
+            "Je krijgt structuur en schrijftips"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 8 Jouw stem telt – begin je V-rede",
+          "subtitle": "",
+          "items": [
+            "Schrijven met overtuiging",
+            "Jouw boodschap telt",
+            "Start vandaag met jouw V-rede"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet er in je V-rede?",
+          "subtitle": "",
+          "items": [
+            "Checklist:",
+            "Maatschappelijk probleem",
+            "Ethos, pathos, logos",
+            "Min. 3 stijlfiguren",
+            "Structuur: opening – kern – slot",
+            "Tussen 200-300 woorden"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opbouw van een sterke speech",
+          "subtitle": "",
+          "items": [
+            "Structuur:",
+            "Pakkende opening (vraag, anekdote, uitspraak)",
+            "Kern: probleem + argumenten + oplossing",
+            "Slot: oproep, droom, uitsmijter",
+            "Vraag: Wat zou jouw openingszin zijn?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Framing en stijl",
+          "subtitle": "",
+          "items": [
+            "Kies je frame: positief of negatief?",
+            "Toon en woordkeuze maken het verschil",
+            "Gebruik stijlfiguren zoals drieslag, metafoor, hyperbool"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Schrijftijd: begin aan je eerste versie",
+          "subtitle": "",
+          "items": [
+            "Tips:",
+            "Gebruik je notities van vorige les",
+            "Werk op laptop of schrift",
+            "Focus eerst op inhoud"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hulpvragen bij het schrijven",
+          "subtitle": "",
+          "items": [
+            "Voor wie schrijf ik dit?",
+            "Waarom is dit belangrijk?",
+            "Wat moet het publiek onthouden?",
+            "Welk gevoel wil ik oproepen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse tip: praat hardop",
+          "subtitle": "",
+          "items": [
+            "Lees je tekst (of fragmenten) hardop:",
+            "Klinkt het natuurlijk?",
+            "Waar stokt het?",
+            "Welke zinnen hebben kracht?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inlevermoment / opslaan",
+          "subtitle": "",
+          "items": [
+            "Sla je eerste versie goed op",
+            "Bewaar je notities",
+            "Volgende keer: herschrijven!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Feedback ontvangen",
+            "Openingszin en slot verbeteren",
+            "Je V-rede krachtiger maken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 9 Van ruwe tekst naar rake speech",
+          "subtitle": "",
+          "items": [
+            "Herschrijven = versterken",
+            "Jouw woorden, scherper",
+            "Focus op stijl en impact"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Feedbackronde in tweetallen",
+          "subtitle": "",
+          "items": [
+            "Gebruik feedbackformulier:",
+            "Onderwerp duidelijk?",
+            "Ethos, pathos, logos?",
+            "Stijlfiguren herkenbaar?",
+            "Wat werkt goed? Wat kan beter?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Herzien van de opening",
+          "subtitle": "",
+          "items": [
+            "Voorbeelden:",
+            "\"Iedere dag gebeurt dit opnieuw...\"",
+            "\"Stel je voor dat jij...\"",
+            "\"Drie woorden: stress, stilte, strijd.\"",
+            "Opdracht:",
+            "Schrijf 2 nieuwe openingszinnen",
+            "Kies de krachtigste"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Slotzin versterken",
+          "subtitle": "",
+          "items": [
+            "Tips:",
+            "Herhaal je boodschap",
+            "Eindig krachtig: oproep, droom, klapzin",
+            "Voorbeelden:",
+            "\"Laten we samen het verschil maken.\"",
+            "\"Ook jij kunt vandaag beginnen.\"",
+            "Opdracht: herschrijf je slot"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Structuur verbeteren",
+          "subtitle": "",
+          "items": [
+            "Vragen:",
+            "Klopt je volgorde?",
+            "Loopt het logisch over?",
+            "Opdracht:",
+            "Herorden alinea’s of voeg verbindingszinnen toe"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stijl aanscherpen",
+          "subtitle": "",
+          "items": [
+            "Checklist:",
+            "Effectieve stijlfiguren?",
+            "Actieve taal?",
+            "Variatie in zinnen?",
+            "Opdracht:",
+            "Herschrijf 3 zinnen krachtiger"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Herschrijven in stilte",
+          "subtitle": "",
+          "items": [
+            "Werk zelfstandig:",
+            "Gebruik alle feedback",
+            "Verbeter opening, slot, stijl, samenhang"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inleveren & afronden",
+          "subtitle": "",
+          "items": [
+            "Sla op met duidelijke bestandsnaam",
+            "Lever in (Magister, Teams of Drive)",
+            "Bewaar ook voor volgende les"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Je oefent je V-rede hardop",
+            "Let op stem, houding en timing"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 10 Oefen je V-rede",
+          "subtitle": "",
+          "items": [
+            "Spreek met impact",
+            "Jouw stem telt",
+            "Oefen voor het podium"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Wat maakt een voordracht krachtig?",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Stemgebruik oefenen",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Houding & gebaren oefenen",
+          "subtitle": "",
+          "items": [
+            "Oefen in tweetallen:",
+            "Staand spreken",
+            "Let op:",
+            "Oogcontact",
+            "Pauzes",
+            "Gebaren",
+            "→ Partner geeft tips"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voor jezelf oefenen",
+          "subtitle": "",
+          "items": [
+            "Zoek een rustige plek",
+            "Lees je V-rede hardop (ca. 2,5 min)",
+            "Gebruik stopwatch",
+            "Noteer verbeterpunten"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mini-presentaties in groepjes",
+          "subtitle": "",
+          "items": [
+            "Groepjes van 3",
+            "Ieder leest voor",
+            "Anderen geven 2 tops & 1 tip",
+            "Gebruik observatieformulier"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Verbeterpunten verwerken",
+          "subtitle": "",
+          "items": [
+            "Herschrijf waar nodig",
+            "Pas tempo/zinnen aan",
+            "Oefen opnieuw (eventueel opnemen)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Extra oefentip",
+          "subtitle": "",
+          "items": [
+            "Film jezelf thuis",
+            "Kijk terug zonder geluid → lichaamstaal",
+            "Kijk mét geluid → stem & tempo",
+            "Vraag externe feedback"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Je presenteert je V-rede voor de klas",
+            "Compliment & tip van klasgenoten",
+            "Tijd voor applaus!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 11 Laat je horen – de generale repetitie",
+          "subtitle": "",
+          "items": [
+            "Oefenen voor publiek",
+            "Feedback geven én krijgen",
+            "Klaarstomen voor het echte werk"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Waarom oefenen voor publiek helpt",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Feedbackregels",
+          "subtitle": "",
+          "items": [
+            "Gebruik 'tops & tips':",
+            "2 complimenten (tops)",
+            "1 verbeterpunt (tip)",
+            "Let op:",
+            "Inhoud & overtuiging",
+            "Stijlfiguren",
+            "Presentatie (stem, houding, tempo)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Presenteren in groepjes",
+          "subtitle": "",
+          "items": [
+            "Groepjes van 3 of 4",
+            "Ieder houdt de V-rede (2–2,5 min)",
+            "Klasgenoten geven feedback via formulier"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zelfreflectie na je voordracht",
+          "subtitle": "",
+          "items": [
+            "Schrijf op:",
+            "Waar ben ik tevreden over?",
+            "Wat wil ik nog verbeteren?",
+            "Wat heb ik geleerd van de feedback?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Extra oefening voor thuis",
+          "subtitle": "",
+          "items": [
+            "Oefen met stopwatch",
+            "Vraag feedback thuis of oefen voor de spiegel",
+            "Let op timing, stem, gebaren",
+            "Herhaal je opening en slot extra goed"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vooruitblik",
+          "subtitle": "",
+          "items": [
+            "Volgende les:",
+            "Je presenteert je V-rede voor de klas",
+            "Compliment en tip van klasgenoten",
+            "Samen vieren we jullie stem!"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 12 Jouw moment – de V-rede",
+          "subtitle": "",
+          "items": [
+            "Spreek met lef",
+            "Krijg applaus en feedback",
+            "Laat je stem horen"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Doel van vandaag",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Verloop van de les",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Afspraken tijdens het luisteren",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Complimentenschema",
+          "subtitle": "",
+          "items": [
+            "Per leerling:",
+            "1 inhoudelijk compliment",
+            "1 presentatie-compliment",
+            "1 tip (bijv. stijl, helderheid, tempo)",
+            "→ Invullen op formulier"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Presentaties beginnen!",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Na de laatste spreker",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Einde en terugblik",
+          "subtitle": "",
+          "items": [
+            "Iedereen sprak met overtuiging",
+            "Compliment voor lef, stem en inzet!",
+            "Laat je stem nooit onbenut"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 13: Presentaties",
+          "subtitle": "V-rede"
+        }
+      ],
+      "markers": {
+        "marker-les-1-v-rede-introductie": 1,
+        "marker-les-2-v-rede-framing-connotatie": 11,
+        "marker-les-3-v-rede-stijlfiguren-frame-maken": 21,
+        "marker-les-4-v-rede-frames-delen-actualiteit": 31,
+        "marker-les-5-v-rede-discussie-reflectie": 41,
+        "marker-les-6-v-rede-ethos-pathos-logos": 50,
+        "marker-les-7-v-rede-brainstorm-stijlfiguren": 60,
+        "marker-les-8-v-rede-eerste-versie-schrijven": 69,
+        "marker-les-9-v-rede-herschrijven": 79,
+        "marker-les-10-oefenen-voordracht": 89,
+        "marker-les-11-generale-repetitie-presentaties": 99,
+        "marker-les-12-presentaties": 107,
+        "marker-les-13-presentaties": 115
       }
     }
   }
