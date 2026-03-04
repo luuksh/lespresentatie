@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T09:53:45+01:00",
+  "updatedAt": "2026-03-04T09:55:31+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -335,13 +335,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -360,13 +362,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -385,13 +389,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -410,13 +416,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -429,7 +437,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -1385,13 +1394,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -1410,13 +1421,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -1435,13 +1448,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -1460,13 +1475,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -1479,7 +1496,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -2435,13 +2453,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -2460,13 +2480,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -2485,13 +2507,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -2510,13 +2534,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -2529,7 +2555,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -3485,13 +3512,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -3510,13 +3539,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -3535,13 +3566,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -3560,13 +3593,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -3579,7 +3614,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -4535,13 +4571,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -4560,13 +4598,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -4585,13 +4625,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -4610,13 +4652,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -4629,7 +4673,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -5585,13 +5630,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -5610,13 +5657,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -5635,13 +5684,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -5660,13 +5711,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -5679,7 +5732,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -6635,13 +6689,15 @@
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-1-intro-les-1"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-1-intro"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-2-voorbereidingen-les-2"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-2-voorbereidingen"
         }
       ],
       "items": []
@@ -6660,13 +6716,15 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-3-teksten-les-3"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-3-teksten"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-4-aanvullen-les-4"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-4-aanvullen"
         }
       ],
       "items": []
@@ -6685,13 +6743,15 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-5-opmaak-les-5"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-5-opmaak"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-6-afronden-les-6"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-6-afronden"
         }
       ],
       "items": []
@@ -6710,13 +6770,15 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "lessonKey": "B",
-          "presentationId": "klasfeed-les-7-printen-les-7"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-7-printen"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "lessonKey": "C",
-          "presentationId": "klasfeed-les-8-presentatie-les-8"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-8-presentatie"
         }
       ],
       "items": []
@@ -6729,7 +6791,8 @@
           "project": "Klasfeed",
           "lesson": "Les 9: Reflectie",
           "lessonKey": "A",
-          "presentationId": "klasfeed-les-9-reflectie-les-9"
+          "presentationId": "project-klasfeed",
+          "presentationMarkerId": "marker-les-9-reflectie"
         },
         {
           "project": "Leesclub",
@@ -29270,6 +29333,1390 @@
         "marker-les-4-stamboomonderzoek": 22,
         "marker-les-5-stamboomposter": 29,
         "marker-les-6-presentatie-en-reflectie": 35
+      }
+    },
+    "project-klasfeed": {
+      "id": "project-klasfeed",
+      "presentationType": "project-overview",
+      "title": "Klasfeed",
+      "subtitle": "Klasfeed",
+      "project": "Klasfeed",
+      "importVersion": 2026030408,
+      "markerDecks": {
+        "marker-les-1-intro": [
+          {
+            "type": "title",
+            "title": "Les 1 - Intro",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Welkom bij KlasKrant!",
+            "subtitle": "",
+            "items": [
+              "Doel van het project:",
+              "Samen maken we één echte klas-krant",
+              "Wordt gedrukt én online gedeeld",
+              "8 lessen van 45 minuten",
+              "Je werkt in groepen én als klas",
+              "De krant komt écht van de pers (of printer!)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat hoort er in een krant?",
+            "subtitle": "",
+            "items": [
+              "📄 Bekijk met de klas een voorbeeldkrant:",
+              "Wat zie je op de voorpagina?",
+              "Welke rubrieken zijn er?",
+              "Wat vind jij leuk om te lezen?",
+              "Klassikaal gesprek: wat zou jij in een schoolkrant willen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Welke onderdelen komen in onze krant?",
+            "subtitle": "",
+            "items": [
+              "Mogelijke rubrieken:",
+              "Nieuws / Interviews",
+              "Strips / Moppen / Gedichten",
+              "Quiz / Top 5 / Lifestyle",
+              "Meningen / Columns",
+              "Fotopagina",
+              "Stemronde: wat willen we erin?",
+              "Docent maakt definitieve indeling"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe gaan we samenwerken?",
+            "subtitle": "",
+            "items": [
+              "Centrale redactie:",
+              "Hoofdredactie (3 leerlingen)",
+              "Vormgevingsteam (1 groep)",
+              "Subgroepen (4–5 leerlingen per groep):",
+              "Elke groep krijgt één onderdeel",
+              "Binnen je groep verdelen jullie de taken:",
+              "coördinator, schrijver, vormgever, enz."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag: groepsindeling",
+            "subtitle": "",
+            "items": [
+              "Verdeel de klas:",
+              "Kies of krijg je groepje",
+              "Spreek samen af wie welke rol krijgt",
+              "Vul het werkblad in:",
+              "Groepsleden",
+              "Onderwerp",
+              "Rollen",
+              "Eerste ideeën",
+              "Deadline: eind van les 1 ingevuld en ingeleverd"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Volgende les...",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-2-voorbereidingen": [
+          {
+            "type": "title",
+            "title": "Les 2 - Voorbereiding & bronnen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Terugblik op vorige les",
+            "subtitle": "",
+            "items": [
+              "Groepen zijn gevormd",
+              "Rollen zijn verdeeld",
+              "Onderwerpen zijn gekozen",
+              "Vandaag gaan jullie verdiepen en voorbereiden:"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat gaan we doen vandaag?",
+            "subtitle": "",
+            "items": [
+              "Doelen:",
+              "Kies een duidelijke invalshoek voor je artikel/rubriek",
+              "Bereid je voor op interviews en bronnenonderzoek",
+              "Begin aan een eerste planning"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat wordt jullie insteek?",
+            "subtitle": "",
+            "items": [
+              "Bedenk:",
+              "Wat wil je de lezer laten weten of voelen?",
+              "Wie of wat wil je in beeld brengen?",
+              "Welke toon past bij jullie rubriek?",
+              "Gebruik het werkblad om dit vast te leggen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Interviews voorbereiden",
+            "subtitle": "",
+            "items": [
+              "Wie gaan jullie interviewen?",
+              "Schrijf minimaal 8–10 goede vragen:",
+              "Open vragen (hoe, waarom, wat vind jij...)",
+              "Vragen met verdieping",
+              "Eén grappige of verrassende vraag",
+              "Plan een afsprakemoment"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe verzamel je informatie?",
+            "subtitle": "",
+            "items": [
+              "Zoek:",
+              "Eerdere nieuwsbrieven of schoolberichten",
+              "Foto’s, posters, aankondigingen",
+              "Andermans mening over het onderwerp",
+              "Verzamel alvast foto's of illustraties die je wil gebruiken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkplanning maken",
+            "subtitle": "",
+            "items": [
+              "Per groep:",
+              "Wat moet er af vóór les 4?",
+              "Wie doet wat wanneer?",
+              "Wat heb je van anderen nodig (foto’s, interviews)?",
+              "Vul het planningsgedeelte van je werkblad in"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan het werk!",
+            "subtitle": "",
+            "items": [
+              "Jullie hebben de rest van de les om:",
+              "Te brainstormen",
+              "Vragen te schrijven",
+              "Informatie te verzamelen",
+              "De taakverdeling concreet te maken",
+              "De hoofdredactie komt bij elke groep langs voor overleg"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende les...",
+            "subtitle": "",
+            "items": [
+              "Dan gaan we echt schrijven!",
+              "Breng je interviewvragen en materiaal mee",
+              "Zorg dat je weet wat jouw rol is",
+              "Start met een ruwe tekstversie"
+            ]
+          }
+        ],
+        "marker-les-3-teksten": [
+          {
+            "type": "title",
+            "title": "Les 3 - Teksten schrijven",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag ga je starten met het schrijven van je teksten.",
+              "Je werkt in je subgroep aan:",
+              "het hoofdartikel",
+              "de interviewtekst",
+              "of je rubriek",
+              "Afhankelijk van je rol en onderdeel."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat moet jouw groep schrijven?",
+            "subtitle": "",
+            "items": [
+              "Nieuws/Interview: artikel van 200–300 woorden",
+              "Interview: volledig uitgeschreven interview",
+              "Opinie: column of meningstekst",
+              "Creatief: mop, verhaal, gedicht of stripteksten",
+              "Lifestyle: quiz, top 5, recensie of rubriek",
+              "Fotogroep: bijschriften en inleidingstekst"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opbouw van een artikel",
+            "subtitle": "",
+            "items": [
+              "Een goed artikel bestaat uit:",
+              "Titel",
+              "Inleiding: waar gaat het over?",
+              "Middenstuk: de informatie of het interview",
+              "Slot: afronding of conclusie",
+              "Gebruik alinea’s en voeg quotes toe indien mogelijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan het werk",
+            "subtitle": "",
+            "items": [
+              "Je verdeelt binnen de groep wie wat schrijft.",
+              "Gebruik eventueel het werkblad.",
+              "Vraag de hoofdredactie of docent om hulp bij:",
+              "spelling of formuleringen",
+              "het herschrijven van teksten",
+              "het structureren van informatie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende les",
+            "subtitle": "",
+            "items": [
+              "Volgende les werk je verder aan je tekst én begin je met de creatieve onderdelen (zoals de mop, quiz, strip, vormgeving of extra rubrieken).",
+              "Lever aan het eind van vandaag je ruwe tekstversie in bij de hoofdredactie."
+            ]
+          }
+        ],
+        "marker-les-4-aanvullen": [
+          {
+            "type": "title",
+            "title": "Les 4 - Aanvullen en doorwerken",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag werk je verder aan je bijdrage.",
+              "Je vult je tekst aan, herschrijft waar nodig en begint aan de creatieve onderdelen van je rubriek.",
+              "De hoofdredactie bekijkt vandaag alle voortgang per groep."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Groepsdoelen voor vandaag",
+            "subtitle": "",
+            "items": [
+              "1. Afronden van de eerste versies van de tekst",
+              "2. Toevoegen van beeldmateriaal, titels en bijschriften",
+              "3. Starten met creatieve onderdelen:",
+              "strip, quiz, mop, extra rubriek of top 5",
+              "4. Inplannen van vormgevingstaken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Creatieve invulling van je pagina",
+            "subtitle": "",
+            "items": [
+              "Elke spread bevat minimaal één creatieve toevoeging:",
+              "Strip, cartoon of tekening",
+              "Mop, quiz of testje",
+              "Top 5 of boek/filmtip",
+              "Wist-je-datjes of collage",
+              "Zorg voor afwisseling en originaliteit."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Verbeter je tekst",
+            "subtitle": "",
+            "items": [
+              "Controleer samen:",
+              "Staat er een duidelijke titel boven?",
+              "Is je tekst opgedeeld in alinea’s?",
+              "Bevat je stuk een duidelijke kop en afsluiting?",
+              "Kun je beeld toevoegen dat past bij je tekst?",
+              "Vraag feedback aan andere groepjes of de hoofdredactie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aan de slag",
+            "subtitle": "",
+            "items": [
+              "Werk zelfstandig door in je groep:",
+              "Begin met aanvullen of herschrijven van je tekst",
+              "Voeg extra's toe zoals foto's of rubrieken",
+              "Vul het werkblad voortgang in",
+              "De hoofdredactie loopt langs voor overleg en controle."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Volgende les",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-5-opmaak": [
+          {
+            "type": "title",
+            "title": "Les 5 - Digitale opmaak",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag start de digitale opmaak van de krant.",
+              "Je voert je tekst in, past de layout aan en zorgt voor beeld en titels.",
+              "De vormgeving wordt bewaakt door het vormgevingsteam en de hoofdredactie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkvorm: digitaal opmaken",
+            "subtitle": "",
+            "items": [
+              "Werk in het gezamenlijke sjabloon via:",
+              "Canva (klasaccount of gedeelde link)",
+              "Google Slides",
+              "Microsoft Word met vaste layout",
+              "De docent geeft aan welke tool beschikbaar is."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat hoort er op jouw 2 pagina's?",
+            "subtitle": "",
+            "items": [
+              "Een complete spread bevat:",
+              "Titel en subtitels",
+              "Ingevulde hoofdtekst",
+              "Minimaal één afbeelding met bijschrift",
+              "Creatief onderdeel (quiz, mop, strip...)",
+              "Namen van de groepsleden in een hoekje"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Afspraak over layout",
+            "subtitle": "",
+            "items": [
+              "Gebruik de afgesproken huisstijl:",
+              "Lettertypes: max. 2 per pagina",
+              "Lettergrootte: goed leesbaar, niet te klein",
+              "Kleurgebruik: niet te druk, geen felgekleurde achtergronden",
+              "Alinea’s en witruimte aanhouden",
+              "Beelden netjes uitlijnen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Samen aan één spread werken",
+            "subtitle": "",
+            "items": [
+              "Spreek goed af wie wat doet:",
+              "Eén leerling voert tekst in",
+              "Eén verzorgt beeld en bijschriften",
+              "Eén let op stijl en uitlijning",
+              "Controleer elkaars werk en overleg met de hoofdredactie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Goed opslaan = belangrijk",
+            "subtitle": "",
+            "items": [
+              "Geef je bestand een duidelijke naam:",
+              "voorbeeld: groep4_fotopagina.pptx of .pdf",
+              "Sla je werk op in de gedeelde map of lever het in via de werkomgeving van de klas.",
+              "Alles moet aan het eind van de les digitaal opgeslagen zijn."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende les",
+            "subtitle": "",
+            "items": [
+              "In de volgende les maken we de hele krant af en voegen we alles samen tot één eindbestand.",
+              "Zorg dus dat je vandaag een volledige, nette en controleerbare versie van je bijdrage oplevert."
+            ]
+          }
+        ],
+        "marker-les-6-afronden": [
+          {
+            "type": "title",
+            "title": "Les 6 - Afronden en samenvoegen",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag lever je je bijdrage definitief op.",
+              "De hoofdredactie en eindredactie voegen alles samen tot één krant.",
+              "Controle en afronding staan centraal."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat moet je nog controleren?",
+            "subtitle": "",
+            "items": [
+              "Controleer je spread op:",
+              "Spelfouten en zinsbouw",
+              "Duidelijke koppen en logische volgorde",
+              "Juiste plaatsing van beeldmateriaal",
+              "Namen van groepsleden duidelijk vermeld",
+              "Opmaak volgens de afspraken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat doet de eindredactie vandaag?",
+            "subtitle": "",
+            "items": [
+              "De eindredactie:",
+              "Leest elke bijdrage na op taal en structuur",
+              "Zorgt dat alles dezelfde toon en stijl heeft",
+              "Maakt de inhoudspagina en voert laatste verbeteringen door",
+              "Werkt samen met de hoofdredactie aan het eindbestand"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Samenstellen eindbestand",
+            "subtitle": "",
+            "items": [
+              "De hoofdredactie verzamelt alle bijdragen in één document of sjabloon.",
+              "Het vormgevingsteam controleert de indeling.",
+              "De volledige krant wordt digitaal opgeslagen als PDF."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Technische controle",
+            "subtitle": "",
+            "items": [
+              "Let op:",
+              "Volgorde van de pagina's klopt",
+              "Alles staat in hetzelfde formaat",
+              "Bestandsnaam is duidelijk (klaskrant_2025.pdf)",
+              "Geen lege of dubbele pagina’s",
+              "De inhoudspagina verwijst naar de juiste onderdelen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Volgende les",
+            "subtitle": "",
+            "items": [
+              "Volgende keer gaan we de krant printen, presenteren en verspreiden.",
+              "Zorg dat alles vandaag digitaal en volledig klaarstaat in de eindmap."
+            ]
+          }
+        ],
+        "marker-les-7-printen": [
+          {
+            "type": "title",
+            "title": "Les 7 - Printen en verspreiden",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag maken we de krant tastbaar.",
+              "We printen de eindversie, bereiden de presentatie voor en maken promotiemateriaal om de krant te verspreiden binnen en buiten de klas."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De krant gereedmaken voor print",
+            "subtitle": "",
+            "items": [
+              "Controleer het eindbestand op:",
+              "Juiste volgorde van pagina's",
+              "Voldoende resolutie van afbeeldingen",
+              "Geen schrijffouten meer",
+              "Bestand staat klaar als PDF",
+              "Namen van alle leerlingen zijn opgenomen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De krant printen",
+            "subtitle": "",
+            "items": [
+              "De docent print het eindbestand of laat dit doen bij de mediatheek.",
+              "Per groep komt er minstens één gedrukt exemplaar.",
+              "Eventueel bundelen we de krant als boekje of hangen we losse pagina’s op."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Maak een poster of flyer",
+            "subtitle": "",
+            "items": [
+              "Elke groep maakt één van de volgende:",
+              "Een promotieposter voor op school",
+              "Een flyer om mee te geven aan ouders",
+              "Een digitale aankondiging voor op de website of nieuwsbrief",
+              "Gebruik korte teksten, pakkende quotes en verwijzing naar de krant."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Digitale verspreiding voorbereiden",
+            "subtitle": "",
+            "items": [
+              "Zorg dat de PDF:",
+              "Een duidelijke naam heeft",
+              "Verstuurd kan worden naar ouders of de schoolleiding",
+              "Eventueel voorzien is van een QR-code",
+              "Vraag de docent hoe en waar de krant gepubliceerd wordt."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Bereid je presentatie voor",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-8-presentatie": [
+          {
+            "type": "title",
+            "title": "Les 8 - Presentatie en terugblik",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van deze les",
+            "subtitle": "",
+            "items": [
+              "Vandaag presenteren jullie de krant aan elkaar.",
+              "We reflecteren op het proces en vieren het eindresultaat.",
+              "De krant wordt eventueel ook gedeeld met ouders, andere klassen of via de schoolwebsite."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Presentatie-instructie",
+            "subtitle": "",
+            "items": [
+              "Elke groep presenteert kort:",
+              "Wat heb je gemaakt?",
+              "Hoe hebben jullie samengewerkt?",
+              "Wat vond je het leukste om te doen?",
+              "Wat zou je volgende keer anders aanpakken?",
+              "Maximaal 3 minuten per groep."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Klasfeedback",
+            "subtitle": "",
+            "items": [
+              "Na elke presentatie:",
+              "Geef elkaar een compliment",
+              "Geef eventueel een tip voor verbetering",
+              "De docent geeft ook korte terugkoppeling."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Verspreiding van de krant",
+            "subtitle": "",
+            "items": [
+              "De krant wordt:",
+              "Opgehangen in de klas of schoolgang",
+              "Digitaal gedeeld via PDF",
+              "Meegegeven aan leerlingen of ouders (optioneel)",
+              "De hoofdredactie en docent zorgen voor publicatie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Persoonlijke terugblik",
+            "subtitle": "",
+            "items": [
+              "Vul het reflectieformulier in:",
+              "Wat heb je geleerd over samenwerken?",
+              "Wat heb je geleerd over schrijven en vormgeven?",
+              "Waar ben je trots op?",
+              "Wat zou je volgende keer beter willen doen?",
+              "Je levert het formulier in aan het eind van de les."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Afronding van het project",
+            "subtitle": "",
+            "items": [
+              "Goed gedaan! Jullie hebben een echte krant gemaakt.",
+              "We sluiten het project af met een groepsfoto en een korte evaluatie.",
+              "De krant is nu onderdeel van de klasgeschiedenis."
+            ]
+          }
+        ],
+        "marker-les-9-reflectie": [
+          {
+            "type": "bullets",
+            "title": "KlasKrant – Reflectie en Evaluatie",
+            "subtitle": "",
+            "items": [
+              "Terugblik op samenwerking, creativiteit en resultaat"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Individuele reflectie",
+            "subtitle": "",
+            "items": [
+              "Beantwoord voor jezelf de volgende vragen:",
+              "- Wat heb jij precies gedaan in dit project?",
+              "- Wat vond je leuk om te doen?",
+              "- Wat vond je lastig?",
+              "- Wat heb je geleerd over samenwerken?",
+              "- Wat heb je geleerd over schrijven of vormgeven?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie in je groep",
+            "subtitle": "",
+            "items": [
+              "Bespreek met je groep:",
+              "- Wat ging er goed in jullie samenwerking?",
+              "- Wat zou je een volgende keer anders aanpakken?",
+              "- Hoe hebben jullie de taakverdeling ervaren?",
+              "- Waren jullie op tijd klaar? Waarom (niet)?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De klas-krant als eindproduct",
+            "subtitle": "",
+            "items": [
+              "Klassikaal gesprek:",
+              "- Wat vind je het sterkste onderdeel van de krant?",
+              "- Wat viel op bij het presenteren?",
+              "- Welke stijl past goed bij een schoolkrant?",
+              "- Zouden we dit project volgend jaar weer moeten doen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Afsluiting",
+            "subtitle": "",
+            "items": [
+              "Dank voor jullie inzet en creativiteit!",
+              "- De krant wordt verspreid (digitaal/gedrukt)",
+              "- Er komt een groepsfoto of afsluitmoment",
+              "- Jullie werk maakt nu écht deel uit van de schoolgeschiedenis"
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Klasfeed",
+          "subtitle": "Klasfeed"
+        },
+        {
+          "type": "title",
+          "title": "Les 1 - Intro",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Welkom bij KlasKrant!",
+          "subtitle": "",
+          "items": [
+            "Doel van het project:",
+            "Samen maken we één echte klas-krant",
+            "Wordt gedrukt én online gedeeld",
+            "8 lessen van 45 minuten",
+            "Je werkt in groepen én als klas",
+            "De krant komt écht van de pers (of printer!)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat hoort er in een krant?",
+          "subtitle": "",
+          "items": [
+            "📄 Bekijk met de klas een voorbeeldkrant:",
+            "Wat zie je op de voorpagina?",
+            "Welke rubrieken zijn er?",
+            "Wat vind jij leuk om te lezen?",
+            "Klassikaal gesprek: wat zou jij in een schoolkrant willen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Welke onderdelen komen in onze krant?",
+          "subtitle": "",
+          "items": [
+            "Mogelijke rubrieken:",
+            "Nieuws / Interviews",
+            "Strips / Moppen / Gedichten",
+            "Quiz / Top 5 / Lifestyle",
+            "Meningen / Columns",
+            "Fotopagina",
+            "Stemronde: wat willen we erin?",
+            "Docent maakt definitieve indeling"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe gaan we samenwerken?",
+          "subtitle": "",
+          "items": [
+            "Centrale redactie:",
+            "Hoofdredactie (3 leerlingen)",
+            "Vormgevingsteam (1 groep)",
+            "Subgroepen (4–5 leerlingen per groep):",
+            "Elke groep krijgt één onderdeel",
+            "Binnen je groep verdelen jullie de taken:",
+            "coördinator, schrijver, vormgever, enz."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag: groepsindeling",
+          "subtitle": "",
+          "items": [
+            "Verdeel de klas:",
+            "Kies of krijg je groepje",
+            "Spreek samen af wie welke rol krijgt",
+            "Vul het werkblad in:",
+            "Groepsleden",
+            "Onderwerp",
+            "Rollen",
+            "Eerste ideeën",
+            "Deadline: eind van les 1 ingevuld en ingeleverd"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les...",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 2 - Voorbereiding & bronnen",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Terugblik op vorige les",
+          "subtitle": "",
+          "items": [
+            "Groepen zijn gevormd",
+            "Rollen zijn verdeeld",
+            "Onderwerpen zijn gekozen",
+            "Vandaag gaan jullie verdiepen en voorbereiden:"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat gaan we doen vandaag?",
+          "subtitle": "",
+          "items": [
+            "Doelen:",
+            "Kies een duidelijke invalshoek voor je artikel/rubriek",
+            "Bereid je voor op interviews en bronnenonderzoek",
+            "Begin aan een eerste planning"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat wordt jullie insteek?",
+          "subtitle": "",
+          "items": [
+            "Bedenk:",
+            "Wat wil je de lezer laten weten of voelen?",
+            "Wie of wat wil je in beeld brengen?",
+            "Welke toon past bij jullie rubriek?",
+            "Gebruik het werkblad om dit vast te leggen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Interviews voorbereiden",
+          "subtitle": "",
+          "items": [
+            "Wie gaan jullie interviewen?",
+            "Schrijf minimaal 8–10 goede vragen:",
+            "Open vragen (hoe, waarom, wat vind jij...)",
+            "Vragen met verdieping",
+            "Eén grappige of verrassende vraag",
+            "Plan een afsprakemoment"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe verzamel je informatie?",
+          "subtitle": "",
+          "items": [
+            "Zoek:",
+            "Eerdere nieuwsbrieven of schoolberichten",
+            "Foto’s, posters, aankondigingen",
+            "Andermans mening over het onderwerp",
+            "Verzamel alvast foto's of illustraties die je wil gebruiken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkplanning maken",
+          "subtitle": "",
+          "items": [
+            "Per groep:",
+            "Wat moet er af vóór les 4?",
+            "Wie doet wat wanneer?",
+            "Wat heb je van anderen nodig (foto’s, interviews)?",
+            "Vul het planningsgedeelte van je werkblad in"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan het werk!",
+          "subtitle": "",
+          "items": [
+            "Jullie hebben de rest van de les om:",
+            "Te brainstormen",
+            "Vragen te schrijven",
+            "Informatie te verzamelen",
+            "De taakverdeling concreet te maken",
+            "De hoofdredactie komt bij elke groep langs voor overleg"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende les...",
+          "subtitle": "",
+          "items": [
+            "Dan gaan we echt schrijven!",
+            "Breng je interviewvragen en materiaal mee",
+            "Zorg dat je weet wat jouw rol is",
+            "Start met een ruwe tekstversie"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 3 - Teksten schrijven",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag ga je starten met het schrijven van je teksten.",
+            "Je werkt in je subgroep aan:",
+            "het hoofdartikel",
+            "de interviewtekst",
+            "of je rubriek",
+            "Afhankelijk van je rol en onderdeel."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet jouw groep schrijven?",
+          "subtitle": "",
+          "items": [
+            "Nieuws/Interview: artikel van 200–300 woorden",
+            "Interview: volledig uitgeschreven interview",
+            "Opinie: column of meningstekst",
+            "Creatief: mop, verhaal, gedicht of stripteksten",
+            "Lifestyle: quiz, top 5, recensie of rubriek",
+            "Fotogroep: bijschriften en inleidingstekst"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opbouw van een artikel",
+          "subtitle": "",
+          "items": [
+            "Een goed artikel bestaat uit:",
+            "Titel",
+            "Inleiding: waar gaat het over?",
+            "Middenstuk: de informatie of het interview",
+            "Slot: afronding of conclusie",
+            "Gebruik alinea’s en voeg quotes toe indien mogelijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan het werk",
+          "subtitle": "",
+          "items": [
+            "Je verdeelt binnen de groep wie wat schrijft.",
+            "Gebruik eventueel het werkblad.",
+            "Vraag de hoofdredactie of docent om hulp bij:",
+            "spelling of formuleringen",
+            "het herschrijven van teksten",
+            "het structureren van informatie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende les",
+          "subtitle": "",
+          "items": [
+            "Volgende les werk je verder aan je tekst én begin je met de creatieve onderdelen (zoals de mop, quiz, strip, vormgeving of extra rubrieken).",
+            "Lever aan het eind van vandaag je ruwe tekstversie in bij de hoofdredactie."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 4 - Aanvullen en doorwerken",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag werk je verder aan je bijdrage.",
+            "Je vult je tekst aan, herschrijft waar nodig en begint aan de creatieve onderdelen van je rubriek.",
+            "De hoofdredactie bekijkt vandaag alle voortgang per groep."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Groepsdoelen voor vandaag",
+          "subtitle": "",
+          "items": [
+            "1. Afronden van de eerste versies van de tekst",
+            "2. Toevoegen van beeldmateriaal, titels en bijschriften",
+            "3. Starten met creatieve onderdelen:",
+            "strip, quiz, mop, extra rubriek of top 5",
+            "4. Inplannen van vormgevingstaken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Creatieve invulling van je pagina",
+          "subtitle": "",
+          "items": [
+            "Elke spread bevat minimaal één creatieve toevoeging:",
+            "Strip, cartoon of tekening",
+            "Mop, quiz of testje",
+            "Top 5 of boek/filmtip",
+            "Wist-je-datjes of collage",
+            "Zorg voor afwisseling en originaliteit."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Verbeter je tekst",
+          "subtitle": "",
+          "items": [
+            "Controleer samen:",
+            "Staat er een duidelijke titel boven?",
+            "Is je tekst opgedeeld in alinea’s?",
+            "Bevat je stuk een duidelijke kop en afsluiting?",
+            "Kun je beeld toevoegen dat past bij je tekst?",
+            "Vraag feedback aan andere groepjes of de hoofdredactie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag",
+          "subtitle": "",
+          "items": [
+            "Werk zelfstandig door in je groep:",
+            "Begin met aanvullen of herschrijven van je tekst",
+            "Voeg extra's toe zoals foto's of rubrieken",
+            "Vul het werkblad voortgang in",
+            "De hoofdredactie loopt langs voor overleg en controle."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 5 - Digitale opmaak",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag start de digitale opmaak van de krant.",
+            "Je voert je tekst in, past de layout aan en zorgt voor beeld en titels.",
+            "De vormgeving wordt bewaakt door het vormgevingsteam en de hoofdredactie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkvorm: digitaal opmaken",
+          "subtitle": "",
+          "items": [
+            "Werk in het gezamenlijke sjabloon via:",
+            "Canva (klasaccount of gedeelde link)",
+            "Google Slides",
+            "Microsoft Word met vaste layout",
+            "De docent geeft aan welke tool beschikbaar is."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat hoort er op jouw 2 pagina's?",
+          "subtitle": "",
+          "items": [
+            "Een complete spread bevat:",
+            "Titel en subtitels",
+            "Ingevulde hoofdtekst",
+            "Minimaal één afbeelding met bijschrift",
+            "Creatief onderdeel (quiz, mop, strip...)",
+            "Namen van de groepsleden in een hoekje"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Afspraak over layout",
+          "subtitle": "",
+          "items": [
+            "Gebruik de afgesproken huisstijl:",
+            "Lettertypes: max. 2 per pagina",
+            "Lettergrootte: goed leesbaar, niet te klein",
+            "Kleurgebruik: niet te druk, geen felgekleurde achtergronden",
+            "Alinea’s en witruimte aanhouden",
+            "Beelden netjes uitlijnen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Samen aan één spread werken",
+          "subtitle": "",
+          "items": [
+            "Spreek goed af wie wat doet:",
+            "Eén leerling voert tekst in",
+            "Eén verzorgt beeld en bijschriften",
+            "Eén let op stijl en uitlijning",
+            "Controleer elkaars werk en overleg met de hoofdredactie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Goed opslaan = belangrijk",
+          "subtitle": "",
+          "items": [
+            "Geef je bestand een duidelijke naam:",
+            "voorbeeld: groep4_fotopagina.pptx of .pdf",
+            "Sla je werk op in de gedeelde map of lever het in via de werkomgeving van de klas.",
+            "Alles moet aan het eind van de les digitaal opgeslagen zijn."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende les",
+          "subtitle": "",
+          "items": [
+            "In de volgende les maken we de hele krant af en voegen we alles samen tot één eindbestand.",
+            "Zorg dus dat je vandaag een volledige, nette en controleerbare versie van je bijdrage oplevert."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 6 - Afronden en samenvoegen",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag lever je je bijdrage definitief op.",
+            "De hoofdredactie en eindredactie voegen alles samen tot één krant.",
+            "Controle en afronding staan centraal."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet je nog controleren?",
+          "subtitle": "",
+          "items": [
+            "Controleer je spread op:",
+            "Spelfouten en zinsbouw",
+            "Duidelijke koppen en logische volgorde",
+            "Juiste plaatsing van beeldmateriaal",
+            "Namen van groepsleden duidelijk vermeld",
+            "Opmaak volgens de afspraken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat doet de eindredactie vandaag?",
+          "subtitle": "",
+          "items": [
+            "De eindredactie:",
+            "Leest elke bijdrage na op taal en structuur",
+            "Zorgt dat alles dezelfde toon en stijl heeft",
+            "Maakt de inhoudspagina en voert laatste verbeteringen door",
+            "Werkt samen met de hoofdredactie aan het eindbestand"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Samenstellen eindbestand",
+          "subtitle": "",
+          "items": [
+            "De hoofdredactie verzamelt alle bijdragen in één document of sjabloon.",
+            "Het vormgevingsteam controleert de indeling.",
+            "De volledige krant wordt digitaal opgeslagen als PDF."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Technische controle",
+          "subtitle": "",
+          "items": [
+            "Let op:",
+            "Volgorde van de pagina's klopt",
+            "Alles staat in hetzelfde formaat",
+            "Bestandsnaam is duidelijk (klaskrant_2025.pdf)",
+            "Geen lege of dubbele pagina’s",
+            "De inhoudspagina verwijst naar de juiste onderdelen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Volgende les",
+          "subtitle": "",
+          "items": [
+            "Volgende keer gaan we de krant printen, presenteren en verspreiden.",
+            "Zorg dat alles vandaag digitaal en volledig klaarstaat in de eindmap."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 7 - Printen en verspreiden",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag maken we de krant tastbaar.",
+            "We printen de eindversie, bereiden de presentatie voor en maken promotiemateriaal om de krant te verspreiden binnen en buiten de klas."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De krant gereedmaken voor print",
+          "subtitle": "",
+          "items": [
+            "Controleer het eindbestand op:",
+            "Juiste volgorde van pagina's",
+            "Voldoende resolutie van afbeeldingen",
+            "Geen schrijffouten meer",
+            "Bestand staat klaar als PDF",
+            "Namen van alle leerlingen zijn opgenomen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De krant printen",
+          "subtitle": "",
+          "items": [
+            "De docent print het eindbestand of laat dit doen bij de mediatheek.",
+            "Per groep komt er minstens één gedrukt exemplaar.",
+            "Eventueel bundelen we de krant als boekje of hangen we losse pagina’s op."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Maak een poster of flyer",
+          "subtitle": "",
+          "items": [
+            "Elke groep maakt één van de volgende:",
+            "Een promotieposter voor op school",
+            "Een flyer om mee te geven aan ouders",
+            "Een digitale aankondiging voor op de website of nieuwsbrief",
+            "Gebruik korte teksten, pakkende quotes en verwijzing naar de krant."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Digitale verspreiding voorbereiden",
+          "subtitle": "",
+          "items": [
+            "Zorg dat de PDF:",
+            "Een duidelijke naam heeft",
+            "Verstuurd kan worden naar ouders of de schoolleiding",
+            "Eventueel voorzien is van een QR-code",
+            "Vraag de docent hoe en waar de krant gepubliceerd wordt."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Bereid je presentatie voor",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 8 - Presentatie en terugblik",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van deze les",
+          "subtitle": "",
+          "items": [
+            "Vandaag presenteren jullie de krant aan elkaar.",
+            "We reflecteren op het proces en vieren het eindresultaat.",
+            "De krant wordt eventueel ook gedeeld met ouders, andere klassen of via de schoolwebsite."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Presentatie-instructie",
+          "subtitle": "",
+          "items": [
+            "Elke groep presenteert kort:",
+            "Wat heb je gemaakt?",
+            "Hoe hebben jullie samengewerkt?",
+            "Wat vond je het leukste om te doen?",
+            "Wat zou je volgende keer anders aanpakken?",
+            "Maximaal 3 minuten per groep."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Klasfeedback",
+          "subtitle": "",
+          "items": [
+            "Na elke presentatie:",
+            "Geef elkaar een compliment",
+            "Geef eventueel een tip voor verbetering",
+            "De docent geeft ook korte terugkoppeling."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Verspreiding van de krant",
+          "subtitle": "",
+          "items": [
+            "De krant wordt:",
+            "Opgehangen in de klas of schoolgang",
+            "Digitaal gedeeld via PDF",
+            "Meegegeven aan leerlingen of ouders (optioneel)",
+            "De hoofdredactie en docent zorgen voor publicatie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Persoonlijke terugblik",
+          "subtitle": "",
+          "items": [
+            "Vul het reflectieformulier in:",
+            "Wat heb je geleerd over samenwerken?",
+            "Wat heb je geleerd over schrijven en vormgeven?",
+            "Waar ben je trots op?",
+            "Wat zou je volgende keer beter willen doen?",
+            "Je levert het formulier in aan het eind van de les."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Afronding van het project",
+          "subtitle": "",
+          "items": [
+            "Goed gedaan! Jullie hebben een echte krant gemaakt.",
+            "We sluiten het project af met een groepsfoto en een korte evaluatie.",
+            "De krant is nu onderdeel van de klasgeschiedenis."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "KlasKrant – Reflectie en Evaluatie",
+          "subtitle": "",
+          "items": [
+            "Terugblik op samenwerking, creativiteit en resultaat"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Individuele reflectie",
+          "subtitle": "",
+          "items": [
+            "Beantwoord voor jezelf de volgende vragen:",
+            "- Wat heb jij precies gedaan in dit project?",
+            "- Wat vond je leuk om te doen?",
+            "- Wat vond je lastig?",
+            "- Wat heb je geleerd over samenwerken?",
+            "- Wat heb je geleerd over schrijven of vormgeven?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie in je groep",
+          "subtitle": "",
+          "items": [
+            "Bespreek met je groep:",
+            "- Wat ging er goed in jullie samenwerking?",
+            "- Wat zou je een volgende keer anders aanpakken?",
+            "- Hoe hebben jullie de taakverdeling ervaren?",
+            "- Waren jullie op tijd klaar? Waarom (niet)?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De klas-krant als eindproduct",
+          "subtitle": "",
+          "items": [
+            "Klassikaal gesprek:",
+            "- Wat vind je het sterkste onderdeel van de krant?",
+            "- Wat viel op bij het presenteren?",
+            "- Welke stijl past goed bij een schoolkrant?",
+            "- Zouden we dit project volgend jaar weer moeten doen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Afsluiting",
+          "subtitle": "",
+          "items": [
+            "Dank voor jullie inzet en creativiteit!",
+            "- De krant wordt verspreid (digitaal/gedrukt)",
+            "- Er komt een groepsfoto of afsluitmoment",
+            "- Jullie werk maakt nu écht deel uit van de schoolgeschiedenis"
+          ]
+        }
+      ],
+      "markers": {
+        "marker-les-1-intro": 1,
+        "marker-les-2-voorbereidingen": 8,
+        "marker-les-3-teksten": 17,
+        "marker-les-4-aanvullen": 23,
+        "marker-les-5-opmaak": 30,
+        "marker-les-6-afronden": 38,
+        "marker-les-7-printen": 45,
+        "marker-les-8-presentatie": 52,
+        "marker-les-9-reflectie": 59
       }
     }
   }
