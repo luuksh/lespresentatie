@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const klasSelect = document.getElementById('klasSelect');
   const grid = document.getElementById('plattegrond');
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
-  const PLAN_SOURCE_KEY = 'lespresentatie.jaarplanningSourceUrl';
-  const PLAN_OVERRIDES_KEY = 'lespresentatie.jaarplanningOverrides';
+  const PLAN_STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
 
@@ -14,16 +13,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   const planningItemsEl = document.getElementById('jaarplanningItems');
   const planningStatusEl = document.getElementById('jaarplanningStatus');
   const planningLastUpdateEl = document.getElementById('jaarplanningLastUpdate');
-  const planningSourceInput = document.getElementById('jaarplanningSourceInput');
-  const planningSourceSaveBtn = document.getElementById('jaarplanningSourceSave');
-  const planningSourceClearBtn = document.getElementById('jaarplanningSourceClear');
+  const planningStudioClassSelect = document.getElementById('jaarplanningStudioClassSelect');
+  const planningStudioWeekInput = document.getElementById('jaarplanningStudioWeekInput');
+  const planningEditorLessons = document.getElementById('jaarplanningEditorLessons');
   const planningEditorMeta = document.getElementById('jaarplanningEditorMeta');
   const planningEditorItems = document.getElementById('jaarplanningEditorItems');
   const planningEditorNote = document.getElementById('jaarplanningEditorNote');
   const planningEditorSaveBtn = document.getElementById('jaarplanningEditorSave');
   const planningEditorClearBtn = document.getElementById('jaarplanningEditorClear');
-  const planningEditorPickFileBtn = document.getElementById('jaarplanningEditorPickFile');
-  const planningEditorWriteFileBtn = document.getElementById('jaarplanningEditorWriteFile');
+  const planningStudioResetBtn = document.getElementById('jaarplanningStudioReset');
   const planningEditorFileStatus = document.getElementById('jaarplanningEditorFileStatus');
   const planningRefreshBtn = document.getElementById('jaarplanningRefreshBtn');
   const agendaSourceInput = document.getElementById('agendaSourceInput');
@@ -49,11 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let planningUpdatedAt = '';
   let planningFetchedAt = '';
   let planningTimer = null;
-  let planningSourceUrl = '';
-  let planningSourceFallbackTried = false;
-  let planningOverrides = {};
-  let planningEditorSourceDoc = null;
-  let planningEditorSourceHandle = null;
+  let planningStudio = null;
   let agendaTimer = null;
   let agendaSourceUrl = '';
   let agendaEntries = [];
@@ -213,19 +207,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
-  function overrideKey(classId, weekKey) {
-    const cid = normalizeClassId(classId);
-    const wid = String(weekKey || '').trim().toUpperCase();
-    if (!cid || !wid) return '';
-    return `${cid}__${wid}`;
-  }
-
-  function getPlanningOverride(classId, weekKeys = []) {
+  function getStudioEntry(classId, weekKeys = []) {
     const aliases = classIdAliases(classId);
     for (const alias of aliases) {
       for (const wk of weekKeys) {
-        const key = overrideKey(alias, wk);
-        if (key && planningOverrides[key]) return planningOverrides[key];
+        const weeks = planningData[normalizeClassId(alias)] || {};
+        const match = weeks[String(wk || '').trim().toUpperCase()];
+        if (match) return match;
       }
     }
     return null;
@@ -726,30 +714,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     return true;
   }
 
-  function resolvePlanningSourceUrl() {
-    const fromStorage = String(localStorage.getItem(PLAN_SOURCE_KEY) || '').trim();
-    if (fromStorage) return fromStorage;
-    const fromWindow = String(window.APP_CONFIG?.jaarplanningSourceUrl || '').trim();
-    return fromWindow;
-  }
-
   function defaultPlanningSourceUrl() {
     return String(window.APP_CONFIG?.jaarplanningSourceUrl || 'js/jaarplanning-live.json').trim();
   }
 
-  function loadPlanningOverrides() {
-    const raw = String(localStorage.getItem(PLAN_OVERRIDES_KEY) || '').trim();
-    if (!raw) return {};
+  function normalizeStudioDoc(raw) {
+    const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
+    if (!Array.isArray(doc.entries)) doc.entries = [];
+    if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
+    return doc;
+  }
+
+  function loadPlanningStudioFromStorage() {
+    const raw = String(localStorage.getItem(PLAN_STUDIO_KEY) || '').trim();
+    if (!raw) return null;
     try {
-      const parsed = JSON.parse(raw);
-      return parsed && typeof parsed === 'object' ? parsed : {};
+      return normalizeStudioDoc(JSON.parse(raw));
     } catch {
-      return {};
+      return null;
     }
   }
 
-  function savePlanningOverrides() {
-    localStorage.setItem(PLAN_OVERRIDES_KEY, JSON.stringify(planningOverrides));
+  function savePlanningStudioToStorage() {
+    if (!planningStudio) return;
+    localStorage.setItem(PLAN_STUDIO_KEY, JSON.stringify(planningStudio));
+  }
+
+  function rebuildPlanningFromStudio() {
+    const doc = normalizeStudioDoc(planningStudio || {});
+    planningStudio = doc;
+    planningData = buildPlanningIndex(doc);
+    planningPresentations = doc.presentations || {};
+    planningFetchedAt = new Date().toISOString();
+    planningUpdatedAt = String(doc.updatedAt || planningFetchedAt);
   }
 
   function buildPresentationTarget(lesson) {
@@ -1040,21 +1037,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const allWeeks = planningData.ALL || {};
     const classWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
     const allWeekKey = weekCandidates.find((key) => Boolean(allWeeks[key])) || '';
-    const baseWeekData = (classWeekKey || allWeekKey)
+    const weekData = (classWeekKey || allWeekKey)
       ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
       : null;
-    const overrideData = getPlanningOverride(classId, weekCandidates);
-    const weekData = overrideData
-      ? mergePlanEntries(baseWeekData, overrideData)
-      : baseWeekData;
-
-    if (!planningSourceUrl) {
-      setPlanningItems(['Koppel eerst een jaarplanning-bron in het docentpaneel.']);
-      if (planningLastUpdateEl) planningLastUpdateEl.textContent = '';
-      setPlanningStatus('Niet gekoppeld', 'warn');
-      refreshPlanningEditor();
-      return;
-    }
 
     const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));
     const hasLessons = lessonSelection.length > 0;
@@ -1096,39 +1081,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   async function fetchPlanning() {
-    if (!planningSourceUrl) {
+    if (planningStudio) {
       renderPlanning();
       return;
     }
     try {
       setPlanningStatus('Synchroniseren...', 'info');
-      const url = new URL(planningSourceUrl, window.location.href);
+      const url = new URL(defaultPlanningSourceUrl(), window.location.href);
       url.searchParams.set('_t', String(Date.now()));
       const res = await fetch(url.toString(), { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const raw = await res.json();
-      planningData = buildPlanningIndex(raw);
-      planningPresentations = raw?.presentations && typeof raw.presentations === 'object'
-        ? raw.presentations
-        : {};
-      planningFetchedAt = new Date().toISOString();
-      planningUpdatedAt = String(raw?.updatedAt || '');
+      const raw = normalizeStudioDoc(await res.json());
+      planningStudio = raw;
+      savePlanningStudioToStorage();
+      rebuildPlanningFromStudio();
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden jaarplanning:', err);
-      const fallback = defaultPlanningSourceUrl();
-      const canFallback = Boolean(
-        fallback
-        && !planningSourceFallbackTried
-        && String(planningSourceUrl || '').trim() !== fallback
-      );
-      if (canFallback) {
-        planningSourceFallbackTried = true;
-        applyPlanningSource(fallback, false);
-        return;
-      }
       setPlanningStatus('Synchronisatie mislukt', 'error');
-      setPlanningItems(['Kon de jaarplanning niet laden. Controleer de bron-URL.']);
+      setPlanningItems(['Kon de interne jaarplanning niet laden.']);
       refreshPlanningEditor();
     }
   }
@@ -1202,7 +1173,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function resetPlanningTimer() {
     if (planningTimer) clearInterval(planningTimer);
-    if (!planningSourceUrl) return;
     planningTimer = setInterval(fetchPlanning, PLAN_REFRESH_MS);
   }
 
@@ -1210,50 +1180,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaTimer) clearInterval(agendaTimer);
     if (!agendaSourceUrl) return;
     agendaTimer = setInterval(fetchAgenda, PLAN_REFRESH_MS);
-  }
-
-  function applyPlanningSource(url, persist = true) {
-    planningSourceUrl = String(url || '').trim();
-    if (planningSourceInput) planningSourceInput.value = planningSourceUrl;
-    if (persist) {
-      if (planningSourceUrl) localStorage.setItem(PLAN_SOURCE_KEY, planningSourceUrl);
-      else localStorage.removeItem(PLAN_SOURCE_KEY);
-    }
-    resetPlanningTimer();
-    fetchPlanning();
-  }
-
-  function activeWeekContext() {
-    const now = new Date();
-    const anchor = (agendaSourceUrl && activeAgendaEntry?.start) ? activeAgendaEntry.start : now;
-    const weekInfo = currentWeekCandidates(anchor);
-    const classId = normalizeClassId(klasSelect?.value || '');
-    return { classId, weekInfo };
-  }
-
-  function refreshPlanningEditor() {
-    if (!planningEditorMeta || !planningEditorItems || !planningEditorNote) return;
-    const { classId, weekInfo } = activeWeekContext();
-    if (!classId) {
-      planningEditorMeta.textContent = 'Geen klas geselecteerd.';
-      planningEditorItems.value = '';
-      planningEditorNote.value = '';
-      return;
-    }
-
-    const override = getPlanningOverride(classId, weekInfo.keys);
-    const classWeeks = planningData[classId] || {};
-    const allWeeks = planningData.ALL || {};
-    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
-    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
-    const base = (classWeekKey || allWeekKey)
-      ? mergePlanEntries(allWeekKey ? allWeeks[allWeekKey] : null, classWeekKey ? classWeeks[classWeekKey] : null)
-      : { lessons: [], items: [], note: '' };
-    const merged = override ? mergePlanEntries(base, override) : base;
-
-    planningEditorMeta.textContent = `Klas ${classId} · week ${weekInfo.week.weekNo}`;
-    planningEditorItems.value = (merged.items || []).join('\n');
-    planningEditorNote.value = String(merged.note || '');
   }
 
   function setEditorFileStatus(message, isError = false) {
@@ -1269,54 +1195,148 @@ document.addEventListener('DOMContentLoaded', async () => {
     return normalized;
   }
 
-  function currentEditorPayload() {
+  function studioWeekCandidates(weekNo) {
+    const week = String(Math.max(1, Math.min(53, Number(weekNo) || 1)));
+    const padded = String(Number(week)).padStart(2, '0');
+    const isoYear = isoWeekInfo().id.split('-W')[0];
+    return [week, padded, `W${padded}`, `${isoYear}-W${padded}`];
+  }
+
+  function studioContext() {
+    const fallbackWeek = isoWeekInfo().weekNo;
+    const weekNo = Math.max(1, Math.min(53, Number(planningStudioWeekInput?.value || fallbackWeek) || fallbackWeek));
+    const classId = canonicalClassId(planningStudioClassSelect?.value || klasSelect?.value || '');
+    return { classId, weekNo, weekKeys: studioWeekCandidates(weekNo) };
+  }
+
+  function parseLessonsFromEditor() {
+    const lines = String(planningEditorLessons?.value || '')
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean);
+    const out = [];
+    for (const line of lines) {
+      const parts = line.split('|').map((p) => p.trim());
+      if (parts.length >= 3) {
+        const [slot, project, lesson] = parts;
+        const row = { project, lesson };
+        if (/^[ABC]$/i.test(slot)) row.lessonKey = slot.toUpperCase();
+        if (project || lesson) out.push(row);
+      } else if (parts.length === 2) {
+        const [project, lesson] = parts;
+        if (project || lesson) out.push({ project, lesson });
+      } else if (parts.length === 1) {
+        out.push({ project: parts[0], lesson: '' });
+      }
+    }
+    return out;
+  }
+
+  function editorPayload() {
     return {
-      items: String(planningEditorItems?.value || '')
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean),
+      lessons: parseLessonsFromEditor(),
+      items: String(planningEditorItems?.value || '').split('\n').map((l) => l.trim()).filter(Boolean),
       note: String(planningEditorNote?.value || '').trim(),
     };
   }
 
-  function updateEditorOverride() {
-    const { classId, weekInfo } = activeWeekContext();
-    const weekKey = String(weekInfo.week.weekNo);
-    const key = overrideKey(classId, weekKey);
-    if (!key) return null;
-    planningOverrides[key] = currentEditorPayload();
-    savePlanningOverrides();
-    return { classId, weekKey };
-  }
+  function upsertStudioEntry() {
+    if (!planningStudio) planningStudio = normalizeStudioDoc({});
+    if (!Array.isArray(planningStudio.entries)) planningStudio.entries = [];
+    const { classId, weekNo, weekKeys } = studioContext();
+    if (!classId) return null;
 
-  function upsertEditorEntryInSource(doc) {
-    if (!doc || typeof doc !== 'object') return false;
-    if (!Array.isArray(doc.entries)) doc.entries = [];
-
-    const { classId, weekInfo } = activeWeekContext();
-    const canonicalClass = canonicalClassId(classId);
-    const weekKey = String(weekInfo.week.weekNo);
-    if (!canonicalClass || !weekKey) return false;
-
-    const payload = currentEditorPayload();
-    let target = doc.entries.find((entry) => (
-      entry
-      && normalizeClassId(entry.classId) === normalizeClassId(canonicalClass)
-      && String(entry.week || '').trim() === weekKey
-    ));
-
+    let target = planningStudio.entries.find((entry) => {
+      if (!entry || typeof entry !== 'object') return false;
+      if (normalizeClassId(entry.classId) !== normalizeClassId(classId)) return false;
+      return weekKeys.includes(String(entry.week || '').trim().toUpperCase());
+    });
     if (!target) {
-      target = { classId: canonicalClass, week: weekKey, lessons: [], items: [] };
-      doc.entries.push(target);
+      target = { classId, week: String(weekNo), lessons: [], items: [] };
+      planningStudio.entries.push(target);
     }
 
-    target.classId = canonicalClass;
-    target.week = weekKey;
+    const payload = editorPayload();
+    target.classId = classId;
+    target.week = String(weekNo);
+    target.lessons = payload.lessons;
     target.items = payload.items;
     if (payload.note) target.note = payload.note;
     else delete target.note;
 
-    return true;
+    planningStudio.updatedAt = new Date().toISOString();
+    savePlanningStudioToStorage();
+    rebuildPlanningFromStudio();
+    return { classId, weekNo };
+  }
+
+  function clearStudioEntry() {
+    if (!planningStudio || !Array.isArray(planningStudio.entries)) return null;
+    const { classId, weekNo, weekKeys } = studioContext();
+    if (!classId) return null;
+    planningStudio.entries = planningStudio.entries.filter((entry) => {
+      if (!entry || typeof entry !== 'object') return true;
+      if (normalizeClassId(entry.classId) !== normalizeClassId(classId)) return true;
+      return !weekKeys.includes(String(entry.week || '').trim().toUpperCase());
+    });
+    planningStudio.updatedAt = new Date().toISOString();
+    savePlanningStudioToStorage();
+    rebuildPlanningFromStudio();
+    return { classId, weekNo };
+  }
+
+  function fillStudioClassOptions() {
+    if (!planningStudioClassSelect) return;
+    const set = new Set();
+    for (const option of [...(klasSelect?.options || [])]) {
+      const c = canonicalClassId(option.value);
+      if (c) set.add(c);
+    }
+    for (const entry of planningStudio?.entries || []) {
+      const c = canonicalClassId(entry?.classId || '');
+      if (c) set.add(c);
+    }
+    const options = [...set].sort();
+    planningStudioClassSelect.innerHTML = '';
+    for (const c of options) {
+      const option = document.createElement('option');
+      option.value = c;
+      option.textContent = c;
+      planningStudioClassSelect.appendChild(option);
+    }
+    if (options.length && !planningStudioClassSelect.value) {
+      planningStudioClassSelect.value = canonicalClassId(klasSelect?.value || '') || options[0];
+    }
+  }
+
+  function formatLessonsForEditor(lessons = []) {
+    return lessons.map((lesson) => {
+      const slot = String(lesson?.lessonKey || '').trim().toUpperCase();
+      const project = String(lesson?.project || '').trim();
+      const rowLesson = String(lesson?.lesson || '').trim();
+      return slot ? `${slot} | ${project} | ${rowLesson}` : `${project} | ${rowLesson}`;
+    }).join('\n');
+  }
+
+  function refreshPlanningEditor() {
+    if (!planningEditorMeta || !planningEditorItems || !planningEditorNote || !planningEditorLessons) return;
+    fillStudioClassOptions();
+    const { classId, weekNo, weekKeys } = studioContext();
+    if (planningStudioWeekInput && !planningStudioWeekInput.value) {
+      planningStudioWeekInput.value = String(weekNo);
+    }
+    if (!classId) {
+      planningEditorMeta.textContent = 'Geen klas geselecteerd.';
+      planningEditorLessons.value = '';
+      planningEditorItems.value = '';
+      planningEditorNote.value = '';
+      return;
+    }
+    const entry = getStudioEntry(classId, weekKeys) || { lessons: [], items: [], note: '' };
+    planningEditorMeta.textContent = `Studio · klas ${classId} · week ${weekNo}`;
+    planningEditorLessons.value = formatLessonsForEditor(entry.lessons || []);
+    planningEditorItems.value = (entry.items || []).join('\n');
+    planningEditorNote.value = String(entry.note || '');
   }
 
   function applyAgendaSource(url, persist = true) {
@@ -1330,88 +1350,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchAgenda();
   }
 
-  planningSourceSaveBtn?.addEventListener('click', () => {
-    planningSourceFallbackTried = false;
-    applyPlanningSource(planningSourceInput?.value || '', true);
-  });
-
-  planningSourceInput?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      planningSourceFallbackTried = false;
-      applyPlanningSource(planningSourceInput.value, true);
-    }
-  });
-
-  planningSourceClearBtn?.addEventListener('click', () => {
-    planningSourceFallbackTried = false;
-    applyPlanningSource(defaultPlanningSourceUrl(), true);
-  });
-
   planningEditorSaveBtn?.addEventListener('click', () => {
-    const updated = updateEditorOverride();
+    const updated = upsertStudioEntry();
     if (!updated) return;
     renderPlanning();
-    setEditorFileStatus(`Week opgeslagen in app: ${updated.classId} week ${updated.weekKey}.`);
+    setEditorFileStatus(`Studio opgeslagen: ${updated.classId} week ${updated.weekNo}.`);
   });
 
   planningEditorClearBtn?.addEventListener('click', () => {
-    const { classId, weekInfo } = activeWeekContext();
-    const key = overrideKey(classId, String(weekInfo.week.weekNo));
-    if (!key) return;
-    delete planningOverrides[key];
-    savePlanningOverrides();
+    const cleared = clearStudioEntry();
+    if (!cleared) return;
     renderPlanning();
-    setEditorFileStatus(`Week teruggezet naar brondata: ${classId} week ${weekInfo.week.weekNo}.`);
+    setEditorFileStatus(`Studio-week leeggemaakt: ${cleared.classId} week ${cleared.weekNo}.`);
   });
 
-  planningEditorPickFileBtn?.addEventListener('click', async () => {
-    if (typeof window.showOpenFilePicker !== 'function') {
-      setEditorFileStatus('Deze browser ondersteunt geen bestandskoppeling. Gebruik Chrome/Edge.', true);
-      return;
-    }
-    try {
-      const [handle] = await window.showOpenFilePicker({
-        multiple: false,
-        types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }],
-      });
-      if (!handle) return;
-      const file = await handle.getFile();
-      const text = await file.text();
-      const doc = JSON.parse(text);
-      if (!doc || typeof doc !== 'object' || !Array.isArray(doc.entries)) {
-        throw new Error('Geen geldig jaarplanning-bronbestand (entries ontbreekt).');
-      }
-      planningEditorSourceHandle = handle;
-      planningEditorSourceDoc = doc;
-      setEditorFileStatus(`Bronbestand gekoppeld: ${file.name}`);
-    } catch (err) {
-      if (err?.name === 'AbortError') return;
-      setEditorFileStatus(`Koppelen mislukt: ${err?.message || err}`, true);
-    }
+  planningStudioClassSelect?.addEventListener('change', () => {
+    refreshPlanningEditor();
   });
 
-  planningEditorWriteFileBtn?.addEventListener('click', async () => {
-    if (!planningEditorSourceHandle || !planningEditorSourceDoc) {
-      setEditorFileStatus('Koppel eerst een bronbestand.', true);
-      return;
-    }
-    const updated = upsertEditorEntryInSource(planningEditorSourceDoc);
-    if (!updated) {
-      setEditorFileStatus('Kon wijziging niet toepassen op bronbestand.', true);
-      return;
-    }
-    try {
-      const writable = await planningEditorSourceHandle.createWritable();
-      await writable.write(`${JSON.stringify(planningEditorSourceDoc, null, 2)}\n`);
-      await writable.close();
-      updateEditorOverride();
-      renderPlanning();
-      const { classId, weekInfo } = activeWeekContext();
-      setEditorFileStatus(`Opgeslagen naar bronbestand: ${classId} week ${weekInfo.week.weekNo}.`);
-    } catch (err) {
-      setEditorFileStatus(`Opslaan mislukt: ${err?.message || err}`, true);
-    }
+  planningStudioWeekInput?.addEventListener('input', () => {
+    refreshPlanningEditor();
+  });
+
+  planningStudioResetBtn?.addEventListener('click', async () => {
+    localStorage.removeItem(PLAN_STUDIO_KEY);
+    planningStudio = null;
+    await fetchPlanning();
+    renderPlanning();
+    setEditorFileStatus('Studio teruggezet naar interne basisplanning.');
   });
 
   planningRefreshBtn?.addEventListener('click', () => {
@@ -1485,13 +1451,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
+    if (planningStudioClassSelect) {
+      planningStudioClassSelect.value = canonicalClassId(klasSelect.value);
+    }
     renderPlanning();
     updateClockMarkerTarget(new Date());
   });
-  planningOverrides = loadPlanningOverrides();
-  setEditorFileStatus('Nog geen bronbestand gekoppeld.');
-  planningSourceFallbackTried = false;
-  applyPlanningSource(resolvePlanningSourceUrl(), false);
+
+  planningStudio = loadPlanningStudioFromStorage();
+  if (planningStudio) {
+    rebuildPlanningFromStudio();
+  } else {
+    await fetchPlanning();
+  }
+  if (planningStudioWeekInput) planningStudioWeekInput.value = String(isoWeekInfo().weekNo);
+  if (planningStudioClassSelect) planningStudioClassSelect.value = canonicalClassId(klasSelect?.value || '');
+  setEditorFileStatus('Jaarplanning Studio actief (intern).');
+  resetPlanningTimer();
+  renderPlanning();
+
   applyAgendaSource(resolveAgendaSourceUrl(), false);
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
   clockMarkerTimer = setInterval(() => updateClockMarkerTarget(new Date()), 30 * 1000);

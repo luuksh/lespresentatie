@@ -1,35 +1,27 @@
 # Interne Jaarplanning
 
-De jaarplanning werkt volledig intern via JSON.
+De jaarplanning werkt volledig intern via de Jaarplanning Studio in de app.
 
-## Bronbestand
+## Studio gebruik
 
-- `data/jaarplanning/jaarplanning-intern.json`
+1. Open in het docentpaneel `Jaarplanning Studio`.
+2. Kies klas en week.
+3. Bewerk:
+   - `Lessen` (regelvorm: `A | Project | Les`)
+   - `Items` (1 regel = 1 item)
+   - `Notitie`
+4. Klik `Week opslaan`.
+5. Wijzigingen zijn direct intern actief en gekoppeld aan programma van (volgende) les.
 
-## Publiceren
+## Publiceren naar GitHub (optioneel)
+
+Wil je de studio-stand ook naar de repo publiceren:
 
 ```bash
 ./update-jaarplanning.sh
 ```
 
-Dit bouwt `js/jaarplanning-live.json`, commit en push (tenzij je `--no-push` gebruikt).
-
-## Koppelen in de app
-
-Gebruik als bron-URL in het docentpaneel:
-
-`https://raw.githubusercontent.com/luuksh/lespresentatie/main/js/jaarplanning-live.json`
-
-## Interne editor
-
-In het docentpaneel:
-1. Open `Jaarplanning intern bewerken`.
-2. Klik `Koppel bronbestand` en kies `data/jaarplanning/jaarplanning-intern.json`.
-3. Pas items/notitie aan voor de huidige klas/week.
-4. Klik `Opslaan naar bronbestand`.
-5. Draai daarna `./update-jaarplanning.sh` om te publiceren.
-
 ## Opmerking
 
 - Geen OneDrive, geen PowerPoint-koppeling, geen Microsoft-diensten.
-- Alleen interne projectbestanden en GitHub-publicatie van de JSON-feed.
+- Geen bronbestand-koppeling nodig in de UI.
