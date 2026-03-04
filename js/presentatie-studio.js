@@ -2,6 +2,7 @@ const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
 
 const projectSelect = document.getElementById('projectSelect');
+const generateInternalBtn = document.getElementById('generateInternalBtn');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
 const projectTitle = document.getElementById('projectTitle');
 const deckTitleInput = document.getElementById('deckTitleInput');
@@ -119,8 +120,10 @@ function markerRowsForProject(projectName) {
     rows.push({
       markerId,
       slideIndex: Number.isInteger(idx) ? idx : 0,
+      type: String(slide?.type || 'title').trim() || 'title',
       title: String(slide?.title || '').trim(),
       subtitle: String(slide?.subtitle || '').trim(),
+      bullets: Array.isArray(slide?.items) ? slide.items.map((x) => String(x || '').trim()).filter(Boolean) : [],
     });
   }
   rows.sort((a, b) => a.markerId.localeCompare(b.markerId));
@@ -143,10 +146,18 @@ function renderProject() {
   markerBody.innerHTML = '';
   for (const row of rows) {
     const tr = document.createElement('tr');
+    const bulletText = row.bullets.join('\n').replace(/"/g, '&quot;');
     tr.innerHTML = `
       <td>${row.markerId}</td>
+      <td>
+        <select class=\"marker-input\" data-marker=\"${row.markerId}\" data-field=\"type\">
+          <option value=\"title\" ${row.type === 'title' ? 'selected' : ''}>Titel</option>
+          <option value=\"bullets\" ${row.type === 'bullets' ? 'selected' : ''}>Bullets</option>
+        </select>
+      </td>
       <td><input class="marker-input" data-marker="${row.markerId}" data-field="title" value="${row.title.replace(/"/g, '&quot;')}" /></td>
       <td><input class="marker-input" data-marker="${row.markerId}" data-field="subtitle" value="${row.subtitle.replace(/"/g, '&quot;')}" /></td>
+      <td><textarea class=\"marker-textarea\" data-marker=\"${row.markerId}\" data-field=\"items\">${bulletText}</textarea></td>
     `;
     markerBody.appendChild(tr);
   }
@@ -175,12 +186,56 @@ function saveProject() {
     const field = String(input.dataset.field || '');
     const idx = Number(pres.markers?.[markerId]);
     if (!markerId || !Number.isInteger(idx) || !pres.slides[idx]) continue;
+    if (field === 'type') {
+      const raw = String(input.value || '').trim().toLowerCase();
+      pres.slides[idx].type = raw === 'bullets' ? 'bullets' : 'title';
+    }
     if (field === 'title') pres.slides[idx].title = String(input.value || '').trim();
     if (field === 'subtitle') pres.slides[idx].subtitle = String(input.value || '').trim();
+  }
+  for (const input of markerBody.querySelectorAll('.marker-textarea')) {
+    const markerId = String(input.dataset.marker || '');
+    const idx = Number(pres.markers?.[markerId]);
+    if (!markerId || !Number.isInteger(idx) || !pres.slides[idx]) continue;
+    const items = String(input.value || '')
+      .split('\\n')
+      .map((line) => line.trim())
+      .filter(Boolean);
+    pres.slides[idx].items = items;
   }
 
   saveStudio();
   setStatus(`Project opgeslagen: ${project}.`);
+}
+
+function generateInternalVersion() {
+  const project = String(projectSelect.value || '').trim();
+  if (!project) return;
+  const deckId = projectDeckId(project);
+  const pres = state.doc.presentations[deckId];
+  if (!pres) return;
+
+  for (const [markerId, idxRaw] of Object.entries(pres.markers || {})) {
+    const idx = Number(idxRaw);
+    if (!Number.isInteger(idx) || !pres.slides[idx]) continue;
+    const markerLabel = markerId.replace(/^marker-/, '').replace(/-/g, ' ');
+    pres.slides[idx].type = 'bullets';
+    if (!String(pres.slides[idx].title || '').trim()) {
+      pres.slides[idx].title = markerLabel;
+    }
+    if (!Array.isArray(pres.slides[idx].items) || !pres.slides[idx].items.length) {
+      pres.slides[idx].items = [
+        'Doel van de les',
+        'Kernactiviteit',
+        'Verwerking',
+        'Afsluiting / reflectie',
+      ];
+    }
+  }
+
+  saveStudio();
+  renderProject();
+  setStatus(`Interne versie gegenereerd voor project: ${project}.`);
 }
 
 function fillProjects(doc) {
@@ -219,5 +274,6 @@ async function boot() {
 
 projectSelect.addEventListener('change', renderProject);
 saveProjectBtn.addEventListener('click', saveProject);
+generateInternalBtn.addEventListener('click', generateInternalVersion);
 
 boot();

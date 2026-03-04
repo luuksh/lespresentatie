@@ -23,6 +23,7 @@
       <aside class="studio-card sidebar">
         <h2>Projecten</h2>
         <select id="projectSelect"></select>
+        <button id="generateInternalBtn" type="button" class="btn btn-secondary">Genereer interne versie</button>
         <button id="saveProjectBtn" type="button" class="btn btn-primary">Project opslaan</button>
       </aside>
 
@@ -42,8 +43,10 @@
             <thead>
               <tr>
                 <th>Marker</th>
+                <th>Type</th>
                 <th>Slide titel</th>
                 <th>Slide subtitel</th>
+                <th>Bullets (1 per regel)</th>
               </tr>
             </thead>
             <tbody id="markerBody"></tbody>
