@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T09:55:31+01:00",
+  "updatedAt": "2026-03-04T09:58:13+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -29341,7 +29341,7 @@
       "title": "Klasfeed",
       "subtitle": "Klasfeed",
       "project": "Klasfeed",
-      "importVersion": 2026030408,
+      "importVersion": 2026030410,
       "markerDecks": {
         "marker-les-1-intro": [
           {
@@ -29524,6 +29524,352 @@
               "Breng je interviewvragen en materiaal mee",
               "Zorg dat je weet wat jouw rol is",
               "Start met een ruwe tekstversie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkbladen per groep",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "Groep 1: Nieuws",
+              "Groep 2: Interview",
+              "Groep 3: Creatief",
+              "Groep 4: Opinie",
+              "Groep 5: Lifestyle",
+              "Groep 6: Fotopagina",
+              "Groep 7: Vormgeving",
+              "Groep 8: Eindredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 1 - Nieuws (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 1",
+              "Nieuws & Schoolreportage",
+              "Leerdoel:",
+              "Je leert hoe je een journalistiek artikel schrijft over iets wat er in of rond de school gebeurt. Je oefent met interviewvragen, structuur, en samenwerken in een redactiegroep.",
+              "Jullie opdracht:",
+              "- Schrijf 2 korte nieuwsartikelen van elk 200–300 woorden- Minstens 1 artikel bevat een interview- Voeg 2 bijpassende foto’s of illustraties toe- Bedenk een titel, tussenkopjes en bijschriften- Houd je aan de stijl van een echte krant",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 1 - Nieuws (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, onderwerp gekozen",
+              "[ ] Les 2 – Interview voorbereid en bronnen verzameld",
+              "[ ] Les 3 – Eerste artikel geschreven",
+              "[ ] Les 4 – Tweede artikel en beeld toegevoegd",
+              "[ ] Les 5 – Teksten ingevoerd in sjabloon",
+              "[ ] Les 6 – Laatste controle, alles ingeleverd",
+              "✅ Eindcontrole:",
+              "[ ] Twee nieuwsartikelen van voldoende lengte"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 1 - Nieuws (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Minimaal één interview opgenomen",
+              "[ ] Teksten zonder spelfouten of tikfouten",
+              "[ ] Beeldmateriaal toegevoegd met bijschriften",
+              "[ ] Opmaak klopt met de rest van de krant",
+              "[ ] Bestand ingeleverd bij hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 2 - Interview (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 2",
+              "Interviewpagina",
+              "Leerdoel:",
+              "Je leert hoe je een interview voorbereidt, afneemt en uitschrijft. Je oefent met het stellen van goede vragen, luisteren en het schrijven in een duidelijke vorm.",
+              "Jullie opdracht:",
+              "- Bereid een interview voor met minimaal 10 vragen- Interview iemand binnen of buiten de school (bijv. docent, conciërge, leerling)- Schrijf het interview uit in vraag-antwoordvorm (250–400 woorden)- Voeg een korte inleiding toe- Voeg een portretfoto of sfeerfoto toe met bijschrift",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 2 - Interview (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, geïnterviewde gekozen",
+              "[ ] Les 2 – Vragen voorbereid, afspraak gepland",
+              "[ ] Les 3 – Interview afgenomen of ingepland",
+              "[ ] Les 4 – Interview uitgeschreven en ingeleid",
+              "[ ] Les 5 – Tekst ingevoerd in sjabloon, foto toegevoegd",
+              "[ ] Les 6 – Laatste controle, alles ingeleverd",
+              "Eindcontrole:",
+              "[ ] Interview is volledig en duidelijk leesbaar"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 2 - Interview (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Voldoende lengte (250–400 woorden)",
+              "[ ] Goede afwisseling tussen vragen en antwoorden",
+              "[ ] Korte inleiding boven het interview",
+              "[ ] Foto met bijschrift toegevoegd",
+              "[ ] Bestand ingeleverd bij hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 3 - Creatief (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 3",
+              "Creatieve Pagina (puzzel, mop, strip, quiz)",
+              "Leerdoel:",
+              "Je leert hoe je een creatieve bijdrage maakt voor in een krant. Je oefent met het maken van puzzels, strips, moppen, quizzen of woordzoekers die passen bij de stijl van een schoolkrant.",
+              "Jullie opdracht:",
+              "- Kies één of twee creatieve onderdelen: puzzel, mop, quiz, strip, rebus of woordzoeker- Bedenk een originele en grappige invulling- Zorg dat het duidelijk is hoe het werkt- Test je puzzel of quiz bij een andere groep- Werk netjes en maak het geschikt voor in de krant",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 3 - Creatief (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd en opdracht gekozen",
+              "[ ] Les 2 – Eerste schets of ontwerp gemaakt",
+              "[ ] Les 3 – Uitwerking en test bij andere groep",
+              "[ ] Les 4 – Definitieve versie af en klaar voor krant",
+              "Eindcontrole:",
+              "[ ] De puzzel/strip/quiz is origineel",
+              "[ ] Alles is goed leesbaar en duidelijk uitgelegd",
+              "[ ] Het past bij de stijl van een schoolkrant"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 3 - Creatief (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Het is getest en aangepast op feedback",
+              "[ ] Het is netjes uitgewerkt voor publicatie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 4 - Opinie (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 4",
+              "Opinie & Column",
+              "Leerdoel:",
+              "Je leert hoe je een persoonlijke mening op een duidelijke manier onder woorden brengt. Je oefent met het schrijven van opiniestukken, het onderbouwen van standpunten en het gebruiken van een pakkende schrijfstijl.",
+              "Jullie opdracht:",
+              "- Schrijf één column (150–250 woorden) met een duidelijke stijl en stem- Schrijf één opiniestuk over een onderwerp waar je echt iets van vindt- Voeg een passende afbeelding of illustratie toe- Gebruik een titel die de lezer nieuwsgierig maakt- Zorg voor afwisseling in toon (serieus, grappig, prikkelend)",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 4 - Opinie (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, onderwerpen gekozen",
+              "[ ] Les 2 – Eerste versies van column en opiniestuk geschreven",
+              "[ ] Les 3 – Teksten herschreven met feedback",
+              "[ ] Les 4 – Beeld gekozen en bijschrift geschreven",
+              "[ ] Les 5 – Alles ingevoerd in sjabloon",
+              "[ ] Les 6 – Laatste controle, ingeleverd",
+              "Eindcontrole:",
+              "[ ] Column en opiniestuk zijn afgerond"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 4 - Opinie (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Duidelijke standpunten en originele toon",
+              "[ ] Spelling en zinsbouw gecontroleerd",
+              "[ ] Beeldmateriaal en bijschrift toegevoegd",
+              "[ ] Alles correct ingevoerd in het einddocument",
+              "[ ] Bestand ingeleverd bij hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 5 - Lifestyle (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 5",
+              "Lifestyle, testjes & Toplijstjes",
+              "Leerdoel:",
+              "Je leert hoe je op een creatieve manier schrijft over onderwerpen die aansluiten bij het leven van je klasgenoten. Je oefent met het maken van quizzes, lijstjes en korte informatieve stukjes op een speelse manier.",
+              "Jullie opdracht:",
+              "- Maak minimaal twee van de volgende onderdelen: • Een quiz (“Wat voor type leerling ben jij?”) met 6 vragen en uitslagen • Een top 5-lijstje met korte toelichting • Een recensie van een boek, film of serie (100–150 woorden) • Een rubriek zoals “In de tas van...” met foto en toelichting- Zorg voor een aantrekkelijke en overzichtelijke layout- Voeg titels en eventueel visuele elementen toe",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 5 - Lifestyle (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, onderdelen gekozen",
+              "[ ] Les 2 – Quiz of rubriek voorbereid",
+              "[ ] Les 3 – Eerste teksten geschreven",
+              "[ ] Les 4 – Rubriek uitgewerkt met beeld",
+              "[ ] Les 5 – Layout toegepast in sjabloon",
+              "[ ] Les 6 – Laatste controle, ingeleverd",
+              "Eindcontrole:",
+              "[ ] Minimaal twee onderdelen zijn volledig uitgewerkt"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 5 - Lifestyle (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Teksten zijn speels, duidelijk en goed opgebouwd",
+              "[ ] Titels en visuele elementen toegevoegd",
+              "[ ] Alles correct geplaatst in de krantlayout",
+              "[ ] Bestand ingeleverd bij hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 6 - Fotopagina (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 6",
+              "Fotopagina of Beeldverhaal",
+              "Leerdoel:",
+              "Je leert hoe je beeldmateriaal op een journalistieke manier presenteert. Je oefent met het maken en selecteren van foto’s, het schrijven van bijschriften en het vormgeven van een visuele pagina.",
+              "Jullie opdracht:",
+              "- Maak een fotopagina of beeldverhaal met 10–12 originele foto’s- Kies een thema (bijv. “Een dag uit het leven van…”, “Schoolgeheimen”, “De plek waar…”)- Schrijf een korte inleiding (100–150 woorden)- Voeg bij elke foto een creatief of informatief bijschrift toe- Zorg voor een aantrekkelijke en logische opmaak",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 6 - Fotopagina (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, thema gekozen",
+              "[ ] Les 2 – Eerste foto's gemaakt of gepland",
+              "[ ] Les 3 – Bijschriften geschreven",
+              "[ ] Les 4 – Foto's geselecteerd en gerangschikt",
+              "[ ] Les 5 – Alles ingevoerd in sjabloon",
+              "[ ] Les 6 – Laatste controle, ingeleverd",
+              "Eindcontrole:",
+              "[ ] 10–12 foto's zijn aanwezig en geordend"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 6 - Fotopagina (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Bijschriften zijn creatief en informatief",
+              "[ ] Inleiding is duidelijk en past bij het geheel",
+              "[ ] Opmaak is verzorgd en consistent met de krant",
+              "[ ] Bestand ingeleverd bij hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 7 - Vormgeving (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 7",
+              "Voorpagina & Vormgevingsteam",
+              "Leerdoel:",
+              "Je leert hoe je een herkenbare vormgeving maakt en bewaakt voor een gezamenlijk eindproduct. Je oefent met lay-out, typografie, kleurgebruik en het combineren van beeld en tekst op een visueel aantrekkelijke manier.",
+              "Jullie opdracht:",
+              "- Ontwerp een opvallende voorpagina: • Titel van de krant • 1 grote afbeelding • Aankondiging van 3 rubrieken binnenin • Duidelijke datum en klas- Stel een visuele huisstijl op (lettertypes, kleuren, titels)- Help andere groepen met toepassen van de stijl- Controleer de opmaak van alle spreads op consistentie",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 7 - Vormgeving (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, rolverdeling gemaakt",
+              "[ ] Les 2 – Eerste schets voor voorpagina gemaakt",
+              "[ ] Les 3 – Stijlvoorstel opgesteld en gedeeld",
+              "[ ] Les 4 – Groepen geholpen met vormgeving",
+              "[ ] Les 5 – Voorpagina en stijlelementen afgerond",
+              "[ ] Les 6 – Eindversie gebundeld en gecontroleerd",
+              "✅ Eindcontrole:",
+              "[ ] Voorpagina bevat alle gevraagde elementen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 7 - Vormgeving (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Stijl is toegepast in alle spreads",
+              "[ ] Lettertype, kleuren en indeling zijn consistent",
+              "[ ] Alle spreads nagekeken op vormgevingsfouten",
+              "[ ] Krant als één bestand samengevoegd",
+              "[ ] Bestand ingeleverd bij docent of hoofdredactie"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 8 - Eindredactie (1/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "KlasKrant – Werkblad Groep 8",
+              "Eindredactie & Spellingcontrole",
+              "Leerdoel:",
+              "Je leert hoe je teksten controleert op spelling, zinsbouw, toon en inhoud. Je oefent met redactiewerk, eindcontrole en het samenwerken met andere groepen om de krant foutloos en duidelijk te maken.",
+              "Jullie opdracht:",
+              "- Controleer de teksten van alle groepen op: • Spelling en grammatica • Zinsbouw en leesbaarheid • Consistente toon en stijl- Geef per groep feedback en werk samen aan verbeteringen- Schrijf de inhoudspagina van de krant- Help de hoofdredactie bij de eindcontrole van het hele document",
+              "Rollen in jullie groep:",
+              "Planning en voortgang (vink af):"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 8 - Eindredactie (2/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Les 1 – Groep gevormd, taakverdeling gemaakt",
+              "[ ] Les 2 – Overzicht gemaakt van wie welke groep controleert",
+              "[ ] Les 3 – Eerste teksten gecontroleerd en teruggekoppeld",
+              "[ ] Les 4 – Feedbackronde 2 uitgevoerd",
+              "[ ] Les 5 – Inhoudspagina geschreven",
+              "[ ] Les 6 – Eindversie van hele krant gecontroleerd",
+              "Eindcontrole:",
+              "[ ] Alle teksten gecontroleerd op spelling en zinsbouw"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkblad Groep 8 - Eindredactie (3/3)",
+            "subtitle": "Klasfeed werkbladen",
+            "items": [
+              "[ ] Toon en stijl zijn consistent",
+              "[ ] Feedback gegeven aan alle groepen",
+              "[ ] Inhoudspagina is compleet en correct",
+              "[ ] Laatste check uitgevoerd met hoofdredactie",
+              "[ ] Bestand definitief klaar voor print en publicatie"
             ]
           }
         ],
@@ -30218,6 +30564,352 @@
           ]
         },
         {
+          "type": "bullets",
+          "title": "Werkbladen per groep",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "Groep 1: Nieuws",
+            "Groep 2: Interview",
+            "Groep 3: Creatief",
+            "Groep 4: Opinie",
+            "Groep 5: Lifestyle",
+            "Groep 6: Fotopagina",
+            "Groep 7: Vormgeving",
+            "Groep 8: Eindredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 1 - Nieuws (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 1",
+            "Nieuws & Schoolreportage",
+            "Leerdoel:",
+            "Je leert hoe je een journalistiek artikel schrijft over iets wat er in of rond de school gebeurt. Je oefent met interviewvragen, structuur, en samenwerken in een redactiegroep.",
+            "Jullie opdracht:",
+            "- Schrijf 2 korte nieuwsartikelen van elk 200–300 woorden- Minstens 1 artikel bevat een interview- Voeg 2 bijpassende foto’s of illustraties toe- Bedenk een titel, tussenkopjes en bijschriften- Houd je aan de stijl van een echte krant",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 1 - Nieuws (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, onderwerp gekozen",
+            "[ ] Les 2 – Interview voorbereid en bronnen verzameld",
+            "[ ] Les 3 – Eerste artikel geschreven",
+            "[ ] Les 4 – Tweede artikel en beeld toegevoegd",
+            "[ ] Les 5 – Teksten ingevoerd in sjabloon",
+            "[ ] Les 6 – Laatste controle, alles ingeleverd",
+            "✅ Eindcontrole:",
+            "[ ] Twee nieuwsartikelen van voldoende lengte"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 1 - Nieuws (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Minimaal één interview opgenomen",
+            "[ ] Teksten zonder spelfouten of tikfouten",
+            "[ ] Beeldmateriaal toegevoegd met bijschriften",
+            "[ ] Opmaak klopt met de rest van de krant",
+            "[ ] Bestand ingeleverd bij hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 2 - Interview (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 2",
+            "Interviewpagina",
+            "Leerdoel:",
+            "Je leert hoe je een interview voorbereidt, afneemt en uitschrijft. Je oefent met het stellen van goede vragen, luisteren en het schrijven in een duidelijke vorm.",
+            "Jullie opdracht:",
+            "- Bereid een interview voor met minimaal 10 vragen- Interview iemand binnen of buiten de school (bijv. docent, conciërge, leerling)- Schrijf het interview uit in vraag-antwoordvorm (250–400 woorden)- Voeg een korte inleiding toe- Voeg een portretfoto of sfeerfoto toe met bijschrift",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 2 - Interview (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, geïnterviewde gekozen",
+            "[ ] Les 2 – Vragen voorbereid, afspraak gepland",
+            "[ ] Les 3 – Interview afgenomen of ingepland",
+            "[ ] Les 4 – Interview uitgeschreven en ingeleid",
+            "[ ] Les 5 – Tekst ingevoerd in sjabloon, foto toegevoegd",
+            "[ ] Les 6 – Laatste controle, alles ingeleverd",
+            "Eindcontrole:",
+            "[ ] Interview is volledig en duidelijk leesbaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 2 - Interview (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Voldoende lengte (250–400 woorden)",
+            "[ ] Goede afwisseling tussen vragen en antwoorden",
+            "[ ] Korte inleiding boven het interview",
+            "[ ] Foto met bijschrift toegevoegd",
+            "[ ] Bestand ingeleverd bij hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 3 - Creatief (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 3",
+            "Creatieve Pagina (puzzel, mop, strip, quiz)",
+            "Leerdoel:",
+            "Je leert hoe je een creatieve bijdrage maakt voor in een krant. Je oefent met het maken van puzzels, strips, moppen, quizzen of woordzoekers die passen bij de stijl van een schoolkrant.",
+            "Jullie opdracht:",
+            "- Kies één of twee creatieve onderdelen: puzzel, mop, quiz, strip, rebus of woordzoeker- Bedenk een originele en grappige invulling- Zorg dat het duidelijk is hoe het werkt- Test je puzzel of quiz bij een andere groep- Werk netjes en maak het geschikt voor in de krant",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 3 - Creatief (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd en opdracht gekozen",
+            "[ ] Les 2 – Eerste schets of ontwerp gemaakt",
+            "[ ] Les 3 – Uitwerking en test bij andere groep",
+            "[ ] Les 4 – Definitieve versie af en klaar voor krant",
+            "Eindcontrole:",
+            "[ ] De puzzel/strip/quiz is origineel",
+            "[ ] Alles is goed leesbaar en duidelijk uitgelegd",
+            "[ ] Het past bij de stijl van een schoolkrant"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 3 - Creatief (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Het is getest en aangepast op feedback",
+            "[ ] Het is netjes uitgewerkt voor publicatie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 4 - Opinie (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 4",
+            "Opinie & Column",
+            "Leerdoel:",
+            "Je leert hoe je een persoonlijke mening op een duidelijke manier onder woorden brengt. Je oefent met het schrijven van opiniestukken, het onderbouwen van standpunten en het gebruiken van een pakkende schrijfstijl.",
+            "Jullie opdracht:",
+            "- Schrijf één column (150–250 woorden) met een duidelijke stijl en stem- Schrijf één opiniestuk over een onderwerp waar je echt iets van vindt- Voeg een passende afbeelding of illustratie toe- Gebruik een titel die de lezer nieuwsgierig maakt- Zorg voor afwisseling in toon (serieus, grappig, prikkelend)",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 4 - Opinie (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, onderwerpen gekozen",
+            "[ ] Les 2 – Eerste versies van column en opiniestuk geschreven",
+            "[ ] Les 3 – Teksten herschreven met feedback",
+            "[ ] Les 4 – Beeld gekozen en bijschrift geschreven",
+            "[ ] Les 5 – Alles ingevoerd in sjabloon",
+            "[ ] Les 6 – Laatste controle, ingeleverd",
+            "Eindcontrole:",
+            "[ ] Column en opiniestuk zijn afgerond"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 4 - Opinie (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Duidelijke standpunten en originele toon",
+            "[ ] Spelling en zinsbouw gecontroleerd",
+            "[ ] Beeldmateriaal en bijschrift toegevoegd",
+            "[ ] Alles correct ingevoerd in het einddocument",
+            "[ ] Bestand ingeleverd bij hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 5 - Lifestyle (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 5",
+            "Lifestyle, testjes & Toplijstjes",
+            "Leerdoel:",
+            "Je leert hoe je op een creatieve manier schrijft over onderwerpen die aansluiten bij het leven van je klasgenoten. Je oefent met het maken van quizzes, lijstjes en korte informatieve stukjes op een speelse manier.",
+            "Jullie opdracht:",
+            "- Maak minimaal twee van de volgende onderdelen: • Een quiz (“Wat voor type leerling ben jij?”) met 6 vragen en uitslagen • Een top 5-lijstje met korte toelichting • Een recensie van een boek, film of serie (100–150 woorden) • Een rubriek zoals “In de tas van...” met foto en toelichting- Zorg voor een aantrekkelijke en overzichtelijke layout- Voeg titels en eventueel visuele elementen toe",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 5 - Lifestyle (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, onderdelen gekozen",
+            "[ ] Les 2 – Quiz of rubriek voorbereid",
+            "[ ] Les 3 – Eerste teksten geschreven",
+            "[ ] Les 4 – Rubriek uitgewerkt met beeld",
+            "[ ] Les 5 – Layout toegepast in sjabloon",
+            "[ ] Les 6 – Laatste controle, ingeleverd",
+            "Eindcontrole:",
+            "[ ] Minimaal twee onderdelen zijn volledig uitgewerkt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 5 - Lifestyle (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Teksten zijn speels, duidelijk en goed opgebouwd",
+            "[ ] Titels en visuele elementen toegevoegd",
+            "[ ] Alles correct geplaatst in de krantlayout",
+            "[ ] Bestand ingeleverd bij hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 6 - Fotopagina (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 6",
+            "Fotopagina of Beeldverhaal",
+            "Leerdoel:",
+            "Je leert hoe je beeldmateriaal op een journalistieke manier presenteert. Je oefent met het maken en selecteren van foto’s, het schrijven van bijschriften en het vormgeven van een visuele pagina.",
+            "Jullie opdracht:",
+            "- Maak een fotopagina of beeldverhaal met 10–12 originele foto’s- Kies een thema (bijv. “Een dag uit het leven van…”, “Schoolgeheimen”, “De plek waar…”)- Schrijf een korte inleiding (100–150 woorden)- Voeg bij elke foto een creatief of informatief bijschrift toe- Zorg voor een aantrekkelijke en logische opmaak",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 6 - Fotopagina (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, thema gekozen",
+            "[ ] Les 2 – Eerste foto's gemaakt of gepland",
+            "[ ] Les 3 – Bijschriften geschreven",
+            "[ ] Les 4 – Foto's geselecteerd en gerangschikt",
+            "[ ] Les 5 – Alles ingevoerd in sjabloon",
+            "[ ] Les 6 – Laatste controle, ingeleverd",
+            "Eindcontrole:",
+            "[ ] 10–12 foto's zijn aanwezig en geordend"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 6 - Fotopagina (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Bijschriften zijn creatief en informatief",
+            "[ ] Inleiding is duidelijk en past bij het geheel",
+            "[ ] Opmaak is verzorgd en consistent met de krant",
+            "[ ] Bestand ingeleverd bij hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 7 - Vormgeving (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 7",
+            "Voorpagina & Vormgevingsteam",
+            "Leerdoel:",
+            "Je leert hoe je een herkenbare vormgeving maakt en bewaakt voor een gezamenlijk eindproduct. Je oefent met lay-out, typografie, kleurgebruik en het combineren van beeld en tekst op een visueel aantrekkelijke manier.",
+            "Jullie opdracht:",
+            "- Ontwerp een opvallende voorpagina: • Titel van de krant • 1 grote afbeelding • Aankondiging van 3 rubrieken binnenin • Duidelijke datum en klas- Stel een visuele huisstijl op (lettertypes, kleuren, titels)- Help andere groepen met toepassen van de stijl- Controleer de opmaak van alle spreads op consistentie",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 7 - Vormgeving (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, rolverdeling gemaakt",
+            "[ ] Les 2 – Eerste schets voor voorpagina gemaakt",
+            "[ ] Les 3 – Stijlvoorstel opgesteld en gedeeld",
+            "[ ] Les 4 – Groepen geholpen met vormgeving",
+            "[ ] Les 5 – Voorpagina en stijlelementen afgerond",
+            "[ ] Les 6 – Eindversie gebundeld en gecontroleerd",
+            "✅ Eindcontrole:",
+            "[ ] Voorpagina bevat alle gevraagde elementen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 7 - Vormgeving (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Stijl is toegepast in alle spreads",
+            "[ ] Lettertype, kleuren en indeling zijn consistent",
+            "[ ] Alle spreads nagekeken op vormgevingsfouten",
+            "[ ] Krant als één bestand samengevoegd",
+            "[ ] Bestand ingeleverd bij docent of hoofdredactie"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 8 - Eindredactie (1/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "KlasKrant – Werkblad Groep 8",
+            "Eindredactie & Spellingcontrole",
+            "Leerdoel:",
+            "Je leert hoe je teksten controleert op spelling, zinsbouw, toon en inhoud. Je oefent met redactiewerk, eindcontrole en het samenwerken met andere groepen om de krant foutloos en duidelijk te maken.",
+            "Jullie opdracht:",
+            "- Controleer de teksten van alle groepen op: • Spelling en grammatica • Zinsbouw en leesbaarheid • Consistente toon en stijl- Geef per groep feedback en werk samen aan verbeteringen- Schrijf de inhoudspagina van de krant- Help de hoofdredactie bij de eindcontrole van het hele document",
+            "Rollen in jullie groep:",
+            "Planning en voortgang (vink af):"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 8 - Eindredactie (2/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Les 1 – Groep gevormd, taakverdeling gemaakt",
+            "[ ] Les 2 – Overzicht gemaakt van wie welke groep controleert",
+            "[ ] Les 3 – Eerste teksten gecontroleerd en teruggekoppeld",
+            "[ ] Les 4 – Feedbackronde 2 uitgevoerd",
+            "[ ] Les 5 – Inhoudspagina geschreven",
+            "[ ] Les 6 – Eindversie van hele krant gecontroleerd",
+            "Eindcontrole:",
+            "[ ] Alle teksten gecontroleerd op spelling en zinsbouw"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkblad Groep 8 - Eindredactie (3/3)",
+          "subtitle": "Klasfeed werkbladen",
+          "items": [
+            "[ ] Toon en stijl zijn consistent",
+            "[ ] Feedback gegeven aan alle groepen",
+            "[ ] Inhoudspagina is compleet en correct",
+            "[ ] Laatste check uitgevoerd met hoofdredactie",
+            "[ ] Bestand definitief klaar voor print en publicatie"
+          ]
+        },
+        {
           "type": "title",
           "title": "Les 3 - Teksten schrijven",
           "subtitle": ""
@@ -30710,13 +31402,13 @@
       "markers": {
         "marker-les-1-intro": 1,
         "marker-les-2-voorbereidingen": 8,
-        "marker-les-3-teksten": 17,
-        "marker-les-4-aanvullen": 23,
-        "marker-les-5-opmaak": 30,
-        "marker-les-6-afronden": 38,
-        "marker-les-7-printen": 45,
-        "marker-les-8-presentatie": 52,
-        "marker-les-9-reflectie": 59
+        "marker-les-3-teksten": 42,
+        "marker-les-4-aanvullen": 48,
+        "marker-les-5-opmaak": 55,
+        "marker-les-6-afronden": 63,
+        "marker-les-7-printen": 70,
+        "marker-les-8-presentatie": 77,
+        "marker-les-9-reflectie": 84
       }
     }
   }
