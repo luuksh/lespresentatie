@@ -907,6 +907,54 @@ document.addEventListener('DOMContentLoaded', async () => {
     return doc;
   }
 
+  function markerDeckSlideCount(presentation) {
+    const decks = presentation?.markerDecks;
+    if (!decks || typeof decks !== 'object') return 0;
+    let total = 0;
+    for (const deck of Object.values(decks)) {
+      if (Array.isArray(deck)) total += deck.length;
+    }
+    return total;
+  }
+
+  function presentationImportVersion(presentation) {
+    const value = Number(presentation?.importVersion || 0);
+    return Number.isFinite(value) ? value : 0;
+  }
+
+  function mergeStudioPreferRicherBase(baseDoc, localDoc) {
+    const base = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(baseDoc)));
+    const local = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(localDoc)));
+    const merged = normalizeStudioDoc(local);
+
+    if (!merged.presentations || typeof merged.presentations !== 'object') {
+      merged.presentations = {};
+    }
+
+    for (const [deckId, basePres] of Object.entries(base.presentations || {})) {
+      const localPres = merged.presentations[deckId];
+      if (!localPres || typeof localPres !== 'object') {
+        merged.presentations[deckId] = structuredClone(basePres);
+        continue;
+      }
+      const baseCount = markerDeckSlideCount(basePres);
+      const localCount = markerDeckSlideCount(localPres);
+      const baseMarkers = Object.keys(basePres.markers || {}).length;
+      const localMarkers = Object.keys(localPres.markers || {}).length;
+      const baseVersion = presentationImportVersion(basePres);
+      const localVersion = presentationImportVersion(localPres);
+
+      if (
+        baseVersion > localVersion
+        || baseCount > localCount
+        || baseMarkers > localMarkers
+      ) {
+        merged.presentations[deckId] = structuredClone(basePres);
+      }
+    }
+    return ensureProjectOverviewPresentations(collapseToYearLayerDoc(merged));
+  }
+
   function loadPlanningStudioFromStorage() {
     const raw = String(localStorage.getItem(PLAN_STUDIO_KEY) || '').trim();
     if (!raw) return null;
@@ -1331,10 +1379,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   async function fetchPlanning() {
-    if (planningStudio) {
-      renderPlanning();
-      return;
-    }
     try {
       setPlanningStatus('Synchroniseren...', 'info');
       const url = new URL(defaultPlanningSourceUrl(), window.location.href);
@@ -1342,15 +1386,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       const res = await fetch(url.toString(), { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const raw = normalizeStudioDoc(await res.json());
-      planningStudio = raw;
+      planningStudio = planningStudio
+        ? mergeStudioPreferRicherBase(raw, planningStudio)
+        : ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw));
       savePlanningStudioToStorage();
       rebuildPlanningFromStudio();
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden jaarplanning:', err);
-      setPlanningStatus('Synchronisatie mislukt', 'error');
-      setPlanningItems(['Kon de interne jaarplanning niet laden.']);
-      refreshPlanningEditor();
+      if (planningStudio) {
+        rebuildPlanningFromStudio();
+        renderPlanning();
+        setPlanningStatus('Offline cache actief (sync mislukt)', 'warn');
+      } else {
+        setPlanningStatus('Synchronisatie mislukt', 'error');
+        setPlanningItems(['Kon de interne jaarplanning niet laden.']);
+        refreshPlanningEditor();
+      }
     }
   }
 
@@ -1711,9 +1763,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   planningStudio = loadPlanningStudioFromStorage();
   if (planningStudio) {
     rebuildPlanningFromStudio();
-  } else {
-    await fetchPlanning();
   }
+  await fetchPlanning();
   if (planningStudioWeekInput) planningStudioWeekInput.value = String(isoWeekInfo().weekNo);
   if (planningStudioClassSelect) planningStudioClassSelect.value = canonicalClassId(klasSelect?.value || '');
   setEditorFileStatus('Jaarplanning Studio actief (intern).');
