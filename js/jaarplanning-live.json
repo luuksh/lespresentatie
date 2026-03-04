@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T09:51:54+01:00",
+  "updatedAt": "2026-03-04T09:53:45+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -899,13 +899,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -986,13 +988,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -1011,13 +1015,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -1943,13 +1949,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -2030,13 +2038,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -2055,13 +2065,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -2987,13 +2999,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -3074,13 +3088,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -3099,13 +3115,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -4031,13 +4049,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -4118,13 +4138,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -4143,13 +4165,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -5075,13 +5099,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -5162,13 +5188,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -5187,13 +5215,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -6119,13 +6149,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -6206,13 +6238,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -6231,13 +6265,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -7163,13 +7199,15 @@
           "project": "Verweggers",
           "lesson": "Les 1 - Migratie en Cultuur",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-1-migratie-en-cultuur-les-1"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 2 - Migratiegeschiedenis van je familie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-2-migratiegeschiedenis-van-je-familie-les-2"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
         }
       ],
       "items": []
@@ -7250,13 +7288,15 @@
           "project": "Verweggers",
           "lesson": "Les 3 - Socratisch gesprek over migratie",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-3-socratisch-gesprek-over-migratie-les-3"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 4 - Stamboomonderzoek",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-4-stamboomonderzoek-les-4"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-4-stamboomonderzoek"
         }
       ],
       "items": []
@@ -7275,13 +7315,15 @@
           "project": "Verweggers",
           "lesson": "Les 5 - Stamboomposter",
           "lessonKey": "B",
-          "presentationId": "verweggers-les-5-stamboomposter-les-5"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-5-stamboomposter"
         },
         {
           "project": "Verweggers",
           "lesson": "Les 6 - Presentatie en Reflectie",
           "lessonKey": "C",
-          "presentationId": "verweggers-les-6-presentatie-en-reflectie-les-6"
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-6-presentatie-en-reflectie"
         }
       ],
       "items": []
@@ -28449,6 +28491,785 @@
         "marker-les-4-projectbeschrijving": 19,
         "marker-les-5-pitch-voorbereiden": 26,
         "marker-les-6-presentaties-reflectie": 33
+      }
+    },
+    "project-verweggers": {
+      "id": "project-verweggers",
+      "presentationType": "project-overview",
+      "title": "Verweggers",
+      "subtitle": "Verweggers",
+      "project": "Verweggers",
+      "importVersion": 2026030407,
+      "markerDecks": {
+        "marker-les-1-migratie-en-cultuur": [
+          {
+            "type": "title",
+            "title": "Les 1 – Wat is ‘onze’ cultuur?",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je leert het verschil tussen cultuur en migratie.",
+              "Je ontdekt wat de Romeinen meebrachten naar Nederland.",
+              "Je leert de begrippen: strategie, essentieel, infrastructuur, diversiteit, confronteren."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Startvraag klassikaal (5 min)",
+            "subtitle": "",
+            "items": [
+              "Wat betekent het woord 'cultuur' voor jou?",
+              "Geef voorbeelden: eten, taal, kleding, gewoontes."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Lezen in duo's (15 min)",
+            "subtitle": "",
+            "items": [
+              "Lees bladzijde 1–2 uit het boekje '1.7 Migratie en Cultuur'.",
+              "Noteer samen: wat veranderde er in Nederland door de komst van de Romeinen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Begrippen begrijpen (15 min)",
+            "subtitle": "",
+            "items": [
+              "Pak het werkblad Begrippen.",
+              "Lees de vijf begrippen met hun voorbeeld.",
+              "Noteer bij elk begrip ook een voorbeeld uit je eigen ervaring.",
+              "Bespreek klassikaal enkele voorbeelden."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Klassikale terugkoppeling (5 min)",
+            "subtitle": "",
+            "items": [
+              "Bespreek de veranderingen in Nederland door de Romeinen.",
+              "Welke veranderingen zie je vandaag de dag nog terug?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "5. Huiswerkopdracht (5 min)",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-2-migratiegeschiedenis-van-je-familie": [
+          {
+            "type": "title",
+            "title": "Les 2 – Migratiegeschiedenis van je familie",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je onderzoekt of jouw familie een migratieverhaal heeft.",
+              "Je leert migratie herkennen in je eigen omgeving.",
+              "Je bereidt informatie voor je stamboomproject."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Terugblik op vorige les (5 min)",
+            "subtitle": "",
+            "items": [
+              "Bespreek in tweetallen de huiswerkopdracht:",
+              "Wie in jouw familie is ooit gemigreerd?",
+              "Wat zijn redenen voor migratie die jullie vonden?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Klassengesprek (10 min)",
+            "subtitle": "",
+            "items": [
+              "Klassikale inventarisatie van migratieverhalen:",
+              "Binnen Nederland of internationaal?",
+              "Tijdstip? Redenen?",
+              "Hielden mensen hun cultuur vast, of pasten ze zich aan?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Tekst: Migratie na WO2 (10 min)",
+            "subtitle": "",
+            "items": [
+              "Lees bladzijde 3 uit het boekje '1.7 Migratie en Cultuur'.",
+              "Noteer: Waarom vertrokken zoveel mensen uit Nederland na WO2?",
+              "Wat hielp hen? Wat was lastig?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Jouw migratieverhaal (15 min)",
+            "subtitle": "",
+            "items": [
+              "Gebruik je aantekeningen van thuis.",
+              "Noteer per persoon die je kent in je stamboom:",
+              "- Naam, geboortejaar, geboorteplaats",
+              "- Verhuisd van/naar, reden",
+              "- Beroep, bijzonderheden",
+              "Heb je geen migratie in je familie? Kies dan een historisch migratieverhaal in je buurt."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "5. Vooruitblik (5 min)",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-3-socratisch-gesprek-over-migratie": [
+          {
+            "type": "title",
+            "title": "Les 3 – Socratisch gesprek over migratie",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je leert migratie van verschillende kanten bekijken.",
+              "Je oefent in het stellen van verdiepende vragen.",
+              "Je denkt na over je eigen mening en die van anderen.",
+              "Je gebruikt de begrippen uit les 1 in een gesprek."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Wat is een socratisch gesprek? (5 min)",
+            "subtitle": "",
+            "items": [
+              "Je stelt vragen, geen meningen of tegenargumenten.",
+              "Je bouwt het gesprek samen op.",
+              "Je onderzoekt iemands gedachtegang.",
+              "Iedereen komt aan bod."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Hulpzinnen voor het gesprek (5 min)",
+            "subtitle": "",
+            "items": [
+              "Kun je daar meer over vertellen?",
+              "Als ik je goed begrijp, zeg je dat...",
+              "Wat zijn hier de voor- en nadelen van?",
+              "Kun je beredeneren waarom je dat denkt?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Gespreksvragen om uit te kiezen",
+            "subtitle": "",
+            "items": [
+              "A. Waarom verhuizen mensen naar een ander land?",
+              "B. Wat betekent het land van herkomst voor een migrant?",
+              "C. Welke onderdelen van andere culturen hebben wij overgenomen?",
+              "D. Wat gebeurt er als mensen geen ruimte krijgen voor hun cultuur?",
+              "E. Hoe houden migranten hun eigen cultuur in stand?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Werkvorm gesprek (25 min)",
+            "subtitle": "",
+            "items": [
+              "Eén leerling kiest een vraag en geeft een eerste antwoord.",
+              "Andere leerlingen stellen alleen vragen.",
+              "Na 2–3 vragen kiest een nieuwe leerling een nieuwe vraag.",
+              "Let op: gebruik de begrippen uit les 1 in je antwoorden!"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "5. Reflectie (5 min)",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-4-stamboomonderzoek": [
+          {
+            "type": "title",
+            "title": "Les 4 – Stamboomonderzoek",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je brengt je familiegeschiedenis in kaart tot je betovergrootouders.",
+              "Je ontdekt migratiebewegingen in je eigen familie.",
+              "Je leert informatie ordenen en samenvatten in een stamboom."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Terugblik op vorige les (5 min)",
+            "subtitle": "",
+            "items": [
+              "Bespreek in tweetallen je reflectie op het socratisch gesprek.",
+              "Wat vond je opvallend? Wat bleef bij je hangen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Wat ga je doen? (10 min)",
+            "subtitle": "",
+            "items": [
+              "Je maakt vandaag een visuele stamboom tot aan je betovergrootouders.",
+              "Je verzamelt per persoon:",
+              "- Naam, geboortejaar en -plaats",
+              "- Eventuele migratie (van waar, naar waar, waarom)",
+              "- Beroep of bijzonderheid"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Waar vind je informatie? (5 min)",
+            "subtitle": "",
+            "items": [
+              "Vraag je ouders, grootouders of andere familieleden.",
+              "Gebruik documenten: geboortekaartjes, trouwboekjes, fotoalbums.",
+              "Bekijk deze websites:",
+              "- www.wiewaswie.nl",
+              "- www.openarch.nl",
+              "- www.familysearch.org (gratis account)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Zelfstandig werken (20 min)",
+            "subtitle": "",
+            "items": [
+              "Gebruik een A3-blad of sjabloon om je stamboom op te tekenen.",
+              "Werk netjes en overzichtelijk.",
+              "Laat ruimte voor toevoeging van miniverhaaltjes (volgende les)."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "5. Vooruitblik op volgende les (5 min)",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-5-stamboomposter": [
+          {
+            "type": "title",
+            "title": "Les 5 – Stamboomposter maken",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je verwerkt je familiegeschiedenis in een visuele poster.",
+              "Je schrijft korte, informatieve teksten bij je stamboom.",
+              "Je maakt je poster aantrekkelijk en duidelijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Introductie (5 min)",
+            "subtitle": "",
+            "items": [
+              "Vandaag maak je een stamboomposter: een visuele weergave van je familiegeschiedenis.",
+              "Bij elke persoon schrijf je een miniverhaal van 3–5 zinnen.",
+              "Daarin beschrijf je:",
+              "- Wie het is (naam, geboorteplaats/jaar)",
+              "- Of ze zijn verhuisd (van waar, naar waar, waarom)",
+              "- Wat je verder weet (beroep, geloof, cultuur, bijzonderheid)"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Voorbeeld miniverhaaltje (5 min)",
+            "subtitle": "",
+            "items": [
+              "‘Mijn overgrootvader Hendrik werd in 1904 geboren in Friesland.",
+              "In de jaren ’30 verhuisde hij naar Utrecht om te werken bij de spoorwegen.",
+              "Hij sprak Fries thuis en bleef dat zijn hele leven doen.",
+              "Hij was protestants en hield altijd vast aan de Friese kerkdiensten.’"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Zelfstandig werken (30 min)",
+            "subtitle": "",
+            "items": [
+              "Teken of werk verder aan je stamboom op een groot vel papier.",
+              "Schrijf bij elk familielid dat je noemt een miniverhaaltje.",
+              "Werk netjes en creatief: kleur, orden, gebruik foto’s als je die mee hebt.",
+              "Je mag ook digitaal werken als dat beter bij je past."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "4. Laatste 5 minuten",
+            "subtitle": ""
+          }
+        ],
+        "marker-les-6-presentatie-en-reflectie": [
+          {
+            "type": "title",
+            "title": "Les 6 – Presentatie & Reflectie",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Je presenteert je familiegeschiedenis aan de klas.",
+              "Je leert luisteren naar elkaars verhalen en verschillen herkennen.",
+              "Je reflecteert op wat migratie en cultuur voor jou betekenen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "1. Opstelling en voorbereiding (5 min)",
+            "subtitle": "",
+            "items": [
+              "Hang je poster op of leg hem klaar op tafel.",
+              "Loop even langs de andere posters.",
+              "Noteer bij 1 poster van een klasgenoot iets wat jou opvalt of aanspreekt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "2. Presentatieopdracht (30 min)",
+            "subtitle": "",
+            "items": [
+              "Iedere leerling vertelt kort over zijn/haar stamboomposter:",
+              "Eén familieverhaal of voorouder die je bijzonder vond",
+              "Wat je geleerd hebt over migratie in jouw familie",
+              "Welke cultuurkenmerken jij belangrijk vindt",
+              "Tijdsduur per leerling: ±1 minuut"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "3. Tijdens de presentaties",
+            "subtitle": "",
+            "items": [
+              "Luister aandachtig naar elkaar.",
+              "Schrijf bij 2 klasgenoten iets op dat je interessant vond.",
+              "Stel na afloop 1 verdiepende vraag aan iemand."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "4. Reflectie (10 min)",
+            "subtitle": "",
+            "items": [
+              "Beantwoord in stilte op papier of in je schrift:",
+              "1. Wat heb je geleerd over je eigen achtergrond?",
+              "2. Wat verraste je aan de verhalen van anderen?",
+              "3. Wat betekent ‘cultuur’ nu voor jou?",
+              "4. Welke migratieverhalen blijven jou bij? Waarom?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "5. Afsluiting (5 min)",
+            "subtitle": ""
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Verweggers",
+          "subtitle": "Verweggers"
+        },
+        {
+          "type": "title",
+          "title": "Les 1 – Wat is ‘onze’ cultuur?",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je leert het verschil tussen cultuur en migratie.",
+            "Je ontdekt wat de Romeinen meebrachten naar Nederland.",
+            "Je leert de begrippen: strategie, essentieel, infrastructuur, diversiteit, confronteren."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Startvraag klassikaal (5 min)",
+          "subtitle": "",
+          "items": [
+            "Wat betekent het woord 'cultuur' voor jou?",
+            "Geef voorbeelden: eten, taal, kleding, gewoontes."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Lezen in duo's (15 min)",
+          "subtitle": "",
+          "items": [
+            "Lees bladzijde 1–2 uit het boekje '1.7 Migratie en Cultuur'.",
+            "Noteer samen: wat veranderde er in Nederland door de komst van de Romeinen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Begrippen begrijpen (15 min)",
+          "subtitle": "",
+          "items": [
+            "Pak het werkblad Begrippen.",
+            "Lees de vijf begrippen met hun voorbeeld.",
+            "Noteer bij elk begrip ook een voorbeeld uit je eigen ervaring.",
+            "Bespreek klassikaal enkele voorbeelden."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Klassikale terugkoppeling (5 min)",
+          "subtitle": "",
+          "items": [
+            "Bespreek de veranderingen in Nederland door de Romeinen.",
+            "Welke veranderingen zie je vandaag de dag nog terug?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "5. Huiswerkopdracht (5 min)",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 2 – Migratiegeschiedenis van je familie",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je onderzoekt of jouw familie een migratieverhaal heeft.",
+            "Je leert migratie herkennen in je eigen omgeving.",
+            "Je bereidt informatie voor je stamboomproject."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Terugblik op vorige les (5 min)",
+          "subtitle": "",
+          "items": [
+            "Bespreek in tweetallen de huiswerkopdracht:",
+            "Wie in jouw familie is ooit gemigreerd?",
+            "Wat zijn redenen voor migratie die jullie vonden?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Klassengesprek (10 min)",
+          "subtitle": "",
+          "items": [
+            "Klassikale inventarisatie van migratieverhalen:",
+            "Binnen Nederland of internationaal?",
+            "Tijdstip? Redenen?",
+            "Hielden mensen hun cultuur vast, of pasten ze zich aan?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Tekst: Migratie na WO2 (10 min)",
+          "subtitle": "",
+          "items": [
+            "Lees bladzijde 3 uit het boekje '1.7 Migratie en Cultuur'.",
+            "Noteer: Waarom vertrokken zoveel mensen uit Nederland na WO2?",
+            "Wat hielp hen? Wat was lastig?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Jouw migratieverhaal (15 min)",
+          "subtitle": "",
+          "items": [
+            "Gebruik je aantekeningen van thuis.",
+            "Noteer per persoon die je kent in je stamboom:",
+            "- Naam, geboortejaar, geboorteplaats",
+            "- Verhuisd van/naar, reden",
+            "- Beroep, bijzonderheden",
+            "Heb je geen migratie in je familie? Kies dan een historisch migratieverhaal in je buurt."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "5. Vooruitblik (5 min)",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 3 – Socratisch gesprek over migratie",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je leert migratie van verschillende kanten bekijken.",
+            "Je oefent in het stellen van verdiepende vragen.",
+            "Je denkt na over je eigen mening en die van anderen.",
+            "Je gebruikt de begrippen uit les 1 in een gesprek."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Wat is een socratisch gesprek? (5 min)",
+          "subtitle": "",
+          "items": [
+            "Je stelt vragen, geen meningen of tegenargumenten.",
+            "Je bouwt het gesprek samen op.",
+            "Je onderzoekt iemands gedachtegang.",
+            "Iedereen komt aan bod."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Hulpzinnen voor het gesprek (5 min)",
+          "subtitle": "",
+          "items": [
+            "Kun je daar meer over vertellen?",
+            "Als ik je goed begrijp, zeg je dat...",
+            "Wat zijn hier de voor- en nadelen van?",
+            "Kun je beredeneren waarom je dat denkt?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Gespreksvragen om uit te kiezen",
+          "subtitle": "",
+          "items": [
+            "A. Waarom verhuizen mensen naar een ander land?",
+            "B. Wat betekent het land van herkomst voor een migrant?",
+            "C. Welke onderdelen van andere culturen hebben wij overgenomen?",
+            "D. Wat gebeurt er als mensen geen ruimte krijgen voor hun cultuur?",
+            "E. Hoe houden migranten hun eigen cultuur in stand?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Werkvorm gesprek (25 min)",
+          "subtitle": "",
+          "items": [
+            "Eén leerling kiest een vraag en geeft een eerste antwoord.",
+            "Andere leerlingen stellen alleen vragen.",
+            "Na 2–3 vragen kiest een nieuwe leerling een nieuwe vraag.",
+            "Let op: gebruik de begrippen uit les 1 in je antwoorden!"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "5. Reflectie (5 min)",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 4 – Stamboomonderzoek",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je brengt je familiegeschiedenis in kaart tot je betovergrootouders.",
+            "Je ontdekt migratiebewegingen in je eigen familie.",
+            "Je leert informatie ordenen en samenvatten in een stamboom."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Terugblik op vorige les (5 min)",
+          "subtitle": "",
+          "items": [
+            "Bespreek in tweetallen je reflectie op het socratisch gesprek.",
+            "Wat vond je opvallend? Wat bleef bij je hangen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Wat ga je doen? (10 min)",
+          "subtitle": "",
+          "items": [
+            "Je maakt vandaag een visuele stamboom tot aan je betovergrootouders.",
+            "Je verzamelt per persoon:",
+            "- Naam, geboortejaar en -plaats",
+            "- Eventuele migratie (van waar, naar waar, waarom)",
+            "- Beroep of bijzonderheid"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Waar vind je informatie? (5 min)",
+          "subtitle": "",
+          "items": [
+            "Vraag je ouders, grootouders of andere familieleden.",
+            "Gebruik documenten: geboortekaartjes, trouwboekjes, fotoalbums.",
+            "Bekijk deze websites:",
+            "- www.wiewaswie.nl",
+            "- www.openarch.nl",
+            "- www.familysearch.org (gratis account)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Zelfstandig werken (20 min)",
+          "subtitle": "",
+          "items": [
+            "Gebruik een A3-blad of sjabloon om je stamboom op te tekenen.",
+            "Werk netjes en overzichtelijk.",
+            "Laat ruimte voor toevoeging van miniverhaaltjes (volgende les)."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "5. Vooruitblik op volgende les (5 min)",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 5 – Stamboomposter maken",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je verwerkt je familiegeschiedenis in een visuele poster.",
+            "Je schrijft korte, informatieve teksten bij je stamboom.",
+            "Je maakt je poster aantrekkelijk en duidelijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Introductie (5 min)",
+          "subtitle": "",
+          "items": [
+            "Vandaag maak je een stamboomposter: een visuele weergave van je familiegeschiedenis.",
+            "Bij elke persoon schrijf je een miniverhaal van 3–5 zinnen.",
+            "Daarin beschrijf je:",
+            "- Wie het is (naam, geboorteplaats/jaar)",
+            "- Of ze zijn verhuisd (van waar, naar waar, waarom)",
+            "- Wat je verder weet (beroep, geloof, cultuur, bijzonderheid)"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Voorbeeld miniverhaaltje (5 min)",
+          "subtitle": "",
+          "items": [
+            "‘Mijn overgrootvader Hendrik werd in 1904 geboren in Friesland.",
+            "In de jaren ’30 verhuisde hij naar Utrecht om te werken bij de spoorwegen.",
+            "Hij sprak Fries thuis en bleef dat zijn hele leven doen.",
+            "Hij was protestants en hield altijd vast aan de Friese kerkdiensten.’"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Zelfstandig werken (30 min)",
+          "subtitle": "",
+          "items": [
+            "Teken of werk verder aan je stamboom op een groot vel papier.",
+            "Schrijf bij elk familielid dat je noemt een miniverhaaltje.",
+            "Werk netjes en creatief: kleur, orden, gebruik foto’s als je die mee hebt.",
+            "Je mag ook digitaal werken als dat beter bij je past."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "4. Laatste 5 minuten",
+          "subtitle": ""
+        },
+        {
+          "type": "title",
+          "title": "Les 6 – Presentatie & Reflectie",
+          "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Je presenteert je familiegeschiedenis aan de klas.",
+            "Je leert luisteren naar elkaars verhalen en verschillen herkennen.",
+            "Je reflecteert op wat migratie en cultuur voor jou betekenen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "1. Opstelling en voorbereiding (5 min)",
+          "subtitle": "",
+          "items": [
+            "Hang je poster op of leg hem klaar op tafel.",
+            "Loop even langs de andere posters.",
+            "Noteer bij 1 poster van een klasgenoot iets wat jou opvalt of aanspreekt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "2. Presentatieopdracht (30 min)",
+          "subtitle": "",
+          "items": [
+            "Iedere leerling vertelt kort over zijn/haar stamboomposter:",
+            "Eén familieverhaal of voorouder die je bijzonder vond",
+            "Wat je geleerd hebt over migratie in jouw familie",
+            "Welke cultuurkenmerken jij belangrijk vindt",
+            "Tijdsduur per leerling: ±1 minuut"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "3. Tijdens de presentaties",
+          "subtitle": "",
+          "items": [
+            "Luister aandachtig naar elkaar.",
+            "Schrijf bij 2 klasgenoten iets op dat je interessant vond.",
+            "Stel na afloop 1 verdiepende vraag aan iemand."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "4. Reflectie (10 min)",
+          "subtitle": "",
+          "items": [
+            "Beantwoord in stilte op papier of in je schrift:",
+            "1. Wat heb je geleerd over je eigen achtergrond?",
+            "2. Wat verraste je aan de verhalen van anderen?",
+            "3. Wat betekent ‘cultuur’ nu voor jou?",
+            "4. Welke migratieverhalen blijven jou bij? Waarom?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "5. Afsluiting (5 min)",
+          "subtitle": ""
+        }
+      ],
+      "markers": {
+        "marker-les-1-migratie-en-cultuur": 1,
+        "marker-les-2-migratiegeschiedenis-van-je-familie": 8,
+        "marker-les-3-socratisch-gesprek-over-migratie": 15,
+        "marker-les-4-stamboomonderzoek": 22,
+        "marker-les-5-stamboomposter": 29,
+        "marker-les-6-presentatie-en-reflectie": 35
       }
     }
   }
