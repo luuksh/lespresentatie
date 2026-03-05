@@ -151,9 +151,9 @@ function normalizeWeekEntry(layer, week, entry) {
 
 function lessonParts(entry) {
   const out = {
-    A: { project: '', lesson: '' },
-    B: { project: '', lesson: '' },
-    C: { project: '', lesson: '' },
+    A: { project: '', lesson: '', homework: '' },
+    B: { project: '', lesson: '', homework: '' },
+    C: { project: '', lesson: '', homework: '' },
   };
   const lessons = Array.isArray(entry?.lessons) ? entry.lessons : [];
   const fallback = [];
@@ -161,14 +161,15 @@ function lessonParts(entry) {
     const key = String(lesson?.lessonKey || '').trim().toUpperCase();
     const project = String(lesson?.project || '').trim();
     const title = String(lesson?.lesson || '').trim();
+    const homework = String(lesson?.homework || '').trim();
     if (['A', 'B', 'C'].includes(key)) {
-      out[key] = { project, lesson: title };
+      out[key] = { project, lesson: title, homework };
     } else {
-      fallback.push({ project, lesson: title });
+      fallback.push({ project, lesson: title, homework });
     }
   }
   for (const key of ['A', 'B', 'C']) {
-    if (!out[key].project && !out[key].lesson && fallback.length) {
+    if (!out[key].project && !out[key].lesson && !out[key].homework && fallback.length) {
       out[key] = fallback.shift();
     }
   }
@@ -180,14 +181,15 @@ function setLesson(entry, slot, field, value) {
   if (!Array.isArray(entry.lessons)) entry.lessons = [];
   let lesson = entry.lessons.find((row) => String(row?.lessonKey || '').toUpperCase() === slot);
   if (!lesson) {
-    lesson = { lessonKey: slot, project: '', lesson: '' };
+    lesson = { lessonKey: slot, project: '', lesson: '', homework: '' };
     entry.lessons.push(lesson);
   }
   lesson[field] = cleaned;
   entry.lessons = entry.lessons.filter((row) => {
     const project = String(row?.project || '').trim();
     const title = String(row?.lesson || '').trim();
-    return project || title;
+    const homework = String(row?.homework || '').trim();
+    return project || title || homework;
   });
 }
 
@@ -236,10 +238,13 @@ function renderSheet() {
 
     tr.appendChild(makeInputCell(parts.A.project, 'A', 'project'));
     tr.appendChild(makeInputCell(parts.A.lesson, 'A', 'lesson'));
+    tr.appendChild(makeInputCell(parts.A.homework, 'A', 'homework', true));
     tr.appendChild(makeInputCell(parts.B.project, 'B', 'project'));
     tr.appendChild(makeInputCell(parts.B.lesson, 'B', 'lesson'));
+    tr.appendChild(makeInputCell(parts.B.homework, 'B', 'homework', true));
     tr.appendChild(makeInputCell(parts.C.project, 'C', 'project'));
     tr.appendChild(makeInputCell(parts.C.lesson, 'C', 'lesson'));
+    tr.appendChild(makeInputCell(parts.C.homework, 'C', 'homework', true));
     tr.appendChild(makeInputCell((entry.items || []).join('\n'), 'ITEMS', 'items', true));
     tr.appendChild(makeInputCell(String(entry.note || ''), 'NOTE', 'note', true));
 
@@ -265,7 +270,7 @@ function onCellChange(event) {
     setItems(entry, target.value);
   } else if (slot === 'NOTE') {
     setNote(entry, target.value);
-  } else if (['A', 'B', 'C'].includes(slot) && (field === 'project' || field === 'lesson')) {
+  } else if (['A', 'B', 'C'].includes(slot) && ['project', 'lesson', 'homework'].includes(field)) {
     setLesson(entry, slot, field, target.value);
   }
 

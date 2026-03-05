@@ -151,7 +151,7 @@ textarea {
 }
 
 .sheet {
-  width: max(1200px, 100%);
+  width: max(1700px, 100%);
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;

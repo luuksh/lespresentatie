@@ -345,12 +345,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof row === 'string') {
       const lesson = row.trim();
       return lesson ? {
-        project: '', lesson, lessonKey: ''
+        project: '', lesson, lessonKey: '', homework: ''
       } : null;
     }
     if (!row || typeof row !== 'object') return null;
     const project = String(row.project ?? row.thema ?? '').trim();
     const lesson = String(row.lesson ?? row.les ?? row.title ?? '').trim();
+    const homework = String(row.homework ?? row.huiswerk ?? '').trim();
     const presentationId = String(
       row.presentationId
       ?? row.presentation_id
@@ -366,8 +367,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? ''
     ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
-    if (!project && !lesson) return null;
-    return { project, lesson, presentationId, presentationMarkerId, lessonKey };
+    if (!project && !lesson && !homework) return null;
+    return { project, lesson, homework, presentationId, presentationMarkerId, lessonKey };
   }
 
   function coerceLessons(value) {
@@ -1230,6 +1231,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       li.appendChild(lessonLine);
 
+      const homework = String(lesson.homework || '').trim();
+      if (homework) {
+        const homeworkLine = document.createElement('p');
+        homeworkLine.className = 'jaarplanning-lesson';
+        homeworkLine.textContent = `Huiswerk: ${homework}`;
+        li.appendChild(homeworkLine);
+      }
+
       planningItemsEl.appendChild(li);
     }
     for (const item of items) {
@@ -1550,10 +1559,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const line of lines) {
       const parts = line.split('|').map((p) => p.trim());
       if (parts.length >= 3) {
-        const [slot, project, lesson] = parts;
-        const row = { project, lesson };
+        const [slot, project, lesson, homework = ''] = parts;
+        const row = { project, lesson, homework };
         if (/^[ABC]$/i.test(slot)) row.lessonKey = slot.toUpperCase();
-        if (project || lesson) out.push(row);
+        if (project || lesson || homework) out.push(row);
       } else if (parts.length === 2) {
         const [project, lesson] = parts;
         if (project || lesson) out.push({ project, lesson });
@@ -1646,7 +1655,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const slot = String(lesson?.lessonKey || '').trim().toUpperCase();
       const project = String(lesson?.project || '').trim();
       const rowLesson = String(lesson?.lesson || '').trim();
-      return slot ? `${slot} | ${project} | ${rowLesson}` : `${project} | ${rowLesson}`;
+      const homework = String(lesson?.homework || '').trim();
+      if (slot) return `${slot} | ${project} | ${rowLesson} | ${homework}`;
+      return `${project} | ${rowLesson} | ${homework}`;
     }).join('\n');
   }
 
