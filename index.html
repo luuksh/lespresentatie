@@ -85,9 +85,11 @@
           <div class="btn-group">
             <button id="agendaSourceSave" type="button" class="btn btn-primary">Opslaan</button>
             <button id="agendaSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+            <button id="agendaImportBtn" type="button" class="btn btn-secondary">Importeer JSON</button>
             <button id="agendaDebugBtn" type="button" class="btn btn-secondary">Toon agenda-debug</button>
           </div>
         </div>
+        <input id="agendaImportFile" type="file" accept=".json,application/json" style="display:none;" />
         <textarea
           id="agendaDebugOutput"
           class="jaarplanning-source-input"

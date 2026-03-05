@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
   const PLAN_STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
+  const AGENDA_IMPORT_KEY = 'lespresentatie.agendaImportedPayload';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
 
@@ -28,6 +29,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaSourceInput = document.getElementById('agendaSourceInput');
   const agendaSourceSaveBtn = document.getElementById('agendaSourceSave');
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
+  const agendaImportBtn = document.getElementById('agendaImportBtn');
+  const agendaImportFile = document.getElementById('agendaImportFile');
   const agendaDebugBtn = document.getElementById('agendaDebugBtn');
   const agendaDebugOutput = document.getElementById('agendaDebugOutput');
   const agendaPreviewMeta = document.getElementById('agendaPreviewMeta');
@@ -56,6 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaLastContentType = '';
   let agendaLastError = '';
   let agendaLastResolvedSource = '';
+  let agendaImportedRaw = String(localStorage.getItem(AGENDA_IMPORT_KEY) || '');
   let agendaFetchInProgress = false;
   let activeAgendaClassId = '';
   let activeAgendaEntry = null;
@@ -897,6 +901,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(window.APP_CONFIG?.agendaSourceFallbackUrl || 'js/zermelo-agenda-live.json').trim();
   }
 
+  function applyImportedAgenda(rawText, sourceLabel = 'import') {
+    agendaEntries = parseAgendaPayload(rawText, 'application/json').sort((a, b) => a.start - b.start);
+    agendaFetchedAt = new Date().toISOString();
+    agendaLastFetchStatus = `ok (${sourceLabel})`;
+    agendaLastContentType = 'application/json';
+    agendaLastError = '';
+    agendaLastResolvedSource = sourceLabel;
+
+    const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
+    activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
+    activeAgendaEntry = bestEntry || null;
+    selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
+
+    if (activeAgendaClassId) {
+      selectClassFromAgenda(activeAgendaClassId);
+    } else {
+      activeAgendaEntry = findAgendaEntryForCurrentOrLast(
+        agendaEntriesForClass(agendaEntries, normalizeClassId(klasSelect?.value || '')),
+        new Date()
+      );
+      selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+    }
+
+    if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+      agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+    }
+    renderAgendaPreview(agendaEntries, new Date());
+    renderPlanning();
+    updateClockMarkerTarget(new Date());
+  }
+
   function selectClassFromAgenda(classId) {
     const normalized = normalizeClassId(classId);
     if (!normalized || !klasSelect) return false;
@@ -1576,6 +1611,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaFetchInProgress = true;
     try {
     const fallbackSourceUrl = resolveAgendaFallbackSourceUrl();
+    if (!agendaSourceUrl && agendaImportedRaw) {
+      applyImportedAgenda(agendaImportedRaw, 'import (lokaal)');
+      return;
+    }
     if (!agendaSourceUrl && !fallbackSourceUrl) {
       agendaEntries = [];
       agendaLastFetchStatus = 'niet uitgevoerd (geen agenda-URL)';
@@ -1645,6 +1684,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     {
       console.error('Fout bij laden agenda-bronnen:', lastErr);
+      if (agendaImportedRaw) {
+        applyImportedAgenda(agendaImportedRaw, 'import (fallback)');
+        return;
+      }
       agendaEntries = [];
       agendaFetchedAt = '';
       agendaLastFetchStatus = 'mislukt';
@@ -1931,6 +1974,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   agendaSourceClearBtn?.addEventListener('click', () => {
     applyAgendaSource('', true);
+  });
+
+  agendaImportBtn?.addEventListener('click', () => {
+    agendaImportFile?.click();
+  });
+
+  agendaImportFile?.addEventListener('change', async () => {
+    const file = agendaImportFile.files?.[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const parsed = parseAgendaPayload(text, 'application/json');
+      if (!parsed.length) throw new Error('Geen geldige agenda-events gevonden in dit JSON-bestand.');
+      agendaImportedRaw = text;
+      localStorage.setItem(AGENDA_IMPORT_KEY, text);
+      applyImportedAgenda(text, `import:${file.name}`);
+    } catch (err) {
+      const msg = err?.message ? String(err.message) : String(err || 'Onbekende importfout');
+      alert(`Import mislukt: ${msg}`);
+    } finally {
+      agendaImportFile.value = '';
+    }
   });
 
   agendaDebugBtn?.addEventListener('click', () => {
