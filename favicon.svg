@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Klassenplattegrond icoon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d5fb5"/>
+      <stop offset="100%" stop-color="#1d3f81"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8edd9"/>
+      <stop offset="100%" stop-color="#e8d4b4"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#9fc1ff" stroke-width="2"/>
+
+  <rect x="10" y="10" width="44" height="8" rx="4" fill="#24543f" stroke="#dbe9de" stroke-opacity="0.45"/>
+
+  <g fill="url(#desk)" stroke="#8a6438" stroke-width="1.6">
+    <rect x="10" y="24" width="12" height="8" rx="2.4"/>
+    <rect x="26" y="24" width="12" height="8" rx="2.4"/>
+    <rect x="42" y="24" width="12" height="8" rx="2.4"/>
+
+    <rect x="10" y="36" width="12" height="8" rx="2.4"/>
+    <rect x="26" y="36" width="12" height="8" rx="2.4"/>
+    <rect x="42" y="36" width="12" height="8" rx="2.4"/>
+
+    <rect x="10" y="48" width="20" height="8" rx="2.4" fill="#d7b179"/>
+  </g>
+</svg>
