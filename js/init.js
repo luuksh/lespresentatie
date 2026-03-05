@@ -190,6 +190,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   function mapSpecialClassAlias(value) {
     const cid = normalizeClassId(value);
     if (!cid) return '';
+    const embeddedNetl = cid.match(/NETL\d+/);
+    if (embeddedNetl) {
+      const netlLetter = letterFromNetlCode(embeddedNetl[0]);
+      if (netlLetter) return `G4${netlLetter}`;
+    }
     const netlLetter = letterFromNetlCode(cid);
     if (netlLetter) return `G4${netlLetter}`;
     return cid;
