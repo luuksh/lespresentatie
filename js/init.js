@@ -1436,8 +1436,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         return `${isSelected ? '★ ' : ''}${sourceClass} -> ${mapped || 'geen match'} · ${info.count}x · ${nextLabel}`;
       });
 
-    agendaPreviewMeta.textContent = `Rooster-preview: ${sorted.length} events · ${buckets.size} klascodes · bron ${agendaLastResolvedSource ? 'live/fallback geladen' : 'onbekend'}.`;
-    agendaPreviewList.innerHTML = items.map((line) => `<li>${line}</li>`).join('');
+    const hasFourthGrade = [...buckets.keys()].some((sourceClass) => classIdAliases(sourceClass).some((alias) => /^4/.test(normalizeClassId(alias))));
+    const sourceLabel = agendaLastResolvedSource || '(onbekend)';
+    agendaPreviewMeta.textContent = `Rooster-preview: ${sorted.length} events · ${buckets.size} klascodes · bron: ${sourceLabel}`;
+
+    const warning = hasFourthGrade
+      ? ''
+      : '<li><strong>Waarschuwing:</strong> geen leerjaar 4 in deze feed gevonden (geen G4/4G* / NETL4-5 zichtbaar).</li>';
+    agendaPreviewList.innerHTML = `${warning}${items.map((line) => `<li>${line}</li>`).join('')}`;
   }
 
   function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
