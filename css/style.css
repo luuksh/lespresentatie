@@ -103,11 +103,17 @@ body::after {
 .opdracht-menu {
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #opdrachtSelect {
-  width: 100%;
+  width: 100% !important;
   min-width: 0;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   appearance: none;
   height: 56px;
   border-radius: 12px;
@@ -896,7 +902,17 @@ body::after {
 
 .controls-row-main {
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.controls-row-main .field {
+  flex: 0 0 auto;
+}
+
+.controls-row-main select {
+  min-width: 180px;
 }
 
 .field {
@@ -2215,6 +2231,20 @@ body.drawer-open .side-drawer.left {
   select {
     width: 100%;
     min-width: 0;
+  }
+
+  .topbar .controls-row-main {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .topbar .controls-row-main .field,
+  .topbar .controls-row-main select {
+    width: auto;
+  }
+
+  .topbar .controls-row-main select {
+    min-width: 132px;
   }
 
   .jaarplanning-head {

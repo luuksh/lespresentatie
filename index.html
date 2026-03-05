@@ -752,10 +752,35 @@
 
         if (deskRow && grid) {
           const rows = Array.from(grid.querySelectorAll('.tafelrij'));
-          const widestRow = rows.length
-            ? Math.max(...rows.map((row) => Math.ceil(row.scrollWidth || 0)))
-            : Math.ceil(grid.scrollWidth || 0);
-          const targetWidth = Math.max(0, Math.min(widestRow, grid.clientWidth || widestRow));
+          let contentWidth = 0;
+
+          if (rows.length) {
+            contentWidth = Math.max(...rows.map((row) => Math.ceil(row.scrollWidth || row.getBoundingClientRect().width || 0)));
+          } else {
+            const children = Array.from(grid.children);
+            if (children.length) {
+              const gridRect = grid.getBoundingClientRect();
+              let minLeft = Number.POSITIVE_INFINITY;
+              let maxRight = Number.NEGATIVE_INFINITY;
+
+              children.forEach((child) => {
+                const rect = child.getBoundingClientRect();
+                if (rect.width <= 0 || rect.height <= 0) return;
+                minLeft = Math.min(minLeft, rect.left - gridRect.left);
+                maxRight = Math.max(maxRight, rect.right - gridRect.left);
+              });
+
+              if (Number.isFinite(minLeft) && Number.isFinite(maxRight) && maxRight > minLeft) {
+                contentWidth = Math.ceil(maxRight - minLeft);
+              }
+            }
+          }
+
+          if (!contentWidth) {
+            contentWidth = Math.ceil(grid.scrollWidth || grid.clientWidth || 0);
+          }
+
+          const targetWidth = Math.max(0, Math.min(contentWidth, grid.clientWidth || contentWidth));
           deskRow.style.width = targetWidth > 0 ? `${targetWidth}px` : '100%';
           deskRow.style.maxWidth = '100%';
           deskRow.style.marginLeft = 'auto';
