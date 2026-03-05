@@ -231,6 +231,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     return [...aliases];
   }
 
+  function classIdMatch(leftClassId, rightClassId) {
+    const leftAliases = classIdAliases(leftClassId).map((alias) => normalizeClassId(alias));
+    const rightAliases = new Set(classIdAliases(rightClassId).map((alias) => normalizeClassId(alias)));
+    if (!leftAliases.length || !rightAliases.size) return false;
+    return leftAliases.some((alias) => rightAliases.has(alias));
+  }
+
+  function agendaEntriesForClass(entries, classId) {
+    return entries.filter((entry) => classIdMatch(entry.classId, classId));
+  }
+
   function isoWeekInfo(date = new Date()) {
     const local = new Date(date.getFullYear(), date.getMonth(), date.getDate());
     const day = local.getDay() || 7;
@@ -824,7 +835,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function updateClockMarkerTarget(now = new Date()) {
     const classId = normalizeClassId(klasSelect?.value || '');
     const classEntries = classId
-      ? agendaEntries.filter((entry) => entry.classId === classId)
+      ? agendaEntriesForClass(agendaEntries, classId)
       : [];
     const target = findAgendaEntryForCurrentOrNext(classEntries, now);
     const mode = target
@@ -856,7 +867,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!selectedEntry) return 0;
     const { monday, sunday } = getWeekBounds(selectedEntry.start);
     const inWeek = entries
-      .filter((entry) => entry.classId === selectedEntry.classId && entry.start >= monday && entry.start <= sunday)
+      .filter((entry) => classIdMatch(entry.classId, selectedEntry.classId) && entry.start >= monday && entry.start <= sunday)
       .sort((a, b) => a.start - b.start);
     const index = inWeek.findIndex((entry) => entry.start.getTime() === selectedEntry.start.getTime());
     return index >= 0 ? index + 1 : 0;
@@ -865,7 +876,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function lessonNumberForClassToday(entries, classId, now = new Date()) {
     const cid = normalizeClassId(classId);
     if (!cid) return 0;
-    const classEntries = entries.filter((entry) => entry.classId === cid);
+    const classEntries = agendaEntriesForClass(entries, cid);
     const selected = findAgendaEntryForCurrentOrLast(classEntries, now);
     return lessonNumberForWeek(entries, selected);
   }
@@ -1332,7 +1343,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function formatAgendaDebug(entries = [], now = new Date()) {
     const classId = normalizeClassId(klasSelect?.value || '');
     const classEntries = entries
-      .filter((entry) => entry.classId === classId)
+      .filter((entry) => classIdMatch(entry.classId, classId))
       .sort((a, b) => a.start - b.start);
     const todayEntries = classEntries.filter((entry) => isSameLocalDay(entry.start, now));
     const activeNow = classEntries.find((entry) => now >= entry.start && now <= entry.end);
@@ -1409,8 +1420,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       : now;
     const weekInfo = currentWeekCandidates(planAnchorDate);
     const week = weekInfo.week;
+    const nextLessonTime = (!isActiveLessonNow && activeAgendaEntry?.start && activeAgendaEntry?.end)
+      ? `${activeAgendaEntry.start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}-${activeAgendaEntry.end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`
+      : '';
     const title = (agendaSourceUrl && activeAgendaEntry && !isActiveLessonNow)
-      ? 'Programma volgende les'
+      ? `Programma volgende les${nextLessonTime ? ` (${nextLessonTime})` : ''}`
       : 'Programma vandaag';
     planningWeekLabelEl.textContent = `${title} · ${week.label}`;
 
@@ -1540,7 +1554,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         selectClassFromAgenda(activeAgendaClassId);
       } else {
         activeAgendaEntry = findAgendaEntryForCurrentOrLast(
-          agendaEntries.filter((entry) => entry.classId === normalizeClassId(klasSelect?.value || '')),
+          agendaEntriesForClass(agendaEntries, normalizeClassId(klasSelect?.value || '')),
           new Date()
         );
         selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
@@ -1846,7 +1860,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   klasSelect?.addEventListener('change', () => {
     activeAgendaEntry = findAgendaEntryForCurrentOrLast(
-      agendaEntries.filter((entry) => entry.classId === normalizeClassId(klasSelect.value)),
+      agendaEntriesForClass(agendaEntries, normalizeClassId(klasSelect.value)),
       new Date()
     );
     selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect.value);
