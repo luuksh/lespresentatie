@@ -893,6 +893,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     return fromWindow;
   }
 
+  function resolveAgendaFallbackSourceUrl() {
+    return String(window.APP_CONFIG?.agendaSourceFallbackUrl || 'js/zermelo-agenda-live.json').trim();
+  }
+
   function selectClassFromAgenda(classId) {
     const normalized = normalizeClassId(classId);
     if (!normalized || !klasSelect) return false;
@@ -1523,14 +1527,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       const agendaStamp = agendaFetchedAt ? `Agenda sync: ${formatSyncTime(agendaFetchedAt)}` : '';
       planningLastUpdateEl.textContent = [syncStamp, sourceStamp, agendaStamp].filter(Boolean).join(' · ');
     }
-    if (agendaSourceUrl && activeAgendaEntry) {
+    const hasAgendaConnection = Boolean(agendaSourceUrl || agendaLastResolvedSource);
+    if (hasAgendaConnection && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
       if (room) {
         setPlanningStatus('', 'ok', { room });
       } else {
         setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
       }
-    } else if (agendaSourceUrl) {
+    } else if (hasAgendaConnection) {
       setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
       setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
@@ -1570,7 +1575,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaFetchInProgress) return;
     agendaFetchInProgress = true;
     try {
-    if (!agendaSourceUrl) {
+    const fallbackSourceUrl = resolveAgendaFallbackSourceUrl();
+    if (!agendaSourceUrl && !fallbackSourceUrl) {
       agendaEntries = [];
       agendaLastFetchStatus = 'niet uitgevoerd (geen agenda-URL)';
       agendaLastContentType = '';
@@ -1587,20 +1593,33 @@ document.addEventListener('DOMContentLoaded', async () => {
       updateClockMarkerTarget(new Date());
       return;
     }
-    try {
-      const url = new URL(agendaSourceUrl, window.location.href);
-      url.searchParams.set('_t', String(Date.now()));
-      const res = await fetch(url.toString(), { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const rawText = await res.text();
-      const contentType = res.headers.get('content-type') || '';
-      agendaEntries = parseAgendaPayload(rawText, contentType)
-        .sort((a, b) => a.start - b.start);
-      agendaFetchedAt = new Date().toISOString();
-      agendaLastFetchStatus = `ok (${res.status})`;
-      agendaLastContentType = contentType || '-';
-      agendaLastError = '';
-      agendaLastResolvedSource = agendaSourceUrl;
+    const sourceAttempts = [];
+    if (agendaSourceUrl) sourceAttempts.push({ url: agendaSourceUrl, label: 'live' });
+    if (fallbackSourceUrl && fallbackSourceUrl !== agendaSourceUrl) sourceAttempts.push({ url: fallbackSourceUrl, label: 'fallback' });
+    let loaded = false;
+    let lastErr = null;
+    for (const attempt of sourceAttempts) {
+      try {
+        const url = new URL(attempt.url, window.location.href);
+        url.searchParams.set('_t', String(Date.now()));
+        const res = await fetch(url.toString(), { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const rawText = await res.text();
+        const contentType = res.headers.get('content-type') || '';
+        agendaEntries = parseAgendaPayload(rawText, contentType)
+          .sort((a, b) => a.start - b.start);
+        agendaFetchedAt = new Date().toISOString();
+        agendaLastFetchStatus = `ok (${res.status})${attempt.label === 'fallback' ? ' via fallback' : ''}`;
+        agendaLastContentType = contentType || '-';
+        agendaLastError = '';
+        agendaLastResolvedSource = attempt.url;
+        loaded = true;
+        break;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    if (loaded) {
 
       const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
@@ -1623,13 +1642,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderPlanning();
       updateClockMarkerTarget(new Date());
       return;
-    } catch (err) {
-      console.error('Fout bij laden live agenda:', err);
+    }
+    {
+      console.error('Fout bij laden agenda-bronnen:', lastErr);
       agendaEntries = [];
       agendaFetchedAt = '';
       agendaLastFetchStatus = 'mislukt';
       agendaLastContentType = '';
-      agendaLastError = err?.message ? String(err.message) : String(err || 'onbekende fout');
+      agendaLastError = lastErr?.message ? String(lastErr.message) : String(lastErr || 'onbekende fout');
       agendaLastResolvedSource = '';
       activeAgendaClassId = '';
       activeAgendaEntry = null;
@@ -1653,7 +1673,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function resetAgendaTimer() {
     if (agendaTimer) clearInterval(agendaTimer);
-    if (!agendaSourceUrl) return;
+    if (!agendaSourceUrl && !resolveAgendaFallbackSourceUrl()) return;
     agendaTimer = setInterval(fetchAgenda, AGENDA_REFRESH_MS);
   }
 
