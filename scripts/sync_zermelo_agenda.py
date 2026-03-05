@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import ssl
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -191,8 +192,23 @@ def to_entry(event: dict) -> dict | None:
 
 
 def fetch_ics(url: str) -> str:
+    insecure = os.getenv("ZERMELO_ICAL_INSECURE", "").strip().lower() in {"1", "true", "yes", "on"}
+    ca_bundle = os.getenv("ZERMELO_CA_BUNDLE", "").strip()
+
+    if insecure:
+        context = ssl._create_unverified_context()
+    elif ca_bundle:
+        context = ssl.create_default_context(cafile=ca_bundle)
+    else:
+        try:
+            import certifi  # type: ignore
+
+            context = ssl.create_default_context(cafile=certifi.where())
+        except Exception:
+            context = ssl.create_default_context()
+
     req = Request(url, headers={"User-Agent": "lespresentatie-sync/1.0"})
-    with urlopen(req, timeout=30) as res:
+    with urlopen(req, timeout=30, context=context) as res:
         return res.read().decode("utf-8", errors="replace")
 
 
