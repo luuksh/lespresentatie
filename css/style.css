@@ -1909,6 +1909,35 @@ body.drawer-open .side-drawer.left {
   box-shadow: 0 0 0 3px rgba(90, 135, 215, 0.2);
 }
 
+.agenda-preview {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #d4e1f2;
+  border-radius: var(--radius-sm);
+  background: #f8fbff;
+}
+
+.agenda-preview-meta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #20467f;
+}
+
+.agenda-preview-list {
+  margin: 0;
+  padding-left: 18px;
+  max-height: 220px;
+  overflow: auto;
+  font-size: 12px;
+  color: #17375f;
+}
+
+.agenda-preview-list li {
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
 .status-text {
   min-height: 16px;
   margin-top: 8px;

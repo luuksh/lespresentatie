@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaSourceClearBtn = document.getElementById('agendaSourceClear');
   const agendaDebugBtn = document.getElementById('agendaDebugBtn');
   const agendaDebugOutput = document.getElementById('agendaDebugOutput');
+  const agendaPreviewMeta = document.getElementById('agendaPreviewMeta');
+  const agendaPreviewList = document.getElementById('agendaPreviewList');
   const plattegrondFrame = document.getElementById('plattegrondFrame');
   const presentationEmbedTitle = document.getElementById('presentationEmbedTitle');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
@@ -1394,6 +1396,50 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${header.join('\n')}\n\n${lines.join('\n')}`;
   }
 
+  function matchingClassOptionValue(classId) {
+    if (!klasSelect?.options?.length) return '';
+    const aliases = new Set(classIdAliases(classId).map((alias) => normalizeClassId(alias)));
+    return [...klasSelect.options]
+      .find((option) => aliases.has(normalizeClassId(option.value)))?.value || '';
+  }
+
+  function renderAgendaPreview(entries = [], now = new Date()) {
+    if (!agendaPreviewMeta || !agendaPreviewList) return;
+    if (!entries.length) {
+      agendaPreviewMeta.textContent = 'Rooster-preview: geen agenda-events geladen.';
+      agendaPreviewList.innerHTML = '<li>Controleer je agenda-URL of fallback.</li>';
+      return;
+    }
+
+    const sorted = [...entries].sort((a, b) => a.start - b.start);
+    const buckets = new Map();
+    for (const entry of sorted) {
+      const key = normalizeClassId(entry.classId);
+      if (!key) continue;
+      if (!buckets.has(key)) buckets.set(key, { count: 0, next: null });
+      const bucket = buckets.get(key);
+      bucket.count += 1;
+      if (!bucket.next && entry.end >= now) bucket.next = entry;
+    }
+
+    const selectedClass = normalizeClassId(klasSelect?.value || '');
+    const items = [...buckets.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0], 'nl'))
+      .slice(0, 20)
+      .map(([sourceClass, info]) => {
+        const mapped = matchingClassOptionValue(sourceClass);
+        const next = info.next;
+        const nextLabel = next
+          ? `${next.start.toLocaleDateString('nl-NL', { weekday: 'short', day: '2-digit', month: '2-digit' })} ${next.start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`
+          : 'geen komende les';
+        const isSelected = selectedClass && classIdMatch(sourceClass, selectedClass);
+        return `${isSelected ? '★ ' : ''}${sourceClass} -> ${mapped || 'geen match'} · ${info.count}x · ${nextLabel}`;
+      });
+
+    agendaPreviewMeta.textContent = `Rooster-preview: ${sorted.length} events · ${buckets.size} klascodes · bron ${agendaLastResolvedSource ? 'live/fallback geladen' : 'onbekend'}.`;
+    agendaPreviewList.innerHTML = items.map((line) => `<li>${line}</li>`).join('');
+  }
+
   function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
     if (!Array.isArray(lessons) || !lessons.length) return [];
     if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) {
@@ -1534,6 +1580,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
+      renderAgendaPreview(agendaEntries, new Date());
       renderPlanning();
       updateClockMarkerTarget(new Date());
       return;
@@ -1591,6 +1638,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
+      renderAgendaPreview(agendaEntries, new Date());
       renderPlanning();
       updateClockMarkerTarget(new Date());
       return;
@@ -1608,6 +1656,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
+    renderAgendaPreview(agendaEntries, new Date());
     renderPlanning();
     updateClockMarkerTarget(new Date());
     } finally {
@@ -1886,6 +1935,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!agendaDebugOutput) return;
     agendaDebugOutput.style.display = 'block';
     agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+    renderAgendaPreview(agendaEntries, new Date());
   });
 
   klasSelect?.addEventListener('change', () => {
@@ -1897,6 +1947,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
+    renderAgendaPreview(agendaEntries, new Date());
     if (planningStudioClassSelect) {
       planningStudioClassSelect.value = canonicalClassId(klasSelect.value);
     }
