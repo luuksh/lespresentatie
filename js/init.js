@@ -176,15 +176,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function netlCodeFromLetter(letter) {
     const idx = letterToIndex(letter);
     if (!idx) return '';
-    return `NETL${idx - 1}`;
+    return `NETL${idx}`;
   }
 
   function letterFromNetlCode(value) {
     const netl = normalizeClassId(value).match(/^NETL(\d+)$/);
     if (!netl) return '';
     const n = Number(netl[1]);
-    if (!Number.isInteger(n) || n < 0 || n > 25) return '';
-    return String.fromCharCode(65 + n);
+    if (!Number.isInteger(n) || n < 1 || n > 26) return '';
+    return String.fromCharCode(64 + n);
   }
 
   function mapSpecialClassAlias(value) {

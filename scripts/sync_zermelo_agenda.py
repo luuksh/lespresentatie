@@ -34,10 +34,10 @@ def normalize_class_id(value: str) -> str:
         return ""
     m_netl = re.match(r"^NETL(\d+)$", cid)
     if m_netl:
-        # NETL3 -> G4D, NETL4 -> G4E
+        # NETL4 -> G4D, NETL5 -> G4E
         n = int(m_netl.group(1))
-        if 0 <= n <= 25:
-            return f"G4{chr(65 + n)}"
+        if 1 <= n <= 26:
+            return f"G4{chr(64 + n)}"
     return cid
 
 
