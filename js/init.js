@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaLastFetchStatus = '';
   let agendaLastContentType = '';
   let agendaLastError = '';
+  let agendaLastResolvedSource = '';
   let agendaFetchInProgress = false;
   let activeAgendaClassId = '';
   let activeAgendaEntry = null;
@@ -890,6 +891,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     return fromWindow;
   }
 
+  function resolveAgendaFallbackSourceUrl() {
+    return String(window.APP_CONFIG?.agendaSourceFallbackUrl || 'js/zermelo-agenda-live.json').trim();
+  }
+
   function selectClassFromAgenda(classId) {
     const normalized = normalizeClassId(classId);
     if (!normalized || !klasSelect) return false;
@@ -1363,6 +1368,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `nu: ${now.toLocaleString('nl-NL')}`,
       `geselecteerde klas: ${classId || '-'}`,
       `agenda bron: ${agendaSourceUrl || '(niet ingesteld)'}`,
+      `agenda gebruikt: ${agendaLastResolvedSource || '-'}`,
       `laatste fetch: ${agendaLastFetchStatus || '-'}`,
       `content-type: ${agendaLastContentType || '-'}`,
       `laatste fout: ${agendaLastError || '-'}`,
@@ -1521,6 +1527,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastFetchStatus = 'niet uitgevoerd (geen agenda-URL)';
       agendaLastContentType = '';
       agendaLastError = '';
+      agendaLastResolvedSource = '';
       activeAgendaClassId = '';
       activeAgendaEntry = null;
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
@@ -1531,20 +1538,42 @@ document.addEventListener('DOMContentLoaded', async () => {
       updateClockMarkerTarget(new Date());
       return;
     }
-    try {
-      const url = new URL(agendaSourceUrl, window.location.href);
-      url.searchParams.set('_t', String(Date.now()));
-      const res = await fetch(url.toString(), { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const rawText = await res.text();
-      const contentType = res.headers.get('content-type') || '';
-      agendaEntries = parseAgendaPayload(rawText, contentType)
-        .sort((a, b) => a.start - b.start);
-      agendaFetchedAt = new Date().toISOString();
-      agendaLastFetchStatus = `ok (${res.status})`;
-      agendaLastContentType = contentType || '-';
-      agendaLastError = '';
+    const fallbackSourceUrl = resolveAgendaFallbackSourceUrl();
+    const sourceAttempts = [{ url: agendaSourceUrl, label: 'live' }];
+    if (fallbackSourceUrl && fallbackSourceUrl !== agendaSourceUrl) {
+      sourceAttempts.push({ url: fallbackSourceUrl, label: 'fallback' });
+    }
 
+    let loaded = false;
+    let lastErr = null;
+    for (const attempt of sourceAttempts) {
+      try {
+        const url = new URL(attempt.url, window.location.href);
+        url.searchParams.set('_t', String(Date.now()));
+        const res = await fetch(url.toString(), { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const rawText = await res.text();
+        const contentType = res.headers.get('content-type') || '';
+        agendaEntries = parseAgendaPayload(rawText, contentType)
+          .sort((a, b) => a.start - b.start);
+        agendaFetchedAt = new Date().toISOString();
+        agendaLastFetchStatus = `ok (${res.status})${attempt.label === 'fallback' ? ' via fallback' : ''}`;
+        agendaLastContentType = contentType || '-';
+        agendaLastError = '';
+        agendaLastResolvedSource = attempt.url;
+        loaded = true;
+        break;
+      } catch (err) {
+        lastErr = err;
+        if (attempt.label === 'live') {
+          console.warn('Fout bij laden live agenda, probeer fallback:', err);
+        } else {
+          console.error('Fout bij laden fallback agenda:', err);
+        }
+      }
+    }
+
+    if (loaded) {
       const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
       activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
       activeAgendaEntry = bestEntry || null;
@@ -1564,22 +1593,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       renderPlanning();
       updateClockMarkerTarget(new Date());
-    } catch (err) {
-      console.error('Fout bij laden agenda:', err);
-      agendaEntries = [];
-      agendaFetchedAt = '';
-      agendaLastFetchStatus = 'mislukt';
-      agendaLastContentType = '';
-      agendaLastError = err?.message ? String(err.message) : String(err);
-      activeAgendaClassId = '';
-      activeAgendaEntry = null;
-      selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
-      if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
-        agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
-      }
-      renderPlanning();
-      updateClockMarkerTarget(new Date());
+      return;
     }
+
+    agendaEntries = [];
+    agendaFetchedAt = '';
+    agendaLastFetchStatus = 'mislukt';
+    agendaLastContentType = '';
+    agendaLastError = lastErr?.message ? String(lastErr.message) : String(lastErr || 'onbekende fout');
+    agendaLastResolvedSource = '';
+    activeAgendaClassId = '';
+    activeAgendaEntry = null;
+    selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
+    if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+      agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+    }
+    renderPlanning();
+    updateClockMarkerTarget(new Date());
     } finally {
       agendaFetchInProgress = false;
     }
