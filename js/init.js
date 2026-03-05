@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLAN_STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
+  const AGENDA_REFRESH_MS = 60 * 1000;
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
   const planningItemsEl = document.getElementById('jaarplanningItems');
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaLastFetchStatus = '';
   let agendaLastContentType = '';
   let agendaLastError = '';
+  let agendaFetchInProgress = false;
   let activeAgendaClassId = '';
   let activeAgendaEntry = null;
   let selectedLessonIndex = 0;
@@ -1429,6 +1431,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   async function fetchAgenda() {
+    if (agendaFetchInProgress) return;
+    agendaFetchInProgress = true;
+    try {
     if (!agendaSourceUrl) {
       agendaEntries = [];
       agendaLastFetchStatus = 'niet uitgevoerd (geen agenda-URL)';
@@ -1493,6 +1498,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderPlanning();
       updateClockMarkerTarget(new Date());
     }
+    } finally {
+      agendaFetchInProgress = false;
+    }
   }
 
   function resetPlanningTimer() {
@@ -1503,7 +1511,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function resetAgendaTimer() {
     if (agendaTimer) clearInterval(agendaTimer);
     if (!agendaSourceUrl) return;
-    agendaTimer = setInterval(fetchAgenda, PLAN_REFRESH_MS);
+    agendaTimer = setInterval(fetchAgenda, AGENDA_REFRESH_MS);
   }
 
   function setEditorFileStatus(message, isError = false) {
@@ -1794,6 +1802,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderPlanning();
 
   applyAgendaSource(resolveAgendaSourceUrl(), false);
+  window.addEventListener('focus', () => {
+    if (!agendaSourceUrl) return;
+    fetchAgenda();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden || !agendaSourceUrl) return;
+    fetchAgenda();
+  });
+  window.addEventListener('online', () => {
+    if (!agendaSourceUrl) return;
+    fetchAgenda();
+  });
   window.addEventListener('storage', (event) => {
     if (event.key !== PLAN_STUDIO_KEY) return;
     const latest = loadPlanningStudioFromStorage();
