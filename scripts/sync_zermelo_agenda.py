@@ -20,11 +20,25 @@ except ImportError:  # pragma: no cover
 
 OUT_PATH = Path("js/zermelo-agenda-live.json")
 CLASS_PATTERNS = [
+    re.compile(r"\bNETL\d+\b"),
     re.compile(r"\bG\d[A-Z]\b"),
     re.compile(r"\b\d[A-Z]\b"),
     re.compile(r"\b\dG\d+\b"),
     re.compile(r"\b\d\.\d+\b"),
 ]
+
+
+def normalize_class_id(value: str) -> str:
+    cid = re.sub(r"\s+", "", str(value or "")).upper()
+    if not cid:
+        return ""
+    m_netl = re.match(r"^NETL(\d+)$", cid)
+    if m_netl:
+        # NETL3 -> G4D, NETL4 -> G4E
+        n = int(m_netl.group(1))
+        if 0 <= n <= 25:
+            return f"G4{chr(65 + n)}"
+    return cid
 
 
 def decode_ics_text(value: str) -> str:
@@ -139,7 +153,7 @@ def extract_class_id(*values: str) -> str:
     for pattern in CLASS_PATTERNS:
         match = pattern.search(combined)
         if match:
-            return match.group(0)
+            return normalize_class_id(match.group(0))
     return ""
 
 

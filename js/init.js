@@ -161,8 +161,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(value || '').replace(/\s+/g, '').toUpperCase();
   }
 
+  function letterToIndex(letter) {
+    const code = String(letter || '').trim().toUpperCase().charCodeAt(0);
+    if (Number.isNaN(code) || code < 65 || code > 90) return 0;
+    return code - 64;
+  }
+
+  function indexToLetter(index) {
+    const n = Number(index);
+    if (!Number.isInteger(n) || n < 1 || n > 26) return '';
+    return String.fromCharCode(64 + n);
+  }
+
+  function netlCodeFromLetter(letter) {
+    const idx = letterToIndex(letter);
+    if (!idx) return '';
+    return `NETL${idx - 1}`;
+  }
+
+  function letterFromNetlCode(value) {
+    const netl = normalizeClassId(value).match(/^NETL(\d+)$/);
+    if (!netl) return '';
+    const n = Number(netl[1]);
+    if (!Number.isInteger(n) || n < 0 || n > 25) return '';
+    return String.fromCharCode(65 + n);
+  }
+
+  function mapSpecialClassAlias(value) {
+    const cid = normalizeClassId(value);
+    if (!cid) return '';
+    const netlLetter = letterFromNetlCode(cid);
+    if (netlLetter) return `G4${netlLetter}`;
+    return cid;
+  }
+
   function classIdAliases(classId) {
-    const cid = normalizeClassId(classId);
+    const cid = mapSpecialClassAlias(classId);
     if (!cid) return [];
     const aliases = new Set([cid]);
     if (/^G\d[A-Z]$/.test(cid)) aliases.add(cid.slice(1));
@@ -170,7 +204,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     const dotted = cid.match(/^(\d)\.(\d+)$/);
     if (dotted) aliases.add(`${dotted[1]}G${dotted[2]}`);
     const gym = cid.match(/^(\d)G(\d+)$/);
-    if (gym) aliases.add(`${gym[1]}.${gym[2]}`);
+    if (gym) {
+      aliases.add(`${gym[1]}.${gym[2]}`);
+      if (gym[1] === '4') {
+        const suffix = Number(gym[2]);
+        const letter = indexToLetter(suffix);
+        if (letter) {
+          aliases.add(`G4${letter}`);
+          const netl = netlCodeFromLetter(letter);
+          if (netl) aliases.add(netl);
+        }
+      }
+    }
+    const gLetter = cid.match(/^G4([A-Z])$/);
+    if (gLetter) {
+      const netl = netlCodeFromLetter(gLetter[1]);
+      if (netl) aliases.add(netl);
+      const idx = letterToIndex(gLetter[1]);
+      if (idx) aliases.add(`4G${idx}`);
+    }
     return [...aliases];
   }
 
@@ -501,7 +553,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const raw = normalizeClassId(value);
     if (!raw) return '';
     const tokens = raw.split(/[,;/+]/).map((part) => part.trim()).filter(Boolean);
-    return tokens[0] || raw;
+    const first = tokens[0] || raw;
+    return mapSpecialClassAlias(first);
   }
 
   function tokenizeClassText(value) {
@@ -648,6 +701,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const text = normalizeClassId(value);
     if (!text) return '';
     const patterns = [
+      /\bNETL\d+\b/,
       /\bG\d[A-Z]\b/,
       /\b\d[A-Z]\b/,
       /\b\dG\d+\b/,
@@ -655,7 +709,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ];
     for (const pattern of patterns) {
       const match = text.match(pattern);
-      if (match) return match[0];
+      if (match) return mapSpecialClassAlias(match[0]);
     }
     return '';
   }
