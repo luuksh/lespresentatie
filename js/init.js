@@ -1985,8 +1985,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!file) return;
     try {
       const text = await file.text();
-      const parsed = parseAgendaPayload(text, 'application/json');
-      if (!parsed.length) throw new Error('Geen geldige agenda-events gevonden in dit JSON-bestand.');
+      const lowerName = String(file.name || '').toLowerCase();
+      const looksLikeIcal = text.includes('BEGIN:VCALENDAR') || lowerName.endsWith('.ics');
+      const parsed = parseAgendaPayload(text, looksLikeIcal ? 'text/calendar' : 'application/json');
+      if (!parsed.length) throw new Error('Geen geldige agenda-events gevonden in dit bestand.');
       agendaImportedRaw = text;
       localStorage.setItem(AGENDA_IMPORT_KEY, text);
       applyImportedAgenda(text, `import:${file.name}`);
