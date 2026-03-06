@@ -909,20 +909,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaLastError = '';
     agendaLastResolvedSource = sourceLabel;
 
+    const selectedClassId = normalizeClassId(klasSelect?.value || '');
+    const selectedClassEntry = selectedClassId
+      ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), new Date())
+      : null;
     const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
-    activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
-    activeAgendaEntry = bestEntry || null;
-    selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
-
-    if (activeAgendaClassId) {
-      selectClassFromAgenda(activeAgendaClassId);
-    } else {
-      activeAgendaEntry = findAgendaEntryForCurrentOrLast(
-        agendaEntriesForClass(agendaEntries, normalizeClassId(klasSelect?.value || '')),
-        new Date()
-      );
-      selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
-    }
+    activeAgendaClassId = selectedClassEntry
+      ? selectedClassId
+      : normalizeClassId(bestEntry?.classId || '');
+    activeAgendaEntry = selectedClassEntry || bestEntry || null;
+    selectedLessonIndex = activeAgendaEntry
+      ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
+      : 0;
 
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -1365,14 +1363,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       planningItemsEl.appendChild(noteLi);
     }
 
-    if (isPresentationOpen) {
-      const firstLesson = lessons.find((lesson) => Boolean(lesson.presentationId && planningPresentations[lesson.presentationId]));
-      if (firstLesson) {
-        openPresentationPanel(buildPresentationTarget(firstLesson));
-      } else {
-        closePresentationPanel();
-      }
-    }
   }
 
   function lessonLetter(index) {
@@ -1659,21 +1649,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     if (loaded) {
-
+      const selectedClassId = normalizeClassId(klasSelect?.value || '');
+      const selectedClassEntry = selectedClassId
+        ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), new Date())
+        : null;
       const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
-      activeAgendaClassId = normalizeClassId(bestEntry?.classId || '');
-      activeAgendaEntry = bestEntry || null;
-      selectedLessonIndex = lessonNumberForWeek(agendaEntries, bestEntry);
+      activeAgendaClassId = selectedClassEntry
+        ? selectedClassId
+        : normalizeClassId(bestEntry?.classId || '');
+      activeAgendaEntry = selectedClassEntry || bestEntry || null;
+      selectedLessonIndex = activeAgendaEntry
+        ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
+        : 0;
 
-      if (activeAgendaClassId) {
-        selectClassFromAgenda(activeAgendaClassId);
-      } else {
-        activeAgendaEntry = findAgendaEntryForCurrentOrLast(
-          agendaEntriesForClass(agendaEntries, normalizeClassId(klasSelect?.value || '')),
-          new Date()
-        );
-        selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
-      }
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
