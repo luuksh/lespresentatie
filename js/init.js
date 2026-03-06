@@ -1964,6 +1964,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyAgendaSource('', true);
   });
 
+  closePresentationPanel();
+  window.addEventListener('pageshow', () => {
+    closePresentationPanel();
+  });
+
   agendaImportBtn?.addEventListener('click', () => {
     agendaImportFile?.click();
   });
