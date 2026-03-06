@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let agendaFetchInProgress = false;
   let activeAgendaClassId = '';
   let activeAgendaEntry = null;
+  let agendaReferenceEntryKey = '';
   let selectedLessonIndex = 0;
   let clockMarkerTimer = null;
   let isPresentationOpen = false;
@@ -888,6 +889,51 @@ document.addEventListener('DOMContentLoaded', async () => {
     return lessonNumberForWeek(entries, selected);
   }
 
+  function agendaEntryKey(entry) {
+    if (!entry) return '';
+    const classId = normalizeClassId(entry.classId);
+    const start = entry.start instanceof Date ? entry.start.toISOString() : '';
+    const end = entry.end instanceof Date ? entry.end.toISOString() : '';
+    if (!classId || !start || !end) return '';
+    return `${classId}|${start}|${end}`;
+  }
+
+  function applyAgendaLessonTransition(entry) {
+    if (!entry) return false;
+    closePresentationPanel();
+    const switchedClass = selectClassFromAgenda(entry.classId);
+    if (!switchedClass) {
+      laadIndeling();
+    }
+    return true;
+  }
+
+  function syncAgendaSelection(now = new Date(), allowLessonTransition = false) {
+    const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, now);
+    const bestEntryKey = agendaEntryKey(bestEntry);
+    const shouldTransition = allowLessonTransition
+      && Boolean(bestEntryKey)
+      && bestEntryKey !== agendaReferenceEntryKey;
+
+    if (shouldTransition) {
+      applyAgendaLessonTransition(bestEntry);
+    }
+    agendaReferenceEntryKey = bestEntryKey;
+
+    const selectedClassId = normalizeClassId(klasSelect?.value || '');
+    const selectedClassEntry = selectedClassId
+      ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), now)
+      : null;
+
+    activeAgendaClassId = selectedClassEntry
+      ? selectedClassId
+      : normalizeClassId(bestEntry?.classId || '');
+    activeAgendaEntry = selectedClassEntry || bestEntry || null;
+    selectedLessonIndex = activeAgendaEntry
+      ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
+      : 0;
+  }
+
   function resolveAgendaSourceUrl() {
     const fromStorage = String(localStorage.getItem(AGENDA_SOURCE_KEY) || '').trim();
     const fromWindow = String(window.APP_CONFIG?.agendaSourceUrl || '').trim();
@@ -908,19 +954,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaLastContentType = 'application/json';
     agendaLastError = '';
     agendaLastResolvedSource = sourceLabel;
-
-    const selectedClassId = normalizeClassId(klasSelect?.value || '');
-    const selectedClassEntry = selectedClassId
-      ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), new Date())
-      : null;
-    const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
-    activeAgendaClassId = selectedClassEntry
-      ? selectedClassId
-      : normalizeClassId(bestEntry?.classId || '');
-    activeAgendaEntry = selectedClassEntry || bestEntry || null;
-    selectedLessonIndex = activeAgendaEntry
-      ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
-      : 0;
+    syncAgendaSelection(new Date(), true);
 
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -1611,6 +1645,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastContentType = '';
       agendaLastError = '';
       agendaLastResolvedSource = '';
+      agendaReferenceEntryKey = '';
       activeAgendaClassId = '';
       activeAgendaEntry = null;
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
@@ -1649,18 +1684,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     if (loaded) {
-      const selectedClassId = normalizeClassId(klasSelect?.value || '');
-      const selectedClassEntry = selectedClassId
-        ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), new Date())
-        : null;
-      const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, new Date());
-      activeAgendaClassId = selectedClassEntry
-        ? selectedClassId
-        : normalizeClassId(bestEntry?.classId || '');
-      activeAgendaEntry = selectedClassEntry || bestEntry || null;
-      selectedLessonIndex = activeAgendaEntry
-        ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
-        : 0;
+      syncAgendaSelection(new Date(), true);
 
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -1682,6 +1706,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaLastContentType = '';
       agendaLastError = lastErr?.message ? String(lastErr.message) : String(lastErr || 'onbekende fout');
       agendaLastResolvedSource = '';
+      agendaReferenceEntryKey = '';
       activeAgendaClassId = '';
       activeAgendaEntry = null;
       selectedLessonIndex = lessonNumberForClassToday(agendaEntries, klasSelect?.value || '');
