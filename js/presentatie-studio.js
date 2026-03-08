@@ -1,5 +1,5 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
-const BASE_SOURCE = 'js/jaarplanning-live.json';
+const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
 
 const projectSelect = document.getElementById('projectSelect');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
