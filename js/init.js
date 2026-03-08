@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const agendaDebugOutput = document.getElementById('agendaDebugOutput');
   const agendaPreviewMeta = document.getElementById('agendaPreviewMeta');
   const agendaPreviewList = document.getElementById('agendaPreviewList');
+  const nextLessonDayMeta = document.getElementById('nextLessonDayMeta');
+  const nextLessonDayLessons = document.getElementById('nextLessonDayLessons');
+  const nextLessonDayPrep = document.getElementById('nextLessonDayPrep');
   const plattegrondFrame = document.getElementById('plattegrondFrame');
   const presentationEmbedTitle = document.getElementById('presentationEmbedTitle');
   const presentationBackBtn = document.getElementById('presentationBackBtn');
@@ -961,6 +964,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
     renderAgendaPreview(agendaEntries, new Date());
+    renderNextLessonDayOverview(agendaEntries, new Date());
     renderPlanning();
     updateClockMarkerTarget(new Date());
   }
@@ -1058,6 +1062,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
     if (!Array.isArray(doc.entries)) doc.entries = [];
     if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
+    doc.sourceRevision = String(doc.sourceRevision || '').trim();
     return doc;
   }
 
@@ -1069,6 +1074,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function baseShouldReplaceLocal(baseDoc, localDoc) {
+    const baseRevision = String(baseDoc?.sourceRevision || '').trim();
+    const localRevision = String(localDoc?.sourceRevision || '').trim();
+    if (baseRevision && localRevision && baseRevision !== localRevision) return true;
+    if (baseRevision && !localRevision) return true;
     const baseStamp = parseDocTimestamp(baseDoc);
     const localStamp = parseDocTimestamp(localDoc);
     if (!baseStamp || !localStamp) return false;
@@ -1547,6 +1556,120 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaPreviewList.innerHTML = `${warning}${items.map((line) => `<li>${line}</li>`).join('')}`;
   }
 
+  function formatShortDate(date) {
+    return date.toLocaleDateString('nl-NL', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long'
+    });
+  }
+
+  function isPreparationItem(text) {
+    const normalized = String(text || '').trim().toLocaleLowerCase('nl-NL');
+    if (!normalized) return false;
+    return ['docent:', 'print', 'laptop', 'klaar', 'toetsmodus', 'meenemen', 'spiekbrief']
+      .some((token) => normalized.includes(token));
+  }
+
+  function planningForAgendaEntry(entry) {
+    if (!entry) return { lessons: [], items: [], note: '', lessonIndex: 0 };
+    const classId = normalizeClassId(entry.classId);
+    const gradeId = gradeLayerFromClassId(classId);
+    const weekInfo = currentWeekCandidates(entry.start);
+    const classWeeks = planningData[classId] || {};
+    const gradeWeeks = planningData[gradeId] || {};
+    const allWeeks = planningData.ALL || {};
+    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
+    const gradeWeekKey = weekInfo.keys.find((key) => Boolean(gradeWeeks[key])) || '';
+    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
+    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
+      ? mergePlanEntries(
+        allWeekKey ? allWeeks[allWeekKey] : null,
+        gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
+        classWeekKey ? classWeeks[classWeekKey] : null,
+      )
+      : { lessons: [], items: [], note: '' };
+    const lessonIndex = lessonNumberForWeek(agendaEntries, entry);
+    return {
+      lessons: selectLessonsForToday(weekData.lessons || [], lessonIndex, true),
+      items: Array.isArray(weekData.items) ? weekData.items : [],
+      note: String(weekData.note || '').trim(),
+      lessonIndex,
+    };
+  }
+
+  function renderNextLessonDayOverview(entries = [], now = new Date()) {
+    if (!nextLessonDayMeta || !nextLessonDayLessons || !nextLessonDayPrep) return;
+    if (!entries.length) {
+      nextLessonDayMeta.textContent = 'Eerstvolgende lesdag: geen agenda-events geladen.';
+      nextLessonDayLessons.innerHTML = '<li>Controleer je agenda-URL of fallback.</li>';
+      nextLessonDayPrep.innerHTML = '<li>Geen voorbereidingen beschikbaar.</li>';
+      return;
+    }
+
+    const sorted = [...entries]
+      .filter((entry) => entry && entry.end >= now)
+      .sort((a, b) => a.start - b.start);
+    if (!sorted.length) {
+      nextLessonDayMeta.textContent = 'Eerstvolgende lesdag: geen komende lessen gevonden.';
+      nextLessonDayLessons.innerHTML = '<li>Er staan geen toekomstige lessen meer in de huidige agenda-feed.</li>';
+      nextLessonDayPrep.innerHTML = '<li>Geen voorbereidingen beschikbaar.</li>';
+      return;
+    }
+
+    const anchor = sorted[0].start;
+    const dayEntries = sorted.filter((entry) => isSameLocalDay(entry.start, anchor));
+    nextLessonDayMeta.textContent = `Eerstvolgende lesdag: ${formatShortDate(anchor)} · ${dayEntries.length} lessen`;
+    nextLessonDayLessons.replaceChildren();
+    nextLessonDayPrep.replaceChildren();
+
+    const prepMap = new Map();
+
+    for (const entry of dayEntries) {
+      const li = document.createElement('li');
+      const classId = normalizeClassId(entry.classId);
+      const time = `${entry.start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}-${entry.end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`;
+      const room = agendaRoomLabel(entry);
+      const plan = planningForAgendaEntry(entry);
+      const lesson = plan.lessons[0] || null;
+      const lessonSlot = plan.lessonIndex ? lessonLetter(Math.min(plan.lessonIndex, 3)) : '?';
+      const lessonLabel = lesson
+        ? `${lesson.project || 'Les'}${lesson.lesson ? ` - ${lesson.lesson}` : ''}`
+        : 'Geen gekoppelde jaarplanningles gevonden';
+      li.textContent = `${time} · ${classId} · les ${lessonSlot}${room ? ` · ${room}` : ''} · ${lessonLabel}`;
+      nextLessonDayLessons.appendChild(li);
+
+      const prepItems = [...plan.items].filter((item) => isPreparationItem(item));
+      if (plan.note && isPreparationItem(plan.note)) {
+        prepItems.push(`Opmerking: ${plan.note}`);
+      }
+      if (!prepItems.length && lesson?.homework) {
+        prepItems.push(`Controleer huiswerk: ${lesson.homework}`);
+      }
+      for (const prep of prepItems) {
+        const text = String(prep || '').trim();
+        if (!text) continue;
+        if (!prepMap.has(text)) prepMap.set(text, new Set());
+        prepMap.get(text).add(classId);
+      }
+    }
+
+    if (!nextLessonDayLessons.children.length) {
+      nextLessonDayLessons.innerHTML = '<li>Geen lessen gevonden voor de eerstvolgende lesdag.</li>';
+    }
+
+    if (!prepMap.size) {
+      nextLessonDayPrep.innerHTML = '<li>Geen extra voorbereiding of printwerk genoteerd.</li>';
+      return;
+    }
+
+    for (const [prep, classes] of prepMap.entries()) {
+      const li = document.createElement('li');
+      li.textContent = `${prep} (${[...classes].sort((a, b) => a.localeCompare(b, 'nl')).join(', ')})`;
+      nextLessonDayPrep.appendChild(li);
+    }
+  }
+
   function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
     if (!Array.isArray(lessons) || !lessons.length) return [];
     if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) {
@@ -1668,6 +1791,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         : ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw));
       savePlanningStudioToStorage();
       rebuildPlanningFromStudio();
+      renderNextLessonDayOverview(agendaEntries, new Date());
       renderPlanning();
     } catch (err) {
       console.error('Fout bij laden jaarplanning:', err);
@@ -1706,6 +1830,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderAgendaPreview(agendaEntries, new Date());
+      renderNextLessonDayOverview(agendaEntries, new Date());
       renderPlanning();
       updateClockMarkerTarget(new Date());
       return;
@@ -1743,6 +1868,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderAgendaPreview(agendaEntries, new Date());
+      renderNextLessonDayOverview(agendaEntries, new Date());
       renderPlanning();
       updateClockMarkerTarget(new Date());
       return;
@@ -1767,6 +1893,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
       }
       renderAgendaPreview(agendaEntries, new Date());
+      renderNextLessonDayOverview(agendaEntries, new Date());
       renderPlanning();
       updateClockMarkerTarget(new Date());
     }
@@ -2076,6 +2203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaDebugOutput.style.display = 'block';
     agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     renderAgendaPreview(agendaEntries, new Date());
+    renderNextLessonDayOverview(agendaEntries, new Date());
   });
 
   klasSelect?.addEventListener('change', () => {
@@ -2088,6 +2216,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
     }
     renderAgendaPreview(agendaEntries, new Date());
+    renderNextLessonDayOverview(agendaEntries, new Date());
     if (planningStudioClassSelect) {
       planningStudioClassSelect.value = canonicalClassId(klasSelect.value);
     }

@@ -17,7 +17,7 @@
     };
   </script>
   <script type="module" src="js/indeling.js?v=20260302-01"></script>
-  <script type="module" src="js/init.js?v=20260308-01"></script>
+  <script type="module" src="js/init.js?v=20260308-02"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
@@ -102,6 +102,16 @@
           <p id="agendaPreviewMeta" class="agenda-preview-meta">Rooster-preview: nog geen data.</p>
           <ul id="agendaPreviewList" class="agenda-preview-list">
             <li>Wacht op agenda-sync...</li>
+          </ul>
+        </div>
+        <div class="agenda-preview" id="nextLessonDayPanel">
+          <p id="nextLessonDayMeta" class="agenda-preview-meta">Eerstvolgende lesdag: nog geen data.</p>
+          <ul id="nextLessonDayLessons" class="agenda-preview-list">
+            <li>Wacht op agenda-sync...</li>
+          </ul>
+          <p class="agenda-preview-meta">Voorbereiden / printen</p>
+          <ul id="nextLessonDayPrep" class="agenda-preview-list">
+            <li>Nog geen voorbereidingen gevonden.</li>
           </ul>
         </div>
       </section>
