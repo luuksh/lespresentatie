@@ -1,5 +1,5 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
-const BASE_SOURCE = 'js/jaarplanning-live.json';
+const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
@@ -45,6 +45,7 @@ function normalizeDoc(raw) {
   const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
   if (!Array.isArray(doc.entries)) doc.entries = [];
   if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
+  doc.sourceRevision = String(doc.sourceRevision || '').trim();
   doc.entries = doc.entries
     .filter((entry) => entry && typeof entry === 'object')
     .map((entry) => {
@@ -69,6 +70,10 @@ function parseDocTimestamp(doc) {
 }
 
 function baseShouldReplaceLocal(baseDoc, localDoc) {
+  const baseRevision = String(baseDoc?.sourceRevision || '').trim();
+  const localRevision = String(localDoc?.sourceRevision || '').trim();
+  if (baseRevision && localRevision && baseRevision !== localRevision) return true;
+  if (baseRevision && !localRevision) return true;
   const baseStamp = parseDocTimestamp(baseDoc);
   const localStamp = parseDocTimestamp(localDoc);
   if (!baseStamp || !localStamp) return false;
