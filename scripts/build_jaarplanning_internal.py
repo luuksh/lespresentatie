@@ -12,6 +12,20 @@ from calendar_sources import DEFAULT_TZ, load_holidays
 from school_calendar_sources import load_school_calendar
 
 
+NON_REGULAR_PREFIXES = (
+    "cgu-week",
+    "cgu week",
+)
+
+NON_REGULAR_EXACT = {
+    "herfstvakantie",
+    "kerstvakantie",
+    "meivakantie",
+    "voorjaarsvakantie",
+    "zomervakantie",
+}
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Bouw live jaarplanning JSON uit intern bronbestand."
@@ -96,16 +110,52 @@ def normalize_entry(row: object) -> dict:
             if text:
                 items.append(text)
 
+    note = str(row.get("note", "")).strip()
+    converted_markers: list[str] = []
+    regular_lessons: list[dict] = []
+    for lesson in lessons:
+        project = str(lesson.get("project", "")).strip()
+        title = str(lesson.get("lesson", "")).strip()
+        if is_non_regular_marker(project, title):
+            converted_markers.append(project)
+            continue
+        regular_lessons.append(lesson)
+
+    for marker in converted_markers:
+        line = f"Geen reguliere lessen: {marker}."
+        if line not in items:
+            items.append(line)
+
+    if converted_markers:
+        prefix = "Geen reguliere lessen deze week"
+        marker_text = ", ".join(converted_markers)
+        marker_note = f"{prefix}: {marker_text}."
+        if note:
+            note_parts = [part.strip() for part in note.split(" | ") if part.strip()]
+            if marker_note not in note_parts:
+                note = f"{marker_note} | {note}"
+        else:
+            note = marker_note
+
     out = {
         "classId": class_id,
         "week": week,
-        "lessons": lessons,
+        "lessons": regular_lessons,
         "items": items,
     }
-    note = str(row.get("note", "")).strip()
     if note:
         out["note"] = note
     return out
+
+
+def is_non_regular_marker(project: str, lesson: str) -> bool:
+    project_text = str(project or "").strip()
+    if not project_text:
+        return False
+    normalized = project_text.casefold()
+    if normalized in NON_REGULAR_EXACT:
+        return True
+    return normalized.startswith(NON_REGULAR_PREFIXES)
 
 
 def merge_entry(base: dict, extra: dict) -> dict:
@@ -180,6 +230,7 @@ def main() -> int:
         "sourceType": "internal-json",
         "entries": entries,
     }
+    payload["sourceRevision"] = payload["updatedAt"]
     holidays = load_holidays(args.holidays_source, tz_name=args.tz)
     if holidays:
         payload["holidays"] = holidays

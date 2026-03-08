@@ -40,6 +40,20 @@ function lessonMarkerId(lessonName) {
   return `marker-${slugify(lessonName)}`;
 }
 
+function isNonRegularMarker(projectName, lessonTitle = '') {
+  const project = String(projectName || '').trim();
+  if (!project) return false;
+  const normalized = project.toLocaleLowerCase('nl-NL');
+  if ([
+    'herfstvakantie',
+    'kerstvakantie',
+    'meivakantie',
+    'voorjaarsvakantie',
+    'zomervakantie',
+  ].includes(normalized)) return true;
+  return normalized.startsWith('cgu-week') || normalized.startsWith('cgu week');
+}
+
 function normalizeDoc(raw) {
   const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
   if (!Array.isArray(doc.entries)) doc.entries = [];
@@ -73,6 +87,7 @@ function collectProjectMarkers(doc) {
     for (const lesson of entry.lessons) {
       const project = String(lesson?.project || '').trim();
       const lessonTitle = String(lesson?.lesson || '').trim();
+      if (isNonRegularMarker(project, lessonTitle)) continue;
       if (!project || !lessonTitle) continue;
       const deckId = projectDeckId(project);
       const markerId = lessonMarkerId(lessonTitle);
@@ -419,6 +434,7 @@ function fillProjects(doc) {
   const projects = [...new Set(
     (doc.entries || [])
       .flatMap((entry) => Array.isArray(entry.lessons) ? entry.lessons : [])
+      .filter((lesson) => !isNonRegularMarker(lesson?.project, lesson?.lesson))
       .map((lesson) => String(lesson?.project || '').trim())
       .filter(Boolean)
   )].sort((a, b) => a.localeCompare(b, 'nl'));

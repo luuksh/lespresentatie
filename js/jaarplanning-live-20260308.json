@@ -1,18 +1,15 @@
 {
-  "updatedAt": "2026-03-08T08:22:34+01:00",
+  "updatedAt": "2026-03-08T08:41:36+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
       "classId": "1A",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1A",
@@ -173,14 +170,11 @@
     {
       "classId": "1A",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1A",
@@ -210,14 +204,11 @@
     {
       "classId": "1A",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1A",
@@ -498,14 +489,11 @@
     {
       "classId": "1A",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1A",
@@ -549,14 +537,11 @@
     {
       "classId": "1A",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1A",
@@ -738,14 +723,11 @@
     {
       "classId": "1A",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1A",
@@ -977,14 +959,11 @@
     {
       "classId": "1A",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1A",
@@ -1043,38 +1022,29 @@
     {
       "classId": "1A",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1A",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1B",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1B",
@@ -1235,14 +1205,11 @@
     {
       "classId": "1B",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1B",
@@ -1272,14 +1239,11 @@
     {
       "classId": "1B",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1B",
@@ -1560,14 +1524,11 @@
     {
       "classId": "1B",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1B",
@@ -1611,14 +1572,11 @@
     {
       "classId": "1B",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1B",
@@ -1800,14 +1758,11 @@
     {
       "classId": "1B",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1B",
@@ -2039,14 +1994,11 @@
     {
       "classId": "1B",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1B",
@@ -2105,38 +2057,29 @@
     {
       "classId": "1B",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1B",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1C",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1C",
@@ -2297,14 +2240,11 @@
     {
       "classId": "1C",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1C",
@@ -2334,14 +2274,11 @@
     {
       "classId": "1C",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1C",
@@ -2622,14 +2559,11 @@
     {
       "classId": "1C",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1C",
@@ -2673,14 +2607,11 @@
     {
       "classId": "1C",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1C",
@@ -2862,14 +2793,11 @@
     {
       "classId": "1C",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1C",
@@ -3101,14 +3029,11 @@
     {
       "classId": "1C",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1C",
@@ -3167,38 +3092,29 @@
     {
       "classId": "1C",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1C",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1D",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1D",
@@ -3359,14 +3275,11 @@
     {
       "classId": "1D",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1D",
@@ -3396,14 +3309,11 @@
     {
       "classId": "1D",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1D",
@@ -3684,14 +3594,11 @@
     {
       "classId": "1D",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1D",
@@ -3735,14 +3642,11 @@
     {
       "classId": "1D",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1D",
@@ -3924,14 +3828,11 @@
     {
       "classId": "1D",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1D",
@@ -4163,14 +4064,11 @@
     {
       "classId": "1D",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1D",
@@ -4229,38 +4127,29 @@
     {
       "classId": "1D",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1D",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1E",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1E",
@@ -4421,14 +4310,11 @@
     {
       "classId": "1E",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1E",
@@ -4458,14 +4344,11 @@
     {
       "classId": "1E",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1E",
@@ -4746,14 +4629,11 @@
     {
       "classId": "1E",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1E",
@@ -4797,14 +4677,11 @@
     {
       "classId": "1E",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1E",
@@ -4986,14 +4863,11 @@
     {
       "classId": "1E",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1E",
@@ -5225,14 +5099,11 @@
     {
       "classId": "1E",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1E",
@@ -5291,38 +5162,29 @@
     {
       "classId": "1E",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1E",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1F",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1F",
@@ -5483,14 +5345,11 @@
     {
       "classId": "1F",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1F",
@@ -5520,14 +5379,11 @@
     {
       "classId": "1F",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1F",
@@ -5808,14 +5664,11 @@
     {
       "classId": "1F",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1F",
@@ -5859,14 +5712,11 @@
     {
       "classId": "1F",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1F",
@@ -6048,14 +5898,11 @@
     {
       "classId": "1F",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1F",
@@ -6287,14 +6134,11 @@
     {
       "classId": "1F",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1F",
@@ -6353,38 +6197,29 @@
     {
       "classId": "1F",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1F",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "1G",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1G",
@@ -6545,14 +6380,11 @@
     {
       "classId": "1G",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "1G",
@@ -6582,14 +6414,11 @@
     {
       "classId": "1G",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "1G",
@@ -6870,14 +6699,11 @@
     {
       "classId": "1G",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "1G",
@@ -6921,14 +6747,11 @@
     {
       "classId": "1G",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "1G",
@@ -7110,14 +6933,11 @@
     {
       "classId": "1G",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "1G",
@@ -7349,14 +7169,11 @@
     {
       "classId": "1G",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "1G",
@@ -7415,38 +7232,29 @@
     {
       "classId": "1G",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "1G",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "Moralicious",
-          "presentationId": "cgu-week-2-moralicious-moralicious"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "3A",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3A",
@@ -7579,14 +7387,11 @@
     {
       "classId": "3A",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3A",
@@ -7612,14 +7417,11 @@
     {
       "classId": "3A",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3A",
@@ -7848,14 +7650,11 @@
     {
       "classId": "3A",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3A",
@@ -7892,14 +7691,11 @@
     {
       "classId": "3A",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3A",
@@ -8028,14 +7824,11 @@
     {
       "classId": "3A",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3A",
@@ -8135,14 +7928,11 @@
     {
       "classId": "3A",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3A",
@@ -8188,38 +7978,29 @@
     {
       "classId": "3A",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3A",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3B",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3B",
@@ -8352,14 +8133,11 @@
     {
       "classId": "3B",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3B",
@@ -8385,14 +8163,11 @@
     {
       "classId": "3B",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3B",
@@ -8621,14 +8396,11 @@
     {
       "classId": "3B",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3B",
@@ -8665,14 +8437,11 @@
     {
       "classId": "3B",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3B",
@@ -8801,14 +8570,11 @@
     {
       "classId": "3B",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3B",
@@ -8908,14 +8674,11 @@
     {
       "classId": "3B",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3B",
@@ -8961,38 +8724,29 @@
     {
       "classId": "3B",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3B",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3C",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3C",
@@ -9125,14 +8879,11 @@
     {
       "classId": "3C",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3C",
@@ -9158,14 +8909,11 @@
     {
       "classId": "3C",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3C",
@@ -9394,14 +9142,11 @@
     {
       "classId": "3C",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3C",
@@ -9438,14 +9183,11 @@
     {
       "classId": "3C",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3C",
@@ -9574,14 +9316,11 @@
     {
       "classId": "3C",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3C",
@@ -9681,14 +9420,11 @@
     {
       "classId": "3C",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3C",
@@ -9734,38 +9470,29 @@
     {
       "classId": "3C",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3C",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3D",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3D",
@@ -9898,14 +9625,11 @@
     {
       "classId": "3D",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3D",
@@ -9931,14 +9655,11 @@
     {
       "classId": "3D",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3D",
@@ -10167,14 +9888,11 @@
     {
       "classId": "3D",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3D",
@@ -10211,14 +9929,11 @@
     {
       "classId": "3D",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3D",
@@ -10347,14 +10062,11 @@
     {
       "classId": "3D",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3D",
@@ -10454,14 +10166,11 @@
     {
       "classId": "3D",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3D",
@@ -10507,38 +10216,29 @@
     {
       "classId": "3D",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3D",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3E",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3E",
@@ -10671,14 +10371,11 @@
     {
       "classId": "3E",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3E",
@@ -10704,14 +10401,11 @@
     {
       "classId": "3E",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3E",
@@ -10940,14 +10634,11 @@
     {
       "classId": "3E",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3E",
@@ -10984,14 +10675,11 @@
     {
       "classId": "3E",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3E",
@@ -11120,14 +10808,11 @@
     {
       "classId": "3E",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3E",
@@ -11227,14 +10912,11 @@
     {
       "classId": "3E",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3E",
@@ -11280,38 +10962,29 @@
     {
       "classId": "3E",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3E",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3F",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3F",
@@ -11444,14 +11117,11 @@
     {
       "classId": "3F",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3F",
@@ -11477,14 +11147,11 @@
     {
       "classId": "3F",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3F",
@@ -11713,14 +11380,11 @@
     {
       "classId": "3F",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3F",
@@ -11757,14 +11421,11 @@
     {
       "classId": "3F",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3F",
@@ -11893,14 +11554,11 @@
     {
       "classId": "3F",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3F",
@@ -12000,14 +11658,11 @@
     {
       "classId": "3F",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3F",
@@ -12053,38 +11708,29 @@
     {
       "classId": "3F",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3F",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "3G",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3G",
@@ -12217,14 +11863,11 @@
     {
       "classId": "3G",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "3G",
@@ -12250,14 +11893,11 @@
     {
       "classId": "3G",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "3G",
@@ -12486,14 +12126,11 @@
     {
       "classId": "3G",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "3G",
@@ -12530,14 +12167,11 @@
     {
       "classId": "3G",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "",
-          "presentationId": "cgu-week-1-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "3G",
@@ -12666,14 +12300,11 @@
     {
       "classId": "3G",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "3G",
@@ -12773,14 +12404,11 @@
     {
       "classId": "3G",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "3G",
@@ -12826,38 +12454,29 @@
     {
       "classId": "3G",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "3G",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2",
-          "lesson": "",
-          "presentationId": "cgu-week-2-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
       "classId": "4.1",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.1",
@@ -13014,14 +12633,11 @@
     {
       "classId": "4.1",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.1",
@@ -13039,14 +12655,11 @@
     {
       "classId": "4.1",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.1",
@@ -13166,14 +12779,11 @@
     {
       "classId": "4.1",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.1",
@@ -13309,14 +12919,11 @@
     {
       "classId": "4.1",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.1",
@@ -13518,14 +13125,11 @@
     {
       "classId": "4.1",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.1",
@@ -13583,38 +13187,29 @@
     {
       "classId": "4.1",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.1",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "4.2",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.2",
@@ -13771,14 +13366,11 @@
     {
       "classId": "4.2",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.2",
@@ -13796,14 +13388,11 @@
     {
       "classId": "4.2",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.2",
@@ -13923,14 +13512,11 @@
     {
       "classId": "4.2",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.2",
@@ -14066,14 +13652,11 @@
     {
       "classId": "4.2",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.2",
@@ -14275,14 +13858,11 @@
     {
       "classId": "4.2",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.2",
@@ -14340,38 +13920,29 @@
     {
       "classId": "4.2",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.2",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "4.3",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.3",
@@ -14528,14 +14099,11 @@
     {
       "classId": "4.3",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.3",
@@ -14553,14 +14121,11 @@
     {
       "classId": "4.3",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.3",
@@ -14680,14 +14245,11 @@
     {
       "classId": "4.3",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.3",
@@ -14823,14 +14385,11 @@
     {
       "classId": "4.3",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.3",
@@ -15032,14 +14591,11 @@
     {
       "classId": "4.3",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.3",
@@ -15097,38 +14653,29 @@
     {
       "classId": "4.3",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.3",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "4.4",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.4",
@@ -15285,14 +14832,11 @@
     {
       "classId": "4.4",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.4",
@@ -15310,14 +14854,11 @@
     {
       "classId": "4.4",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.4",
@@ -15437,14 +14978,11 @@
     {
       "classId": "4.4",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.4",
@@ -15488,14 +15026,11 @@
     {
       "classId": "4.4",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "Uitleg vak Nederlands",
-          "presentationId": "cgu-week-1-uitleg-vak-nederlands"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "4.4",
@@ -15681,14 +15216,11 @@
     {
       "classId": "4.4",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.4",
@@ -15922,14 +15454,11 @@
     {
       "classId": "4.4",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.4",
@@ -15987,38 +15516,29 @@
     {
       "classId": "4.4",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.4",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "4.5",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.5",
@@ -16175,14 +15695,11 @@
     {
       "classId": "4.5",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.5",
@@ -16200,14 +15717,11 @@
     {
       "classId": "4.5",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.5",
@@ -16327,14 +15841,11 @@
     {
       "classId": "4.5",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.5",
@@ -16378,14 +15889,11 @@
     {
       "classId": "4.5",
       "week": "36",
-      "lessons": [
-        {
-          "project": "CGU-Week 1",
-          "lesson": "Uitleg vak Nederlands",
-          "presentationId": "cgu-week-1-uitleg-vak-nederlands"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 1."
     },
     {
       "classId": "4.5",
@@ -16571,14 +16079,11 @@
     {
       "classId": "4.5",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.5",
@@ -16812,14 +16317,11 @@
     {
       "classId": "4.5",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.5",
@@ -16877,38 +16379,29 @@
     {
       "classId": "4.5",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.5",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "4.6",
       "week": "1",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.6",
@@ -17065,14 +16558,11 @@
     {
       "classId": "4.6",
       "week": "16",
-      "lessons": [
-        {
-          "project": "CGU-week 3",
-          "lesson": "",
-          "presentationId": "cgu-week-3-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 3."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 3."
     },
     {
       "classId": "4.6",
@@ -17090,14 +16580,11 @@
     {
       "classId": "4.6",
       "week": "18",
-      "lessons": [
-        {
-          "project": "Meivakantie",
-          "lesson": "",
-          "presentationId": "meivakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Meivakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Meivakantie."
     },
     {
       "classId": "4.6",
@@ -17217,14 +16704,11 @@
     {
       "classId": "4.6",
       "week": "29",
-      "lessons": [
-        {
-          "project": "CGU-Week 4",
-          "lesson": "",
-          "presentationId": "cgu-week-4-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 4."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-Week 4."
     },
     {
       "classId": "4.6",
@@ -17360,14 +16844,11 @@
     {
       "classId": "4.6",
       "week": "43",
-      "lessons": [
-        {
-          "project": "Herfstvakantie",
-          "lesson": "",
-          "presentationId": "herfstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Herfstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Herfstvakantie."
     },
     {
       "classId": "4.6",
@@ -17569,14 +17050,11 @@
     {
       "classId": "4.6",
       "week": "52",
-      "lessons": [
-        {
-          "project": "Kerstvakantie",
-          "lesson": "",
-          "presentationId": "kerstvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Kerstvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Kerstvakantie."
     },
     {
       "classId": "4.6",
@@ -17634,26 +17112,20 @@
     {
       "classId": "4.6",
       "week": "8",
-      "lessons": [
-        {
-          "project": "Voorjaarsvakantie",
-          "lesson": "",
-          "presentationId": "voorjaarsvakantie-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: Voorjaarsvakantie."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: Voorjaarsvakantie."
     },
     {
       "classId": "4.6",
       "week": "9",
-      "lessons": [
-        {
-          "project": "CGU-week 2 - Moralicious",
-          "lesson": "",
-          "presentationId": "cgu-week-2-moralicious-item"
-        }
+      "lessons": [],
+      "items": [
+        "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
-      "items": []
+      "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
       "classId": "ALL",
@@ -19080,7 +18552,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-03-08T08:22:34+01:00",
+  "sourceRevision": "2026-03-08T08:41:36+01:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
