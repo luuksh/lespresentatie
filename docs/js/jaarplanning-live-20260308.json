@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-08T08:41:36+01:00",
+  "updatedAt": "2026-03-08T09:14:34+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -12508,97 +12508,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.1",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.1",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.1",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -12608,26 +12626,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -12644,10 +12666,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -12666,13 +12689,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.1",
@@ -12707,23 +12734,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.1",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -12733,10 +12766,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -12748,10 +12783,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -12769,9 +12805,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -12817,9 +12855,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -13241,97 +13281,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.2",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.2",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.2",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -13341,26 +13399,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -13377,10 +13439,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -13399,13 +13462,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.2",
@@ -13440,23 +13507,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.2",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -13466,10 +13539,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -13481,10 +13556,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -13502,9 +13578,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -13550,9 +13628,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -13974,97 +14054,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.3",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.3",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.3",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -14074,26 +14172,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -14110,10 +14212,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -14132,13 +14235,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.3",
@@ -14173,23 +14280,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.3",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -14199,10 +14312,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -14214,10 +14329,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -14235,9 +14351,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -14283,9 +14401,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -14707,97 +14827,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.4",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.4",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.4",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -14807,26 +14945,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -14843,10 +14985,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -14865,13 +15008,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.4",
@@ -14906,23 +15053,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.4",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -14932,10 +15085,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -14947,10 +15102,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -14968,9 +15124,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -15016,9 +15174,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -15570,97 +15730,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.5",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.5",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.5",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -15670,26 +15848,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -15706,10 +15888,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -15728,13 +15911,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.5",
@@ -15769,23 +15956,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.5",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -15795,10 +15988,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -15810,10 +16005,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -15831,9 +16027,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -15879,9 +16077,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -16433,97 +16633,115 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 2: Personages",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-2-personages-les-2"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel 1 Framing en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.6",
       "week": "12",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 3: Perspectief",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-3-perspectief-les-3"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel univ Leiden en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.6",
       "week": "13",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 4: Spanning",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-4-spanning-les-4"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
-      "items": []
+      "items": [
+        "Docent: print Artikel Wanneer slechts de mening van het volk telt en zet het klaar als lesdocument."
+      ]
     },
     {
       "classId": "4.6",
       "week": "14",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 5: Tijd en Ruimte",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-5-tijd-en-ruimte-les-5"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -16533,26 +16751,30 @@
       "week": "15",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "Les 6: Thema & Afronden 2",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
           "lessonKey": "A",
-          "presentationId": "boekenclub-les-6-thema-afronden-2-les-6"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
           "lessonKey": "B",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         },
         {
-          "project": "Taalmakers",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "lessonKey": "C",
-          "presentationId": "taalmakers-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
-        "Spreekopdracht"
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
       ]
     },
     {
@@ -16569,10 +16791,11 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": []
@@ -16591,13 +16814,17 @@
       "week": "19",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: zet Eindopdracht voor toetsmodus klaar als document."
+      ]
     },
     {
       "classId": "4.6",
@@ -16632,23 +16859,29 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
-      "items": []
+      "items": [
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ]
     },
     {
       "classId": "4.6",
       "week": "21",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": []
@@ -16658,10 +16891,12 @@
       "week": "22",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting.",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -16673,10 +16908,11 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Boekenclub",
-          "lesson": "",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "lessonKey": "A",
-          "presentationId": "boekenclub-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": []
@@ -16694,9 +16930,11 @@
       "week": "28",
       "lessons": [
         {
-          "project": "Toetsweek",
-          "lesson": "",
-          "presentationId": "toetsweek-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -16742,9 +16980,11 @@
       "week": "30",
       "lessons": [
         {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "presentationId": "rapporten-e-d-item"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "lessonKey": "A",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -18552,7 +18792,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-03-08T08:41:36+01:00",
+  "sourceRevision": "2026-03-08T09:14:34+01:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
@@ -41420,6 +41660,1079 @@
         ]
       },
       "importVersion": 3
+    },
+    "project-invloed": {
+      "id": "project-invloed",
+      "presentationType": "project-overview",
+      "title": "Invloed",
+      "subtitle": "Schrijfvaardigheid",
+      "project": "Invloed",
+      "importVersion": 2026030801,
+      "markerDecks": {
+        "marker-invloed-1-framing-herkennen-en-sturen": [
+          {
+            "type": "bullets",
+            "title": "Invloed 1: Framing herkennen en sturen",
+            "subtitle": "Invloed",
+            "items": [
+              "Je frist framing op en herkent hoe taal je blik stuurt.",
+              "Je leest straks het geprinte artikel over framing.",
+              "Je noteert wat framing met jou als lezer doet."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Startvragen",
+            "subtitle": "",
+            "items": [
+              "Hoe kan taalvaardigheid je beschermen tegen beinvloeding?",
+              "Welke woorden sturen jou sneller dan je denkt?",
+              "Wanneer merk je dat iemand je al een richting op duwt?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Framing in het kort",
+            "subtitle": "",
+            "items": [
+              "Taal kiest voor jou een bril.",
+              "Voorbeelden: plofkip, kiloknaller, klimaatdrammer, asieltsunami.",
+              "Wie het frame kiest, bepaalt vaak ook het gesprek."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Leesopdracht",
+            "subtitle": "",
+            "items": [
+              "Lees het geprinte artikel Artikel 1 Framing.",
+              "Noteer tijdens het lezen voorbeelden van sturende woorden.",
+              "Let op context, voorbeelden en het doel van de schrijver."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Na het lezen",
+            "subtitle": "",
+            "items": [
+              "Bespreek: wanneer stap je ongemerkt in het frame van een ander?",
+              "Kies twee voorbeelden uit de tekst en leg uit waarom ze werken.",
+              "Sluit af met een zin in je netschrift: tegen welke framing ben jij gevoelig?"
+            ]
+          }
+        ],
+        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": [
+          {
+            "type": "bullets",
+            "title": "Invloed 2: Complottheorieen en wantrouwen lezen",
+            "subtitle": "Invloed",
+            "items": [
+              "Je onderzoekt waarom mensen in complottheorieen geloven.",
+              "Je leest het geprinte artikel van de Universiteit Leiden.",
+              "Je leert wantrouwen en onzekerheid taal te geven."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Voor het lezen",
+            "subtitle": "",
+            "items": [
+              "Welke complotten kom jij op sociale media tegen?",
+              "Waarom klikken mensen toch door?",
+              "Wat is het verschil tussen iets geloven en iets serieus nemen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kern van het artikel",
+            "subtitle": "",
+            "items": [
+              "Vervang de hoe-vraag door de waarom-vraag.",
+              "Mensen letterlijk nemen is niet hetzelfde als mensen serieus nemen.",
+              "Wantrouwen groeit waar kennisclaims botsen en instituties vertrouwen verliezen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijdens en na het lezen",
+            "subtitle": "",
+            "items": [
+              "Vat alinea 4 in gewone taal samen.",
+              "Leg uit wat epistemologische onzekerheid hier betekent.",
+              "Bespreek: moet je complottheorieen bestrijden, begrijpen of allebei?"
+            ]
+          }
+        ],
+        "marker-invloed-3-populisme-media-en-volkswil": [
+          {
+            "type": "bullets",
+            "title": "Invloed 3: Populisme, media en volkswil",
+            "subtitle": "Invloed",
+            "items": [
+              "Je onderzoekt hoe media en populisten invloed uitoefenen op meningen.",
+              "Je leest het geprinte Volkskrant-artikel van Sander Schimmelpenninck.",
+              "Je koppelt het artikel aan framing en beeldvorming."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kernvragen",
+            "subtitle": "",
+            "items": [
+              "Bestaat de volkswil zomaar, of wordt die mee gemaakt?",
+              "Wie heeft er baat bij om namens de stille meerderheid te spreken?",
+              "Welke rol spelen talkshows, algoritmen en aandachtseconomie?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijdens het lezen",
+            "subtitle": "",
+            "items": [
+              "Markeer passages over media, publiek en beinvloeding van bovenaf.",
+              "Zoek een zin waarin de schrijver zelf sterk framet.",
+              "Let op toon: hoe laat de schrijver zijn oordeel voelen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Na het lezen",
+            "subtitle": "",
+            "items": [
+              "Schrijf in drie zinnen: hoe ontstaat volgens dit artikel publieke woede?",
+              "Bespreek: wanneer is stevige taal verhelderend, en wanneer manipulatief?",
+              "Verzamel bruikbare formuleringen voor je eigen schrijfopdracht."
+            ]
+          }
+        ],
+        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": [
+          {
+            "type": "bullets",
+            "title": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+            "subtitle": "Invloed",
+            "items": [
+              "Je leert hoe complotten overtuigend lijken door denkfouten en drogredenen.",
+              "Je gebruikt die middelen straks bewust in je eigen tekst.",
+              "Over the top mag, zolang je bewust kiest."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Denkfouten om op te letten",
+            "subtitle": "",
+            "items": [
+              "Valse oorzaak-gevolgrelatie.",
+              "Overhaaste generalisatie.",
+              "Cirkelredenering en bewijslast omkeren.",
+              "Tegenstanders wegzetten als deel van het complot."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe bouw je een complot?",
+            "subtitle": "",
+            "items": [
+              "Kies een ingrijpende gebeurtenis.",
+              "Wijs samenzweerders aan en geef ze een doel.",
+              "Maak kleine signalen groot en negeer tegenbewijs.",
+              "Laat losse details op elkaar lijken alsof het geen toeval kan zijn."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkvorm",
+            "subtitle": "",
+            "items": [
+              "Bedenk in duo een complottheorie in drie stappen.",
+              "Gebruik minimaal twee drogredenen bewust.",
+              "Sluit af met een korte pitch van maximaal 30 seconden."
+            ]
+          }
+        ],
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": [
+          {
+            "type": "bullets",
+            "title": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+            "subtitle": "Invloed",
+            "items": [
+              "Je ontdekt hoe kleine woordjes een zin net even sturen.",
+              "Je koppelt subtiele manipulatie aan framing en toon.",
+              "Je oefent met herschrijven."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vergelijk deze drie zinnen",
+            "subtitle": "",
+            "items": [
+              "Moet je naar de wc?",
+              "Moet je alweer naar de wc?",
+              "Moet je nou alweer naar de wc?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat doen kleine woordjes?",
+            "subtitle": "",
+            "items": [
+              "Woorden als al, nou, maar, even en eens kleuren houding en verwachting.",
+              "Ze laten irritatie, verbazing, druk of gezelligheid meeklinken.",
+              "Juist omdat ze klein zijn, glippen ze makkelijk langs je aandacht."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Oefenen",
+            "subtitle": "",
+            "items": [
+              "Herschrijf drie neutrale zinnen in een sturende variant.",
+              "Herschrijf daarna een manipulatieve zin weer neutraal.",
+              "Kies een woordje dat jij straks slim in je tekst wilt gebruiken."
+            ]
+          }
+        ],
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": [
+          {
+            "type": "bullets",
+            "title": "Invloed 6: Schrijfplan, frame en spiekbrief",
+            "subtitle": "Invloed",
+            "items": [
+              "Je bereidt de eindopdracht gericht voor.",
+              "Je kiest je complottheorie, frame en toon.",
+              "Je maakt een bruikbaar spiekbriefje voor de toetsmodus."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Eindopdracht",
+            "subtitle": "",
+            "items": [
+              "Schrijf een toespraak voor de Tweede Kamer waarin je jouw complottheorie verdedigt.",
+              "Gebruik frames, drogredenen, denkfouten en humor.",
+              "Schrijf 400-500 woorden.",
+              "Respecteer artikel 1 van de Grondwet: geen discriminatie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Schrijfplan",
+            "subtitle": "",
+            "items": [
+              "Kies onderwerp, samenzweerders en doel.",
+              "Bepaal je frame: welke woorden laten jouw theorie logisch lijken?",
+              "Bedenk drie momenten van overdrijving of drogredenering.",
+              "Schrijf een korte structuur: opening, uitwerking, aanval, slotoproep."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Spiekbriefje A4",
+            "subtitle": "",
+            "items": [
+              "Alleen steekwoorden, geen lopende zinnen.",
+              "Zet erop: framewoorden, volgorde, voorbeelden, kleine woordjes, slotzin.",
+              "Noteer ook je schrijfvoornemen bovenaan je tekst."
+            ]
+          }
+        ],
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": [
+          {
+            "type": "bullets",
+            "title": "Invloed 7: Toetsmodus blok 1 op laptop",
+            "subtitle": "Invloed",
+            "items": [
+              "Laptop open, toetsmodus aan, spiekbriefje paraat.",
+              "Vandaag schrijf je de eerste helft van je tekst.",
+              "Doel: een stevige opening en uitgewerkte kern."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Aanpak voor dit blok",
+            "subtitle": "",
+            "items": [
+              "Zet bovenaan je naam en schrijfvoornemen.",
+              "Werk rustig van frame naar argumenten naar voorbeelden.",
+              "Streef vandaag naar ongeveer 200-300 woorden."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Checklist tijdens het schrijven",
+            "subtitle": "",
+            "items": [
+              "Gebruik je hoorbaar een frame?",
+              "Zitten er minstens twee drogredenen of denkfouten in?",
+              "Hoor je eigenheid, humor en overdrijving terug?",
+              "Blijf je binnen de grens van artikel 1?"
+            ]
+          }
+        ],
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": [
+          {
+            "type": "bullets",
+            "title": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
+            "subtitle": "Invloed",
+            "items": [
+              "Vandaag rond je je tekst af en lever je hem in.",
+              "Je maakt je toespraak scherper, helderder en eigenzinniger.",
+              "Aan het eind is de tekst beoordeelbaar."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Laatste revisie",
+            "subtitle": "",
+            "items": [
+              "Werk toe naar 400-500 woorden.",
+              "Controleer op woordkeuze, duidelijkheid, creativiteit en eigenheid.",
+              "Zorg dat de tekst bewust over the top is, niet slordig."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Inlevercheck",
+            "subtitle": "",
+            "items": [
+              "Naam en schrijfvoornemen bovenaan.",
+              "Frame, stijl en drogredenen duidelijk aanwezig.",
+              "Tekst opgeslagen en ingeleverd volgens afspraak."
+            ]
+          }
+        ]
+      },
+      "markers": {
+        "marker-invloed-1-framing-herkennen-en-sturen": 1,
+        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 6,
+        "marker-invloed-3-populisme-media-en-volkswil": 10,
+        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 14,
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 18,
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 22,
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 26,
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 29
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Invloed",
+          "subtitle": "Schrijfvaardigheid"
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 1: Framing herkennen en sturen",
+          "subtitle": "Invloed",
+          "items": [
+            "Je frist framing op en herkent hoe taal je blik stuurt.",
+            "Je leest straks het geprinte artikel over framing.",
+            "Je noteert wat framing met jou als lezer doet."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Startvragen",
+          "subtitle": "",
+          "items": [
+            "Hoe kan taalvaardigheid je beschermen tegen beinvloeding?",
+            "Welke woorden sturen jou sneller dan je denkt?",
+            "Wanneer merk je dat iemand je al een richting op duwt?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Framing in het kort",
+          "subtitle": "",
+          "items": [
+            "Taal kiest voor jou een bril.",
+            "Voorbeelden: plofkip, kiloknaller, klimaatdrammer, asieltsunami.",
+            "Wie het frame kiest, bepaalt vaak ook het gesprek."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Leesopdracht",
+          "subtitle": "",
+          "items": [
+            "Lees het geprinte artikel Artikel 1 Framing.",
+            "Noteer tijdens het lezen voorbeelden van sturende woorden.",
+            "Let op context, voorbeelden en het doel van de schrijver."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Na het lezen",
+          "subtitle": "",
+          "items": [
+            "Bespreek: wanneer stap je ongemerkt in het frame van een ander?",
+            "Kies twee voorbeelden uit de tekst en leg uit waarom ze werken.",
+            "Sluit af met een zin in je netschrift: tegen welke framing ben jij gevoelig?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "subtitle": "Invloed",
+          "items": [
+            "Je onderzoekt waarom mensen in complottheorieen geloven.",
+            "Je leest het geprinte artikel van de Universiteit Leiden.",
+            "Je leert wantrouwen en onzekerheid taal te geven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voor het lezen",
+          "subtitle": "",
+          "items": [
+            "Welke complotten kom jij op sociale media tegen?",
+            "Waarom klikken mensen toch door?",
+            "Wat is het verschil tussen iets geloven en iets serieus nemen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kern van het artikel",
+          "subtitle": "",
+          "items": [
+            "Vervang de hoe-vraag door de waarom-vraag.",
+            "Mensen letterlijk nemen is niet hetzelfde als mensen serieus nemen.",
+            "Wantrouwen groeit waar kennisclaims botsen en instituties vertrouwen verliezen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdens en na het lezen",
+          "subtitle": "",
+          "items": [
+            "Vat alinea 4 in gewone taal samen.",
+            "Leg uit wat epistemologische onzekerheid hier betekent.",
+            "Bespreek: moet je complottheorieen bestrijden, begrijpen of allebei?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 3: Populisme, media en volkswil",
+          "subtitle": "Invloed",
+          "items": [
+            "Je onderzoekt hoe media en populisten invloed uitoefenen op meningen.",
+            "Je leest het geprinte Volkskrant-artikel van Sander Schimmelpenninck.",
+            "Je koppelt het artikel aan framing en beeldvorming."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kernvragen",
+          "subtitle": "",
+          "items": [
+            "Bestaat de volkswil zomaar, of wordt die mee gemaakt?",
+            "Wie heeft er baat bij om namens de stille meerderheid te spreken?",
+            "Welke rol spelen talkshows, algoritmen en aandachtseconomie?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdens het lezen",
+          "subtitle": "",
+          "items": [
+            "Markeer passages over media, publiek en beinvloeding van bovenaf.",
+            "Zoek een zin waarin de schrijver zelf sterk framet.",
+            "Let op toon: hoe laat de schrijver zijn oordeel voelen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Na het lezen",
+          "subtitle": "",
+          "items": [
+            "Schrijf in drie zinnen: hoe ontstaat volgens dit artikel publieke woede?",
+            "Bespreek: wanneer is stevige taal verhelderend, en wanneer manipulatief?",
+            "Verzamel bruikbare formuleringen voor je eigen schrijfopdracht."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "subtitle": "Invloed",
+          "items": [
+            "Je leert hoe complotten overtuigend lijken door denkfouten en drogredenen.",
+            "Je gebruikt die middelen straks bewust in je eigen tekst.",
+            "Over the top mag, zolang je bewust kiest."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Denkfouten om op te letten",
+          "subtitle": "",
+          "items": [
+            "Valse oorzaak-gevolgrelatie.",
+            "Overhaaste generalisatie.",
+            "Cirkelredenering en bewijslast omkeren.",
+            "Tegenstanders wegzetten als deel van het complot."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe bouw je een complot?",
+          "subtitle": "",
+          "items": [
+            "Kies een ingrijpende gebeurtenis.",
+            "Wijs samenzweerders aan en geef ze een doel.",
+            "Maak kleine signalen groot en negeer tegenbewijs.",
+            "Laat losse details op elkaar lijken alsof het geen toeval kan zijn."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkvorm",
+          "subtitle": "",
+          "items": [
+            "Bedenk in duo een complottheorie in drie stappen.",
+            "Gebruik minimaal twee drogredenen bewust.",
+            "Sluit af met een korte pitch van maximaal 30 seconden."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "subtitle": "Invloed",
+          "items": [
+            "Je ontdekt hoe kleine woordjes een zin net even sturen.",
+            "Je koppelt subtiele manipulatie aan framing en toon.",
+            "Je oefent met herschrijven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vergelijk deze drie zinnen",
+          "subtitle": "",
+          "items": [
+            "Moet je naar de wc?",
+            "Moet je alweer naar de wc?",
+            "Moet je nou alweer naar de wc?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat doen kleine woordjes?",
+          "subtitle": "",
+          "items": [
+            "Woorden als al, nou, maar, even en eens kleuren houding en verwachting.",
+            "Ze laten irritatie, verbazing, druk of gezelligheid meeklinken.",
+            "Juist omdat ze klein zijn, glippen ze makkelijk langs je aandacht."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefenen",
+          "subtitle": "",
+          "items": [
+            "Herschrijf drie neutrale zinnen in een sturende variant.",
+            "Herschrijf daarna een manipulatieve zin weer neutraal.",
+            "Kies een woordje dat jij straks slim in je tekst wilt gebruiken."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "subtitle": "Invloed",
+          "items": [
+            "Je bereidt de eindopdracht gericht voor.",
+            "Je kiest je complottheorie, frame en toon.",
+            "Je maakt een bruikbaar spiekbriefje voor de toetsmodus."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Eindopdracht",
+          "subtitle": "",
+          "items": [
+            "Schrijf een toespraak voor de Tweede Kamer waarin je jouw complottheorie verdedigt.",
+            "Gebruik frames, drogredenen, denkfouten en humor.",
+            "Schrijf 400-500 woorden.",
+            "Respecteer artikel 1 van de Grondwet: geen discriminatie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Schrijfplan",
+          "subtitle": "",
+          "items": [
+            "Kies onderwerp, samenzweerders en doel.",
+            "Bepaal je frame: welke woorden laten jouw theorie logisch lijken?",
+            "Bedenk drie momenten van overdrijving of drogredenering.",
+            "Schrijf een korte structuur: opening, uitwerking, aanval, slotoproep."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Spiekbriefje A4",
+          "subtitle": "",
+          "items": [
+            "Alleen steekwoorden, geen lopende zinnen.",
+            "Zet erop: framewoorden, volgorde, voorbeelden, kleine woordjes, slotzin.",
+            "Noteer ook je schrijfvoornemen bovenaan je tekst."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 7: Toetsmodus blok 1 op laptop",
+          "subtitle": "Invloed",
+          "items": [
+            "Laptop open, toetsmodus aan, spiekbriefje paraat.",
+            "Vandaag schrijf je de eerste helft van je tekst.",
+            "Doel: een stevige opening en uitgewerkte kern."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aanpak voor dit blok",
+          "subtitle": "",
+          "items": [
+            "Zet bovenaan je naam en schrijfvoornemen.",
+            "Werk rustig van frame naar argumenten naar voorbeelden.",
+            "Streef vandaag naar ongeveer 200-300 woorden."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Checklist tijdens het schrijven",
+          "subtitle": "",
+          "items": [
+            "Gebruik je hoorbaar een frame?",
+            "Zitten er minstens twee drogredenen of denkfouten in?",
+            "Hoor je eigenheid, humor en overdrijving terug?",
+            "Blijf je binnen de grens van artikel 1?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
+          "subtitle": "Invloed",
+          "items": [
+            "Vandaag rond je je tekst af en lever je hem in.",
+            "Je maakt je toespraak scherper, helderder en eigenzinniger.",
+            "Aan het eind is de tekst beoordeelbaar."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste revisie",
+          "subtitle": "",
+          "items": [
+            "Werk toe naar 400-500 woorden.",
+            "Controleer op woordkeuze, duidelijkheid, creativiteit en eigenheid.",
+            "Zorg dat de tekst bewust over the top is, niet slordig."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inlevercheck",
+          "subtitle": "",
+          "items": [
+            "Naam en schrijfvoornemen bovenaan.",
+            "Frame, stijl en drogredenen duidelijk aanwezig.",
+            "Tekst opgeslagen en ingeleverd volgens afspraak."
+          ]
+        }
+      ]
+    },
+    "project-taalmakers": {
+      "id": "project-taalmakers",
+      "presentationType": "project-overview",
+      "title": "Taalmakers",
+      "subtitle": "Eigen taalproject",
+      "project": "Taalmakers",
+      "importVersion": 2026030801,
+      "markerDecks": {
+        "marker-taalmakers-1-projectstart-ideeen-en-groepjes": [
+          {
+            "type": "bullets",
+            "title": "Taalmakers 1: Projectstart, ideeen en groepjes",
+            "subtitle": "Taalmakers",
+            "items": [
+              "Je start een eigen talig project dat je nog niet eerder hebt gedaan.",
+              "Je kiest iets waar je creativiteit en energie in kwijt kunt.",
+              "Aan het einde presenteer je een echt product."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat maakt Taalmakers tot Taalmakers?",
+            "subtitle": "",
+            "items": [
+              "Het product is talig: spreken, schrijven, vertalen, maken, spelen, presenteren.",
+              "Het is niet te klein en niet te groot.",
+              "Je werkt alleen of met maximaal drie leerlingen.",
+              "Iemand anders moet er iets aan hebben of beleven."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mogelijke producten",
+            "subtitle": "",
+            "items": [
+              "Podcast, tutorial, poeziebundel, toneeltekst, krant, vertaling, taalspel, boekproject.",
+              "Je mag ook iets heel anders bedenken als het talig en haalbaar is.",
+              "Kies vooral iets wat je echt nieuwsgierig maakt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat regel je vandaag?",
+            "subtitle": "",
+            "items": [
+              "Groep of solo.",
+              "Voorlopig productidee.",
+              "Doelgroep.",
+              "Mogelijke expert die feedback kan geven."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Huiswerk",
+            "subtitle": "",
+            "items": [
+              "Werk thuis je idee uit.",
+              "Bepaal doelgroep, drie ideeen, twee talenten en een mogelijke expert.",
+              "Neem dit mee naar de volgende les."
+            ]
+          }
+        ],
+        "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning": [
+          {
+            "type": "bullets",
+            "title": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+            "subtitle": "Taalmakers",
+            "items": [
+              "Vandaag leg je het project echt vast.",
+              "Je maakt een voorstel dat uitvoerbaar en controleerbaar is.",
+              "Na deze les weet jij precies wat je gaat maken."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Projectvoorstel: dit moet erin",
+            "subtitle": "",
+            "items": [
+              "Wie: alleen of met wie, en welke expert past erbij?",
+              "Wat: beschrijf het product en hoe je het laat zien.",
+              "Voor wie: doelgroep en waarom die dit wil zien, lezen, horen of gebruiken.",
+              "Waarom: wat leer je over taal, jezelf en eventueel samenwerken?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Ook opnemen",
+            "subtitle": "",
+            "items": [
+              "Minimaal vier leerdoelen.",
+              "Je talenten: wat kun je al goed en waar krijg je energie van?",
+              "Een globale planning van nu tot de afsluitende les."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Huiswerk",
+            "subtitle": "",
+            "items": [
+              "Lever je voorstel in.",
+              "Leg contact met je expert of bereid dat contact voor.",
+              "Verzamel eerste materialen zodat je in les 3 echt kunt bouwen."
+            ]
+          }
+        ],
+        "marker-taalmakers-3-werkles-en-feedbackronde": [
+          {
+            "type": "bullets",
+            "title": "Taalmakers 3: Werkles en feedbackronde",
+            "subtitle": "Taalmakers",
+            "items": [
+              "Werkles: proces staat centraal.",
+              "Je laat zien dat je voortgang boekt.",
+              "Je vraagt tussentijds gerichte feedback."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Doelen van deze les",
+            "subtitle": "",
+            "items": [
+              "Werk zichtbaar aan je product.",
+              "Maak keuzes en leg die vast.",
+              "Noteer wat lukt, schuurt of vastloopt."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Feedbackronde",
+            "subtitle": "",
+            "items": [
+              "Wat is je volgende concrete stap?",
+              "Wat moet duidelijker voor je doelgroep?",
+              "Waar heb je hulp of materiaal voor nodig?"
+            ]
+          }
+        ],
+        "marker-taalmakers-4-werkles-en-tussenstand": [
+          {
+            "type": "bullets",
+            "title": "Taalmakers 4: Werkles en tussenstand",
+            "subtitle": "Taalmakers",
+            "items": [
+              "Vandaag werk je verder en laat je je tussenstand zien.",
+              "Je test of het product al werkt voor iemand anders.",
+              "Je bereidt de afsluitende presentatie voor."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tussenstandcheck",
+            "subtitle": "",
+            "items": [
+              "Is je product al herkenbaar?",
+              "Heeft je doelgroep er echt iets aan?",
+              "Welke feedback wil je vandaag ophalen?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Werkdoelen",
+            "subtitle": "",
+            "items": [
+              "Werk aan inhoud, vorm en verzorging.",
+              "Denk vooruit: wat moet er in de laatste les te zien of te horen zijn?",
+              "Bereid naamkaartje, uitleg of gastenboek voor als dat past."
+            ]
+          }
+        ],
+        "marker-taalmakers-5-presenteren-gastenboek-en-reflectie": [
+          {
+            "type": "bullets",
+            "title": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+            "subtitle": "Taalmakers",
+            "items": [
+              "Laat je product zien, horen of ervaren.",
+              "Geef en ontvang serieuze feedback.",
+              "Rond af met een korte reflectie."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Afsluiting",
+            "subtitle": "",
+            "items": [
+              "Presenteer je product aan de klas.",
+              "Laat bezoekers of klasgenoten feedback achterlaten.",
+              "Leg uit wat je wilde maken en wat daarvan gelukt is."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Reflectie in je netschrift",
+            "subtitle": "",
+            "items": [
+              "Wat vond je leuk aan het project?",
+              "Wat heb je geleerd over taal, jezelf en eventueel samenwerken?",
+              "Waar ben je trots op en wat zou je een volgende keer anders doen?"
+            ]
+          }
+        ]
+      },
+      "markers": {
+        "marker-taalmakers-1-projectstart-ideeen-en-groepjes": 1,
+        "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning": 6,
+        "marker-taalmakers-3-werkles-en-feedbackronde": 10,
+        "marker-taalmakers-4-werkles-en-tussenstand": 13,
+        "marker-taalmakers-5-presenteren-gastenboek-en-reflectie": 16
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Taalmakers",
+          "subtitle": "Eigen taalproject"
+        },
+        {
+          "type": "bullets",
+          "title": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "subtitle": "Taalmakers",
+          "items": [
+            "Je start een eigen talig project dat je nog niet eerder hebt gedaan.",
+            "Je kiest iets waar je creativiteit en energie in kwijt kunt.",
+            "Aan het einde presenteer je een echt product."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat maakt Taalmakers tot Taalmakers?",
+          "subtitle": "",
+          "items": [
+            "Het product is talig: spreken, schrijven, vertalen, maken, spelen, presenteren.",
+            "Het is niet te klein en niet te groot.",
+            "Je werkt alleen of met maximaal drie leerlingen.",
+            "Iemand anders moet er iets aan hebben of beleven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mogelijke producten",
+          "subtitle": "",
+          "items": [
+            "Podcast, tutorial, poeziebundel, toneeltekst, krant, vertaling, taalspel, boekproject.",
+            "Je mag ook iets heel anders bedenken als het talig en haalbaar is.",
+            "Kies vooral iets wat je echt nieuwsgierig maakt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat regel je vandaag?",
+          "subtitle": "",
+          "items": [
+            "Groep of solo.",
+            "Voorlopig productidee.",
+            "Doelgroep.",
+            "Mogelijke expert die feedback kan geven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Huiswerk",
+          "subtitle": "",
+          "items": [
+            "Werk thuis je idee uit.",
+            "Bepaal doelgroep, drie ideeen, twee talenten en een mogelijke expert.",
+            "Neem dit mee naar de volgende les."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "subtitle": "Taalmakers",
+          "items": [
+            "Vandaag leg je het project echt vast.",
+            "Je maakt een voorstel dat uitvoerbaar en controleerbaar is.",
+            "Na deze les weet jij precies wat je gaat maken."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Projectvoorstel: dit moet erin",
+          "subtitle": "",
+          "items": [
+            "Wie: alleen of met wie, en welke expert past erbij?",
+            "Wat: beschrijf het product en hoe je het laat zien.",
+            "Voor wie: doelgroep en waarom die dit wil zien, lezen, horen of gebruiken.",
+            "Waarom: wat leer je over taal, jezelf en eventueel samenwerken?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Ook opnemen",
+          "subtitle": "",
+          "items": [
+            "Minimaal vier leerdoelen.",
+            "Je talenten: wat kun je al goed en waar krijg je energie van?",
+            "Een globale planning van nu tot de afsluitende les."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Huiswerk",
+          "subtitle": "",
+          "items": [
+            "Lever je voorstel in.",
+            "Leg contact met je expert of bereid dat contact voor.",
+            "Verzamel eerste materialen zodat je in les 3 echt kunt bouwen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalmakers 3: Werkles en feedbackronde",
+          "subtitle": "Taalmakers",
+          "items": [
+            "Werkles: proces staat centraal.",
+            "Je laat zien dat je voortgang boekt.",
+            "Je vraagt tussentijds gerichte feedback."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "items": [
+            "Werk zichtbaar aan je product.",
+            "Maak keuzes en leg die vast.",
+            "Noteer wat lukt, schuurt of vastloopt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Feedbackronde",
+          "subtitle": "",
+          "items": [
+            "Wat is je volgende concrete stap?",
+            "Wat moet duidelijker voor je doelgroep?",
+            "Waar heb je hulp of materiaal voor nodig?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalmakers 4: Werkles en tussenstand",
+          "subtitle": "Taalmakers",
+          "items": [
+            "Vandaag werk je verder en laat je je tussenstand zien.",
+            "Je test of het product al werkt voor iemand anders.",
+            "Je bereidt de afsluitende presentatie voor."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussenstandcheck",
+          "subtitle": "",
+          "items": [
+            "Is je product al herkenbaar?",
+            "Heeft je doelgroep er echt iets aan?",
+            "Welke feedback wil je vandaag ophalen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werkdoelen",
+          "subtitle": "",
+          "items": [
+            "Werk aan inhoud, vorm en verzorging.",
+            "Denk vooruit: wat moet er in de laatste les te zien of te horen zijn?",
+            "Bereid naamkaartje, uitleg of gastenboek voor als dat past."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "subtitle": "Taalmakers",
+          "items": [
+            "Laat je product zien, horen of ervaren.",
+            "Geef en ontvang serieuze feedback.",
+            "Rond af met een korte reflectie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Afsluiting",
+          "subtitle": "",
+          "items": [
+            "Presenteer je product aan de klas.",
+            "Laat bezoekers of klasgenoten feedback achterlaten.",
+            "Leg uit wat je wilde maken en wat daarvan gelukt is."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Reflectie in je netschrift",
+          "subtitle": "",
+          "items": [
+            "Wat vond je leuk aan het project?",
+            "Wat heb je geleerd over taal, jezelf en eventueel samenwerken?",
+            "Waar ben je trots op en wat zou je een volgende keer anders doen?"
+          ]
+        }
+      ]
     }
   }
 }
