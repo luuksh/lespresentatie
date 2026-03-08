@@ -61,6 +61,20 @@ function normalizeDoc(raw) {
   return doc;
 }
 
+function parseDocTimestamp(doc) {
+  const raw = String(doc?.updatedAt || '').trim();
+  if (!raw) return 0;
+  const stamp = Date.parse(raw);
+  return Number.isFinite(stamp) ? stamp : 0;
+}
+
+function baseShouldReplaceLocal(baseDoc, localDoc) {
+  const baseStamp = parseDocTimestamp(baseDoc);
+  const localStamp = parseDocTimestamp(localDoc);
+  if (!baseStamp || !localStamp) return false;
+  return baseStamp > localStamp;
+}
+
 function collapseToYearLayerDoc(doc) {
   const source = normalizeDoc(doc);
   const merged = new Map();
@@ -316,7 +330,10 @@ async function boot() {
 
     state.baseDoc = collapseToYearLayerDoc(baseRaw);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
-    state.doc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : collapseToYearLayerDoc(baseRaw);
+    const localDoc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : null;
+    state.doc = (localDoc && !baseShouldReplaceLocal(state.baseDoc, localDoc))
+      ? localDoc
+      : collapseToYearLayerDoc(baseRaw);
 
     const uiLayers = Object.keys(classRaw || {}).map((cid) => gradeLayerFromClassId(cid)).filter(Boolean);
     const allLayers = [...new Set([...uiLayers, ...layersFromDoc(state.doc)])].sort();

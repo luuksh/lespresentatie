@@ -1061,6 +1061,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     return doc;
   }
 
+  function parseDocTimestamp(doc) {
+    const raw = String(doc?.updatedAt || '').trim();
+    if (!raw) return 0;
+    const stamp = Date.parse(raw);
+    return Number.isFinite(stamp) ? stamp : 0;
+  }
+
+  function baseShouldReplaceLocal(baseDoc, localDoc) {
+    const baseStamp = parseDocTimestamp(baseDoc);
+    const localStamp = parseDocTimestamp(localDoc);
+    if (!baseStamp || !localStamp) return false;
+    return baseStamp > localStamp;
+  }
+
   function markerDeckSlideCount(presentation) {
     const decks = presentation?.markerDecks;
     if (!decks || typeof decks !== 'object') return 0;
@@ -1079,6 +1093,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   function mergeStudioPreferRicherBase(baseDoc, localDoc) {
     const base = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(baseDoc)));
     const local = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(localDoc)));
+    if (baseShouldReplaceLocal(base, local)) {
+      return base;
+    }
     const merged = normalizeStudioDoc(local);
 
     if (!merged.presentations || typeof merged.presentations !== 'object') {
@@ -2106,6 +2123,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (event.key !== PLAN_STUDIO_KEY) return;
     const latest = loadPlanningStudioFromStorage();
     if (!latest) return;
+    if (planningStudio && baseShouldReplaceLocal(planningStudio, latest)) {
+      savePlanningStudioToStorage();
+      return;
+    }
     planningStudio = latest;
     rebuildPlanningFromStudio();
     renderPlanning();
