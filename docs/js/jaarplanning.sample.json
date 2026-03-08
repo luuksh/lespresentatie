@@ -1,0 +1,24 @@
+{
+  "updatedAt": "2026-02-27T10:00:00+01:00",
+  "classes": {
+    "G1A": {
+      "2026-W09": {
+        "items": [
+          "Lezen: hoofdstuk 4 en 5",
+          "Schrijfopdracht in tweetallen",
+          "Vrijdag: woordenschattoets"
+        ],
+        "note": "Neem leesboek mee."
+      }
+    },
+    "G3B": {
+      "2026-W09": [
+        "Analyse van betoog",
+        "Voorbereiden presentatie"
+      ]
+    },
+    "G4C": {
+      "2026-W09": "SE-voorbereiding\nOefenen argumentatie\nInleveren conceptverslag"
+    }
+  }
+}

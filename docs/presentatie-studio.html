@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentatiestudio</title>
+  <link rel="stylesheet" href="css/presentatie-studio.css?v=20260304-08" />
+  <script type="module" src="js/presentatie-studio.js?v=20260304-08"></script>
+</head>
+<body>
+  <main class="studio-layout">
+    <header class="studio-header">
+      <div>
+        <p class="studio-kicker">Intern Platform</p>
+        <h1>Presentatiestudio</h1>
+      </div>
+      <div class="studio-actions">
+        <a href="jaarplanning-studio.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Open Jaarplanning Studio</a>
+      </div>
+    </header>
+
+    <section class="studio-grid">
+      <aside class="studio-card sidebar">
+        <h2>Projecten</h2>
+        <select id="projectSelect"></select>
+        <button id="saveProjectBtn" type="button" class="btn btn-primary">Project opslaan</button>
+      </aside>
+
+      <section class="studio-card editor">
+        <h2 id="projectTitle">Overzichtspresentatie</h2>
+        <label class="field">
+          <span>Titel</span>
+          <input id="deckTitleInput" type="text" />
+        </label>
+        <label class="field">
+          <span>Subtitel</span>
+          <input id="deckSubtitleInput" type="text" />
+        </label>
+        <h3>Markerpoints per les</h3>
+        <div class="table-wrap">
+          <table class="markers-table">
+            <thead>
+              <tr>
+                <th>Marker</th>
+                <th>Slides voor deze les</th>
+              </tr>
+            </thead>
+            <tbody id="markerBody"></tbody>
+          </table>
+        </div>
+        <p id="statusLine" class="status-line">Studio laden...</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
