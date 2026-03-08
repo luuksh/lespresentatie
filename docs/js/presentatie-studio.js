@@ -44,7 +44,26 @@ function normalizeDoc(raw) {
   const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
   if (!Array.isArray(doc.entries)) doc.entries = [];
   if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
+  doc.sourceRevision = String(doc.sourceRevision || '').trim();
   return doc;
+}
+
+function parseDocTimestamp(doc) {
+  const raw = String(doc?.updatedAt || '').trim();
+  if (!raw) return 0;
+  const stamp = Date.parse(raw);
+  return Number.isFinite(stamp) ? stamp : 0;
+}
+
+function baseShouldReplaceLocal(baseDoc, localDoc) {
+  const baseRevision = String(baseDoc?.sourceRevision || '').trim();
+  const localRevision = String(localDoc?.sourceRevision || '').trim();
+  if (baseRevision && localRevision && baseRevision !== localRevision) return true;
+  if (baseRevision && !localRevision) return true;
+  const baseStamp = parseDocTimestamp(baseDoc);
+  const localStamp = parseDocTimestamp(localDoc);
+  if (!baseStamp || !localStamp) return false;
+  return baseStamp > localStamp;
 }
 
 function collectProjectMarkers(doc) {
@@ -174,6 +193,9 @@ function presentationImportVersion(presentation) {
 function mergePreferRicherBase(baseDoc, storedDoc) {
   const base = ensureProjectPresentations(baseDoc);
   const stored = ensureProjectPresentations(storedDoc);
+  if (baseShouldReplaceLocal(base, stored)) {
+    return base;
+  }
   const merged = normalizeDoc(stored);
 
   if (!merged.presentations || typeof merged.presentations !== 'object') {
