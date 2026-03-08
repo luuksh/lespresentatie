@@ -1391,6 +1391,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningStatusEl.textContent = message;
   }
 
+  function appendLinkedText(target, text) {
+    const raw = String(text || '');
+    const pattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let lastIndex = 0;
+    let match = null;
+    while ((match = pattern.exec(raw))) {
+      const [full, label, href] = match;
+      if (match.index > lastIndex) {
+        target.appendChild(document.createTextNode(raw.slice(lastIndex, match.index)));
+      }
+      const link = document.createElement('a');
+      link.href = String(href || '').trim();
+      link.textContent = String(label || '').trim() || 'Document';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      target.appendChild(link);
+      lastIndex = match.index + full.length;
+    }
+    if (lastIndex < raw.length) {
+      target.appendChild(document.createTextNode(raw.slice(lastIndex)));
+    }
+    if (!target.childNodes.length) {
+      target.textContent = raw;
+    }
+  }
+
   function setPlanningItems(items = [], note = '', lessons = []) {
     if (!planningItemsEl) return;
     planningItemsEl.replaceChildren();
@@ -1438,13 +1464,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     for (const item of items) {
       const li = document.createElement('li');
-      li.textContent = item;
+      appendLinkedText(li, item);
       planningItemsEl.appendChild(li);
     }
     if (note) {
       const noteLi = document.createElement('li');
       noteLi.className = 'jaarplanning-note';
-      noteLi.textContent = `Opmerking: ${note}`;
+      appendLinkedText(noteLi, `Opmerking: ${note}`);
       planningItemsEl.appendChild(noteLi);
     }
 
@@ -1665,7 +1691,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     for (const [prep, classes] of prepMap.entries()) {
       const li = document.createElement('li');
-      li.textContent = `${prep} (${[...classes].sort((a, b) => a.localeCompare(b, 'nl')).join(', ')})`;
+      appendLinkedText(li, `${prep} (${[...classes].sort((a, b) => a.localeCompare(b, 'nl')).join(', ')})`);
       nextLessonDayPrep.appendChild(li);
     }
   }
