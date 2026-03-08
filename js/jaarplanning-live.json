@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-08T07:41:37+01:00",
+  "updatedAt": "2026-03-08T08:22:34+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -7475,21 +7475,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3A",
@@ -7497,21 +7497,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3A",
@@ -8248,21 +8248,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3B",
@@ -8270,21 +8270,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3B",
@@ -9021,21 +9021,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3C",
@@ -9043,21 +9043,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3C",
@@ -9794,21 +9794,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3D",
@@ -9816,21 +9816,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3D",
@@ -10567,21 +10567,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3E",
@@ -10589,21 +10589,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3E",
@@ -11340,21 +11340,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3F",
@@ -11362,21 +11362,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3F",
@@ -12113,21 +12113,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": [],
-      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
+      "note": "Week 11 volledig Heel veel lezen. Les 1 = presentatie + niveau/genre. Les 2 = schoolpas, catalogus, boek lenen, kort lezen."
     },
     {
       "classId": "3G",
@@ -12135,21 +12135,21 @@
       "lessons": [
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
         },
         {
           "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": [],
-      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
+      "note": "Week 12: gewone leeslessen met stillezen, controle op boekkeuze en leesritme."
     },
     {
       "classId": "3G",
@@ -19080,6 +19080,7 @@
       ]
     }
   ],
+  "sourceRevision": "2026-03-08T08:22:34+01:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
@@ -41007,121 +41008,184 @@
         {
           "type": "bullets",
           "title": "Heel veel lezen 1",
-          "subtitle": "Waarom we radicaal gaan lezen",
+          "subtitle": "Waarom lezen ertoe doet",
           "items": [
-            "Je aandacht is je toekomst",
-            "Minimaal 1 boek per maand",
-            "Minimaal 20 minuten per dag lezen"
+            "Over vijf jaar zie je het verschil tussen een getraind en een versnipperd brein",
+            "Lezen is geen hobbyproject maar cognitieve training",
+            "Doel dit jaar: minimaal 1 boek per maand en dagelijks 20 minuten lezen"
           ]
         },
         {
           "type": "bullets",
-          "title": "Over vijf jaar zie je het verschil",
+          "title": "Wat staat er op het spel?",
           "subtitle": "",
           "items": [
-            "Scrollen kost denkruimte en tijd",
-            "Lezen bouwt taal, concentratie en rust op",
-            "Wie dieper leest, denkt scherper en kiest sterker"
+            "Social media traint korte prikkels en onrust",
+            "Lezen traint taal, concentratie, verbeelding en denkvermogen",
+            "Wie veel leest, begrijpt sneller en formuleert sterker"
           ]
         },
         {
           "type": "bullets",
-          "title": "Nieuwe spelregels",
+          "title": "Waarom we dit radicaal aanpakken",
           "subtitle": "",
           "items": [
+            "Je telefoon verdient niet al je aandacht",
+            "Boeken geven diepgang, rust en woordenschat",
+            "Jij bouwt hiermee een voordeel op dat zichtbaar wordt in school en later"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Projectafspraken",
+          "subtitle": "",
+          "items": [
+            "Iedereen leest een echt boek uit de schoolbieb",
             "Tijdens leestijd ligt je telefoon weg",
-            "Iedereen leest een echt boek",
-            "We bouwen een leesritme dat je ook thuis volhoudt"
+            "Ik houd bij welk boek je leest en hoe je ritme opbouwt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht in deze les",
+          "subtitle": "",
+          "items": [
+            "Bepaal je leesniveau via de niveautest",
+            "Bepaal 2 genres die je aanspreken en 1 genre dat je wilt uitproberen",
+            "Noteer wat voor soort boek jij het liefst in een ruk zou uitlezen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Niveautest en genrekeuze",
+          "subtitle": "",
+          "items": [
+            "Gebruik de niveautest als startpunt, niet als hokje",
+            "Kies eerlijk: wat vind jij echt spannend, mooi, grappig of heftig?",
+            "Die notities gebruik je volgende les bij het zoeken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Lesopbouw (45 min)",
+          "subtitle": "",
+          "items": [
+            "15 min presentatie en gesprek",
+            "15 min niveautest en genres kiezen",
+            "10 min kort nabespreken",
+            "5 min afsluiten en voorbereiding op de biebles"
           ]
         },
         {
           "type": "bullets",
           "title": "Heel veel lezen 2",
-          "subtitle": "Schoolbieb en eerste boek kiezen",
+          "subtitle": "Schoolbieb, catalogus, lenen en starten",
           "items": [
-            "Iedereen haalt een boek uit de schoolbieb",
-            "Ik houd bij welk boek je leest",
-            "Je kiest iets waar je echt in wilt verdwijnen"
+            "Iedereen heeft vandaag zijn schoolpasje bij zich",
+            "Vandaag zoek je een boek dat je echt wilt lezen",
+            "Aan het eind heb je een boek geleend en al een begin gemaakt"
           ]
         },
         {
           "type": "bullets",
-          "title": "Zo zoek je in de schoolbieb",
-          "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
-          "items": [
-            "Zoek op titel, auteur, onderwerp of trefwoord",
-            "Let op genrestickers en symbolen op de boeken",
-            "Lees flaptekst en eerste bladzijde voordat je beslist"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Kies slim, niet braaf",
+          "title": "Zoekroute van vandaag",
           "subtitle": "",
           "items": [
-            "Niet te dun om er snel vanaf te zijn",
-            "Niet te moeilijk om op af te knappen",
-            "Wel iets dat je nieuwsgierig maakt"
+            "1. Kijk met je niveau en genres in Lezen voor de lijst",
+            "2. Zoek daarna gericht in de catalogus van de schoolbieb",
+            "3. Controleer in de bieb of het boek er echt staat",
+            "4. Leen het meteen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Lezen voor de lijst als keuzehulp",
+          "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
+          "items": [
+            "Filter op niveau, leeftijd en genre",
+            "Zoek 2 of 3 titels die kansrijk zijn",
+            "Lees kort waar het boek over gaat voordat je beslist"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zoeken in de schoolbiebcatalogus",
+          "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
+          "items": [
+            "Zoek op titel, auteur of trefwoord",
+            "Let op beschikbaarheid en locatie",
+            "Gebruik je schoolpasje om te lenen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waar let je op bij je keuze?",
+          "subtitle": "",
+          "items": [
+            "Je moet nieuwsgierig worden van de eerste bladzijde",
+            "Het niveau moet pittig maar haalbaar zijn",
+            "Je mag best van je veilige smaak afwijken, maar niet blind gokken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdsplanning in deze les",
+          "subtitle": "45 minuten",
+          "items": [
+            "10 min uitleg catalogus en zoekstrategie",
+            "15 min echt zoeken met Lezen voor de lijst + catalogus",
+            "10 min boek pakken en lenen",
+            "10 min eerste bladzijden lezen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Einde van de les",
+          "subtitle": "",
+          "items": [
+            "Iedereen heeft een boek mee",
+            "Iedereen leest de eerste pagina’s",
+            "Iedereen weet of dit waarschijnlijk een goede match is"
           ]
         },
         {
           "type": "bullets",
           "title": "Heel veel lezen 3",
-          "subtitle": "Leesniveau, Lezen voor de lijst en genres",
+          "subtitle": "Stillezen en startcheck",
           "items": [
-            "Bepaal je startniveau",
-            "Leer wat Lezen voor de lijst is",
-            "Gebruik genre als hulpmiddel bij kiezen"
+            "Vandaag lees je vooral in stilte",
+            "We controleren of iedereen echt goed gestart is",
+            "Telefoon weg, boek open, focus aan"
           ]
         },
         {
           "type": "bullets",
-          "title": "Niveautest",
-          "subtitle": "https://www.jeugdbibliotheek.nl/12-18-jaar/lezen-voor-de-lijst/niveautest.html",
+          "title": "Focus van vandaag",
+          "subtitle": "",
           "items": [
-            "De test geeft een startpunt",
-            "Je niveau helpt bij slim kiezen",
-            "Je zit niet voorgoed vast aan 1 niveau"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Boekenkeuze met filters",
-          "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
-          "items": [
-            "Filter op niveau, leeftijd en genre",
-            "Zoek gericht naar iets dat echt bij je past",
-            "Gebruik dit ook later voor je tweede en derde boek"
+            "Lees 25-30 minuten in stilte",
+            "Noteer titel, auteur en eerste indruk",
+            "Check na afloop eerlijk: werkt dit boek voor jou?"
           ]
         },
         {
           "type": "bullets",
           "title": "Heel veel lezen 4",
-          "subtitle": "De rechten van de lezer",
+          "subtitle": "Stillezen en boekmatch controleren",
           "items": [
-            "Je mag een boek niet uitlezen",
-            "Je mag van genre wisselen",
-            "Je mag zoeken tot je iets vindt dat werkt"
+            "Je leest in stilte verder",
+            "We kijken of je boek echt bij je past",
+            "Zo nodig wissel je gericht, niet impulsief"
           ]
         },
         {
           "type": "bullets",
-          "title": "Wanneer wissel je van boek?",
+          "title": "Focus van vandaag",
           "subtitle": "",
           "items": [
-            "Als je na een eerlijke start nog steeds niets voelt",
-            "Als je het niveau totaal verkeerd hebt ingeschat",
-            "Als je merkt dat je alleen nog maar doorbladert"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Doel van vandaag",
-          "subtitle": "",
-          "items": [
-            "Iedereen heeft nu een geschikt boek",
-            "Iedereen weet waar hij nieuwe titels kan vinden",
-            "Daarna starten we met echt stillezen"
+            "Lees opnieuw een stevig blok",
+            "Controleer of je nog steeds nieuwsgierig bent",
+            "Beslis bewust: doorgaan of slim wisselen"
           ]
         },
         {
@@ -41386,153 +41450,25 @@
         }
       ],
       "markers": {
-        "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen": 1,
-        "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen": 4,
-        "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres": 7,
-        "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen": 10,
-        "marker-heel-veel-lezen-5-stillezen-en-startcheck": 13,
-        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": 15,
-        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": 17,
-        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": 19,
-        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": 21,
-        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": 23,
-        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": 25,
-        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": 27,
-        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": 29,
-        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": 31,
-        "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden": 33,
-        "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden": 35,
-        "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken": 37
+        "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen": 1,
+        "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart": 8,
+        "marker-heel-veel-lezen-3-stillezen-en-startcheck": 15,
+        "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren": 17,
+        "marker-heel-veel-lezen-5-stillezen-en-startcheck": 19,
+        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": 21,
+        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": 23,
+        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": 25,
+        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": 27,
+        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": 29,
+        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": 31,
+        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": 33,
+        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": 35,
+        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": 37,
+        "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden": 39,
+        "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden": 41,
+        "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken": 43
       },
       "markerDecks": {
-        "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen": [
-          {
-            "type": "bullets",
-            "title": "Heel veel lezen 1",
-            "subtitle": "Waarom we radicaal gaan lezen",
-            "items": [
-              "Je aandacht is je toekomst",
-              "Minimaal 1 boek per maand",
-              "Minimaal 20 minuten per dag lezen"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Over vijf jaar zie je het verschil",
-            "subtitle": "",
-            "items": [
-              "Scrollen kost denkruimte en tijd",
-              "Lezen bouwt taal, concentratie en rust op",
-              "Wie dieper leest, denkt scherper en kiest sterker"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Nieuwe spelregels",
-            "subtitle": "",
-            "items": [
-              "Tijdens leestijd ligt je telefoon weg",
-              "Iedereen leest een echt boek",
-              "We bouwen een leesritme dat je ook thuis volhoudt"
-            ]
-          }
-        ],
-        "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen": [
-          {
-            "type": "bullets",
-            "title": "Heel veel lezen 2",
-            "subtitle": "Schoolbieb en eerste boek kiezen",
-            "items": [
-              "Iedereen haalt een boek uit de schoolbieb",
-              "Ik houd bij welk boek je leest",
-              "Je kiest iets waar je echt in wilt verdwijnen"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Zo zoek je in de schoolbieb",
-            "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
-            "items": [
-              "Zoek op titel, auteur, onderwerp of trefwoord",
-              "Let op genrestickers en symbolen op de boeken",
-              "Lees flaptekst en eerste bladzijde voordat je beslist"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Kies slim, niet braaf",
-            "subtitle": "",
-            "items": [
-              "Niet te dun om er snel vanaf te zijn",
-              "Niet te moeilijk om op af te knappen",
-              "Wel iets dat je nieuwsgierig maakt"
-            ]
-          }
-        ],
-        "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres": [
-          {
-            "type": "bullets",
-            "title": "Heel veel lezen 3",
-            "subtitle": "Leesniveau, Lezen voor de lijst en genres",
-            "items": [
-              "Bepaal je startniveau",
-              "Leer wat Lezen voor de lijst is",
-              "Gebruik genre als hulpmiddel bij kiezen"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Niveautest",
-            "subtitle": "https://www.jeugdbibliotheek.nl/12-18-jaar/lezen-voor-de-lijst/niveautest.html",
-            "items": [
-              "De test geeft een startpunt",
-              "Je niveau helpt bij slim kiezen",
-              "Je zit niet voorgoed vast aan 1 niveau"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Boekenkeuze met filters",
-            "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
-            "items": [
-              "Filter op niveau, leeftijd en genre",
-              "Zoek gericht naar iets dat echt bij je past",
-              "Gebruik dit ook later voor je tweede en derde boek"
-            ]
-          }
-        ],
-        "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen": [
-          {
-            "type": "bullets",
-            "title": "Heel veel lezen 4",
-            "subtitle": "De rechten van de lezer",
-            "items": [
-              "Je mag een boek niet uitlezen",
-              "Je mag van genre wisselen",
-              "Je mag zoeken tot je iets vindt dat werkt"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Wanneer wissel je van boek?",
-            "subtitle": "",
-            "items": [
-              "Als je na een eerlijke start nog steeds niets voelt",
-              "Als je het niveau totaal verkeerd hebt ingeschat",
-              "Als je merkt dat je alleen nog maar doorbladert"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Doel van vandaag",
-            "subtitle": "",
-            "items": [
-              "Iedereen heeft nu een geschikt boek",
-              "Iedereen weet waar hij nieuwe titels kan vinden",
-              "Daarna starten we met echt stillezen"
-            ]
-          }
-        ],
         "marker-heel-veel-lezen-5-stillezen-en-startcheck": [
           {
             "type": "bullets",
@@ -41818,9 +41754,200 @@
               "Taal- en boekenrondes in teams of duo’s"
             ]
           }
+        ],
+        "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 1",
+            "subtitle": "Waarom lezen ertoe doet",
+            "items": [
+              "Over vijf jaar zie je het verschil tussen een getraind en een versnipperd brein",
+              "Lezen is geen hobbyproject maar cognitieve training",
+              "Doel dit jaar: minimaal 1 boek per maand en dagelijks 20 minuten lezen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat staat er op het spel?",
+            "subtitle": "",
+            "items": [
+              "Social media traint korte prikkels en onrust",
+              "Lezen traint taal, concentratie, verbeelding en denkvermogen",
+              "Wie veel leest, begrijpt sneller en formuleert sterker"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom we dit radicaal aanpakken",
+            "subtitle": "",
+            "items": [
+              "Je telefoon verdient niet al je aandacht",
+              "Boeken geven diepgang, rust en woordenschat",
+              "Jij bouwt hiermee een voordeel op dat zichtbaar wordt in school en later"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Projectafspraken",
+            "subtitle": "",
+            "items": [
+              "Iedereen leest een echt boek uit de schoolbieb",
+              "Tijdens leestijd ligt je telefoon weg",
+              "Ik houd bij welk boek je leest en hoe je ritme opbouwt"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Opdracht in deze les",
+            "subtitle": "",
+            "items": [
+              "Bepaal je leesniveau via de niveautest",
+              "Bepaal 2 genres die je aanspreken en 1 genre dat je wilt uitproberen",
+              "Noteer wat voor soort boek jij het liefst in een ruk zou uitlezen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Niveautest en genrekeuze",
+            "subtitle": "",
+            "items": [
+              "Gebruik de niveautest als startpunt, niet als hokje",
+              "Kies eerlijk: wat vind jij echt spannend, mooi, grappig of heftig?",
+              "Die notities gebruik je volgende les bij het zoeken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Lesopbouw (45 min)",
+            "subtitle": "",
+            "items": [
+              "15 min presentatie en gesprek",
+              "15 min niveautest en genres kiezen",
+              "10 min kort nabespreken",
+              "5 min afsluiten en voorbereiding op de biebles"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 2",
+            "subtitle": "Schoolbieb, catalogus, lenen en starten",
+            "items": [
+              "Iedereen heeft vandaag zijn schoolpasje bij zich",
+              "Vandaag zoek je een boek dat je echt wilt lezen",
+              "Aan het eind heb je een boek geleend en al een begin gemaakt"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Zoekroute van vandaag",
+            "subtitle": "",
+            "items": [
+              "1. Kijk met je niveau en genres in Lezen voor de lijst",
+              "2. Zoek daarna gericht in de catalogus van de schoolbieb",
+              "3. Controleer in de bieb of het boek er echt staat",
+              "4. Leen het meteen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Lezen voor de lijst als keuzehulp",
+            "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
+            "items": [
+              "Filter op niveau, leeftijd en genre",
+              "Zoek 2 of 3 titels die kansrijk zijn",
+              "Lees kort waar het boek over gaat voordat je beslist"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Zoeken in de schoolbiebcatalogus",
+            "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
+            "items": [
+              "Zoek op titel, auteur of trefwoord",
+              "Let op beschikbaarheid en locatie",
+              "Gebruik je schoolpasje om te lenen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Waar let je op bij je keuze?",
+            "subtitle": "",
+            "items": [
+              "Je moet nieuwsgierig worden van de eerste bladzijde",
+              "Het niveau moet pittig maar haalbaar zijn",
+              "Je mag best van je veilige smaak afwijken, maar niet blind gokken"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Tijdsplanning in deze les",
+            "subtitle": "45 minuten",
+            "items": [
+              "10 min uitleg catalogus en zoekstrategie",
+              "15 min echt zoeken met Lezen voor de lijst + catalogus",
+              "10 min boek pakken en lenen",
+              "10 min eerste bladzijden lezen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Einde van de les",
+            "subtitle": "",
+            "items": [
+              "Iedereen heeft een boek mee",
+              "Iedereen leest de eerste pagina’s",
+              "Iedereen weet of dit waarschijnlijk een goede match is"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-3-stillezen-en-startcheck": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 3",
+            "subtitle": "Stillezen en startcheck",
+            "items": [
+              "Vandaag lees je vooral in stilte",
+              "We controleren of iedereen echt goed gestart is",
+              "Telefoon weg, boek open, focus aan"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Lees 25-30 minuten in stilte",
+              "Noteer titel, auteur en eerste indruk",
+              "Check na afloop eerlijk: werkt dit boek voor jou?"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 4",
+            "subtitle": "Stillezen en boekmatch controleren",
+            "items": [
+              "Je leest in stilte verder",
+              "We kijken of je boek echt bij je past",
+              "Zo nodig wissel je gericht, niet impulsief"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Lees opnieuw een stevig blok",
+              "Controleer of je nog steeds nieuwsgierig bent",
+              "Beslis bewust: doorgaan of slim wisselen"
+            ]
+          }
         ]
       },
-      "importVersion": 2
+      "importVersion": 3
     }
   }
 }
