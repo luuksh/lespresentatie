@@ -2,6 +2,7 @@
 
 De jaarplanning werkt volledig intern via de Jaarplanning Studio in de app.
 Elke jaarlaag heeft nu één centrale planning (bijv. één planning voor alle brugklassen).
+Schoolvakanties kunnen daarnaast apart worden ingelezen uit `data/kalender/regio-midden.ics` (ICS of JSON-kalenderexport).
 
 ## Studio gebruik
 
@@ -15,6 +16,22 @@ Elke jaarlaag heeft nu één centrale planning (bijv. één planning voor alle b
    - `Notitie`
 4. Klik `Alles opslaan`.
 5. Wijzigingen zijn direct intern actief en gekoppeld aan programma van (volgende) les.
+
+## Schoolvakanties
+
+- De app leest vakanties los van de weekplanning in via `data/kalender/regio-midden.ics`.
+- Ondersteund: echte `.ics` en JSON-kalenderexports met `events`.
+- Bij het bouwen van `js/jaarplanning-live.json` worden die vakanties opgenomen als aparte `holidays`-lijst.
+- Tijdens een vakantie overschrijft de app het weekprogramma automatisch met de vakantie-informatie.
+
+## Schoolagenda-impact
+
+- De app kan daarnaast een schooljaaragenda inlezen via `data/kalender/jaaragenda2526.xlsx`.
+- Daaruit worden per jaarlaag herkenbare weekitems toegevoegd aan de jaarplanning, zoals:
+  - `Geen les volgens schoolagenda`
+  - `30-minutenrooster volgens schoolagenda`
+  - `Hoge toetsdruk deze week; plan geen afrondende projecten`
+- Algemene schoolitems (`AL`/`PE`) worden als `ALL`-weekitems voor alle jaarlagen meegenomen.
 
 ## itslearning export (automatisch)
 

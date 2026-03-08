@@ -13,6 +13,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from calendar_sources import DEFAULT_TZ
+
 
 LESSON_ORDER = ("A", "B", "C")
 
@@ -49,7 +51,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--tz",
-        default="Europe/Amsterdam",
+        default=DEFAULT_TZ,
         help="Tijdzone voor datum/tijd kolommen",
     )
     parser.add_argument(
@@ -118,6 +120,18 @@ def load_json(path: Path) -> dict:
     if not isinstance(raw, dict):
         raise ValueError(f"Bestand is geen JSON object: {path}")
     return raw
+
+
+def holiday_for_date(holidays: list[dict], dt_local: datetime) -> dict | None:
+    day = dt_local.date().isoformat()
+    for holiday in holidays:
+        if not isinstance(holiday, dict):
+            continue
+        start = str(holiday.get("startDate", "")).strip()
+        end = str(holiday.get("endDate", "")).strip()
+        if start and end and start <= day <= end:
+            return holiday
+    return None
 
 
 def pick_week_entry(entries: list[dict], class_id: str, dt_local: datetime) -> dict | None:
@@ -201,6 +215,7 @@ def main() -> int:
     agenda_doc = load_json(Path(args.agenda))
 
     planning_entries = planning_doc.get("entries") if isinstance(planning_doc.get("entries"), list) else []
+    holidays = planning_doc.get("holidays") if isinstance(planning_doc.get("holidays"), list) else []
     agenda_entries = agenda_doc.get("entries") if isinstance(agenda_doc.get("entries"), list) else []
 
     def sort_key(item: object) -> tuple:
@@ -224,6 +239,8 @@ def main() -> int:
 
         start_dt = datetime.fromisoformat(start_raw).astimezone(tz)
         end_dt = datetime.fromisoformat(end_raw).astimezone(tz)
+        if holiday_for_date(holidays, start_dt):
+            continue
 
         week_entry = pick_week_entry(planning_entries, class_id, start_dt)
         lessons = ordered_lessons(week_entry.get("lessons", []) if week_entry else [])

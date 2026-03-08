@@ -7473,28 +7473,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3A",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3A",
@@ -7502,16 +7518,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -7522,16 +7539,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -7542,17 +7560,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -7574,17 +7592,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -7607,17 +7626,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -7650,17 +7669,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -7671,17 +7691,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -7692,17 +7712,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -7712,16 +7732,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -7731,16 +7753,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -7750,16 +7774,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -7769,16 +7795,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -7788,16 +7816,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -8216,28 +8246,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3B",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3B",
@@ -8245,16 +8291,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -8265,16 +8312,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -8285,17 +8333,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -8317,17 +8365,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -8350,17 +8399,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -8393,17 +8442,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -8414,17 +8464,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -8435,17 +8485,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -8455,16 +8505,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -8474,16 +8526,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -8493,16 +8547,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -8512,16 +8568,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -8531,16 +8589,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -8959,28 +9019,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3C",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3C",
@@ -8988,16 +9064,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -9008,16 +9085,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -9028,17 +9106,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -9060,17 +9138,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -9093,17 +9172,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -9136,17 +9215,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -9157,17 +9237,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -9178,17 +9258,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -9198,16 +9278,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -9217,16 +9299,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -9236,16 +9320,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -9255,16 +9341,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -9274,16 +9362,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -9702,28 +9792,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3D",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3D",
@@ -9731,16 +9837,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -9751,16 +9858,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -9771,17 +9879,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -9803,17 +9911,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -9836,17 +9945,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -9879,17 +9988,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -9900,17 +10010,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -9921,17 +10031,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -9941,16 +10051,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -9960,16 +10072,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -9979,16 +10093,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -9998,16 +10114,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -10017,16 +10135,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -10445,28 +10565,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3E",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3E",
@@ -10474,16 +10610,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -10494,16 +10631,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -10514,17 +10652,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -10546,17 +10684,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -10579,17 +10718,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -10622,17 +10761,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -10643,17 +10783,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -10664,17 +10804,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -10684,16 +10824,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -10703,16 +10845,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -10722,16 +10866,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -10741,16 +10887,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -10760,16 +10908,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -11188,28 +11338,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3F",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3F",
@@ -11217,16 +11383,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -11237,16 +11404,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -11257,17 +11425,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -11289,17 +11457,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -11322,17 +11491,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -11365,17 +11534,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -11386,17 +11556,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -11407,17 +11577,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -11427,16 +11597,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -11446,16 +11618,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -11465,16 +11639,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -11484,16 +11660,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -11503,16 +11681,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -11931,28 +12111,44 @@
       "week": "11",
       "lessons": [
         {
-          "project": "Faalfestival",
-          "lesson": "Moralicious dinsdag 10 maart!",
-          "presentationId": "project-faalfestival",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 1: Waarom we radicaal gaan lezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-moralicious-dinsdag-10-maart"
+          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 2: Schoolbieb en eerste boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Introblok Heel veel lezen: deze week beide lessen lezen, kiezen en ritme opbouwen."
     },
     {
       "classId": "3G",
       "week": "12",
       "lessons": [
         {
-          "project": "V-rede",
-          "lesson": "Les 1 V-rede: Introductie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 3: Leesniveau, Lezen voor de lijst en genres",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres"
+        },
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 4: De rechten van de lezer en echt goed kiezen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-1-v-rede-introductie"
+          "presentationMarkerId": "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen"
         }
       ],
-      "items": []
+      "items": [],
+      "note": "Tweede introweek Heel veel lezen: iedereen heeft een boek en kent niveau, keuzehulp en leesvrijheid."
     },
     {
       "classId": "3G",
@@ -11960,16 +12156,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 2 V-rede: Framing & Connotatie",
+          "lesson": "Les 1 V-rede: Introductie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
+          "presentationMarkerId": "marker-les-1-v-rede-introductie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 3: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-3-boekenpaar-1-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -11980,16 +12177,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
+          "lesson": "Les 2 V-rede: Framing & Connotatie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
+          "presentationMarkerId": "marker-les-2-v-rede-framing-connotatie"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 11: Boekenpaar 2 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-11-boekenpaar-2-boek-1",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
         }
       ],
       "items": []
@@ -12000,17 +12198,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "lesson": "Les 3 V-rede: Stijlfiguren & Frame maken",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
+          "presentationMarkerId": "marker-les-3-v-rede-stijlfiguren-frame-maken"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 5 V-rede: Discussie & Reflectie",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
+          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -12032,17 +12230,18 @@
       "week": "17",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 4: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-4-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Frames delen & Actualiteit",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-4-v-rede-frames-delen-actualiteit"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
+          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -12065,17 +12264,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
+          "lesson": "Les 5 V-rede: Discussie & Reflectie",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
+          "presentationMarkerId": "marker-les-5-v-rede-discussie-reflectie"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Eerste versie schrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -12108,17 +12307,18 @@
       "week": "20",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 5: Boekenpaar 1 boek 1",
-          "presentationId": "leesclub-leesclubbijeenkomst-5-boekenpaar-1-boek-1",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Ethos, Pathos & Logos",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-6-v-rede-ethos-pathos-logos"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Herschrijven",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
+          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -12129,17 +12329,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 10: Oefenen voordracht",
+          "lesson": "Les 7 V-rede: Brainstorm & Stijlfiguren",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
+          "presentationMarkerId": "marker-les-7-v-rede-brainstorm-stijlfiguren"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 11: Generale repetitie / Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -12150,17 +12350,17 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 12: Presentaties",
+          "lesson": "Les 8 V-rede: Eerste versie schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
-          "presentationMarkerId": "marker-les-12-presentaties"
+          "presentationMarkerId": "marker-les-8-v-rede-eerste-versie-schrijven"
         },
         {
-          "project": "V-rede",
-          "lesson": "Les 13: Presentaties",
-          "presentationId": "project-v-rede",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "presentationId": "project-heel-veel-lezen",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-13-presentaties"
+          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -12170,16 +12370,18 @@
       "week": "23",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 15: Boekenpaar 2 boek 2",
-          "presentationId": "leesclub-leesclubbijeenkomst-15-boekenpaar-2-boek-2",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 9 V-rede: Herschrijven",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-9-v-rede-herschrijven"
         },
         {
-          "project": "Boekenessay",
-          "lesson": "Leesclubbijeenkomst 16: Boekenessay: 2e Boekenpaar",
-          "presentationId": "boekenessay-leesclubbijeenkomst-16-boekenessay-2e-boekenpaar",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
         }
       ],
       "items": []
@@ -12189,16 +12391,18 @@
       "week": "24",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 17: Boekenessay: Conclusie",
-          "presentationId": "leesclub-leesclubbijeenkomst-17-boekenessay-conclusie",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 10: Oefenen voordracht",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-10-oefenen-voordracht"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Uitloop",
-          "presentationId": "leesclub-uitloop",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen"
         }
       ],
       "items": []
@@ -12208,16 +12412,18 @@
       "week": "25",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 18: Boekgesprekken voorbereiding",
-          "presentationId": "leesclub-leesclubbijeenkomst-18-boekgesprekken-voorbereiding",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 11: Generale repetitie / Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-11-generale-repetitie-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden"
         }
       ],
       "items": []
@@ -12227,16 +12433,18 @@
       "week": "26",
       "lessons": [
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 12: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-12-presentaties"
         },
         {
-          "project": "Leesclub",
-          "lesson": "Leesclubbijeenkomst 19: Boekgesprekken",
-          "presentationId": "leesclub-leesclubbijeenkomst-19-boekgesprekken",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden"
         }
       ],
       "items": []
@@ -12246,16 +12454,18 @@
       "week": "27",
       "lessons": [
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "A"
+          "project": "V-rede",
+          "lesson": "Les 13: Presentaties",
+          "presentationId": "project-v-rede",
+          "lessonKey": "A",
+          "presentationMarkerId": "marker-les-13-presentaties"
         },
         {
-          "project": "Afscheid nemen",
-          "lesson": "Eigen invulling (bijv. Zomerquiz)",
-          "presentationId": "afscheid-nemen-eigen-invulling-bijv-zomerquiz",
-          "lessonKey": "B"
+          "project": "Heel veel lezen",
+          "lesson": "Zomervakantiequiz: lezen, taal en boeken",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "B",
+          "presentationMarkerId": "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken"
         }
       ],
       "items": []
@@ -32219,6 +32429,835 @@
         "marker-les-3-interview-uitwerking": 15,
         "marker-les-4-herschrijven-en-presenteren": 21
       }
+    },
+    "project-heel-veel-lezen": {
+      "id": "project-heel-veel-lezen",
+      "presentationType": "project-overview",
+      "title": "Heel veel lezen",
+      "project": "Heel veel lezen",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Heel veel lezen",
+          "subtitle": "Rust, ritme, leesplezier en leeskracht"
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 1",
+          "subtitle": "Waarom we radicaal gaan lezen",
+          "items": [
+            "Je aandacht is je toekomst",
+            "Minimaal 1 boek per maand",
+            "Minimaal 20 minuten per dag lezen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Over vijf jaar zie je het verschil",
+          "subtitle": "",
+          "items": [
+            "Scrollen kost denkruimte en tijd",
+            "Lezen bouwt taal, concentratie en rust op",
+            "Wie dieper leest, denkt scherper en kiest sterker"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Nieuwe spelregels",
+          "subtitle": "",
+          "items": [
+            "Tijdens leestijd ligt je telefoon weg",
+            "Iedereen leest een echt boek",
+            "We bouwen een leesritme dat je ook thuis volhoudt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 2",
+          "subtitle": "Schoolbieb en eerste boek kiezen",
+          "items": [
+            "Iedereen haalt een boek uit de schoolbieb",
+            "Ik houd bij welk boek je leest",
+            "Je kiest iets waar je echt in wilt verdwijnen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zo zoek je in de schoolbieb",
+          "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
+          "items": [
+            "Zoek op titel, auteur, onderwerp of trefwoord",
+            "Let op genrestickers en symbolen op de boeken",
+            "Lees flaptekst en eerste bladzijde voordat je beslist"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies slim, niet braaf",
+          "subtitle": "",
+          "items": [
+            "Niet te dun om er snel vanaf te zijn",
+            "Niet te moeilijk om op af te knappen",
+            "Wel iets dat je nieuwsgierig maakt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 3",
+          "subtitle": "Leesniveau, Lezen voor de lijst en genres",
+          "items": [
+            "Bepaal je startniveau",
+            "Leer wat Lezen voor de lijst is",
+            "Gebruik genre als hulpmiddel bij kiezen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Niveautest",
+          "subtitle": "https://www.jeugdbibliotheek.nl/12-18-jaar/lezen-voor-de-lijst/niveautest.html",
+          "items": [
+            "De test geeft een startpunt",
+            "Je niveau helpt bij slim kiezen",
+            "Je zit niet voorgoed vast aan 1 niveau"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Boekenkeuze met filters",
+          "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
+          "items": [
+            "Filter op niveau, leeftijd en genre",
+            "Zoek gericht naar iets dat echt bij je past",
+            "Gebruik dit ook later voor je tweede en derde boek"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 4",
+          "subtitle": "De rechten van de lezer",
+          "items": [
+            "Je mag een boek niet uitlezen",
+            "Je mag van genre wisselen",
+            "Je mag zoeken tot je iets vindt dat werkt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wanneer wissel je van boek?",
+          "subtitle": "",
+          "items": [
+            "Als je na een eerlijke start nog steeds niets voelt",
+            "Als je het niveau totaal verkeerd hebt ingeschat",
+            "Als je merkt dat je alleen nog maar doorbladert"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Doel van vandaag",
+          "subtitle": "",
+          "items": [
+            "Iedereen heeft nu een geschikt boek",
+            "Iedereen weet waar hij nieuwe titels kan vinden",
+            "Daarna starten we met echt stillezen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 5: Stillezen en startcheck",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Lees 25-30 minuten in stilte",
+            "Noteer titel, auteur en startdatum",
+            "Check na afloop eerlijk: blijft dit boek bij je?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Controleer of je boek echt goed past",
+            "Durf gericht te wisselen als dat beter is",
+            "Lees daarna zonder scherm in de buurt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Bouw 20 minuten per dag thuis in",
+            "Kies vaste momenten in je week",
+            "Lees daarna geconcentreerd verder"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Herhaal de rechten van de lezer",
+            "Kies bewust: doorgaan of wisselen",
+            "Lees daarna door zonder afleiding"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Check je eerste maanddoel",
+            "Ben je op koers voor 1 boek per maand?",
+            "Lees daarna weer in stilte verder"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Wissel slim als een boek niet werkt",
+            "Gebruik bieb, niveau en genre bewust",
+            "Lees daarna meteen door in je nieuwe of huidige boek"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 11: Stillezen en focus trainen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Train langere aandacht zonder telefoon",
+            "Lees in een echt stil blok",
+            "Merk op wat dat met je hoofd doet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Wissel leestips uit zonder te spoileren",
+            "Gebruik klasgenoten als boekenvinders",
+            "Lees daarna verder"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Kies zo nodig een tweede boek",
+            "Blijf het maandritme vasthouden",
+            "Zorg dat je leeslijst blijft groeien"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Koppel je boek aan Lezen voor de lijst",
+            "Controleer niveau, genre en interesse",
+            "Lees daarna verder"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Houd je ritme in drukke weken vast",
+            "Kleine dagelijkse blokken tellen op",
+            "Lees daarna met rust verder"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+          "subtitle": "Heel veel lezen",
+          "items": [
+            "Stillezen staat centraal",
+            "Iedereen leest zijn eigen boek",
+            "Telefoon blijft weg tijdens leestijd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Focus van vandaag",
+          "subtitle": "",
+          "items": [
+            "Maak alvast een zomerstapel",
+            "Kies een volgend boek voordat de vakantie begint",
+            "Lees daarna nog een stevig blok"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zomervakantiequiz",
+          "subtitle": "Lezen, taal en boeken",
+          "items": [
+            "Sluit het jaar luchtig en inhoudelijk af",
+            "Herhaal wat je leerde over lezen, kiezen en volhouden",
+            "Vier boeken, taal en denkvermogen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Onderdelen van de quiz",
+          "subtitle": "",
+          "items": [
+            "Boekomslagen en genres herkennen",
+            "Stellingen over leesrechten en leesgewoonten",
+            "Taal- en boekenrondes in teams of duo’s"
+          ]
+        }
+      ],
+      "markers": {
+        "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen": 1,
+        "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen": 4,
+        "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres": 7,
+        "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen": 10,
+        "marker-heel-veel-lezen-5-stillezen-en-startcheck": 13,
+        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": 15,
+        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": 17,
+        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": 19,
+        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": 21,
+        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": 23,
+        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": 25,
+        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": 27,
+        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": 29,
+        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": 31,
+        "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden": 33,
+        "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden": 35,
+        "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken": 37
+      },
+      "markerDecks": {
+        "marker-heel-veel-lezen-1-waarom-we-radicaal-gaan-lezen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 1",
+            "subtitle": "Waarom we radicaal gaan lezen",
+            "items": [
+              "Je aandacht is je toekomst",
+              "Minimaal 1 boek per maand",
+              "Minimaal 20 minuten per dag lezen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Over vijf jaar zie je het verschil",
+            "subtitle": "",
+            "items": [
+              "Scrollen kost denkruimte en tijd",
+              "Lezen bouwt taal, concentratie en rust op",
+              "Wie dieper leest, denkt scherper en kiest sterker"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Nieuwe spelregels",
+            "subtitle": "",
+            "items": [
+              "Tijdens leestijd ligt je telefoon weg",
+              "Iedereen leest een echt boek",
+              "We bouwen een leesritme dat je ook thuis volhoudt"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-2-schoolbieb-en-eerste-boek-kiezen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 2",
+            "subtitle": "Schoolbieb en eerste boek kiezen",
+            "items": [
+              "Iedereen haalt een boek uit de schoolbieb",
+              "Ik houd bij welk boek je leest",
+              "Je kiest iets waar je echt in wilt verdwijnen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Zo zoek je in de schoolbieb",
+            "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
+            "items": [
+              "Zoek op titel, auteur, onderwerp of trefwoord",
+              "Let op genrestickers en symbolen op de boeken",
+              "Lees flaptekst en eerste bladzijde voordat je beslist"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Kies slim, niet braaf",
+            "subtitle": "",
+            "items": [
+              "Niet te dun om er snel vanaf te zijn",
+              "Niet te moeilijk om op af te knappen",
+              "Wel iets dat je nieuwsgierig maakt"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-3-leesniveau-lezen-voor-de-lijst-en-genres": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 3",
+            "subtitle": "Leesniveau, Lezen voor de lijst en genres",
+            "items": [
+              "Bepaal je startniveau",
+              "Leer wat Lezen voor de lijst is",
+              "Gebruik genre als hulpmiddel bij kiezen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Niveautest",
+            "subtitle": "https://www.jeugdbibliotheek.nl/12-18-jaar/lezen-voor-de-lijst/niveautest.html",
+            "items": [
+              "De test geeft een startpunt",
+              "Je niveau helpt bij slim kiezen",
+              "Je zit niet voorgoed vast aan 1 niveau"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Boekenkeuze met filters",
+            "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
+            "items": [
+              "Filter op niveau, leeftijd en genre",
+              "Zoek gericht naar iets dat echt bij je past",
+              "Gebruik dit ook later voor je tweede en derde boek"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-4-de-rechten-van-de-lezer-en-echt-goed-kiezen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 4",
+            "subtitle": "De rechten van de lezer",
+            "items": [
+              "Je mag een boek niet uitlezen",
+              "Je mag van genre wisselen",
+              "Je mag zoeken tot je iets vindt dat werkt"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wanneer wissel je van boek?",
+            "subtitle": "",
+            "items": [
+              "Als je na een eerlijke start nog steeds niets voelt",
+              "Als je het niveau totaal verkeerd hebt ingeschat",
+              "Als je merkt dat je alleen nog maar doorbladert"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Doel van vandaag",
+            "subtitle": "",
+            "items": [
+              "Iedereen heeft nu een geschikt boek",
+              "Iedereen weet waar hij nieuwe titels kan vinden",
+              "Daarna starten we met echt stillezen"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-5-stillezen-en-startcheck": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 5: Stillezen en startcheck",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Lees 25-30 minuten in stilte",
+              "Noteer titel, auteur en startdatum",
+              "Check na afloop eerlijk: blijft dit boek bij je?"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 6: Stillezen en boekmatch controleren",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Controleer of je boek echt goed past",
+              "Durf gericht te wisselen als dat beter is",
+              "Lees daarna zonder scherm in de buurt"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Bouw 20 minuten per dag thuis in",
+              "Kies vaste momenten in je week",
+              "Lees daarna geconcentreerd verder"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Herhaal de rechten van de lezer",
+              "Kies bewust: doorgaan of wisselen",
+              "Lees daarna door zonder afleiding"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Check je eerste maanddoel",
+              "Ben je op koers voor 1 boek per maand?",
+              "Lees daarna weer in stilte verder"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Wissel slim als een boek niet werkt",
+              "Gebruik bieb, niveau en genre bewust",
+              "Lees daarna meteen door in je nieuwe of huidige boek"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 11: Stillezen en focus trainen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Train langere aandacht zonder telefoon",
+              "Lees in een echt stil blok",
+              "Merk op wat dat met je hoofd doet"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Wissel leestips uit zonder te spoileren",
+              "Gebruik klasgenoten als boekenvinders",
+              "Lees daarna verder"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Kies zo nodig een tweede boek",
+              "Blijf het maandritme vasthouden",
+              "Zorg dat je leeslijst blijft groeien"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Koppel je boek aan Lezen voor de lijst",
+              "Controleer niveau, genre en interesse",
+              "Lees daarna verder"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Houd je ritme in drukke weken vast",
+              "Kleine dagelijkse blokken tellen op",
+              "Lees daarna met rust verder"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden": [
+          {
+            "type": "bullets",
+            "title": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
+            "subtitle": "Heel veel lezen",
+            "items": [
+              "Stillezen staat centraal",
+              "Iedereen leest zijn eigen boek",
+              "Telefoon blijft weg tijdens leestijd"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Focus van vandaag",
+            "subtitle": "",
+            "items": [
+              "Maak alvast een zomerstapel",
+              "Kies een volgend boek voordat de vakantie begint",
+              "Lees daarna nog een stevig blok"
+            ]
+          }
+        ],
+        "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken": [
+          {
+            "type": "bullets",
+            "title": "Zomervakantiequiz",
+            "subtitle": "Lezen, taal en boeken",
+            "items": [
+              "Sluit het jaar luchtig en inhoudelijk af",
+              "Herhaal wat je leerde over lezen, kiezen en volhouden",
+              "Vier boeken, taal en denkvermogen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Onderdelen van de quiz",
+            "subtitle": "",
+            "items": [
+              "Boekomslagen en genres herkennen",
+              "Stellingen over leesrechten en leesgewoonten",
+              "Taal- en boekenrondes in teams of duo’s"
+            ]
+          }
+        ]
+      },
+      "importVersion": 2
     }
   }
 }

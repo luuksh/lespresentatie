@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   let planningData = {};
   let planningPresentations = {};
+  let planningHolidays = [];
   let planningUpdatedAt = '';
   let planningFetchedAt = '';
   let planningTimer = null;
@@ -1003,10 +1004,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   function collapseToYearLayerDoc(doc) {
     const source = normalizeStudioDoc(doc);
     const merged = new Map();
+    const passthrough = [];
 
     for (const entry of source.entries || []) {
       const grade = gradeLayerFromClassId(entry.classId);
-      if (!grade) continue;
+      if (!grade) {
+        if (String(entry?.classId || '').trim().toUpperCase() === 'ALL') {
+          passthrough.push(entry);
+        }
+        continue;
+      }
       const week = String(entry.week || '').trim();
       if (!week) continue;
       const key = `${grade}__${week}`;
@@ -1038,6 +1045,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (row.notes.length) out.note = row.notes.join(' | ');
       return out;
     });
+    entries.push(...passthrough);
 
     return {
       ...source,
@@ -1121,8 +1129,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningStudio = doc;
     planningData = buildPlanningIndex(doc);
     planningPresentations = doc.presentations || {};
+    planningHolidays = Array.isArray(doc.holidays) ? doc.holidays.filter((item) => item && typeof item === 'object') : [];
     planningFetchedAt = new Date().toISOString();
     planningUpdatedAt = String(doc.updatedAt || planningFetchedAt);
+  }
+
+  function localDateKey(date = new Date()) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+  }
+
+  function holidayForDate(date = new Date()) {
+    const day = localDateKey(date);
+    return planningHolidays.find((item) => {
+      const start = String(item?.startDate || '').trim();
+      const end = String(item?.endDate || '').trim();
+      return start && end && start <= day && day <= end;
+    }) || null;
   }
 
   function buildPresentationTarget(lesson) {
@@ -1544,6 +1569,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? `Programma volgende les${nextLessonTime ? ` (${nextLessonTime})` : ''}`
       : 'Programma vandaag';
     planningWeekLabelEl.textContent = `${title} · ${week.label}`;
+    const activeHoliday = holidayForDate(now) || holidayForDate(planAnchorDate);
+    if (activeHoliday) {
+      setPlanningItems([`${String(activeHoliday.title || 'Schoolvakantie').trim()} (${activeHoliday.startDate} t/m ${activeHoliday.endDate})`]);
+      if (planningLastUpdateEl) {
+        const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
+        const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
+        planningLastUpdateEl.textContent = [syncStamp, sourceStamp].filter(Boolean).join(' · ');
+      }
+      setPlanningStatus('Vakantie', 'info');
+      refreshPlanningEditor();
+      return;
+    }
 
     const classId = normalizeClassId(klasSelect?.value || '');
     const gradeId = gradeLayerFromClassId(classId);
@@ -1564,8 +1601,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));
     const hasLessons = lessonSelection.length > 0;
-    const showWeekItems = !agendaSourceUrl;
-    const hasItems = showWeekItems && Array.isArray(weekData?.items) && weekData.items.length > 0;
+    const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
 
     if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
@@ -1579,7 +1615,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    setPlanningItems(showWeekItems ? weekData.items : [], weekData.note, lessonSelection);
+    setPlanningItems(weekData.items || [], weekData.note, lessonSelection);
     if (planningLastUpdateEl) {
       const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
       const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';

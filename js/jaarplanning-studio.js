@@ -64,10 +64,16 @@ function normalizeDoc(raw) {
 function collapseToYearLayerDoc(doc) {
   const source = normalizeDoc(doc);
   const merged = new Map();
+  const passthrough = [];
 
   for (const entry of source.entries || []) {
     const grade = gradeLayerFromClassId(entry.classId);
-    if (!grade) continue;
+    if (!grade) {
+      if (String(entry?.classId || '').trim().toUpperCase() === 'ALL') {
+        passthrough.push(entry);
+      }
+      continue;
+    }
     const week = String(entry.week || '').trim();
     if (!week) continue;
     const key = `${grade}__${week}`;
@@ -99,6 +105,7 @@ function collapseToYearLayerDoc(doc) {
     if (row.notes.length) out.note = row.notes.join(' | ');
     return out;
   });
+  entries.push(...passthrough);
 
   return {
     ...source,
