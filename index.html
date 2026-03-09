@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
   <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260308-01" />
+  <link rel="stylesheet" href="css/style.css?v=20260309-01" />
 
   <script>
     window.APP_CONFIG = {
@@ -16,7 +16,7 @@
       agendaSourceFallbackUrl: 'js/zermelo-agenda-live.json'
     };
   </script>
-  <script type="module" src="js/indeling.js?v=20260302-01"></script>
+  <script type="module" src="js/indeling.js?v=20260309-01"></script>
   <script type="module" src="js/init.js?v=20260308-02"></script>
 </head>
 <body>
@@ -58,6 +58,13 @@
             <button id="btnLayoutSave" type="button" class="btn btn-primary">Opslaan als</button>
             <button id="btnLayoutDelete" type="button" class="btn btn-danger">Verwijderen</button>
             <button type="button" class="btn btn-secondary" data-action="group-overview-open">Overzicht</button>
+          </div>
+        </div>
+        <p class="panel-help">Tijdelijke historie bewaart automatische snapshots van de afgelopen 3 uur.</p>
+        <div class="toolbar presets-panel">
+          <select id="recentLayoutSelect" class="presets-select"></select>
+          <div class="btn-group">
+            <button id="btnRecentLayoutLoad" type="button" class="btn btn-secondary">Laad moment</button>
           </div>
         </div>
       </section>

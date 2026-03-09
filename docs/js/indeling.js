@@ -1,6 +1,9 @@
 // js/indeling.js
 const MODULE_VERSION = '20260227-01';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
+const TEMP_LAYOUT_HISTORY_KEY = 'lespresentatie.templayouthistory.v1';
+const TEMP_LAYOUT_HISTORY_TTL_MS = 3 * 60 * 60 * 1000;
+const TEMP_LAYOUT_HISTORY_LIMIT = 18;
 
 const modules = {
   h216:               () => import(`./h216.js?v=${MODULE_VERSION}`).then(m => m.h216Indeling),
@@ -250,8 +253,25 @@ function getLayoutSelect() {
   return document.getElementById('savedLayoutSelect');
 }
 
+function getRecentLayoutSelect() {
+  return document.getElementById('recentLayoutSelect');
+}
+
 function isGroupLayoutType(type = getCurrentType()) {
   return type === 'groepjes' || type === 'drietallen' || type === 'vijftallen' || type === 'presentatievolgorde';
+}
+
+function layoutTypeLabel(type) {
+  const labels = {
+    h216: 'Busopstelling',
+    u008: '3-3-2',
+    drievierdrie: '3-4-3',
+    groepjes: 'Viertallen',
+    drietallen: 'Drietallen',
+    vijftallen: 'Vijftallen',
+    presentatievolgorde: 'Volgorde'
+  };
+  return labels[String(type || '').trim()] || String(type || '').trim() || 'Onbekend';
 }
 
 function agendaDateLabel(raw) {
@@ -625,6 +645,99 @@ function writeSavedLayouts(store) {
   }
 }
 
+function parseSavedAtMs(value) {
+  const ms = Date.parse(String(value || '').trim());
+  return Number.isFinite(ms) ? ms : 0;
+}
+
+function normalizeTempHistoryStore(store) {
+  const normalized = store && typeof store === 'object' ? store : {};
+  const now = Date.now();
+  const cutoff = now - TEMP_LAYOUT_HISTORY_TTL_MS;
+  const items = Array.isArray(normalized.items) ? normalized.items : [];
+  normalized.version = 1;
+  normalized.items = items
+    .filter((item) => item && typeof item === 'object')
+    .filter((item) => parseSavedAtMs(item.savedAt) >= cutoff)
+    .sort((a, b) => parseSavedAtMs(b.savedAt) - parseSavedAtMs(a.savedAt))
+    .slice(0, TEMP_LAYOUT_HISTORY_LIMIT);
+  return normalized;
+}
+
+function readTempLayoutHistory() {
+  try {
+    const raw = localStorage.getItem(TEMP_LAYOUT_HISTORY_KEY);
+    return normalizeTempHistoryStore(raw ? JSON.parse(raw) : null);
+  } catch {
+    return normalizeTempHistoryStore(null);
+  }
+}
+
+function writeTempLayoutHistory(store) {
+  try {
+    localStorage.setItem(TEMP_LAYOUT_HISTORY_KEY, JSON.stringify(normalizeTempHistoryStore(store)));
+  } catch (err) {
+    console.warn('Tijdelijke historie opslaan mislukt:', err);
+  }
+}
+
+function arrangementHistoryFingerprint(arrangement) {
+  if (!arrangement || typeof arrangement !== 'object') return '';
+  return JSON.stringify({
+    type: arrangement.type || '',
+    klasId: arrangement.klasId || '',
+    seats: Array.isArray(arrangement.seats) ? arrangement.seats : [],
+    order: Array.isArray(arrangement.order) ? arrangement.order : [],
+    domSnapshot: String(arrangement.domSnapshot || ''),
+    groupTopics: Array.isArray(arrangement.groupTopics) ? arrangement.groupTopics : [],
+    groupDates: Array.isArray(arrangement.groupDates) ? arrangement.groupDates : []
+  });
+}
+
+function recentHistoryLabel(item) {
+  const savedAt = parseSavedAtMs(item?.savedAt);
+  const timeLabel = savedAt
+    ? new Intl.DateTimeFormat('nl-NL', {
+      hour: '2-digit',
+      minute: '2-digit'
+    }).format(new Date(savedAt))
+    : 'onbekend tijdstip';
+  const typeLabel = layoutTypeLabel(item?.type || item?.arrangement?.type);
+  const sourceLabel = String(item?.layoutName || '').trim();
+  return sourceLabel
+    ? `${timeLabel} · ${typeLabel} · ${sourceLabel}`
+    : `${timeLabel} · ${typeLabel}`;
+}
+
+function refillRecentLayoutSelect() {
+  const select = getRecentLayoutSelect();
+  if (!select) return;
+
+  const classId = getCurrentClassId();
+  const store = readTempLayoutHistory();
+  const items = store.items.filter((item) => String(item?.classId || '') === classId);
+
+  select.innerHTML = '';
+
+  if (!items.length) {
+    const opt = document.createElement('option');
+    opt.value = '';
+    opt.textContent = 'Geen snapshots van de laatste 3 uur';
+    select.appendChild(opt);
+    select.value = '';
+    return;
+  }
+
+  items.forEach((item) => {
+    const opt = document.createElement('option');
+    opt.value = String(item.id || '');
+    opt.textContent = recentHistoryLabel(item);
+    select.appendChild(opt);
+  });
+
+  select.selectedIndex = 0;
+}
+
 function getCurrentArrangement() {
   const type = getCurrentType();
   const klasId = getCurrentClassId();
@@ -662,6 +775,41 @@ function getCurrentArrangement() {
     groupTopics: readGroupTopics(),
     groupDates: readGroupDates()
   };
+}
+
+function persistTemporaryHistorySnapshot({ source = 'auto', layoutName = '' } = {}) {
+  const arrangement = getCurrentArrangement();
+  if (!arrangement) return;
+
+  const classId = getCurrentClassId();
+  const store = readTempLayoutHistory();
+  const items = Array.isArray(store.items) ? store.items.slice() : [];
+  const savedAt = new Date().toISOString();
+  arrangement.savedAt = savedAt;
+
+  const entry = {
+    id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    classId,
+    type: arrangement.type,
+    savedAt,
+    source: String(source || 'auto'),
+    layoutName: String(layoutName || getSelectedLayoutTitle() || '').trim(),
+    arrangement
+  };
+
+  const fingerprint = arrangementHistoryFingerprint(arrangement);
+  let skippedLatestDuplicate = false;
+  const deduped = items.filter((item) => {
+    if (skippedLatestDuplicate) return true;
+    if (String(item?.classId || '') !== classId) return true;
+    if (arrangementHistoryFingerprint(item?.arrangement) !== fingerprint) return true;
+    skippedLatestDuplicate = true;
+    return false;
+  });
+
+  store.items = [entry, ...deduped];
+  writeTempLayoutHistory(store);
+  refillRecentLayoutSelect();
 }
 
 function ensureClassStore(store, classId) {
@@ -853,6 +1001,30 @@ async function loadSelectedLayout() {
   cls.selected = select.value;
   writeSavedLayouts(store);
   await applyArrangement(payload);
+  persistTemporaryHistorySnapshot({ source: 'saved-layout-load', layoutName: select.value });
+}
+
+async function loadSelectedRecentLayout() {
+  const select = getRecentLayoutSelect();
+  if (!select || !select.value) {
+    alert('Geen tijdelijk opgeslagen moment beschikbaar.');
+    return;
+  }
+
+  const classId = getCurrentClassId();
+  const store = readTempLayoutHistory();
+  const payload = store.items.find((item) => String(item?.id || '') === String(select.value) && String(item?.classId || '') === classId);
+  if (!payload?.arrangement) {
+    alert('Dit tijdelijke moment is niet meer beschikbaar.');
+    refillRecentLayoutSelect();
+    return;
+  }
+
+  await applyArrangement(payload.arrangement);
+  persistTemporaryHistorySnapshot({
+    source: 'history-load',
+    layoutName: payload.layoutName || recentHistoryLabel(payload)
+  });
 }
 
 function deleteSelectedLayout() {
@@ -881,9 +1053,11 @@ function deleteSelectedLayout() {
   const btnSave = document.getElementById('btnLayoutSave');
   const btnLoad = document.getElementById('btnLayoutLoad');
   const btnDelete = document.getElementById('btnLayoutDelete');
+  const btnRecentLoad = document.getElementById('btnRecentLayoutLoad');
   const btnGroupOverviewOpen = Array.from(document.querySelectorAll('[data-action="group-overview-open"]'));
   const select = getLayoutSelect();
   const plattegrond = document.getElementById('plattegrond');
+  let recentSnapshotTimer = null;
   if (!klasSel || !select || !plattegrond) return;
 
   initTopicEditing();
@@ -903,6 +1077,10 @@ function deleteSelectedLayout() {
 
   btnLoad?.addEventListener('click', () => {
     void loadSelectedLayout();
+  });
+
+  btnRecentLoad?.addEventListener('click', () => {
+    void loadSelectedRecentLayout();
   });
 
   btnDelete?.addEventListener('click', () => {
@@ -936,15 +1114,27 @@ function deleteSelectedLayout() {
   klasSel.addEventListener('change', () => {
     if (klasSel.value) localStorage.setItem('lastClassId', klasSel.value);
     setTimeout(refillSavedLayoutSelect, 40);
+    setTimeout(refillRecentLayoutSelect, 40);
     setTimeout(renderPresentationNotice, 40);
   });
 
   window.addEventListener('indeling:rendered', () => {
     refillSavedLayoutSelect();
+    if (recentSnapshotTimer) clearTimeout(recentSnapshotTimer);
+    recentSnapshotTimer = setTimeout(() => {
+      persistTemporaryHistorySnapshot({ source: 'render' });
+    }, 300);
+    refillRecentLayoutSelect();
     updateGroupOverviewButtons(btnGroupOverviewOpen);
     renderPresentationNotice();
   });
+
+  window.addEventListener('beforeunload', () => {
+    persistTemporaryHistorySnapshot({ source: 'beforeunload' });
+  });
+
   updateGroupOverviewButtons(btnGroupOverviewOpen);
   refillSavedLayoutSelect();
+  refillRecentLayoutSelect();
   renderPresentationNotice();
 })();
