@@ -1267,12 +1267,60 @@ document.addEventListener('DOMContentLoaded', async () => {
       }, 360);
     }
 
+    const escapeHtml = (value) => String(value || '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const subtitleHtml = (value) => {
+      const raw = String(value || '').trim();
+      if (!raw) return '';
+      const markdownPattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+      const urlPattern = /(https?:\/\/[^\s<]+)/g;
+      const fragments = [];
+      let lastIndex = 0;
+      let match = null;
+
+      while ((match = markdownPattern.exec(raw))) {
+        if (match.index > lastIndex) {
+          fragments.push(escapeHtml(raw.slice(lastIndex, match.index)));
+        }
+        const label = escapeHtml(match[1]);
+        const href = escapeHtml(match[2]);
+        fragments.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`);
+        lastIndex = match.index + match[0].length;
+      }
+
+      const tail = raw.slice(lastIndex);
+      if (tail) {
+        let tailIndex = 0;
+        let urlMatch = null;
+        while ((urlMatch = urlPattern.exec(tail))) {
+          if (urlMatch.index > tailIndex) {
+            fragments.push(escapeHtml(tail.slice(tailIndex, urlMatch.index)));
+          }
+          const href = escapeHtml(urlMatch[1]);
+          fragments.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${href}</a>`);
+          tailIndex = urlMatch.index + urlMatch[0].length;
+        }
+        if (tailIndex < tail.length) {
+          fragments.push(escapeHtml(tail.slice(tailIndex)));
+        }
+      }
+
+      return fragments.join('');
+    };
+
     if (slide.type === 'bullets') {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
+      const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       const items = Array.isArray(slide.items) ? slide.items : [];
       presentationInternalStage.innerHTML = `
         <article class="presentation-slide-card">
           <h2 class="presentation-slide-title">${title}</h2>
+          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
           <ul class="presentation-slide-bullets">
             ${items.map((item) => `<li>${String(item || '').trim()}</li>`).join('')}
           </ul>
@@ -1284,7 +1332,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       presentationInternalStage.innerHTML = `
         <article class="presentation-slide-card">
           <h1 class="presentation-slide-title">${title}</h1>
-          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitle}</p>` : ''}
+          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
         </article>
       `;
     }

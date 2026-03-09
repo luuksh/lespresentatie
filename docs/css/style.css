@@ -758,6 +758,16 @@ body::after {
   max-width: 38ch;
 }
 
+.presentation-slide-subtitle a {
+  color: #1652a5;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.presentation-slide-subtitle a:hover {
+  color: #0f3e84;
+}
+
 .presentation-slide-bullets {
   margin: 18px 0 0;
   padding: 0;
