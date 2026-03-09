@@ -431,6 +431,11 @@
         panel.hidden = true;
         document.body.classList.remove('magister-assist-open');
         if (markDismissed) dismissedForCurrentLayout = true;
+        if (markDismissed) {
+          window.dispatchEvent(new CustomEvent('magister-assist:closed', {
+            detail: { returnToStudentView: true }
+          }));
+        }
         if (lastFocus instanceof HTMLElement) lastFocus.focus();
       }
 
@@ -712,6 +717,10 @@
       btn?.addEventListener('click', toggleMirror);
       indelingSel?.addEventListener('change', () => setMirror(false));
       klasSel?.addEventListener('change', () => setMirror(false));
+      window.addEventListener('magister-assist:closed', (event) => {
+        if (!event?.detail?.returnToStudentView) return;
+        setMirror(false);
+      });
 
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', applyFromStorage);
