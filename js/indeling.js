@@ -285,6 +285,10 @@ function getSelectedLayoutTitle() {
   return String(select?.value || '').trim();
 }
 
+function normalizeProjectName(value) {
+  return String(value || '').trim().toLocaleLowerCase('nl-NL');
+}
+
 function escapeHtml(value) {
   return String(value || '')
     .replaceAll('&', '&amp;')
@@ -822,6 +826,12 @@ function ensureClassStore(store, classId) {
   return store.classes[classId];
 }
 
+function findLayoutNameForProject(cls, projectName) {
+  const wanted = normalizeProjectName(projectName);
+  if (!wanted || !cls?.layouts || typeof cls.layouts !== 'object') return '';
+  return Object.keys(cls.layouts).find((name) => normalizeProjectName(name) === wanted) || '';
+}
+
 function refillSavedLayoutSelect() {
   const select = getLayoutSelect();
   if (!select) return;
@@ -982,6 +992,21 @@ function saveCurrentLayoutAs(name) {
   renderPresentationNotice();
 }
 
+function currentProjectSuggestions() {
+  const detail = window.__planningProjectContext || {};
+  const projects = Array.isArray(detail.projects) ? detail.projects : [];
+  const current = String(detail.primaryProject || '').trim();
+  const suggestions = [];
+  if (current) suggestions.push(current);
+  for (const project of projects) {
+    const text = String(project || '').trim();
+    if (text && !suggestions.includes(text)) suggestions.push(text);
+  }
+  const selected = getSelectedLayoutTitle();
+  if (selected && !suggestions.includes(selected)) suggestions.push(selected);
+  return suggestions;
+}
+
 async function loadSelectedLayout() {
   const select = getLayoutSelect();
   if (!select || !select.value) {
@@ -1047,6 +1072,27 @@ function deleteSelectedLayout() {
   renderPresentationNotice();
 }
 
+async function autoApplyLayoutForProject(projectName, classId = getCurrentClassId()) {
+  const project = String(projectName || '').trim();
+  if (!project || !classId) return false;
+  const store = readSavedLayouts();
+  const cls = ensureClassStore(store, classId);
+  const layoutName = findLayoutNameForProject(cls, project);
+  if (!layoutName) return false;
+  const payload = cls.layouts[layoutName];
+  if (!payload) return false;
+
+  const autoKey = `${classId}::${normalizeProjectName(project)}::${layoutName}`;
+  if (window.__autoAppliedProjectLayoutKey === autoKey) return true;
+
+  cls.selected = layoutName;
+  writeSavedLayouts(store);
+  refillSavedLayoutSelect();
+  await applyArrangement(payload);
+  window.__autoAppliedProjectLayoutKey = autoKey;
+  return true;
+}
+
 (function initLayoutLibraryUI() {
   const klasSel = document.getElementById('klasSelect');
   const typeSel = document.getElementById('indelingSelect');
@@ -1064,15 +1110,23 @@ function deleteSelectedLayout() {
   initOverviewModal();
 
   btnSave?.addEventListener('click', () => {
-    const existing = select.value || '';
-    const name = prompt('Naam voor deze plattegrond:', existing);
-    if (!name) return;
+    const suggestions = currentProjectSuggestions();
+    const suggestedProject = suggestions[0] || '';
+    const promptText = suggestions.length > 1
+      ? `Aan welk project moet deze plattegrond gekoppeld worden?\nSuggesties: ${suggestions.join(', ')}`
+      : 'Aan welk project moet deze plattegrond gekoppeld worden?';
+    const name = prompt(promptText, suggestedProject);
+    const projectName = String(name || '').trim();
+    if (!projectName) return;
 
     const classId = getCurrentClassId();
     const store = readSavedLayouts();
     const cls = ensureClassStore(store, classId);
-    if (cls.layouts[name] && !confirm(`Plattegrond "${name}" overschrijven?`)) return;
-    saveCurrentLayoutAs(name);
+    const existingName = findLayoutNameForProject(cls, projectName);
+    if (existingName && !confirm(`Er bestaat al een plattegrond voor project "${existingName}". Overschrijven?`)) return;
+    const targetName = existingName || projectName;
+    saveCurrentLayoutAs(targetName);
+    void autoApplyLayoutForProject(targetName, classId);
   });
 
   btnLoad?.addEventListener('click', () => {
@@ -1116,6 +1170,18 @@ function deleteSelectedLayout() {
     setTimeout(refillSavedLayoutSelect, 40);
     setTimeout(refillRecentLayoutSelect, 40);
     setTimeout(renderPresentationNotice, 40);
+  });
+
+  window.addEventListener('planning:project-context', (event) => {
+    const detail = event?.detail && typeof event.detail === 'object' ? event.detail : {};
+    window.__planningProjectContext = detail;
+    const classId = String(detail.classId || '').trim() || getCurrentClassId();
+    const primaryProject = String(detail.primaryProject || '').trim();
+    if (!primaryProject) {
+      window.__autoAppliedProjectLayoutKey = '';
+      return;
+    }
+    void autoApplyLayoutForProject(primaryProject, classId);
   });
 
   window.addEventListener('indeling:rendered', () => {

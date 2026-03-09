@@ -1524,6 +1524,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   }
 
+  function dispatchPlanningProjectContext(lessons = []) {
+    const normalizedLessons = Array.isArray(lessons) ? lessons : [];
+    const projects = normalizedLessons
+      .map((lesson) => String(lesson?.project || '').trim())
+      .filter(Boolean);
+    const uniqueProjects = [...new Set(projects)];
+    window.dispatchEvent(new CustomEvent('planning:project-context', {
+      detail: {
+        classId: normalizeClassId(klasSelect?.value || ''),
+        primaryProject: uniqueProjects[0] || '',
+        projects: uniqueProjects,
+        timestamp: Date.now()
+      }
+    }));
+  }
+
   function lessonLetter(index) {
     if (index === 1) return 'A';
     if (index === 2) return 'B';
@@ -1786,6 +1802,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const activeHoliday = holidayForDate(now) || holidayForDate(planAnchorDate);
     if (activeHoliday) {
       setPlanningItems([`${String(activeHoliday.title || 'Schoolvakantie').trim()} (${activeHoliday.startDate} t/m ${activeHoliday.endDate})`]);
+      dispatchPlanningProjectContext([]);
       if (planningLastUpdateEl) {
         const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
         const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
@@ -1819,6 +1836,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
+      dispatchPlanningProjectContext([]);
       if (planningLastUpdateEl) {
         const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
         const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
@@ -1830,6 +1848,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     setPlanningItems(weekData.items || [], weekData.note, lessonSelection);
+    dispatchPlanningProjectContext(lessonSelection);
     if (planningLastUpdateEl) {
       const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
       const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
