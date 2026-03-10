@@ -25,6 +25,12 @@ Open lokaal in je browser:
 - `jaarplanning-studio.html` voor de planning
 - `presentatie-studio.html` voor presentaties
 
+Nog makkelijker op Mac:
+
+- dubbelklik op `start-docentomgeving.command`
+- de docentomgeving opent dan lokaal in je browser
+- dubbelklik later op `stop-docentomgeving.command` om hem weer te stoppen
+
 ## Belangrijk
 
 Als alleen `docs/` gepubliceerd wordt, kunnen leerlingen niet bij jouw lokale docentomgeving.
