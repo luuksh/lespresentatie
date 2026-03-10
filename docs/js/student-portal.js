@@ -156,7 +156,7 @@ function escapeHtml(value) {
 function renderHtmlText(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
-  return escapeHtml(raw).replaceAll('\n', '<br />');
+  return richTextToHtml(raw).replaceAll('\n', '<br />');
 }
 
 function richTextToHtml(value) {
@@ -231,6 +231,16 @@ function openPresentation(target) {
   if (!presentationDialog.open) presentationDialog.showModal();
 }
 
+function stepActivePresentation(delta) {
+  const presentation = state.activePresentation;
+  const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+  if (!slides.length) return;
+  const nextIndex = Math.max(0, Math.min(slides.length - 1, state.activeSlideIndex + delta));
+  if (nextIndex === state.activeSlideIndex) return;
+  state.activeSlideIndex = nextIndex;
+  renderPresentationSlide();
+}
+
 function renderPresentationSlide() {
   const presentation = state.activePresentation;
   const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
@@ -259,7 +269,7 @@ function renderPresentationSlide() {
     <article class="slide-card">
       <h3>${escapeHtml(title)}</h3>
       ${subtitle ? `<p>${renderHtmlText(subtitle)}</p>` : ''}
-      ${bullets.length ? `<ul>${bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+      ${bullets.length ? `<ul>${bullets.map((item) => `<li>${renderHtmlText(item)}</li>`).join('')}</ul>` : ''}
     </article>
   `;
 
@@ -445,19 +455,31 @@ jumpToCurrentWeekBtn?.addEventListener('click', () => {
 });
 
 dialogPrev?.addEventListener('click', () => {
-  state.activeSlideIndex -= 1;
-  renderPresentationSlide();
+  stepActivePresentation(-1);
 });
 
 dialogNext?.addEventListener('click', () => {
-  state.activeSlideIndex += 1;
-  renderPresentationSlide();
+  stepActivePresentation(1);
 });
 
 presentationDialog?.addEventListener('close', () => {
   state.activePresentation = null;
   state.activePresentationTarget = null;
   state.activeSlideIndex = 0;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (!presentationDialog?.open || !state.activePresentation) return;
+  const activeTag = document.activeElement?.tagName;
+  if (activeTag === 'INPUT' || activeTag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault();
+    stepActivePresentation(-1);
+  } else if (event.key === 'ArrowRight') {
+    event.preventDefault();
+    stepActivePresentation(1);
+  }
 });
 
 boot();
