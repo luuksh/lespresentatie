@@ -9,8 +9,30 @@ INTERNAL_DIR="$DIST_DIR/internal"
 rm -rf "$PUBLIC_DIR" "$INTERNAL_DIR"
 mkdir -p "$PUBLIC_DIR" "$INTERNAL_DIR"
 
-cp -R "$ROOT_DIR/docs/." "$PUBLIC_DIR/"
-touch "$PUBLIC_DIR/.nojekyll"
+public_items=(
+  "index.html"
+  "favicon.svg"
+  "DEPLOY_SECURITY.md"
+  "l"
+  "intern"
+  "css/student-portal.css"
+  "css/internal-shell.css"
+  "js/student-portal.js"
+  "js/jaarplanning-live.json"
+  "js/jaarplanning-live-20260308.json"
+  "js/leerlingen_per_klas.json"
+  "lesdocs"
+)
+
+for item in "${public_items[@]}"; do
+  if [ -e "$ROOT_DIR/docs/$item" ]; then
+    mkdir -p "$PUBLIC_DIR/$(dirname "$item")"
+    cp -R "$ROOT_DIR/docs/$item" "$PUBLIC_DIR/$item"
+  fi
+done
+
+cat > "$PUBLIC_DIR/.nojekyll" <<'EOF'
+EOF
 
 internal_items=(
   "index.html"

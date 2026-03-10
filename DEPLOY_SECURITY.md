@@ -13,6 +13,12 @@ Waarom:
 
 ## Aanbevolen route
 
+- Simpelst en aanbevolen voor nu:
+  - Publiek: alleen de leerlingensite online
+  - Intern: docentomgeving alleen lokaal op jouw eigen computer
+
+## Als je later toch een online interne omgeving wilt
+
 - Publiek: GitHub Pages
 - Intern: Docker + Caddy + Basic Auth op een aparte host, bijvoorbeeld `intern.jouwdomein.nl`
 
