@@ -17,6 +17,18 @@
 </head>
 <body>
   <main class="portal-shell">
+    <header class="portal-masthead">
+      <div class="masthead-brand">
+        <p class="masthead-eyebrow">Nederlands</p>
+        <p class="masthead-title">Leerlingenplatform</p>
+      </div>
+      <div class="masthead-tags" aria-label="Platformkenmerken">
+        <span class="masthead-tag">Jaarplanning</span>
+        <span class="masthead-tag">Presentaties</span>
+        <span class="masthead-tag">Huiswerk</span>
+      </div>
+    </header>
+
     <section class="portal-hero">
       <div class="hero-copy">
         <p class="hero-kicker">Openbare leerlingenomgeving</p>
@@ -24,13 +36,30 @@
         <p class="hero-text">
           Kies je jaarlaag en spring direct naar deze week. Alle lessen, presentaties en huiswerk staan op een vaste, rustige plek.
         </p>
+        <div class="hero-highlights">
+          <article class="hero-highlight">
+            <p class="hero-highlight-label">Deze week</p>
+            <strong id="heroWeekValue">Week --</strong>
+          </article>
+          <article class="hero-highlight">
+            <p class="hero-highlight-label">Presentaties</p>
+            <strong id="heroPresentationCount">0</strong>
+          </article>
+          <article class="hero-highlight">
+            <p class="hero-highlight-label">Huiswerkitems</p>
+            <strong id="heroHomeworkCount">0</strong>
+          </article>
+        </div>
       </div>
       <div class="hero-panel">
+        <p class="hero-panel-kicker">Direct naar jouw planning</p>
         <label class="portal-field">
           <span>Jaarlaag</span>
           <select id="layerSelect"></select>
         </label>
-        <button id="jumpToCurrentWeekBtn" class="portal-button portal-button-primary" type="button">Ga naar deze week</button>
+        <div class="hero-panel-actions">
+          <button id="jumpToCurrentWeekBtn" class="portal-button portal-button-primary" type="button">Ga naar deze week</button>
+        </div>
         <p id="portalMeta" class="portal-meta">Planning laden...</p>
       </div>
     </section>
@@ -40,6 +69,7 @@
         <p class="overview-label">Nu relevant</p>
         <h2 id="currentWeekTitle">Weekoverzicht</h2>
         <p id="currentWeekSummary" class="overview-text">De planning wordt opgehaald.</p>
+        <div id="currentWeekFocus" class="focus-band">Planning laden...</div>
       </article>
       <article class="overview-card">
         <p class="overview-label">Huiswerk</p>
@@ -56,7 +86,7 @@
         <p class="overview-label">Jaarplanning</p>
         <h2>Alle weken van je jaarlaag</h2>
       </div>
-      <p class="timeline-help">Klik op een les om de presentatie te openen.</p>
+      <p class="timeline-help">Klik op een les om de presentatie te openen en navigeer rustig door de slides.</p>
     </section>
 
     <section id="weeksGrid" class="weeks-grid" aria-live="polite"></section>
@@ -73,6 +103,7 @@
       </header>
       <section id="dialogStage" class="presentation-stage"></section>
       <footer class="presentation-dialog-foot">
+        <p class="dialog-hint">Gebruik de knoppen om door de les te gaan.</p>
         <button id="dialogPrev" class="portal-button portal-button-secondary" type="button">Vorige</button>
         <p id="dialogCounter" class="dialog-counter">0 / 0</p>
         <button id="dialogNext" class="portal-button portal-button-secondary" type="button">Volgende</button>

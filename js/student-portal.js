@@ -8,9 +8,13 @@ const jumpToCurrentWeekBtn = document.getElementById('jumpToCurrentWeekBtn');
 const portalMeta = document.getElementById('portalMeta');
 const currentWeekTitle = document.getElementById('currentWeekTitle');
 const currentWeekSummary = document.getElementById('currentWeekSummary');
+const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
 const itemsSummary = document.getElementById('itemsSummary');
 const weeksGrid = document.getElementById('weeksGrid');
+const heroWeekValue = document.getElementById('heroWeekValue');
+const heroPresentationCount = document.getElementById('heroPresentationCount');
+const heroHomeworkCount = document.getElementById('heroHomeworkCount');
 const presentationDialog = document.getElementById('presentationDialog');
 const dialogTitle = document.getElementById('dialogTitle');
 const dialogStage = document.getElementById('dialogStage');
@@ -254,17 +258,31 @@ function renderCurrentWeek(layerEntries) {
   if (!currentEntry) {
     currentWeekTitle.textContent = 'Nog geen planning';
     currentWeekSummary.textContent = 'Voor deze jaarlaag staat nog geen planning klaar.';
+    if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen focuspunt beschikbaar';
+    if (heroWeekValue) heroWeekValue.textContent = 'Week --';
+    if (heroPresentationCount) heroPresentationCount.textContent = '0';
+    if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
     renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk toegevoegd.');
     renderSummaryList(itemsSummary, [], 'Nog geen notities toegevoegd.');
     return;
   }
 
   const week = parseWeek(currentEntry.week);
+  const homeworkCount = (currentEntry.lessons || []).filter((lesson) => String(lesson.homework || '').trim()).length;
+  const presentationCount = (currentEntry.lessons || []).filter((lesson) => resolvePresentation(buildPresentationTarget(lesson)).presentation).length;
   currentWeekTitle.textContent = `Week ${String(week).padStart(2, '0')}`;
   const lessonCount = Array.isArray(currentEntry.lessons) ? currentEntry.lessons.length : 0;
   currentWeekSummary.textContent = lessonCount
     ? `${lessonCount} lesmomenten gepland voor jaarlaag ${state.currentLayer}.`
     : `Geen vaste lesmomenten ingepland voor jaarlaag ${state.currentLayer}.`;
+  if (currentWeekFocus) {
+    currentWeekFocus.textContent = homeworkCount
+      ? `${homeworkCount} huiswerkitem${homeworkCount === 1 ? '' : 's'} om af te ronden`
+      : 'Rustige week: geen huiswerk gemarkeerd';
+  }
+  if (heroWeekValue) heroWeekValue.textContent = `Week ${String(week).padStart(2, '0')}`;
+  if (heroPresentationCount) heroPresentationCount.textContent = String(presentationCount);
+  if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
 
   const homeworkRows = (currentEntry.lessons || [])
     .filter((lesson) => String(lesson.homework || '').trim())

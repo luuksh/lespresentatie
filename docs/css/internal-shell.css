@@ -1,14 +1,17 @@
 :root {
-  --shell-bg: #f4efe6;
-  --shell-surface: rgba(255, 251, 245, 0.9);
-  --shell-line: rgba(82, 57, 24, 0.14);
-  --shell-ink: #1f2937;
-  --shell-muted: #6b7280;
-  --shell-primary: #155e75;
-  --shell-primary-deep: #0f3f51;
-  --shell-warm: #a16207;
-  --shell-radius: 24px;
-  --shell-shadow: 0 22px 50px rgba(41, 33, 20, 0.12);
+  --shell-bg: #f1eadf;
+  --shell-surface: rgba(255, 252, 247, 0.82);
+  --shell-surface-strong: rgba(255, 255, 255, 0.9);
+  --shell-line: rgba(58, 46, 30, 0.12);
+  --shell-ink: #17212e;
+  --shell-muted: #667182;
+  --shell-primary: #145c70;
+  --shell-primary-deep: #0d3f4d;
+  --shell-accent: #a15f12;
+  --shell-shadow: 0 26px 70px rgba(35, 29, 19, 0.12);
+  --shell-shadow-sm: 0 12px 26px rgba(35, 29, 19, 0.08);
+  --shell-radius-xl: 32px;
+  --shell-radius-lg: 24px;
   --font-ui: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
 }
 
@@ -20,30 +23,66 @@ body {
   font-family: var(--font-ui);
   color: var(--shell-ink);
   background:
-    radial-gradient(circle at top left, rgba(21, 94, 117, 0.12), transparent 30%),
-    radial-gradient(circle at right 20%, rgba(161, 98, 7, 0.16), transparent 22%),
-    linear-gradient(180deg, #fcfaf6 0%, var(--shell-bg) 100%);
+    radial-gradient(circle at top left, rgba(20, 92, 112, 0.14), transparent 24%),
+    radial-gradient(circle at 84% 18%, rgba(161, 95, 18, 0.14), transparent 18%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--shell-bg) 100%);
 }
 
 .shell-layout {
-  width: min(1100px, calc(100vw - 32px));
+  width: min(1140px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: 48px 0 72px;
+  padding: 28px 0 72px;
   display: grid;
-  gap: 24px;
+  gap: 22px;
+}
+
+.shell-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.shell-masthead-title {
+  margin: 2px 0 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--shell-muted);
+}
+
+.shell-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shell-badge {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(58, 46, 30, 0.08);
+  box-shadow: var(--shell-shadow-sm);
+  color: var(--shell-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .shell-hero,
-.shell-card {
+.shell-card,
+.shell-highlight {
   border: 1px solid var(--shell-line);
-  border-radius: var(--shell-radius);
+  border-radius: var(--shell-radius-lg);
   background: var(--shell-surface);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
   box-shadow: var(--shell-shadow);
 }
 
 .shell-hero {
   padding: 36px;
+  border-radius: var(--shell-radius-xl);
 }
 
 .shell-kicker,
@@ -53,7 +92,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--shell-warm);
+  color: var(--shell-accent);
 }
 
 .shell-hero h1,
@@ -63,17 +102,19 @@ body {
 
 .shell-hero h1 {
   max-width: 12ch;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 0.95;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
 }
 
 .shell-intro {
-  max-width: 68ch;
+  max-width: 70ch;
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--shell-muted);
 }
 
+.shell-highlight-row,
 .shell-actions,
 .shell-grid {
   display: flex;
@@ -81,15 +122,34 @@ body {
   gap: 14px;
 }
 
+.shell-highlight {
+  flex: 1 1 240px;
+  padding: 18px;
+  background: var(--shell-surface-strong);
+  box-shadow: var(--shell-shadow-sm);
+}
+
+.shell-highlight strong {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
 .shell-button,
 .shell-inline-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
+  min-height: 50px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.shell-button:hover,
+.shell-inline-link:hover {
+  transform: translateY(-1px);
 }
 
 .shell-button {
@@ -97,8 +157,9 @@ body {
 }
 
 .shell-button-primary {
-  background: var(--shell-primary);
+  background: linear-gradient(135deg, var(--shell-primary), var(--shell-primary-deep));
   color: #fff;
+  box-shadow: 0 18px 34px rgba(20, 92, 112, 0.22);
 }
 
 .shell-button-secondary {
@@ -107,9 +168,35 @@ body {
   color: var(--shell-primary-deep);
 }
 
-@media (max-width: 720px) {
+.shell-grid {
+  align-items: stretch;
+}
+
+.shell-card {
+  flex: 1 1 320px;
+  padding: 24px;
+}
+
+.shell-card p {
+  color: var(--shell-muted);
+  line-height: 1.6;
+}
+
+.shell-inline-link {
+  justify-content: flex-start;
+  min-height: 0;
+  color: var(--shell-primary);
+}
+
+@media (max-width: 780px) {
   .shell-layout {
-    padding-top: 24px;
+    padding-top: 18px;
+  }
+
+  .shell-masthead,
+  .shell-actions {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .shell-hero {
