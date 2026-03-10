@@ -1,0 +1,122 @@
+:root {
+  --shell-bg: #f4efe6;
+  --shell-surface: rgba(255, 251, 245, 0.9);
+  --shell-line: rgba(82, 57, 24, 0.14);
+  --shell-ink: #1f2937;
+  --shell-muted: #6b7280;
+  --shell-primary: #155e75;
+  --shell-primary-deep: #0f3f51;
+  --shell-warm: #a16207;
+  --shell-radius: 24px;
+  --shell-shadow: 0 22px 50px rgba(41, 33, 20, 0.12);
+  --font-ui: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  color: var(--shell-ink);
+  background:
+    radial-gradient(circle at top left, rgba(21, 94, 117, 0.12), transparent 30%),
+    radial-gradient(circle at right 20%, rgba(161, 98, 7, 0.16), transparent 22%),
+    linear-gradient(180deg, #fcfaf6 0%, var(--shell-bg) 100%);
+}
+
+.shell-layout {
+  width: min(1100px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+  display: grid;
+  gap: 24px;
+}
+
+.shell-hero,
+.shell-card {
+  border: 1px solid var(--shell-line);
+  border-radius: var(--shell-radius);
+  background: var(--shell-surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shell-shadow);
+}
+
+.shell-hero {
+  padding: 36px;
+}
+
+.shell-kicker,
+.shell-card-label {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--shell-warm);
+}
+
+.shell-hero h1,
+.shell-card h2 {
+  margin: 0;
+}
+
+.shell-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 0.95;
+}
+
+.shell-intro {
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--shell-muted);
+}
+
+.shell-actions,
+.shell-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.shell-button,
+.shell-inline-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.shell-button {
+  padding: 0 22px;
+}
+
+.shell-button-primary {
+  background: var(--shell-primary);
+  color: #fff;
+}
+
+.shell-button-secondary {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--shell-line);
+  color: var(--shell-primary-deep);
+}
+
+@media (max-width: 720px) {
+  .shell-layout {
+    padding-top: 24px;
+  }
+
+  .shell-hero {
+    padding: 24px;
+  }
+
+  .shell-hero h1 {
+    max-width: none;
+  }
+}

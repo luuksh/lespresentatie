@@ -1,0 +1,415 @@
+:root {
+  --portal-bg: #f6f1e8;
+  --portal-ink: #172033;
+  --portal-muted: #5b6475;
+  --portal-line: rgba(24, 32, 51, 0.1);
+  --portal-surface: rgba(255, 252, 247, 0.88);
+  --portal-surface-strong: #fffdf9;
+  --portal-primary: #0f766e;
+  --portal-primary-deep: #134e4a;
+  --portal-accent: #c2410c;
+  --portal-shadow: 0 24px 60px rgba(25, 23, 19, 0.12);
+  --portal-radius-xl: 28px;
+  --portal-radius-lg: 22px;
+  --portal-radius-md: 18px;
+  --font-ui: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  color: var(--portal-ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(194, 65, 12, 0.1), transparent 22%),
+    linear-gradient(180deg, #fdfbf7 0%, var(--portal-bg) 100%);
+}
+
+.portal-shell {
+  width: min(1240px, calc(100vw - 28px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+}
+
+.portal-hero,
+.overview-card,
+.week-card,
+.presentation-dialog-shell {
+  border: 1px solid var(--portal-line);
+  background: var(--portal-surface);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--portal-shadow);
+}
+
+.portal-hero {
+  border-radius: var(--portal-radius-xl);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.hero-kicker,
+.overview-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--portal-accent);
+}
+
+.hero-copy h1 {
+  margin: 0 0 12px;
+  max-width: 12ch;
+  font-size: clamp(2.7rem, 7vw, 5.4rem);
+  line-height: 0.92;
+}
+
+.hero-text,
+.overview-text,
+.timeline-help,
+.portal-meta {
+  margin: 0;
+  color: var(--portal-muted);
+  line-height: 1.6;
+}
+
+.hero-panel {
+  border-radius: var(--portal-radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 241, 231, 0.94));
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.portal-field {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.portal-field span {
+  font-size: 0.95rem;
+}
+
+.portal-field select,
+.portal-button,
+.lesson-link {
+  font: inherit;
+}
+
+.portal-field select {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  padding: 0 16px;
+  background: #fff;
+  color: var(--portal-ink);
+}
+
+.portal-overview {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.overview-card {
+  border-radius: var(--portal-radius-lg);
+  padding: 22px;
+}
+
+.overview-card-highlight {
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 250, 249, 0.96));
+}
+
+.overview-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.stack-list {
+  display: grid;
+  gap: 10px;
+}
+
+.stack-item,
+.item-pill {
+  border-radius: 16px;
+  background: var(--portal-surface-strong);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+}
+
+.stack-item {
+  padding: 12px 14px;
+}
+
+.stack-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.item-pill {
+  padding: 10px 12px;
+  color: var(--portal-muted);
+}
+
+.timeline-head {
+  margin: 32px 0 14px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.timeline-head h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.week-card {
+  border-radius: var(--portal-radius-lg);
+  padding: 20px;
+}
+
+.week-card.is-current {
+  border-color: rgba(15, 118, 110, 0.24);
+  box-shadow: 0 24px 64px rgba(15, 118, 110, 0.14);
+}
+
+.week-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.week-card h3,
+.lesson-card h4 {
+  margin: 0;
+}
+
+.week-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--portal-primary-deep);
+  font-weight: 800;
+}
+
+.lesson-stack,
+.info-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.lesson-card {
+  border-radius: 18px;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  background: rgba(255, 255, 255, 0.84);
+  padding: 16px;
+}
+
+.lesson-card p {
+  margin: 6px 0 0;
+  color: var(--portal-muted);
+  line-height: 1.5;
+}
+
+.lesson-slot {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--portal-primary);
+}
+
+.lesson-link {
+  display: inline-flex;
+  margin-top: 10px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: none;
+  padding: 0 16px;
+  background: var(--portal-primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.portal-button {
+  min-height: 48px;
+  border-radius: 999px;
+  border: none;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.portal-button-primary {
+  background: var(--portal-primary);
+  color: #fff;
+}
+
+.portal-button-secondary {
+  background: #fff;
+  color: var(--portal-primary-deep);
+  border: 1px solid rgba(23, 32, 51, 0.12);
+}
+
+.presentation-dialog {
+  width: min(960px, calc(100vw - 24px));
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.presentation-dialog::backdrop {
+  background: rgba(13, 19, 29, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+.presentation-dialog-shell {
+  border-radius: 28px;
+  padding: 22px;
+}
+
+.presentation-dialog-head,
+.presentation-dialog-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dialog-close {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.presentation-stage {
+  min-height: 360px;
+  margin: 18px 0;
+  display: grid;
+  place-items: stretch;
+}
+
+.slide-card {
+  min-height: 360px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 24%),
+    linear-gradient(180deg, #fffdf9 0%, #f7f2ea 100%);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  padding: 28px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.slide-card h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.02;
+}
+
+.slide-card p,
+.slide-card li {
+  color: var(--portal-muted);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.slide-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 10px;
+}
+
+.stack-item a,
+.item-pill a,
+.slide-card a {
+  color: var(--portal-primary-deep);
+  font-weight: 700;
+}
+
+.empty-state {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px dashed rgba(23, 32, 51, 0.14);
+  color: var(--portal-muted);
+}
+
+@media (max-width: 980px) {
+  .portal-hero,
+  .portal-overview,
+  .weeks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .portal-shell {
+    width: min(100vw - 18px, 1240px);
+    padding-top: 10px;
+  }
+
+  .portal-hero,
+  .overview-card,
+  .week-card,
+  .presentation-dialog-shell {
+    padding: 18px;
+  }
+
+  .timeline-head,
+  .presentation-dialog-head,
+  .presentation-dialog-foot {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .presentation-stage,
+  .slide-card {
+    min-height: 0;
+  }
+}

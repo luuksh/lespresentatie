@@ -3,57 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaarplanning Studio</title>
-  <link rel="stylesheet" href="css/jaarplanning-studio.css?v=20260308-01" />
-  <script type="module" src="js/jaarplanning-studio.js?v=20260308-02"></script>
+  <title>Studio afgeschermd</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
+  <link rel="stylesheet" href="css/internal-shell.css?v=20260309-01" />
 </head>
-<body>
-  <main class="studio-layout">
-    <header class="studio-header">
-      <div>
-        <p class="studio-kicker">Intern Platform</p>
-        <h1>Jaarplanning Studio</h1>
+<body class="internal-shell">
+  <main class="shell-layout">
+    <section class="shell-hero">
+      <p class="shell-kicker">Niet openbaar</p>
+      <h1>De jaarplanningstudio hoort bij de interne omgeving</h1>
+      <p class="shell-intro">
+        Publiceer de studio niet op de openbare leerlingenhost. Zet deze route op een aparte interne host of achter
+        Basic Auth / SSO.
+      </p>
+      <div class="shell-actions">
+        <a class="shell-button shell-button-primary" href="index.html">Terug naar leerlingenomgeving</a>
+        <a class="shell-button shell-button-secondary" href="DEPLOY_SECURITY.md">Deploy-notitie</a>
       </div>
-    </header>
-
-    <section class="studio-grid">
-      <aside class="studio-card studio-sidebar">
-        <h2>Jaarlaag</h2>
-        <label class="field">
-          <span>Jaarlaag</span>
-          <select id="classSelect"></select>
-        </label>
-        <p class="status-line">Alle klassen binnen deze jaarlaag delen dezelfde planning.</p>
-        <div class="btn-row">
-          <button id="saveAllBtn" type="button" class="btn btn-primary">Alles opslaan</button>
-        </div>
-      </aside>
-
-      <section class="studio-card studio-editor">
-        <h2 id="editorTitle">Jaarplanning Raster</h2>
-        <div class="sheet-wrap">
-          <table class="sheet" id="sheetTable">
-            <thead>
-              <tr>
-                <th>Week</th>
-                <th>A Project</th>
-                <th>A Les</th>
-                <th>A Huiswerk</th>
-                <th>B Project</th>
-                <th>B Les</th>
-                <th>B Huiswerk</th>
-                <th>C Project</th>
-                <th>C Les</th>
-                <th>C Huiswerk</th>
-                <th>Items</th>
-                <th>Notitie</th>
-              </tr>
-            </thead>
-            <tbody id="sheetBody"></tbody>
-          </table>
-        </div>
-        <p id="statusLine" class="status-line">Studio laden...</p>
-      </section>
     </section>
   </main>
 </body>

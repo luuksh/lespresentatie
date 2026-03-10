@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klassenplattegrond</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
+  <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
+
+  <link rel="stylesheet" href="css/style.css?v=20260309-01" />
+
+  <script>
+    window.APP_CONFIG = {
+      jaarplanningSourceUrl: 'js/jaarplanning-live-20260308.json',
+      agendaSourceUrl: '',
+      agendaSourceFallbackUrl: 'js/zermelo-agenda-live.json'
+    };
+  </script>
+  <script type="module" src="js/indeling.js?v=20260309-01"></script>
+  <script type="module" src="js/init.js?v=20260308-02"></script>
+</head>
+<body>
+  <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
+    <p class="opdracht-label">Opdracht op bord</p>
+    <div class="opdracht-menu">
+      <select id="opdrachtSelect" aria-label="Kies een opdracht">
+        <option>Lees in je leesboek</option>
+        <option selected>Zoek je plek en pak je spullen</option>
+        <option>Werk aan de opdracht. Klaar? Lees in je leesboek.</option>
+        <option>Overleg in tweetallen</option>
+        <option>Bereid je presentatie voor</option>
+      </select>
+    </div>
+  </section>
+
+  <button id="drawerQuickToggle" class="drawer-quick-toggle" type="button" aria-label="Toon of verberg docentpaneel">
+    Docentpaneel
+  </button>
+
+  <aside class="side-drawer left" aria-label="Docentpaneel">
+    <button class="drawer-handle" aria-label="Open docentpaneel">Docent</button>
+    <div class="drawer-content">
+      <section class="card control-card">
+        <h2 class="panel-title">Sessiebediening</h2>
+        <p class="panel-help">Koppel een plattegrond aan een project. Zodra dat project voor deze klas opent, verschijnt die indeling automatisch.</p>
+
+        <div class="controls-row">
+          <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
+        </div>
+      </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Opgeslagen Plattegronden</h2>
+        <div class="toolbar presets-panel">
+          <select id="savedLayoutSelect" class="presets-select"></select>
+          <div class="btn-group">
+            <button id="btnLayoutLoad" type="button" class="btn btn-secondary">Laden</button>
+            <button id="btnLayoutSave" type="button" class="btn btn-primary">Koppel aan project</button>
+            <button id="btnLayoutDelete" type="button" class="btn btn-danger">Verwijderen</button>
+            <button type="button" class="btn btn-secondary" data-action="group-overview-open">Overzicht</button>
+          </div>
+        </div>
+        <p class="panel-help">Tijdelijke historie bewaart automatische snapshots van de afgelopen 3 uur.</p>
+        <div class="toolbar presets-panel">
+          <select id="recentLayoutSelect" class="presets-select"></select>
+          <div class="btn-group">
+            <button id="btnRecentLayoutLoad" type="button" class="btn btn-secondary">Laad moment</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Jaarplanning Studio</h2>
+        <p class="panel-help">Open de volledige studio in een aparte pagina.</p>
+        <div class="btn-group">
+          <a href="jaarplanning-studio.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Jaarplanning Studio</a>
+          <a href="presentatie-studio.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Open Presentatiestudio</a>
+        </div>
+      </section>
+
+      <section class="card control-card">
+        <h2 class="panel-title">Zermelo live agenda</h2>
+        <p class="panel-help">Plak hier de URL van je live agenda JSON. De app kiest dan automatisch je klas en de les A/B/C voor vandaag.</p>
+        <div class="toolbar jaarplanning-settings">
+          <input
+            id="agendaSourceInput"
+            type="url"
+            class="jaarplanning-source-input"
+            placeholder="https://.../agenda.json"
+            autocomplete="off"
+          />
+          <div class="btn-group">
+            <button id="agendaSourceSave" type="button" class="btn btn-primary">Opslaan</button>
+            <button id="agendaSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+            <button id="agendaImportBtn" type="button" class="btn btn-secondary">Importeer JSON/ICAL</button>
+            <button id="agendaDebugBtn" type="button" class="btn btn-secondary">Toon agenda-debug</button>
+          </div>
+        </div>
+        <input id="agendaImportFile" type="file" accept=".json,application/json,.ics,text/calendar,text/plain" style="display:none;" />
+        <textarea
+          id="agendaDebugOutput"
+          class="jaarplanning-source-input"
+          rows="8"
+          readonly
+          placeholder="Agenda-debug verschijnt hier..."
+          style="margin-top:10px; display:none;"
+        ></textarea>
+        <div class="agenda-preview" id="agendaPreviewPanel">
+          <p id="agendaPreviewMeta" class="agenda-preview-meta">Rooster-preview: nog geen data.</p>
+          <ul id="agendaPreviewList" class="agenda-preview-list">
+            <li>Wacht op agenda-sync...</li>
+          </ul>
+        </div>
+        <div class="agenda-preview" id="nextLessonDayPanel">
+          <p id="nextLessonDayMeta" class="agenda-preview-meta">Eerstvolgende lesdag: nog geen data.</p>
+          <ul id="nextLessonDayLessons" class="agenda-preview-list">
+            <li>Wacht op agenda-sync...</li>
+          </ul>
+          <p class="agenda-preview-meta">Voorbereiden / printen</p>
+          <ul id="nextLessonDayPrep" class="agenda-preview-list">
+            <li>Nog geen voorbereidingen gevonden.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <main class="layout" id="layoutRoot">
+    <div class="board-scaler" id="boardScaler">
+      <section class="plattegrond-frame" id="plattegrondFrame">
+        <div class="plattegrond-flip" id="plattegrondFlip">
+          <div class="plattegrond-side plattegrond-front">
+            <div class="print-meta" id="printMeta"></div>
+
+            <div class="topbar" aria-label="Lesinstellingen">
+              <div class="controls-row controls-row-main">
+                <div class="field">
+                  <span class="label">Indeling</span>
+                  <select id="indelingSelect">
+                    <option value="h216">Busopstelling</option>
+                    <option value="u008">3-3-2</option>
+                    <option value="drievierdrie">3-4-3</option>
+                    <option value="drietallen">Drietallen</option>
+                    <option value="groepjes">Viertallen</option>
+                    <option value="vijftallen">Vijftallen</option>
+                    <option value="presentatievolgorde">Volgorde</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <span class="label">Klas</span>
+                  <select id="klasSelect"></select>
+                </div>
+
+              </div>
+            </div>
+            <section id="presentationNotice" class="presentation-notice" aria-live="polite" hidden></section>
+
+            <div class="grid-wrapper">
+              <div class="bureau-rij">
+                <div class="leraar-bureau">Bureau leraar</div>
+              </div>
+              <div class="grid" id="plattegrond"></div>
+            </div>
+          </div>
+          <section class="plattegrond-side plattegrond-back" aria-label="Presentatie weergave">
+            <header class="presentation-embed-head">
+              <div>
+                <p class="presentation-embed-kicker">Presentatie</p>
+                <h3 id="presentationEmbedTitle" class="presentation-embed-title">Nog geen presentatie geselecteerd</h3>
+              </div>
+              <div class="presentation-embed-actions">
+                <button id="presentationBackBtn" type="button" class="btn btn-secondary presentation-back-btn">Terug naar plattegrond</button>
+              </div>
+            </header>
+            <div id="presentationEmbedWrap" class="presentation-embed-wrap">
+              <div id="presentationInternal" class="presentation-internal" hidden>
+                <div id="presentationInternalStage" class="presentation-internal-stage"></div>
+                <footer class="presentation-internal-footer">
+                  <button id="presentationPrevBtn" type="button" class="btn btn-secondary">Vorige</button>
+                  <span id="presentationSlideCounter" class="presentation-slide-counter">1 / 1</span>
+                  <button id="presentationNextBtn" type="button" class="btn btn-secondary">Volgende</button>
+                </footer>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <aside id="jaarplanningWidget" class="jaarplanning-widget" aria-label="Programma vandaag">
+    <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
+      <div class="jaarplanning-head">
+        <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
+        <button id="jaarplanningRefreshBtn" type="button" class="btn btn-secondary jaarplanning-refresh">Ververs</button>
+      </div>
+      <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Studio laden...</p>
+      <ul id="jaarplanningItems" class="jaarplanning-items">
+        <li>Jaarplanning Studio start...</li>
+      </ul>
+      <p id="jaarplanningLastUpdate" class="jaarplanning-last-update"></p>
+    </section>
+  </aside>
+
+  <aside id="timerDock" class="clock-timer" role="timer" aria-live="polite">
+    <div class="clock-wrap">
+      <div class="clock-face" id="clockFace" aria-label="Live klok met timerlaag">
+        <div class="clock-bezel"></div>
+        <div class="clock-live-progress" id="clockLiveProgress"></div>
+        <div class="clock-progress" id="clockProgress"></div>
+        <div class="clock-dial" id="clockDial"></div>
+        <div class="clock-lesson-marker" id="clockLessonMarker"></div>
+        <div class="clock-live-hand" id="clockLiveHand"></div>
+        <div class="clock-hand" id="clockHand"></div>
+        <div class="clock-hub"></div>
+        <div class="clock-numeral n12">12</div>
+        <div class="clock-numeral n3">3</div>
+        <div class="clock-numeral n6">6</div>
+        <div class="clock-numeral n9">9</div>
+        <div class="clock-digital">
+          <div class="clock-time" id="clockTime">00:00</div>
+          <div class="clock-state" id="clockState"></div>
+        </div>
+      </div>
+      <div class="timer-hotkeys">selecteer op de rand · spatie start/pauze · R/Esc reset</div>
+    </div>
+
+  </aside>
+
+  <style>
+    #timerDock .clock-live-progress {
+      position: absolute;
+      inset: 10px;
+      z-index: 1;
+      border-radius: 50%;
+      background: conic-gradient(rgba(227, 241, 255, 0.52) calc(var(--live-pct, 0) * 1%), rgba(164, 198, 245, 0.03) 0);
+      opacity: 0.52;
+      box-shadow: inset 0 0 0 1px rgba(208, 230, 255, 0.14);
+    }
+
+    #timerDock .clock-progress {
+      z-index: 2;
+      background: conic-gradient(from var(--start-angle, 0deg), rgba(108, 204, 255, 0.97) calc(var(--pct, 0) * 1%), rgba(164, 198, 245, 0.04) 0);
+    }
+
+    #timerDock .clock-live-hand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 4;
+      width: 3px;
+      height: 94px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(232, 246, 255, 0.95) 40%, rgba(157, 217, 255, 0.84) 100%);
+      transform-origin: 50% 88%;
+      transform: translate(-50%, -88%) rotate(var(--live-angle, 0deg));
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.55),
+        0 0 12px rgba(186, 228, 255, 0.62);
+    }
+
+    #timerDock .clock-lesson-marker {
+      z-index: 4;
+    }
+
+    #timerDock .clock-hand {
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    #timerDock .clock-numeral {
+      z-index: 5;
+    }
+
+    #timerDock .clock-digital {
+      z-index: 6;
+    }
+
+    #timerDock .clock-hub {
+      z-index: 7;
+    }
+
+  </style>
+
+  <section id="magisterAssistPanel" class="magister-assist" aria-label="Magister absentiehulp" hidden>
+    <header class="magister-assist-head">
+      <div>
+        <p class="magister-assist-kicker">Magister-hulp</p>
+        <h2 id="magisterAssistTitle" class="magister-assist-title">Klas -</h2>
+      </div>
+      <button id="closeMagisterAssistBtn" type="button" class="magister-assist-close" aria-label="Sluit absentiehulp">
+        ×
+      </button>
+    </header>
+    <div class="magister-assist-meta">
+      <span>Naam</span>
+      <span>AB</span>
+    </div>
+    <div id="magisterAssistRows" class="magister-assist-rows" aria-live="polite"></div>
+    <footer id="magisterAssistCount" class="magister-assist-count">Absent: 0</footer>
+  </section>
+
+  <section id="groupOverviewModal" class="group-overview-modal" aria-label="Groepsoverzicht" hidden>
+    <div class="group-overview-dialog" role="dialog" aria-modal="true" aria-labelledby="groupOverviewTitle">
+      <header class="group-overview-head">
+        <h2 id="groupOverviewTitle" class="group-overview-title">Groepsoverzicht voor ELO</h2>
+      </header>
+      <textarea id="groupOverviewText" class="group-overview-text" readonly></textarea>
+      <div class="group-overview-actions">
+        <button id="btnGroupOverviewCopy" type="button" class="btn btn-primary">Kopiëren</button>
+        <button id="btnGroupOverviewClose" type="button" class="btn btn-secondary">Sluiten</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      const PANEL_ID = 'magisterAssistPanel';
+      const GRID_ID = 'plattegrond';
+      const CARD_SELECTOR = '.tafel';
+      const DATA_PATH = 'js/leerlingen_per_klas.json';
+
+      const panel = document.getElementById(PANEL_ID);
+      const closeBtn = document.getElementById('closeMagisterAssistBtn');
+      const classSel = document.getElementById('klasSelect');
+      const rowsEl = document.getElementById('magisterAssistRows');
+      const countEl = document.getElementById('magisterAssistCount');
+      const titleEl = document.getElementById('magisterAssistTitle');
+
+      const collator = new Intl.Collator('nl-NL', { sensitivity: 'base', numeric: true });
+      let rosterPromise = null;
+      let lastFocus = null;
+      let previousAbsentCount = 0;
+      let dismissedForCurrentLayout = false;
+
+      function normalizeName(value) {
+        return String(value || '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function firstName(value) {
+        const clean = normalizeName(value);
+        if (!clean) return '';
+        return clean.split(' ')[0].toLocaleLowerCase('nl-NL');
+      }
+
+      function sortByFirstName(names = []) {
+        return [...names].sort((a, b) => {
+          const first = collator.compare(firstName(a), firstName(b));
+          if (first !== 0) return first;
+          return collator.compare(a, b);
+        });
+      }
+
+      async function readRoster() {
+        if (!rosterPromise) {
+          rosterPromise = fetch(DATA_PATH, { cache: 'no-cache' })
+            .then((res) => (res.ok ? res.json() : {}))
+            .catch(() => ({}));
+        }
+        return rosterPromise;
+      }
+
+      function currentClass() {
+        return classSel?.value || '';
+      }
+
+      function currentAbsentSet() {
+        return new Set(
+          Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`))
+            .map((el) => normalizeName(el.textContent))
+            .filter((name) => name && name !== '-')
+        );
+      }
+
+      function currentGridNames() {
+        return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}`))
+          .map((el) => normalizeName(el.textContent))
+          .filter((name) => name && name !== '-');
+      }
+
+      function renderRows(names = [], absentSet = new Set()) {
+        if (!rowsEl) return;
+        const previousScroll = rowsEl.scrollTop;
+        if (!names.length) {
+          rowsEl.innerHTML = '<p class="magister-assist-empty">Geen leerlingen gevonden.</p>';
+          if (countEl) countEl.textContent = 'Absent: 0';
+          return;
+        }
+
+        rowsEl.innerHTML = names.map((name) => {
+          const absent = absentSet.has(name);
+          return `
+            <div class="magister-row${absent ? ' is-absent' : ''}">
+              <span class="magister-name">${name}</span>
+              <span class="magister-ab" aria-hidden="true">${absent ? '✓' : ''}</span>
+            </div>
+          `;
+        }).join('');
+
+        const absentCount = names.filter((name) => absentSet.has(name)).length;
+        if (countEl) countEl.textContent = `Absent: ${absentCount}`;
+        rowsEl.scrollTop = previousScroll;
+      }
+
+      async function refreshPanel() {
+        if (!panel || panel.hidden) return;
+
+        const klas = currentClass() || '-';
+        if (titleEl) titleEl.textContent = `Klas ${klas}`;
+
+        const rosterData = await readRoster();
+        const roster = Array.isArray(rosterData?.[klas]) ? rosterData[klas] : [];
+        const fallback = currentGridNames();
+        const names = sortByFirstName((roster.length ? roster : fallback).map(normalizeName).filter(Boolean));
+        renderRows(names, currentAbsentSet());
+      }
+
+      function showPanel() {
+        if (!panel) return;
+        lastFocus = document.activeElement;
+        panel.hidden = false;
+        document.body.classList.add('magister-assist-open');
+        refreshPanel();
+      }
+
+      function hidePanel(markDismissed = false) {
+        if (!panel) return;
+        panel.hidden = true;
+        document.body.classList.remove('magister-assist-open');
+        if (markDismissed) dismissedForCurrentLayout = true;
+        if (markDismissed) {
+          window.dispatchEvent(new CustomEvent('magister-assist:closed', {
+            detail: { returnToStudentView: true }
+          }));
+        }
+        if (lastFocus instanceof HTMLElement) lastFocus.focus();
+      }
+
+      closeBtn?.addEventListener('click', () => hidePanel(true));
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel && !panel.hidden) hidePanel(true);
+      });
+
+      const grid = document.getElementById(GRID_ID);
+      if (grid) {
+        grid.addEventListener('click', (e) => {
+          if (!e.target.closest(CARD_SELECTOR)) return;
+          setTimeout(() => {
+            const absentCount = currentAbsentSet().size;
+            const firstAbsentSelected = previousAbsentCount === 0 && absentCount > 0;
+
+            if (firstAbsentSelected && panel?.hidden && !dismissedForCurrentLayout) showPanel();
+            if (absentCount === 0) hidePanel(false);
+
+            previousAbsentCount = absentCount;
+            refreshPanel();
+          }, 0);
+        });
+
+        const mo = new MutationObserver(() => {
+          // Alleen inhoud bijwerken; openen gebeurt uitsluitend na een echte klik op een tafeltje.
+          refreshPanel();
+        });
+        mo.observe(grid, {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      }
+
+      classSel?.addEventListener('change', () => {
+        dismissedForCurrentLayout = false;
+        previousAbsentCount = 0;
+        hidePanel(false);
+        setTimeout(refreshPanel, 0);
+      });
+
+      window.addEventListener('indeling:rendered', () => {
+        dismissedForCurrentLayout = false;
+        previousAbsentCount = currentAbsentSet().size;
+        hidePanel(false);
+        setTimeout(refreshPanel, 0);
+      });
+
+      // Start altijd verborgen; pas tonen bij eerste absentieactie.
+      hidePanel(false);
+      previousAbsentCount = currentAbsentSet().size;
+      window.addEventListener('pageshow', () => {
+        hidePanel(false);
+        previousAbsentCount = currentAbsentSet().size;
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD_SELECTOR = '.tafel, .seat, .student, .desk-item, .naamkaartje, .kaartje, .student-card, .desk';
+      const roomSel = document.getElementById('indelingSelect');
+      const classSel = document.getElementById('klasSelect');
+
+      function clearUI() {
+        document.querySelectorAll(`#${GRID_ID} ${CARD_SELECTOR}.is-absent`).forEach(el => el.classList.remove('is-absent'));
+      }
+
+      function attachDelegatedClick() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        grid.addEventListener('click', (e) => {
+          const card = e.target.closest(CARD_SELECTOR);
+          if (!card || !grid.contains(card)) return;
+          card.classList.toggle('is-absent');
+        });
+      }
+
+      function watchGridChanges() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+        const mo = new MutationObserver(() => clearUI());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+
+      ['change', 'click', 'input'].forEach(evt => {
+        roomSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+        classSel?.addEventListener(evt, () => setTimeout(clearUI, 0));
+      });
+
+      window.addEventListener('pageshow', () => setTimeout(clearUI, 0));
+
+      const init = () => {
+        attachDelegatedClick();
+        watchGridChanges();
+        setTimeout(clearUI, 0);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const SEAT_SELECTOR = '.tafel';
+      let sourceSeat = null;
+
+      function clearDragState(grid) {
+        if (!grid) return;
+        grid.querySelectorAll(`${SEAT_SELECTOR}.drag-source, ${SEAT_SELECTOR}.drag-target`)
+          .forEach(el => el.classList.remove('drag-source', 'drag-target'));
+      }
+
+      function initDraggableSeats() {
+        document.querySelectorAll(`#${GRID_ID} ${SEAT_SELECTOR}`).forEach(el => {
+          el.draggable = true;
+        });
+      }
+
+      function swapSeats(a, b) {
+        if (!a || !b || a === b) return;
+
+        const aText = a.textContent;
+        const bText = b.textContent;
+
+        const aAbsent = a.classList.contains('is-absent');
+        const bAbsent = b.classList.contains('is-absent');
+
+        a.textContent = bText;
+        b.textContent = aText;
+
+        a.classList.toggle('is-absent', bAbsent);
+        b.classList.toggle('is-absent', aAbsent);
+      }
+
+      function initDnD() {
+        const grid = document.getElementById(GRID_ID);
+        if (!grid) return;
+
+        initDraggableSeats();
+
+        grid.addEventListener('dragstart', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat || !grid.contains(seat)) return;
+
+          sourceSeat = seat;
+          seat.classList.add('drag-source');
+
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', seat.dataset.seatId || '');
+        });
+
+        grid.addEventListener('dragover', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat || !sourceSeat || seat === sourceSeat) return;
+
+          e.preventDefault();
+          seat.classList.add('drag-target');
+          e.dataTransfer.dropEffect = 'move';
+        });
+
+        grid.addEventListener('dragleave', (e) => {
+          const seat = e.target.closest(SEAT_SELECTOR);
+          if (!seat) return;
+          seat.classList.remove('drag-target');
+        });
+
+        grid.addEventListener('drop', (e) => {
+          const targetSeat = e.target.closest(SEAT_SELECTOR);
+          if (!sourceSeat || !targetSeat || sourceSeat === targetSeat) return;
+
+          e.preventDefault();
+          swapSeats(sourceSeat, targetSeat);
+
+          clearDragState(grid);
+          sourceSeat = null;
+        });
+
+        grid.addEventListener('dragend', () => {
+          clearDragState(grid);
+          sourceSeat = null;
+        });
+
+        const mo = new MutationObserver(() => initDraggableSeats());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDnD);
+      } else {
+        initDnD();
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const GRID_ID = 'plattegrond';
+      const CARD = '.tafel';
+      const klasSel = document.getElementById('klasSelect');
+      const statusEl = document.getElementById('save-status');
+      const key = `absenties_${new Date().toISOString().slice(0, 10)}`;
+
+      function nowNL() {
+        return new Intl.DateTimeFormat('nl-NL', {
+          year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+        }).format(new Date());
+      }
+
+      function getAbsentNames() {
+        return Array.from(document.querySelectorAll(`#${GRID_ID} ${CARD}.is-absent`))
+          .map(el => el.innerText.trim())
+          .filter(Boolean);
+      }
+
+      function flash(msg) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.style.opacity = '1';
+        clearTimeout(flash.t);
+        flash.t = setTimeout(() => { statusEl.style.opacity = '0'; }, 2600);
+      }
+
+      function saveSnapshot() {
+        const klas = klasSel?.value || 'onbekend';
+        const names = getAbsentNames();
+        let all = [];
+        try { all = JSON.parse(localStorage.getItem(key)) || []; } catch {}
+
+        const others = all.filter(e => e && e.klas !== klas);
+
+        if (names.length === 0) {
+          localStorage.setItem(key, JSON.stringify(others));
+          flash(`Leeg gemaakt voor ${klas} (${nowNL()})`);
+          return;
+        }
+
+        const entry = { klas, datetime: new Date().toISOString(), names };
+        others.push(entry);
+        localStorage.setItem(key, JSON.stringify(others));
+        flash(`Opgeslagen (${names.length}) voor ${klas} om ${nowNL()}`);
+      }
+
+      document.getElementById('save-absenties-btn')?.addEventListener('click', saveSnapshot);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const container = document.getElementById('plattegrondFrame');
+      const btn = document.getElementById('toggle-view-btn');
+      const LS_KEY = 'mirror_view_enabled';
+      const indelingSel = document.getElementById('indelingSelect');
+      const klasSel = document.getElementById('klasSelect');
+
+      function setMirror(on) {
+        container?.classList.toggle('mirror', on);
+        try { localStorage.setItem(LS_KEY, on ? '1' : '0'); } catch {}
+        if (btn) btn.textContent = on ? 'Leerlingenweergave' : 'Docentweergave (spiegel)';
+      }
+
+      function applyFromStorage() {
+        setMirror(localStorage.getItem(LS_KEY) === '1');
+      }
+
+      function toggleMirror() {
+        setMirror(!container?.classList.contains('mirror'));
+      }
+
+      btn?.addEventListener('click', toggleMirror);
+      indelingSel?.addEventListener('change', () => setMirror(false));
+      klasSel?.addEventListener('change', () => setMirror(false));
+      window.addEventListener('magister-assist:closed', (event) => {
+        if (!event?.detail?.returnToStudentView) return;
+        setMirror(false);
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyFromStorage);
+      } else {
+        applyFromStorage();
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const btnHeaderPrint = document.getElementById('btnPrintLayout');
+      const btnDrawerPrint = document.getElementById('btnPrintLayoutDrawer');
+      const body = document.body;
+      const indelingSel = document.getElementById('indelingSelect');
+      const klasSel = document.getElementById('klasSelect');
+      const printMeta = document.getElementById('printMeta');
+      const quickToggle = document.getElementById('drawerQuickToggle');
+      const boardScaler = document.getElementById('boardScaler');
+      const boardFrame = document.getElementById('plattegrondFrame');
+      const layoutRoot = document.getElementById('layoutRoot');
+      const grid = document.getElementById('plattegrond');
+      const deskRow = document.querySelector('.bureau-rij');
+      const groupLayoutTypes = new Set(['groepjes', 'drietallen', 'vijftallen', 'presentatievolgorde']);
+
+      function nowNL() {
+        return new Intl.DateTimeFormat('nl-NL', {
+          year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+        }).format(new Date());
+      }
+
+      function updateBoardLabels() {
+        const indeling = indelingSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
+        const klas = klasSel?.selectedOptions?.[0]?.textContent?.trim() || '-';
+
+        printMeta.textContent = `Klassenplattegrond · ${klas} · ${indeling} · ${nowNL()}`;
+      }
+
+      function fitBoardToViewport() {
+        if (!boardScaler || !boardFrame || !layoutRoot) return;
+        const activeType = indelingSel?.value || '';
+        const isGroupLayout = groupLayoutTypes.has(activeType);
+        boardFrame.classList.toggle('is-group-layout', isGroupLayout);
+        const top = boardScaler.getBoundingClientRect().top;
+        const maxH = Math.max(320, window.innerHeight - top - 8);
+        const maxW = Math.max(320, layoutRoot.clientWidth - 2);
+        const compact = window.matchMedia('(max-width: 980px)').matches;
+
+        boardFrame.style.transform = 'scale(1)';
+        boardFrame.style.transformOrigin = 'top center';
+
+        if (compact) {
+          boardFrame.style.width = '100%';
+          boardFrame.style.height = 'auto';
+          boardFrame.style.minHeight = '0';
+          boardScaler.style.width = '100%';
+          boardScaler.style.height = 'auto';
+        } else {
+          boardFrame.style.width = '100%';
+          boardFrame.style.height = '100%';
+          boardFrame.style.minHeight = `${maxH}px`;
+          boardScaler.style.width = `${maxW}px`;
+          boardScaler.style.height = `${maxH}px`;
+        }
+
+        if (deskRow && grid) {
+          const rows = Array.from(grid.querySelectorAll('.tafelrij'));
+          let contentWidth = 0;
+
+          if (rows.length) {
+            contentWidth = Math.max(...rows.map((row) => Math.ceil(row.scrollWidth || row.getBoundingClientRect().width || 0)));
+          } else {
+            const children = Array.from(grid.children);
+            if (children.length) {
+              const gridRect = grid.getBoundingClientRect();
+              let minLeft = Number.POSITIVE_INFINITY;
+              let maxRight = Number.NEGATIVE_INFINITY;
+
+              children.forEach((child) => {
+                const rect = child.getBoundingClientRect();
+                if (rect.width <= 0 || rect.height <= 0) return;
+                minLeft = Math.min(minLeft, rect.left - gridRect.left);
+                maxRight = Math.max(maxRight, rect.right - gridRect.left);
+              });
+
+              if (Number.isFinite(minLeft) && Number.isFinite(maxRight) && maxRight > minLeft) {
+                contentWidth = Math.ceil(maxRight - minLeft);
+              }
+            }
+          }
+
+          if (!contentWidth) {
+            contentWidth = Math.ceil(grid.scrollWidth || grid.clientWidth || 0);
+          }
+
+          const targetWidth = Math.max(0, Math.min(contentWidth, grid.clientWidth || contentWidth));
+          deskRow.style.width = targetWidth > 0 ? `${targetWidth}px` : '100%';
+          deskRow.style.maxWidth = '100%';
+          deskRow.style.marginLeft = 'auto';
+          deskRow.style.marginRight = 'auto';
+        }
+      }
+
+      function runPrint() {
+        updateBoardLabels();
+        window.print();
+      }
+
+      function toggleDrawerPin() {
+        body.classList.toggle('drawer-open');
+      }
+
+      btnHeaderPrint?.addEventListener('click', runPrint);
+      btnDrawerPrint?.addEventListener('click', runPrint);
+      quickToggle?.addEventListener('click', toggleDrawerPin);
+
+      indelingSel?.addEventListener('change', () => {
+        updateBoardLabels();
+        setTimeout(fitBoardToViewport, 80);
+      });
+
+      klasSel?.addEventListener('change', () => {
+        updateBoardLabels();
+        setTimeout(fitBoardToViewport, 80);
+      });
+
+      window.addEventListener('resize', fitBoardToViewport);
+
+      document.addEventListener('keydown', (e) => {
+        if ((e.key === 'd' || e.key === 'D')) {
+          toggleDrawerPin();
+        }
+      });
+
+      if (grid) {
+        const mo = new MutationObserver(() => setTimeout(fitBoardToViewport, 30));
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+
+      window.fitBoardToViewport = fitBoardToViewport;
+
+      updateBoardLabels();
+      setTimeout(fitBoardToViewport, 60);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const opdrachtSelect = document.getElementById('opdrachtSelect');
+      if (!opdrachtSelect) return;
+
+      function fitToLongest() {
+        const probe = document.createElement('span');
+        probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:-9999px;';
+        document.body.appendChild(probe);
+
+        const cs = getComputedStyle(opdrachtSelect);
+        probe.style.font = cs.font;
+
+        let longest = '';
+        for (const option of opdrachtSelect.options) {
+          if (option.text.length > longest.length) longest = option.text;
+        }
+
+        probe.textContent = longest;
+        const wrap = opdrachtSelect.closest('.opdracht-menu');
+        const available = wrap ? wrap.clientWidth : window.innerWidth * 0.9;
+        const needed = probe.offsetWidth + 120;
+        opdrachtSelect.style.width = `${Math.min(available, needed)}px`;
+        probe.remove();
+      }
+
+      fitToLongest();
+      window.addEventListener('resize', fitToLongest);
+      opdrachtSelect.addEventListener('change', fitToLongest);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const FULL_CIRCLE_SECONDS = 60 * 60;
+
+      let total = 0;
+      let remaining = 0;
+      let running = false;
+      let intervalId = null;
+      let endAtMs = 0;
+      let latestLiveAngleDeg = 0;
+      let selectionStartDeg = 0;
+      let bellAudioCtx = null;
+
+      const clockFace = document.getElementById('clockFace');
+      const liveProgress = document.getElementById('clockLiveProgress');
+      const progress = document.getElementById('clockProgress');
+      const liveHand = document.getElementById('clockLiveHand');
+      const hand = document.getElementById('clockHand');
+      const lessonMarker = document.getElementById('clockLessonMarker');
+      const timeEl = document.getElementById('clockTime');
+      const stateEl = document.getElementById('clockState');
+      const startBtn = null;
+      const resetBtn = null;
+      const applyBtn = null;
+      const minIn = null;
+      const secIn = null;
+
+      const dial = document.getElementById('clockDial');
+      const timerDock = document.getElementById('timerDock');
+
+      if (!clockFace || !liveProgress || !progress || !liveHand || !hand || !timeEl || !stateEl || !dial) return;
+
+      const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+      function fmtMMSS(seconds) {
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      }
+
+      function getLiveClockAngles(now) {
+        const minuteAngle = ((now.getMinutes() + now.getSeconds() / 60 + now.getMilliseconds() / 60000) / 60) * 360;
+        const hourAngle = (((now.getHours() % 12) + now.getMinutes() / 60 + now.getSeconds() / 3600) / 12) * 360;
+        return { minuteAngle, hourAngle };
+      }
+
+      function syncInputsFrom(value) {
+        const m = Math.floor(value / 60);
+        const s = value % 60;
+        if (minIn) minIn.value = String(m);
+        if (secIn) secIn.value = String(s);
+      }
+
+      function updateDigits() {
+        const shownSeconds = total > 0 || running ? remaining : 0;
+        timeEl.textContent = fmtMMSS(shownSeconds);
+        if (running) {
+          stateEl.textContent = 'Timer bezig';
+        } else if (total === 0) {
+          stateEl.textContent = '';
+        } else if (remaining === 0) {
+          stateEl.textContent = 'Klaar';
+        } else {
+          stateEl.textContent = 'Timer gepauzeerd';
+        }
+      }
+
+      function clearLessonMarker() {
+        if (!lessonMarker) return;
+        lessonMarker.style.opacity = '0';
+        lessonMarker.removeAttribute('title');
+        lessonMarker.dataset.mode = 'none';
+      }
+
+      function setLessonMarkerFromEnd(endDate, mode = 'none') {
+        if (!lessonMarker || !(endDate instanceof Date) || Number.isNaN(endDate.getTime())) {
+          clearLessonMarker();
+          return;
+        }
+        const angle = ((endDate.getMinutes() + endDate.getSeconds() / 60) / 60) * 360;
+        lessonMarker.style.setProperty('--lesson-angle', `${angle.toFixed(4)}deg`);
+        lessonMarker.style.opacity = '1';
+        lessonMarker.dataset.mode = mode;
+        const timeLabel = endDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+        lessonMarker.title = mode === 'current'
+          ? `Einde huidige les: ${timeLabel}`
+          : `Einde volgende les: ${timeLabel}`;
+      }
+
+      function playBell() {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        try {
+          bellAudioCtx = bellAudioCtx || new AudioCtx();
+          if (bellAudioCtx.state === 'suspended') bellAudioCtx.resume();
+          const start = bellAudioCtx.currentTime;
+          const master = bellAudioCtx.createGain();
+          master.gain.value = 0.95;
+          master.connect(bellAudioCtx.destination);
+
+          const strike = (at, strength = 1) => {
+            const end = at + 0.95;
+            const tone = bellAudioCtx.createOscillator();
+            const tone2 = bellAudioCtx.createOscillator();
+            const body = bellAudioCtx.createOscillator();
+            const gain = bellAudioCtx.createGain();
+            tone.type = 'triangle';
+            tone2.type = 'sine';
+            body.type = 'sine';
+            tone.frequency.setValueAtTime(1318.5, at);
+            tone2.frequency.setValueAtTime(1760, at);
+            body.frequency.setValueAtTime(880, at);
+            gain.gain.setValueAtTime(0.0001, at);
+            gain.gain.exponentialRampToValueAtTime(0.19 * strength, at + 0.018);
+            gain.gain.exponentialRampToValueAtTime(0.0001, end);
+            tone.connect(gain);
+            tone2.connect(gain);
+            body.connect(gain);
+            gain.connect(master);
+            tone.start(at);
+            tone2.start(at);
+            body.start(at);
+            tone.stop(end);
+            tone2.stop(end);
+            body.stop(end);
+          };
+
+          strike(start, 1);
+          strike(start + 0.34, 0.74);
+        } catch (err) {
+          // Ignore audio failures (browser policy or unsupported APIs).
+        }
+      }
+
+      function updateLiveClock() {
+        const now = new Date();
+        const { minuteAngle, hourAngle } = getLiveClockAngles(now);
+        const liveDone = minuteAngle / 360;
+        latestLiveAngleDeg = minuteAngle;
+        liveProgress.style.setProperty('--live-pct', (liveDone * 100).toFixed(4));
+        liveHand.style.setProperty('--live-angle', `${latestLiveAngleDeg.toFixed(4)}deg`);
+        hand.style.setProperty('--angle', `${hourAngle.toFixed(4)}deg`);
+        if (!running && total === 0) selectionStartDeg = latestLiveAngleDeg;
+      }
+
+      function updateTimerOverlay() {
+        const selectionDone = total > 0 ? total / FULL_CIRCLE_SECONDS : 0;
+        const runDone = (total - remaining) / FULL_CIRCLE_SECONDS;
+        const done = running ? runDone : selectionDone;
+        progress.style.setProperty('--start-angle', `${selectionStartDeg.toFixed(4)}deg`);
+        progress.style.setProperty('--pct', (done * 100).toFixed(4));
+        clockFace.classList.toggle('done', total > 0 && remaining === 0 && !running);
+      }
+
+      function renderTimer() {
+        updateDigits();
+        updateTimerOverlay();
+      }
+
+      function setByAngle(clientX, clientY) {
+        const rect = clockFace.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+        if (angle < 0) angle += 360;
+        const selectedArc = (angle - selectionStartDeg + 360) % 360;
+        total = clamp(Math.round((selectedArc / 360) * FULL_CIRCLE_SECONDS), 0, FULL_CIRCLE_SECONDS);
+        remaining = total;
+        running = false;
+        clearInterval(intervalId);
+        syncInputsFrom(total);
+        renderTimer();
+      }
+
+      function setFromInputs() {
+        const m = clamp(parseInt(minIn?.value, 10) || 0, 0, 60);
+        const s = clamp(parseInt(secIn?.value, 10) || 0, 0, 59);
+        total = clamp(m * 60 + s, 0, FULL_CIRCLE_SECONDS);
+        remaining = total;
+        running = false;
+        clearInterval(intervalId);
+        if (startBtn) startBtn.textContent = 'Start';
+        renderTimer();
+      }
+
+      function applyPreset(delta) {
+        const next = clamp(remaining + delta, 0, FULL_CIRCLE_SECONDS);
+        remaining = next;
+        total = running ? total : next;
+        if (running) endAtMs = Date.now() + remaining * 1000;
+        syncInputsFrom(!running ? total : remaining);
+        renderTimer();
+      }
+
+      function tick() {
+        if (!running) return;
+        remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
+        if (remaining === 0) {
+          clearInterval(intervalId);
+          running = false;
+          if (startBtn) startBtn.textContent = 'Start';
+          playBell();
+          if (navigator.vibrate) navigator.vibrate([180, 90, 180]);
+          total = 0;
+          remaining = 0;
+          selectionStartDeg = latestLiveAngleDeg;
+          syncInputsFrom(0);
+          renderTimer();
+          return;
+        }
+        renderTimer();
+      }
+
+      function start() {
+        if (total <= 0) return;
+        if (remaining <= 0) remaining = total;
+        running = true;
+        endAtMs = Date.now() + remaining * 1000;
+        if (startBtn) startBtn.textContent = 'Pauze';
+        clearInterval(intervalId);
+        intervalId = setInterval(tick, 200);
+        tick();
+      }
+
+      function pause() {
+        if (!running) return;
+        remaining = clamp(Math.ceil((endAtMs - Date.now()) / 1000), 0, total);
+        running = false;
+        clearInterval(intervalId);
+        if (startBtn) startBtn.textContent = 'Start';
+        renderTimer();
+      }
+
+      function reset() {
+        running = false;
+        clearInterval(intervalId);
+        total = 0;
+        remaining = 0;
+        selectionStartDeg = latestLiveAngleDeg;
+        if (startBtn) startBtn.textContent = 'Start';
+        syncInputsFrom(0);
+        renderTimer();
+      }
+
+      startBtn?.addEventListener('click', () => (running ? pause() : start()));
+      resetBtn?.addEventListener('click', reset);
+      applyBtn?.addEventListener('click', setFromInputs);
+
+      document.addEventListener('keydown', (e) => {
+        const activeTag = document.activeElement?.tagName;
+        if (activeTag === 'INPUT' || document.activeElement?.isContentEditable) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          running ? pause() : start();
+        }
+        const plainR = e.code === 'KeyR' && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey;
+        if (plainR || e.code === 'Escape') {
+          e.preventDefault();
+          reset();
+        }
+      });
+
+      for (let i = 0; i < 60; i++) {
+        const tickEl = document.createElement('div');
+        tickEl.className = `clock-tick${i % 5 === 0 ? ' big' : ''}`;
+        tickEl.style.setProperty('--tick-rot', `${i * 6}deg`);
+        dial.appendChild(tickEl);
+      }
+
+      let interactionMode = null;
+      let dragOffsetX = 0;
+      let dragOffsetY = 0;
+
+      function isNearClockEdge(clientX, clientY) {
+        const rect = clockFace.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        const dist = Math.hypot(dx, dy);
+        const radius = Math.min(rect.width, rect.height) / 2;
+        const edgeBand = 18;
+        return dist >= radius - edgeBand && dist <= radius + 10;
+      }
+
+      function isInScrubBand(clientX, clientY) {
+        const rect = clockFace.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        const dist = Math.hypot(dx, dy);
+        const radius = Math.min(rect.width, rect.height) / 2;
+        return dist >= radius - 42 && dist <= radius - 8;
+      }
+
+      function moveDock(clientX, clientY) {
+        if (!timerDock) return;
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const dockRect = timerDock.getBoundingClientRect();
+        const maxLeft = Math.max(0, vw - dockRect.width);
+        const maxTop = Math.max(0, vh - dockRect.height);
+        const left = clamp(clientX - dragOffsetX, 0, maxLeft);
+        const top = clamp(clientY - dragOffsetY, 0, maxTop);
+        timerDock.style.left = `${left}px`;
+        timerDock.style.top = `${top}px`;
+      }
+
+      function setEdgeCursor(clientX, clientY) {
+        if (interactionMode) return;
+        clockFace.classList.toggle('edge-draggable', isNearClockEdge(clientX, clientY));
+      }
+
+      const stopInteraction = () => {
+        interactionMode = null;
+        clockFace.classList.remove('dragging-dock');
+      };
+
+      clockFace.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        clockFace.setPointerCapture(e.pointerId);
+
+        const canDragDock = timerDock && getComputedStyle(timerDock).position === 'fixed';
+        if (canDragDock && isNearClockEdge(e.clientX, e.clientY)) {
+          interactionMode = 'dock-drag';
+          const dockRect = timerDock.getBoundingClientRect();
+          timerDock.style.right = 'auto';
+          timerDock.style.bottom = 'auto';
+          timerDock.style.left = `${dockRect.left}px`;
+          timerDock.style.top = `${dockRect.top}px`;
+          dragOffsetX = e.clientX - dockRect.left;
+          dragOffsetY = e.clientY - dockRect.top;
+          clockFace.classList.add('dragging-dock');
+          moveDock(e.clientX, e.clientY);
+          return;
+        }
+
+        if (!isInScrubBand(e.clientX, e.clientY)) return;
+
+        interactionMode = 'scrub';
+        pause();
+        selectionStartDeg = latestLiveAngleDeg;
+        setByAngle(e.clientX, e.clientY);
+      });
+      clockFace.addEventListener('pointermove', (e) => {
+        if (interactionMode === 'dock-drag') {
+          moveDock(e.clientX, e.clientY);
+          return;
+        }
+        if (interactionMode !== 'scrub') {
+          setEdgeCursor(e.clientX, e.clientY);
+          return;
+        }
+        setByAngle(e.clientX, e.clientY);
+      });
+      clockFace.addEventListener('pointerup', stopInteraction);
+      clockFace.addEventListener('pointercancel', stopInteraction);
+      clockFace.addEventListener('pointerleave', () => {
+        if (!interactionMode) clockFace.classList.remove('edge-draggable');
+      });
+
+      window.addEventListener('agenda:clock-marker-update', (event) => {
+        const detail = event?.detail || {};
+        const endIso = String(detail.end || '').trim();
+        const mode = String(detail.mode || 'none');
+        if (!endIso || mode === 'none') {
+          clearLessonMarker();
+          return;
+        }
+        const endDate = new Date(endIso);
+        setLessonMarkerFromEnd(endDate, mode);
+      });
+
+      renderTimer();
+      updateLiveClock();
+      setInterval(updateLiveClock, 250);
+    })();
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => window.fitBoardToViewport?.(), 100);
+    });
+  </script>
+</body>
+</html>
