@@ -169,11 +169,12 @@ body {
 }
 
 .shell-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 }
 
 .shell-card {
-  flex: 1 1 320px;
   padding: 24px;
 }
 
@@ -197,6 +198,10 @@ body {
   .shell-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .shell-grid {
+    grid-template-columns: 1fr;
   }
 
   .shell-hero {

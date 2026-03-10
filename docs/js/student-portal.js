@@ -12,11 +12,13 @@ const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
 const itemsSummary = document.getElementById('itemsSummary');
 const weeksGrid = document.getElementById('weeksGrid');
+const weekJumpBar = document.getElementById('weekJumpBar');
 const heroWeekValue = document.getElementById('heroWeekValue');
 const heroPresentationCount = document.getElementById('heroPresentationCount');
 const heroHomeworkCount = document.getElementById('heroHomeworkCount');
 const presentationDialog = document.getElementById('presentationDialog');
 const dialogTitle = document.getElementById('dialogTitle');
+const dialogMeta = document.getElementById('dialogMeta');
 const dialogStage = document.getElementById('dialogStage');
 const dialogPrev = document.getElementById('dialogPrev');
 const dialogNext = document.getElementById('dialogNext');
@@ -28,6 +30,7 @@ const state = {
   currentLayer: '',
   currentWeek: currentIsoWeek(),
   activePresentation: null,
+  activePresentationTarget: null,
   activeSlideIndex: 0,
 };
 
@@ -216,8 +219,14 @@ function openPresentation(target) {
   const resolved = resolvePresentation(target);
   if (!resolved.presentation) return;
   state.activePresentation = resolved.presentation;
+  state.activePresentationTarget = target;
   state.activeSlideIndex = resolved.slideIndex;
   dialogTitle.textContent = target.project ? `${target.project} · ${target.title}` : target.title;
+  if (dialogMeta) {
+    dialogMeta.textContent = target.project
+      ? `${target.project} · start op lesonderdeel`
+      : 'Start op lesonderdeel';
+  }
   renderPresentationSlide();
   if (!presentationDialog.open) presentationDialog.showModal();
 }
@@ -239,6 +248,12 @@ function renderPresentationSlide() {
   const title = String(slide.title || presentation.title || 'Presentatie').trim();
   const subtitle = String(slide.subtitle || presentation.subtitle || presentation.project || '').trim();
   const bullets = Array.isArray(slide.items) ? slide.items.filter(Boolean) : [];
+  if (dialogMeta) {
+    const targetTitle = String(state.activePresentationTarget?.title || '').trim();
+    dialogMeta.textContent = targetTitle
+      ? `${targetTitle} · slide ${index + 1} van ${slides.length}`
+      : `Slide ${index + 1} van ${slides.length}`;
+  }
 
   dialogStage.innerHTML = `
     <article class="slide-card">
@@ -299,6 +314,7 @@ function renderCurrentWeek(layerEntries) {
 function renderWeeks() {
   const entries = getEntriesForLayer(state.currentLayer);
   weeksGrid.replaceChildren();
+  weekJumpBar?.replaceChildren();
 
   if (!entries.length) {
     weeksGrid.innerHTML = '<article class="empty-state">Voor deze jaarlaag zijn nog geen weken gevuld.</article>';
@@ -348,6 +364,15 @@ function renderWeeks() {
     `;
 
     weeksGrid.appendChild(article);
+
+    const jumpButton = document.createElement('button');
+    jumpButton.type = 'button';
+    jumpButton.className = `week-jump-chip${week === state.currentWeek ? ' is-current' : ''}`;
+    jumpButton.textContent = `W${String(week).padStart(2, '0')}`;
+    jumpButton.addEventListener('click', () => {
+      article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    weekJumpBar?.appendChild(jumpButton);
   }
 
   for (const button of weeksGrid.querySelectorAll('[data-presentation]')) {
@@ -431,6 +456,7 @@ dialogNext?.addEventListener('click', () => {
 
 presentationDialog?.addEventListener('close', () => {
   state.activePresentation = null;
+  state.activePresentationTarget = null;
   state.activeSlideIndex = 0;
 });
 
