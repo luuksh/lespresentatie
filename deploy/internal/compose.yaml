@@ -1,0 +1,22 @@
+services:
+  internal-site:
+    build:
+      context: ../..
+      dockerfile: deploy/internal/Dockerfile
+    container_name: klassenplattegrond-internal
+    restart: unless-stopped
+    environment:
+      INTERNAL_HOST: ${INTERNAL_HOST}
+      BASIC_AUTH_USER: ${BASIC_AUTH_USER}
+      BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../../dist/internal:/srv/site:ro
+      - internal_caddy_data:/data
+      - internal_caddy_config:/config
+
+volumes:
+  internal_caddy_data:
+  internal_caddy_config:

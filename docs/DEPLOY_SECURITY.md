@@ -2,8 +2,8 @@
 
 Gebruik twee omgevingen:
 
-- Publiek: publiceer alleen `docs/` als leerlingenplatform. De makkelijke route is de root-URL van die site en de extra korte alias `/l/`.
-- Intern: host de rootversie van deze map apart achter echte authenticatie, bijvoorbeeld Basic Auth of SSO op `intern.<jouwdomein>` of een afgeschermd pad.
+- Publiek: publiceer alleen `docs/` of `dist/public` als leerlingenplatform.
+- Intern: publiceer alleen `dist/internal` achter echte server-authenticatie.
 
 Waarom:
 

@@ -1,0 +1,17 @@
+{$INTERNAL_HOST} {
+  encode zstd gzip
+  root * /srv/site
+
+  basic_auth {
+    {$BASIC_AUTH_USER} {$BASIC_AUTH_HASH}
+  }
+
+  header {
+    X-Frame-Options "SAMEORIGIN"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
+
+  try_files {path} {path}/ /index.html
+  file_server
+}
