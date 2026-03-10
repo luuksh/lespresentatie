@@ -11,12 +11,11 @@ mkdir -p "$PUBLIC_DIR" "$INTERNAL_DIR"
 
 public_items=(
   "index.html"
+  "leerlingen.html"
   "favicon.svg"
   "DEPLOY_SECURITY.md"
   "l"
-  "intern"
   "css/student-portal.css"
-  "css/internal-shell.css"
   "js/student-portal.js"
   "js/jaarplanning-live.json"
   "js/jaarplanning-live-20260308.json"
