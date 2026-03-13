@@ -7,6 +7,13 @@ PID_FILE="/tmp/klassenplattegrond-local.pid"
 LOG_FILE="/tmp/klassenplattegrond-local.log"
 URL="http://127.0.0.1:${PORT}/index.html"
 
+if [[ -n "${ZERMELO_ICAL_URL:-}" ]]; then
+  echo "Zermelo-agenda verversen..."
+  if ! (cd "$ROOT_DIR" && python3 scripts/sync_zermelo_agenda.py); then
+    echo "Waarschuwing: Zermelo-sync mislukt; bestaande lokale agenda-feed blijft staan." >&2
+  fi
+fi
+
 if command -v lsof >/dev/null 2>&1 && lsof -iTCP:"${PORT}" -sTCP:LISTEN >/dev/null 2>&1; then
   open "$URL"
   echo "Lokale docentomgeving draait al op $URL"

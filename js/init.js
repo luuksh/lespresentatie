@@ -1415,6 +1415,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }).format(date);
   }
 
+  function hasAgendaConnection() {
+    return Boolean(agendaSourceUrl || agendaLastResolvedSource || agendaEntries.length);
+  }
+
+  function agendaCoversDate(date = new Date()) {
+    if (!agendaEntries.length) return false;
+    return agendaEntries.some((entry) => isSameLocalDay(entry.start, date));
+  }
+
   function setPlanningStatus(message, state = 'info', options = {}) {
     if (!planningStatusEl) return;
     planningStatusEl.dataset.state = state;
@@ -1782,12 +1791,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderPlanning() {
     if (!planningItemsEl || !planningWeekLabelEl) return;
     const now = new Date();
+    const agendaConnected = hasAgendaConnection();
+    const agendaHasTodayEntry = agendaCoversDate(now);
     const isActiveLessonNow = Boolean(
       activeAgendaEntry
       && now >= activeAgendaEntry.start
       && now <= activeAgendaEntry.end
     );
-    const planAnchorDate = (agendaSourceUrl && activeAgendaEntry?.start)
+    const planAnchorDate = (agendaConnected && activeAgendaEntry?.start)
       ? activeAgendaEntry.start
       : now;
     const weekInfo = currentWeekCandidates(planAnchorDate);
@@ -1795,7 +1806,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nextLessonTime = (!isActiveLessonNow && activeAgendaEntry?.start && activeAgendaEntry?.end)
       ? `${activeAgendaEntry.start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}-${activeAgendaEntry.end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`
       : '';
-    const title = (agendaSourceUrl && activeAgendaEntry && !isActiveLessonNow)
+    const title = (agendaConnected && activeAgendaEntry && !isActiveLessonNow)
       ? `Programma volgende les${nextLessonTime ? ` (${nextLessonTime})` : ''}`
       : 'Programma vandaag';
     planningWeekLabelEl.textContent = `${title} · ${week.label}`;
@@ -1830,7 +1841,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       )
       : null;
 
-    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, Boolean(agendaSourceUrl));
+    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, agendaConnected);
     const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
 
@@ -1855,15 +1866,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       const agendaStamp = agendaFetchedAt ? `Agenda sync: ${formatSyncTime(agendaFetchedAt)}` : '';
       planningLastUpdateEl.textContent = [syncStamp, sourceStamp, agendaStamp].filter(Boolean).join(' · ');
     }
-    const hasAgendaConnection = Boolean(agendaSourceUrl || agendaLastResolvedSource);
-    if (hasAgendaConnection && activeAgendaEntry) {
+    if (agendaConnected && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
       if (room) {
         setPlanningStatus('', 'ok', { room });
       } else {
         setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
       }
-    } else if (hasAgendaConnection) {
+    } else if (agendaConnected && !agendaHasTodayEntry) {
+      setPlanningStatus('Zermelo-feed is verouderd of bevat geen lessen voor vandaag', 'warn');
+    } else if (agendaConnected) {
       setPlanningStatus('Live gekoppeld · Agenda gevonden, maar geen lesmatch voor vandaag', 'warn');
     } else {
       setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
