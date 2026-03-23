@@ -248,7 +248,7 @@ body::before {
 .portal-overview {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   align-items: start;
 }
@@ -276,9 +276,9 @@ body::before {
 
 .overview-card-homework {
   grid-column: 1 / -1;
-  max-width: 860px;
+  max-width: 960px;
   justify-self: center;
-  width: min(100%, 860px);
+  width: min(100%, 960px);
 }
 
 .overview-card-homework .stack-item,
@@ -291,15 +291,57 @@ body::before {
 }
 
 .overview-card-current {
-  max-width: 860px;
-  justify-self: center;
-  width: min(100%, 860px);
+  display: none;
 }
 
 .overview-card h2 {
   margin: 0 0 8px;
   font-size: 1.9rem;
   letter-spacing: -0.03em;
+}
+
+.overview-card-compact {
+  padding: 18px 20px;
+}
+
+.overview-kpi {
+  margin: 6px 0 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--portal-muted-strong);
+}
+
+.next-lesson-panel {
+  margin-top: 18px;
+}
+
+.next-lesson-card {
+  border: 1px solid var(--portal-line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 251, 249, 0.97));
+  backdrop-filter: blur(18px);
+  box-shadow: var(--portal-shadow);
+  border-radius: var(--portal-radius-xl);
+  padding: 28px;
+}
+
+.next-lesson-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.next-lesson-homework {
+  margin-top: 18px;
+}
+
+.next-lesson-homework .stack-item {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.next-lesson-link {
+  margin-top: 14px;
 }
 
 .focus-band {
@@ -360,6 +402,28 @@ body::before {
 .timeline-help {
   max-width: 30ch;
   text-align: right;
+}
+
+.timeline-details {
+  margin-top: 32px;
+}
+
+.timeline-summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(17, 32, 51, 0.1);
+  box-shadow: var(--portal-shadow-sm);
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--portal-primary-deep);
+}
+
+.timeline-details[open] .timeline-summary {
+  margin-bottom: 12px;
 }
 
 .week-jump-bar {
@@ -534,6 +598,13 @@ body::before {
   border: 1px solid rgba(17, 32, 51, 0.12);
 }
 
+.portal-button:disabled {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
 .presentation-dialog {
   width: min(1040px, calc(100vw - 24px));
   border: none;
@@ -645,7 +716,8 @@ body::before {
 
 @media (max-width: 980px) {
   .portal-masthead,
-  .timeline-head {
+  .timeline-head,
+  .next-lesson-head {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -675,6 +747,7 @@ body::before {
 
   .portal-hero,
   .overview-card,
+  .next-lesson-card,
   .week-card,
   .presentation-dialog-shell,
   .slide-card {

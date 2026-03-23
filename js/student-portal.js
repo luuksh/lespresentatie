@@ -6,13 +6,17 @@ const CURRENT_CLASS_KEY = 'student.portal.class';
 
 const classSelect = document.getElementById('classSelect');
 const jumpToCurrentWeekBtn = document.getElementById('jumpToCurrentWeekBtn');
+const openNextPresentationBtn = document.getElementById('openNextPresentationBtn');
 const portalMeta = document.getElementById('portalMeta');
 const currentWeekTitle = document.getElementById('currentWeekTitle');
 const currentWeekSummary = document.getElementById('currentWeekSummary');
 const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
+const currentWeekChip = document.getElementById('currentWeekChip');
+const presentationStatus = document.getElementById('presentationStatus');
 const weeksGrid = document.getElementById('weeksGrid');
 const weekJumpBar = document.getElementById('weekJumpBar');
+const timelineDetails = document.getElementById('timelineDetails');
 const heroWeekValue = document.getElementById('heroWeekValue');
 const heroPresentationCount = document.getElementById('heroPresentationCount');
 const heroHomeworkCount = document.getElementById('heroHomeworkCount');
@@ -33,6 +37,7 @@ const state = {
   activePresentation: null,
   activePresentationTarget: null,
   activeSlideIndex: 0,
+  nextLessonTarget: null,
 };
 
 function normalizeClassId(raw) {
@@ -285,7 +290,17 @@ function findNextLessonForClass(classId, now = new Date()) {
   const lessonIndex = lessonNumberForAgendaWeek(state.agendaEntries, nextAgendaEntry);
   const lessonKey = lessonLetter(Math.min(3, lessonIndex));
   const lesson = (entry.lessons || []).find((candidate) => String(candidate.lessonKey || '').toUpperCase() === lessonKey) || null;
-  return lesson ? { entry, lesson, lessonKey, date: nextAgendaEntry.start } : null;
+  if (!lesson) return null;
+  const target = buildPresentationTarget(lesson);
+  const resolved = resolvePresentation(target);
+  return {
+    entry,
+    lesson,
+    lessonKey,
+    date: nextAgendaEntry.start,
+    target,
+    hasPresentation: Boolean(resolved.presentation),
+  };
 }
 
 function escapeHtml(value) {
@@ -426,12 +441,16 @@ function renderPresentationSlide() {
 function renderCurrentWeek(layerEntries) {
   const currentEntry = getEntryForWeek(state.currentClass, state.currentWeek) || layerEntries[0] || null;
   const nextLesson = findNextLessonForClass(state.currentClass, new Date());
+  state.nextLessonTarget = nextLesson?.hasPresentation ? nextLesson.target : null;
+  if (openNextPresentationBtn) openNextPresentationBtn.disabled = !state.nextLessonTarget;
   if (!currentEntry) {
     currentWeekTitle.textContent = 'Nog geen planning';
     currentWeekSummary.textContent = 'Voor deze klas staat nog geen planning klaar.';
-    if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen focuspunt beschikbaar';
-    if (heroWeekValue) heroWeekValue.textContent = 'Week --';
-    if (heroPresentationCount) heroPresentationCount.textContent = '0';
+    if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen les';
+    if (currentWeekChip) currentWeekChip.textContent = 'Week --';
+    if (presentationStatus) presentationStatus.textContent = 'Geen presentatie';
+    if (heroWeekValue) heroWeekValue.textContent = 'Nog onbekend';
+    if (heroPresentationCount) heroPresentationCount.textContent = '-';
     if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
     renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk voor de eerstvolgende les.');
     return;
@@ -439,24 +458,25 @@ function renderCurrentWeek(layerEntries) {
 
   const week = parseWeek(currentEntry.week);
   const homeworkCount = nextLesson && String(nextLesson.lesson.homework || '').trim() ? 1 : 0;
-  const presentationCount = (currentEntry.lessons || []).filter((lesson) => resolvePresentation(buildPresentationTarget(lesson)).presentation).length;
-  currentWeekTitle.textContent = `Week ${String(week).padStart(2, '0')}`;
   const lessonCount = Array.isArray(currentEntry.lessons) ? currentEntry.lessons.length : 0;
-  currentWeekSummary.textContent = lessonCount
-    ? `${lessonCount} lesmomenten gepland voor klas ${state.currentClass}.`
-    : `Geen vaste lesmomenten ingepland voor klas ${state.currentClass}.`;
-  if (currentWeekFocus) {
-    currentWeekFocus.textContent = nextLesson
-      ? `Eerstvolgende les: ${formatLessonDate(nextLesson.date)}`
-      : 'Nog geen eerstvolgende les gevonden';
-  }
-  if (heroWeekValue) heroWeekValue.textContent = `Week ${String(week).padStart(2, '0')}`;
-  if (heroPresentationCount) heroPresentationCount.textContent = String(presentationCount);
+  currentWeekTitle.textContent = nextLesson
+    ? `${nextLesson.lesson.project || 'Les'}${nextLesson.lesson.lesson ? ` · ${nextLesson.lesson.lesson}` : ''}`
+    : 'Nog geen eerstvolgende les gevonden';
+  currentWeekSummary.textContent = nextLesson
+    ? `${formatLessonDate(nextLesson.date)} · klas ${state.currentClass} · les ${nextLesson.lessonKey}`
+    : (lessonCount
+      ? `Er staan ${lessonCount} lesmomenten in week ${String(week).padStart(2, '0')}, maar er is geen komende Zermelo-les gevonden voor klas ${state.currentClass}.`
+      : `Geen vaste lesmomenten ingepland voor klas ${state.currentClass}.`);
+  if (currentWeekFocus) currentWeekFocus.textContent = nextLesson ? 'Klaar voor de volgende les' : 'Geen komende les in rooster';
+  if (currentWeekChip) currentWeekChip.textContent = `Week ${String(week).padStart(2, '0')}`;
+  if (presentationStatus) presentationStatus.textContent = nextLesson?.hasPresentation ? 'Direct te openen' : 'Nog geen presentatie gekoppeld';
+  if (heroWeekValue) heroWeekValue.textContent = nextLesson ? formatLessonDate(nextLesson.date) : 'Nog onbekend';
+  if (heroPresentationCount) heroPresentationCount.textContent = nextLesson?.hasPresentation ? 'Klaar' : '-';
   if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
 
   const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
     ? [
-      `<strong>${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</strong><span>${richTextToHtml(nextLesson.lesson.homework)}</span>`,
+      `<strong>${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</strong><span>${richTextToHtml(nextLesson.lesson.homework)}</span>${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open deze presentatie</button>' : ''}`,
     ]
     : [];
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
@@ -532,9 +552,10 @@ function renderWeeks() {
 function renderPortal() {
   const entries = getEntriesForClass(state.currentClass);
   const updatedAt = String(state.doc.updatedAt || '').trim();
+  const agendaStamp = state.agendaEntries.length ? 'rooster gekoppeld' : 'rooster niet geladen';
   portalMeta.textContent = updatedAt
-    ? `Bijgewerkt op ${new Intl.DateTimeFormat('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(updatedAt))}`
-    : 'Planning zonder datumstempel';
+    ? `Bijgewerkt op ${new Intl.DateTimeFormat('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(updatedAt))} · ${agendaStamp}`
+    : `Planning zonder datumstempel · ${agendaStamp}`;
   renderCurrentWeek(entries);
   renderWeeks();
 }
@@ -593,7 +614,13 @@ classSelect?.addEventListener('change', () => {
 });
 
 jumpToCurrentWeekBtn?.addEventListener('click', () => {
+  if (timelineDetails) timelineDetails.open = true;
   document.getElementById(`week-${state.currentWeek}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+openNextPresentationBtn?.addEventListener('click', () => {
+  if (!state.nextLessonTarget) return;
+  openPresentation(state.nextLessonTarget);
 });
 
 dialogPrev?.addEventListener('click', () => {
@@ -622,6 +649,12 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault();
     stepActivePresentation(1);
   }
+});
+
+document.addEventListener('click', (event) => {
+  const button = event.target instanceof Element ? event.target.closest('[data-next-presentation]') : null;
+  if (!button || !state.nextLessonTarget) return;
+  openPresentation(state.nextLessonTarget);
 });
 
 boot();
