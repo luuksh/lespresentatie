@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T08:56:22+01:00",
+  "updatedAt": "2026-03-23T09:42:15+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -30,10 +30,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -47,24 +47,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -76,24 +76,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -105,10 +105,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -131,10 +131,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -166,10 +166,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -801,10 +801,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -818,24 +818,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -847,24 +847,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -876,10 +876,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -902,10 +902,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -937,10 +937,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -1572,10 +1572,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -1589,24 +1589,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -1618,24 +1618,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -1647,10 +1647,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -1673,10 +1673,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -1708,10 +1708,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -2343,10 +2343,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -2360,24 +2360,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -2389,24 +2389,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -2418,10 +2418,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -2444,10 +2444,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -2479,10 +2479,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -3114,10 +3114,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -3131,24 +3131,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -3160,24 +3160,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -3189,10 +3189,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -3215,10 +3215,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -3250,10 +3250,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -3885,10 +3885,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -3902,24 +3902,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -3931,24 +3931,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -3960,10 +3960,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -3986,10 +3986,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -4021,10 +4021,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -4656,10 +4656,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         }
       ],
       "items": [
@@ -4673,24 +4673,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         }
       ],
       "items": [],
@@ -4702,24 +4702,24 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 1 - Welkom in Taaltopia",
+          "lesson": "Les 1 - Naam, wereld en doelgroep",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-1-welkom-in-taaltopia"
+          "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 2 - De basis van jullie taal",
+          "lesson": "Les 2 - Klanken en schrift",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-2-de-basis-van-jullie-taal"
+          "presentationMarkerId": "marker-les-2-klanken-en-schrift"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 3 - Woorden en grammatica",
+          "lesson": "Les 3 - Woorden en betekenissen",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-3-woorden-en-grammatica"
+          "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         }
       ],
       "items": [],
@@ -4731,10 +4731,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 4 - Afronden en feedback",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-4-afronden-en-feedback"
+          "presentationMarkerId": "marker-les-4-grammaticaregels"
         },
         {
           "project": "Spiegeldicht",
@@ -4757,10 +4757,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Presentaties voorbereiden",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-presentaties-voorbereiden"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
           "project": "Spiegeldicht",
@@ -4792,10 +4792,10 @@
       "lessons": [
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Presenteren en reflecteren",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "A",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-presenteren-en-reflecteren"
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
         },
         {
           "project": "Spiegeldicht",
@@ -16661,7 +16661,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-03-23T08:56:22+01:00",
+  "sourceRevision": "2026-03-23T09:42:15+01:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
@@ -27020,44 +27020,35 @@
       "title": "Taaltopia",
       "subtitle": "Taaltopia",
       "project": "Taaltopia",
-      "importVersion": 2026031001,
+      "importVersion": 2026032302,
       "markerDecks": {
-        "marker-les-1-welkom-in-taaltopia": [
+        "marker-les-1-naam-wereld-en-doelgroep": [
           {
             "type": "title",
-            "title": "Les 1 - Welkom in Taaltopia",
+            "title": "Les 1 - Naam, wereld en doelgroep",
             "subtitle": ""
           },
           {
             "type": "bullets",
-            "title": "Jullie maken geen A4 of talkshow meer, maar een grote poster over een zelfbedachte taal.",
+            "title": "Taaltopia in 6 vakken",
             "subtitle": "",
             "items": [
-              "Brugklasproject: veel doen, weinig thuis",
-              "De startles op 19 maart is meteen een echte werksessie: jullie zetten naam, taalwereld en eerste klanken direct op.",
-              "Alles wat echt nodig is, maken jullie in de les",
-              "De poster krijgt verschillende vaste onderdelen, zodat iedereen iets kan bijdragen"
+              "Jullie poster krijgt precies 6 duidelijke vakken: elk vak hoort bij 1 les.",
+              "Zo werk je stap voor stap: niet alles tegelijk, maar elke les 1 onderdeel echt goed.",
+              "Aan het einde heb je dus 6 gevulde vakken en een complete taalposter."
             ]
           },
           {
             "type": "bullets",
-            "title": "Zo ziet het eindproduct eruit",
+            "title": "De 6 vakken op de poster",
             "subtitle": "",
             "items": [
-              "Eén verzorgde poster per groep",
-              "Met minstens deze onderdelen: naam van de taal, doelgroep/wereld, klanken, woordenlijst, grammaticaregels, voorbeeldgesprek en een creatief extra onderdeel",
-              "De poster moet informatief én aantrekkelijk zijn: tekst, kleur, kaders, tekeningen en voorbeelden"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Afspraken over werken",
-            "subtitle": "",
-            "items": [
-              "In de les geen laptop: die blijft in je tas",
-              "Je werkt op papier: schetsen, notities, proefversies en poster",
-              "Thuis mag je hooguit iets kleins voorbereiden: een printje, een plaatje, een boek of een kort voorbeeld meenemen",
-              "Huiswerk blijft minimaal"
+              "1. Naam, wereld en doelgroep",
+              "2. Klanken en schrift",
+              "3. Woorden en betekenissen",
+              "4. Grammaticaregels",
+              "5. Voorbeeldgesprek",
+              "6. Creatief extra en presentatiehoek"
             ]
           },
           {
@@ -27065,299 +27056,334 @@
             "title": "Startactiviteit",
             "subtitle": "",
             "items": [
-              "Bedenk individueel 3 verzonnen woorden en laat ze geheimzinnig klinken",
-              "Denk bijvoorbeeld aan woorden voor hallo, gevaar, eten, vriend, schaduw, vuur, koning of weggaan",
-              "Speel met klanken zoals ka, zo, vra, nii, thal, moro of zjen om een sfeer te maken",
-              "Bespreek daarna klassikaal: wanneer klinkt iets als een echte taal?",
-              "Let op klank, herhaling, betekenis en sfeer"
+              "Bedenk individueel 3 verzonnen woorden die bij een duidelijke sfeer passen.",
+              "Denk bijvoorbeeld aan woorden voor hallo, gevaar, eten, vriend, schaduw, vuur, koning of weggaan.",
+              "Voorbeeldklanken: ka, zo, vra, nii, thal, moro, zjen, luma, drai, oesh.",
+              "Vraag jezelf af: klinkt jouw taal hard, zacht, vrolijk, geheimzinnig, oud of buitenaards?",
+              "Bespreek klassikaal welke woorden meteen als een echte taal voelen en waarom."
             ]
           },
           {
             "type": "bullets",
-            "title": "Vandaag aan de slag",
+            "title": "Vandaag maak je vak 1",
             "subtitle": "",
             "items": [
-              "Ga daarna verder in je vaste groepje: voor wie is jullie taal bedoeld?",
-              "Denk aan een volk, wereld, spel, film, boek of fantasiewezens",
-              "Maak alvast een ruwe indeling van de poster op kladpapier"
-            ]
-          }
-        ],
-        "marker-les-2-de-basis-van-jullie-taal": [
-          {
-            "type": "title",
-            "title": "Les 2 - De basis van jullie taal",
-            "subtitle": ""
-          },
-          {
-            "type": "bullets",
-            "title": "Doel van vandaag",
-            "subtitle": "",
-            "items": [
-              "De basis van jullie taal en poster vastleggen",
-              "Je bepaalt onderwerp, sfeer en opbouw",
-              "Aan het einde van de les ligt er een duidelijke posterschets"
+              "Werk in je vaste groepje en kies: wie spreken deze taal en in wat voor wereld leven zij?",
+              "Denk aan voorbeelden zoals: mistjagers in een wolkenstad, onderwaterhandelaren, paleiswachters, woestijnnomaden of ruimtepiloten.",
+              "Bedenk een taalnaam die daarbij past, zoals Vareen, Solka, Thirai, Moru of Zavana.",
+              "Schrijf in vak 1 kort op: naam van de taal, wie haar spreken, waar je die taal hoort en waarvoor je haar gebruikt."
             ]
           },
           {
             "type": "bullets",
-            "title": "Vaste posteronderdelen",
+            "title": "Rijk voorbeeld voor vak 1",
             "subtitle": "",
             "items": [
-              "1. Naam van de taal",
-              "2. Wie spreken de taal en waar?",
-              "3. Hoe klinkt de taal?",
-              "4. Eerste ideeën voor woorden en regels",
-              "5. Creatief onderdeel: symbool, alfabet, landkaartje, stripje of tekening"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Bronnen zonder laptop",
-            "subtitle": "",
-            "items": [
-              "Gebruik je schrift, wat de docent uitdeelt en wat je al weet",
-              "Wie thuis iets heeft meegenomen, gebruikt dat als extra bron",
-              "Denk aan een boek, een geprint plaatje of een korte zelfgemaakte notitie",
-              "Je hoeft thuis niets digitaals te doen om verder te kunnen"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Groepswerk",
-            "subtitle": "",
-            "items": [
-              "Verdeel in je groepje de taken slim: schrijver, tekenaar, taaldenker, bewaker van overzicht",
-              "Iedereen helpt mee aan de inhoud",
-              "Maak een nette kladschets van de poster: waar komt elk onderdeel?"
-            ]
-          },
-          {
-            "type": "title",
-            "title": "Eind van de les",
-            "subtitle": ""
-          }
-        ],
-        "marker-les-3-woorden-en-grammatica": [
-          {
-            "type": "title",
-            "title": "Les 3 - Woorden en grammatica",
-            "subtitle": ""
-          },
-          {
-            "type": "bullets",
-            "title": "Vandaag krijgt jullie taal echt inhoud.",
-            "subtitle": "",
-            "items": [
-              "Je vult de inhoud van de poster verder",
-              "De woorden en regels moeten logisch passen bij jullie taalwereld",
-              "Werk vooral concreet: voorbeelden helpen het meest"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Woordenlijst",
-            "subtitle": "",
-            "items": [
-              "Bedenk minstens 8 tot 12 woorden",
-              "Neem woorden zoals: hallo, ik, jij, eten, vriend, boos, gevaar, weggaan",
-              "Schrijf steeds de betekenis erbij",
-              "Als je wilt, voeg je uitspraak of klankhulp toe"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Grammatica in het klein",
-            "subtitle": "",
-            "items": [
-              "Kies 2 of 3 duidelijke regels",
-              "Denk aan woordvolgorde, meervoud, werkwoorden of vragen stellen",
-              "Houd het simpel en uitlegbaar voor brugklassers",
-              "Zet bij elke regel een voorbeeld"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Voorbeeldgesprek",
-            "subtitle": "",
-            "items": [
-              "Schrijf samen een kort gesprekje van 4 tot 6 regels",
-              "Zet de vertaling eronder of ernaast",
-              "Gebruik woorden uit jullie woordenlijst",
-              "Dit gesprek komt later zichtbaar op de poster"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Tussendoel",
-            "subtitle": "",
-            "items": [
-              "Aan het einde van de les zijn woordenlijst, regels en gesprek grotendeels klaar",
-              "Wat nog mist, noteer je op het kladplan voor les 4"
+              "Taalnaam: Vareen",
+              "Wereld: een drijvende stad boven dikke mist",
+              "Sprekers: wachters, luchtvaarders en handelaren",
+              "Doel: snel waarschuwen, routes doorgeven en rituelen begeleiden",
+              "Sfeerwoorden: scherp, kort, dreigend, geheimzinnig"
             ]
           }
         ],
-        "marker-les-4-afronden-en-feedback": [
+        "marker-les-2-klanken-en-schrift": [
           {
             "type": "title",
-            "title": "Les 4 - Poster bouwen en feedback",
+            "title": "Les 2 - Klanken en schrift",
             "subtitle": ""
           },
           {
             "type": "bullets",
-            "title": "Doel van vandaag",
+            "title": "Vandaag maak je vak 2",
             "subtitle": "",
             "items": [
-              "Van losse inhoud naar een echte poster",
-              "Je zet onderdelen netjes over of bouwt ze verder uit op het definitieve vel",
-              "Halverwege vraag je feedback aan een ander groepje"
+              "Vak 2 laat horen en zien hoe jullie taal klinkt.",
+              "Je kiest klanken, uitspraakhulp en een simpel schrift of tekensysteem.",
+              "Aan het einde van de les moet iemand jullie taal al een beetje kunnen uitspreken."
             ]
           },
           {
             "type": "bullets",
-            "title": "Checklist voor de poster",
+            "title": "Klanken kiezen",
             "subtitle": "",
             "items": [
-              "Titel van de taal duidelijk zichtbaar",
-              "Minstens 5 inhoudelijke onderdelen op de poster",
-              "Tekst leesbaar en logisch verdeeld",
-              "Kleur, kaders en beeld ondersteunen de inhoud",
-              "Geen grote lappen tekst zonder indeling"
+              "Kies 3 tot 5 klankkenmerken: veel s-klanken, veel lange klinkers, veel harde k-klanken, rollende r, of juist veel oe/aa/ei.",
+              "Voorbeeld: een oorlogstaal klinkt misschien kort en hard: trak, kor, zrak.",
+              "Voorbeeld: een droomtaal klinkt misschien vloeiend en zacht: liora, meinu, saila.",
+              "Schrijf bij vak 2 steeds wat voor effect die klanken hebben."
             ]
           },
           {
             "type": "bullets",
-            "title": "Feedbackronde",
+            "title": "Schrift en tekens",
             "subtitle": "",
             "items": [
-              "Ruil halverwege met een ander groepje",
-              "Kijk naar duidelijkheid, netheid en originaliteit",
-              "Geef elkaar 1 tip en 1 top",
-              "Verwerk de bruikbaarste feedback meteen"
+              "Maak een klein alfabet, 5 tot 8 tekens, of een herkenbare schrijfmanier.",
+              "Voorbeelden: alleen hoekige tekens, juist ronde lussen, stippen boven klinkers, of dubbele strepen voor belangrijke woorden.",
+              "Je hoeft geen heel alfabet te maken: een mini-systeem is genoeg zolang het herkenbaar is.",
+              "Zet minstens 3 voorbeeldwoorden ook in jullie eigen schrift."
             ]
           },
           {
             "type": "bullets",
-            "title": "Als je thuis iets wilt doen",
+            "title": "Voorbeeld voor vak 2",
             "subtitle": "",
             "items": [
-              "Alleen klein voorbereidingswerk mag",
-              "Bijvoorbeeld: een afbeelding printen, een boek meenemen of een detail thuis opzoeken",
-              "Dat is niet verplicht",
-              "De poster zelf maak je in principe in de les"
+              "Vareen gebruikt veel vr, aa en kh: vraak, khaa, navor.",
+              "Belangrijke woorden krijgen een streep eronder.",
+              "Lange klinkers schrijf je dubbel: aa, oo, ii.",
+              "Waarschuwingswoorden eindigen vaak op -k of -r."
             ]
           },
           {
             "type": "bullets",
-            "title": "Aan het einde van de les",
+            "title": "Checklist vak 2",
             "subtitle": "",
             "items": [
-              "Jullie poster is zichtbaar in opbouw",
-              "De belangrijkste teksten staan erop of liggen klaar om opgeplakt te worden"
+              "Minstens 3 duidelijke klankafspraken",
+              "Minstens 3 woorden met uitspraakhulp",
+              "Een klein schrift- of tekensysteem",
+              "Alles netjes in 1 afgebakend vak op de poster"
             ]
           }
         ],
-        "marker-les-5-presentaties-voorbereiden": [
+        "marker-les-3-woorden-en-betekenissen": [
           {
             "type": "title",
-            "title": "Les 5 - Poster afmaken",
+            "title": "Les 3 - Woorden en betekenissen",
             "subtitle": ""
           },
           {
             "type": "bullets",
-            "title": "Doelen vandaag",
+            "title": "Vandaag maak je vak 3",
             "subtitle": "",
             "items": [
-              "Poster afronden",
-              "Laatste verbeteringen aanbrengen",
-              "Een korte posterpitch voorbereiden van ongeveer 1 minuut"
+              "Vak 3 wordt jullie woordenvak: hier verzamel je woorden die echt bij jullie wereld passen.",
+              "Je maakt niet zomaar losse woorden, maar woorden die passen bij beroep, plaats, sfeer en gewoontes van jullie sprekers.",
+              "Denk dus vanuit de wereld van de taal."
             ]
           },
           {
             "type": "bullets",
-            "title": "Laatste controle",
+            "title": "Welke woorden heb je nodig?",
             "subtitle": "",
             "items": [
-              "Staan alle verplichte onderdelen erop?",
-              "Is de poster van een afstand leesbaar?",
-              "Klopt spelling zo goed mogelijk?",
-              "Kan iemand uit een andere groep meteen begrijpen hoe jullie taal werkt?"
+              "Neem gewone basiswoorden zoals: ik, jij, eten, vriend, komen, gaan, gevaar, mooi.",
+              "Voeg wereldwoorden toe die juist bij jullie taal horen, zoals mistbrug, luchtboot, kristalvuur, zanddier of maanmarkt.",
+              "Maak een mix van makkelijke en bijzondere woorden.",
+              "Zet steeds de Nederlandse betekenis erbij."
             ]
           },
           {
             "type": "bullets",
-            "title": "Posterpitch",
+            "title": "Zo maak je rijke voorbeelden",
             "subtitle": "",
             "items": [
-              "Vertel straks kort: wie spreekt deze taal, hoe klinkt zij en wat maakt haar bijzonder?",
-              "Laat minstens één woord, regel of zinnetje horen",
-              "Iedereen levert een kleine bijdrage aan het praatje",
-              "Je hoeft geen uitgebreide presentatie uit je hoofd te leren"
+              "Werk met woordfamilies: als navor gids betekent, kan navora gidsen betekenen en navorek routekaart.",
+              "Laat woorden op elkaar lijken als ze bij elkaar horen.",
+              "Gebruik klanken uit les 2, zodat alles één geheel blijft klinken."
             ]
           },
           {
             "type": "bullets",
-            "title": "Werk zonder laptop",
+            "title": "Voorbeeldwoordenboek",
             "subtitle": "",
             "items": [
-              "Ook vandaag blijft de laptop in de tas",
-              "Gebruik papier, stiften, schaar, lijm en meegebracht materiaal",
-              "Als er iets geprint is, plak je het alleen in of gebruik je het als bron"
+              "vraa = let op",
+              "navor = gids",
+              "thalin = mistbrug",
+              "moru = vriend of bondgenoot",
+              "khaarek = verboden route",
+              "luma = veilig licht"
             ]
           },
           {
-            "type": "title",
-            "title": "Laatste 10 minuten",
-            "subtitle": ""
+            "type": "bullets",
+            "title": "Checklist vak 3",
+            "subtitle": "",
+            "items": [
+              "Minstens 10 woorden",
+              "Bij elk woord een betekenis",
+              "Minstens 2 woorden die echt bij jullie fantasiewereld horen",
+              "Nette indeling: bijvoorbeeld in een lijst, tabel of kleine woordkaartjes"
+            ]
           }
         ],
-        "marker-les-6-presenteren-en-reflecteren": [
+        "marker-les-4-grammaticaregels": [
           {
             "type": "title",
-            "title": "Les 6 - Posterpresentaties en reflectie",
+            "title": "Les 4 - Grammaticaregels",
             "subtitle": ""
           },
           {
             "type": "bullets",
-            "title": "Vandaag sluiten we Taaltopia af met een posterfestival in de klas.",
+            "title": "Vandaag maak je vak 4",
             "subtitle": "",
             "items": [
-              "Groepen laten hun poster zien",
-              "Jullie lopen langs, luisteren en stellen vragen",
-              "Daarna blik je kort terug op wat je geleerd hebt"
+              "Vak 4 laat zien hoe zinnen in jullie taal werken.",
+              "Kies 2 tot 4 duidelijke regels.",
+              "Houd het simpel: liever 3 sterke regels dan 8 vage regels."
             ]
           },
           {
             "type": "bullets",
-            "title": "Tijdens de posterpresentaties",
+            "title": "Handige soorten regels",
             "subtitle": "",
             "items": [
-              "Elke groep krijgt kort de tijd om de poster toe te lichten",
-              "Vertel niet alles: kies de opvallendste onderdelen",
-              "Laat bijvoorbeeld een woord, regel of stukje gesprek horen",
-              "Publiek noteert iets dat sterk of origineel is"
+              "Woordvolgorde: zeg je ik ga huis of huis ga ik?",
+              "Werkwoorden: krijgen die een extra uitgang?",
+              "Vragen: komt er een vraagwoord vooraan of juist achteraan?",
+              "Meervoud: komt er -en, -ar, -um of iets anders achter?",
+              "Ontkenning: hoe zeg je niet of nooit?"
             ]
           },
           {
             "type": "bullets",
-            "title": "Waar letten we op?",
+            "title": "Rijke voorbeeldregels",
             "subtitle": "",
             "items": [
-              "Inhoud: is de taal duidelijk uitgewerkt?",
-              "Vorm: is de poster overzichtelijk en verzorgd?",
-              "Samenwerking: heeft iedereen zichtbaar bijgedragen?",
-              "Creativiteit: voelt deze taal echt als een eigen wereld?"
+              "In Vareen staat het werkwoord vaak vooraan: Gaat navor thalin.",
+              "Een waarschuwing krijgt het voorvoegsel kha-: khaarek = verboden route.",
+              "Meervoud eindigt op -im: moru = vriend, moruim = vrienden.",
+              "Vragen eindigen op -sa: Navor sa? = Is er een gids?"
             ]
           },
           {
             "type": "bullets",
-            "title": "Korte reflectie",
+            "title": "Zo noteer je vak 4",
             "subtitle": "",
             "items": [
-              "Wat heb je geleerd over taal?",
-              "Wat ging goed in jullie samenwerking?",
-              "Welk onderdeel van jullie poster vind je het sterkst?",
-              "Wat zou je een volgende keer slimmer aanpakken?"
+              "Schrijf elke regel kort op.",
+              "Zet er direct een voorbeeldzin onder.",
+              "Gebruik woorden uit vak 3, zodat de poster echt samenhang krijgt.",
+              "Maak het visueel: nummer de regels of zet ze in kaders."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Checklist vak 4",
+            "subtitle": "",
+            "items": [
+              "2 tot 4 duidelijke regels",
+              "Bij elke regel minstens 1 voorbeeld",
+              "Regels passen bij de sfeer en klanken van de taal",
+              "Een buitenstaander kan snappen hoe je basiszinnen maakt"
+            ]
+          }
+        ],
+        "marker-les-5-voorbeeldgesprek": [
+          {
+            "type": "title",
+            "title": "Les 5 - Voorbeeldgesprek",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag maak je vak 5",
+            "subtitle": "",
+            "items": [
+              "Vak 5 wordt jullie voorbeeldgesprek.",
+              "Daarmee laat je zien dat de taal echt bruikbaar is en niet alleen uit losse woorden bestaat.",
+              "Gebruik dus woorden uit vak 3 en regels uit vak 4."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat voor gesprek past?",
+            "subtitle": "",
+            "items": [
+              "Een ontmoeting bij de stadspoort",
+              "Een waarschuwing voor gevaar",
+              "Een koopgesprek op de markt",
+              "Een korte begroeting tussen bondgenoten",
+              "Een instructie aan een leerling of reiziger"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Rijk voorbeeldgesprek",
+            "subtitle": "",
+            "items": [
+              "A: Vraa, moru? = Hé, vriend?",
+              "B: Vraa. Navor sa? = Hé. Is er een gids?",
+              "A: Navor thalin. Khaarek! = De gids gaat naar de mistbrug. Verboden route!",
+              "B: Luma, moru. = Dank, vriend / veilig licht, vriend."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Zo bouw je vak 5 op",
+            "subtitle": "",
+            "items": [
+              "Schrijf 4 tot 6 regels dialoog.",
+              "Zet eronder of ernaast de Nederlandse vertaling.",
+              "Markeer minstens 3 woorden die terugkomen uit vak 3.",
+              "Laat minstens 1 grammaticale regel uit vak 4 zichtbaar terugkomen."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Checklist vak 5",
+            "subtitle": "",
+            "items": [
+              "Een compleet mini-gesprek",
+              "Vertaling erbij",
+              "Woorden en regels uit eerdere vakken zichtbaar gebruikt",
+              "Net genoeg tekst om te lezen, niet te veel om het vak vol te proppen"
+            ]
+          }
+        ],
+        "marker-les-6-creatief-extra-en-presenteren": [
+          {
+            "type": "title",
+            "title": "Les 6 - Creatief extra en presenteren",
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag maak je vak 6",
+            "subtitle": "",
+            "items": [
+              "Vak 6 is jullie creatieve extra en presentatiehoek.",
+              "Hier laat je iets zien dat de taalwereld nog sterker maakt.",
+              "Daarna maak je de poster af en bereid je een korte toelichting voor."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Ideeën voor vak 6",
+            "subtitle": "",
+            "items": [
+              "Een symbool, vlag of zegel van het volk",
+              "Een mini-kaart van het gebied waar de taal gesproken wordt",
+              "Een ranglijst van beleefde en onbeleefde woorden",
+              "Een spreekspreuk, motto, liedregel of ritueel zinnetje",
+              "Een korte legenda: wanneer gebruik je deze taal en wanneer juist niet?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Laatste postercheck: 6 vakken",
+            "subtitle": "",
+            "items": [
+              "1. Naam, wereld en doelgroep",
+              "2. Klanken en schrift",
+              "3. Woorden en betekenissen",
+              "4. Grammaticaregels",
+              "5. Voorbeeldgesprek",
+              "6. Creatief extra en presentatiehoek"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Mini-presentatie voorbereiden",
+            "subtitle": "",
+            "items": [
+              "Elke groep vertelt straks in ongeveer 1 minuut wat de taal bijzonder maakt.",
+              "Laat minstens 1 woord hardop horen, 1 regel zien en 1 creatief detail uitleggen.",
+              "Verdeel het praatje over meerdere groepsleden.",
+              "Je hoeft geen hele spreekbeurt te houden: kort, duidelijk en trots is genoeg."
             ]
           },
           {
@@ -27365,9 +27391,9 @@
             "title": "Tot slot",
             "subtitle": "",
             "items": [
-              "Jullie hebben een taal ontworpen en uitgelegd zonder laptop in de les",
-              "Bijna alles is in de les gemaakt",
-              "Dat is precies de bedoeling van Taaltopia"
+              "Jullie poster is nu opgebouwd uit 6 duidelijke vakken.",
+              "Elke les heeft dus zichtbaar iets opgeleverd.",
+              "Dat maakt de taal overzichtelijker, rijker en makkelijker te presenteren."
             ]
           }
         ]
@@ -27380,39 +27406,30 @@
         },
         {
           "type": "title",
-          "title": "Les 1 - Welkom in Taaltopia",
+          "title": "Les 1 - Naam, wereld en doelgroep",
           "subtitle": ""
         },
         {
           "type": "bullets",
-          "title": "Jullie maken geen A4 of talkshow meer, maar een grote poster over een zelfbedachte taal.",
+          "title": "Taaltopia in 6 vakken",
           "subtitle": "",
           "items": [
-            "Brugklasproject: veel doen, weinig thuis",
-            "De startles op 19 maart is meteen een echte werksessie: jullie zetten naam, taalwereld en eerste klanken direct op.",
-            "Alles wat echt nodig is, maken jullie in de les",
-            "De poster krijgt verschillende vaste onderdelen, zodat iedereen iets kan bijdragen"
+            "Jullie poster krijgt precies 6 duidelijke vakken: elk vak hoort bij 1 les.",
+            "Zo werk je stap voor stap: niet alles tegelijk, maar elke les 1 onderdeel echt goed.",
+            "Aan het einde heb je dus 6 gevulde vakken en een complete taalposter."
           ]
         },
         {
           "type": "bullets",
-          "title": "Zo ziet het eindproduct eruit",
+          "title": "De 6 vakken op de poster",
           "subtitle": "",
           "items": [
-            "Eén verzorgde poster per groep",
-            "Met minstens deze onderdelen: naam van de taal, doelgroep/wereld, klanken, woordenlijst, grammaticaregels, voorbeeldgesprek en een creatief extra onderdeel",
-            "De poster moet informatief én aantrekkelijk zijn: tekst, kleur, kaders, tekeningen en voorbeelden"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Afspraken over werken",
-          "subtitle": "",
-          "items": [
-            "In de les geen laptop: die blijft in je tas",
-            "Je werkt op papier: schetsen, notities, proefversies en poster",
-            "Thuis mag je hooguit iets kleins voorbereiden: een printje, een plaatje, een boek of een kort voorbeeld meenemen",
-            "Huiswerk blijft minimaal"
+            "1. Naam, wereld en doelgroep",
+            "2. Klanken en schrift",
+            "3. Woorden en betekenissen",
+            "4. Grammaticaregels",
+            "5. Voorbeeldgesprek",
+            "6. Creatief extra en presentatiehoek"
           ]
         },
         {
@@ -27420,289 +27437,324 @@
           "title": "Startactiviteit",
           "subtitle": "",
           "items": [
-            "Bedenk individueel 3 verzonnen woorden en laat ze geheimzinnig klinken",
-            "Denk bijvoorbeeld aan woorden voor hallo, gevaar, eten, vriend, schaduw, vuur, koning of weggaan",
-            "Speel met klanken zoals ka, zo, vra, nii, thal, moro of zjen om een sfeer te maken",
-            "Bespreek daarna klassikaal: wanneer klinkt iets als een echte taal?",
-            "Let op klank, herhaling, betekenis en sfeer"
+            "Bedenk individueel 3 verzonnen woorden die bij een duidelijke sfeer passen.",
+            "Denk bijvoorbeeld aan woorden voor hallo, gevaar, eten, vriend, schaduw, vuur, koning of weggaan.",
+            "Voorbeeldklanken: ka, zo, vra, nii, thal, moro, zjen, luma, drai, oesh.",
+            "Vraag jezelf af: klinkt jouw taal hard, zacht, vrolijk, geheimzinnig, oud of buitenaards?",
+            "Bespreek klassikaal welke woorden meteen als een echte taal voelen en waarom."
           ]
         },
         {
           "type": "bullets",
-          "title": "Vandaag aan de slag",
+          "title": "Vandaag maak je vak 1",
           "subtitle": "",
           "items": [
-            "Ga daarna verder in je vaste groepje: voor wie is jullie taal bedoeld?",
-            "Denk aan een volk, wereld, spel, film, boek of fantasiewezens",
-            "Maak alvast een ruwe indeling van de poster op kladpapier"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Les 2 - De basis van jullie taal",
-          "subtitle": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Doel van vandaag",
-          "subtitle": "",
-          "items": [
-            "De basis van jullie taal en poster vastleggen",
-            "Je bepaalt onderwerp, sfeer en opbouw",
-            "Aan het einde van de les ligt er een duidelijke posterschets"
+            "Werk in je vaste groepje en kies: wie spreken deze taal en in wat voor wereld leven zij?",
+            "Denk aan voorbeelden zoals: mistjagers in een wolkenstad, onderwaterhandelaren, paleiswachters, woestijnnomaden of ruimtepiloten.",
+            "Bedenk een taalnaam die daarbij past, zoals Vareen, Solka, Thirai, Moru of Zavana.",
+            "Schrijf in vak 1 kort op: naam van de taal, wie haar spreken, waar je die taal hoort en waarvoor je haar gebruikt."
           ]
         },
         {
           "type": "bullets",
-          "title": "Vaste posteronderdelen",
+          "title": "Rijk voorbeeld voor vak 1",
           "subtitle": "",
           "items": [
-            "1. Naam van de taal",
-            "2. Wie spreken de taal en waar?",
-            "3. Hoe klinkt de taal?",
-            "4. Eerste ideeën voor woorden en regels",
-            "5. Creatief onderdeel: symbool, alfabet, landkaartje, stripje of tekening"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Bronnen zonder laptop",
-          "subtitle": "",
-          "items": [
-            "Gebruik je schrift, wat de docent uitdeelt en wat je al weet",
-            "Wie thuis iets heeft meegenomen, gebruikt dat als extra bron",
-            "Denk aan een boek, een geprint plaatje of een korte zelfgemaakte notitie",
-            "Je hoeft thuis niets digitaals te doen om verder te kunnen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Groepswerk",
-          "subtitle": "",
-          "items": [
-            "Verdeel in je groepje de taken slim: schrijver, tekenaar, taaldenker, bewaker van overzicht",
-            "Iedereen helpt mee aan de inhoud",
-            "Maak een nette kladschets van de poster: waar komt elk onderdeel?"
+            "Taalnaam: Vareen",
+            "Wereld: een drijvende stad boven dikke mist",
+            "Sprekers: wachters, luchtvaarders en handelaren",
+            "Doel: snel waarschuwen, routes doorgeven en rituelen begeleiden",
+            "Sfeerwoorden: scherp, kort, dreigend, geheimzinnig"
           ]
         },
         {
           "type": "title",
-          "title": "Eind van de les",
-          "subtitle": ""
-        },
-        {
-          "type": "title",
-          "title": "Les 3 - Woorden en grammatica",
+          "title": "Les 2 - Klanken en schrift",
           "subtitle": ""
         },
         {
           "type": "bullets",
-          "title": "Vandaag krijgt jullie taal echt inhoud.",
+          "title": "Vandaag maak je vak 2",
           "subtitle": "",
           "items": [
-            "Je vult de inhoud van de poster verder",
-            "De woorden en regels moeten logisch passen bij jullie taalwereld",
-            "Werk vooral concreet: voorbeelden helpen het meest"
+            "Vak 2 laat horen en zien hoe jullie taal klinkt.",
+            "Je kiest klanken, uitspraakhulp en een simpel schrift of tekensysteem.",
+            "Aan het einde van de les moet iemand jullie taal al een beetje kunnen uitspreken."
           ]
         },
         {
           "type": "bullets",
-          "title": "Woordenlijst",
+          "title": "Klanken kiezen",
           "subtitle": "",
           "items": [
-            "Bedenk minstens 8 tot 12 woorden",
-            "Neem woorden zoals: hallo, ik, jij, eten, vriend, boos, gevaar, weggaan",
-            "Schrijf steeds de betekenis erbij",
-            "Als je wilt, voeg je uitspraak of klankhulp toe"
+            "Kies 3 tot 5 klankkenmerken: veel s-klanken, veel lange klinkers, veel harde k-klanken, rollende r, of juist veel oe/aa/ei.",
+            "Voorbeeld: een oorlogstaal klinkt misschien kort en hard: trak, kor, zrak.",
+            "Voorbeeld: een droomtaal klinkt misschien vloeiend en zacht: liora, meinu, saila.",
+            "Schrijf bij vak 2 steeds wat voor effect die klanken hebben."
           ]
         },
         {
           "type": "bullets",
-          "title": "Grammatica in het klein",
+          "title": "Schrift en tekens",
           "subtitle": "",
           "items": [
-            "Kies 2 of 3 duidelijke regels",
-            "Denk aan woordvolgorde, meervoud, werkwoorden of vragen stellen",
-            "Houd het simpel en uitlegbaar voor brugklassers",
-            "Zet bij elke regel een voorbeeld"
+            "Maak een klein alfabet, 5 tot 8 tekens, of een herkenbare schrijfmanier.",
+            "Voorbeelden: alleen hoekige tekens, juist ronde lussen, stippen boven klinkers, of dubbele strepen voor belangrijke woorden.",
+            "Je hoeft geen heel alfabet te maken: een mini-systeem is genoeg zolang het herkenbaar is.",
+            "Zet minstens 3 voorbeeldwoorden ook in jullie eigen schrift."
           ]
         },
         {
           "type": "bullets",
-          "title": "Voorbeeldgesprek",
+          "title": "Voorbeeld voor vak 2",
           "subtitle": "",
           "items": [
-            "Schrijf samen een kort gesprekje van 4 tot 6 regels",
-            "Zet de vertaling eronder of ernaast",
-            "Gebruik woorden uit jullie woordenlijst",
-            "Dit gesprek komt later zichtbaar op de poster"
+            "Vareen gebruikt veel vr, aa en kh: vraak, khaa, navor.",
+            "Belangrijke woorden krijgen een streep eronder.",
+            "Lange klinkers schrijf je dubbel: aa, oo, ii.",
+            "Waarschuwingswoorden eindigen vaak op -k of -r."
           ]
         },
         {
           "type": "bullets",
-          "title": "Tussendoel",
+          "title": "Checklist vak 2",
           "subtitle": "",
           "items": [
-            "Aan het einde van de les zijn woordenlijst, regels en gesprek grotendeels klaar",
-            "Wat nog mist, noteer je op het kladplan voor les 4"
+            "Minstens 3 duidelijke klankafspraken",
+            "Minstens 3 woorden met uitspraakhulp",
+            "Een klein schrift- of tekensysteem",
+            "Alles netjes in 1 afgebakend vak op de poster"
           ]
         },
         {
           "type": "title",
-          "title": "Les 4 - Poster bouwen en feedback",
+          "title": "Les 3 - Woorden en betekenissen",
           "subtitle": ""
         },
         {
           "type": "bullets",
-          "title": "Doel van vandaag",
+          "title": "Vandaag maak je vak 3",
           "subtitle": "",
           "items": [
-            "Van losse inhoud naar een echte poster",
-            "Je zet onderdelen netjes over of bouwt ze verder uit op het definitieve vel",
-            "Halverwege vraag je feedback aan een ander groepje"
+            "Vak 3 wordt jullie woordenvak: hier verzamel je woorden die echt bij jullie wereld passen.",
+            "Je maakt niet zomaar losse woorden, maar woorden die passen bij beroep, plaats, sfeer en gewoontes van jullie sprekers.",
+            "Denk dus vanuit de wereld van de taal."
           ]
         },
         {
           "type": "bullets",
-          "title": "Checklist voor de poster",
+          "title": "Welke woorden heb je nodig?",
           "subtitle": "",
           "items": [
-            "Titel van de taal duidelijk zichtbaar",
-            "Minstens 5 inhoudelijke onderdelen op de poster",
-            "Tekst leesbaar en logisch verdeeld",
-            "Kleur, kaders en beeld ondersteunen de inhoud",
-            "Geen grote lappen tekst zonder indeling"
+            "Neem gewone basiswoorden zoals: ik, jij, eten, vriend, komen, gaan, gevaar, mooi.",
+            "Voeg wereldwoorden toe die juist bij jullie taal horen, zoals mistbrug, luchtboot, kristalvuur, zanddier of maanmarkt.",
+            "Maak een mix van makkelijke en bijzondere woorden.",
+            "Zet steeds de Nederlandse betekenis erbij."
           ]
         },
         {
           "type": "bullets",
-          "title": "Feedbackronde",
+          "title": "Zo maak je rijke voorbeelden",
           "subtitle": "",
           "items": [
-            "Ruil halverwege met een ander groepje",
-            "Kijk naar duidelijkheid, netheid en originaliteit",
-            "Geef elkaar 1 tip en 1 top",
-            "Verwerk de bruikbaarste feedback meteen"
+            "Werk met woordfamilies: als navor gids betekent, kan navora gidsen betekenen en navorek routekaart.",
+            "Laat woorden op elkaar lijken als ze bij elkaar horen.",
+            "Gebruik klanken uit les 2, zodat alles één geheel blijft klinken."
           ]
         },
         {
           "type": "bullets",
-          "title": "Als je thuis iets wilt doen",
+          "title": "Voorbeeldwoordenboek",
           "subtitle": "",
           "items": [
-            "Alleen klein voorbereidingswerk mag",
-            "Bijvoorbeeld: een afbeelding printen, een boek meenemen of een detail thuis opzoeken",
-            "Dat is niet verplicht",
-            "De poster zelf maak je in principe in de les"
+            "vraa = let op",
+            "navor = gids",
+            "thalin = mistbrug",
+            "moru = vriend of bondgenoot",
+            "khaarek = verboden route",
+            "luma = veilig licht"
           ]
         },
         {
           "type": "bullets",
-          "title": "Aan het einde van de les",
+          "title": "Checklist vak 3",
           "subtitle": "",
           "items": [
-            "Jullie poster is zichtbaar in opbouw",
-            "De belangrijkste teksten staan erop of liggen klaar om opgeplakt te worden"
+            "Minstens 10 woorden",
+            "Bij elk woord een betekenis",
+            "Minstens 2 woorden die echt bij jullie fantasiewereld horen",
+            "Nette indeling: bijvoorbeeld in een lijst, tabel of kleine woordkaartjes"
           ]
         },
         {
           "type": "title",
-          "title": "Les 5 - Poster afmaken",
+          "title": "Les 4 - Grammaticaregels",
           "subtitle": ""
         },
         {
           "type": "bullets",
-          "title": "Doelen vandaag",
+          "title": "Vandaag maak je vak 4",
           "subtitle": "",
           "items": [
-            "Poster afronden",
-            "Laatste verbeteringen aanbrengen",
-            "Een korte posterpitch voorbereiden van ongeveer 1 minuut"
+            "Vak 4 laat zien hoe zinnen in jullie taal werken.",
+            "Kies 2 tot 4 duidelijke regels.",
+            "Houd het simpel: liever 3 sterke regels dan 8 vage regels."
           ]
         },
         {
           "type": "bullets",
-          "title": "Laatste controle",
+          "title": "Handige soorten regels",
           "subtitle": "",
           "items": [
-            "Staan alle verplichte onderdelen erop?",
-            "Is de poster van een afstand leesbaar?",
-            "Klopt spelling zo goed mogelijk?",
-            "Kan iemand uit een andere groep meteen begrijpen hoe jullie taal werkt?"
+            "Woordvolgorde: zeg je ik ga huis of huis ga ik?",
+            "Werkwoorden: krijgen die een extra uitgang?",
+            "Vragen: komt er een vraagwoord vooraan of juist achteraan?",
+            "Meervoud: komt er -en, -ar, -um of iets anders achter?",
+            "Ontkenning: hoe zeg je niet of nooit?"
           ]
         },
         {
           "type": "bullets",
-          "title": "Posterpitch",
+          "title": "Rijke voorbeeldregels",
           "subtitle": "",
           "items": [
-            "Vertel straks kort: wie spreekt deze taal, hoe klinkt zij en wat maakt haar bijzonder?",
-            "Laat minstens één woord, regel of zinnetje horen",
-            "Iedereen levert een kleine bijdrage aan het praatje",
-            "Je hoeft geen uitgebreide presentatie uit je hoofd te leren"
+            "In Vareen staat het werkwoord vaak vooraan: Gaat navor thalin.",
+            "Een waarschuwing krijgt het voorvoegsel kha-: khaarek = verboden route.",
+            "Meervoud eindigt op -im: moru = vriend, moruim = vrienden.",
+            "Vragen eindigen op -sa: Navor sa? = Is er een gids?"
           ]
         },
         {
           "type": "bullets",
-          "title": "Werk zonder laptop",
+          "title": "Zo noteer je vak 4",
           "subtitle": "",
           "items": [
-            "Ook vandaag blijft de laptop in de tas",
-            "Gebruik papier, stiften, schaar, lijm en meegebracht materiaal",
-            "Als er iets geprint is, plak je het alleen in of gebruik je het als bron"
+            "Schrijf elke regel kort op.",
+            "Zet er direct een voorbeeldzin onder.",
+            "Gebruik woorden uit vak 3, zodat de poster echt samenhang krijgt.",
+            "Maak het visueel: nummer de regels of zet ze in kaders."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Checklist vak 4",
+          "subtitle": "",
+          "items": [
+            "2 tot 4 duidelijke regels",
+            "Bij elke regel minstens 1 voorbeeld",
+            "Regels passen bij de sfeer en klanken van de taal",
+            "Een buitenstaander kan snappen hoe je basiszinnen maakt"
           ]
         },
         {
           "type": "title",
-          "title": "Laatste 10 minuten",
+          "title": "Les 5 - Voorbeeldgesprek",
           "subtitle": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag maak je vak 5",
+          "subtitle": "",
+          "items": [
+            "Vak 5 wordt jullie voorbeeldgesprek.",
+            "Daarmee laat je zien dat de taal echt bruikbaar is en niet alleen uit losse woorden bestaat.",
+            "Gebruik dus woorden uit vak 3 en regels uit vak 4."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat voor gesprek past?",
+          "subtitle": "",
+          "items": [
+            "Een ontmoeting bij de stadspoort",
+            "Een waarschuwing voor gevaar",
+            "Een koopgesprek op de markt",
+            "Een korte begroeting tussen bondgenoten",
+            "Een instructie aan een leerling of reiziger"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Rijk voorbeeldgesprek",
+          "subtitle": "",
+          "items": [
+            "A: Vraa, moru? = Hé, vriend?",
+            "B: Vraa. Navor sa? = Hé. Is er een gids?",
+            "A: Navor thalin. Khaarek! = De gids gaat naar de mistbrug. Verboden route!",
+            "B: Luma, moru. = Dank, vriend / veilig licht, vriend."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zo bouw je vak 5 op",
+          "subtitle": "",
+          "items": [
+            "Schrijf 4 tot 6 regels dialoog.",
+            "Zet eronder of ernaast de Nederlandse vertaling.",
+            "Markeer minstens 3 woorden die terugkomen uit vak 3.",
+            "Laat minstens 1 grammaticale regel uit vak 4 zichtbaar terugkomen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Checklist vak 5",
+          "subtitle": "",
+          "items": [
+            "Een compleet mini-gesprek",
+            "Vertaling erbij",
+            "Woorden en regels uit eerdere vakken zichtbaar gebruikt",
+            "Net genoeg tekst om te lezen, niet te veel om het vak vol te proppen"
+          ]
         },
         {
           "type": "title",
-          "title": "Les 6 - Posterpresentaties en reflectie",
+          "title": "Les 6 - Creatief extra en presenteren",
           "subtitle": ""
         },
         {
           "type": "bullets",
-          "title": "Vandaag sluiten we Taaltopia af met een posterfestival in de klas.",
+          "title": "Vandaag maak je vak 6",
           "subtitle": "",
           "items": [
-            "Groepen laten hun poster zien",
-            "Jullie lopen langs, luisteren en stellen vragen",
-            "Daarna blik je kort terug op wat je geleerd hebt"
+            "Vak 6 is jullie creatieve extra en presentatiehoek.",
+            "Hier laat je iets zien dat de taalwereld nog sterker maakt.",
+            "Daarna maak je de poster af en bereid je een korte toelichting voor."
           ]
         },
         {
           "type": "bullets",
-          "title": "Tijdens de posterpresentaties",
+          "title": "Ideeën voor vak 6",
           "subtitle": "",
           "items": [
-            "Elke groep krijgt kort de tijd om de poster toe te lichten",
-            "Vertel niet alles: kies de opvallendste onderdelen",
-            "Laat bijvoorbeeld een woord, regel of stukje gesprek horen",
-            "Publiek noteert iets dat sterk of origineel is"
+            "Een symbool, vlag of zegel van het volk",
+            "Een mini-kaart van het gebied waar de taal gesproken wordt",
+            "Een ranglijst van beleefde en onbeleefde woorden",
+            "Een spreekspreuk, motto, liedregel of ritueel zinnetje",
+            "Een korte legenda: wanneer gebruik je deze taal en wanneer juist niet?"
           ]
         },
         {
           "type": "bullets",
-          "title": "Waar letten we op?",
+          "title": "Laatste postercheck: 6 vakken",
           "subtitle": "",
           "items": [
-            "Inhoud: is de taal duidelijk uitgewerkt?",
-            "Vorm: is de poster overzichtelijk en verzorgd?",
-            "Samenwerking: heeft iedereen zichtbaar bijgedragen?",
-            "Creativiteit: voelt deze taal echt als een eigen wereld?"
+            "1. Naam, wereld en doelgroep",
+            "2. Klanken en schrift",
+            "3. Woorden en betekenissen",
+            "4. Grammaticaregels",
+            "5. Voorbeeldgesprek",
+            "6. Creatief extra en presentatiehoek"
           ]
         },
         {
           "type": "bullets",
-          "title": "Korte reflectie",
+          "title": "Mini-presentatie voorbereiden",
           "subtitle": "",
           "items": [
-            "Wat heb je geleerd over taal?",
-            "Wat ging goed in jullie samenwerking?",
-            "Welk onderdeel van jullie poster vind je het sterkst?",
-            "Wat zou je een volgende keer slimmer aanpakken?"
+            "Elke groep vertelt straks in ongeveer 1 minuut wat de taal bijzonder maakt.",
+            "Laat minstens 1 woord hardop horen, 1 regel zien en 1 creatief detail uitleggen.",
+            "Verdeel het praatje over meerdere groepsleden.",
+            "Je hoeft geen hele spreekbeurt te houden: kort, duidelijk en trots is genoeg."
           ]
         },
         {
@@ -27710,19 +27762,19 @@
           "title": "Tot slot",
           "subtitle": "",
           "items": [
-            "Jullie hebben een taal ontworpen en uitgelegd zonder laptop in de les",
-            "Bijna alles is in de les gemaakt",
-            "Dat is precies de bedoeling van Taaltopia"
+            "Jullie poster is nu opgebouwd uit 6 duidelijke vakken.",
+            "Elke les heeft dus zichtbaar iets opgeleverd.",
+            "Dat maakt de taal overzichtelijker, rijker en makkelijker te presenteren."
           ]
         }
       ],
       "markers": {
-        "marker-les-1-welkom-in-taaltopia": 1,
-        "marker-les-2-de-basis-van-jullie-taal": 7,
-        "marker-les-3-woorden-en-grammatica": 13,
-        "marker-les-4-afronden-en-feedback": 19,
-        "marker-les-5-presentaties-voorbereiden": 25,
-        "marker-les-6-presenteren-en-reflecteren": 31
+        "marker-les-1-naam-wereld-en-doelgroep": 1,
+        "marker-les-2-klanken-en-schrift": 7,
+        "marker-les-3-woorden-en-betekenissen": 13,
+        "marker-les-4-grammaticaregels": 19,
+        "marker-les-5-voorbeeldgesprek": 25,
+        "marker-les-6-creatief-extra-en-presenteren": 31
       }
     },
     "project-faalfestival": {
