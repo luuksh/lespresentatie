@@ -352,17 +352,35 @@ function richTextToHtml(value) {
   return escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 
-function emphasizeHomeworkMaterials(value) {
-  const html = richTextToHtml(value);
-  return html
-    .replaceAll(
-      'netschrift en pen mee',
-      '<span class="homework-material">netschrift en pen mee</span>',
-    )
-    .replaceAll(
-      'leesboek en schoolpasje mee',
-      '<span class="homework-material">leesboek en schoolpasje mee</span>',
-    );
+function formatHomeworkContent(value) {
+  const raw = String(value || '').trim();
+  const materials = [];
+  let text = raw;
+  const materialPatterns = [
+    {
+      pattern: /(?:^|[\s.])netschrift en pen mee(?:[\s.]|$)/i,
+      label: 'Netschrift en pen mee',
+    },
+    {
+      pattern: /(?:^|[\s.])leesboek en schoolpasje mee(?:[\s.]|$)/i,
+      label: 'Leesboek en schoolpasje mee',
+    },
+  ];
+
+  for (const item of materialPatterns) {
+    if (item.pattern.test(text)) {
+      materials.push(item.label);
+      text = text.replace(item.pattern, ' ').trim();
+    }
+  }
+
+  text = text.replace(/\s+\./g, '.').replace(/\s{2,}/g, ' ').trim();
+  return {
+    textHtml: text ? richTextToHtml(text) : '',
+    materialsHtml: materials.length
+      ? `<div class="homework-materials"><p class="homework-materials-label">Materialen:</p><div class="homework-material-list">${materials.map((label) => `<span class="homework-material">${escapeHtml(label)}</span>`).join('')}</div></div>`
+      : '',
+  };
 }
 
 function projectDeckId(project) {
@@ -511,13 +529,17 @@ function renderCurrentWeek(layerEntries) {
   if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
 
   const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
-    ? [
+    ? (() => {
+      const homework = formatHomeworkContent(nextLesson.lesson.homework);
+      return [
       `
         <p class="homework-label">Jouw huiswerk</p>
-        <div class="homework-text">${emphasizeHomeworkMaterials(nextLesson.lesson.homework)}</div>
+        ${homework.textHtml ? `<div class="homework-text">${homework.textHtml}</div>` : ''}
+        ${homework.materialsHtml}
         ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie</button>' : ''}
       `,
-    ]
+      ];
+    })()
     : [];
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
 }

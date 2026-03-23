@@ -335,7 +335,6 @@ body::before {
 
 .homework-material {
   display: inline-block;
-  margin-top: 10px;
   padding: 6px 12px;
   border-radius: 999px;
   background: rgba(15, 118, 110, 0.12);
@@ -345,6 +344,24 @@ body::before {
   font-weight: 800;
   letter-spacing: 0.03em;
   white-space: nowrap;
+}
+
+.homework-materials {
+  margin-top: 16px;
+}
+
+.homework-materials-label {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--portal-primary-deep);
+}
+
+.homework-material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .stack-list {
