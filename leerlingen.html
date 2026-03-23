@@ -34,7 +34,7 @@
         <p class="hero-kicker">Openbare leerlingenomgeving</p>
         <h1>Jaarplanning, presentaties en huiswerk in een oogopslag</h1>
         <p class="hero-text">
-          Kies je jaarlaag en spring direct naar deze week. Alle lessen, presentaties en huiswerk staan op een vaste, rustige plek.
+          Kies je klas en spring direct naar deze week. Alle lessen, presentaties en huiswerk staan op een vaste, rustige plek.
         </p>
         <div class="hero-highlights">
           <article class="hero-highlight">
@@ -54,8 +54,8 @@
       <div class="hero-panel">
         <p class="hero-panel-kicker">Direct naar jouw planning</p>
         <label class="portal-field">
-          <span>Jaarlaag</span>
-          <select id="layerSelect"></select>
+          <span>Klas</span>
+          <select id="classSelect"></select>
         </label>
         <div class="hero-panel-actions">
           <button id="jumpToCurrentWeekBtn" class="portal-button portal-button-primary" type="button">Ga naar deze week</button>
@@ -65,26 +65,22 @@
     </section>
 
     <section class="portal-overview">
-      <article class="overview-card overview-card-highlight">
+      <article class="overview-card overview-card-homework overview-card-highlight">
+        <p class="overview-label">Huiswerk</p>
+        <div id="homeworkSummary" class="stack-list"></div>
+      </article>
+      <article class="overview-card overview-card-current">
         <p class="overview-label">Nu relevant</p>
         <h2 id="currentWeekTitle">Weekoverzicht</h2>
         <p id="currentWeekSummary" class="overview-text">De planning wordt opgehaald.</p>
         <div id="currentWeekFocus" class="focus-band">Planning laden...</div>
-      </article>
-      <article class="overview-card">
-        <p class="overview-label">Huiswerk</p>
-        <div id="homeworkSummary" class="stack-list"></div>
-      </article>
-      <article class="overview-card">
-        <p class="overview-label">Notities</p>
-        <div id="itemsSummary" class="stack-list"></div>
       </article>
     </section>
 
     <section class="timeline-head">
       <div>
         <p class="overview-label">Jaarplanning</p>
-        <h2>Alle weken van je jaarlaag</h2>
+        <h2>Alle weken van je klas</h2>
       </div>
       <p class="timeline-help">Klik op een les om de presentatie te openen en navigeer rustig door de slides.</p>
     </section>

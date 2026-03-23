@@ -248,8 +248,9 @@ body::before {
 .portal-overview {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
+  align-items: start;
 }
 
 .overview-card {
@@ -271,6 +272,28 @@ body::before {
 
 .overview-card-highlight {
   background: radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 32%), linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 251, 249, 0.97));
+}
+
+.overview-card-homework {
+  grid-column: 1 / -1;
+  max-width: 860px;
+  justify-self: center;
+  width: min(100%, 860px);
+}
+
+.overview-card-homework .stack-item,
+.overview-card-homework .item-pill {
+  text-align: center;
+}
+
+.overview-card-homework .stack-item strong {
+  margin-bottom: 8px;
+}
+
+.overview-card-current {
+  max-width: 860px;
+  justify-self: center;
+  width: min(100%, 860px);
 }
 
 .overview-card h2 {

@@ -1,16 +1,16 @@
 const CONFIG = window.STUDENT_PORTAL_CONFIG || {};
 const PLANNING_URL = String(CONFIG.planningUrl || 'js/jaarplanning-live.json');
 const CLASSES_URL = String(CONFIG.classesUrl || 'js/leerlingen_per_klas.json');
-const CURRENT_LAYER_KEY = 'student.portal.layer';
+const AGENDA_URL = String(CONFIG.agendaUrl || 'js/zermelo-agenda-live.json');
+const CURRENT_CLASS_KEY = 'student.portal.class';
 
-const layerSelect = document.getElementById('layerSelect');
+const classSelect = document.getElementById('classSelect');
 const jumpToCurrentWeekBtn = document.getElementById('jumpToCurrentWeekBtn');
 const portalMeta = document.getElementById('portalMeta');
 const currentWeekTitle = document.getElementById('currentWeekTitle');
 const currentWeekSummary = document.getElementById('currentWeekSummary');
 const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
-const itemsSummary = document.getElementById('itemsSummary');
 const weeksGrid = document.getElementById('weeksGrid');
 const weekJumpBar = document.getElementById('weekJumpBar');
 const heroWeekValue = document.getElementById('heroWeekValue');
@@ -26,8 +26,9 @@ const dialogCounter = document.getElementById('dialogCounter');
 
 const state = {
   doc: { entries: [], presentations: {}, updatedAt: '' },
-  layers: [],
-  currentLayer: '',
+  agendaEntries: [],
+  classes: [],
+  currentClass: '',
   currentWeek: currentIsoWeek(),
   activePresentation: null,
   activePresentationTarget: null,
@@ -73,6 +74,16 @@ function currentIsoWeek() {
   return Math.ceil((((local - yearStart) / 86400000) + 1) / 7);
 }
 
+function isoWeekForDate(date) {
+  const value = date instanceof Date ? new Date(date.getTime()) : new Date(date);
+  if (Number.isNaN(value.getTime())) return NaN;
+  const local = new Date(Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()));
+  const day = local.getUTCDay() || 7;
+  local.setUTCDate(local.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(local.getUTCFullYear(), 0, 1));
+  return Math.ceil((((local - yearStart) / 86400000) + 1) / 7);
+}
+
 function normalizeDoc(raw) {
   const safe = raw && typeof raw === 'object' ? structuredClone(raw) : {};
   if (!Array.isArray(safe.entries)) safe.entries = [];
@@ -90,58 +101,191 @@ function normalizeDoc(raw) {
   return safe;
 }
 
-function collapseToYearLayerDoc(doc) {
-  const safe = normalizeDoc(doc);
-  const merged = new Map();
+function normalizeAgendaEntry(row) {
+  if (!row || typeof row !== 'object') return null;
+  const classId = normalizeClassId(row.classId || row.klas || row.class || '');
+  const start = new Date(row.start || row.startTime || row.startDateTime || '');
+  const end = new Date(row.end || row.endTime || row.endDateTime || '');
+  if (!classId || Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return null;
+  return {
+    classId,
+    start,
+    end,
+    summary: String(row.summary || row.description || '').trim(),
+    description: String(row.description || '').trim(),
+  };
+}
 
-  for (const entry of safe.entries) {
-    const layer = gradeLayerFromClassId(entry.classId);
-    const week = parseWeek(entry.week);
-    if (!layer || !week) continue;
+function normalizeAgendaDoc(raw) {
+  const entries = Array.isArray(raw?.entries) ? raw.entries : [];
+  return entries
+    .map((entry) => normalizeAgendaEntry(entry))
+    .filter(Boolean)
+    .sort((left, right) => left.start - right.start);
+}
 
-    const key = `${layer}-${week}`;
-    if (!merged.has(key)) {
-      merged.set(key, { classId: layer, week: String(week), lessons: [], items: [], notes: [] });
-    }
+function classesFromClassMap(classMap = {}) {
+  return Object.keys(classMap).map((cid) => normalizeClassId(cid)).filter(Boolean);
+}
 
-    const bucket = merged.get(key);
-    for (const lesson of entry.lessons) {
-      const fingerprint = JSON.stringify(lesson || {});
-      if (!bucket.lessons.some((candidate) => JSON.stringify(candidate || {}) === fingerprint)) {
-        bucket.lessons.push(lesson);
-      }
+function lessonLetter(index) {
+  return ['A', 'B', 'C'][Math.max(0, Math.min(2, index - 1))] || '';
+}
+
+function getWeekBounds(date = new Date()) {
+  const day = date.getDay() || 7;
+  const monday = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  monday.setDate(monday.getDate() - day + 1);
+  monday.setHours(0, 0, 0, 0);
+  const sunday = new Date(monday);
+  sunday.setDate(sunday.getDate() + 6);
+  sunday.setHours(23, 59, 59, 999);
+  return { monday, sunday };
+}
+
+function isDutchAgendaEntry(entry) {
+  const text = `${entry?.summary || ''}\n${entry?.description || ''}`.toLowerCase();
+  return /\bne\b|\bnetl\b/.test(text);
+}
+
+function lessonNumberForAgendaWeek(entries, selectedEntry) {
+  if (!selectedEntry) return 0;
+  const { monday, sunday } = getWeekBounds(selectedEntry.start);
+  const inWeek = entries
+    .filter((entry) => (
+      entry.classId === selectedEntry.classId
+      && isDutchAgendaEntry(entry)
+      && entry.start >= monday
+      && entry.start <= sunday
+    ))
+    .sort((left, right) => left.start - right.start);
+  const index = inWeek.findIndex((entry) => entry.start.getTime() === selectedEntry.start.getTime());
+  return index >= 0 ? index + 1 : 0;
+}
+
+function formatLessonDate(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('nl-NL', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+  }).format(date);
+}
+
+function normalizePlanEntry(entry) {
+  return {
+    lessons: Array.isArray(entry?.lessons) ? entry.lessons : [],
+    items: Array.isArray(entry?.items) ? entry.items : [],
+    note: String(entry?.note || '').trim(),
+  };
+}
+
+function mergePlanEntries(...entries) {
+  const merged = { lessons: [], items: [], note: '' };
+  const seenLessons = new Set();
+  const seenItems = new Set();
+  const notes = [];
+
+  for (const entry of entries) {
+    const normalized = normalizePlanEntry(entry);
+    for (const lesson of normalized.lessons) {
+      const key = JSON.stringify(lesson || {});
+      if (seenLessons.has(key)) continue;
+      seenLessons.add(key);
+      merged.lessons.push(lesson);
     }
-    for (const item of entry.items) {
-      if (!bucket.items.includes(item)) bucket.items.push(item);
+    for (const item of normalized.items) {
+      if (seenItems.has(item)) continue;
+      seenItems.add(item);
+      merged.items.push(item);
     }
-    if (entry.note && !bucket.notes.includes(entry.note)) bucket.notes.push(entry.note);
+    if (normalized.note && !notes.includes(normalized.note)) notes.push(normalized.note);
   }
 
-  safe.entries = [...merged.values()]
-    .map((entry) => ({
-      classId: entry.classId,
-      week: entry.week,
-      lessons: entry.lessons.sort((left, right) => String(left.lessonKey || '').localeCompare(String(right.lessonKey || ''))),
-      items: entry.items,
-      note: entry.notes.join(' | '),
-    }))
-    .sort((left, right) => Number(left.classId) - Number(right.classId) || parseWeek(left.week) - parseWeek(right.week));
-
-  return safe;
+  merged.lessons.sort((left, right) => String(left.lessonKey || '').localeCompare(String(right.lessonKey || '')));
+  if (notes.length) merged.note = notes.join(' | ');
+  return merged;
 }
 
-function layersFromClassMap(classMap = {}) {
-  return [...new Set(Object.keys(classMap).map((cid) => gradeLayerFromClassId(cid)).filter(Boolean))].sort();
+function classPlanningAliases(rawClassId) {
+  const cid = normalizeClassId(rawClassId);
+  const aliases = [];
+  const push = (value) => {
+    const normalized = normalizeClassId(value);
+    if (normalized && !aliases.includes(normalized)) aliases.push(normalized);
+  };
+  push(cid);
+
+  const lowerGradeLetter = cid.match(/^G([1-3])([A-Z])$/);
+  if (lowerGradeLetter) push(`${lowerGradeLetter[1]}${lowerGradeLetter[2]}`);
+
+  const lowerGradePlain = cid.match(/^([1-3])([A-Z])$/);
+  if (lowerGradePlain) push(`G${lowerGradePlain[1]}${lowerGradePlain[2]}`);
+
+  const upperGradeGroup = cid.match(/^([45])G(\d+)$/);
+  if (upperGradeGroup) push(`${upperGradeGroup[1]}.${upperGradeGroup[2]}`);
+
+  const upperGradePlanning = cid.match(/^([45])\.(\d+)$/);
+  if (upperGradePlanning) push(`${upperGradePlanning[1]}G${upperGradePlanning[2]}`);
+
+  return aliases;
 }
 
-function getEntriesForLayer(layer) {
-  return state.doc.entries
-    .filter((entry) => entry.classId === layer)
+function classSortKey(rawClassId) {
+  const cid = normalizeClassId(rawClassId);
+  const grade = Number(gradeLayerFromClassId(cid) || 99);
+  const suffix = cid.replace(/^G?[1-6]/, '').replace(/^[45]G/, '');
+  return `${String(grade).padStart(2, '0')}-${suffix}-${cid}`;
+}
+
+function getEntriesForClass(classId) {
+  const aliases = classPlanningAliases(classId);
+  const grade = gradeLayerFromClassId(classId);
+  const gradeAliases = [`G${grade}`, grade].map((value) => normalizeClassId(value)).filter(Boolean);
+  const weeks = new Set();
+
+  for (const entry of state.doc.entries) {
+    if ([...aliases, ...gradeAliases, 'ALL'].includes(entry.classId)) {
+      weeks.add(String(entry.week));
+    }
+  }
+
+  return [...weeks]
+    .map((week) => getEntryForWeek(classId, week))
+    .filter(Boolean)
     .sort((left, right) => parseWeek(left.week) - parseWeek(right.week));
 }
 
-function getEntryForWeek(layer, week) {
-  return getEntriesForLayer(layer).find((entry) => parseWeek(entry.week) === week) || null;
+function getEntryForWeek(classId, week) {
+  const aliases = classPlanningAliases(classId);
+  const grade = gradeLayerFromClassId(classId);
+  const gradeAliases = [`G${grade}`, grade].map((value) => normalizeClassId(value)).filter(Boolean);
+  const byId = (ids) => state.doc.entries.filter((entry) => ids.includes(entry.classId) && parseWeek(entry.week) === Number(week));
+  const allEntries = byId(['ALL']);
+  const gradeEntries = byId(gradeAliases);
+  const classEntries = byId(aliases);
+  const merged = mergePlanEntries(...allEntries, ...gradeEntries, ...classEntries);
+  if (!merged.lessons.length && !merged.items.length && !merged.note) return null;
+  return { classId: normalizeClassId(classId), week: String(week), ...merged };
+}
+
+function findNextLessonForClass(classId, now = new Date()) {
+  const nextAgendaEntry = state.agendaEntries.find((entry) => (
+    normalizeClassId(entry.classId) === normalizeClassId(classId)
+    && isDutchAgendaEntry(entry)
+    && entry.start > now
+  )) || null;
+  if (!nextAgendaEntry) return null;
+
+  const week = isoWeekForDate(nextAgendaEntry.start);
+  const entry = getEntryForWeek(classId, week);
+  if (!entry) return null;
+
+  const lessonIndex = lessonNumberForAgendaWeek(state.agendaEntries, nextAgendaEntry);
+  const lessonKey = lessonLetter(Math.min(3, lessonIndex));
+  const lesson = (entry.lessons || []).find((candidate) => String(candidate.lessonKey || '').toUpperCase() === lessonKey) || null;
+  return lesson ? { entry, lesson, lessonKey, date: nextAgendaEntry.start } : null;
 }
 
 function escapeHtml(value) {
@@ -198,6 +342,7 @@ function resolvePresentation(target) {
 }
 
 function renderSummaryList(container, rows, emptyText) {
+  if (!container) return;
   container.replaceChildren();
   if (!rows.length) {
     const empty = document.createElement('p');
@@ -279,55 +424,51 @@ function renderPresentationSlide() {
 }
 
 function renderCurrentWeek(layerEntries) {
-  const currentEntry = getEntryForWeek(state.currentLayer, state.currentWeek) || layerEntries[0] || null;
+  const currentEntry = getEntryForWeek(state.currentClass, state.currentWeek) || layerEntries[0] || null;
+  const nextLesson = findNextLessonForClass(state.currentClass, new Date());
   if (!currentEntry) {
     currentWeekTitle.textContent = 'Nog geen planning';
-    currentWeekSummary.textContent = 'Voor deze jaarlaag staat nog geen planning klaar.';
+    currentWeekSummary.textContent = 'Voor deze klas staat nog geen planning klaar.';
     if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen focuspunt beschikbaar';
     if (heroWeekValue) heroWeekValue.textContent = 'Week --';
     if (heroPresentationCount) heroPresentationCount.textContent = '0';
     if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
-    renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk toegevoegd.');
-    renderSummaryList(itemsSummary, [], 'Nog geen notities toegevoegd.');
+    renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk voor de eerstvolgende les.');
     return;
   }
 
   const week = parseWeek(currentEntry.week);
-  const homeworkCount = (currentEntry.lessons || []).filter((lesson) => String(lesson.homework || '').trim()).length;
+  const homeworkCount = nextLesson && String(nextLesson.lesson.homework || '').trim() ? 1 : 0;
   const presentationCount = (currentEntry.lessons || []).filter((lesson) => resolvePresentation(buildPresentationTarget(lesson)).presentation).length;
   currentWeekTitle.textContent = `Week ${String(week).padStart(2, '0')}`;
   const lessonCount = Array.isArray(currentEntry.lessons) ? currentEntry.lessons.length : 0;
   currentWeekSummary.textContent = lessonCount
-    ? `${lessonCount} lesmomenten gepland voor jaarlaag ${state.currentLayer}.`
-    : `Geen vaste lesmomenten ingepland voor jaarlaag ${state.currentLayer}.`;
+    ? `${lessonCount} lesmomenten gepland voor klas ${state.currentClass}.`
+    : `Geen vaste lesmomenten ingepland voor klas ${state.currentClass}.`;
   if (currentWeekFocus) {
-    currentWeekFocus.textContent = homeworkCount
-      ? `${homeworkCount} huiswerkitem${homeworkCount === 1 ? '' : 's'} om af te ronden`
-      : 'Rustige week: geen huiswerk gemarkeerd';
+    currentWeekFocus.textContent = nextLesson
+      ? `Eerstvolgende les: ${formatLessonDate(nextLesson.date)}`
+      : 'Nog geen eerstvolgende les gevonden';
   }
   if (heroWeekValue) heroWeekValue.textContent = `Week ${String(week).padStart(2, '0')}`;
   if (heroPresentationCount) heroPresentationCount.textContent = String(presentationCount);
   if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
 
-  const homeworkRows = (currentEntry.lessons || [])
-    .filter((lesson) => String(lesson.homework || '').trim())
-    .map((lesson) => `<strong>${escapeHtml(lesson.lessonKey || 'Les')}</strong><span>${richTextToHtml(lesson.homework)}</span>`);
-  const itemRows = [
-    ...((currentEntry.items || []).map((item) => `<span>${richTextToHtml(item)}</span>`)),
-    ...(currentEntry.note ? [`<span>${richTextToHtml(currentEntry.note)}</span>`] : []),
-  ];
-
-  renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk toegevoegd.');
-  renderSummaryList(itemsSummary, itemRows, 'Nog geen extra notities toegevoegd.');
+  const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
+    ? [
+      `<strong>${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</strong><span>${richTextToHtml(nextLesson.lesson.homework)}</span>`,
+    ]
+    : [];
+  renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
 }
 
 function renderWeeks() {
-  const entries = getEntriesForLayer(state.currentLayer);
+  const entries = getEntriesForClass(state.currentClass);
   weeksGrid.replaceChildren();
   weekJumpBar?.replaceChildren();
 
   if (!entries.length) {
-    weeksGrid.innerHTML = '<article class="empty-state">Voor deze jaarlaag zijn nog geen weken gevuld.</article>';
+    weeksGrid.innerHTML = '<article class="empty-state">Voor deze klas zijn nog geen weken gevuld.</article>';
     return;
   }
 
@@ -356,21 +497,15 @@ function renderWeeks() {
       }).join('')}</div>`
       : '<article class="empty-state">Geen lespresentaties ingepland in deze week.</article>';
 
-    const items = [...(entry.items || []), ...(entry.note ? [entry.note] : [])];
-    const infoHtml = items.length
-      ? `<div class="info-stack">${items.map((item) => `<p class="item-pill">${richTextToHtml(item)}</p>`).join('')}</div>`
-      : '';
-
     article.innerHTML = `
       <header class="week-card-head">
         <div>
-          <p class="overview-label">Jaarlaag ${escapeHtml(state.currentLayer)}</p>
+          <p class="overview-label">Klas ${escapeHtml(state.currentClass)}</p>
           <h3>Week ${String(week).padStart(2, '0')}</h3>
         </div>
         <span class="week-badge">${(entry.lessons || []).length} lessen</span>
       </header>
       ${lessonsHtml}
-      ${infoHtml}
     `;
 
     weeksGrid.appendChild(article);
@@ -395,7 +530,7 @@ function renderWeeks() {
 }
 
 function renderPortal() {
-  const entries = getEntriesForLayer(state.currentLayer);
+  const entries = getEntriesForClass(state.currentClass);
   const updatedAt = String(state.doc.updatedAt || '').trim();
   portalMeta.textContent = updatedAt
     ? `Bijgewerkt op ${new Intl.DateTimeFormat('nl-NL', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(updatedAt))}`
@@ -404,13 +539,13 @@ function renderPortal() {
   renderWeeks();
 }
 
-function fillLayerOptions() {
-  layerSelect.innerHTML = '';
-  for (const layer of state.layers) {
+function fillClassOptions() {
+  classSelect.innerHTML = '';
+  for (const classId of state.classes) {
     const option = document.createElement('option');
-    option.value = layer;
-    option.textContent = `Jaarlaag ${layer}`;
-    layerSelect.appendChild(option);
+    option.value = classId;
+    option.textContent = `Klas ${classId}`;
+    classSelect.appendChild(option);
   }
 }
 
@@ -424,18 +559,25 @@ async function fetchJson(url) {
 
 async function boot() {
   try {
-    const [planningRaw, classMap] = await Promise.all([
+    const [planningRaw, classMap, agendaRaw] = await Promise.all([
       fetchJson(PLANNING_URL),
       fetchJson(CLASSES_URL),
+      fetchJson(AGENDA_URL).catch(() => ({ entries: [] })),
     ]);
 
-    state.doc = collapseToYearLayerDoc(planningRaw);
-    state.layers = [...new Set([...layersFromClassMap(classMap), ...state.doc.entries.map((entry) => entry.classId)])].sort();
-    fillLayerOptions();
+    state.doc = normalizeDoc(planningRaw);
+    state.agendaEntries = normalizeAgendaDoc(agendaRaw);
+    state.classes = [...new Set([
+      ...classesFromClassMap(classMap),
+      ...state.agendaEntries.map((entry) => normalizeClassId(entry.classId)),
+    ])]
+      .filter(Boolean)
+      .sort((left, right) => classSortKey(left).localeCompare(classSortKey(right), 'nl'));
+    fillClassOptions();
 
-    const storedLayer = String(localStorage.getItem(CURRENT_LAYER_KEY) || '').trim();
-    state.currentLayer = state.layers.includes(storedLayer) ? storedLayer : (state.layers[0] || '');
-    layerSelect.value = state.currentLayer;
+    const storedClass = String(localStorage.getItem(CURRENT_CLASS_KEY) || '').trim();
+    state.currentClass = state.classes.includes(storedClass) ? storedClass : (state.classes[0] || '');
+    classSelect.value = state.currentClass;
 
     renderPortal();
   } catch (error) {
@@ -444,9 +586,9 @@ async function boot() {
   }
 }
 
-layerSelect?.addEventListener('change', () => {
-  state.currentLayer = layerSelect.value;
-  localStorage.setItem(CURRENT_LAYER_KEY, state.currentLayer);
+classSelect?.addEventListener('change', () => {
+  state.currentClass = classSelect.value;
+  localStorage.setItem(CURRENT_CLASS_KEY, state.currentClass);
   renderPortal();
 });
 
