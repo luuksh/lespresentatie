@@ -352,6 +352,19 @@ function richTextToHtml(value) {
   return escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 
+function emphasizeHomeworkMaterials(value) {
+  const html = richTextToHtml(value);
+  return html
+    .replaceAll(
+      'netschrift en pen mee',
+      '<span class="homework-material">netschrift en pen mee</span>',
+    )
+    .replaceAll(
+      'leesboek en schoolpasje mee',
+      '<span class="homework-material">leesboek en schoolpasje mee</span>',
+    );
+}
+
 function projectDeckId(project) {
   return `project-${String(project || '')
     .trim()
@@ -501,7 +514,7 @@ function renderCurrentWeek(layerEntries) {
     ? [
       `
         <p class="homework-label">Jouw huiswerk</p>
-        <div class="homework-text">${richTextToHtml(nextLesson.lesson.homework)}</div>
+        <div class="homework-text">${emphasizeHomeworkMaterials(nextLesson.lesson.homework)}</div>
         ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie</button>' : ''}
       `,
     ]
