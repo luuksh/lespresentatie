@@ -146,7 +146,7 @@ body::before {
   z-index: 1;
   display: grid;
   align-content: start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-kicker,
@@ -157,9 +157,9 @@ body::before {
 
 .hero-copy h1 {
   margin: 0;
-  max-width: 8ch;
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  line-height: 0.88;
+  max-width: 9ch;
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  line-height: 0.92;
   letter-spacing: -0.05em;
 }
 
@@ -179,26 +179,9 @@ body::before {
   line-height: 1.45;
 }
 
-.hero-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 2px;
-}
-
-.hero-highlight {
-  padding: 12px 14px;
-  border-radius: var(--portal-radius-md);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.66));
-  border: 1px solid rgba(17, 32, 51, 0.08);
-  box-shadow: var(--portal-shadow-sm);
-}
-
-.hero-highlight strong {
-  display: block;
-  margin-top: 4px;
-  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-  line-height: 1.05;
+.hero-text-compact {
+  max-width: 44ch;
+  color: var(--portal-muted-strong);
 }
 
 .hero-panel {
@@ -252,6 +235,7 @@ body::before {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   align-items: start;
+  opacity: 0.72;
 }
 
 .overview-card {
@@ -303,6 +287,8 @@ body::before {
 
 .overview-card-compact {
   padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: var(--portal-shadow-sm);
 }
 
 .overview-kpi {
@@ -318,11 +304,15 @@ body::before {
 
 .next-lesson-card {
   border: 1px solid var(--portal-line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 251, 249, 0.97));
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(249, 253, 251, 0.98));
   backdrop-filter: blur(18px);
-  box-shadow: var(--portal-shadow);
+  box-shadow: 0 34px 88px rgba(15, 118, 110, 0.16);
   border-radius: var(--portal-radius-xl);
   padding: 18px 20px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .next-lesson-head {
@@ -332,17 +322,34 @@ body::before {
   gap: 16px;
 }
 
+.next-lesson-card h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 0.98;
+  margin: 2px 0 0;
+  letter-spacing: -0.04em;
+}
+
 .next-lesson-homework {
   margin-top: 10px;
 }
 
 .next-lesson-homework .stack-item {
-  padding: 14px 16px;
+  padding: 20px 22px;
   text-align: left;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  box-shadow: 0 18px 42px rgba(15, 118, 110, 0.09);
 }
 
 .next-lesson-link {
   margin-top: 14px;
+}
+
+.next-lesson-homework .stack-item span {
+  display: block;
+  font-size: 1.16rem;
+  line-height: 1.6;
+  color: var(--portal-ink);
 }
 
 .focus-band {
@@ -407,6 +414,7 @@ body::before {
 
 .timeline-details {
   margin-top: 12px;
+  opacity: 0.8;
 }
 
 .timeline-summary {

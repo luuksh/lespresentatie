@@ -444,8 +444,8 @@ function renderCurrentWeek(layerEntries) {
   state.nextLessonTarget = nextLesson?.hasPresentation ? nextLesson.target : null;
   if (openNextPresentationBtn) openNextPresentationBtn.disabled = !state.nextLessonTarget;
   if (!currentEntry) {
-    currentWeekTitle.textContent = 'Nog geen planning';
-    currentWeekSummary.textContent = 'Voor deze klas staat nog geen planning klaar.';
+    currentWeekTitle.textContent = 'Nog geen les gevonden';
+    currentWeekSummary.textContent = 'Voor deze klas staat nog geen bruikbare planning of roosterkoppeling klaar.';
     if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen les';
     if (currentWeekChip) currentWeekChip.textContent = 'Week --';
     if (presentationStatus) presentationStatus.textContent = 'Geen presentatie';
@@ -467,7 +467,7 @@ function renderCurrentWeek(layerEntries) {
     : (lessonCount
       ? `Er staan ${lessonCount} lesmomenten in week ${String(week).padStart(2, '0')}, maar er is geen komende Zermelo-les gevonden voor klas ${state.currentClass}.`
       : `Geen vaste lesmomenten ingepland voor klas ${state.currentClass}.`);
-  if (currentWeekFocus) currentWeekFocus.textContent = nextLesson ? 'Klaar voor de volgende les' : 'Geen komende les in rooster';
+  if (currentWeekFocus) currentWeekFocus.textContent = nextLesson ? 'Dit is jouw eerstvolgende les' : 'Geen komende les in rooster';
   if (currentWeekChip) currentWeekChip.textContent = `Week ${String(week).padStart(2, '0')}`;
   if (presentationStatus) presentationStatus.textContent = nextLesson?.hasPresentation ? 'Direct te openen' : 'Nog geen presentatie gekoppeld';
   if (heroWeekValue) heroWeekValue.textContent = nextLesson ? formatLessonDate(nextLesson.date) : 'Nog onbekend';
