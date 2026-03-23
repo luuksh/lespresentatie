@@ -25,6 +25,8 @@ NON_REGULAR_EXACT = {
     "zomervakantie",
 }
 
+LESSON_SLOT_ORDER = {"A": 0, "B": 1, "C": 2}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -140,7 +142,7 @@ def normalize_entry(row: object) -> dict:
     out = {
         "classId": class_id,
         "week": week,
-        "lessons": regular_lessons,
+        "lessons": reposition_grade_1_reading(class_id, regular_lessons),
         "items": items,
     }
     if note:
@@ -156,6 +158,52 @@ def is_non_regular_marker(project: str, lesson: str) -> bool:
     if normalized in NON_REGULAR_EXACT:
         return True
     return normalized.startswith(NON_REGULAR_PREFIXES)
+
+
+def is_grade_1_class(class_id: str) -> bool:
+    return len(class_id) == 2 and class_id.startswith("1") and class_id[1].isalpha()
+
+
+def lesson_slot_index(lesson: dict) -> int:
+    key = str(lesson.get("lessonKey", "")).strip().upper()
+    return LESSON_SLOT_ORDER.get(key, 99)
+
+
+def is_reading_lesson(lesson: dict) -> bool:
+    project = str(lesson.get("project", "")).strip().casefold()
+    return "leesclub" in project or "zinsbouwers" in project
+
+
+def make_heel_veel_lezen_lesson(source_lesson: dict, lesson_key: str) -> dict:
+    out = dict(source_lesson)
+    out["project"] = "Heel veel lezen"
+    out["lesson"] = "Heel veel lezen"
+    out["lessonKey"] = lesson_key
+    out["presentationId"] = "project-heel-veel-lezen"
+    out.pop("presentationMarkerId", None)
+    return out
+
+
+def reposition_grade_1_reading(class_id: str, lessons: list[dict]) -> list[dict]:
+    if not is_grade_1_class(class_id) or len(lessons) != 3:
+        return lessons
+
+    ordered = [dict(lesson) for lesson in sorted(lessons, key=lesson_slot_index)]
+    if not any(is_reading_lesson(lesson) for lesson in ordered):
+        return lessons
+
+    first, second, third = ordered
+    if is_reading_lesson(third):
+        ordered[2] = make_heel_veel_lezen_lesson(third, "C")
+        return ordered
+
+    if is_reading_lesson(first) and not is_reading_lesson(second) and not is_reading_lesson(third):
+        shifted = [second, third, make_heel_veel_lezen_lesson(first, "C")]
+        for key, lesson in zip(("A", "B", "C"), shifted):
+            lesson["lessonKey"] = key
+        return shifted
+
+    return lessons
 
 
 def merge_entry(base: dict, extra: dict) -> dict:
