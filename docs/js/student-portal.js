@@ -13,7 +13,6 @@ const currentWeekSummary = document.getElementById('currentWeekSummary');
 const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
 const currentWeekChip = document.getElementById('currentWeekChip');
-const presentationStatus = document.getElementById('presentationStatus');
 const weeksGrid = document.getElementById('weeksGrid');
 const weekJumpBar = document.getElementById('weekJumpBar');
 const timelineDetails = document.getElementById('timelineDetails');
@@ -446,9 +445,7 @@ function renderCurrentWeek(layerEntries) {
   if (!currentEntry) {
     currentWeekTitle.textContent = 'Nog geen les gevonden';
     currentWeekSummary.textContent = 'Voor deze klas staat nog geen bruikbare planning of roosterkoppeling klaar.';
-    if (currentWeekFocus) currentWeekFocus.textContent = 'Nog geen les';
     if (currentWeekChip) currentWeekChip.textContent = 'Week --';
-    if (presentationStatus) presentationStatus.textContent = 'Geen presentatie';
     if (heroWeekValue) heroWeekValue.textContent = 'Nog onbekend';
     if (heroPresentationCount) heroPresentationCount.textContent = '-';
     if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
@@ -460,16 +457,14 @@ function renderCurrentWeek(layerEntries) {
   const homeworkCount = nextLesson && String(nextLesson.lesson.homework || '').trim() ? 1 : 0;
   const lessonCount = Array.isArray(currentEntry.lessons) ? currentEntry.lessons.length : 0;
   currentWeekTitle.textContent = nextLesson
-    ? `${nextLesson.lesson.project || 'Les'}${nextLesson.lesson.lesson ? ` · ${nextLesson.lesson.lesson}` : ''}`
+    ? `${nextLesson.lesson.lesson || nextLesson.lesson.project || 'Les'}`
     : 'Nog geen eerstvolgende les gevonden';
   currentWeekSummary.textContent = nextLesson
-    ? `${formatLessonDate(nextLesson.date)} · klas ${state.currentClass} · les ${nextLesson.lessonKey}`
+    ? `${formatLessonDate(nextLesson.date)} · klas ${state.currentClass}`
     : (lessonCount
       ? `Er staan ${lessonCount} lesmomenten in week ${String(week).padStart(2, '0')}, maar er is geen komende Zermelo-les gevonden voor klas ${state.currentClass}.`
       : `Geen vaste lesmomenten ingepland voor klas ${state.currentClass}.`);
-  if (currentWeekFocus) currentWeekFocus.textContent = nextLesson ? 'Dit is jouw eerstvolgende les' : 'Geen komende les in rooster';
   if (currentWeekChip) currentWeekChip.textContent = `Week ${String(week).padStart(2, '0')}`;
-  if (presentationStatus) presentationStatus.textContent = nextLesson?.hasPresentation ? 'Direct te openen' : 'Nog geen presentatie gekoppeld';
   if (heroWeekValue) heroWeekValue.textContent = nextLesson ? formatLessonDate(nextLesson.date) : 'Nog onbekend';
   if (heroPresentationCount) heroPresentationCount.textContent = nextLesson?.hasPresentation ? 'Klaar' : '-';
   if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
@@ -477,10 +472,9 @@ function renderCurrentWeek(layerEntries) {
   const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
     ? [
       `
-        <p class="homework-meta">${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</p>
         <p class="homework-label">Jouw huiswerk</p>
         <div class="homework-text">${richTextToHtml(nextLesson.lesson.homework)}</div>
-        ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie van deze les</button>' : ''}
+        ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie</button>' : ''}
       `,
     ]
     : [];
@@ -512,7 +506,6 @@ function renderWeeks() {
         const hasPresentation = Boolean(resolvePresentation(buildPresentationTarget(lesson)).presentation);
         return `
           <article class="lesson-card">
-            <p class="lesson-slot">Les ${escapeHtml(lesson.lessonKey || '')}</p>
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
             ${homework ? `<p><strong>Huiswerk:</strong> ${richTextToHtml(homework)}</p>` : ''}
