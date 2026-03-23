@@ -136,6 +136,19 @@ function lessonLetter(index) {
   return ['A', 'B', 'C'][Math.max(0, Math.min(2, index - 1))] || '';
 }
 
+function letterToIndex(value) {
+  const letter = String(value || '').trim().toUpperCase();
+  const code = letter.charCodeAt(0);
+  if (!letter || code < 65 || code > 90) return 0;
+  return code - 64;
+}
+
+function indexToLetter(value) {
+  const number = Number(value);
+  if (!Number.isInteger(number) || number < 1 || number > 26) return '';
+  return String.fromCharCode(64 + number);
+}
+
 function getWeekBounds(date = new Date()) {
   const day = date.getDay() || 7;
   const monday = new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -231,7 +244,22 @@ function classPlanningAliases(rawClassId) {
   if (upperGradeGroup) push(`${upperGradeGroup[1]}.${upperGradeGroup[2]}`);
 
   const upperGradePlanning = cid.match(/^([45])\.(\d+)$/);
-  if (upperGradePlanning) push(`${upperGradePlanning[1]}G${upperGradePlanning[2]}`);
+  if (upperGradePlanning) {
+    push(`${upperGradePlanning[1]}G${upperGradePlanning[2]}`);
+    if (upperGradePlanning[1] === '4') {
+      const letter = indexToLetter(Number(upperGradePlanning[2]));
+      if (letter) push(`G4${letter}`);
+    }
+  }
+
+  const upperGradeLetter = cid.match(/^G4([A-Z])$/);
+  if (upperGradeLetter) {
+    const idx = letterToIndex(upperGradeLetter[1]);
+    if (idx) {
+      push(`4G${idx}`);
+      push(`4.${idx}`);
+    }
+  }
 
   return aliases;
 }
