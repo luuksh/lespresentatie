@@ -27,6 +27,37 @@ NON_REGULAR_EXACT = {
 
 LESSON_SLOT_ORDER = {"A": 0, "B": 1, "C": 2}
 REMOVED_PROJECT_TOKENS = ("leesclub", "zinsbouwers")
+TAALTOPIA_HOMEWORK_BY_LESSON = {
+    "Les 1 - Naam, wereld en doelgroep": (
+        "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. "
+        "Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. "
+        "netschrift en pen mee"
+    ),
+    "Les 2 - Klanken en schrift": (
+        "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. "
+        "Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. "
+        "netschrift en pen mee"
+    ),
+    "Les 3 - Woorden en betekenissen": (
+        "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. "
+        "Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. "
+        "netschrift en pen mee"
+    ),
+    "Les 4 - Grammaticaregels": (
+        "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. "
+        "Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. "
+        "netschrift en pen mee"
+    ),
+    "Les 5 - Voorbeeldgesprek": (
+        "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. "
+        "Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. "
+        "netschrift en pen mee"
+    ),
+    "Les 6 - Creatief extra en presenteren": (
+        "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. "
+        "Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
+    ),
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -63,6 +94,18 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def ensure_homework_contains(homework: str, required_text: str) -> str:
+    homework = str(homework or "").strip()
+    required_text = str(required_text or "").strip()
+    if not required_text:
+        return homework
+    if not homework:
+        return required_text
+    if required_text.lower() in homework.lower():
+        return homework
+    return f"{homework} {required_text}"
+
+
 def normalize_lesson(row: object) -> dict:
     if isinstance(row, str):
         text = row.strip()
@@ -77,6 +120,12 @@ def normalize_lesson(row: object) -> dict:
         "lesson": str(row.get("lesson", "")).strip(),
     }
     homework = str(row.get("homework", "")).strip()
+    if out["project"] == "Taaltopia" and out["lesson"] in TAALTOPIA_HOMEWORK_BY_LESSON:
+        homework = TAALTOPIA_HOMEWORK_BY_LESSON[out["lesson"]]
+    elif out["project"] == "Heel veel lezen":
+        homework = ensure_homework_contains(homework, "leesboek en schoolpasje mee")
+    elif out["project"]:
+        homework = ensure_homework_contains(homework, "netschrift en pen mee")
     if homework:
         out["homework"] = homework
     for key in ("lessonKey", "presentationId", "presentationMarkerId"):
