@@ -30,31 +30,11 @@
       </div>
     </header>
 
-    <section class="portal-hero">
-      <div class="hero-copy">
-        <p class="hero-kicker">Openbare leerlingenomgeving</p>
-        <h1>Kies je klas, zie direct je huiswerk.</h1>
-        <p class="hero-text hero-text-compact">Selecteer je klas en kijk meteen wat je nodig hebt voor de eerstvolgende les Nederlands.</p>
-      </div>
-      <div class="hero-panel">
-        <p class="hero-panel-kicker">Start hier</p>
-        <label class="portal-field">
-          <span>Klas</span>
-          <select id="classSelect"></select>
-        </label>
-        <div class="hero-panel-actions">
-          <button id="openNextPresentationBtn" class="portal-button portal-button-primary" type="button">Open presentatie</button>
-          <button id="jumpToCurrentWeekBtn" class="portal-button portal-button-secondary" type="button">Bekijk planning</button>
-        </div>
-        <p id="portalMeta" class="portal-meta">Planning laden...</p>
-      </div>
-    </section>
-
-    <section class="next-lesson-panel">
-      <article class="next-lesson-card">
+    <section class="student-stage">
+      <article class="next-lesson-card next-lesson-card-primary">
         <div class="next-lesson-head">
           <div>
-            <p class="overview-label">Eerstvolgende les</p>
+            <p class="overview-label">Huiswerk voor je eerstvolgende les</p>
             <h2 id="currentWeekTitle">Nog geen les gevonden</h2>
           </div>
           <div id="currentWeekFocus" class="focus-band">Planning laden...</div>
@@ -62,21 +42,35 @@
         <p id="currentWeekSummary" class="overview-text">De planning wordt opgehaald.</p>
         <div id="homeworkSummary" class="stack-list next-lesson-homework"></div>
       </article>
-    </section>
 
-    <section class="portal-overview">
-      <article class="overview-card overview-card-compact">
-        <p class="overview-label">Huidige week</p>
-        <p class="overview-kpi" id="currentWeekChip">Week --</p>
-      </article>
-      <article class="overview-card overview-card-compact">
-        <p class="overview-label">Presentatie</p>
-        <p class="overview-kpi" id="presentationStatus">Nog niet gekoppeld</p>
-      </article>
+      <aside class="student-sidebar">
+        <article class="sidebar-card sidebar-card-primary">
+          <p class="hero-panel-kicker">Start hier</p>
+          <label class="portal-field">
+            <span>Klas</span>
+            <select id="classSelect"></select>
+          </label>
+          <div class="hero-panel-actions">
+            <button id="openNextPresentationBtn" class="portal-button portal-button-primary" type="button">Open presentatie</button>
+            <button id="jumpToCurrentWeekBtn" class="portal-button portal-button-secondary" type="button">Bekijk planning</button>
+          </div>
+          <p id="portalMeta" class="portal-meta">Planning laden...</p>
+        </article>
+
+        <article class="overview-card overview-card-compact overview-card-muted">
+          <p class="overview-label">Huidige week</p>
+          <p class="overview-kpi" id="currentWeekChip">Week --</p>
+        </article>
+
+        <article class="overview-card overview-card-compact overview-card-muted">
+          <p class="overview-label">Presentatie</p>
+          <p class="overview-kpi" id="presentationStatus">Nog niet gekoppeld</p>
+        </article>
+      </aside>
     </section>
 
     <details id="timelineDetails" class="timeline-details">
-      <summary class="timeline-summary">Bekijk de rest van de jaarplanning</summary>
+      <summary class="timeline-summary">Toon de rest van de jaarplanning</summary>
       <section class="timeline-head">
         <div>
           <p class="overview-label">Jaarplanning</p>

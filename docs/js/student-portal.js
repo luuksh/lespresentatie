@@ -476,7 +476,12 @@ function renderCurrentWeek(layerEntries) {
 
   const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
     ? [
-      `<strong>${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</strong><span>${richTextToHtml(nextLesson.lesson.homework)}</span>${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open deze presentatie</button>' : ''}`,
+      `
+        <p class="homework-meta">${escapeHtml(formatLessonDate(nextLesson.date))} · les ${escapeHtml(nextLesson.lessonKey || nextLesson.lesson.lessonKey || '')}</p>
+        <p class="homework-label">Jouw huiswerk</p>
+        <div class="homework-text">${richTextToHtml(nextLesson.lesson.homework)}</div>
+        ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie van deze les</button>' : ''}
+      `,
     ]
     : [];
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
