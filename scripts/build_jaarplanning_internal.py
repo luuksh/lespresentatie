@@ -26,6 +26,7 @@ NON_REGULAR_EXACT = {
 }
 
 LESSON_SLOT_ORDER = {"A": 0, "B": 1, "C": 2}
+REMOVED_PROJECT_TOKENS = ("leesclub", "zinsbouwers")
 
 
 def parse_args() -> argparse.Namespace:
@@ -83,6 +84,8 @@ def normalize_lesson(row: object) -> dict:
         if value:
             out[key] = value
     if not out["project"] and not out["lesson"]:
+        return {}
+    if should_remove_project_text(out["project"]):
         return {}
     return out
 
@@ -147,6 +150,8 @@ def normalize_entry(row: object) -> dict:
     }
     if note:
         out["note"] = note
+    if not out["lessons"] and not out["items"] and not note:
+        return {}
     return out
 
 
@@ -158,6 +163,11 @@ def is_non_regular_marker(project: str, lesson: str) -> bool:
     if normalized in NON_REGULAR_EXACT:
         return True
     return normalized.startswith(NON_REGULAR_PREFIXES)
+
+
+def should_remove_project_text(value: str) -> bool:
+    text = str(value or "").strip().casefold()
+    return any(token in text for token in REMOVED_PROJECT_TOKENS)
 
 
 def is_grade_1_class(class_id: str) -> bool:
@@ -204,6 +214,20 @@ def reposition_grade_1_reading(class_id: str, lessons: list[dict]) -> list[dict]
         return shifted
 
     return lessons
+
+
+def filter_presentations(presentations: dict) -> dict:
+    kept: dict = {}
+    for key, value in presentations.items():
+        if should_remove_project_text(key):
+            continue
+        if isinstance(value, dict):
+            project = str(value.get("project", "")).strip()
+            title = str(value.get("title", "")).strip()
+            if should_remove_project_text(project) or should_remove_project_text(title):
+                continue
+        kept[key] = value
+    return kept
 
 
 def merge_entry(base: dict, extra: dict) -> dict:
@@ -289,7 +313,7 @@ def main() -> int:
 
     presentations = raw.get("presentations") if isinstance(raw, dict) else None
     if isinstance(presentations, dict):
-        payload["presentations"] = presentations
+        payload["presentations"] = filter_presentations(presentations)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
