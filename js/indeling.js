@@ -25,9 +25,13 @@ function shuffleInPlace(arr) {
 
 async function laadLeerlingen(klasnaam = 'G1D') {
   try {
+    const rosterSource = window.__rosterSource;
+    if (rosterSource?.loadStudentsForClass) {
+      const lijst = await rosterSource.loadStudentsForClass(klasnaam);
+      if (Array.isArray(lijst) && lijst.length) return lijst;
+    }
     const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('Netwerkfout bij ophalen JSON');
-
     const data = await res.json();
     const lijst = data[klasnaam];
     if (!Array.isArray(lijst)) throw new Error(`Klas ${klasnaam} niet gevonden of onjuist formaat`);

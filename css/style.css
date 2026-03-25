@@ -987,11 +987,41 @@ body::after {
   gap: 10px;
 }
 
+.jaarplanning-head-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .jaarplanning-week {
   margin: 0;
   font-size: 13px;
   font-weight: 900;
   color: #1b3c66;
+}
+
+.jaarplanning-drag-handle {
+  appearance: none;
+  border: 1px dashed #9db8dc;
+  border-radius: 999px;
+  background: rgba(226, 237, 252, 0.95);
+  color: #34577f;
+  padding: 2px 8px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: grab;
+  white-space: nowrap;
+}
+
+.jaarplanning-drag-handle:active {
+  cursor: grabbing;
+}
+
+.jaarplanning-widget.dragging-widget .jaarplanning-panel {
+  box-shadow: 0 14px 28px rgba(24, 49, 86, 0.2);
 }
 
 .jaarplanning-refresh {

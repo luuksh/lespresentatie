@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="55%" stop-color="#f2ddb2"/>
+      <stop offset="100%" stop-color="#d9923b"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" rx="46" fill="url(#bg)" stroke="#5b3a1a" stroke-width="10"/>
+  <path d="M70 82c20-8 40-8 58 0v92c-18-8-38-8-58 0z" fill="#fffdf7" stroke="#5b3a1a" stroke-width="8"/>
+  <path d="M128 82c18-8 38-8 58 0v92c-20-8-40-8-58 0z" fill="#fff6e4" stroke="#5b3a1a" stroke-width="8"/>
+  <path d="M128 82v92" stroke="#5b3a1a" stroke-width="7"/>
+  <path d="M90 108h22M90 130h24M90 152h20M144 108h22M144 130h24M144 152h20" stroke="#d9923b" stroke-linecap="round" stroke-width="8"/>
+  <text x="128" y="223" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#5b3a1a">HEEL VEEL LEZEN</text>

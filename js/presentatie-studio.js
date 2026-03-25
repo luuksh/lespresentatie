@@ -105,6 +105,7 @@ function compilePresentationFromMarkerDecks(presentation, orderedMarkers, projec
     type: 'title',
     title: String(presentation.title || projectName).trim() || projectName,
     subtitle: String(presentation.subtitle || projectName).trim() || projectName,
+    showProjectLogo: true,
   };
   const slides = [titleSlide];
   const markers = {};
@@ -120,6 +121,7 @@ function compilePresentationFromMarkerDecks(presentation, orderedMarkers, projec
         type: String(slide.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
         title: String(slide.title || '').trim(),
         subtitle: String(slide.subtitle || '').trim(),
+        showProjectLogo: Boolean(slide.showProjectLogo),
         items: Array.isArray(slide.items)
           ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
           : [],

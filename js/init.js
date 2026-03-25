@@ -76,11 +76,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   let lastRenderedSlideIndex = -1;
 
   try {
-    const res = await fetch('js/leerlingen_per_klas.json', { cache: 'no-cache' });
-    const klassen = await res.json();
+    const rosterSource = window.__rosterSource;
+    const klassen = rosterSource?.loadRosterData
+      ? await rosterSource.loadRosterData()
+      : {};
+    const classIds = rosterSource?.listClassIds
+      ? await rosterSource.listClassIds()
+      : Object.keys(klassen);
 
     klasSelect.innerHTML = '';
-    for (const klas of Object.keys(klassen)) {
+    for (const klas of classIds) {
       const option = document.createElement('option');
       option.value = klas;
       option.textContent = `Klas ${klas}`;
@@ -393,6 +398,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         type: 'title',
         title: presentation.title,
         subtitle: bundle.project,
+        showProjectLogo: true,
       };
       const rebuiltSlides = [titleSlide];
       const rebuiltMarkers = {};
@@ -407,6 +413,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             type: String(slide.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
             title: String(slide.title || '').trim(),
             subtitle: String(slide.subtitle || '').trim(),
+            showProjectLogo: Boolean(slide.showProjectLogo),
             items: Array.isArray(slide.items)
               ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
               : [],
@@ -1313,12 +1320,42 @@ document.addEventListener('DOMContentLoaded', async () => {
       return fragments.join('');
     };
 
+    const logoPath = String(activePresentation?.projectLogo || '').trim();
+    const logoAlt = escapeHtml(String(activePresentation?.projectLogoAlt || activePresentation?.project || 'Projectlogo').trim());
+    const showLogo = Boolean(logoPath) && (slide.type === 'title' || slide.showProjectLogo || activePresentation?.logoMode === 'all');
+    const logoHtml = showLogo
+      ? `<div class="presentation-slide-logo-wrap"><img class="presentation-slide-logo" src="${escapeHtml(logoPath)}" alt="${logoAlt}"></div>`
+      : '';
+    const theme = activePresentation?.projectTheme && typeof activePresentation.projectTheme === 'object'
+      ? activePresentation.projectTheme
+      : {};
+    const themeVars = [
+      ['--slide-border', theme.borderColor],
+      ['--slide-bg-start', theme.bgStart],
+      ['--slide-bg-mid', theme.bgMid],
+      ['--slide-bg-end', theme.bgEnd],
+      ['--slide-shadow', theme.shadowColor],
+      ['--slide-topbar-start', theme.accent],
+      ['--slide-topbar-mid', theme.accent2],
+      ['--slide-topbar-end', theme.accent3],
+      ['--slide-title-color', theme.titleColor],
+      ['--slide-subtitle-color', theme.subtitleColor],
+      ['--slide-bullet-color', theme.bulletColor],
+      ['--slide-link-color', theme.linkColor],
+      ['--slide-link-hover', theme.linkHoverColor],
+    ]
+      .filter(([, value]) => String(value || '').trim())
+      .map(([key, value]) => `${key}:${escapeHtml(String(value).trim())}`)
+      .join(';');
+    const cardStyleAttr = themeVars ? ` style="${themeVars}"` : '';
+
     if (slide.type === 'bullets') {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       const items = Array.isArray(slide.items) ? slide.items : [];
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card">
+        <article class="presentation-slide-card"${cardStyleAttr}>
+          ${logoHtml}
           <h2 class="presentation-slide-title">${title}</h2>
           ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
           <ul class="presentation-slide-bullets">
@@ -1330,7 +1367,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const title = String(slide.title || activePresentation.title || 'Presentatie').trim();
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card">
+        <article class="presentation-slide-card"${cardStyleAttr}>
+          ${logoHtml}
           <h1 class="presentation-slide-title">${title}</h1>
           ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
         </article>
@@ -1417,6 +1455,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function hasAgendaConnection() {
     return Boolean(agendaSourceUrl || agendaLastResolvedSource || agendaEntries.length);
+  }
+
+  function agendaFeedWindow(entries = []) {
+    if (!Array.isArray(entries) || !entries.length) return null;
+    const sorted = [...entries].sort((a, b) => a.start - b.start);
+    return {
+      firstStart: sorted[0]?.start || null,
+      lastEnd: sorted[sorted.length - 1]?.end || null,
+    };
+  }
+
+  function agendaFeedExpired(entries = [], now = new Date()) {
+    const window = agendaFeedWindow(entries);
+    return Boolean(window?.lastEnd && window.lastEnd < now);
   }
 
   function agendaCoversDate(date = new Date()) {
@@ -1647,12 +1699,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const hasFourthGrade = [...buckets.keys()].some((sourceClass) => classIdAliases(sourceClass).some((alias) => /^4/.test(normalizeClassId(alias))));
     const sourceLabel = agendaLastResolvedSource || '(onbekend)';
-    agendaPreviewMeta.textContent = `Rooster-preview: ${sorted.length} events · ${buckets.size} klascodes · bron: ${sourceLabel}`;
+    const feedWindow = agendaFeedWindow(sorted);
+    const expiredLabel = agendaFeedExpired(sorted, now) && feedWindow?.lastEnd
+      ? ` · feed loopt t/m ${feedWindow.lastEnd.toLocaleDateString('nl-NL', { weekday: 'short', day: '2-digit', month: '2-digit' })} ${feedWindow.lastEnd.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`
+      : '';
+    agendaPreviewMeta.textContent = `Rooster-preview: ${sorted.length} events · ${buckets.size} klascodes · bron: ${sourceLabel}${expiredLabel}`;
 
     const warning = hasFourthGrade
       ? ''
       : '<li><strong>Waarschuwing:</strong> geen leerjaar 4 in deze feed gevonden (geen G4/4G* / NETL4-5 zichtbaar).</li>';
-    agendaPreviewList.innerHTML = `${warning}${items.map((line) => `<li>${line}</li>`).join('')}`;
+    const staleWarning = agendaFeedExpired(sorted, now) && feedWindow?.lastEnd
+      ? `<li><strong>Waarschuwing:</strong> deze agenda-feed is verlopen; laatste les eindigde op ${feedWindow.lastEnd.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' })} om ${feedWindow.lastEnd.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}.</li>`
+      : '';
+    agendaPreviewList.innerHTML = `${staleWarning}${warning}${items.map((line) => `<li>${line}</li>`).join('')}`;
   }
 
   function formatShortDate(date) {
@@ -1873,6 +1932,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
       }
+    } else if (agendaConnected && agendaFeedExpired(agendaEntries, now)) {
+      setPlanningStatus('Zermelo-feed is verlopen; lokale JSON moet opnieuw gesynchroniseerd worden', 'warn');
     } else if (agendaConnected && !agendaHasTodayEntry) {
       setPlanningStatus('Zermelo-feed is verouderd of bevat geen lessen voor vandaag', 'warn');
     } else if (agendaConnected) {
@@ -2342,15 +2403,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   applyAgendaSource(resolveAgendaSourceUrl(), false);
   window.addEventListener('focus', () => {
-    if (!agendaSourceUrl) return;
+    if (!agendaSourceUrl && !resolveAgendaFallbackSourceUrl()) return;
     fetchAgenda();
   });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden || !agendaSourceUrl) return;
+    if (document.hidden || (!agendaSourceUrl && !resolveAgendaFallbackSourceUrl())) return;
     fetchAgenda();
   });
   window.addEventListener('online', () => {
-    if (!agendaSourceUrl) return;
+    if (!agendaSourceUrl && !resolveAgendaFallbackSourceUrl()) return;
     fetchAgenda();
   });
   window.addEventListener('storage', (event) => {

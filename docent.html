@@ -16,6 +16,7 @@
       agendaSourceFallbackUrl: 'js/zermelo-agenda-live.json'
     };
   </script>
+  <script src="js/roster-source.js?v=20260323-01"></script>
   <script type="module" src="js/indeling.js?v=20260309-01"></script>
   <script type="module" src="js/init.js?v=20260308-02"></script>
 </head>
@@ -192,7 +193,16 @@
   <aside id="jaarplanningWidget" class="jaarplanning-widget" aria-label="Programma vandaag">
     <section id="jaarplanningPanel" class="jaarplanning-panel" aria-live="polite">
       <div class="jaarplanning-head">
-        <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
+        <div class="jaarplanning-head-main">
+          <p id="jaarplanningWeekLabel" class="jaarplanning-week">Week -</p>
+          <button
+            id="jaarplanningDragHandle"
+            type="button"
+            class="jaarplanning-drag-handle"
+            aria-label="Programma vandaag verslepen"
+            title="Sleep om dit vak te verplaatsen"
+          >Verplaats</button>
+        </div>
         <button id="jaarplanningRefreshBtn" type="button" class="btn btn-secondary jaarplanning-refresh">Ververs</button>
       </div>
       <p id="jaarplanningStatus" class="jaarplanning-status" data-state="info">Studio laden...</p>
@@ -319,7 +329,6 @@
       const PANEL_ID = 'magisterAssistPanel';
       const GRID_ID = 'plattegrond';
       const CARD_SELECTOR = '.tafel';
-      const DATA_PATH = 'js/leerlingen_per_klas.json';
 
       const panel = document.getElementById(PANEL_ID);
       const closeBtn = document.getElementById('closeMagisterAssistBtn');
@@ -329,7 +338,6 @@
       const titleEl = document.getElementById('magisterAssistTitle');
 
       const collator = new Intl.Collator('nl-NL', { sensitivity: 'base', numeric: true });
-      let rosterPromise = null;
       let lastFocus = null;
       let previousAbsentCount = 0;
       let dismissedForCurrentLayout = false;
@@ -355,12 +363,9 @@
       }
 
       async function readRoster() {
-        if (!rosterPromise) {
-          rosterPromise = fetch(DATA_PATH, { cache: 'no-cache' })
-            .then((res) => (res.ok ? res.json() : {}))
-            .catch(() => ({}));
-        }
-        return rosterPromise;
+        return window.__rosterSource?.loadRosterData
+          ? window.__rosterSource.loadRosterData()
+          : {};
       }
 
       function currentClass() {
@@ -928,6 +933,8 @@
 
       const dial = document.getElementById('clockDial');
       const timerDock = document.getElementById('timerDock');
+      const jaarplanningWidget = document.getElementById('jaarplanningWidget');
+      const jaarplanningDragHandle = document.getElementById('jaarplanningDragHandle');
 
       if (!clockFace || !liveProgress || !progress || !liveHand || !hand || !timeEl || !stateEl || !dial) return;
 
@@ -1210,6 +1217,19 @@
         timerDock.style.top = `${top}px`;
       }
 
+      function moveWidget(clientX, clientY) {
+        if (!jaarplanningWidget) return;
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const widgetRect = jaarplanningWidget.getBoundingClientRect();
+        const maxLeft = Math.max(0, vw - widgetRect.width);
+        const maxTop = Math.max(0, vh - widgetRect.height);
+        const left = clamp(clientX - dragOffsetX, 0, maxLeft);
+        const top = clamp(clientY - dragOffsetY, 0, maxTop);
+        jaarplanningWidget.style.left = `${left}px`;
+        jaarplanningWidget.style.top = `${top}px`;
+      }
+
       function setEdgeCursor(clientX, clientY) {
         if (interactionMode) return;
         clockFace.classList.toggle('edge-draggable', isNearClockEdge(clientX, clientY));
@@ -1262,6 +1282,35 @@
       clockFace.addEventListener('pointerleave', () => {
         if (!interactionMode) clockFace.classList.remove('edge-draggable');
       });
+
+      jaarplanningDragHandle?.addEventListener('pointerdown', (e) => {
+        if (!jaarplanningWidget || getComputedStyle(jaarplanningWidget).position !== 'fixed') return;
+        e.preventDefault();
+        jaarplanningDragHandle.setPointerCapture(e.pointerId);
+        interactionMode = 'jaarplanning-drag';
+        const widgetRect = jaarplanningWidget.getBoundingClientRect();
+        jaarplanningWidget.style.right = 'auto';
+        jaarplanningWidget.style.bottom = 'auto';
+        jaarplanningWidget.style.left = `${widgetRect.left}px`;
+        jaarplanningWidget.style.top = `${widgetRect.top}px`;
+        dragOffsetX = e.clientX - widgetRect.left;
+        dragOffsetY = e.clientY - widgetRect.top;
+        jaarplanningWidget.classList.add('dragging-widget');
+      });
+
+      jaarplanningDragHandle?.addEventListener('pointermove', (e) => {
+        if (interactionMode !== 'jaarplanning-drag') return;
+        moveWidget(e.clientX, e.clientY);
+      });
+
+      const stopWidgetDrag = () => {
+        if (interactionMode !== 'jaarplanning-drag') return;
+        interactionMode = null;
+        jaarplanningWidget?.classList.remove('dragging-widget');
+      };
+
+      jaarplanningDragHandle?.addEventListener('pointerup', stopWidgetDrag);
+      jaarplanningDragHandle?.addEventListener('pointercancel', stopWidgetDrag);
 
       window.addEventListener('agenda:clock-marker-update', (event) => {
         const detail = event?.detail || {};
