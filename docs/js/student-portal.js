@@ -190,6 +190,18 @@ function formatLessonDate(value) {
   }).format(date);
 }
 
+function formatLessonDateTime(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('nl-NL', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date);
+}
+
 function normalizePlanEntry(entry) {
   return {
     lessons: Array.isArray(entry?.lessons) ? entry.lessons : [],
@@ -302,9 +314,47 @@ function getEntryForWeek(classId, week) {
   return { classId: normalizeClassId(classId), week: String(week), ...merged };
 }
 
+function agendaMatchesClass(entry, classId) {
+  const agendaClassId = normalizeClassId(entry?.classId);
+  if (!agendaClassId) return false;
+  return classPlanningAliases(classId).includes(agendaClassId);
+}
+
+function getAgendaLessonsForWeek(classId, week) {
+  const weekNumber = Number(week);
+  return state.agendaEntries
+    .filter((entry) => (
+      agendaMatchesClass(entry, classId)
+      && isDutchAgendaEntry(entry)
+      && isoWeekForDate(entry.start) === weekNumber
+    ))
+    .sort((left, right) => left.start - right.start);
+}
+
+function getScheduledLessonForWeek(classId, week, lessonKey) {
+  const lessons = getAgendaLessonsForWeek(classId, week);
+  const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
+  if (slotIndex < 0) return null;
+  return lessons[slotIndex] || null;
+}
+
+function sameMinute(valueA, valueB) {
+  return Math.abs(valueA.getTime() - valueB.getTime()) < 60000;
+}
+
+function getPairedBlockAgendaEntry(classId, firstEntry) {
+  if (!firstEntry) return null;
+  return state.agendaEntries.find((entry) => (
+    entry !== firstEntry
+    && agendaMatchesClass(entry, classId)
+    && isDutchAgendaEntry(entry)
+    && sameMinute(entry.start, firstEntry.end)
+  )) || null;
+}
+
 function findNextLessonForClass(classId, now = new Date()) {
   const nextAgendaEntry = state.agendaEntries.find((entry) => (
-    normalizeClassId(entry.classId) === normalizeClassId(classId)
+    agendaMatchesClass(entry, classId)
     && isDutchAgendaEntry(entry)
     && entry.start > now
   )) || null;
@@ -318,13 +368,26 @@ function findNextLessonForClass(classId, now = new Date()) {
   const lessonKey = lessonLetter(Math.min(3, lessonIndex));
   const lesson = (entry.lessons || []).find((candidate) => String(candidate.lessonKey || '').toUpperCase() === lessonKey) || null;
   if (!lesson) return null;
-  const target = buildPresentationTarget(lesson);
+  const target = buildPresentationTarget({
+    ...lesson,
+    scheduledDate: nextAgendaEntry.start.toISOString(),
+  });
   const resolved = resolvePresentation(target);
+  const pairedAgendaEntry = getPairedBlockAgendaEntry(classId, nextAgendaEntry);
+  const pairedLessonIndex = pairedAgendaEntry ? lessonNumberForAgendaWeek(state.agendaEntries, pairedAgendaEntry) : 0;
+  const pairedLessonKey = lessonLetter(Math.min(3, pairedLessonIndex));
+  const pairedLesson = pairedAgendaEntry
+    ? (entry.lessons || []).find((candidate) => String(candidate.lessonKey || '').toUpperCase() === pairedLessonKey) || null
+    : null;
   return {
     entry,
     lesson,
     lessonKey,
     date: nextAgendaEntry.start,
+    pairedLesson,
+    pairedLessonKey,
+    pairedDate: pairedAgendaEntry?.start || null,
+    isBlockHour: Boolean(pairedAgendaEntry && pairedLesson),
     target,
     hasPresentation: Boolean(resolved.presentation),
   };
@@ -400,7 +463,16 @@ function buildPresentationTarget(lesson) {
   const project = String(lesson?.project || '').trim();
   const presentationId = String(lesson?.presentationId || '').trim() || projectDeckId(project);
   const markerId = String(lesson?.presentationMarkerId || '').trim() || lessonMarkerId(title);
-  return { title, project, presentationId, markerId };
+  const scheduledDate = lesson?.scheduledDate ? new Date(lesson.scheduledDate) : null;
+  return {
+    title,
+    project,
+    presentationId,
+    markerId,
+    scheduledDate: scheduledDate && !Number.isNaN(scheduledDate.getTime())
+      ? scheduledDate.toISOString()
+      : '',
+  };
 }
 
 function resolvePresentation(target) {
@@ -441,9 +513,11 @@ function openPresentation(target) {
   state.activeSlideIndex = resolved.slideIndex;
   dialogTitle.textContent = target.project ? `${target.project} · ${target.title}` : target.title;
   if (dialogMeta) {
-    dialogMeta.textContent = target.project
-      ? `${target.project} · start op lesonderdeel`
-      : 'Start op lesonderdeel';
+    const parts = [];
+    if (target.project) parts.push(target.project);
+    if (target.scheduledDate) parts.push(formatLessonDateTime(target.scheduledDate));
+    parts.push('start op lesonderdeel');
+    dialogMeta.textContent = parts.join(' · ');
   }
   renderPresentationSlide();
   if (!presentationDialog.open) presentationDialog.showModal();
@@ -513,7 +587,12 @@ function renderCurrentWeek(layerEntries) {
   }
 
   const week = parseWeek(currentEntry.week);
-  const homeworkCount = nextLesson && String(nextLesson.lesson.homework || '').trim() ? 1 : 0;
+  const homeworkLessons = nextLesson
+    ? [nextLesson.lesson, nextLesson.isBlockHour ? nextLesson.pairedLesson : null]
+      .filter(Boolean)
+      .filter((lesson) => String(lesson.homework || '').trim())
+    : [];
+  const homeworkCount = homeworkLessons.length;
   const lessonCount = Array.isArray(currentEntry.lessons) ? currentEntry.lessons.length : 0;
   currentWeekTitle.textContent = nextLesson
     ? `${nextLesson.lesson.lesson || nextLesson.lesson.project || 'Les'}`
@@ -528,17 +607,23 @@ function renderCurrentWeek(layerEntries) {
   if (heroPresentationCount) heroPresentationCount.textContent = nextLesson?.hasPresentation ? 'Klaar' : '-';
   if (heroHomeworkCount) heroHomeworkCount.textContent = String(homeworkCount);
 
-  const homeworkRows = nextLesson && String(nextLesson.lesson.homework || '').trim()
+  const homeworkRows = homeworkLessons.length
     ? (() => {
-      const homework = formatHomeworkContent(nextLesson.lesson.homework);
-      return [
-      `
-        <p class="homework-label">Jouw huiswerk</p>
-        ${homework.textHtml ? `<div class="homework-text">${homework.textHtml}</div>` : ''}
-        ${homework.materialsHtml}
-        ${nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie</button>' : ''}
-      `,
-      ];
+      const rows = homeworkLessons.map((lesson, index) => {
+        const homework = formatHomeworkContent(lesson.homework);
+        const isSecondBlockLesson = index === 1 && nextLesson?.isBlockHour;
+        const label = isSecondBlockLesson
+          ? 'Huiswerk voor het tweede uur van je blokuur'
+          : (nextLesson?.isBlockHour ? 'Huiswerk voor het eerste uur van je blokuur' : 'Jouw huiswerk');
+        return `
+          <p class="homework-label">${escapeHtml(label)}</p>
+          <p class="lesson-date">${escapeHtml(formatLessonDate(isSecondBlockLesson ? nextLesson.pairedDate : nextLesson.date))}</p>
+          ${homework.textHtml ? `<div class="homework-text">${homework.textHtml}</div>` : ''}
+          ${homework.materialsHtml}
+          ${index === 0 && nextLesson.hasPresentation ? '<button class="lesson-link next-lesson-link" type="button" data-next-presentation="1">Open presentatie</button>' : ''}
+        `;
+      });
+      return rows;
     })()
     : [];
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
@@ -560,23 +645,31 @@ function renderWeeks() {
     article.className = 'week-card';
     article.id = `week-${week}`;
     if (week === state.currentWeek) article.classList.add('is-current');
+    const agendaLessons = getAgendaLessonsForWeek(state.currentClass, week);
 
     const lessonsHtml = (entry.lessons || []).length
       ? `<div class="lesson-stack">${entry.lessons.map((lesson) => {
         const title = String(lesson.lesson || '').trim() || 'Les zonder titel';
         const project = String(lesson.project || '').trim();
         const homework = String(lesson.homework || '').trim();
-        const hasPresentation = Boolean(resolvePresentation(buildPresentationTarget(lesson)).presentation);
+        const scheduledLesson = getScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey) || null;
+        const scheduledDate = scheduledLesson?.start || null;
+        const target = buildPresentationTarget({
+          ...lesson,
+          scheduledDate: scheduledDate ? scheduledDate.toISOString() : '',
+        });
+        const hasPresentation = Boolean(resolvePresentation(target).presentation);
         return `
           <article class="lesson-card">
+            ${scheduledDate ? `<p class="lesson-date">${escapeHtml(formatLessonDate(scheduledDate))}</p>` : ''}
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
             ${homework ? `<p><strong>Huiswerk:</strong> ${richTextToHtml(homework)}</p>` : ''}
-            ${hasPresentation ? `<button class="lesson-link" type="button" data-presentation='${escapeHtml(JSON.stringify(buildPresentationTarget(lesson)))}'>Open presentatie</button>` : ''}
+            ${hasPresentation ? `<button class="lesson-link" type="button" data-presentation='${escapeHtml(JSON.stringify(target))}'>Open presentatie</button>` : ''}
           </article>
         `;
       }).join('')}</div>`
-      : '<article class="empty-state">Geen lespresentaties ingepland in deze week.</article>';
+      : `<article class="empty-state">${agendaLessons.length ? 'Er staan wel Zermelo-lessen in deze week, maar er is nog geen lesinhoud gekoppeld.' : 'Geen lespresentaties ingepland in deze week.'}</article>`;
 
     article.innerHTML = `
       <header class="week-card-head">
