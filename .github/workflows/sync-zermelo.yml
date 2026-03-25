@@ -1,0 +1,61 @@
+name: Sync Zermelo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-zermelo
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify required secrets
+        env:
+          ZERMELO_ICAL_URL: ${{ secrets.ZERMELO_ICAL_URL }}
+        run: |
+          if [ -z "${ZERMELO_ICAL_URL}" ]; then
+            echo "Missing required GitHub secret: ZERMELO_ICAL_URL" >&2
+            exit 1
+          fi
+
+      - name: Sync Zermelo agenda
+        env:
+          ZERMELO_ICAL_URL: ${{ secrets.ZERMELO_ICAL_URL }}
+        run: python3 scripts/sync_zermelo_agenda.py
+
+      - name: Sync Zermelo leerlingen
+        env:
+          ZERMELO_LEERLINGEN_URL: ${{ secrets.ZERMELO_LEERLINGEN_URL }}
+        run: python3 scripts/sync_zermelo_leerlingen.py
+
+      - name: Publish synced feeds to docs
+        run: |
+          cp js/zermelo-agenda-live.json docs/js/zermelo-agenda-live.json
+          cp js/zermelo-leerlingen-live.json docs/js/zermelo-leerlingen-live.json
+
+      - name: Commit updated feeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/zermelo-agenda-live.json docs/js/zermelo-agenda-live.json js/zermelo-leerlingen-live.json docs/js/zermelo-leerlingen-live.json
+          if git diff --cached --quiet; then
+            echo "No feed changes to commit."
+            exit 0
+          fi
+          git commit -m "Sync Zermelo feeds"
+          git push

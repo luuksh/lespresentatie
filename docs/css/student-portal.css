@@ -322,6 +322,21 @@ body::before {
   color: var(--portal-accent);
 }
 
+.homework-sublabel {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--portal-primary);
+}
+
+.block-homework-section + .block-homework-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15, 118, 110, 0.12);
+}
+
 .homework-text {
   font-size: 1.2rem;
   line-height: 1.65;

@@ -34,3 +34,21 @@ Nog makkelijker op Mac:
 ## Belangrijk
 
 Als alleen `docs/` gepubliceerd wordt, kunnen leerlingen niet bij jouw lokale docentomgeving.
+
+## Zermelo online automatisch verversen
+
+Voor GitHub Pages is de beste route om de Zermelo-iCal automatisch naar JSON te laten omzetten via GitHub Actions.
+
+De workflow staat in [sync-zermelo.yml](/Users/luukhijne/Desktop/Klassenplattegrond/.github/workflows/sync-zermelo.yml) en doet dit elke 15 minuten:
+
+- haalt de Zermelo iCal opnieuw op
+- schrijft `js/zermelo-agenda-live.json`
+- kopieert die feed ook naar `docs/js/zermelo-agenda-live.json`
+- commit en pusht alleen als de feed echt veranderd is
+
+Eenmalig instellen in GitHub repository settings:
+
+- secret `ZERMELO_ICAL_URL`: jouw privé iCal-link uit Zermelo
+- optioneel secret `ZERMELO_LEERLINGEN_URL`: JSON-bron voor leerlingenlijsten
+
+Daarmee blijft de online leerlingenomgeving op GitHub Pages automatisch meelopen met de Zermelo-feed, zonder lokale server.
