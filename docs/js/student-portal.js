@@ -37,6 +37,7 @@ const state = {
   activePresentationTarget: null,
   activeSlideIndex: 0,
   nextLessonTarget: null,
+  nextLessonAnchorId: null,
 };
 
 function normalizeClassId(raw) {
@@ -649,6 +650,9 @@ function renderCurrentWeek(layerEntries) {
   const currentEntry = getEntryForWeek(state.currentClass, state.currentWeek) || layerEntries[0] || null;
   const nextLesson = findNextLessonForClass(state.currentClass, new Date());
   state.nextLessonTarget = nextLesson?.hasPresentation ? nextLesson.target : null;
+  state.nextLessonAnchorId = nextLesson
+    ? `lesson-${normalizeClassId(state.currentClass)}-${parseWeek(nextLesson.entry?.week)}-${String(nextLesson.lessonKey || '').toUpperCase()}`
+    : null;
   if (openNextPresentationBtn) openNextPresentationBtn.disabled = !state.nextLessonTarget;
   if (!currentEntry) {
     currentWeekTitle.textContent = 'Nog geen les gevonden';
@@ -724,6 +728,7 @@ function renderCurrentWeek(layerEntries) {
 
 function renderWeeks() {
   const entries = getEntriesForClass(state.currentClass);
+  const nextLesson = findNextLessonForClass(state.currentClass, new Date());
   weeksGrid.replaceChildren();
   weekJumpBar?.replaceChildren();
 
@@ -745,6 +750,13 @@ function renderWeeks() {
         const title = String(lesson.lesson || '').trim() || 'Les zonder titel';
         const project = String(lesson.project || '').trim();
         const homework = String(lesson.homework || '').trim();
+        const lessonKey = String(lesson.lessonKey || '').trim().toUpperCase();
+        const isNextLesson = Boolean(
+          nextLesson
+          && parseWeek(nextLesson.entry?.week) === week
+          && String(nextLesson.lessonKey || '').toUpperCase() === lessonKey
+        );
+        const lessonAnchorId = `lesson-${normalizeClassId(state.currentClass)}-${week}-${lessonKey}`;
         const scheduledLesson = getScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
           || inferScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
           || null;
@@ -755,7 +767,7 @@ function renderWeeks() {
         });
         const hasPresentation = Boolean(resolvePresentation(target).presentation);
         return `
-          <article class="lesson-card">
+          <article class="lesson-card${isNextLesson ? ' is-next-lesson' : ''}" id="${escapeHtml(lessonAnchorId)}">
             ${scheduledDate ? `<p class="lesson-date">${escapeHtml(formatLessonDate(scheduledDate))}${scheduledLesson?.inferred ? ' (verwacht)' : ''}</p>` : ''}
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
@@ -864,6 +876,11 @@ classSelect?.addEventListener('change', () => {
 
 jumpToCurrentWeekBtn?.addEventListener('click', () => {
   if (timelineDetails) timelineDetails.open = true;
+  const nextLessonEl = state.nextLessonAnchorId ? document.getElementById(state.nextLessonAnchorId) : null;
+  if (nextLessonEl) {
+    nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
   document.getElementById(`week-${state.currentWeek}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
