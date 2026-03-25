@@ -445,6 +445,9 @@ function findNextLessonForClass(classId, now = new Date()) {
   const lesson = (entry.lessons || []).find((candidate) => String(candidate.lessonKey || '').toUpperCase() === lessonKey) || null;
   if (!lesson) return null;
   const target = buildPresentationTarget({
+    classId,
+    week: String(entry.week),
+    lessonKey,
     ...lesson,
     scheduledDate: nextAgendaEntry.start.toISOString(),
   });
@@ -522,6 +525,33 @@ function formatHomeworkContent(value) {
   };
 }
 
+function parseHomeworkForSlide(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return { text: '', materials: [] };
+  const materials = [];
+  let text = raw;
+  const materialPatterns = [
+    {
+      pattern: /(?:^|[\s.])netschrift en pen mee(?:[\s.]|$)/i,
+      label: 'Netschrift en pen mee',
+    },
+    {
+      pattern: /(?:^|[\s.])leesboek en schoolpasje mee(?:[\s.]|$)/i,
+      label: 'Leesboek en schoolpasje mee',
+    },
+  ];
+
+  for (const item of materialPatterns) {
+    if (item.pattern.test(text)) {
+      materials.push(item.label);
+      text = text.replace(item.pattern, ' ').trim();
+    }
+  }
+
+  text = text.replace(/\s+\./g, '.').replace(/\s{2,}/g, ' ').trim();
+  return { text, materials };
+}
+
 function projectDeckId(project) {
   return `project-${String(project || '')
     .trim()
@@ -541,6 +571,9 @@ function buildPresentationTarget(lesson) {
   const markerId = String(lesson?.presentationMarkerId || '').trim() || lessonMarkerId(title);
   const scheduledDate = lesson?.scheduledDate ? new Date(lesson.scheduledDate) : null;
   return {
+    classId: normalizeClassId(lesson?.classId || state.currentClass),
+    week: String(lesson?.week || '').trim(),
+    lessonKey: String(lesson?.lessonKey || '').trim().toUpperCase(),
     title,
     project,
     presentationId,
@@ -560,6 +593,69 @@ function resolvePresentation(target) {
     presentation,
     slideIndex: Number.isInteger(markerIndex) ? markerIndex : 0,
   };
+}
+
+function getLessonOrderValue(lessonKey) {
+  return ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
+}
+
+function getOrderedLessonsForClass(classId) {
+  return getEntriesForClass(classId)
+    .flatMap((entry) => (entry.lessons || []).map((lesson) => ({
+      classId: normalizeClassId(classId),
+      week: String(entry.week),
+      ...lesson,
+    })))
+    .filter((lesson) => String(lesson.lessonKey || '').trim())
+    .sort((left, right) => {
+      const weekDelta = parseWeek(left.week) - parseWeek(right.week);
+      if (weekDelta !== 0) return weekDelta;
+      return getLessonOrderValue(left.lessonKey) - getLessonOrderValue(right.lessonKey);
+    });
+}
+
+function getHomeworkPreviewSlide(target) {
+  const classId = normalizeClassId(target?.classId || state.currentClass);
+  const week = String(target?.week || '').trim();
+  const lessonKey = String(target?.lessonKey || '').trim().toUpperCase();
+  if (!classId || !week || !lessonKey) return null;
+
+  const lessons = getOrderedLessonsForClass(classId);
+  const index = lessons.findIndex((lesson) => (
+    normalizeClassId(lesson.classId) === classId
+    && String(lesson.week) === week
+    && String(lesson.lessonKey || '').trim().toUpperCase() === lessonKey
+  ));
+  if (index < 0) return null;
+
+  const nextLesson = lessons[index + 1] || null;
+  if (!nextLesson) return null;
+  const homework = String(nextLesson.homework || '').trim();
+  if (!homework) return null;
+
+  const parsed = parseHomeworkForSlide(homework);
+  const scheduledLesson = getScheduledLessonForWeek(classId, nextLesson.week, nextLesson.lessonKey)
+    || inferScheduledLessonForWeek(classId, nextLesson.week, nextLesson.lessonKey)
+    || null;
+  const items = [];
+  if (parsed.text) items.push(parsed.text);
+  for (const material of parsed.materials) items.push(`Materiaal: ${material}`);
+
+  return {
+    type: 'homework-preview',
+    title: `Huiswerk voor ${nextLesson.lesson || nextLesson.project || 'de volgende les'}`,
+    subtitle: scheduledLesson?.start
+      ? `${formatLessonDate(scheduledLesson.start)}${scheduledLesson?.inferred ? ' (verwacht)' : ''}`
+      : 'Voor de volgende les',
+    items,
+  };
+}
+
+function getRenderableSlides(presentation, target) {
+  const slides = Array.isArray(presentation?.slides) ? [...presentation.slides] : [];
+  const homeworkPreviewSlide = getHomeworkPreviewSlide(target);
+  if (homeworkPreviewSlide) slides.push(homeworkPreviewSlide);
+  return slides;
 }
 
 function renderSummaryList(container, rows, emptyText) {
@@ -601,7 +697,7 @@ function openPresentation(target) {
 
 function stepActivePresentation(delta) {
   const presentation = state.activePresentation;
-  const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+  const slides = getRenderableSlides(presentation, state.activePresentationTarget);
   if (!slides.length) return;
   const nextIndex = Math.max(0, Math.min(slides.length - 1, state.activeSlideIndex + delta));
   if (nextIndex === state.activeSlideIndex) return;
@@ -611,7 +707,7 @@ function stepActivePresentation(delta) {
 
 function renderPresentationSlide() {
   const presentation = state.activePresentation;
-  const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+  const slides = getRenderableSlides(presentation, state.activePresentationTarget);
   if (!slides.length) {
     dialogStage.innerHTML = '<article class="empty-state">Geen presentatie-inhoud gevonden.</article>';
     dialogCounter.textContent = '0 / 0';
@@ -762,6 +858,9 @@ function renderWeeks() {
           || null;
         const scheduledDate = scheduledLesson?.start || null;
         const target = buildPresentationTarget({
+          classId: state.currentClass,
+          week: String(entry.week),
+          lessonKey,
           ...lesson,
           scheduledDate: scheduledDate ? scheduledDate.toISOString() : '',
         });
