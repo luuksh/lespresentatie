@@ -166,7 +166,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   klasSelect.addEventListener('change', () => {
     if (klasSelect.value) localStorage.setItem('lastClassId', klasSelect.value);
+    window.__autoAppliedProjectLayoutKey = '';
+    if (indelingSelect.value !== 'h216') {
+      indelingSelect.value = 'h216';
+    }
+    localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value || 'h216');
     laadIndeling();
+    renderPlanning();
     refreshPlanningEditor();
   });
 

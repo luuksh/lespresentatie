@@ -1097,6 +1097,14 @@ async function autoApplyLayoutForProject(projectName, classId = getCurrentClassI
   return true;
 }
 
+function applyDefaultBusLayout() {
+  const typeSel = document.getElementById('indelingSelect');
+  const currentType = getCurrentType();
+  if (!typeSel || currentType === 'h216') return;
+  typeSel.value = 'h216';
+  typeSel.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
 (function initLayoutLibraryUI() {
   const klasSel = document.getElementById('klasSelect');
   const typeSel = document.getElementById('indelingSelect');
@@ -1183,9 +1191,15 @@ async function autoApplyLayoutForProject(projectName, classId = getCurrentClassI
     const primaryProject = String(detail.primaryProject || '').trim();
     if (!primaryProject) {
       window.__autoAppliedProjectLayoutKey = '';
+      applyDefaultBusLayout();
       return;
     }
-    void autoApplyLayoutForProject(primaryProject, classId);
+    void autoApplyLayoutForProject(primaryProject, classId).then((applied) => {
+      if (!applied) {
+        window.__autoAppliedProjectLayoutKey = '';
+        applyDefaultBusLayout();
+      }
+    });
   });
 
   window.addEventListener('indeling:rendered', () => {
