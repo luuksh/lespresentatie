@@ -653,6 +653,17 @@ function getProjectAssessment(projectLessons) {
   return explicit || '';
 }
 
+function splitAssessmentText(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return { label: '', details: '' };
+  const separatorIndex = raw.indexOf(':');
+  if (separatorIndex < 0) return { label: raw, details: '' };
+  return {
+    label: raw.slice(0, separatorIndex).trim(),
+    details: raw.slice(separatorIndex + 1).trim(),
+  };
+}
+
 function getProjectOverviewPresentation(project) {
   const presentationId = projectDeckId(project);
   const presentation = state.doc.presentations[presentationId];
@@ -668,25 +679,29 @@ function getProjectCulmination(classId, project) {
     .filter((lesson) => String(lesson.project || '').trim() === projectName);
   if (!projectLessons.length) return null;
 
-  const finalLesson = projectLessons[projectLessons.length - 1];
-  const scheduledLesson = getScheduledLessonForWeek(normalizedClassId, finalLesson.week, finalLesson.lessonKey)
-    || inferScheduledLessonForWeek(normalizedClassId, finalLesson.week, finalLesson.lessonKey)
+  const finalAssessmentLesson = [...projectLessons]
+    .reverse()
+    .find((lesson) => String(lesson?.assessment || '').trim()) || projectLessons[projectLessons.length - 1];
+  const scheduledLesson = getScheduledLessonForWeek(normalizedClassId, finalAssessmentLesson.week, finalAssessmentLesson.lessonKey)
+    || inferScheduledLessonForWeek(normalizedClassId, finalAssessmentLesson.week, finalAssessmentLesson.lessonKey)
     || null;
   const overviewPresentation = getProjectOverviewPresentation(projectName);
   const overviewText = overviewPresentation
     ? JSON.stringify(overviewPresentation)
     : '';
   const explicitAssessment = getProjectAssessment(projectLessons);
-  const finalLessonTitle = String(finalLesson.lesson || '').trim();
-  const assessmentType = explicitAssessment || inferAssessmentType(finalLessonTitle, overviewText);
+  const finalLessonTitle = String(finalAssessmentLesson.lesson || '').trim();
+  const assessmentText = explicitAssessment || inferAssessmentType(finalLessonTitle, overviewText);
+  const parsedAssessment = splitAssessmentText(assessmentText);
 
   return {
     project: projectName,
-    assessmentType,
+    assessmentType: parsedAssessment.label || assessmentText,
+    assessmentDetails: parsedAssessment.details,
     finalLessonTitle: stripLessonPrefix(finalLessonTitle) || finalLessonTitle,
     explicitAssessment,
-    week: String(finalLesson.week || '').trim(),
-    lessonKey: String(finalLesson.lessonKey || '').trim().toUpperCase(),
+    week: String(finalAssessmentLesson.week || '').trim(),
+    lessonKey: String(finalAssessmentLesson.lessonKey || '').trim().toUpperCase(),
     date: scheduledLesson?.start || null,
     inferredDate: Boolean(scheduledLesson?.inferred),
   };
@@ -774,6 +789,7 @@ function buildProjectSummaryRows(nextLesson) {
       <div class="project-focus-card">
         <p class="project-focus-name">${escapeHtml(culmination.assessmentType)}</p>
         <p class="project-focus-lesson">Project: ${escapeHtml(culmination.project)}</p>
+        ${culmination.assessmentDetails ? `<p class="project-focus-lesson">Inhoud: ${escapeHtml(culmination.assessmentDetails)}</p>` : ''}
         ${culmination.explicitAssessment
           ? (culmination.finalLessonTitle ? `<p class="project-focus-lesson">Afrondend lesmoment: ${escapeHtml(culmination.finalLessonTitle)}</p>` : '')
           : (culmination.finalLessonTitle ? `<p class="project-focus-lesson">Waar werken we naartoe: ${escapeHtml(culmination.finalLessonTitle)}</p>` : '')}
