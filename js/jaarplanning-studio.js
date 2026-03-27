@@ -1,5 +1,6 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
 const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
+const STUDIO_SCHEMA_VERSION = 2;
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
@@ -46,6 +47,7 @@ function normalizeDoc(raw) {
   if (!Array.isArray(doc.entries)) doc.entries = [];
   if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
   doc.sourceRevision = String(doc.sourceRevision || '').trim();
+  doc.schemaVersion = Number(doc.schemaVersion || 0);
   doc.entries = doc.entries
     .filter((entry) => entry && typeof entry === 'object')
     .map((entry) => {
@@ -62,6 +64,12 @@ function normalizeDoc(raw) {
   return doc;
 }
 
+function hasAssessmentData(doc) {
+  return (doc?.entries || []).some((entry) => (
+    (entry?.lessons || []).some((lesson) => String(lesson?.assessment || '').trim())
+  ));
+}
+
 function parseDocTimestamp(doc) {
   const raw = String(doc?.updatedAt || '').trim();
   if (!raw) return 0;
@@ -70,10 +78,13 @@ function parseDocTimestamp(doc) {
 }
 
 function baseShouldReplaceLocal(baseDoc, localDoc) {
+  const localSchema = Number(localDoc?.schemaVersion || 0);
+  if (localSchema < STUDIO_SCHEMA_VERSION) return true;
   const baseRevision = String(baseDoc?.sourceRevision || '').trim();
   const localRevision = String(localDoc?.sourceRevision || '').trim();
   if (baseRevision && localRevision && baseRevision !== localRevision) return true;
   if (baseRevision && !localRevision) return true;
+  if (hasAssessmentData(baseDoc) && !hasAssessmentData(localDoc)) return true;
   const baseStamp = parseDocTimestamp(baseDoc);
   const localStamp = parseDocTimestamp(localDoc);
   if (!baseStamp || !localStamp) return false;
@@ -128,6 +139,7 @@ function collapseToYearLayerDoc(doc) {
 
   return {
     ...source,
+    schemaVersion: Math.max(Number(source.schemaVersion || 0), STUDIO_SCHEMA_VERSION),
     entries,
     updatedAt: source.updatedAt || new Date().toISOString(),
   };
