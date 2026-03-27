@@ -866,10 +866,15 @@ function refillSavedLayoutSelect() {
 function projectArrangementToCurrentGrid(payload) {
   const grid = document.getElementById('plattegrond');
   const type = payload?.type || getCurrentType();
+  const seats = Array.isArray(payload?.seats) ? payload.seats : [];
+  const order = Array.isArray(payload?.order) ? payload.order : [];
 
   if (!grid || !payload) return;
 
-  if (typeof payload.domSnapshot === 'string' && payload.domSnapshot.trim()) {
+  const hasStructuredSeatData = type !== 'presentatievolgorde' && seats.length > 0;
+  const hasStructuredOrderData = type === 'presentatievolgorde' && order.length > 0;
+
+  if (!hasStructuredSeatData && !hasStructuredOrderData && typeof payload.domSnapshot === 'string' && payload.domSnapshot.trim()) {
     grid.innerHTML = payload.domSnapshot;
     applyGroupTopics(payload.groupTopics || []);
     applyGroupDates(payload.groupDates || []);
@@ -877,11 +882,11 @@ function projectArrangementToCurrentGrid(payload) {
   }
 
   if (type === 'presentatievolgorde') {
-    if (Array.isArray(payload.order) && payload.order.length) {
+    if (order.length) {
       grid.innerHTML = '';
       const ol = document.createElement('ol');
       ol.className = 'presentatie-lijst';
-      payload.order.forEach((naam, idx) => {
+      order.forEach((naam, idx) => {
         const li = document.createElement('li');
         li.className = 'presentatie-item';
         li.dataset.groupId = `volg${idx + 1}`;
@@ -930,7 +935,7 @@ function projectArrangementToCurrentGrid(payload) {
   const byIdx = new Map(seatsEls.map((el, i) => [i, el]));
   const byId = new Map(seatsEls.map((el, i) => [(el.dataset.seatId ?? `__idx_${i}`), el]));
 
-  (payload.seats || []).forEach((item, i) => {
+  seats.forEach((item, i) => {
     const key = (item.seatId != null && byId.has(String(item.seatId)))
       ? String(item.seatId)
       : `__idx_${i}`;
@@ -972,8 +977,13 @@ async function applyArrangement(payload) {
 
   const targetType = payload?.type || getCurrentType();
   const currentType = getCurrentType();
+  const shouldRebuildBeforeApply = (
+    Array.isArray(payload?.seats) && payload.seats.length
+  ) || (
+    targetType === 'presentatievolgorde' && Array.isArray(payload?.order) && payload.order.length
+  );
 
-  if (targetType !== currentType && typeSel) {
+  if ((targetType !== currentType || shouldRebuildBeforeApply) && typeSel) {
     typeSel.value = targetType;
     typeSel.dispatchEvent(new Event('change', { bubbles: true }));
     await waitForRendered(targetType);
