@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-27T07:34:35.320120+00:00",
+  "updatedAt": "2026-03-27T08:28:30.158605+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -184,10 +184,10 @@
     },
     {
       "classId": "G3F",
-      "start": "2026-03-27T12:35:00+00:00",
-      "end": "2026-03-27T13:20:00+00:00",
-      "summary": "h215 ne g3f",
-      "description": "h215 ne g3f",
+      "start": "2026-03-27T11:50:00+00:00",
+      "end": "2026-03-27T12:35:00+00:00",
+      "summary": "[>] u004 ne g3f",
+      "description": "u004 ne g3f\nWijzigingen: Het lokaal is gewijzigd (was h215) en de les is verplaatst (komt van vr 13:35u).",
       "location": "",
       "categories": "",
       "uid": "1092194@cgu"
