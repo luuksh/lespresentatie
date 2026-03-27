@@ -300,6 +300,13 @@ body::before {
   margin-top: 10px;
 }
 
+.next-lesson-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.95fr);
+  gap: 14px;
+  align-items: start;
+}
+
 .next-lesson-homework .stack-item {
   padding: 20px 22px;
   text-align: left;
@@ -307,6 +314,45 @@ body::before {
   border: 1px solid rgba(15, 118, 110, 0.12);
   box-shadow: 0 18px 42px rgba(15, 118, 110, 0.09);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 251, 248, 0.98));
+}
+
+.next-lesson-project {
+  margin-top: 10px;
+}
+
+.next-lesson-project .stack-item {
+  padding: 20px 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(197, 90, 17, 0.16);
+  box-shadow: 0 18px 42px rgba(197, 90, 17, 0.08);
+  background: linear-gradient(180deg, rgba(255, 249, 243, 0.98), rgba(255, 255, 255, 0.98));
+}
+
+.project-focus-card {
+  display: grid;
+  gap: 12px;
+}
+
+.project-focus-name,
+.project-focus-lesson,
+.project-focus-date {
+  margin: 0;
+}
+
+.project-focus-name {
+  font-size: 1.5rem;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--portal-ink);
+}
+
+.project-focus-lesson,
+.project-focus-date {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--portal-muted-strong);
+  font-weight: 700;
 }
 
 .next-lesson-link {
@@ -769,6 +815,10 @@ body::before {
   .student-sidebar,
   .weeks-grid,
   .hero-panel-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .next-lesson-grid {
     grid-template-columns: 1fr;
   }
 

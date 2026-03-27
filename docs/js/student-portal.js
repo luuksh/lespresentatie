@@ -12,6 +12,7 @@ const currentWeekTitle = document.getElementById('currentWeekTitle');
 const currentWeekSummary = document.getElementById('currentWeekSummary');
 const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
+const projectSummary = document.getElementById('projectSummary');
 const currentWeekChip = document.getElementById('currentWeekChip');
 const weeksGrid = document.getElementById('weeksGrid');
 const weekJumpBar = document.getElementById('weekJumpBar');
@@ -677,6 +678,24 @@ function renderSummaryList(container, rows, emptyText) {
   }
 }
 
+function buildProjectSummaryRows(nextLesson) {
+  if (!nextLesson?.lesson) return [];
+  const project = String(nextLesson.lesson.project || '').trim();
+  if (!project) return [];
+  const lessonTitle = String(nextLesson.lesson.lesson || '').trim();
+  const dateLabel = formatLessonDate(nextLesson.date);
+  return [
+    `
+      <p class="homework-label">Project</p>
+      <div class="project-focus-card">
+        <p class="project-focus-name">${escapeHtml(project)}</p>
+        ${lessonTitle ? `<p class="project-focus-lesson">Onderdeel: ${escapeHtml(lessonTitle)}</p>` : ''}
+        ${dateLabel ? `<p class="project-focus-date">Datum: ${escapeHtml(dateLabel)}</p>` : ''}
+      </div>
+    `,
+  ];
+}
+
 function openPresentation(target) {
   const resolved = resolvePresentation(target);
   if (!resolved.presentation) return;
@@ -758,6 +777,7 @@ function renderCurrentWeek(layerEntries) {
     if (heroPresentationCount) heroPresentationCount.textContent = '-';
     if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
     renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk voor de eerstvolgende les.');
+    renderSummaryList(projectSummary, [], 'Nog geen projectinformatie voor de eerstvolgende les.');
     return;
   }
 
@@ -819,7 +839,9 @@ function renderCurrentWeek(layerEntries) {
       ];
     })()
     : [];
+  const projectRows = buildProjectSummaryRows(nextLesson);
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
+  renderSummaryList(projectSummary, projectRows, 'Nog geen projectinformatie voor de eerstvolgende les.');
 }
 
 function renderWeeks() {
