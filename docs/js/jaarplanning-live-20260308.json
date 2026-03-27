@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T10:43:30+01:00",
+  "updatedAt": "2026-03-27T20:59:29+01:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -80,10 +80,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -91,31 +98,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1A",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -123,17 +129,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -143,26 +141,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -181,10 +178,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -192,16 +196,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -220,27 +216,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -273,26 +268,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -302,27 +296,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -332,10 +325,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -343,17 +343,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -363,27 +355,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -393,10 +384,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -404,17 +402,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -424,10 +414,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -435,17 +432,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -455,10 +444,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -466,17 +462,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -486,10 +474,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -497,16 +492,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -552,19 +539,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1A",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -1008,10 +982,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -1019,31 +1000,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1B",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -1051,17 +1031,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -1071,26 +1043,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -1109,10 +1080,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -1120,16 +1098,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -1148,27 +1118,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -1201,26 +1170,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -1230,27 +1198,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -1260,10 +1227,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -1271,17 +1245,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -1291,27 +1257,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -1321,10 +1286,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -1332,17 +1304,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -1352,10 +1316,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -1363,17 +1334,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -1383,10 +1346,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -1394,17 +1364,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -1414,10 +1376,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -1425,16 +1394,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -1480,19 +1441,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1B",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -1936,10 +1884,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -1947,31 +1902,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1C",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -1979,17 +1933,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -1999,26 +1945,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -2037,10 +1982,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -2048,16 +2000,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -2076,27 +2020,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -2129,26 +2072,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -2158,27 +2100,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -2188,10 +2129,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -2199,17 +2147,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -2219,27 +2159,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -2249,10 +2188,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -2260,17 +2206,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -2280,10 +2218,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -2291,17 +2236,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -2311,10 +2248,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -2322,17 +2266,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -2342,10 +2278,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -2353,16 +2296,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -2408,19 +2343,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -2864,10 +2786,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -2875,31 +2804,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1D",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -2907,17 +2835,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -2927,26 +2847,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -2965,10 +2884,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -2976,16 +2902,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -3004,27 +2922,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -3057,26 +2974,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -3086,27 +3002,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -3116,10 +3031,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -3127,17 +3049,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -3147,27 +3061,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -3177,10 +3090,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -3188,17 +3108,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -3208,10 +3120,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -3219,17 +3138,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -3239,10 +3150,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -3250,17 +3168,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -3270,10 +3180,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -3281,16 +3198,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -3336,19 +3245,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -3792,10 +3688,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -3803,31 +3706,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1E",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -3835,17 +3737,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -3855,26 +3749,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -3893,10 +3786,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -3904,16 +3804,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -3932,27 +3824,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -3985,26 +3876,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -4014,27 +3904,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -4044,10 +3933,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -4055,17 +3951,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -4075,27 +3963,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -4105,10 +3992,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -4116,17 +4010,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -4136,10 +4022,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -4147,17 +4040,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -4167,10 +4052,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -4178,17 +4070,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -4198,10 +4082,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -4209,16 +4100,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -4264,19 +4147,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1E",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -4720,10 +4590,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -4731,31 +4608,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1F",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -4763,17 +4639,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -4783,26 +4651,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -4821,10 +4688,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -4832,16 +4706,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -4860,27 +4726,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -4913,26 +4778,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -4942,27 +4806,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -4972,10 +4835,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -4983,17 +4853,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -5003,27 +4865,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -5033,10 +4894,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -5044,17 +4912,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -5064,10 +4924,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -5075,17 +4942,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -5095,10 +4954,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -5106,17 +4972,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -5126,10 +4984,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -5137,16 +5002,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -5192,19 +5049,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1F",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -5648,10 +5492,17 @@
       "week": "13",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 1 - Naam, wereld en doelgroep",
           "homework": "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. Als je online inspiratie wilt opzoeken, print dan maximaal 1 klein voorbeeld van een vlag, kaart of alfabet. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-1-naam-wereld-en-doelgroep"
         },
@@ -5659,31 +5510,30 @@
           "project": "Taaltopia",
           "lesson": "Les 2 - Klanken en schrift",
           "homework": "Kies 5 klanken of lettercombinaties die bij jullie taal passen en schets 2 tekens. Als je voorbeelden online opzoekt, print dan maximaal 1 klein blad met letters of symbolen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-2-klanken-en-schrift"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 1: Waarom lezen ertoe doet + niveau en genre bepalen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen"
         }
       ],
       "items": [],
-      "note": "Vanaf maandag 23 maart 2026 eindigt elke gewone lesweek van klas 1 met Heel veel lezen; de eerste twee lessen schuiven door met het lopende project."
+      "note": "Vanaf maandag 23 maart 2026 start elke gewone lesweek van klas 1 met Heel veel lezen; de tweede en derde les volgen het lopende project."
     },
     {
       "classId": "1G",
       "week": "14",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 3 - Woorden en betekenissen",
           "homework": "Verzamel 6 woorden die jullie taal zeker nodig heeft en schrijf de Nederlandse betekenis erbij. Als je inspiratie online zoekt, print dan maximaal 1 klein lijstje of afbeelding. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-3-woorden-en-betekenissen"
         },
@@ -5691,17 +5541,9 @@
           "project": "Taaltopia",
           "lesson": "Les 4 - Grammaticaregels",
           "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-4-grammaticaregels"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 2: Schoolbieb, catalogus, lenen en eerste leesstart",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart"
         }
       ],
       "items": []
@@ -5711,26 +5553,25 @@
       "week": "15",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-kiezen"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Analyse schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 3: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-3-stillezen-en-startcheck"
+          "presentationId": "spiegeldicht-analyse-schrijven"
         }
       ],
       "items": []
@@ -5749,10 +5590,17 @@
       "week": "17",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
@@ -5760,16 +5608,8 @@
           "project": "Spiegeldicht",
           "lesson": "Reactiegedicht schrijven",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 4: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
         }
       ],
       "items": []
@@ -5788,27 +5628,26 @@
       "week": "19",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 5: Stillezen en startcheck",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-5-stillezen-en-startcheck"
         }
       ],
       "items": []
@@ -5841,26 +5680,25 @@
       "week": "20",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Spiegeldicht",
           "lesson": "Presentaties",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "spiegeldicht-presentaties"
         },
         {
           "project": "Spiegeldicht",
           "lesson": "Les 32 - Uit je Comfortzone",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren"
+          "presentationId": "spiegeldicht-les-32-uit-je-comfortzone-les-32"
         }
       ],
       "items": []
@@ -5870,27 +5708,26 @@
       "week": "21",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutpot",
           "lesson": "Les 1 - Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "nutpot-les-1-intro-les-1"
         },
         {
           "project": "Nutspot",
           "lesson": "Les 2 - Interviewdag",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-2-interviewdag"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme"
         }
       ],
       "items": []
@@ -5900,10 +5737,17 @@
       "week": "22",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Nutspot",
           "lesson": "Les 3 - Interview-uitwerking",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-3-interview-uitwerking"
         },
@@ -5911,17 +5755,9 @@
           "project": "Nutspot",
           "lesson": "Les 4 - Herschrijven en presenteren",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-nutspot",
           "presentationMarkerId": "marker-les-4-herschrijven-en-presenteren"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen"
         }
       ],
       "items": []
@@ -5931,27 +5767,26 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Netschrift",
           "lesson": "Netschrift bijwerken + spellingscorrectie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "netschrift-netschrift-bijwerken-spellingscorrectie"
         },
         {
           "project": "Klasfeed",
           "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-1-intro"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check"
         }
       ],
       "items": []
@@ -5961,10 +5796,17 @@
       "week": "24",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 2: Voorbereidingen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-2-voorbereidingen"
         },
@@ -5972,17 +5814,9 @@
           "project": "Klasfeed",
           "lesson": "Les 3: Teksten",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-3-teksten"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen"
         }
       ],
       "items": []
@@ -5992,10 +5826,17 @@
       "week": "25",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 4: Aanvullen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-4-aanvullen"
         },
@@ -6003,17 +5844,9 @@
           "project": "Klasfeed",
           "lesson": "Les 5: Opmaak",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-5-opmaak"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 11: Stillezen en focus trainen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-11-stillezen-en-focus-trainen"
         }
       ],
       "items": []
@@ -6023,10 +5856,17 @@
       "week": "26",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 6: Afronden",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-6-afronden"
         },
@@ -6034,17 +5874,9 @@
           "project": "Klasfeed",
           "lesson": "Les 7: Printen",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-7-printen"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen"
         }
       ],
       "items": []
@@ -6054,10 +5886,17 @@
       "week": "27",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
           "project": "Klasfeed",
           "lesson": "Les 8: Presentatie",
           "homework": "netschrift en pen mee",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationId": "project-klasfeed",
           "presentationMarkerId": "marker-les-8-presentatie"
         },
@@ -6065,16 +5904,8 @@
           "project": "Afscheid",
           "lesson": "Zomerquiz/Spellenles/Uitloop",
           "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
-        },
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen",
-          "presentationMarkerId": "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen"
+          "presentationId": "afscheid-zomerquiz-spellenles-uitloop"
         }
       ],
       "items": []
@@ -6120,19 +5951,6 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-4-projectbeschrijving"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1G",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -6953,19 +6771,6 @@
           "lessonKey": "B",
           "presentationId": "project-faalfestival",
           "presentationMarkerId": "marker-les-4-informatieblok"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3A",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -7719,19 +7524,6 @@
     },
     {
       "classId": "3B",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3B",
       "week": "36",
       "lessons": [],
       "items": [
@@ -8473,19 +8265,6 @@
           "lessonKey": "B",
           "presentationId": "project-faalfestival",
           "presentationMarkerId": "marker-les-4-informatieblok"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3C",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -9239,19 +9018,6 @@
     },
     {
       "classId": "3D",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3D",
       "week": "36",
       "lessons": [],
       "items": [
@@ -9993,19 +9759,6 @@
           "lessonKey": "B",
           "presentationId": "project-faalfestival",
           "presentationMarkerId": "marker-les-4-informatieblok"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3E",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -10759,19 +10512,6 @@
     },
     {
       "classId": "3F",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3F",
       "week": "36",
       "lessons": [],
       "items": [
@@ -11513,19 +11253,6 @@
           "lessonKey": "B",
           "presentationId": "project-faalfestival",
           "presentationMarkerId": "marker-les-4-informatieblok"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "3G",
-      "week": "30",
-      "lessons": [
-        {
-          "project": "Rapporten e.d.",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "presentationId": "rapporten-e-d-item"
         }
       ],
       "items": []
@@ -11844,13 +11571,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -12087,13 +11807,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -12218,13 +11931,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -12263,13 +11969,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -12324,13 +12023,6 @@
       "classId": "4.1",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -12467,13 +12159,6 @@
       "week": "49",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -12507,13 +12192,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -12524,13 +12202,6 @@
       "classId": "4.1",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -12552,13 +12223,6 @@
       "classId": "4.1",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -12602,13 +12266,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -12633,13 +12290,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -12688,13 +12338,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -12931,13 +12574,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -13062,13 +12698,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -13107,13 +12736,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -13168,13 +12790,6 @@
       "classId": "4.2",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -13311,13 +12926,6 @@
       "week": "49",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -13351,13 +12959,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -13368,13 +12969,6 @@
       "classId": "4.2",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -13396,13 +12990,6 @@
       "classId": "4.2",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -13446,13 +13033,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -13477,13 +13057,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -13532,13 +13105,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -13775,13 +13341,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -13906,13 +13465,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -13951,13 +13503,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -14012,13 +13557,6 @@
       "classId": "4.3",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -14155,13 +13693,6 @@
       "week": "49",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -14195,13 +13726,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -14212,13 +13736,6 @@
       "classId": "4.3",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -14240,13 +13757,6 @@
       "classId": "4.3",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -14290,13 +13800,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -14321,13 +13824,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -14376,13 +13872,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -14619,13 +14108,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -14750,13 +14232,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -14822,20 +14297,6 @@
       "week": "38",
       "lessons": [
         {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Zie week 39A",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "literair-landschap-bkk-zie-week-39a"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Zie week 39B",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "persoonlijkheid-bkk-zie-week-39b"
-        },
-        {
           "project": "PersoonlijkheidBKK",
           "lesson": "Zie week 39C",
           "homework": "netschrift en pen mee",
@@ -14849,20 +14310,6 @@
       "classId": "4.4",
       "week": "39",
       "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Les 2: Samenvoegen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "literair-landschap-bkk-les-2-samenvoegen-les-2"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Les 3: Ballondebat",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "persoonlijkheid-bkk-les-3-ballondebat-les-3"
-        },
         {
           "project": "PersoonlijkheidBKK",
           "lesson": "Les 4: Eigen experiment",
@@ -14890,13 +14337,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -14907,13 +14347,6 @@
       "classId": "4.4",
       "week": "40",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-1-lees-challenge-bepalen-kiezen-boek-1-waarom-zou-je-lezen-les-1"
-        },
         {
           "project": "Technologie",
           "lesson": "Les 1: Ik en technologie",
@@ -14938,13 +14371,6 @@
       "week": "41",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-2-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-2"
-        },
-        {
           "project": "Technologie",
           "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
@@ -14965,13 +14391,6 @@
       "classId": "4.4",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -15003,13 +14422,6 @@
       "week": "44",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 4: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-4-personages-les-4"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -15030,13 +14442,6 @@
       "classId": "4.4",
       "week": "45",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 5: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-5-perspectief-les-5"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -15059,13 +14464,6 @@
       "week": "46",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 6: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-6-spanning-les-6"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -15086,13 +14484,6 @@
       "classId": "4.4",
       "week": "47",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 7: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-7-tijd-en-ruimte-les-7"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -15117,13 +14508,6 @@
       "week": "48",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 8: Thema",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-8-thema-les-8"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -15144,13 +14528,6 @@
       "classId": "4.4",
       "week": "49",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -15185,13 +14562,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -15202,13 +14572,6 @@
       "classId": "4.4",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -15230,13 +14593,6 @@
       "classId": "4.4",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -15280,13 +14636,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -15311,13 +14660,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -15366,13 +14708,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -15609,13 +14944,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -15740,13 +15068,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -15812,20 +15133,6 @@
       "week": "38",
       "lessons": [
         {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Zie week 39A",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "literair-landschap-bkk-zie-week-39a"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Zie week 39B",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "persoonlijkheid-bkk-zie-week-39b"
-        },
-        {
           "project": "PersoonlijkheidBKK",
           "lesson": "Zie week 39C",
           "homework": "netschrift en pen mee",
@@ -15839,20 +15146,6 @@
       "classId": "4.5",
       "week": "39",
       "lessons": [
-        {
-          "project": "Literair Landschap/BKK",
-          "lesson": "Les 2: Samenvoegen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "literair-landschap-bkk-les-2-samenvoegen-les-2"
-        },
-        {
-          "project": "Persoonlijkheid/BKK",
-          "lesson": "Les 3: Ballondebat",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "persoonlijkheid-bkk-les-3-ballondebat-les-3"
-        },
         {
           "project": "PersoonlijkheidBKK",
           "lesson": "Les 4: Eigen experiment",
@@ -15880,13 +15173,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -15897,13 +15183,6 @@
       "classId": "4.5",
       "week": "40",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-1-lees-challenge-bepalen-kiezen-boek-1-waarom-zou-je-lezen-les-1"
-        },
         {
           "project": "Technologie",
           "lesson": "Les 1: Ik en technologie",
@@ -15928,13 +15207,6 @@
       "week": "41",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-2-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-2"
-        },
-        {
           "project": "Technologie",
           "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
@@ -15955,13 +15227,6 @@
       "classId": "4.5",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -15993,13 +15258,6 @@
       "week": "44",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 4: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-4-personages-les-4"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -16020,13 +15278,6 @@
       "classId": "4.5",
       "week": "45",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 5: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-5-perspectief-les-5"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -16049,13 +15300,6 @@
       "week": "46",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 6: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-6-spanning-les-6"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -16076,13 +15320,6 @@
       "classId": "4.5",
       "week": "47",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 7: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-7-tijd-en-ruimte-les-7"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -16107,13 +15344,6 @@
       "week": "48",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Les 8: Thema",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-8-thema-les-8"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -16134,13 +15364,6 @@
       "classId": "4.5",
       "week": "49",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -16175,13 +15398,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -16192,13 +15408,6 @@
       "classId": "4.5",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -16220,13 +15429,6 @@
       "classId": "4.5",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -16270,13 +15472,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -16301,13 +15496,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -16356,13 +15544,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 5: Tijd en Ruimte",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-5-tijd-en-ruimte-les-5"
         }
       ],
       "items": []
@@ -16599,13 +15780,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-kennismaken-met-canonieke-gedichten"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 6: Thema & Afronden 2",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-6-thema-afronden-2-les-6"
         }
       ],
       "items": [
@@ -16730,13 +15904,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-bekend-gedicht-kiezen-aemulatio"
-        },
-        {
-          "project": "Boekenclub",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -16775,13 +15942,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "poezie-voordracht"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 1: Nieuw boek kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1"
         }
       ],
       "items": [
@@ -16836,13 +15996,6 @@
       "classId": "4.6",
       "week": "42",
       "lessons": [
-        {
-          "project": "Boekenclub 1",
-          "lesson": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3"
-        },
         {
           "project": "Renaissance",
           "lesson": "Overzichtspresentatie",
@@ -16979,13 +16132,6 @@
       "week": "49",
       "lessons": [
         {
-          "project": "Boekenclub 1",
-          "lesson": "Afronden 1 + Nieuw boek",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-1-afronden-1-nieuw-boek"
-        },
-        {
           "project": "Renaissance",
           "lesson": "",
           "homework": "netschrift en pen mee",
@@ -17019,13 +16165,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 2: Personages",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-2-personages-les-2"
         }
       ],
       "items": [
@@ -17036,13 +16175,6 @@
       "classId": "4.6",
       "week": "50",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Onder de Paramariboom",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-onder-de-paramariboom"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -17064,13 +16196,6 @@
       "classId": "4.6",
       "week": "51",
       "lessons": [
-        {
-          "project": "Boekenclub 2",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "boekenclub-2-item"
-        },
         {
           "project": "Renaissance",
           "lesson": "",
@@ -17114,13 +16239,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 3: Perspectief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-3-perspectief-les-3"
         }
       ],
       "items": [
@@ -17145,13 +16263,6 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "schrijfstijl-item"
-        },
-        {
-          "project": "Boekenclub 2",
-          "lesson": "Les 4: Spanning",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "boekenclub-2-les-4-spanning-les-4"
         }
       ],
       "items": []
@@ -18599,7 +17710,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-03-23T10:43:30+01:00",
+  "sourceRevision": "2026-03-27T20:59:29+01:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
@@ -27104,27 +26215,6 @@
         }
       ]
     },
-    "rapporten-e-d-item": {
-      "id": "rapporten-e-d-item",
-      "title": "Rapporten e.d.",
-      "project": "Rapporten e.d.",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Presentatie",
-          "subtitle": "Rapporten e.d."
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "startinfo-informatie-formatief-werken-introductie-jaarthema": {
       "id": "startinfo-informatie-formatief-werken-introductie-jaarthema",
       "title": "Informatie formatief werken & introductie jaarthema",
@@ -28070,48 +27160,6 @@
         }
       ]
     },
-    "literair-landschap-bkk-zie-week-39a": {
-      "id": "literair-landschap-bkk-zie-week-39a",
-      "title": "Zie week 39A",
-      "project": "Literair Landschap/BKK",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Zie week 39A",
-          "subtitle": "Literair Landschap/BKK"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "persoonlijkheid-bkk-zie-week-39b": {
-      "id": "persoonlijkheid-bkk-zie-week-39b",
-      "title": "Zie week 39B",
-      "project": "Persoonlijkheid/BKK",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Zie week 39B",
-          "subtitle": "Persoonlijkheid/BKK"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "persoonlijkheidbkk-zie-week-39c": {
       "id": "persoonlijkheidbkk-zie-week-39c",
       "title": "Zie week 39C",
@@ -28133,48 +27181,6 @@
         }
       ]
     },
-    "literair-landschap-bkk-les-2-samenvoegen-les-2": {
-      "id": "literair-landschap-bkk-les-2-samenvoegen-les-2",
-      "title": "Les 2: Samenvoegen",
-      "project": "Literair Landschap/BKK",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 2: Samenvoegen",
-          "subtitle": "Literair Landschap/BKK"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "persoonlijkheid-bkk-les-3-ballondebat-les-3": {
-      "id": "persoonlijkheid-bkk-les-3-ballondebat-les-3",
-      "title": "Les 3: Ballondebat",
-      "project": "Persoonlijkheid/BKK",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 3: Ballondebat",
-          "subtitle": "Persoonlijkheid/BKK"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "persoonlijkheidbkk-les-4-eigen-experiment-les-4": {
       "id": "persoonlijkheidbkk-les-4-eigen-experiment-les-4",
       "title": "Les 4: Eigen experiment",
@@ -28184,27 +27190,6 @@
           "type": "title",
           "title": "Les 4: Eigen experiment",
           "subtitle": "PersoonlijkheidBKK"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-1-lees-challenge-bepalen-kiezen-boek-1-waarom-zou-je-lezen-les-1": {
-      "id": "boekenclub-1-les-1-lees-challenge-bepalen-kiezen-boek-1-waarom-zou-je-lezen-les-1",
-      "title": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 1: Lees-challenge bepalen + kiezen boek 1 + Waarom zou je lezen?",
-          "subtitle": "Boekenclub 1"
         },
         {
           "type": "bullets",
@@ -28259,27 +27244,6 @@
         }
       ]
     },
-    "boekenclub-1-les-2-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-2": {
-      "id": "boekenclub-1-les-2-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-2",
-      "title": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 2: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "technologie-les-3-hoe-verhoud-jij-je-tot-technologie-les-3": {
       "id": "technologie-les-3-hoe-verhoud-jij-je-tot-technologie-les-3",
       "title": "Les 3: Hoe verhoud jij je tot technologie?",
@@ -28310,27 +27274,6 @@
           "type": "title",
           "title": "Les 4: Technologie en identiteit",
           "subtitle": "Technologie"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3": {
-      "id": "boekenclub-1-les-3-oefenen-met-verhalen-de-krater-gerwin-van-der-werf-les-3",
-      "title": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 3: oefenen met verhalen: De krater, Gerwin van der Werf",
-          "subtitle": "Boekenclub 1"
         },
         {
           "type": "bullets",
@@ -28385,174 +27328,6 @@
         }
       ]
     },
-    "boekenclub-1-les-4-personages-les-4": {
-      "id": "boekenclub-1-les-4-personages-les-4",
-      "title": "Les 4: Personages",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 4: Personages",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-5-perspectief-les-5": {
-      "id": "boekenclub-1-les-5-perspectief-les-5",
-      "title": "Les 5: Perspectief",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 5: Perspectief",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-6-spanning-les-6": {
-      "id": "boekenclub-1-les-6-spanning-les-6",
-      "title": "Les 6: Spanning",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 6: Spanning",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-7-tijd-en-ruimte-les-7": {
-      "id": "boekenclub-1-les-7-tijd-en-ruimte-les-7",
-      "title": "Les 7: Tijd en Ruimte",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 7: Tijd en Ruimte",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-les-8-thema-les-8": {
-      "id": "boekenclub-1-les-8-thema-les-8",
-      "title": "Les 8: Thema",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 8: Thema",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-1-afronden-1-nieuw-boek": {
-      "id": "boekenclub-1-afronden-1-nieuw-boek",
-      "title": "Afronden 1 + Nieuw boek",
-      "project": "Boekenclub 1",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Afronden 1 + Nieuw boek",
-          "subtitle": "Boekenclub 1"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-onder-de-paramariboom": {
-      "id": "boekenclub-2-onder-de-paramariboom",
-      "title": "Onder de Paramariboom",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Onder de Paramariboom",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-item": {
-      "id": "boekenclub-2-item",
-      "title": "Boekenclub 2",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Presentatie",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "poezie-kennismaken-met-canonieke-gedichten": {
       "id": "poezie-kennismaken-met-canonieke-gedichten",
       "title": "Kennismaken met canonieke gedichten",
@@ -28562,27 +27337,6 @@
           "type": "title",
           "title": "Kennismaken met canonieke gedichten",
           "subtitle": "Poëzie"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-les-6-thema-afronden-2-les-6": {
-      "id": "boekenclub-2-les-6-thema-afronden-2-les-6",
-      "title": "Les 6: Thema & Afronden 2",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 6: Thema & Afronden 2",
-          "subtitle": "Boekenclub 2"
         },
         {
           "type": "bullets",
@@ -28616,27 +27370,6 @@
         }
       ]
     },
-    "boekenclub-les-1-nieuw-boek-kiezen-les-1": {
-      "id": "boekenclub-les-1-nieuw-boek-kiezen-les-1",
-      "title": "Les 1: Nieuw boek kiezen",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 1: Nieuw boek kiezen",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "poezie-voordracht": {
       "id": "poezie-voordracht",
       "title": "Voordracht",
@@ -28646,27 +27379,6 @@
           "type": "title",
           "title": "Voordracht",
           "subtitle": "Poëzie"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-les-1-nieuw-boek-kiezen-les-1": {
-      "id": "boekenclub-2-les-1-nieuw-boek-kiezen-les-1",
-      "title": "Les 1: Nieuw boek kiezen",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 1: Nieuw boek kiezen",
-          "subtitle": "Boekenclub 2"
         },
         {
           "type": "bullets",
@@ -28700,69 +27412,6 @@
         }
       ]
     },
-    "boekenclub-2-les-2-personages-les-2": {
-      "id": "boekenclub-2-les-2-personages-les-2",
-      "title": "Les 2: Personages",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 2: Personages",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-les-3-perspectief-les-3": {
-      "id": "boekenclub-2-les-3-perspectief-les-3",
-      "title": "Les 3: Perspectief",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 3: Perspectief",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-2-les-4-spanning-les-4": {
-      "id": "boekenclub-2-les-4-spanning-les-4",
-      "title": "Les 4: Spanning",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 4: Spanning",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "cgu-week-2-moralicious-item": {
       "id": "cgu-week-2-moralicious-item",
       "title": "CGU-week 2 - Moralicious",
@@ -28784,48 +27433,6 @@
         }
       ]
     },
-    "boekenclub-2-les-5-tijd-en-ruimte-les-5": {
-      "id": "boekenclub-2-les-5-tijd-en-ruimte-les-5",
-      "title": "Les 5: Tijd en Ruimte",
-      "project": "Boekenclub 2",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 5: Tijd en Ruimte",
-          "subtitle": "Boekenclub 2"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-les-2-personages-les-2": {
-      "id": "boekenclub-les-2-personages-les-2",
-      "title": "Les 2: Personages",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 2: Personages",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
     "taalmakers-item": {
       "id": "taalmakers-item",
       "title": "Taalmakers",
@@ -28835,111 +27442,6 @@
           "type": "title",
           "title": "Presentatie",
           "subtitle": "Taalmakers"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-les-3-perspectief-les-3": {
-      "id": "boekenclub-les-3-perspectief-les-3",
-      "title": "Les 3: Perspectief",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 3: Perspectief",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-les-4-spanning-les-4": {
-      "id": "boekenclub-les-4-spanning-les-4",
-      "title": "Les 4: Spanning",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 4: Spanning",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-les-5-tijd-en-ruimte-les-5": {
-      "id": "boekenclub-les-5-tijd-en-ruimte-les-5",
-      "title": "Les 5: Tijd en Ruimte",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 5: Tijd en Ruimte",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-les-6-thema-afronden-2-les-6": {
-      "id": "boekenclub-les-6-thema-afronden-2-les-6",
-      "title": "Les 6: Thema & Afronden 2",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Les 6: Thema & Afronden 2",
-          "subtitle": "Boekenclub"
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "items": [
-            "Startopdracht",
-            "Kernactiviteit",
-            "Afronding / reflectie"
-          ]
-        }
-      ]
-    },
-    "boekenclub-item": {
-      "id": "boekenclub-item",
-      "title": "Boekenclub",
-      "project": "Boekenclub",
-      "slides": [
-        {
-          "type": "title",
-          "title": "Presentatie",
-          "subtitle": "Boekenclub"
         },
         {
           "type": "bullets",
