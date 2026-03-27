@@ -863,6 +863,34 @@ function refillSavedLayoutSelect() {
   }
 }
 
+function fixedLayoutExpectedSeatCount(type) {
+  const counts = {
+    h216: 30,
+    u008: 30,
+    drievierdrie: 30,
+  };
+  return counts[String(type || '').trim()] || 0;
+}
+
+function hasValidStructuredArrangement(payload) {
+  if (!payload || typeof payload !== 'object') return false;
+  const type = String(payload.type || '').trim() || getCurrentType();
+  const seats = Array.isArray(payload.seats) ? payload.seats : [];
+  const order = Array.isArray(payload.order) ? payload.order : [];
+  const expectedSeatCount = fixedLayoutExpectedSeatCount(type);
+
+  if (expectedSeatCount) {
+    if (seats.length !== expectedSeatCount) return false;
+    const seatIds = seats
+      .map((item) => String(item?.seatId || '').trim())
+      .filter(Boolean);
+    return seatIds.length === expectedSeatCount && new Set(seatIds).size === expectedSeatCount;
+  }
+
+  if (type === 'presentatievolgorde') return order.length > 0;
+  return seats.length > 0 || order.length > 0;
+}
+
 function projectArrangementToCurrentGrid(payload) {
   const grid = document.getElementById('plattegrond');
   const type = payload?.type || getCurrentType();
@@ -871,7 +899,7 @@ function projectArrangementToCurrentGrid(payload) {
 
   if (!grid || !payload) return;
 
-  const hasStructuredSeatData = type !== 'presentatievolgorde' && seats.length > 0;
+  const hasStructuredSeatData = type !== 'presentatievolgorde' && hasValidStructuredArrangement({ ...payload, seats, order });
   const hasStructuredOrderData = type === 'presentatievolgorde' && order.length > 0;
 
   if (!hasStructuredSeatData && !hasStructuredOrderData && typeof payload.domSnapshot === 'string' && payload.domSnapshot.trim()) {
@@ -1036,6 +1064,10 @@ async function loadSelectedLayout() {
     alert('Plattegrond niet gevonden.');
     return;
   }
+  if (!hasValidStructuredArrangement(payload)) {
+    alert('Deze opgeslagen plattegrond is ongeldig of beschadigd. Sla hem opnieuw op.');
+    return;
+  }
 
   cls.selected = select.value;
   writeSavedLayouts(store);
@@ -1094,7 +1126,7 @@ async function autoApplyLayoutForProject(projectName, classId = getCurrentClassI
   const layoutName = findLayoutNameForProject(cls, project);
   if (!layoutName) return false;
   const payload = cls.layouts[layoutName];
-  if (!payload) return false;
+  if (!payload || !hasValidStructuredArrangement(payload)) return false;
 
   const autoKey = `${classId}::${normalizeProjectName(project)}::${layoutName}`;
   if (window.__autoAppliedProjectLayoutKey === autoKey) return true;
