@@ -147,7 +147,7 @@
 
     <div class="opdracht-menu">
       <select id="opdrachtSelect" aria-label="Kies een opdracht">
-        <option>Lees in je leesboek</option>
+        <option>lees in je leesboek</option>
         <option>Zoek je plek en pak je spullen</option>
         <option>Werk aan de opdracht. Klaar? Lees in je leesboek.</option>
         <option>Overleg in tweetallen</option>
@@ -158,6 +158,7 @@
 
   <script>
     const select = document.getElementById('opdrachtSelect');
+    const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
 
     function fitToLongest() {
       const probe = document.createElement('span');
@@ -181,9 +182,32 @@
       probe.remove();
     }
 
+    function optionTextFor(value) {
+      const target = String(value || '').trim();
+      if (!target) return '';
+      const options = [...select.options];
+      const exact = options.find((option) => option.text === target);
+      if (exact) return exact.text;
+      const foldedTarget = target.toLocaleLowerCase('nl-NL');
+      const loose = options.find((option) => String(option.text || '').trim().toLocaleLowerCase('nl-NL') === foldedTarget);
+      return loose ? loose.text : '';
+    }
+
+    function applyStoredAssignment(value) {
+      const text = optionTextFor(value);
+      if (!text) return;
+      select.value = text;
+      fitToLongest();
+    }
+
     fitToLongest();
+    applyStoredAssignment(localStorage.getItem(BOARD_ASSIGNMENT_KEY));
     window.addEventListener('resize', fitToLongest);
     select.addEventListener('change', fitToLongest);
+    window.addEventListener('storage', (event) => {
+      if (event.key !== BOARD_ASSIGNMENT_KEY) return;
+      applyStoredAssignment(event.newValue);
+    });
   </script>
 </body>
 </html>

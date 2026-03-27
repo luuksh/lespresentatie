@@ -8,8 +8,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLAN_STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const AGENDA_IMPORT_KEY = 'lespresentatie.agendaImportedPayload';
+  const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
+  const READING_PROJECT_NAME = 'heel veel lezen';
+  const READING_BOARD_ASSIGNMENT = 'lees in je leesboek';
+  const DEFAULT_BOARD_ASSIGNMENT = 'Zoek je plek en pak je spullen';
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
   const planningItemsEl = document.getElementById('jaarplanningItems');
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const presentationPrevBtn = document.getElementById('presentationPrevBtn');
   const presentationNextBtn = document.getElementById('presentationNextBtn');
   const presentationSlideCounter = document.getElementById('presentationSlideCounter');
+  const opdrachtSelect = document.getElementById('opdrachtSelect');
 
   let planningData = {};
   let planningPresentations = {};
@@ -74,6 +79,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activePresentation = null;
   let activeSlideIndex = 0;
   let lastRenderedSlideIndex = -1;
+  let currentPlanningLessons = [];
+  let autoBoardAssignmentLessonKey = '';
+  let boardAssignmentWriteInProgress = false;
 
   try {
     const rosterSource = window.__rosterSource;
@@ -117,6 +125,83 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.dispatchEvent(new CustomEvent('indeling:rendered', {
       detail: { type, timestamp: Date.now() }
     }));
+  }
+
+  function boardAssignmentOptionText(value) {
+    const target = String(value || '').trim();
+    if (!target || !opdrachtSelect) return '';
+    const options = [...opdrachtSelect.options];
+    const exact = options.find((option) => option.text === target);
+    if (exact) return exact.text;
+    const foldedTarget = target.toLocaleLowerCase('nl-NL');
+    const loose = options.find((option) => String(option.text || '').trim().toLocaleLowerCase('nl-NL') === foldedTarget);
+    return loose ? loose.text : '';
+  }
+
+  function ensureBoardAssignmentOption(value) {
+    const text = String(value || '').trim();
+    if (!text || !opdrachtSelect) return '';
+    const existing = boardAssignmentOptionText(text);
+    if (existing) return existing;
+    const option = document.createElement('option');
+    option.textContent = text;
+    opdrachtSelect.appendChild(option);
+    return text;
+  }
+
+  function writeBoardAssignment(value) {
+    const text = String(value || '').trim();
+    if (!text) return;
+    try {
+      localStorage.setItem(BOARD_ASSIGNMENT_KEY, text);
+    } catch {}
+  }
+
+  function applyBoardAssignment(value, { persist = true } = {}) {
+    if (!opdrachtSelect) return;
+    const text = ensureBoardAssignmentOption(value);
+    if (!text) return;
+    if (opdrachtSelect.value !== text) {
+      boardAssignmentWriteInProgress = true;
+      opdrachtSelect.value = text;
+      opdrachtSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      boardAssignmentWriteInProgress = false;
+    }
+    if (persist) writeBoardAssignment(text);
+  }
+
+  function currentLessonAllowsReadingAssignment(now = new Date()) {
+    if (!activeAgendaEntry || !(activeAgendaEntry.start instanceof Date) || !(activeAgendaEntry.end instanceof Date)) {
+      return false;
+    }
+    if (now < activeAgendaEntry.start || now > activeAgendaEntry.end) return false;
+    if ((now.getTime() - activeAgendaEntry.start.getTime()) < 5 * 60 * 1000) return false;
+    return currentPlanningLessons.some((lesson) => (
+      String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL').includes(READING_PROJECT_NAME)
+    ));
+  }
+
+  function syncAutomaticBoardAssignment(now = new Date()) {
+    if (!opdrachtSelect) return;
+    const currentLessonKey = agendaEntryKey(activeAgendaEntry);
+    const shouldAutoApply = Boolean(currentLessonKey) && currentLessonAllowsReadingAssignment(now);
+
+    if (shouldAutoApply) {
+      if (autoBoardAssignmentLessonKey !== currentLessonKey) {
+        applyBoardAssignment(READING_BOARD_ASSIGNMENT);
+        autoBoardAssignmentLessonKey = currentLessonKey;
+      }
+      return;
+    }
+
+    if (!autoBoardAssignmentLessonKey) return;
+    if (autoBoardAssignmentLessonKey !== currentLessonKey || !activeAgendaEntry || now > activeAgendaEntry.end) {
+      const currentValue = String(opdrachtSelect.value || '').trim().toLocaleLowerCase('nl-NL');
+      if (currentValue === READING_BOARD_ASSIGNMENT) {
+        applyBoardAssignment(DEFAULT_BOARD_ASSIGNMENT);
+      }
+      autoBoardAssignmentLessonKey = '';
+    }
   }
 
   function laadIndeling() {
@@ -1907,6 +1992,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       : null;
 
     const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, agendaConnected);
+    currentPlanningLessons = lessonSelection;
     const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
 
@@ -1947,6 +2033,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
     }
+    syncAutomaticBoardAssignment(now);
     refreshPlanningEditor();
   }
 
@@ -2330,6 +2417,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyAgendaSource(agendaSourceInput?.value || '', true);
   });
 
+  opdrachtSelect?.addEventListener('change', () => {
+    if (boardAssignmentWriteInProgress) return;
+    writeBoardAssignment(opdrachtSelect.value);
+  });
+
   agendaSourceInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -2397,6 +2489,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   planningStudio = loadPlanningStudioFromStorage();
+  const storedBoardAssignment = String(localStorage.getItem(BOARD_ASSIGNMENT_KEY) || '').trim();
+  applyBoardAssignment(storedBoardAssignment || opdrachtSelect?.value || DEFAULT_BOARD_ASSIGNMENT, { persist: Boolean(storedBoardAssignment) });
   if (planningStudio) {
     rebuildPlanningFromStudio();
   }
@@ -2433,6 +2527,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPlanning();
   });
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
-  clockMarkerTimer = setInterval(() => updateClockMarkerTarget(new Date()), 30 * 1000);
+  clockMarkerTimer = setInterval(() => {
+    const now = new Date();
+    updateClockMarkerTarget(now);
+    syncAutomaticBoardAssignment(now);
+  }, 30 * 1000);
   updateClockMarkerTarget(new Date());
+  syncAutomaticBoardAssignment(new Date());
 });

@@ -230,7 +230,11 @@ def lesson_slot_index(lesson: dict) -> int:
 
 def is_reading_lesson(lesson: dict) -> bool:
     project = str(lesson.get("project", "")).strip().casefold()
-    return "leesclub" in project or "zinsbouwers" in project
+    return (
+        "leesclub" in project
+        or "zinsbouwers" in project
+        or "heel veel lezen" in project
+    )
 
 
 def make_heel_veel_lezen_lesson(source_lesson: dict, lesson_key: str) -> dict:
@@ -248,21 +252,16 @@ def reposition_grade_1_reading(class_id: str, lessons: list[dict]) -> list[dict]
         return lessons
 
     ordered = [dict(lesson) for lesson in sorted(lessons, key=lesson_slot_index)]
-    if not any(is_reading_lesson(lesson) for lesson in ordered):
+    reading_lessons = [lesson for lesson in ordered if is_reading_lesson(lesson)]
+    if len(reading_lessons) != 1:
         return lessons
 
-    first, second, third = ordered
-    if is_reading_lesson(third):
-        ordered[2] = make_heel_veel_lezen_lesson(third, "C")
-        return ordered
-
-    if is_reading_lesson(first) and not is_reading_lesson(second) and not is_reading_lesson(third):
-        shifted = [second, third, make_heel_veel_lezen_lesson(first, "C")]
-        for key, lesson in zip(("A", "B", "C"), shifted):
-            lesson["lessonKey"] = key
-        return shifted
-
-    return lessons
+    reading_lesson = make_heel_veel_lezen_lesson(reading_lessons[0], "A")
+    project_lessons = [lesson for lesson in ordered if not is_reading_lesson(lesson)]
+    shifted = [reading_lesson, *project_lessons]
+    for key, lesson in zip(("A", "B", "C"), shifted):
+        lesson["lessonKey"] = key
+    return shifted
 
 
 def filter_presentations(presentations: dict) -> dict:
