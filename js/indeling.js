@@ -846,13 +846,6 @@ function refillSavedLayoutSelect() {
   const names = Object.keys(cls.layouts).sort((a, b) => a.localeCompare(b, 'nl'));
 
   select.innerHTML = '';
-  const emptyOpt = document.createElement('option');
-  emptyOpt.value = '';
-  emptyOpt.textContent = names.length
-    ? 'Geen projectplattegrond actief'
-    : 'Geen opgeslagen plattegronden';
-  select.appendChild(emptyOpt);
-
   names.forEach((name) => {
     const opt = document.createElement('option');
     opt.value = name;
@@ -860,23 +853,13 @@ function refillSavedLayoutSelect() {
     select.appendChild(opt);
   });
 
-  if (!names.length) {
-    select.value = '';
-    if (cls.selected) {
-      cls.selected = '';
-      writeSavedLayouts(store);
-    }
-    return;
-  }
-
+  if (!names.length) return;
   if (cls.selected && names.includes(cls.selected)) {
     select.value = cls.selected;
   } else {
-    select.value = '';
-    if (cls.selected) {
-      cls.selected = '';
-      writeSavedLayouts(store);
-    }
+    select.value = names[0];
+    cls.selected = names[0];
+    writeSavedLayouts(store);
   }
 }
 
@@ -1093,19 +1076,6 @@ function deleteSelectedLayout() {
   renderPresentationNotice();
 }
 
-function clearActiveSavedLayoutSelection(classId = getCurrentClassId()) {
-  if (!classId) return;
-  const store = readSavedLayouts();
-  const cls = ensureClassStore(store, classId);
-  if (!cls.selected) {
-    refillSavedLayoutSelect();
-    return;
-  }
-  cls.selected = '';
-  writeSavedLayouts(store);
-  refillSavedLayoutSelect();
-}
-
 async function autoApplyLayoutForProject(projectName, classId = getCurrentClassId()) {
   const project = String(projectName || '').trim();
   if (!project || !classId) return false;
@@ -1129,9 +1099,8 @@ async function autoApplyLayoutForProject(projectName, classId = getCurrentClassI
 
 function applyDefaultBusLayout() {
   const typeSel = document.getElementById('indelingSelect');
-  if (!typeSel) return;
-  clearActiveSavedLayoutSelection();
-  window.__autoAppliedProjectLayoutKey = '';
+  const currentType = getCurrentType();
+  if (!typeSel || currentType === 'h216') return;
   typeSel.value = 'h216';
   typeSel.dispatchEvent(new Event('change', { bubbles: true }));
 }
