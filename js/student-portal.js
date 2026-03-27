@@ -615,18 +615,100 @@ function getOrderedLessonsForClass(classId) {
     });
 }
 
-function getHomeworkPreviewSlide(target) {
-  const classId = normalizeClassId(target?.classId || state.currentClass);
-  const week = String(target?.week || '').trim();
-  const lessonKey = String(target?.lessonKey || '').trim().toUpperCase();
-  if (!classId || !week || !lessonKey) return null;
-
+function getLessonIndexForTarget(classId, week, lessonKey) {
   const lessons = getOrderedLessonsForClass(classId);
   const index = lessons.findIndex((lesson) => (
     normalizeClassId(lesson.classId) === classId
     && String(lesson.week) === week
     && String(lesson.lessonKey || '').trim().toUpperCase() === lessonKey
   ));
+  return { lessons, index };
+}
+
+function stripLessonPrefix(value) {
+  return String(value || '')
+    .replace(/^les\s*\d+[:\s-]*/i, '')
+    .replace(/^[a-z]+\s+\d+[:\s-]*/i, '')
+    .trim();
+}
+
+function inferAssessmentType(...texts) {
+  const haystack = texts.join('\n').toLowerCase();
+  if (!haystack.trim()) return 'Eindmoment';
+  if (/toetsmodus|toets|beoordeelbaar|inleveren|ingeleverd|inlevercheck/.test(haystack)) return 'Toets of inleveropdracht';
+  if (/pitch/.test(haystack) && /jury|jurering|vragen van de jury/.test(haystack)) return 'Pitch voor de jury';
+  if (/pitch/.test(haystack)) return 'Pitch';
+  if (/posterpresentatie|posterpresentaties/.test(haystack)) return 'Posterpresentatie';
+  if (/presentatie|presentaties|presenteren|mini-presentatie/.test(haystack)) return 'Presentatie';
+  if (/jury|jurering|juryuitslag|juryberaad/.test(haystack)) return 'Jurybeoordeling';
+  if (/reflectie|evaluatie|terugblik/.test(haystack)) return 'Presentatie en reflectie';
+  return 'Eindmoment';
+}
+
+function getProjectAssessment(projectLessons) {
+  const explicit = [...projectLessons]
+    .reverse()
+    .map((lesson) => String(lesson?.assessment || '').trim())
+    .find(Boolean);
+  return explicit || '';
+}
+
+function getProjectOverviewPresentation(project) {
+  const presentationId = projectDeckId(project);
+  const presentation = state.doc.presentations[presentationId];
+  return presentation && typeof presentation === 'object' ? presentation : null;
+}
+
+function getProjectCulmination(classId, project) {
+  const normalizedClassId = normalizeClassId(classId);
+  const projectName = String(project || '').trim();
+  if (!normalizedClassId || !projectName) return null;
+
+  const projectLessons = getOrderedLessonsForClass(normalizedClassId)
+    .filter((lesson) => String(lesson.project || '').trim() === projectName);
+  if (!projectLessons.length) return null;
+
+  const finalLesson = projectLessons[projectLessons.length - 1];
+  const scheduledLesson = getScheduledLessonForWeek(normalizedClassId, finalLesson.week, finalLesson.lessonKey)
+    || inferScheduledLessonForWeek(normalizedClassId, finalLesson.week, finalLesson.lessonKey)
+    || null;
+  const overviewPresentation = getProjectOverviewPresentation(projectName);
+  const overviewText = overviewPresentation
+    ? JSON.stringify(overviewPresentation)
+    : '';
+  const explicitAssessment = getProjectAssessment(projectLessons);
+  const finalLessonTitle = String(finalLesson.lesson || '').trim();
+  const assessmentType = explicitAssessment || inferAssessmentType(finalLessonTitle, overviewText);
+
+  return {
+    project: projectName,
+    assessmentType,
+    finalLessonTitle: stripLessonPrefix(finalLessonTitle) || finalLessonTitle,
+    explicitAssessment,
+    week: String(finalLesson.week || '').trim(),
+    lessonKey: String(finalLesson.lessonKey || '').trim().toUpperCase(),
+    date: scheduledLesson?.start || null,
+    inferredDate: Boolean(scheduledLesson?.inferred),
+  };
+}
+
+function isAssessmentLesson(classId, lesson) {
+  const project = String(lesson?.project || '').trim();
+  const lessonKey = String(lesson?.lessonKey || '').trim().toUpperCase();
+  const week = String(lesson?.week || '').trim();
+  if (!project || !lessonKey || !week) return false;
+  const culmination = getProjectCulmination(classId, project);
+  if (!culmination) return false;
+  return culmination.week === week && culmination.lessonKey === lessonKey;
+}
+
+function getHomeworkPreviewSlide(target) {
+  const classId = normalizeClassId(target?.classId || state.currentClass);
+  const week = String(target?.week || '').trim();
+  const lessonKey = String(target?.lessonKey || '').trim().toUpperCase();
+  if (!classId || !week || !lessonKey) return null;
+
+  const { lessons, index } = getLessonIndexForTarget(classId, week, lessonKey);
   if (index < 0) return null;
 
   const nextLesson = lessons[index + 1] || null;
@@ -681,16 +763,21 @@ function renderSummaryList(container, rows, emptyText) {
 function buildProjectSummaryRows(nextLesson) {
   if (!nextLesson?.lesson) return [];
   const project = String(nextLesson.lesson.project || '').trim();
-  if (!project) return [];
-  const lessonTitle = String(nextLesson.lesson.lesson || '').trim();
-  const dateLabel = formatLessonDate(nextLesson.date);
+  const culmination = getProjectCulmination(state.currentClass, project);
+  if (!culmination) return [];
+  const dateLabel = culmination.date
+    ? `${formatLessonDate(culmination.date)}${culmination.inferredDate ? ' (verwacht)' : ''}`
+    : '';
   return [
     `
-      <p class="homework-label">Project</p>
+      <p class="homework-label">Eindbeoordeling</p>
       <div class="project-focus-card">
-        <p class="project-focus-name">${escapeHtml(project)}</p>
-        ${lessonTitle ? `<p class="project-focus-lesson">Onderdeel: ${escapeHtml(lessonTitle)}</p>` : ''}
-        ${dateLabel ? `<p class="project-focus-date">Datum: ${escapeHtml(dateLabel)}</p>` : ''}
+        <p class="project-focus-name">${escapeHtml(culmination.assessmentType)}</p>
+        <p class="project-focus-lesson">Project: ${escapeHtml(culmination.project)}</p>
+        ${culmination.explicitAssessment
+          ? (culmination.finalLessonTitle ? `<p class="project-focus-lesson">Afrondend lesmoment: ${escapeHtml(culmination.finalLessonTitle)}</p>` : '')
+          : (culmination.finalLessonTitle ? `<p class="project-focus-lesson">Waar werken we naartoe: ${escapeHtml(culmination.finalLessonTitle)}</p>` : '')}
+        ${dateLabel ? `<p class="project-focus-date">Datum van de eindbeoordeling: ${escapeHtml(dateLabel)}</p>` : ''}
       </div>
     `,
   ];
@@ -874,6 +961,12 @@ function renderWeeks() {
           && parseWeek(nextLesson.entry?.week) === week
           && String(nextLesson.lessonKey || '').toUpperCase() === lessonKey
         );
+        const isAssessment = isAssessmentLesson(state.currentClass, {
+          week: String(entry.week),
+          lessonKey,
+          ...lesson,
+        });
+        const culmination = isAssessment ? getProjectCulmination(state.currentClass, project) : null;
         const lessonAnchorId = `lesson-${normalizeClassId(state.currentClass)}-${week}-${lessonKey}`;
         const scheduledLesson = getScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
           || inferScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
@@ -888,10 +981,12 @@ function renderWeeks() {
         });
         const hasPresentation = Boolean(resolvePresentation(target).presentation);
         return `
-          <article class="lesson-card${isNextLesson ? ' is-next-lesson' : ''}" id="${escapeHtml(lessonAnchorId)}">
+          <article class="lesson-card${isNextLesson ? ' is-next-lesson' : ''}${isAssessment ? ' is-assessment' : ''}" id="${escapeHtml(lessonAnchorId)}">
+            ${isAssessment ? `<p class="assessment-chip">Eindbeoordeling${culmination?.assessmentType ? ` · ${escapeHtml(culmination.assessmentType)}` : ''}</p>` : ''}
             ${scheduledDate ? `<p class="lesson-date">${escapeHtml(formatLessonDate(scheduledDate))}${scheduledLesson?.inferred ? ' (verwacht)' : ''}</p>` : ''}
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
+            ${isAssessment && culmination?.assessmentType ? `<p><strong>Beoordeling:</strong> ${escapeHtml(culmination.assessmentType)}</p>` : ''}
             ${homework ? `<p><strong>Huiswerk:</strong> ${richTextToHtml(homework)}</p>` : ''}
             ${hasPresentation ? `<button class="lesson-link" type="button" data-presentation='${escapeHtml(JSON.stringify(target))}'>Open presentatie</button>` : ''}
           </article>

@@ -609,6 +609,18 @@ body::before {
   box-shadow: 0 18px 42px rgba(15, 118, 110, 0.14);
 }
 
+.lesson-card.is-assessment {
+  border-color: rgba(197, 90, 17, 0.34);
+  background:
+    radial-gradient(circle at top right, rgba(197, 90, 17, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 251, 245, 0.96), rgba(255, 255, 255, 0.82));
+  box-shadow: 0 18px 44px rgba(197, 90, 17, 0.14);
+}
+
+.lesson-card.is-assessment .lesson-date {
+  color: #9a4108;
+}
+
 .lesson-card p {
   margin: 7px 0 0;
   color: var(--portal-muted);
@@ -627,6 +639,22 @@ body::before {
 .lesson-card h4 {
   font-size: 1.18rem;
   line-height: 1.2;
+}
+
+.assessment-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 0 10px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(197, 90, 17, 0.12);
+  border: 1px solid rgba(197, 90, 17, 0.2);
+  color: #9a4108;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .lesson-slot {
