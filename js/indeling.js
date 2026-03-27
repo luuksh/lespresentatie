@@ -1119,24 +1119,9 @@ function deleteSelectedLayout() {
 }
 
 async function autoApplyLayoutForProject(projectName, classId = getCurrentClassId()) {
-  const project = String(projectName || '').trim();
-  if (!project || !classId) return false;
-  const store = readSavedLayouts();
-  const cls = ensureClassStore(store, classId);
-  const layoutName = findLayoutNameForProject(cls, project);
-  if (!layoutName) return false;
-  const payload = cls.layouts[layoutName];
-  if (!payload || !hasValidStructuredArrangement(payload)) return false;
-
-  const autoKey = `${classId}::${normalizeProjectName(project)}::${layoutName}`;
-  if (window.__autoAppliedProjectLayoutKey === autoKey) return true;
-
-  cls.selected = layoutName;
-  writeSavedLayouts(store);
-  refillSavedLayoutSelect();
-  await applyArrangement(payload);
-  window.__autoAppliedProjectLayoutKey = autoKey;
-  return true;
+  void projectName;
+  void classId;
+  return false;
 }
 
 function applyDefaultBusLayout() {
