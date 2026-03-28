@@ -3,6 +3,7 @@ const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
 
 const projectSelect = document.getElementById('projectSelect');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
+const deleteProjectBtn = document.getElementById('deleteProjectBtn');
 const projectTitle = document.getElementById('projectTitle');
 const deckTitleInput = document.getElementById('deckTitleInput');
 const deckSubtitleInput = document.getElementById('deckSubtitleInput');
@@ -432,6 +433,46 @@ function saveProject({ auto = false } = {}) {
   else setStatus(`Project opgeslagen: ${project}.`);
 }
 
+function deleteProject() {
+  const project = String(projectSelect.value || '').trim();
+  if (!project) return;
+  const confirmed = window.confirm(`Project "${project}" verwijderen uit de Presentatiestudio en jaarplanning?`);
+  if (!confirmed) return;
+
+  const deckId = projectDeckId(project);
+  for (const entry of state.doc.entries || []) {
+    if (!Array.isArray(entry?.lessons)) continue;
+    entry.lessons = entry.lessons.filter((lesson) => String(lesson?.project || '').trim() !== project);
+  }
+  state.doc.entries = (state.doc.entries || []).filter((entry) => {
+    const hasLessons = Array.isArray(entry?.lessons) && entry.lessons.length > 0;
+    const hasItems = Array.isArray(entry?.items) && entry.items.length > 0;
+    const hasNote = Boolean(String(entry?.note || '').trim());
+    return hasLessons || hasItems || hasNote;
+  });
+
+  if (state.doc.presentations && typeof state.doc.presentations === 'object') {
+    delete state.doc.presentations[deckId];
+  }
+
+  fillProjects(state.doc);
+  const nextProject = state.projects[0] || '';
+  projectSelect.value = nextProject;
+  saveStudio();
+
+  if (!nextProject) {
+    projectTitle.textContent = 'Overzichtspresentatie';
+    deckTitleInput.value = '';
+    deckSubtitleInput.value = '';
+    markerBody.innerHTML = '';
+    setStatus(`Project verwijderd: ${project}.`);
+    return;
+  }
+
+  renderProject();
+  setStatus(`Project verwijderd: ${project}.`);
+}
+
 function fillProjects(doc) {
   const projects = [...new Set(
     (doc.entries || [])
@@ -471,6 +512,7 @@ async function boot() {
 
 projectSelect.addEventListener('change', renderProject);
 saveProjectBtn.addEventListener('click', () => saveProject({ auto: false }));
+deleteProjectBtn?.addEventListener('click', deleteProject);
 deckTitleInput.addEventListener('input', queueAutoSave);
 deckSubtitleInput.addEventListener('input', queueAutoSave);
 

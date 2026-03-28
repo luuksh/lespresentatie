@@ -97,6 +97,12 @@ select {
 
 .btn-primary { color: #fff; background: linear-gradient(180deg, var(--primary), var(--primary-dark)); }
 .btn-secondary { color: var(--ink); background: #e7effd; }
+.btn-danger { color: #fff; background: linear-gradient(180deg, #bf2d2d, #8f1f1f); }
+
+.sidebar-actions {
+  display: grid;
+  gap: 8px;
+}
 
 .table-wrap {
   border: 1px solid #d3e0f4;
