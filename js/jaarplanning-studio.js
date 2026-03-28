@@ -4,6 +4,7 @@ const STUDIO_SCHEMA_VERSION = 2;
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
+const exportAllBtn = document.getElementById('exportAllBtn');
 const editorTitle = document.getElementById('editorTitle');
 const sheetBody = document.getElementById('sheetBody');
 const statusLine = document.getElementById('statusLine');
@@ -248,6 +249,48 @@ function saveStudio() {
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
 }
 
+function buildExportPayload() {
+  const yearLayers = [...new Set(
+    (state.doc.entries || [])
+      .map((entry) => gradeLayerFromClassId(entry?.classId || ''))
+      .filter(Boolean)
+  )].sort((a, b) => Number(a) - Number(b));
+
+  return {
+    ...structuredClone(state.doc),
+    exportType: 'jaarplanning-presentaties',
+    exportVersion: 1,
+    exportedAt: new Date().toISOString(),
+    yearLayers,
+    counts: {
+      yearLayers: yearLayers.length,
+      entries: Array.isArray(state.doc.entries) ? state.doc.entries.length : 0,
+      presentations: Object.keys(state.doc.presentations || {}).length,
+    },
+  };
+}
+
+function exportAll() {
+  try {
+    saveStudio();
+    const payload = buildExportPayload();
+    const stamp = payload.exportedAt.replace(/[:.]/g, '-');
+    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `jaarplanning-presentaties-export-${stamp}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 0);
+    setStatus(`Export gedownload: ${payload.counts.entries} weekregels, ${payload.counts.presentations} presentaties.`);
+  } catch (err) {
+    console.error(err);
+    setStatus(`Export mislukt: ${err?.message || err}`, true);
+  }
+}
+
 function renderSheet() {
   const layer = selectedLayer();
   editorTitle.textContent = `Jaarplanning Raster · jaarlaag ${layer}`;
@@ -374,6 +417,7 @@ async function boot() {
 }
 
 saveAllBtn.addEventListener('click', saveAll);
+exportAllBtn?.addEventListener('click', exportAll);
 classSelect.addEventListener('change', renderSheet);
 
 boot();

@@ -158,6 +158,12 @@ select {
   font-weight: 600;
 }
 
+.studio-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 960px) {
   .studio-grid { grid-template-columns: 1fr; }
 }

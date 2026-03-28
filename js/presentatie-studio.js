@@ -4,6 +4,7 @@ const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
 const projectSelect = document.getElementById('projectSelect');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
 const deleteProjectBtn = document.getElementById('deleteProjectBtn');
+const exportAllBtn = document.getElementById('exportAllBtn');
 const projectTitle = document.getElementById('projectTitle');
 const deckTitleInput = document.getElementById('deckTitleInput');
 const deckSubtitleInput = document.getElementById('deckSubtitleInput');
@@ -191,6 +192,63 @@ async function fetchJson(path) {
 function saveStudio() {
   state.doc.updatedAt = new Date().toISOString();
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+}
+
+function gradeLayerFromClassId(rawClassId) {
+  const cid = String(rawClassId || '').replace(/\s+/g, '').toUpperCase();
+  const patterns = [
+    /^G?([1-6])[A-Z]$/,
+    /^([1-6])\.\d+$/,
+    /^([1-6])G\d+$/,
+    /^([1-6])$/,
+  ];
+  for (const pattern of patterns) {
+    const match = cid.match(pattern);
+    if (match) return match[1];
+  }
+  return '';
+}
+
+function buildExportPayload() {
+  const yearLayers = [...new Set(
+    (state.doc.entries || [])
+      .map((entry) => gradeLayerFromClassId(entry?.classId || ''))
+      .filter(Boolean)
+  )].sort((a, b) => Number(a) - Number(b));
+
+  return {
+    ...structuredClone(state.doc),
+    exportType: 'jaarplanning-presentaties',
+    exportVersion: 1,
+    exportedAt: new Date().toISOString(),
+    yearLayers,
+    counts: {
+      yearLayers: yearLayers.length,
+      entries: Array.isArray(state.doc.entries) ? state.doc.entries.length : 0,
+      presentations: Object.keys(state.doc.presentations || {}).length,
+    },
+  };
+}
+
+function exportAll() {
+  try {
+    saveStudio();
+    const payload = buildExportPayload();
+    const stamp = payload.exportedAt.replace(/[:.]/g, '-');
+    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `jaarplanning-presentaties-export-${stamp}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 0);
+    setStatus(`Export gedownload: ${payload.counts.entries} planningregels, ${payload.counts.presentations} presentaties.`);
+  } catch (err) {
+    console.error(err);
+    setStatus(`Export mislukt: ${err?.message || err}`, true);
+  }
 }
 
 function markerDeckSlideCount(presentation) {
@@ -513,6 +571,7 @@ async function boot() {
 projectSelect.addEventListener('change', renderProject);
 saveProjectBtn.addEventListener('click', () => saveProject({ auto: false }));
 deleteProjectBtn?.addEventListener('click', deleteProject);
+exportAllBtn?.addEventListener('click', exportAll);
 deckTitleInput.addEventListener('input', queueAutoSave);
 deckSubtitleInput.addEventListener('input', queueAutoSave);
 
