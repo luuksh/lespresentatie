@@ -1,7 +1,10 @@
+import { buildProjectSnapshot, loadKerndoelenDoc, slugifyProject } from './kerndoelen-data.js';
+
 const CONFIG = window.STUDENT_PORTAL_CONFIG || {};
 const PLANNING_URL = String(CONFIG.planningUrl || 'js/jaarplanning-live.json');
 const CLASSES_URL = String(CONFIG.classesUrl || 'js/leerlingen_per_klas.json');
 const AGENDA_URL = String(CONFIG.agendaUrl || 'js/zermelo-agenda-live.json');
+const KERNDOELEN_URL = String(CONFIG.kerndoelenUrl || 'data/kerndoelen/kerndoelen-map.json');
 const CURRENT_CLASS_KEY = 'student.portal.class';
 
 const classSelect = document.getElementById('classSelect');
@@ -13,6 +16,11 @@ const currentWeekSummary = document.getElementById('currentWeekSummary');
 const currentWeekFocus = document.getElementById('currentWeekFocus');
 const homeworkSummary = document.getElementById('homeworkSummary');
 const projectSummary = document.getElementById('projectSummary');
+const projectRubricTitle = document.getElementById('projectRubricTitle');
+const projectRubricMeta = document.getElementById('projectRubricMeta');
+const projectRubricSummary = document.getElementById('projectRubricSummary');
+const projectRubricSkills = document.getElementById('projectRubricSkills');
+const projectRubricLabels = document.getElementById('projectRubricLabels');
 const currentWeekChip = document.getElementById('currentWeekChip');
 const weeksGrid = document.getElementById('weeksGrid');
 const weekJumpBar = document.getElementById('weekJumpBar');
@@ -30,6 +38,7 @@ const dialogCounter = document.getElementById('dialogCounter');
 
 const state = {
   doc: { entries: [], presentations: {}, updatedAt: '' },
+  kerndoelenDoc: null,
   agendaEntries: [],
   classes: [],
   currentClass: '',
@@ -799,6 +808,57 @@ function buildProjectSummaryRows(nextLesson) {
   ];
 }
 
+function renderRubricChips(container, values, emptyText, className = 'rubric-chip') {
+  if (!container) return;
+  container.replaceChildren();
+  if (!values.length) {
+    const pill = document.createElement('p');
+    pill.className = `${className} ${className}-empty`;
+    pill.textContent = emptyText;
+    container.appendChild(pill);
+    return;
+  }
+
+  for (const value of values) {
+    const pill = document.createElement('p');
+    pill.className = className;
+    pill.textContent = value;
+    container.appendChild(pill);
+  }
+}
+
+function renderProjectRubric(nextLesson) {
+  if (!projectRubricTitle || !projectRubricMeta || !projectRubricSummary || !projectRubricSkills || !projectRubricLabels) return;
+  const projectName = String(nextLesson?.lesson?.project || '').trim();
+  if (!projectName || !state.kerndoelenDoc) {
+    projectRubricTitle.textContent = 'Nog geen project gekoppeld';
+    projectRubricMeta.textContent = 'Zodra er een project is gevonden, verschijnen hier de beoordelingsaccenten.';
+    projectRubricSummary.textContent = 'Nog geen vaardigheidskaart beschikbaar.';
+    renderRubricChips(projectRubricSkills, [], 'Nog geen vaardigheden');
+    renderRubricChips(projectRubricLabels, [], 'Nog geen labels', 'rubric-label-pill');
+    return;
+  }
+
+  const snapshot = buildProjectSnapshot(state.kerndoelenDoc, slugifyProject(projectName));
+  if (!snapshot) {
+    projectRubricTitle.textContent = projectName;
+    projectRubricMeta.textContent = 'Voor dit project staat nog geen kerndoelenkaart in het systeem.';
+    projectRubricSummary.textContent = 'Voeg dit project toe in de kerndoelenstudio om vaardigheden en labels zichtbaar te maken.';
+    renderRubricChips(projectRubricSkills, [], 'Nog geen vaardigheden');
+    renderRubricChips(projectRubricLabels, [], 'Nog geen labels', 'rubric-label-pill');
+    return;
+  }
+
+  const focusLabels = snapshot.focusRecords.map((record) => record.label).filter(Boolean);
+  projectRubricTitle.textContent = projectName;
+  projectRubricMeta.textContent = `${snapshot.skills.length} vaardigheden · ${focusLabels.length} labels voor eindbeoordeling`;
+  projectRubricSummary.textContent = snapshot.project.studentFacingDescription
+    || snapshot.project.assessmentSummary
+    || 'Tijdens dit project zie je hier op welke vaardigheden en labels de eindbeoordeling vooral steunt.';
+  renderRubricChips(projectRubricSkills, snapshot.skills, 'Nog geen eindvaardigheden');
+  renderRubricChips(projectRubricLabels, focusLabels, 'Nog geen eindlabels', 'rubric-label-pill');
+}
+
 function openPresentation(target) {
   const resolved = resolvePresentation(target);
   if (!resolved.presentation) return;
@@ -881,6 +941,7 @@ function renderCurrentWeek(layerEntries) {
     if (heroHomeworkCount) heroHomeworkCount.textContent = '0';
     renderSummaryList(homeworkSummary, [], 'Nog geen huiswerk voor de eerstvolgende les.');
     renderSummaryList(projectSummary, [], 'Nog geen projectinformatie voor de eerstvolgende les.');
+    renderProjectRubric(null);
     return;
   }
 
@@ -945,6 +1006,7 @@ function renderCurrentWeek(layerEntries) {
   const projectRows = buildProjectSummaryRows(nextLesson);
   renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
   renderSummaryList(projectSummary, projectRows, 'Nog geen projectinformatie voor de eerstvolgende les.');
+  renderProjectRubric(nextLesson);
 }
 
 function renderWeeks() {
@@ -1073,14 +1135,16 @@ async function fetchJson(url) {
 
 async function boot() {
   try {
-    const [planningRaw, classMap, agendaRaw] = await Promise.all([
+    const [planningRaw, classMap, agendaRaw, kerndoelenRaw] = await Promise.all([
       fetchJson(PLANNING_URL),
       fetchJson(CLASSES_URL),
       fetchJson(AGENDA_URL).catch(() => ({ entries: [] })),
+      loadKerndoelenDoc(KERNDOELEN_URL).catch(() => null),
     ]);
 
     state.doc = normalizeDoc(planningRaw);
     state.agendaEntries = normalizeAgendaDoc(agendaRaw);
+    state.kerndoelenDoc = kerndoelenRaw;
     state.classes = [...new Set([
       ...classesFromClassMap(classMap),
       ...state.agendaEntries.map((entry) => normalizeClassId(entry.classId)),

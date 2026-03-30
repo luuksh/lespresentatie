@@ -254,6 +254,85 @@ body::before {
   background: rgba(255, 255, 255, 0.46);
 }
 
+.project-rubric-card {
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: var(--portal-radius-lg);
+  border: 1px solid rgba(17, 32, 51, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 250, 248, 0.9));
+  box-shadow: var(--portal-shadow-sm);
+}
+
+.project-rubric-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.project-rubric-head h3 {
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+}
+
+.project-rubric-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 12px;
+}
+
+.rubric-column {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(17, 32, 51, 0.06);
+}
+
+.rubric-label {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--portal-primary);
+}
+
+.rubric-chip-row,
+.rubric-label-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rubric-chip,
+.rubric-label-pill {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.rubric-chip {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--portal-primary-deep);
+}
+
+.rubric-label-pill {
+  background: rgba(197, 90, 17, 0.12);
+  color: var(--portal-accent);
+}
+
+.rubric-chip-empty,
+.rubric-label-pill-empty {
+  background: rgba(92, 103, 120, 0.12);
+  color: var(--portal-muted);
+}
+
 .overview-kpi {
   margin: 4px 0 0;
   font-size: 0.96rem;
@@ -848,6 +927,12 @@ body::before {
 
   .next-lesson-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-rubric-head,
+  .project-rubric-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .hero-panel-actions {

@@ -1,0 +1,2085 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-03-29T14:19:30.945076+00:00",
+  "sourceWorkbook": "/Users/luukhijne/Downloads/Kerndoelen Visie en Magister.xlsx",
+  "projects": [
+    {
+      "id": "heel-veel-lezen",
+      "name": "Heel veel lezen",
+      "column": 9,
+      "primaryMagisterSkill": "Literatuur",
+      "secondaryMagisterSkills": [
+        "Diep lezen"
+      ],
+      "skillRationale": "De projectpresentatie draait om leesritme, boekkeuze, leeservaring, leesplezier en langdurig boeklezen. Dat maakt Literatuur de hoofdvaardigheid; Diep lezen ondersteunt het begrijpen en volhouden van teksten.",
+      "sourceBasis": "Projectdeck 'Heel veel lezen' in jaarplanning-live.json, met nadruk op boeken kiezen, stillezen, leesrechten, boekmatch en leescirkel.",
+      "assessmentSummary": "In Heel veel lezen verschuift de beoordeling vooral op Literatuur: leesroutine opbouwen, boeken kiezen, leeservaring verdiepen en een duurzame leeshouding ontwikkelen.",
+      "studentFacingDescription": "Tijdens Heel veel lezen bouw je een stevig leesritme op. Je wordt beoordeeld op hoe aandachtig je leest, hoe goed je passende boeken kiest en hoe bewust je nadenkt over wat lezen met jou en je begrip doet.",
+      "magisterNote": "Na dit project vooral Diep lezen verschuiven. Kijk naar leeshouding, volhouden, tekstbegrip, woordenschat in context en reflectie op boekkeuze.",
+      "teacherNotes": "Gebruik leesgedrag, check-ins en reflectiemomenten samen als bewijs. Het accent ligt minder op product en meer op leesontwikkeling, boekmatch en volgehouden begrip.",
+      "stats": {
+        "focus": 4,
+        "support": 6
+      }
+    },
+    {
+      "id": "taaltopia",
+      "name": "Taaltopia",
+      "column": 10,
+      "primaryMagisterSkill": "Taalbewustzijn & stijl",
+      "secondaryMagisterSkills": [
+        "Schrijven",
+        "Spreken"
+      ],
+      "skillRationale": "Taaltopia laat leerlingen een taal ontwerpen: klanken, schrift, woorden, betekenis en grammaticaregels. De kern is bewust nadenken over hoe taal werkt; presenteren en beschrijven zijn ondersteunend.",
+      "sourceBasis": "Projectdeck 'Taaltopia' in jaarplanning-live.json, met de zes posteronderdelen klanken, schrift, woorden, regels, gesprek en presentatie.",
+      "assessmentSummary": "In Taaltopia verschuift de beoordeling vooral op betekenisvol taalgebruik, lezen met begrip en reflecteren op taalkeuzes binnen een zelfontworpen taalwereld.",
+      "studentFacingDescription": "Tijdens Taaltopia werk je aan het maken van een eigen taalwereld. Je wordt beoordeeld op hoe bewust je keuzes maakt in klanken, woorden, regels en betekenis, en hoe goed je daarover kunt uitleggen en verbeteren.",
+      "magisterNote": "Na afronding vooral kijken naar Diep lezen, Reflectie en de brede taalvaardigheden rond betekenisvol taalgebruik en revisie.",
+      "teacherNotes": "Eindmoment ligt vooral bij de creatieve uitwerking en presentatie van de taalwereld. Let expliciet op luisteren/lezen met begrip, woordkeuze, structuur en reviseren op basis van feedback.",
+      "stats": {
+        "focus": 8,
+        "support": 1
+      }
+    },
+    {
+      "id": "klasfeed",
+      "name": "Klasfeed",
+      "column": 11,
+      "primaryMagisterSkill": "Schrijven",
+      "secondaryMagisterSkills": [
+        "Reflectie",
+        "Spreken"
+      ],
+      "skillRationale": "Klasfeed is een echte klaskrant: leerlingen kiezen invalshoek, doelgroep, toon, bronnen en redactie-opbouw. De hoofdprestatie is een publiceerbare tekst of rubriek; feedback en presenteren ondersteunen dat proces.",
+      "sourceBasis": "Projectdeck 'Klasfeed' in jaarplanning-live.json, met nadruk op rubrieken, bronvoorbereiding, interviewen, eerste versie, redactie en publicatie.",
+      "assessmentSummary": "In Klasfeed verschuift de beoordeling vooral op teksten maken en verbeteren voor een echt publiek, met aandacht voor tekststructuur, inhoudskeuzes en feedback verwerken.",
+      "studentFacingDescription": "Tijdens Klasfeed maak je samen inhoud voor een klassenpublicatie. Je wordt beoordeeld op hoe helder en passend je teksten zijn, hoe je opmaak en inhoud afstemt op lezers en hoe je feedback gebruikt om je werk te verbeteren.",
+      "magisterNote": "Na dit project vooral vaardigheden koppelen aan Diep lezen en Reflectie, met nadruk op tekstopbouw, inhoud en revisie voor publicatie.",
+      "teacherNotes": "Gebruik het eindproduct en de presentatie als beoordelingsmoment. Let bij de beoordeling op tekstsoort, inhoud-vormrelatie, revisiegedrag en betekenisvol schrijven voor een concrete doelgroep.",
+      "stats": {
+        "focus": 6,
+        "support": 3
+      }
+    },
+    {
+      "id": "verweggers",
+      "name": "Verweggers",
+      "column": 12,
+      "primaryMagisterSkill": "Literatuur",
+      "secondaryMagisterSkills": [
+        "Reflectie",
+        "Spreken"
+      ],
+      "skillRationale": "Verweggers werkt met migratieverhalen, cultuur, familiegeschiedenis, gesprek en presentatie. De kern is verhalen lezen en betekenis geven vanuit perspectief en identiteit; reflectie en spreken bouwen daarop voort.",
+      "sourceBasis": "Projectdeck 'Verweggers' in jaarplanning-live.json, plus leslijn migratie, stamboomonderzoek, socratisch gesprek, poster en presentatie.",
+      "assessmentSummary": "In Verweggers verschuift de beoordeling vooral op Literatuur: verhalen over migratie en cultuur lezen, perspectieven begrijpen en die verbinden aan eigen ervaring en reflectie.",
+      "studentFacingDescription": "Tijdens Verweggers onderzoek je migratieverhalen en verbind je die met jezelf, je familie of je omgeving. Je wordt beoordeeld op hoe zorgvuldig je verhalen leest en bespreekt, en hoe goed je daar zelf betekenis aan geeft.",
+      "magisterNote": "Na Verweggers vooral kijken naar Diep lezen, Reflectie en brede taalvaardigheden rond perspectief, gesprek en betekenisvol verwerken van verhalen.",
+      "teacherNotes": "Beoordeling zit in gesprek, onderzoek, poster en reflectie samen. Let expliciet op perspectief nemen, inhoudelijke verbanden leggen en terugkijken op taal en identiteit.",
+      "stats": {
+        "focus": 7,
+        "support": 3
+      }
+    },
+    {
+      "id": "poezie",
+      "name": "Poëzie",
+      "column": 13,
+      "primaryMagisterSkill": "Literatuur",
+      "secondaryMagisterSkills": [
+        "Spreken",
+        "Schrijven"
+      ],
+      "skillRationale": "Poëzie draait om canonieke gedichten lezen, een gedicht kiezen, aemulatio maken en voordragen. De hoofdvaardigheid is dus Literatuur; voordracht en bewerking zijn ondersteunende uitwerkingen daarvan.",
+      "sourceBasis": "Leslijn in jaarplanning-intern.json: kennismaken met canonieke gedichten, gedicht kiezen plus aemulatio, en voordracht.",
+      "assessmentSummary": "In Poëzie verschuift de beoordeling vooral op Literatuur: gedichten interpreteren, literaire taal onderzoeken en die betekenisvol bewerken of voordragen.",
+      "studentFacingDescription": "Tijdens Poëzie lees, bewerk en draag je gedichten voor. Je wordt beoordeeld op hoe zorgvuldig je een gedicht leest, welke betekenis je eruit haalt en hoe overtuigend je die in je eigen versie of voordracht laat zien.",
+      "magisterNote": "Na Poëzie vooral Diep lezen en brede taalvaardigheden koppelen aan interpretatie, literaire taal, tekstbegrip en voordracht.",
+      "teacherNotes": "Neem zowel de analyse van het gekozen gedicht als de aemulatio of voordracht mee. Let op aandachtig lezen, betekenisgeving, taalkeuze en presentatie.",
+      "stats": {
+        "focus": 7,
+        "support": 3
+      }
+    },
+    {
+      "id": "faalfestival",
+      "name": "Faalfestival",
+      "column": 14,
+      "primaryMagisterSkill": "Literatuur",
+      "secondaryMagisterSkills": [
+        "Spreken",
+        "Schrijven"
+      ],
+      "skillRationale": "Faalfestival bouwt voort op boeken, hoofdpersonages, levenslessen, hertalingen, posters en de Faalbattle. Het vertrekpunt is literaire interpretatie; spreken en schrijven ondersteunen de verwerking en performance.",
+      "sourceBasis": "Projectdeck 'Faalfestival' in jaarplanning-live.json, met hoofdpersonages, posterpresentaties, faalbattle en argumentatieve performance.",
+      "assessmentSummary": "In Faalfestival verschuift de beoordeling vooral op Literatuur: personages en verhalen interpreteren en die analyse creatief en mondeling uitwerken in poster en battle.",
+      "studentFacingDescription": "Tijdens Faalfestival onderzoek je hoe verhalen over falen werken en maak je daar zelf iets van. Je wordt beoordeeld op hoe aandachtig je leest, hoe je betekenis geeft aan wat je leest en hoe je dat creatief of mondeling uitwerkt.",
+      "magisterNote": "Na Faalfestival vooral brede taalvaardigheden en Diep lezen verschuiven rond tekstbegrip, thematische verwerking en presentatie van een eigen uitwerking.",
+      "teacherNotes": "Gebruik poster, hertaling en faalbattle samen als bewijs. Het project vraagt om begrip van teksten en om een veilige maar duidelijke beoordeling van verwerking en presentatie.",
+      "stats": {
+        "focus": 3,
+        "support": 4
+      }
+    },
+    {
+      "id": "renaissance",
+      "name": "Renaissance",
+      "column": 15,
+      "primaryMagisterSkill": "Literatuur",
+      "secondaryMagisterSkills": [
+        "Spreken",
+        "Schrijven"
+      ],
+      "skillRationale": "De Renaissance-leslijn draait om een primaire bron lezen, de auteur en context begrijpen, een aemulatio maken en die toelichten in een presentatie. De kern ligt dus bij literair begrip en contextinterpretatie; spreken en schrijven zijn nodig om de aemulatio en presentatie uit te werken.",
+      "sourceBasis": "Renaissance 2526.pptx, Opdracht renaissancepresentatie.pptx, 2526 Opdracht aemulatio en presentatie renaissance.docx, 2526 Beoordeling renaissancepresentatie.docx en 2526 Lesopzet Renaissance.docx.",
+      "assessmentSummary": "In Renaissance verschuift de beoordeling vooral op Literatuur: een renaissancetekst begrijpen, historisch en literair duiden, een aemulatio maken en die helder presenteren.",
+      "studentFacingDescription": "Tijdens Renaissance lees je teksten uit en over een andere tijd. Je wordt beoordeeld op hoe goed je die teksten begrijpt, hoe je context gebruikt en hoe scherp je verbanden ziet tussen vorm, inhoud en publiek.",
+      "magisterNote": "Na Renaissance vooral brede taalvaardigheden en Diep lezen koppelen aan historische context, tekststructuur, wereldkennis en analyse van inhoud en vorm.",
+      "teacherNotes": "Omdat de leslijn nu compact is, het beoordelingsaccent expliciet maken in de opdracht of nabespreking. Let vooral op tekstbegrip, contextgebruik en analyse van periodekenmerken.",
+      "stats": {
+        "focus": 8,
+        "support": 3
+      }
+    },
+    {
+      "id": "technologie",
+      "name": "Technologie",
+      "column": 16,
+      "primaryMagisterSkill": "Diep lezen",
+      "secondaryMagisterSkills": [
+        "Reflectie",
+        "Schrijven"
+      ],
+      "skillRationale": "De technologielijn is expliciet opgebouwd als lezen-in-thema's: leerlingen lezen artikelen, analyseren argumenten en standpunten en verbinden die aan hun eigen omgang met technologie. Reflectie en schrijven zijn belangrijk, maar volgen uit het lezen en interpreteren van de bronnen.",
+      "sourceBasis": "Les 1 - Ik en technologie.pptx, Les 2 - Social media.pptx, Les 3 - Hoe verhoud jij je tot technologie.pptx, Les 4 - Technologie en identiteit.pptx, Hoe verhoud je je tot technologie.docx, Het zijn vooral mensen die sociale media zo toxisch maken.docx en Wordt AI slimmer dan de mens.docx.",
+      "assessmentSummary": "In Technologie verschuift de beoordeling vooral op Diep lezen: teksten over sociale media, AI en identiteit analyseren, standpunten afwegen en die verbinden aan een persoonlijke reflectie.",
+      "studentFacingDescription": "Tijdens Technologie onderzoek je hoe technologie invloed heeft op identiteit, keuzes en gedrag. Je wordt beoordeeld op hoe goed je informatie leest en beoordeelt, en hoe bewust je daar zelf op reflecteert.",
+      "magisterNote": "Na Technologie vooral Diep lezen en Reflectie verschuiven. Let op evalueren van bruikbaarheid, verbinden van tekst aan eigen inzicht en bijstellen van denken of product.",
+      "teacherNotes": "Neem proces en inhoud samen mee. Het project leunt op lezen en denken, maar vraagt ook expliciet om reflectie, feedback gebruiken en revisie of herziening van standpunten.",
+      "stats": {
+        "focus": 9,
+        "support": 6
+      }
+    },
+    {
+      "id": "taalmakers",
+      "name": "Taalmakers",
+      "column": 17,
+      "primaryMagisterSkill": "Reflectie",
+      "secondaryMagisterSkills": [
+        "Schrijven",
+        "Spreken"
+      ],
+      "skillRationale": "Taalmakers vraagt leerlingen een eigen talig product te bedenken, leerdoelen te formuleren, feedback op te halen, keuzes te verantwoorden en het resultaat te presenteren. De constante kern is reflectie op proces en product; schrijven, spreken en stijlbewustzijn ondersteunen de uitvoering.",
+      "sourceBasis": "Taalmakers.pptx, Taalmakers.docx en projectdeck Taalmakers in jaarplanning-live.json.",
+      "assessmentSummary": "In Taalmakers verschuift de beoordeling vooral op zelfstandig taalproduct maken, leerdoelen bijstellen, feedback benutten en bewuste keuzes maken voor publiek, inhoud en vorm.",
+      "studentFacingDescription": "Tijdens Taalmakers ontwerp en maak je een eigen taalproduct. Je wordt beoordeeld op je plan, je keuzes onderweg, hoe je feedback verwerkt en hoe goed je uiteindelijke product past bij doel en publiek.",
+      "magisterNote": "Na Taalmakers vooral verschuiven op Reflectie en de brede taalvaardigheden rond plannen, maken, bijstellen en presenteren van een eigen taalproduct.",
+      "teacherNotes": "Dit project vraagt om expliciete beoordeling van proces en product samen. Neem leerdoelen, tussenfeedback, revisie en de slotpresentatie mee in het eindoordeel.",
+      "stats": {
+        "focus": 7,
+        "support": 6
+      }
+    },
+    {
+      "id": "netschrift",
+      "name": "Netschrift",
+      "column": 18,
+      "primaryMagisterSkill": "Reflectie",
+      "secondaryMagisterSkills": [
+        "Taalverzorging",
+        "Schrijven"
+      ],
+      "skillRationale": "Netschrift is geen los productproject maar een groeidossier: leerlingen selecteren werk, verwerken feedback en feedforward, kijken terug op hun ontwikkeling en werken hun taalgebruik zorgvuldig uit. Reflectie is de kern; taalverzorging en verzorgd schrijven ondersteunen dat zichtbaar maken.",
+      "sourceBasis": "Netschrift.pptx, Feedback-en-forward-opdracht.pptx, Feedback-en-forward-opdracht - feedbackpunten.docx en Handschrift en creativiteit.docx.",
+      "assessmentSummary": "In Netschrift verschuift de beoordeling vooral op Reflectie: terugkijken op taalontwikkeling, feedback verwerken en werk zorgvuldig en taalbewust vastleggen in een persoonlijk groeidossier.",
+      "studentFacingDescription": "Tijdens Netschrift laat je zien hoe je werk groeit. Je wordt beoordeeld op hoe zorgvuldig je je taalwerk bijhoudt, feedback verwerkt en kunt terughalen wat voor jou de belangrijkste punten zijn.",
+      "magisterNote": "Na Netschrift vooral Reflectie, brede taalvaardigheden en samenvattend tekstbegrip verschuiven op basis van bijwerken, terugkijken en feedforward verwerken.",
+      "teacherNotes": "Gebruik dit project vooral als zichtbaar groeidossier. Niet alleen netheid beoordelen, maar vooral kwaliteit van selectie, terugblik, feedbackverwerking en zicht op hoofdgedachten.",
+      "stats": {
+        "focus": 3,
+        "support": 0
+      }
+    },
+    {
+      "id": "v-rede",
+      "name": "V-rede",
+      "column": 19,
+      "primaryMagisterSkill": "Spreken",
+      "secondaryMagisterSkills": [
+        "Schrijven",
+        "Taalbewustzijn & stijl"
+      ],
+      "skillRationale": "V-rede mondt uit in een speech van 150 seconden voor publiek. De hoofdprestatie is mondeling overtuigen; schrijven en stijlmiddelen zijn nodig om die speech op te bouwen en te versterken.",
+      "sourceBasis": "Projectdeck 'V-rede' in jaarplanning-live.json, met framing, stijlfiguren, speechschrijven, oefenen, generale repetitie en presentaties.",
+      "assessmentSummary": "In V-rede verschuift de beoordeling vooral op argumenteren en presenteren: standpunt innemen, publiekgericht formuleren en hoofdzaken overtuigend overbrengen in een rede.",
+      "studentFacingDescription": "Tijdens V-rede schrijf en presenteer je een overtuigende rede. Je wordt beoordeeld op hoe scherp je standpunt is, hoe goed je je publiek meeneemt en hoe overtuigend je hoofdpunten naar voren komen.",
+      "magisterNote": "Na V-rede vooral brede taalvaardigheden en Diep lezen verschuiven rond argumentatie, publieksgerichtheid, hoofdgedachte en mondelinge overtuigingskracht.",
+      "teacherNotes": "Neem schrijven en voordracht samen mee in het eindoordeel. Let expliciet op argumentatieve lijn, hoofd- en bijzaken, stijlmiddelen, publiekbewustzijn en presentatie.",
+      "stats": {
+        "focus": 4,
+        "support": 2
+      }
+    },
+    {
+      "id": "invloed",
+      "name": "Invloed",
+      "column": 20,
+      "primaryMagisterSkill": "Diep lezen",
+      "secondaryMagisterSkills": [
+        "Schrijven",
+        "Taalbewustzijn & stijl"
+      ],
+      "skillRationale": "Invloed is opgebouwd rond het lezen en analyseren van artikelen over framing, complottheorieen, populisme en manipulatie. De kern is analytisch lezen; schrijven en taalbewustzijn volgen uit het toepassen van die analyse.",
+      "sourceBasis": "Projectdeck 'Invloed' in jaarplanning-live.json, met geprinte artikelen, close reading, framinganalyse, drogredenen en toets/inleveropdracht.",
+      "assessmentSummary": "In Invloed verschuift de beoordeling vooral op Diep lezen en argumentatieve analyse: framing herkennen, misleiding signaleren en teksten beoordelen op doel, vorm en betrouwbaarheid.",
+      "studentFacingDescription": "Tijdens Invloed onderzoek je hoe taal mensen stuurt. Je wordt beoordeeld op hoe goed je framing, drogredenen en manipulatie herkent, en hoe scherp je zelf kunt lezen, analyseren en schrijven over beïnvloeding.",
+      "magisterNote": "Na Invloed vooral verschuiven op Diep lezen en brede taalvaardigheden rond argumentatie, bronbeoordeling, framing en misleidende vormelementen.",
+      "teacherNotes": "Eindmoment zit sterk in de toets/inleveropdracht. Let op analyse van doel en publiek, framing, argumentatiestructuur, betrouwbaarheid en het signaleren van manipulatieve taalkeuzes.",
+      "stats": {
+        "focus": 9,
+        "support": 1
+      }
+    }
+  ],
+  "magisterSkills": [
+    "Alle vaardigheden",
+    "Diep lezen",
+    "Literatuur",
+    "Reflectie",
+    "Schrijven",
+    "Spreken",
+    "Taalbewustzijn & stijl",
+    "Taalverzorging"
+  ],
+  "goals": [
+    {
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving"
+    },
+    {
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden"
+    },
+    {
+      "kerndoelNumber": "5",
+      "kerndoel": "Reflecteert op taalactiviteiten",
+      "subgoalCode": "5",
+      "subgoal": "Reflectie op taalactiviteiten"
+    },
+    {
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip"
+    },
+    {
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip"
+    },
+    {
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2C",
+      "subgoal": "Bronnen verkennen"
+    },
+    {
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6C",
+      "subgoal": "Genres"
+    },
+    {
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)"
+    },
+    {
+      "kerndoelNumber": "8",
+      "kerndoel": "Literatuurervaring",
+      "subgoalCode": "8",
+      "subgoal": "Leeservaring en leesvoorkeur"
+    },
+    {
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9A",
+      "subgoal": "Verhalende teksten begrijpen"
+    },
+    {
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9B",
+      "subgoal": "Literaire genres"
+    },
+    {
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9C",
+      "subgoal": "Literatuur uit verschillende tijden"
+    },
+    {
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9D",
+      "subgoal": "Literatuur in context (havo/vwo)"
+    },
+    {
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren"
+    },
+    {
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven"
+    },
+    {
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren"
+    },
+    {
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren"
+    },
+    {
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken"
+    },
+    {
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7A",
+      "subgoal": "Talige identiteit"
+    },
+    {
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7B",
+      "subgoal": "Taalvariatie en taalverandering"
+    },
+    {
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6A",
+      "subgoal": "Vorm en betekenis"
+    },
+    {
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6B",
+      "subgoal": "Spelling en interpunctie"
+    }
+  ],
+  "records": [
+    {
+      "id": "alle-vaardigheden-1a-betekenisvolle-taalactiviteiten",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "betekenisvolle taalactiviteiten",
+      "magisterSkill": "Alle vaardigheden",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "breed aanwezig, niet altijd expliciet",
+      "projects": {
+        "faalfestival": "focus",
+        "klasfeed": "support",
+        "taaltopia": "support",
+        "poezie": "support",
+        "verweggers": "support",
+        "taalmakers": "support"
+      }
+    },
+    {
+      "id": "alle-vaardigheden-1b-schoolbrede-strategieen",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "schoolbrede strategieën",
+      "magisterSkill": "Alle vaardigheden",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "reflectie-5-reflecteren-op-eigen-taalgebruik-en-taalontwikkeling",
+      "kerndoelNumber": "5",
+      "kerndoel": "Reflecteert op taalactiviteiten",
+      "subgoalCode": "5",
+      "subgoal": "Reflectie op taalactiviteiten",
+      "label": "reflecteren op eigen taalgebruik en taalontwikkeling",
+      "magisterSkill": "Reflectie",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "vaak impliciet",
+      "projects": {
+        "verweggers": "support",
+        "taalmakers": "support",
+        "technologie": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "reflectie-5-feedback-gebruiken",
+      "kerndoelNumber": "5",
+      "kerndoel": "Reflecteert op taalactiviteiten",
+      "subgoalCode": "5",
+      "subgoal": "Reflectie op taalactiviteiten",
+      "label": "feedback gebruiken",
+      "magisterSkill": "Reflectie",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "expliciet in meerdere projecten",
+      "projects": {
+        "v-rede": "support",
+        "klasfeed": "focus",
+        "taaltopia": "support",
+        "taalmakers": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "reflectie-5-reviseren-en-verbeteren-van-producten",
+      "kerndoelNumber": "5",
+      "kerndoel": "Reflecteert op taalactiviteiten",
+      "subgoalCode": "5",
+      "subgoal": "Reflectie op taalactiviteiten",
+      "label": "reviseren en verbeteren van producten",
+      "magisterSkill": "Reflectie",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "sterk aanwezig",
+      "projects": {
+        "v-rede": "support",
+        "klasfeed": "focus",
+        "taaltopia": "support",
+        "taalmakers": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "reflectie-5-leerdoelen-formuleren-en-bijstellen",
+      "kerndoelNumber": "5",
+      "kerndoel": "Reflecteert op taalactiviteiten",
+      "subgoalCode": "5",
+      "subgoal": "Reflectie op taalactiviteiten",
+      "label": "leerdoelen formuleren en bijstellen",
+      "magisterSkill": "Reflectie",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "vooral Taalmakers",
+      "projects": {
+        "taalmakers": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-1b-rijke-teksten-bij-inhoudelijke-themas",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "rijke teksten bij inhoudelijke thema’s",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "breed aanwezig",
+      "projects": {
+        "faalfestival": "support",
+        "verweggers": "support",
+        "renaissance": "support",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-aandachtig-luisteren-lezen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "aandachtig luisteren/lezen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "sterk bij lees- en literatuurprojecten",
+      "projects": {
+        "faalfestival": "support",
+        "heel-veel-lezen": "support",
+        "poezie": "support",
+        "renaissance": "support"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-woordenschat-en-wereldkennis-inzetten",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "woordenschat en wereldkennis inzetten",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "vooral impliciet, zelden expliciet criterium",
+      "projects": {
+        "heel-veel-lezen": "support",
+        "renaissance": "support",
+        "technologie": "support"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-tekstsoorten-en-tekststructuren-herkennen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "tekstsoorten en tekststructuren herkennen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "deels expliciet",
+      "projects": {
+        "invloed": "focus",
+        "klasfeed": "support",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-perspectief-doel-publiek-context-beschrijven",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "perspectief/doel/publiek/context beschrijven",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "sterkst bij literaire analyse en overtuigingsprojecten",
+      "projects": {
+        "invloed": "focus",
+        "verweggers": "support",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-hoofd-en-bijzaken-en-hoofdgedachte-weergeven",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "hoofd- en bijzaken en hoofdgedachte weergeven",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "nog te weinig expliciet buiten leesvaardigheid en argumentatie",
+      "projects": {
+        "klasfeed": "support"
+      }
+    },
+    {
+      "id": "diep-lezen-2a-begripsstrategieen-toepassen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2A",
+      "subgoal": "Luisteren en lezen met begrip",
+      "label": "begripsstrategieën toepassen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 1-2",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "diep-lezen-2b-inhoudelijke-relaties-binnen-en-tussen-teksten-benoemen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "inhoudelijke relaties binnen en tussen teksten benoemen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "sterkst waar vergelijken of duiden centraal staat",
+      "projects": {
+        "invloed": "focus",
+        "verweggers": "support"
+      }
+    },
+    {
+      "id": "diep-lezen-2b-feiten-meningen-argumentatie-perspectieven-vergelijken",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "feiten/meningen/argumentatie/perspectieven vergelijken",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "invloed": "focus",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2b-framing-herkennen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "framing herkennen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "X",
+      "projects": {
+        "v-rede": "support",
+        "invloed": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2b-bruikbaarheid-evalueren",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "bruikbaarheid evalueren",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "zwakker gedekt; vaak impliciet",
+      "projects": {
+        "invloed": "focus",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2b-reflecteren-op-waarde",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "reflecteren op waarde",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "lees- en literaire reflectie redelijk aanwezig",
+      "projects": {
+        "invloed": "focus",
+        "poezie": "support",
+        "verweggers": "support",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2b-inhoud-en-vorm-van-teksten",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2B",
+      "subgoal": "Luisteren en lezen met diep begrip",
+      "label": "inhoud en vorm van teksten",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-4",
+      "specification": "",
+      "note": "breed aanwezig, maar vaak niet als apart criterium benoemd",
+      "projects": {
+        "invloed": "focus",
+        "poezie": "support",
+        "renaissance": "support",
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2c-maker",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2C",
+      "subgoal": "Bronnen verkennen",
+      "label": "maker",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "diep-lezen-2c-tekstsoort-en-datum-herkennen",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2C",
+      "subgoal": "Bronnen verkennen",
+      "label": "tekstsoort en datum herkennen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "diep-lezen-2c-misleidende-inhouds-en-vormelementen-signaleren",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2C",
+      "subgoal": "Bronnen verkennen",
+      "label": "misleidende inhouds- en vormelementen signaleren",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "X",
+      "projects": {
+        "invloed": "focus"
+      }
+    },
+    {
+      "id": "diep-lezen-2c-bronnen-vergelijken-en-selecteren-op-betrouwbaarheid",
+      "kerndoelNumber": "2",
+      "kerndoel": "Begrijpt teksten",
+      "subgoalCode": "2C",
+      "subgoal": "Bronnen verkennen",
+      "label": "bronnen vergelijken en selecteren op betrouwbaarheid",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "~",
+      "projects": {
+        "invloed": "focus",
+        "klasfeed": "support"
+      }
+    },
+    {
+      "id": "diep-lezen-6c-herkennen-van-verschillende-tekstsoorten",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6C",
+      "subgoal": "Genres",
+      "label": "herkennen van verschillende tekstsoorten",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "diep-lezen-6c-inzicht-in-opbouw-en-conventies-van-genres",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6C",
+      "subgoal": "Genres",
+      "label": "inzicht in opbouw en conventies van genres",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "diep-lezen-6d-argumentatiestructuren-herkennen",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "argumentatiestructuren herkennen",
+      "magisterSkill": "Diep lezen",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "literatuur-1a-vaste-leesroutine",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "vaste leesroutine",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus"
+      }
+    },
+    {
+      "id": "literatuur-1a-actueel-en-veelzijdig-literatuuraanbod",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "actueel en veelzijdig literatuuraanbod",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus"
+      }
+    },
+    {
+      "id": "literatuur-1a-leesmotivatie",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "leesmotivatie",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus"
+      }
+    },
+    {
+      "id": "literatuur-1b-taalontwikkeling-in-alle-vakken",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "taalontwikkeling in alle vakken",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "literatuur-8-ontwikkelen-van-leesplezier",
+      "kerndoelNumber": "8",
+      "kerndoel": "Literatuurervaring",
+      "subgoalCode": "8",
+      "subgoal": "Leeservaring en leesvoorkeur",
+      "label": "ontwikkelen van leesplezier",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus"
+      }
+    },
+    {
+      "id": "literatuur-8-opbouwen-van-leesvoorkeur",
+      "kerndoelNumber": "8",
+      "kerndoel": "Literatuurervaring",
+      "subgoalCode": "8",
+      "subgoal": "Leeservaring en leesvoorkeur",
+      "label": "opbouwen van leesvoorkeur",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus"
+      }
+    },
+    {
+      "id": "literatuur-8-reflecteren-op-leeservaringen",
+      "kerndoelNumber": "8",
+      "kerndoel": "Literatuurervaring",
+      "subgoalCode": "8",
+      "subgoal": "Leeservaring en leesvoorkeur",
+      "label": "reflecteren op leeservaringen",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-8-verwoorden-van-waardering-en-betekenis-van-gelezen-teksten",
+      "kerndoelNumber": "8",
+      "kerndoel": "Literatuurervaring",
+      "subgoalCode": "8",
+      "subgoal": "Leeservaring en leesvoorkeur",
+      "label": "verwoorden van waardering en betekenis van gelezen teksten",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "heel-veel-lezen": "focus",
+        "poezie": "focus",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9a-begrijpen-van-verhaallijnen",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9A",
+      "subgoal": "Verhalende teksten begrijpen",
+      "label": "begrijpen van verhaallijnen",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9a-personages-en-perspectieven",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9A",
+      "subgoal": "Verhalende teksten begrijpen",
+      "label": "personages en perspectieven",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9a-interpreteren-van-gebeurtenissen-en-motieven",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9A",
+      "subgoal": "Verhalende teksten begrijpen",
+      "label": "interpreteren van gebeurtenissen en motieven",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9a-verbanden-leggen-binnen-tekst",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9A",
+      "subgoal": "Verhalende teksten begrijpen",
+      "label": "verbanden leggen binnen tekst",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9b-herkennen-en-onderscheiden-van-literaire-vormen-en-genres",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9B",
+      "subgoal": "Literaire genres",
+      "label": "herkennen en onderscheiden van literaire vormen en genres",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "poezie": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9b-inzicht-in-kenmerken-en-conventies-van-verschillende-genres",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9B",
+      "subgoal": "Literaire genres",
+      "label": "inzicht in kenmerken en conventies van verschillende genres",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "poezie": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9c-inzicht-in-literaire-ontwikkelingen-door-de-tijd",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9C",
+      "subgoal": "Literatuur uit verschillende tijden",
+      "label": "inzicht in literaire ontwikkelingen door de tijd",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9c-herkennen-van-kenmerken-van-periodes",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9C",
+      "subgoal": "Literatuur uit verschillende tijden",
+      "label": "herkennen van kenmerken van periodes",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9c-plaatsen-van-teksten-in-historische-context",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9C",
+      "subgoal": "Literatuur uit verschillende tijden",
+      "label": "plaatsen van teksten in historische context",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9d-analyseren-van-literaire-teksten-in-relatie-tot-maatschappelijke",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9D",
+      "subgoal": "Literatuur in context (havo/vwo)",
+      "label": "analyseren van literaire teksten in relatie tot maatschappelijke",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 4-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9d-culturele-en-historische-context",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9D",
+      "subgoal": "Literatuur in context (havo/vwo)",
+      "label": "culturele en historische context",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 4-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "literatuur-9d-verdiepen-van-interpretatie",
+      "kerndoelNumber": "9",
+      "kerndoel": "Literatuur",
+      "subgoalCode": "9D",
+      "subgoal": "Literatuur in context (havo/vwo)",
+      "label": "verdiepen van interpretatie",
+      "magisterSkill": "Literatuur",
+      "phase": "klas 4-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "poezie": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "schrijven-3c-hoofd-en-bijzaken",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "hoofd- en bijzaken",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "schrijven-3c-indrukken-en-vragen-noteren",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "indrukken en vragen noteren",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "technologie": "focus"
+      }
+    },
+    {
+      "id": "schrijven-3c-samenvatten",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "samenvatten",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "netschrift": "support"
+      }
+    },
+    {
+      "id": "schrijven-3c-gedachten-en-inzichten-ordenen-en-onderbouwen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "gedachten en inzichten ordenen en onderbouwen",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "technologie": "focus",
+        "netschrift": "support"
+      }
+    },
+    {
+      "id": "schrijven-3c-school-en-vaktaal-gebruiken",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "school- en vaktaal gebruiken",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "schrijven-3c-schrijfvaardigheid-inzetten-om-begrip-op-te-bouwen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3C",
+      "subgoal": "Schrijven om te leren",
+      "label": "schrijfvaardigheid inzetten om begrip op te bouwen",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "schrijven-6c-gebruiken-van-verschillende-tekstsoorten",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6C",
+      "subgoal": "Genres",
+      "label": "gebruiken van verschillende tekstsoorten",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "focus",
+        "taalmakers": "support"
+      }
+    },
+    {
+      "id": "schrijven-6c-aanpassen-aan-doel-en-publiek",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6C",
+      "subgoal": "Genres",
+      "label": "aanpassen aan doel en publiek",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "focus",
+        "taalmakers": "support"
+      }
+    },
+    {
+      "id": "schrijven-1a-durf-om-te-schrijven",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "durf om te schrijven",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taalmakers": "focus"
+      }
+    },
+    {
+      "id": "schrijven-1b-taalproductie-en-interactie",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "taalproductie en interactie",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "schrijven-3a-passende-aanpak-hanteren",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "passende aanpak hanteren",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "support",
+        "invloed": "support",
+        "klasfeed": "focus",
+        "taalmakers": "focus"
+      }
+    },
+    {
+      "id": "schrijven-3a-informatie-uit-verschillende-bronnen-verwerken-tot-gestructureerde-tekst-met-bronvermelding",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "informatie uit verschillende bronnen verwerken tot gestructureerde tekst met bronvermelding",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "invloed": "support",
+        "klasfeed": "focus"
+      }
+    },
+    {
+      "id": "schrijven-3a-kennis-van-tekstvormen-gebruiken",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "kennis van tekstvormen gebruiken",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "support",
+        "klasfeed": "focus",
+        "renaissance": "support"
+      }
+    },
+    {
+      "id": "schrijven-3a-leesbaar-verstaanbaar-formuleren",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "leesbaar/verstaanbaar formuleren",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "v-rede": "support",
+        "klasfeed": "focus",
+        "poezie": "support",
+        "renaissance": "support",
+        "technologie": "support"
+      }
+    },
+    {
+      "id": "schrijven-3a-reviseren-met-oog-op-doel",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "reviseren met oog op doel",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "klasfeed": "focus",
+        "taalmakers": "focus",
+        "netschrift": "support"
+      }
+    },
+    {
+      "id": "schrijven-3a-publiek-en-context",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "publiek en context",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "v-rede": "support",
+        "invloed": "support",
+        "klasfeed": "focus",
+        "taalmakers": "focus"
+      }
+    },
+    {
+      "id": "schrijven-6d-argumentatiestructuren-herkennen-en-gebruiken",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "argumentatiestructuren herkennen en gebruiken",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "support"
+      }
+    },
+    {
+      "id": "schrijven-6d-standpunten-onderbouwen",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "standpunten onderbouwen",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "support",
+        "invloed": "support"
+      }
+    },
+    {
+      "id": "schrijven-6d-overtuigingsmiddelen-inzetten",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "overtuigingsmiddelen inzetten",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "support",
+        "invloed": "support"
+      }
+    },
+    {
+      "id": "schrijven-6d-effect-op-publiek-analyseren",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "effect op publiek analyseren",
+      "magisterSkill": "Schrijven",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus"
+      }
+    },
+    {
+      "id": "spreken-1a-durf-om-te-spreken",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "durf om te spreken",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "focus",
+        "klasfeed": "support",
+        "taaltopia": "support",
+        "poezie": "focus",
+        "taalmakers": "support",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "spreken-1b-taalproductie-en-interactie",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "taalproductie en interactie",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "spreken-3a-passende-aanpak-hanteren",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "passende aanpak hanteren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "focus",
+        "taalmakers": "support"
+      }
+    },
+    {
+      "id": "spreken-3a-informatie-uit-verschillende-bronnen-verwerken-tot-gestructureerde-tekst-met-bronvermelding",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "informatie uit verschillende bronnen verwerken tot gestructureerde tekst met bronvermelding",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "spreken-3a-kennis-van-tekstvormen-gebruiken",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "kennis van tekstvormen gebruiken",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "focus"
+      }
+    },
+    {
+      "id": "spreken-3a-leesbaar-verstaanbaar-formuleren",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "leesbaar/verstaanbaar formuleren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "v-rede": "focus",
+        "poezie": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "spreken-3a-reviseren-met-oog-op-doel",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "reviseren met oog op doel",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "taalmakers": "support"
+      }
+    },
+    {
+      "id": "spreken-3a-publiek-en-context",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3A",
+      "subgoal": "Doelgericht spreken en schrijven",
+      "label": "publiek en context",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "support",
+        "v-rede": "focus",
+        "taaltopia": "support",
+        "poezie": "support",
+        "taalmakers": "support",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "spreken-6d-argumentatiestructuren-herkennen-en-gebruiken",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "argumentatiestructuren herkennen en gebruiken",
+      "magisterSkill": "Spreken",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "focus"
+      }
+    },
+    {
+      "id": "spreken-6d-standpunten-onderbouwen",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "standpunten onderbouwen",
+      "magisterSkill": "Spreken",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "focus"
+      }
+    },
+    {
+      "id": "spreken-6d-overtuigingsmiddelen-inzetten",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "overtuigingsmiddelen inzetten",
+      "magisterSkill": "Spreken",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "focus"
+      }
+    },
+    {
+      "id": "spreken-6d-effect-op-publiek-analyseren",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6D",
+      "subgoal": "Overtuiging (havo/vwo)",
+      "label": "effect op publiek analyseren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "faalfestival": "focus",
+        "v-rede": "focus"
+      }
+    },
+    {
+      "id": "spreken-4a-actief-luisteren-en-reageren",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren",
+      "label": "actief luisteren en reageren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "support",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "spreken-4a-beurten-nemen",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren",
+      "label": "beurten nemen",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "spreken-4a-aansluiten-bij-gesprekspartner",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren",
+      "label": "aansluiten bij gesprekspartner",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "spreken-4a-rekening-houden-met-doel-en-context",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren",
+      "label": "rekening houden met doel en context",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "spreken-4a-eigen-bijdrage-helder-formuleren",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4A",
+      "subgoal": "Gesprekken voeren",
+      "label": "eigen bijdrage helder formuleren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "support",
+        "verweggers": "focus",
+        "technologie": "support"
+      }
+    },
+    {
+      "id": "spreken-4b-doorvragen",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren",
+      "label": "doorvragen",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "support",
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "spreken-4b-verduidelijken",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren",
+      "label": "verduidelijken",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "support"
+      }
+    },
+    {
+      "id": "spreken-4b-voortbouwen-op-bijdragen-van-anderen",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren",
+      "label": "voortbouwen op bijdragen van anderen",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "spreken-4b-samen-betekenis-construeren",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren",
+      "label": "samen betekenis construeren",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "verweggers": "focus"
+      }
+    },
+    {
+      "id": "spreken-4b-kennis-opbouwen-via-interactie",
+      "kerndoelNumber": "4",
+      "kerndoel": "Voert gesprekken",
+      "subgoalCode": "4B",
+      "subgoal": "Gesprekken om te leren",
+      "label": "kennis opbouwen via interactie",
+      "magisterSkill": "Spreken",
+      "phase": "klas 2-5",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalbewustzijn-stijl-1a-ruimte-voor-talen-en-taalvarieteiten",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1A",
+      "subgoal": "Taal- en leesomgeving",
+      "label": "ruimte voor talen en taalvariëteiten",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-3",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "support"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-3b-creatief-taalgebruik-van-anderen-verkennen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken",
+      "label": "creatief taalgebruik van anderen verkennen",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalbewustzijn-stijl-3b-eigen-gedachten-gevoelens-fantasieen-verwoorden",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken",
+      "label": "eigen gedachten/gevoelens/fantasieën verwoorden",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus",
+        "poezie": "focus",
+        "taalmakers": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-3b-experimenteren-met-klanken-woorden-zinnen-genres-visuele-vormen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken",
+      "label": "experimenteren met klanken/woorden/zinnen/genres/visuele vormen",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus",
+        "poezie": "focus",
+        "renaissance": "focus"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-3b-eigen-stijl-en-repertoire-verkennen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken",
+      "label": "eigen stijl en repertoire verkennen",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus",
+        "taalmakers": "focus",
+        "netschrift": "support"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-3b-creatief-taalgebruik-waarderen",
+      "kerndoelNumber": "3",
+      "kerndoel": "Produceert teksten",
+      "subgoalCode": "3B",
+      "subgoal": "Creatief taal gebruiken",
+      "label": "creatief taalgebruik waarderen",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalbewustzijn-stijl-7a-bewust-worden-van-eigen-taalgebruik",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7A",
+      "subgoal": "Talige identiteit",
+      "label": "bewust worden van eigen taalgebruik",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "invloed": "support",
+        "taaltopia": "support",
+        "technologie": "support"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-7a-afstemmen-op-publiek-en-context",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7A",
+      "subgoal": "Talige identiteit",
+      "label": "afstemmen op publiek en context",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "focus",
+        "taaltopia": "focus",
+        "taalmakers": "focus"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-7a-reflecteren-op-stijlkeuzes",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7A",
+      "subgoal": "Talige identiteit",
+      "label": "reflecteren op stijlkeuzes",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "focus",
+        "invloed": "support",
+        "taaltopia": "focus",
+        "technologie": "support"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-7a-ontwikkelen-van-eigen-stem-en-taalrepertoire",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7A",
+      "subgoal": "Talige identiteit",
+      "label": "ontwikkelen van eigen stem en taalrepertoire",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "v-rede": "focus",
+        "taaltopia": "focus",
+        "taalmakers": "focus"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-7b-inzicht-in-verschillen-tussen-talen-en-varieteiten",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7B",
+      "subgoal": "Taalvariatie en taalverandering",
+      "label": "inzicht in verschillen tussen talen en variëteiten",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus"
+      }
+    },
+    {
+      "id": "taalbewustzijn-stijl-7b-ontwikkeling-van-het-nederlands-door-de-tijd",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7B",
+      "subgoal": "Taalvariatie en taalverandering",
+      "label": "ontwikkeling van het Nederlands door de tijd",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalbewustzijn-stijl-7b-relatie-tussen-taal-en-cultuur-geschiedenis-begrijpen",
+      "kerndoelNumber": "7",
+      "kerndoel": "Taal en identiteit",
+      "subgoalCode": "7B",
+      "subgoal": "Taalvariatie en taalverandering",
+      "label": "relatie tussen taal en cultuur/geschiedenis begrijpen",
+      "magisterSkill": "Taalbewustzijn & stijl",
+      "phase": "klas 3-6",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalverzorging-1b-aandacht-voor-taalverzorging-en-taalgebruik",
+      "kerndoelNumber": "1",
+      "kerndoel": "Taalcompetentie",
+      "subgoalCode": "1B",
+      "subgoal": "Taal in de leergebieden",
+      "label": "aandacht voor taalverzorging en taalgebruik",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 2-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "taalverzorging-6a-inzicht-in-zinsstructuur-en-betekenisrelaties",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6A",
+      "subgoal": "Vorm en betekenis",
+      "label": "inzicht in zinsstructuur en betekenisrelaties",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {}
+    },
+    {
+      "id": "taalverzorging-6a-herkennen-en-toepassen-van-grammaticale-structuren",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6A",
+      "subgoal": "Vorm en betekenis",
+      "label": "herkennen en toepassen van grammaticale structuren",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus"
+      }
+    },
+    {
+      "id": "taalverzorging-6a-verband-tussen-vorm-en-betekenis-begrijpen",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6A",
+      "subgoal": "Vorm en betekenis",
+      "label": "verband tussen vorm en betekenis begrijpen",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-4",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "taaltopia": "focus"
+      }
+    },
+    {
+      "id": "taalverzorging-6b-correct-toepassen-van-spellingregels-en-interpunctie",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6B",
+      "subgoal": "Spelling en interpunctie",
+      "label": "correct toepassen van spellingregels en interpunctie",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "taalverzorging-6b-schrijven-volgens-conventies",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6B",
+      "subgoal": "Spelling en interpunctie",
+      "label": "schrijven volgens conventies",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "focus",
+        "netschrift": "focus"
+      }
+    },
+    {
+      "id": "taalverzorging-6b-nauwkeurig-formuleren",
+      "kerndoelNumber": "6",
+      "kerndoel": "Taal als systeem",
+      "subgoalCode": "6B",
+      "subgoal": "Spelling en interpunctie",
+      "label": "nauwkeurig formuleren",
+      "magisterSkill": "Taalverzorging",
+      "phase": "klas 1-6",
+      "specification": "",
+      "note": "",
+      "projects": {
+        "klasfeed": "focus",
+        "netschrift": "focus"
+      }
+    }
+  ]
+}
