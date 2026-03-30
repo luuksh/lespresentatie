@@ -11,6 +11,7 @@
       planningUrl: 'js/jaarplanning-live.json',
       classesUrl: 'js/leerlingen_per_klas.json',
       agendaUrl: 'js/zermelo-agenda-live.json',
+      kerndoelenUrl: 'data/kerndoelen/kerndoelen-map.json',
       internalHubUrl: 'index.html'
     };
   </script>
@@ -27,6 +28,7 @@
         <span class="masthead-tag">Jaarplanning</span>
         <span class="masthead-tag">Presentaties</span>
         <span class="masthead-tag">Huiswerk</span>
+        <span class="masthead-tag">Vaardigheden</span>
       </div>
     </header>
 
@@ -43,6 +45,26 @@
           <div id="homeworkSummary" class="stack-list next-lesson-homework"></div>
           <div id="projectSummary" class="stack-list next-lesson-project"></div>
         </div>
+        <section class="project-rubric-card">
+          <div class="project-rubric-head">
+            <div>
+              <p class="overview-label">Tijdens dit project</p>
+              <h3 id="projectRubricTitle">Nog geen project gekoppeld</h3>
+            </div>
+            <p id="projectRubricMeta" class="overview-text">Zodra er een project is gevonden, verschijnen hier de beoordelingsaccenten.</p>
+          </div>
+          <p id="projectRubricSummary" class="overview-text">Nog geen vaardigheidskaart beschikbaar.</p>
+          <div class="project-rubric-grid">
+            <article class="rubric-column">
+              <p class="rubric-label">Vaardigheden</p>
+              <div id="projectRubricSkills" class="rubric-chip-row"></div>
+            </article>
+            <article class="rubric-column">
+              <p class="rubric-label">Labels</p>
+              <div id="projectRubricLabels" class="rubric-label-list"></div>
+            </article>
+          </div>
+        </section>
       </article>
 
       <aside class="student-sidebar">
