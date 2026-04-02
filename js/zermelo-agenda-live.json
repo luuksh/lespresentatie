@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T11:56:49.738267+00:00",
+  "updatedAt": "2026-04-02T13:11:28.389111+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -144,20 +144,20 @@
     },
     {
       "classId": "G3E",
-      "start": "2026-04-09T06:15:00+00:00",
-      "end": "2026-04-09T07:00:00+00:00",
-      "summary": "h216 ne g3e",
-      "description": "h216 ne g3e",
+      "start": "2026-04-09T07:00:00+00:00",
+      "end": "2026-04-09T07:45:00+00:00",
+      "summary": "[!] h216 ne g3e",
+      "description": "h216 ne g3e\nWijzigingen: De les is verplaatst (komt van do 8:15u).",
       "location": "",
       "categories": "",
       "uid": "1095979@cgu"
     },
     {
       "classId": "G1D",
-      "start": "2026-04-09T07:00:00+00:00",
-      "end": "2026-04-09T07:45:00+00:00",
-      "summary": "h216 ne g1d",
-      "description": "h216 ne g1d",
+      "start": "2026-04-09T07:45:00+00:00",
+      "end": "2026-04-09T08:30:00+00:00",
+      "summary": "[>] h212 ne g1d",
+      "description": "h212 ne g1d\nWijzigingen: Het lokaal is gewijzigd (was h216) en de les is verplaatst (komt van do 9:00u).",
       "location": "",
       "categories": "",
       "uid": "1096009@cgu"
