@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-07T06:51:23.715210+00:00",
+  "updatedAt": "2026-04-07T08:08:22.935564+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -263,11 +263,21 @@
       "uid": "1100000@cgu"
     },
     {
-      "classId": "G3B",
+      "classId": "G1D",
       "start": "2026-04-17T06:15:00+00:00",
       "end": "2026-04-17T07:00:00+00:00",
-      "summary": "h215 ne g3b",
-      "description": "h215 ne g3b",
+      "summary": "[!] h215 ne g1d",
+      "description": "h215 ne g1d\nWijzigingen: De les is verplaatst (komt van vr 14:20u).",
+      "location": "",
+      "categories": "",
+      "uid": "1099950@cgu"
+    },
+    {
+      "classId": "G3B",
+      "start": "2026-04-17T07:00:00+00:00",
+      "end": "2026-04-17T07:45:00+00:00",
+      "summary": "[!] h215 ne g3b",
+      "description": "h215 ne g3b\nWijzigingen: De les is verplaatst (komt van vr 8:15u).",
       "location": "",
       "categories": "",
       "uid": "1100295@cgu"
@@ -311,16 +321,6 @@
       "location": "",
       "categories": "",
       "uid": "1100357@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-04-17T12:20:00+00:00",
-      "end": "2026-04-17T13:05:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1099950@cgu"
     }
   ]
 }
