@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T05:56:25.757055+00:00",
+  "updatedAt": "2026-04-08T07:15:18.660291+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -123,6 +123,16 @@
       "uid": "1096307@cgu"
     },
     {
+      "classId": "G1D",
+      "start": "2026-04-10T10:50:00+00:00",
+      "end": "2026-04-10T11:35:00+00:00",
+      "summary": "[>] h216 ne g1d",
+      "description": "h216 ne g1d\nWijzigingen: Het lokaal is gewijzigd (was h215) en de les is verplaatst (komt van vr 14:20u).",
+      "location": "",
+      "categories": "",
+      "uid": "1096354@cgu"
+    },
+    {
       "classId": "G3F",
       "start": "2026-04-10T11:35:00+00:00",
       "end": "2026-04-10T12:20:00+00:00",
@@ -131,16 +141,6 @@
       "location": "",
       "categories": "",
       "uid": "1096391@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-04-10T12:20:00+00:00",
-      "end": "2026-04-10T13:05:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1096354@cgu"
     },
     {
       "classId": "G1D",
