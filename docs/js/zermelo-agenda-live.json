@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-09T09:01:38.211155+00:00",
+  "updatedAt": "2026-04-09T10:20:54.697716+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -141,6 +141,26 @@
       "location": "",
       "categories": "",
       "uid": "1096391@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-04-13T07:15:00+00:00",
+      "end": "2026-04-13T07:45:00+00:00",
+      "summary": "[o] [toets] u008 dia g1d",
+      "description": "u008 dia g1d\nOpmerkingen: Toets: g1D DIA-spel",
+      "location": "",
+      "categories": "",
+      "uid": "1116216@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-04-16T07:00:00+00:00",
+      "end": "2026-04-16T08:00:00+00:00",
+      "summary": "[o] [toets] u008 dia g1d",
+      "description": "u008 dia g1d\nOpmerkingen: Toets: g1D DIA-tekst Engels",
+      "location": "",
+      "categories": "",
+      "uid": "1116086@cgu"
     },
     {
       "classId": "G1D",
