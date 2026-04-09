@@ -187,31 +187,47 @@ function isDutchAgendaEntry(entry) {
 }
 
 function inferAgendaLessonSlots(entries, classId) {
-  const classEntries = entries
-    .filter((entry) => (
-      entry.classId === classId
-      && isDutchAgendaEntry(entry)
-    ))
-    .sort((left, right) => left.start - right.start);
-  const unique = new Map();
-  for (const entry of classEntries) {
-    const signature = agendaEntrySlotSignature(entry);
-    if (!signature || unique.has(signature)) continue;
-    unique.set(signature, {
-      signature,
-      day: (entry.start.getDay() || 7) - 1,
-      hour: entry.start.getHours(),
-      minute: entry.start.getMinutes(),
-      duration: entry.end.getTime() - entry.start.getTime(),
+  const bySlot = new Map();
+  const weeklyLessons = new Map();
+
+  for (const entry of entries) {
+    if (!(entry.classId === classId && isDutchAgendaEntry(entry))) continue;
+    const week = isoWeekForDate(entry.start);
+    const key = String(week);
+    if (!weeklyLessons.has(key)) weeklyLessons.set(key, []);
+    weeklyLessons.get(key).push(entry);
+  }
+
+  for (const lessonEntries of weeklyLessons.values()) {
+    const ordered = [...lessonEntries].sort((left, right) => left.start - right.start);
+    ordered.forEach((entry, index) => {
+      const signature = agendaEntrySlotSignature(entry);
+      if (!signature) return;
+      if (!bySlot.has(index)) bySlot.set(index, new Map());
+      const bucket = bySlot.get(index);
+      const current = bucket.get(signature);
+      bucket.set(signature, {
+        signature,
+        count: (current?.count || 0) + 1,
+        day: (entry.start.getDay() || 7) - 1,
+        hour: entry.start.getHours(),
+        minute: entry.start.getMinutes(),
+        duration: entry.end.getTime() - entry.start.getTime(),
+      });
     });
   }
-  return [...unique.values()]
-    .sort((left, right) => (
-      left.day - right.day
+
+  const resolved = [];
+  for (const [slotIndex, variants] of [...bySlot.entries()].sort((a, b) => a[0] - b[0])) {
+    const best = [...variants.values()].sort((left, right) => (
+      right.count - left.count
+      || left.day - right.day
       || left.hour - right.hour
       || left.minute - right.minute
-      || left.duration - right.duration
-    ));
+    ))[0];
+    resolved[slotIndex] = best || null;
+  }
+  return resolved.filter(Boolean);
 }
 
 function lessonNumberForAgendaWeek(entries, selectedEntry) {
@@ -387,20 +403,17 @@ function getAgendaLessonsForWeek(classId, week) {
 }
 
 function getScheduledLessonForWeek(classId, week, lessonKey) {
+  const lessons = getAgendaLessonsForWeek(classId, week);
   const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
   if (slotIndex < 0) return null;
-  const pattern = inferAgendaLessonSlots(state.agendaEntries, classId);
-  const slot = pattern[slotIndex];
-  if (!slot) return null;
-  const lessons = getAgendaLessonsForWeek(classId, week);
-  return lessons.find((entry) => agendaEntrySlotSignature(entry) === slot.signature) || null;
+  return lessons[slotIndex] || null;
 }
 
 function inferScheduledLessonForWeek(classId, week, lessonKey) {
   const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
   if (slotIndex < 0) return null;
   const pattern = inferAgendaLessonSlots(state.agendaEntries, classId)[slotIndex];
-  if (!pattern) return null;
+  if (!pattern || Number(pattern.count || 0) < 2) return null;
 
   const weekNumber = Number(week);
   if (!Number.isFinite(weekNumber)) return null;
