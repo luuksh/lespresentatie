@@ -775,6 +775,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     return '';
   }
 
+  function agendaSubjectText(value) {
+    return normalizeClassId(value)
+      .replace(/[^A-Z0-9.]+/g, ' ')
+      .trim();
+  }
+
+  function isDutchAgendaText(value) {
+    const text = agendaSubjectText(value);
+    if (!text) return true;
+    if (/\bKMT\b/.test(text)) return false;
+    if (/\b(NETL|NE|NED|NEDERLANDS)\b/.test(text)) return true;
+    return true;
+  }
+
+  function isDutchAgendaRow(row) {
+    if (!row || typeof row !== 'object') return true;
+    return isDutchAgendaText(
+      `${row.summary || row.SUMMARY || ''}\n${row.description || row.DESCRIPTION || ''}\n${row.categories || row.CATEGORIES || ''}`
+    );
+  }
+
   function agendaRoomLabel(entry) {
     if (!entry) return '';
     if (entry.room) return String(entry.room).toUpperCase();
@@ -787,6 +808,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
+    if (!isDutchAgendaRow(row)) return null;
     const explicitClass = pickClassId(
       row.classId
       ?? row.klas
@@ -918,6 +940,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     return events
       .map((event) => {
+        if (!isDutchAgendaRow(event)) return null;
         const classId = pickClassId(event['X-CLASS'])
           || inferClassIdFromText(
             `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`
@@ -1020,8 +1043,51 @@ document.addEventListener('DOMContentLoaded', async () => {
     return { monday, sunday };
   }
 
+  function agendaEntrySlotSignature(entry) {
+    if (!entry?.start || !entry?.end) return '';
+    const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+    const end = entry.end instanceof Date ? entry.end : new Date(entry.end);
+    if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return '';
+    const day = (start.getDay() || 7) - 1;
+    const duration = end.getTime() - start.getTime();
+    return `${day}-${start.getHours()}:${start.getMinutes()}-${duration}`;
+  }
+
+  function inferClassLessonSlots(entries, classId) {
+    const classEntries = entries
+      .filter((entry) => classIdMatch(entry.classId, classId))
+      .sort((a, b) => a.start - b.start);
+    const unique = new Map();
+    for (const entry of classEntries) {
+      const signature = agendaEntrySlotSignature(entry);
+      if (!signature || unique.has(signature)) continue;
+      const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+      const end = entry.end instanceof Date ? entry.end : new Date(entry.end);
+      unique.set(signature, {
+        signature,
+        day: (start.getDay() || 7) - 1,
+        hour: start.getHours(),
+        minute: start.getMinutes(),
+        duration: end.getTime() - start.getTime(),
+      });
+    }
+    return [...unique.values()]
+      .sort((left, right) => (
+        left.day - right.day
+        || left.hour - right.hour
+        || left.minute - right.minute
+        || left.duration - right.duration
+      ));
+  }
+
   function lessonNumberForWeek(entries, selectedEntry) {
     if (!selectedEntry) return 0;
+    const signature = agendaEntrySlotSignature(selectedEntry);
+    if (signature) {
+      const slotPattern = inferClassLessonSlots(entries, selectedEntry.classId);
+      const slotIndex = slotPattern.findIndex((item) => item.signature === signature);
+      if (slotIndex >= 0) return slotIndex + 1;
+    }
     const { monday, sunday } = getWeekBounds(selectedEntry.start);
     const inWeek = entries
       .filter((entry) => classIdMatch(entry.classId, selectedEntry.classId) && entry.start >= monday && entry.start <= sunday)

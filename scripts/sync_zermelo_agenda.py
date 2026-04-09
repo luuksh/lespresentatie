@@ -165,6 +165,17 @@ def extract_class_id(*values: str) -> str:
     return ""
 
 
+def is_dutch_agenda_text(*values: str) -> bool:
+    combined = re.sub(r"[^A-Z0-9.]+", " ", "\n".join(values).upper()).strip()
+    if not combined:
+        return True
+    if re.search(r"\bKMT\b", combined):
+        return False
+    if re.search(r"\b(NETL|NE|NED|NEDERLANDS)\b", combined):
+        return True
+    return True
+
+
 def to_entry(event: dict) -> dict | None:
     summary, _ = get_prop(event, "SUMMARY")
     description, _ = get_prop(event, "DESCRIPTION")
@@ -177,6 +188,8 @@ def to_entry(event: dict) -> dict | None:
 
     start = parse_ics_datetime(start_val, start_params)
     end = parse_ics_datetime(end_val, end_params)
+    if not is_dutch_agenda_text(summary, description, categories):
+        return None
     class_id = extract_class_id(x_class, summary, description, location, categories)
     if not class_id or not start or not end:
         return None
