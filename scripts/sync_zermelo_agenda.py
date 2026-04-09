@@ -21,6 +21,7 @@ except ImportError:  # pragma: no cover
 
 OUT_PATH = Path("js/zermelo-agenda-live.json")
 CLASS_PATTERNS = [
+    re.compile(r"\bG[1-6]\.NETL\d+\b"),
     re.compile(r"\bNETL\d+\b"),
     re.compile(r"\bG\d[A-Z]\b"),
     re.compile(r"\b\d[A-Z]\b"),
@@ -33,6 +34,12 @@ def normalize_class_id(value: str) -> str:
     cid = re.sub(r"\s+", "", str(value or "")).upper()
     if not cid:
         return ""
+    m_dotted_netl = re.match(r"^G([1-6])\.NETL(\d+)$", cid)
+    if m_dotted_netl:
+        grade = m_dotted_netl.group(1)
+        n = int(m_dotted_netl.group(2))
+        if 1 <= n <= 26:
+            return f"G{grade}{chr(64 + n)}"
     m_netl = re.match(r"^NETL(\d+)$", cid)
     if m_netl:
         # NETL4 -> G4D, NETL5 -> G4E

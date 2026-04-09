@@ -92,13 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? await rosterSource.listClassIds()
       : Object.keys(klassen);
 
-    klasSelect.innerHTML = '';
-    for (const klas of classIds) {
-      const option = document.createElement('option');
-      option.value = klas;
-      option.textContent = `Klas ${klas}`;
-      klasSelect.appendChild(option);
-    }
+    rebuildClassOptions(classIds);
 
     const lastClass = localStorage.getItem('lastClassId');
     if (lastClass && [...klasSelect.options].some((o) => o.value === lastClass)) {
@@ -298,10 +292,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   function mapSpecialClassAlias(value) {
     const cid = normalizeClassId(value);
     if (!cid) return '';
+    const dottedNetl = cid.match(/^G([1-6])\.NETL(\d+)$/);
+    if (dottedNetl) {
+      const letter = indexToLetter(Number(dottedNetl[2]));
+      if (letter) return `G${dottedNetl[1]}${letter}`;
+    }
     const embeddedNetl = cid.match(/NETL\d+/);
     if (embeddedNetl) {
       const netlLetter = letterFromNetlCode(embeddedNetl[0]);
-      if (netlLetter) return `G4${netlLetter}`;
+      if (netlLetter) {
+        const explicitGrade = cid.match(/^G([1-6])/);
+        if (explicitGrade) return `G${explicitGrade[1]}${netlLetter}`;
+        return `G4${netlLetter}`;
+      }
     }
     const netlLetter = letterFromNetlCode(cid);
     if (netlLetter) return `G4${netlLetter}`;
@@ -344,6 +347,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     const rightAliases = new Set(classIdAliases(rightClassId).map((alias) => normalizeClassId(alias)));
     if (!leftAliases.length || !rightAliases.size) return false;
     return leftAliases.some((alias) => rightAliases.has(alias));
+  }
+
+  function sortClassIds(values = []) {
+    const collator = new Intl.Collator('nl-NL', { numeric: true, sensitivity: 'base' });
+    return [...new Set(values.map((value) => mapSpecialClassAlias(value)).filter(Boolean))]
+      .sort((a, b) => collator.compare(a, b));
+  }
+
+  function rebuildClassOptions(classIds = []) {
+    if (!klasSelect) return;
+    const previousValue = klasSelect.value;
+    klasSelect.innerHTML = '';
+    for (const klas of sortClassIds(classIds)) {
+      const option = document.createElement('option');
+      option.value = klas;
+      option.textContent = `Klas ${klas}`;
+      klasSelect.appendChild(option);
+    }
+    if (previousValue && [...klasSelect.options].some((option) => option.value === previousValue)) {
+      klasSelect.value = previousValue;
+    }
+  }
+
+  function ensureClassOption(classId) {
+    const normalized = mapSpecialClassAlias(classId);
+    if (!normalized || !klasSelect) return '';
+    const currentValues = [...klasSelect.options].map((option) => option.value);
+    if (!currentValues.includes(normalized)) {
+      rebuildClassOptions([...currentValues, normalized]);
+    }
+    return normalized;
+  }
+
+  function ensureAgendaClassesAvailable(entries = []) {
+    if (!klasSelect?.options?.length) return;
+    const agendaClassIds = entries
+      .map((entry) => mapSpecialClassAlias(entry?.classId || ''))
+      .filter(Boolean);
+    if (!agendaClassIds.length) return;
+    rebuildClassOptions([
+      ...[...klasSelect.options].map((option) => option.value),
+      ...agendaClassIds
+    ]);
   }
 
   function agendaEntriesForClass(entries, classId) {
@@ -827,6 +873,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const text = normalizeClassId(value);
     if (!text) return '';
     const patterns = [
+      /\bG[1-6]\.NETL\d+\b/,
       /\bNETL\d+\b/,
       /\bG\d[A-Z]\b/,
       /\b\d[A-Z]\b/,
@@ -1051,6 +1098,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function applyImportedAgenda(rawText, sourceLabel = 'import') {
     agendaEntries = parseAgendaPayload(rawText, 'application/json').sort((a, b) => a.start - b.start);
+    ensureAgendaClassesAvailable(agendaEntries);
     agendaFetchedAt = new Date().toISOString();
     agendaLastFetchStatus = `ok (${sourceLabel})`;
     agendaLastContentType = 'application/json';
@@ -1068,7 +1116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function selectClassFromAgenda(classId) {
-    const normalized = normalizeClassId(classId);
+    const normalized = ensureClassOption(classId) || normalizeClassId(classId);
     if (!normalized || !klasSelect) return false;
     const aliases = classIdAliases(normalized);
     const matchingValue = [...klasSelect.options].find((option) => aliases.includes(normalizeClassId(option.value)))?.value;
@@ -2109,6 +2157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const contentType = res.headers.get('content-type') || '';
         agendaEntries = parseAgendaPayload(rawText, contentType)
           .sort((a, b) => a.start - b.start);
+        ensureAgendaClassesAvailable(agendaEntries);
         agendaFetchedAt = new Date().toISOString();
         agendaLastFetchStatus = `ok (${res.status})${attempt.label === 'fallback' ? ' via fallback' : ''}`;
         agendaLastContentType = contentType || '-';

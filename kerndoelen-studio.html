@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerndoelen Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
+  <link rel="stylesheet" href="css/kerndoelen-studio.css?v=20260329-01" />
+  <script type="module" src="js/kerndoelen-studio.js?v=20260329-01"></script>
+</head>
+<body>
+  <main class="goals-layout">
+    <header class="goals-header">
+      <div>
+        <p class="goals-kicker">Intern Platform</p>
+        <h1>Kerndoelen Studio</h1>
+        <p class="goals-intro">Beheer per project welke labels en Magister-vaardigheden zichtbaar zijn voor beoordeling.</p>
+      </div>
+      <div class="goals-actions">
+        <button id="saveDocBtn" type="button" class="goals-button goals-button-primary">Lokaal opslaan</button>
+        <button id="exportDocBtn" type="button" class="goals-button goals-button-secondary">Exporteer JSON</button>
+        <button id="exportWorkbookBtn" type="button" class="goals-button goals-button-secondary">Exporteer Excel</button>
+        <button id="exportReportBtn" type="button" class="goals-button goals-button-secondary">Exporteer rapport</button>
+        <button id="resetDocBtn" type="button" class="goals-button goals-button-ghost">Reset naar bron</button>
+      </div>
+    </header>
+
+    <section class="goals-grid">
+      <aside class="goals-panel goals-sidebar">
+        <label class="goals-field">
+          <span>Project</span>
+          <select id="projectSelect"></select>
+        </label>
+        <div id="projectStats" class="stats-grid"></div>
+        <p id="sourceLine" class="goals-meta">Bron laden...</p>
+      </aside>
+
+      <section class="goals-panel goals-editor">
+        <div class="project-head">
+          <div>
+            <p class="goals-kicker">Projectkaart</p>
+            <h2 id="projectTitle">Project</h2>
+          </div>
+          <p id="projectMeta" class="goals-meta"></p>
+        </div>
+
+        <div class="editor-grid">
+          <label class="goals-field">
+            <span>Samenvatting voor Magister</span>
+            <textarea id="assessmentSummaryInput" rows="3" placeholder="Bijvoorbeeld: aan het eind van dit project verschuift vooral Spreken en Schrijven."></textarea>
+          </label>
+          <label class="goals-field">
+            <span>Tekst voor leerlingenplatform</span>
+            <textarea id="studentDescriptionInput" rows="3" placeholder="Korte uitleg voor leerlingen over waar dit project op beoordeeld wordt."></textarea>
+          </label>
+          <label class="goals-field">
+            <span>Docentnotitie</span>
+            <textarea id="teacherNotesInput" rows="3" placeholder="Interne afspraak, Magister-opmerking of aandachtspunt."></textarea>
+          </label>
+          <label class="goals-field">
+            <span>Magister-notitie</span>
+            <textarea id="magisterNoteInput" rows="3" placeholder="Bijvoorbeeld: na projectafronding vooral vaardigheid X ophogen."></textarea>
+          </label>
+        </div>
+
+        <section class="summary-strip">
+          <article class="summary-card">
+            <p class="summary-label">Projectvaardigheden</p>
+            <div id="skillsChips" class="chip-row"></div>
+            <p id="skillRationale" class="goals-meta"></p>
+          </article>
+          <article class="summary-card">
+            <p class="summary-label">Subkerndoelen</p>
+            <div id="goalsChips" class="chip-row"></div>
+            <p id="sourceBasis" class="goals-meta"></p>
+          </article>
+        </section>
+
+        <section class="records-panel">
+          <div class="records-head">
+            <div>
+              <p class="goals-kicker">Projectmatrix</p>
+              <h3>Labels per project</h3>
+            </div>
+            <label class="goals-field goals-search">
+              <span>Filter</span>
+              <input id="recordSearchInput" type="search" placeholder="Zoek op label, kerndoel of vaardigheid" />
+            </label>
+          </div>
+          <div class="records-table-wrap">
+            <table class="records-table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Label</th>
+                  <th>Subkerndoel</th>
+                  <th>Vaardigheid</th>
+                  <th>Leerjaar</th>
+                  <th>Notitie</th>
+                </tr>
+              </thead>
+              <tbody id="recordsBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

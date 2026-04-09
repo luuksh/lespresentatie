@@ -3171,18 +3171,20 @@
           "homework": "leesboek en schoolpasje mee"
         },
         {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "presentationId": "spiegeldicht-kiezen",
+          "project": "Taaltopia",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "B",
-          "homework": "netschrift en pen mee"
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek",
+          "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee"
         },
         {
-          "project": "Spiegeldicht",
-          "lesson": "Analyse schrijven",
-          "presentationId": "spiegeldicht-analyse-schrijven",
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "C",
-          "homework": "netschrift en pen mee"
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
         }
       ],
       "items": []
@@ -3213,17 +3215,16 @@
           "homework": "leesboek en schoolpasje mee"
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 5 - Voorbeeldgesprek",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
           "lessonKey": "B",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-voorbeeldgesprek",
-          "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee"
+          "presentationId": "spiegeldicht-kiezen",
+          "homework": "netschrift en pen mee"
         },
         {
           "project": "Spiegeldicht",
-          "lesson": "Reactiegedicht schrijven",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven",
+          "lesson": "Analyse schrijven",
+          "presentationId": "spiegeldicht-analyse-schrijven",
           "lessonKey": "C",
           "homework": "netschrift en pen mee"
         }
@@ -3257,18 +3258,17 @@
         },
         {
           "project": "Spiegeldicht",
-          "lesson": "Presentaties",
-          "presentationId": "spiegeldicht-presentaties",
+          "lesson": "Reactiegedicht schrijven",
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven",
           "lessonKey": "B",
           "homework": "netschrift en pen mee"
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
+          "project": "Spiegeldicht",
+          "lesson": "Presentaties",
+          "presentationId": "spiegeldicht-presentaties",
           "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
+          "homework": "netschrift en pen mee"
         }
       ],
       "items": []
@@ -31140,31 +31140,81 @@
             "title": "Denkfouten om op te letten",
             "subtitle": "",
             "items": [
-              "Valse oorzaak-gevolgrelatie.",
-              "Overhaaste generalisatie.",
-              "Cirkelredenering en bewijslast omkeren.",
-              "Tegenstanders wegzetten als deel van het complot."
+              "Valse oorzaak-gevolgrelatie: 'Sinds er wifi is, slapen leerlingen slechter.'",
+              "Overhaaste generalisatie: 'Twee docenten waren streng, dus de hele school is tegen ons.'",
+              "Cirkelredenering: 'Het is waar, want alles wijst erop dat het waar is.'",
+              "Tegenstanders wegzetten: 'Wie twijfelt, hoort zeker bij het complot.'"
             ]
           },
           {
             "type": "bullets",
-            "title": "Hoe bouw je een complot?",
+            "title": "Van idee naar complot",
             "subtitle": "",
             "items": [
-              "Kies een ingrijpende gebeurtenis.",
-              "Wijs samenzweerders aan en geef ze een doel.",
-              "Maak kleine signalen groot en negeer tegenbewijs.",
-              "Laat losse details op elkaar lijken alsof het geen toeval kan zijn."
+              "Gebeurtenis: de schoolkantine is ineens dicht.",
+              "Verdachten: de directie en een leverancier willen geld besparen.",
+              "Signalen: lege dozen, fluisterende volwassenen en een vertraagde mail.",
+              "Conclusie: losse details lijken expres op elkaar afgestemd."
             ]
           },
           {
             "type": "bullets",
-            "title": "Werkvorm",
+            "title": "Stap 1: voorkennis ophalen",
             "subtitle": "",
             "items": [
-              "Bedenk in duo een complottheorie in drie stappen.",
-              "Gebruik minimaal twee drogredenen bewust.",
-              "Sluit af met een korte pitch van maximaal 30 seconden."
+              "Schrijf individueel op welke complotten of geruchten je al kent.",
+              "Noteer wat zulke verhalen geloofwaardig laat klinken.",
+              "Deel daarna in duo's twee voorbeelden en vergelijk overeenkomsten."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2: denken delen",
+            "subtitle": "",
+            "items": [
+              "Bespreek hardop welke denkfouten jullie in die voorbeelden herkennen.",
+              "Gebruik zinnen als: 'Dit is een overhaaste generalisatie, omdat...'",
+              "Kies samen twee drogredenen die jullie straks bewust willen gebruiken."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3: onderwerp bedenken",
+            "subtitle": "",
+            "items": [
+              "Bedenk ieder minimaal twee eigen onderwerpen voor een complot.",
+              "Denk aan school, sport, social media of nieuws.",
+              "Voorbeelden: kapotte wifi, dure concertkaartjes of een plotselinge schoolregel."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4: kies de beste",
+            "subtitle": "",
+            "items": [
+              "Leg jullie ideeën naast elkaar.",
+              "Kies het onderwerp dat het meest herkenbaar, spannend en uit te werken is.",
+              "Formuleer samen in één zin welk geheim hier volgens jullie achter zit."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 5: verdeel taken",
+            "subtitle": "",
+            "items": [
+              "Leerling 1 bouwt de aanleiding en de verdachte(n) op.",
+              "Leerling 2 verzamelt signalen, drogredenen en een sterke slotsom.",
+              "Lees elkaars deel na en maak toon en woordkeus gelijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 6: speech instuderen",
+            "subtitle": "",
+            "items": [
+              "Maak van jullie tekst een pitch van maximaal 30 seconden.",
+              "Verdeel wie opent, wie het bewijs noemt en wie afsluit.",
+              "Oefen twee keer hardop: eerst op inhoud, daarna op tempo en overtuiging."
             ]
           }
         ],
@@ -31325,10 +31375,10 @@
         "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 6,
         "marker-invloed-3-populisme-media-en-volkswil": 10,
         "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 14,
-        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 18,
-        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 22,
-        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 26,
-        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 29
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 23,
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 27,
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 31,
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 34
       },
       "slides": [
         {
@@ -31481,31 +31531,81 @@
           "title": "Denkfouten om op te letten",
           "subtitle": "",
           "items": [
-            "Valse oorzaak-gevolgrelatie.",
-            "Overhaaste generalisatie.",
-            "Cirkelredenering en bewijslast omkeren.",
-            "Tegenstanders wegzetten als deel van het complot."
+            "Valse oorzaak-gevolgrelatie: 'Sinds er wifi is, slapen leerlingen slechter.'",
+            "Overhaaste generalisatie: 'Twee docenten waren streng, dus de hele school is tegen ons.'",
+            "Cirkelredenering: 'Het is waar, want alles wijst erop dat het waar is.'",
+            "Tegenstanders wegzetten: 'Wie twijfelt, hoort zeker bij het complot.'"
           ]
         },
         {
           "type": "bullets",
-          "title": "Hoe bouw je een complot?",
+          "title": "Van idee naar complot",
           "subtitle": "",
           "items": [
-            "Kies een ingrijpende gebeurtenis.",
-            "Wijs samenzweerders aan en geef ze een doel.",
-            "Maak kleine signalen groot en negeer tegenbewijs.",
-            "Laat losse details op elkaar lijken alsof het geen toeval kan zijn."
+            "Gebeurtenis: de schoolkantine is ineens dicht.",
+            "Verdachten: de directie en een leverancier willen geld besparen.",
+            "Signalen: lege dozen, fluisterende volwassenen en een vertraagde mail.",
+            "Conclusie: losse details lijken expres op elkaar afgestemd."
           ]
         },
         {
           "type": "bullets",
-          "title": "Werkvorm",
+          "title": "Stap 1: voorkennis ophalen",
           "subtitle": "",
           "items": [
-            "Bedenk in duo een complottheorie in drie stappen.",
-            "Gebruik minimaal twee drogredenen bewust.",
-            "Sluit af met een korte pitch van maximaal 30 seconden."
+            "Schrijf individueel op welke complotten of geruchten je al kent.",
+            "Noteer wat zulke verhalen geloofwaardig laat klinken.",
+            "Deel daarna in duo's twee voorbeelden en vergelijk overeenkomsten."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2: denken delen",
+          "subtitle": "",
+          "items": [
+            "Bespreek hardop welke denkfouten jullie in die voorbeelden herkennen.",
+            "Gebruik zinnen als: 'Dit is een overhaaste generalisatie, omdat...'",
+            "Kies samen twee drogredenen die jullie straks bewust willen gebruiken."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3: onderwerp bedenken",
+          "subtitle": "",
+          "items": [
+            "Bedenk ieder minimaal twee eigen onderwerpen voor een complot.",
+            "Denk aan school, sport, social media of nieuws.",
+            "Voorbeelden: kapotte wifi, dure concertkaartjes of een plotselinge schoolregel."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4: kies de beste",
+          "subtitle": "",
+          "items": [
+            "Leg jullie ideeën naast elkaar.",
+            "Kies het onderwerp dat het meest herkenbaar, spannend en uit te werken is.",
+            "Formuleer samen in één zin welk geheim hier volgens jullie achter zit."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 5: verdeel taken",
+          "subtitle": "",
+          "items": [
+            "Leerling 1 bouwt de aanleiding en de verdachte(n) op.",
+            "Leerling 2 verzamelt signalen, drogredenen en een sterke slotsom.",
+            "Lees elkaars deel na en maak toon en woordkeus gelijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 6: speech instuderen",
+          "subtitle": "",
+          "items": [
+            "Maak van jullie tekst een pitch van maximaal 30 seconden.",
+            "Verdeel wie opent, wie het bewijs noemt en wie afsluit.",
+            "Oefen twee keer hardop: eerst op inhoud, daarna op tempo en overtuiging."
           ]
         },
         {

@@ -209,23 +209,60 @@ function gradeLayerFromClassId(rawClassId) {
   return '';
 }
 
+function countSlides(presentation) {
+  return Array.isArray(presentation?.slides) ? presentation.slides.length : 0;
+}
+
+function countMarkerDeckSlides(presentation) {
+  if (!presentation?.markerDecks || typeof presentation.markerDecks !== 'object') return 0;
+  return Object.values(presentation.markerDecks).reduce((total, deck) => (
+    total + (Array.isArray(deck) ? deck.length : 0)
+  ), 0);
+}
+
 function buildExportPayload() {
+  const fullDoc = structuredClone(state.doc);
   const yearLayers = [...new Set(
     (state.doc.entries || [])
       .map((entry) => gradeLayerFromClassId(entry?.classId || ''))
       .filter(Boolean)
   )].sort((a, b) => Number(a) - Number(b));
+  const presentations = fullDoc.presentations || {};
+  const presentationEntries = Object.entries(presentations).map(([id, presentation]) => ({
+    id,
+    title: String(presentation?.title || '').trim(),
+    subtitle: String(presentation?.subtitle || '').trim(),
+    project: String(presentation?.project || '').trim(),
+    presentationType: String(presentation?.presentationType || '').trim(),
+    slideCount: countSlides(presentation),
+    markerCount: Object.keys(presentation?.markerDecks || {}).length,
+    markerDeckSlideCount: countMarkerDeckSlides(presentation),
+    slides: Array.isArray(presentation?.slides) ? structuredClone(presentation.slides) : [],
+    markerDecks: presentation?.markerDecks && typeof presentation.markerDecks === 'object'
+      ? structuredClone(presentation.markerDecks)
+      : {},
+    markers: presentation?.markers && typeof presentation.markers === 'object'
+      ? structuredClone(presentation.markers)
+      : {},
+  }));
 
   return {
-    ...structuredClone(state.doc),
+    ...fullDoc,
     exportType: 'jaarplanning-presentaties',
-    exportVersion: 1,
+    exportVersion: 2,
     exportedAt: new Date().toISOString(),
     yearLayers,
     counts: {
       yearLayers: yearLayers.length,
       entries: Array.isArray(state.doc.entries) ? state.doc.entries.length : 0,
       presentations: Object.keys(state.doc.presentations || {}).length,
+    },
+    presentationsExport: {
+      description: 'Expliciete export van alle presentaties met volledige slide-inhoud.',
+      totalPresentations: presentationEntries.length,
+      totalSlides: presentationEntries.reduce((total, item) => total + item.slideCount, 0),
+      totalMarkerDeckSlides: presentationEntries.reduce((total, item) => total + item.markerDeckSlideCount, 0),
+      items: presentationEntries,
     },
   };
 }

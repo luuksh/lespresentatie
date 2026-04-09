@@ -1,0 +1,332 @@
+:root {
+  --goals-bg: #f0e8db;
+  --goals-surface: rgba(255, 252, 247, 0.84);
+  --goals-surface-strong: rgba(255, 255, 255, 0.96);
+  --goals-line: rgba(42, 35, 24, 0.12);
+  --goals-ink: #182330;
+  --goals-muted: #617082;
+  --goals-primary: #0f5a68;
+  --goals-primary-deep: #093a43;
+  --goals-accent: #b76a17;
+  --goals-focus: #0f766e;
+  --goals-support: #b45309;
+  --goals-shadow: 0 24px 70px rgba(35, 29, 19, 0.12);
+  --goals-shadow-sm: 0 12px 24px rgba(35, 29, 19, 0.08);
+  --goals-radius-xl: 30px;
+  --goals-radius-lg: 22px;
+  --goals-radius-md: 16px;
+  --font-ui: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  color: var(--goals-ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 90, 104, 0.14), transparent 24%),
+    radial-gradient(circle at 82% 18%, rgba(183, 106, 23, 0.12), transparent 18%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--goals-bg) 100%);
+}
+
+.goals-layout {
+  width: min(1320px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+  display: grid;
+  gap: 18px;
+}
+
+.goals-header,
+.goals-panel,
+.summary-card {
+  border: 1px solid var(--goals-line);
+  background: var(--goals-surface);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--goals-shadow);
+}
+
+.goals-header {
+  border-radius: var(--goals-radius-xl);
+  padding: 28px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.goals-kicker,
+.goals-field span,
+.summary-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.goals-kicker,
+.summary-label,
+.goals-field span {
+  color: var(--goals-accent);
+}
+
+.goals-header h1,
+.project-head h2,
+.records-head h3 {
+  margin: 0;
+}
+
+.goals-intro,
+.goals-meta {
+  margin: 8px 0 0;
+  color: var(--goals-muted);
+  line-height: 1.6;
+}
+
+.goals-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.goals-button,
+.goals-field input,
+.goals-field select,
+.goals-field textarea {
+  font: inherit;
+}
+
+.goals-button {
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0 18px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.goals-button-primary {
+  background: linear-gradient(135deg, var(--goals-primary), var(--goals-primary-deep));
+  color: #fff;
+}
+
+.goals-button-secondary,
+.goals-button-ghost {
+  border: 1px solid var(--goals-line);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--goals-primary-deep);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.goals-panel {
+  border-radius: var(--goals-radius-lg);
+  padding: 20px;
+}
+
+.goals-sidebar {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.goals-field {
+  display: grid;
+  gap: 8px;
+}
+
+.goals-field input,
+.goals-field select,
+.goals-field textarea {
+  width: 100%;
+  border-radius: var(--goals-radius-md);
+  border: 1px solid rgba(24, 35, 48, 0.12);
+  padding: 12px 14px;
+  background: var(--goals-surface-strong);
+  color: var(--goals-ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.goals-field textarea {
+  resize: vertical;
+}
+
+.stats-grid,
+.editor-grid,
+.summary-strip {
+  display: grid;
+  gap: 12px;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card,
+.summary-card {
+  padding: 16px;
+  border-radius: var(--goals-radius-md);
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(24, 35, 48, 0.08);
+  box-shadow: var(--goals-shadow-sm);
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.stat-label {
+  margin: 4px 0 0;
+  color: var(--goals-muted);
+}
+
+.project-head,
+.records-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: end;
+}
+
+.project-head {
+  margin-bottom: 16px;
+}
+
+.project-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.editor-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-strip {
+  margin-top: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(15, 90, 104, 0.1);
+  color: var(--goals-primary-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.records-panel {
+  margin-top: 18px;
+}
+
+.goals-search {
+  width: min(320px, 100%);
+}
+
+.records-table-wrap {
+  margin-top: 12px;
+  overflow: auto;
+  border-radius: var(--goals-radius-md);
+  border: 1px solid rgba(24, 35, 48, 0.08);
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 920px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.records-table th,
+.records-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(24, 35, 48, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.records-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 249, 241, 0.96);
+  z-index: 1;
+}
+
+.records-table tbody tr:hover {
+  background: rgba(15, 90, 104, 0.04);
+}
+
+.record-select {
+  min-width: 156px;
+}
+
+.status-pill {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.status-pill-focus {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--goals-focus);
+}
+
+.status-pill-support {
+  background: rgba(180, 83, 9, 0.12);
+  color: var(--goals-support);
+}
+
+.status-pill-empty {
+  background: rgba(97, 112, 130, 0.12);
+  color: var(--goals-muted);
+}
+
+@media (max-width: 960px) {
+  .goals-grid,
+  .editor-grid,
+  .summary-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .goals-header,
+  .project-head,
+  .records-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .goals-actions {
+    justify-content: flex-start;
+  }
+}
