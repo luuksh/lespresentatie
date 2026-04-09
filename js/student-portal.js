@@ -413,7 +413,7 @@ function inferScheduledLessonForWeek(classId, week, lessonKey) {
   const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
   if (slotIndex < 0) return null;
   const pattern = inferAgendaLessonSlots(state.agendaEntries, classId)[slotIndex];
-  if (!pattern || Number(pattern.count || 0) < 2) return null;
+  if (!pattern) return null;
 
   const weekNumber = Number(week);
   if (!Number.isFinite(weekNumber)) return null;
@@ -713,7 +713,6 @@ function getProjectCulmination(classId, project) {
     .reverse()
     .find((lesson) => String(lesson?.assessment || '').trim()) || projectLessons[projectLessons.length - 1];
   const scheduledLesson = getScheduledLessonForWeek(normalizedClassId, finalAssessmentLesson.week, finalAssessmentLesson.lessonKey)
-    || inferScheduledLessonForWeek(normalizedClassId, finalAssessmentLesson.week, finalAssessmentLesson.lessonKey)
     || null;
   const overviewPresentation = getProjectOverviewPresentation(projectName);
   const overviewText = overviewPresentation
@@ -733,7 +732,6 @@ function getProjectCulmination(classId, project) {
     week: String(finalAssessmentLesson.week || '').trim(),
     lessonKey: String(finalAssessmentLesson.lessonKey || '').trim().toUpperCase(),
     date: scheduledLesson?.start || null,
-    inferredDate: Boolean(scheduledLesson?.inferred),
   };
 }
 
@@ -763,7 +761,6 @@ function getHomeworkPreviewSlide(target) {
 
   const parsed = parseHomeworkForSlide(homework);
   const scheduledLesson = getScheduledLessonForWeek(classId, nextLesson.week, nextLesson.lessonKey)
-    || inferScheduledLessonForWeek(classId, nextLesson.week, nextLesson.lessonKey)
     || null;
   const items = [];
   if (parsed.text) items.push(parsed.text);
@@ -773,7 +770,7 @@ function getHomeworkPreviewSlide(target) {
     type: 'homework-preview',
     title: `Huiswerk voor ${nextLesson.lesson || nextLesson.project || 'de volgende les'}`,
     subtitle: scheduledLesson?.start
-      ? `${formatLessonDate(scheduledLesson.start)}${scheduledLesson?.inferred ? ' (verwacht)' : ''}`
+      ? `${formatLessonDate(scheduledLesson.start)}`
       : 'Voor de volgende les',
     items,
   };
@@ -811,7 +808,7 @@ function buildProjectSummaryRows(nextLesson) {
   const culmination = getProjectCulmination(state.currentClass, project);
   if (!culmination) return [];
   const dateLabel = culmination.date
-    ? `${formatLessonDate(culmination.date)}${culmination.inferredDate ? ' (verwacht)' : ''}`
+    ? `${formatLessonDate(culmination.date)}`
     : '';
   return [
     `
@@ -1068,7 +1065,6 @@ function renderWeeks() {
         const culmination = isAssessment ? getProjectCulmination(state.currentClass, project) : null;
         const lessonAnchorId = `lesson-${normalizeClassId(state.currentClass)}-${week}-${lessonKey}`;
         const scheduledLesson = getScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
-          || inferScheduledLessonForWeek(state.currentClass, week, lesson.lessonKey)
           || null;
         const scheduledDate = scheduledLesson?.start || null;
         const target = buildPresentationTarget({
@@ -1082,7 +1078,7 @@ function renderWeeks() {
         return `
           <article class="lesson-card${isNextLesson ? ' is-next-lesson' : ''}${isAssessment ? ' is-assessment' : ''}" id="${escapeHtml(lessonAnchorId)}">
             ${isAssessment ? `<p class="assessment-chip">Eindbeoordeling${culmination?.assessmentType ? ` · ${escapeHtml(culmination.assessmentType)}` : ''}</p>` : ''}
-            ${scheduledDate ? `<p class="lesson-date">${escapeHtml(formatLessonDate(scheduledDate))}${scheduledLesson?.inferred ? ' (verwacht)' : ''}</p>` : ''}
+            ${scheduledDate ? `<p class="lesson-date">${escapeHtml(formatLessonDate(scheduledDate))}</p>` : ''}
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
             ${isAssessment && culmination?.assessmentType ? `<p><strong>Beoordeling:</strong> ${escapeHtml(culmination.assessmentType)}</p>` : ''}
