@@ -519,6 +519,12 @@ function getScheduledLessonForWeek(classId, week, lessonKey) {
   const lessons = getAgendaLessonsForWeek(classId, week);
   const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
   if (slotIndex < 0) return null;
+  const slotPattern = inferAgendaLessonSlots(state.agendaEntries, normalizeClassId(classId));
+  const expectedSignature = slotPattern[slotIndex]?.signature || '';
+  if (expectedSignature) {
+    const matchedLesson = lessons.find((entry) => agendaEntrySlotSignature(entry) === expectedSignature) || null;
+    if (matchedLesson) return matchedLesson;
+  }
   return lessons[slotIndex] || null;
 }
 
