@@ -387,55 +387,19 @@ function getAgendaLessonsForWeek(classId, week) {
 }
 
 function getScheduledLessonForWeek(classId, week, lessonKey) {
-  const lessons = getAgendaLessonsForWeek(classId, week);
   const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
   if (slotIndex < 0) return null;
-  return lessons[slotIndex] || null;
-}
-
-function inferLessonPatternForClass(classId) {
-  const bySlot = new Map();
-  const weeklyLessons = new Map();
-
-  for (const entry of state.agendaEntries) {
-    if (!agendaMatchesClass(entry, classId) || !isDutchAgendaEntry(entry)) continue;
-    const week = isoWeekForDate(entry.start);
-    const key = String(week);
-    if (!weeklyLessons.has(key)) weeklyLessons.set(key, []);
-    weeklyLessons.get(key).push(entry);
-  }
-
-  for (const entries of weeklyLessons.values()) {
-    const ordered = [...entries].sort((left, right) => left.start - right.start);
-    ordered.forEach((entry, index) => {
-      const slot = lessonLetter(index + 1);
-      if (!slot) return;
-      const day = entry.start.getDay();
-      const signature = `${day}-${entry.start.getHours()}:${entry.start.getMinutes()}-${entry.end.getTime() - entry.start.getTime()}`;
-      if (!bySlot.has(slot)) bySlot.set(slot, new Map());
-      const bucket = bySlot.get(slot);
-      bucket.set(signature, {
-        count: (bucket.get(signature)?.count || 0) + 1,
-        day,
-        hour: entry.start.getHours(),
-        minute: entry.start.getMinutes(),
-        durationMs: entry.end.getTime() - entry.start.getTime(),
-      });
-    });
-  }
-
-  const resolved = new Map();
-  for (const [slot, variants] of bySlot.entries()) {
-    const best = [...variants.values()].sort((left, right) => right.count - left.count)[0];
-    if (best) resolved.set(slot, best);
-  }
-  return resolved;
+  const pattern = inferAgendaLessonSlots(state.agendaEntries, classId);
+  const slot = pattern[slotIndex];
+  if (!slot) return null;
+  const lessons = getAgendaLessonsForWeek(classId, week);
+  return lessons.find((entry) => agendaEntrySlotSignature(entry) === slot.signature) || null;
 }
 
 function inferScheduledLessonForWeek(classId, week, lessonKey) {
-  const slot = String(lessonKey || '').trim().toUpperCase();
-  if (!slot) return null;
-  const pattern = inferLessonPatternForClass(classId).get(slot);
+  const slotIndex = ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
+  if (slotIndex < 0) return null;
+  const pattern = inferAgendaLessonSlots(state.agendaEntries, classId)[slotIndex];
   if (!pattern) return null;
 
   const weekNumber = Number(week);
@@ -445,10 +409,10 @@ function inferScheduledLessonForWeek(classId, week, lessonKey) {
   if (!monday) return null;
 
   const start = new Date(monday);
-  const dayOffset = ((pattern.day || 1) + 6) % 7;
+  const dayOffset = Number(pattern.day || 0);
   start.setDate(monday.getDate() + dayOffset);
   start.setHours(pattern.hour, pattern.minute, 0, 0);
-  const end = new Date(start.getTime() + pattern.durationMs);
+  const end = new Date(start.getTime() + pattern.duration);
 
   return {
     classId: normalizeClassId(classId),
