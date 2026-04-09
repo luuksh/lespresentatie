@@ -3172,19 +3172,19 @@
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 5 - Voorbeeldgesprek",
+          "lesson": "Les 4 - Grammaticaregels",
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-5-voorbeeldgesprek",
-          "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee"
+          "presentationMarkerId": "marker-les-4-grammaticaregels",
+          "homework": "Bedenk 2 taalregels, bijvoorbeeld woordvolgorde, meervoud of vraagzin, en noteer bij elke regel 1 voorbeeldzin. Als je een online voorbeeld gebruikt, print dan maximaal 1 klein schema. netschrift en pen mee"
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
+          "lesson": "Les 5 - Voorbeeldgesprek",
           "lessonKey": "C",
           "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
+          "presentationMarkerId": "marker-les-5-voorbeeldgesprek",
+          "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee"
         }
       ],
       "items": []
@@ -3215,17 +3215,18 @@
           "homework": "leesboek en schoolpasje mee"
         },
         {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
           "lessonKey": "B",
-          "presentationId": "spiegeldicht-kiezen",
-          "homework": "netschrift en pen mee"
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
         },
         {
           "project": "Spiegeldicht",
-          "lesson": "Analyse schrijven",
-          "presentationId": "spiegeldicht-analyse-schrijven",
+          "lesson": "Kiezen",
           "lessonKey": "C",
+          "presentationId": "spiegeldicht-kiezen",
           "homework": "netschrift en pen mee"
         }
       ],
@@ -3258,15 +3259,15 @@
         },
         {
           "project": "Spiegeldicht",
-          "lesson": "Reactiegedicht schrijven",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven",
+          "lesson": "Analyse schrijven",
+          "presentationId": "spiegeldicht-analyse-schrijven",
           "lessonKey": "B",
           "homework": "netschrift en pen mee"
         },
         {
           "project": "Spiegeldicht",
-          "lesson": "Presentaties",
-          "presentationId": "spiegeldicht-presentaties",
+          "lesson": "Reactiegedicht schrijven",
+          "presentationId": "spiegeldicht-reactiegedicht-schrijven",
           "lessonKey": "C",
           "homework": "netschrift en pen mee"
         }
@@ -12490,16 +12491,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.1",
@@ -12521,13 +12519,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.1",
@@ -12549,6 +12550,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.1",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -12562,7 +12578,7 @@
     },
     {
       "classId": "4.1",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -12580,7 +12596,7 @@
     },
     {
       "classId": "4.1",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -12597,7 +12613,7 @@
     },
     {
       "classId": "4.1",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -12615,7 +12631,7 @@
     },
     {
       "classId": "4.1",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -12626,12 +12642,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.1",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]
@@ -13289,16 +13299,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.2",
@@ -13320,13 +13327,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.2",
@@ -13348,6 +13358,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.2",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -13361,7 +13386,7 @@
     },
     {
       "classId": "4.2",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -13379,7 +13404,7 @@
     },
     {
       "classId": "4.2",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -13396,7 +13421,7 @@
     },
     {
       "classId": "4.2",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -13414,7 +13439,7 @@
     },
     {
       "classId": "4.2",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -13425,12 +13450,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.2",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]
@@ -14088,16 +14107,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.3",
@@ -14119,13 +14135,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.3",
@@ -14147,6 +14166,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.3",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -14160,7 +14194,7 @@
     },
     {
       "classId": "4.3",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14178,7 +14212,7 @@
     },
     {
       "classId": "4.3",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14195,7 +14229,7 @@
     },
     {
       "classId": "4.3",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14213,7 +14247,7 @@
     },
     {
       "classId": "4.3",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14224,12 +14258,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.3",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]
@@ -14887,16 +14915,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.4",
@@ -14918,13 +14943,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.4",
@@ -14946,6 +14974,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.4",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -14959,7 +15002,7 @@
     },
     {
       "classId": "4.4",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14977,7 +15020,7 @@
     },
     {
       "classId": "4.4",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -14994,7 +15037,7 @@
     },
     {
       "classId": "4.4",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15012,7 +15055,7 @@
     },
     {
       "classId": "4.4",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15023,12 +15066,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.4",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]
@@ -15759,16 +15796,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.5",
@@ -15790,13 +15824,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.5",
@@ -15818,6 +15855,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.5",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -15831,7 +15883,7 @@
     },
     {
       "classId": "4.5",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15849,7 +15901,7 @@
     },
     {
       "classId": "4.5",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15866,7 +15918,7 @@
     },
     {
       "classId": "4.5",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15884,7 +15936,7 @@
     },
     {
       "classId": "4.5",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -15895,12 +15947,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.5",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]
@@ -16631,16 +16677,13 @@
         {
           "lessonKey": "C",
           "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": [
-        "Spreekopdracht",
-        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
-      ]
+      "items": []
     },
     {
       "classId": "4.6",
@@ -16662,13 +16705,16 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Spreekopdracht",
+        "Docent: zet het Onze Taal-fragment over kleine woordjes en manipulatie klaar."
+      ]
     },
     {
       "classId": "4.6",
@@ -16690,6 +16736,21 @@
         {
           "lessonKey": "A",
           "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "homework": "netschrift en pen mee"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4.6",
+      "week": "20",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Invloed",
           "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "presentationId": "project-invloed",
           "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
@@ -16703,7 +16764,7 @@
     },
     {
       "classId": "4.6",
-      "week": "20",
+      "week": "21",
       "lessons": [
         {
           "lessonKey": "A",
@@ -16721,7 +16782,7 @@
     },
     {
       "classId": "4.6",
-      "week": "21",
+      "week": "22",
       "lessons": [
         {
           "lessonKey": "A",
@@ -16738,7 +16799,7 @@
     },
     {
       "classId": "4.6",
-      "week": "22",
+      "week": "23",
       "lessons": [
         {
           "lessonKey": "A",
@@ -16756,7 +16817,7 @@
     },
     {
       "classId": "4.6",
-      "week": "23",
+      "week": "24",
       "lessons": [
         {
           "lessonKey": "A",
@@ -16767,12 +16828,6 @@
           "homework": "netschrift en pen mee"
         }
       ],
-      "items": []
-    },
-    {
-      "classId": "4.6",
-      "week": "24",
-      "lessons": [],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
       ]

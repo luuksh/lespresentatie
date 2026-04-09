@@ -102,6 +102,8 @@ function isoWeekForDate(date) {
 function normalizeDoc(raw) {
   const safe = raw && typeof raw === 'object' ? structuredClone(raw) : {};
   if (!Array.isArray(safe.entries)) safe.entries = [];
+  if (!Array.isArray(safe.holidays)) safe.holidays = [];
+  if (!Array.isArray(safe.schoolCalendar)) safe.schoolCalendar = [];
   if (!safe.presentations || typeof safe.presentations !== 'object') safe.presentations = {};
   safe.entries = safe.entries
     .filter((entry) => entry && typeof entry === 'object')
@@ -113,6 +115,26 @@ function normalizeDoc(raw) {
       note: String(entry.note || '').trim(),
     }))
     .filter((entry) => entry.classId && entry.week);
+  safe.holidays = safe.holidays
+    .filter((entry) => entry && typeof entry === 'object')
+    .map((entry) => ({
+      title: String(entry.title || '').trim(),
+      startDate: String(entry.startDate || '').trim(),
+      endDate: String(entry.endDate || '').trim(),
+    }))
+    .filter((entry) => entry.startDate && entry.endDate);
+  safe.schoolCalendar = safe.schoolCalendar
+    .filter((entry) => entry && typeof entry === 'object')
+    .map((entry) => ({
+      title: String(entry.title || '').trim(),
+      scope: String(entry.scope || '').trim(),
+      grade: String(entry.grade || '').trim(),
+      startDate: String(entry.startDate || '').trim(),
+      endDate: String(entry.endDate || '').trim(),
+      impact: String(entry.impact || '').trim(),
+      signals: Array.isArray(entry.signals) ? entry.signals.map((signal) => String(signal || '').trim()).filter(Boolean) : [],
+    }))
+    .filter((entry) => entry.startDate && entry.endDate);
   return safe;
 }
 
@@ -186,6 +208,95 @@ function isDutchAgendaEntry(entry) {
   return /\bne\b|\bnetl\b/.test(text);
 }
 
+function parseDateOnly(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return null;
+  const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return null;
+  const [, year, month, day] = match;
+  const date = new Date(Number(year), Number(month) - 1, Number(day));
+  if (Number.isNaN(date.getTime())) return null;
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+function weekBoundsForWeekNumber(week) {
+  const weekNumber = Number(week);
+  if (!Number.isInteger(weekNumber)) return null;
+  const monday = isoWeekMonday(new Date().getFullYear(), weekNumber);
+  if (!monday) return null;
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate() + 6);
+  sunday.setHours(23, 59, 59, 999);
+  return { monday, sunday };
+}
+
+function rangesOverlap(startA, endA, startB, endB) {
+  if (!(startA instanceof Date) || !(endA instanceof Date) || !(startB instanceof Date) || !(endB instanceof Date)) return false;
+  return startA <= endB && startB <= endA;
+}
+
+function gradeMatchesCalendarEntry(classId, entry) {
+  const grade = String(gradeLayerFromClassId(classId) || '').trim();
+  const normalizedGrade = String(entry?.grade || '').trim().toUpperCase();
+  const normalizedScope = String(entry?.scope || '').trim().toUpperCase();
+  const accepted = new Set(['ALL', 'AL']);
+  if (grade) {
+    accepted.add(grade.toUpperCase());
+    accepted.add(`G${grade}`.toUpperCase());
+  }
+  return accepted.has(normalizedGrade) || accepted.has(normalizedScope);
+}
+
+function textSignalsNoLessons(value) {
+  const text = String(value || '').toLowerCase();
+  return (
+    text.includes('geen reguliere lessen')
+    || text.includes('geen lessen')
+    || text.includes('vakantie')
+    || text.includes('vrije dag')
+    || text.includes('studiedag')
+    || text.includes('personeelsdag')
+    || text.includes('cgu-week')
+    || text.includes('cguweek')
+  );
+}
+
+function weekHasPlannedException(classId, week) {
+  const bounds = weekBoundsForWeekNumber(week);
+  if (!bounds) return false;
+  const entry = getEntryForWeek(classId, week);
+  if (entry) {
+    if (textSignalsNoLessons(entry.note)) return true;
+    if ((entry.items || []).some((item) => textSignalsNoLessons(item))) return true;
+  }
+
+  if ((state.doc.holidays || []).some((holiday) => {
+    const start = parseDateOnly(holiday.startDate);
+    const end = parseDateOnly(holiday.endDate);
+    return start && end && rangesOverlap(bounds.monday, bounds.sunday, start, end);
+  })) {
+    return true;
+  }
+
+  return (state.doc.schoolCalendar || []).some((calendarEntry) => {
+    if (!gradeMatchesCalendarEntry(classId, calendarEntry)) return false;
+    const start = parseDateOnly(calendarEntry.startDate);
+    const end = parseDateOnly(calendarEntry.endDate);
+    if (!start || !end || !rangesOverlap(bounds.monday, bounds.sunday, start, end)) return false;
+    const signals = [calendarEntry.impact, ...(calendarEntry.signals || []), calendarEntry.title]
+      .map((value) => String(value || '').toLowerCase());
+    return signals.some((value) => (
+      value.includes('no_lessons')
+      || value.includes('vakantie')
+      || value.includes('vrije dag')
+      || value.includes('studiedag')
+      || value.includes('personeelsdag')
+      || value.includes('cgu')
+    ));
+  });
+}
+
 function inferAgendaLessonSlots(entries, classId) {
   const bySlot = new Map();
   const weeklyLessons = new Map();
@@ -200,6 +311,8 @@ function inferAgendaLessonSlots(entries, classId) {
 
   for (const lessonEntries of weeklyLessons.values()) {
     const ordered = [...lessonEntries].sort((left, right) => left.start - right.start);
+    const week = isoWeekForDate(ordered[0]?.start);
+    if (weekHasPlannedException(classId, week)) continue;
     ordered.forEach((entry, index) => {
       const signature = agendaEntrySlotSignature(entry);
       if (!signature) return;
