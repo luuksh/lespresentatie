@@ -26,6 +26,7 @@ NON_REGULAR_EXACT = {
 }
 
 LESSON_SLOT_ORDER = {"A": 0, "B": 1, "C": 2}
+EXPECTED_LESSONS_BY_GRADE = {"1": 3, "3": 2, "4": 3}
 REMOVED_PROJECT_TOKENS = ("leesclub", "zinsbouwers")
 TAALTOPIA_HOMEWORK_BY_LESSON = {
     "Les 1 - Naam, wereld en doelgroep": (
@@ -194,7 +195,7 @@ def normalize_entry(row: object) -> dict:
     out = {
         "classId": class_id,
         "week": week,
-        "lessons": reposition_grade_1_reading(class_id, regular_lessons),
+        "lessons": prioritize_lessons(class_id, regular_lessons),
         "items": items,
     }
     if note:
@@ -221,6 +222,15 @@ def should_remove_project_text(value: str) -> bool:
 
 def is_grade_1_class(class_id: str) -> bool:
     return len(class_id) == 2 and class_id.startswith("1") and class_id[1].isalpha()
+
+
+def class_grade(class_id: str) -> str:
+    text = str(class_id or "").strip()
+    return text[:1] if text[:1].isdigit() else ""
+
+
+def expected_lessons_for_class(class_id: str) -> int | None:
+    return EXPECTED_LESSONS_BY_GRADE.get(class_grade(class_id))
 
 
 def lesson_slot_index(lesson: dict) -> int:
@@ -262,6 +272,25 @@ def reposition_grade_1_reading(class_id: str, lessons: list[dict]) -> list[dict]
     for key, lesson in zip(("A", "B", "C"), shifted):
         lesson["lessonKey"] = key
     return shifted
+
+
+def prioritize_lessons(class_id: str, lessons: list[dict]) -> list[dict]:
+    expected = expected_lessons_for_class(class_id)
+    if not lessons:
+        return lessons
+
+    ordered = [dict(lesson) for lesson in sorted(lessons, key=lesson_slot_index)]
+    if expected and len(ordered) < expected:
+        reading_lessons = [lesson for lesson in ordered if is_reading_lesson(lesson)]
+        project_lessons = [lesson for lesson in ordered if not is_reading_lesson(lesson)]
+        if reading_lessons and project_lessons:
+            reading_slots_left = max(0, len(ordered) - len(project_lessons))
+            ordered = [*project_lessons, *reading_lessons[:reading_slots_left]]
+            for key, lesson in zip(("A", "B", "C"), ordered):
+                lesson["lessonKey"] = key
+            return ordered
+
+    return reposition_grade_1_reading(class_id, ordered)
 
 
 def filter_presentations(presentations: dict) -> dict:

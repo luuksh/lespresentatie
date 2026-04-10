@@ -14,6 +14,41 @@ document.addEventListener('DOMContentLoaded', async () => {
   const READING_PROJECT_NAME = 'heel veel lezen';
   const READING_BOARD_ASSIGNMENT = 'lees in je leesboek';
   const DEFAULT_BOARD_ASSIGNMENT = 'Zoek je plek en pak je spullen';
+  const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+  const WEEKDAY_LABELS = ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'];
+  const BASE_SCHEDULE = {
+    G1D: [
+      { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H215' },
+      { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'H216' },
+      { slot: 'C', day: 5, start: '14:20', end: '15:05', room: 'H215' },
+    ],
+    G3B: [
+      { slot: 'A', day: 1, start: '14:40', end: '15:25', room: 'H215' },
+      { slot: 'B', day: 5, start: '08:15', end: '09:00', room: 'H215' },
+    ],
+    G3E: [
+      { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H215' },
+      { slot: 'B', day: 4, start: '08:15', end: '09:00', room: 'H216' },
+    ],
+    G3F: [
+      { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H215' },
+      { slot: 'B', day: 5, start: '13:35', end: '14:20', room: 'H215' },
+    ],
+    G3G: [
+      { slot: 'A', day: 1, start: '13:35', end: '14:20', room: 'H215' },
+      { slot: 'B', day: 5, start: '09:45', end: '10:30', room: 'H215' },
+    ],
+    G4D: [
+      { slot: 'A', day: 4, start: '12:50', end: '13:35', room: 'H216' },
+      { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'H215' },
+      { slot: 'C', day: 5, start: '11:35', end: '12:20', room: 'H215' },
+    ],
+    G4E: [
+      { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H215' },
+      { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'H216' },
+      { slot: 'C', day: 4, start: '11:35', end: '12:20', room: 'H216' },
+    ],
+  };
 
   const planningWeekLabelEl = document.getElementById('jaarplanningWeekLabel');
   const planningItemsEl = document.getElementById('jaarplanningItems');
@@ -806,6 +841,100 @@ document.addEventListener('DOMContentLoaded', async () => {
     return room || '';
   }
 
+  function parseClockMinutes(value) {
+    const match = String(value || '').trim().match(/^(\d{1,2}):(\d{2})$/);
+    if (!match) return -1;
+    return Number(match[1]) * 60 + Number(match[2]);
+  }
+
+  function minutesOfDate(value) {
+    if (!(value instanceof Date) || Number.isNaN(value.getTime())) return -1;
+    return value.getHours() * 60 + value.getMinutes();
+  }
+
+  function baseScheduleForClass(classId) {
+    const aliases = classIdAliases(classId).map((alias) => normalizeClassId(alias));
+    for (const alias of aliases) {
+      if (BASE_SCHEDULE[alias]) return BASE_SCHEDULE[alias].map((slot) => ({ ...slot }));
+    }
+    return [];
+  }
+
+  function movedFromHint(entry) {
+    const raw = String(entry?.raw?.description || entry?.raw?.DESCRIPTION || entry?.description || '').trim();
+    const match = raw.match(/komt van\s+(ma|di|wo|do|vr)\s+(\d{1,2}):(\d{2})u?/i);
+    if (!match) return null;
+    const dayMap = { ma: 1, di: 2, wo: 3, do: 4, vr: 5 };
+    return {
+      day: dayMap[String(match[1] || '').toLowerCase()] || 0,
+      minutes: Number(match[2]) * 60 + Number(match[3]),
+    };
+  }
+
+  function baseScheduleSlotByDayTime(classId, day, minutes) {
+    return baseScheduleForClass(classId).find((slot) => (
+      Number(slot.day) === Number(day)
+      && parseClockMinutes(slot.start) === Number(minutes)
+    )) || null;
+  }
+
+  function baseScheduleSlotForEntry(entry) {
+    if (!entry?.start) return null;
+    const movedFrom = movedFromHint(entry);
+    if (movedFrom?.day && Number.isFinite(movedFrom.minutes)) {
+      const movedSlot = baseScheduleSlotByDayTime(entry.classId, movedFrom.day, movedFrom.minutes);
+      if (movedSlot) return movedSlot;
+    }
+    const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+    const weekday = start.getDay() || 7;
+    const minutes = minutesOfDate(start);
+    return baseScheduleSlotByDayTime(entry.classId, weekday, minutes);
+  }
+
+  function baseScheduleSlotForDate(classId, now = new Date()) {
+    const slots = baseScheduleForClass(classId)
+      .filter((slot) => Number(slot.day) === (now.getDay() || 7))
+      .sort((left, right) => parseClockMinutes(left.start) - parseClockMinutes(right.start));
+    if (!slots.length) return null;
+    const nowMinutes = minutesOfDate(now);
+    const active = slots.find((slot) => {
+      const start = parseClockMinutes(slot.start);
+      const end = parseClockMinutes(slot.end);
+      return nowMinutes >= start && nowMinutes <= end;
+    });
+    if (active) return active;
+    const upcoming = slots.find((slot) => parseClockMinutes(slot.start) >= nowMinutes);
+    if (upcoming) return upcoming;
+    return slots[slots.length - 1] || null;
+  }
+
+  function baseScheduleSlotLabel(slot) {
+    if (!slot) return '';
+    const weekday = WEEKDAY_LABELS[Math.max(0, Number(slot.day || 1) - 1)] || '?';
+    const room = String(slot.room || '').trim();
+    return `${weekday} ${slot.start}-${slot.end}${room ? ` · ${room}` : ''}`;
+  }
+
+  function agendaEntryActualLabel(entry) {
+    if (!entry?.start || !entry?.end) return '';
+    const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+    const end = entry.end instanceof Date ? entry.end : new Date(entry.end);
+    const weekday = WEEKDAY_LABELS[Math.max(0, (start.getDay() || 7) - 1)] || '?';
+    const room = agendaRoomLabel(entry);
+    const startText = start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+    const endText = end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+    return `${weekday} ${startText}-${endText}${room ? ` · ${room}` : ''}`;
+  }
+
+  function agendaDeviationInfo(entry) {
+    const planned = baseScheduleSlotForEntry(entry);
+    if (!planned) return null;
+    const plannedLabel = baseScheduleSlotLabel(planned);
+    const actualLabel = agendaEntryActualLabel(entry);
+    if (!plannedLabel || !actualLabel || plannedLabel === actualLabel) return null;
+    return { plannedLabel, actualLabel };
+  }
+
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
     if (!isDutchAgendaRow(row)) return null;
@@ -1127,6 +1256,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function lessonNumberForWeek(entries, selectedEntry) {
     if (!selectedEntry) return 0;
+    const baseSlot = baseScheduleSlotForEntry(selectedEntry);
+    if (baseSlot?.slot && LESSON_SLOT_INDEX[baseSlot.slot]) {
+      return LESSON_SLOT_INDEX[baseSlot.slot];
+    }
     const signature = agendaEntrySlotSignature(selectedEntry);
     if (signature) {
       const slotPattern = inferClassLessonSlots(entries, selectedEntry.classId);
@@ -1146,7 +1279,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!cid) return 0;
     const classEntries = agendaEntriesForClass(entries, cid);
     const selected = findAgendaEntryForCurrentOrLast(classEntries, now);
-    return lessonNumberForWeek(entries, selected);
+    if (selected) return lessonNumberForWeek(entries, selected);
+    const baseSlot = baseScheduleSlotForDate(cid, now);
+    return baseSlot?.slot && LESSON_SLOT_INDEX[baseSlot.slot]
+      ? LESSON_SLOT_INDEX[baseSlot.slot]
+      : 0;
   }
 
   function agendaEntryKey(entry) {
@@ -1776,7 +1913,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  function setPlanningItems(items = [], note = '', lessons = []) {
+  function setPlanningItems(items = [], note = '', lessons = [], context = {}) {
     if (!planningItemsEl) return;
     planningItemsEl.replaceChildren();
     for (const lesson of lessons) {
@@ -1819,6 +1956,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         li.appendChild(homeworkLine);
       }
 
+      planningItemsEl.appendChild(li);
+    }
+    if (context?.deviation?.plannedLabel && context?.deviation?.actualLabel) {
+      const li = document.createElement('li');
+      li.className = 'jaarplanning-note';
+      li.appendChild(document.createTextNode('Roosterwijziging: '));
+      const planned = document.createElement('s');
+      planned.textContent = context.deviation.plannedLabel;
+      li.appendChild(planned);
+      li.appendChild(document.createTextNode(` → ${context.deviation.actualLabel}`));
       planningItemsEl.appendChild(li);
     }
     for (const item of items) {
@@ -2100,6 +2247,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderPlanning() {
     if (!planningItemsEl || !planningWeekLabelEl) return;
     const now = new Date();
+    const classId = normalizeClassId(klasSelect?.value || '');
+    const basisSlotNow = baseScheduleSlotForDate(classId, now);
     const agendaConnected = hasAgendaConnection();
     const agendaHasTodayEntry = agendaCoversDate(now);
     const isActiveLessonNow = Boolean(
@@ -2133,7 +2282,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    const classId = normalizeClassId(klasSelect?.value || '');
     const gradeId = gradeLayerFromClassId(classId);
     const weekCandidates = weekInfo.keys;
     const classWeeks = planningData[classId] || {};
@@ -2150,7 +2298,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       )
       : null;
 
-    const lessonSelection = selectLessonsForToday(weekData?.lessons || [], selectedLessonIndex, agendaConnected);
+    const lessonSelection = selectLessonsForToday(
+      weekData?.lessons || [],
+      selectedLessonIndex,
+      agendaConnected || selectedLessonIndex > 0
+    );
     currentPlanningLessons = lessonSelection;
     const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
@@ -2168,7 +2320,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    setPlanningItems(weekData.items || [], weekData.note, lessonSelection);
+    setPlanningItems(
+      weekData.items || [],
+      weekData.note,
+      lessonSelection,
+      { deviation: activeAgendaEntry ? agendaDeviationInfo(activeAgendaEntry) : null }
+    );
     dispatchPlanningProjectContext(lessonSelection);
     if (planningLastUpdateEl) {
       const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
@@ -2183,6 +2340,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         setPlanningStatus('Live gekoppeld · Lokaal onbekend', 'ok');
       }
+    } else if (basisSlotNow && (!agendaConnected || agendaFeedExpired(agendaEntries, now) || !agendaHasTodayEntry)) {
+      setPlanningStatus(`Basisrooster · ${baseScheduleSlotLabel(basisSlotNow)}`, 'info');
     } else if (agendaConnected && agendaFeedExpired(agendaEntries, now)) {
       setPlanningStatus('Zermelo-feed is verlopen; lokale JSON moet opnieuw gesynchroniseerd worden', 'warn');
     } else if (agendaConnected && !agendaHasTodayEntry) {
