@@ -1609,7 +1609,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <h2 class="presentation-slide-title">${title}</h2>
           ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
           <ul class="presentation-slide-bullets">
-            ${items.map((item) => `<li>${String(item || '').trim()}</li>`).join('')}
+            ${items.map((item) => `<li>${subtitleHtml(item)}</li>`).join('')}
           </ul>
         </article>
       `;
