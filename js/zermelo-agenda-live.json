@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-12T09:59:32.128340+00:00",
+  "updatedAt": "2026-04-12T10:46:39.969897+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -156,8 +156,8 @@
       "classId": "G1D",
       "start": "2026-04-13T08:30:00+00:00",
       "end": "2026-04-13T10:00:00+00:00",
-      "summary": "[!] [o] synagoge",
-      "description": "synagoge\nWijzigingen: Er is een wijziging bij docenten: mars,save,verh wordt hijn,mars,save,verh.\nOpmerkingen: Activiteit: G1D bezoek Synagoge",
+      "summary": "[o] synagoge",
+      "description": "synagoge\nOpmerkingen: Activiteit: G1D bezoek Synagoge",
       "location": "",
       "categories": "",
       "uid": "1116054@cgu"
