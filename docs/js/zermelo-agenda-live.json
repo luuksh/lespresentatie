@@ -1,147 +1,7 @@
 {
-  "updatedAt": "2026-04-12T21:49:46.561246+00:00",
+  "updatedAt": "2026-04-12T22:27:23.644159+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
-    {
-      "classId": "G4D",
-      "start": "2026-04-07T08:50:00+00:00",
-      "end": "2026-04-07T09:35:00+00:00",
-      "summary": "[!] h007 netl g5.netl4",
-      "description": "h007 netl g5.netl4\nWijzigingen: Er is een wijziging bij docenten: zess wordt hijn,zess.",
-      "location": "",
-      "categories": "",
-      "uid": "1095414@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-04-07T09:35:00+00:00",
-      "end": "2026-04-07T10:20:00+00:00",
-      "summary": "[!] h007 netl g5.netl4",
-      "description": "h007 netl g5.netl4\nWijzigingen: Er is een wijziging bij docenten: zess wordt hijn,zess.",
-      "location": "",
-      "categories": "",
-      "uid": "1095670@cgu"
-    },
-    {
-      "classId": "G3E",
-      "start": "2026-04-09T07:00:00+00:00",
-      "end": "2026-04-09T07:45:00+00:00",
-      "summary": "[!] h216 ne g3e",
-      "description": "h216 ne g3e\nWijzigingen: De les is verplaatst (komt van do 8:15u).",
-      "location": "",
-      "categories": "",
-      "uid": "1095979@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-04-09T07:45:00+00:00",
-      "end": "2026-04-09T08:30:00+00:00",
-      "summary": "[>] h212 ne g1d",
-      "description": "h212 ne g1d\nWijzigingen: Het lokaal is gewijzigd (was h216) en de les is verplaatst (komt van do 9:00u).",
-      "location": "",
-      "categories": "",
-      "uid": "1096009@cgu"
-    },
-    {
-      "classId": "G4E",
-      "start": "2026-04-09T08:50:00+00:00",
-      "end": "2026-04-09T09:35:00+00:00",
-      "summary": "h216 netl g4.netl5",
-      "description": "h216 netl g4.netl5",
-      "location": "",
-      "categories": "",
-      "uid": "1095958@cgu"
-    },
-    {
-      "classId": "G4E",
-      "start": "2026-04-09T09:35:00+00:00",
-      "end": "2026-04-09T10:20:00+00:00",
-      "summary": "h216 netl g4.netl5",
-      "description": "h216 netl g4.netl5",
-      "location": "",
-      "categories": "",
-      "uid": "1096142@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-04-09T10:50:00+00:00",
-      "end": "2026-04-09T11:35:00+00:00",
-      "summary": "h216 netl g4.netl4",
-      "description": "h216 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1096236@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-04-09T12:20:00+00:00",
-      "end": "2026-04-09T13:05:00+00:00",
-      "summary": "u002 kmt g1d",
-      "description": "u002 kmt g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1096216@cgu"
-    },
-    {
-      "classId": "G3B",
-      "start": "2026-04-10T07:00:00+00:00",
-      "end": "2026-04-10T07:45:00+00:00",
-      "summary": "[!] h215 ne g3b",
-      "description": "h215 ne g3b\nWijzigingen: De les is verplaatst (komt van vr 8:15u).",
-      "location": "",
-      "categories": "",
-      "uid": "1095816@cgu"
-    },
-    {
-      "classId": "G3G",
-      "start": "2026-04-10T07:45:00+00:00",
-      "end": "2026-04-10T08:30:00+00:00",
-      "summary": "h215 ne g3g",
-      "description": "h215 ne g3g",
-      "location": "",
-      "categories": "",
-      "uid": "1095899@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-04-10T08:50:00+00:00",
-      "end": "2026-04-10T09:35:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1096074@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-04-10T09:35:00+00:00",
-      "end": "2026-04-10T10:20:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1096307@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-04-10T10:50:00+00:00",
-      "end": "2026-04-10T11:35:00+00:00",
-      "summary": "[>] h216 ne g1d",
-      "description": "h216 ne g1d\nWijzigingen: Het lokaal is gewijzigd (was h215) en de les is verplaatst (komt van vr 14:20u).",
-      "location": "",
-      "categories": "",
-      "uid": "1096354@cgu"
-    },
-    {
-      "classId": "G3F",
-      "start": "2026-04-10T11:35:00+00:00",
-      "end": "2026-04-10T12:20:00+00:00",
-      "summary": "h215 ne g3f",
-      "description": "h215 ne g3f",
-      "location": "",
-      "categories": "",
-      "uid": "1096391@cgu"
-    },
     {
       "classId": "G1D",
       "start": "2026-04-13T07:15:00+00:00",
@@ -231,6 +91,66 @@
       "location": "",
       "categories": "",
       "uid": "1100357@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-04-20T07:00:00+00:00",
+      "end": "2026-04-20T07:45:00+00:00",
+      "summary": "h215 ne g1d",
+      "description": "h215 ne g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1100246@cgu"
+    },
+    {
+      "classId": "G4E",
+      "start": "2026-04-20T07:45:00+00:00",
+      "end": "2026-04-20T08:30:00+00:00",
+      "summary": "h215 netl g4.netl5",
+      "description": "h215 netl g4.netl5",
+      "location": "",
+      "categories": "",
+      "uid": "1100212@cgu"
+    },
+    {
+      "classId": "G3F",
+      "start": "2026-04-20T08:50:00+00:00",
+      "end": "2026-04-20T09:35:00+00:00",
+      "summary": "h215 ne g3f",
+      "description": "h215 ne g3f",
+      "location": "",
+      "categories": "",
+      "uid": "1099941@cgu"
+    },
+    {
+      "classId": "G3B",
+      "start": "2026-04-20T09:35:00+00:00",
+      "end": "2026-04-20T10:20:00+00:00",
+      "summary": "[>] h202 ne g3b",
+      "description": "h202 ne g3b\nWijzigingen: Het lokaal is gewijzigd (was h215) en de les is verplaatst (komt van ma 14:40u).",
+      "location": "",
+      "categories": "",
+      "uid": "1100639@cgu"
+    },
+    {
+      "classId": "G3E",
+      "start": "2026-04-20T10:50:00+00:00",
+      "end": "2026-04-20T11:35:00+00:00",
+      "summary": "[!] h215 ne g3e",
+      "description": "h215 ne g3e\nWijzigingen: De docent is vervangen (was hijn).",
+      "location": "",
+      "categories": "",
+      "uid": "1100798@cgu"
+    },
+    {
+      "classId": "G3G",
+      "start": "2026-04-20T11:35:00+00:00",
+      "end": "2026-04-20T12:20:00+00:00",
+      "summary": "[x] h215 ne g3g",
+      "description": "h215 ne g3g\nWijzigingen: Les vervalt",
+      "location": "",
+      "categories": "",
+      "uid": "1100557@cgu"
     }
   ]
 }
