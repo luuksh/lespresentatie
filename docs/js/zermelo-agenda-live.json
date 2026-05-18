@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-05-18T01:34:14.309100+00:00",
+  "updatedAt": "2026-05-18T05:56:59.658354+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
       "classId": "G1D",
       "start": "2026-05-18T07:00:00+00:00",
       "end": "2026-05-18T07:45:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
+      "summary": "[x] h215 ne g1d",
+      "description": "h215 ne g1d\nWijzigingen: Les vervalt",
       "location": "",
       "categories": "",
       "uid": "1117471@cgu"
@@ -16,8 +16,8 @@
       "classId": "G4E",
       "start": "2026-05-18T07:45:00+00:00",
       "end": "2026-05-18T08:30:00+00:00",
-      "summary": "h215 netl g4.netl5",
-      "description": "h215 netl g4.netl5",
+      "summary": "[x] h215 netl g4.netl5",
+      "description": "h215 netl g4.netl5\nWijzigingen: Les vervalt",
       "location": "",
       "categories": "",
       "uid": "1118293@cgu"
