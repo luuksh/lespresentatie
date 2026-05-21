@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 
 
 OUT_PATH = Path("js/zermelo-leerlingen-live.json")
+PUBLIC_OUT_PATH = Path("docs/js/zermelo-leerlingen-live.json")
 
 
 def normalize_name(value: object) -> str:
@@ -215,9 +216,12 @@ def main() -> int:
         "sourceType": "zermelo-roster-json",
         "classes": dict(sorted(classes.items())),
     }
+    out_text = json.dumps(out, ensure_ascii=False, indent=2) + "\n"
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(classes)} classes to {OUT_PATH}")
+    OUT_PATH.write_text(out_text, encoding="utf-8")
+    PUBLIC_OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PUBLIC_OUT_PATH.write_text(out_text, encoding="utf-8")
+    print(f"Wrote {len(classes)} classes to {OUT_PATH} and {PUBLIC_OUT_PATH}")
     return 0
 
 

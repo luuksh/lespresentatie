@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaarplanning | Nederlands</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/student-portal.css?v=20260409-04" />
+  <link rel="stylesheet" href="css/student-portal.css?v=20260426-02" />
   <script>
     window.STUDENT_PORTAL_CONFIG = {
-      planningUrl: 'js/jaarplanning-live-20260409-03.json',
+      planningUrl: 'js/jaarplanning-live.json',
       classesUrl: 'js/leerlingen_per_klas.json',
       agendaUrl: 'js/zermelo-agenda-live.json?v=20260409-04',
       kerndoelenUrl: 'data/kerndoelen/kerndoelen-map.json',
       internalHubUrl: 'index.html'
     };
   </script>
-  <script type="module" src="js/student-portal.js?v=20260409-04"></script>
+  <script type="module" src="js/student-portal.js?v=20260521-02"></script>
 </head>
 <body>
   <main class="portal-shell">
@@ -34,17 +34,25 @@
 
     <section class="student-stage">
       <article class="next-lesson-card next-lesson-card-primary">
-        <div class="next-lesson-head">
-          <div>
-            <p class="overview-label">Huiswerk voor je eerstvolgende les</p>
-            <h2 id="currentWeekTitle">Nog geen les gevonden</h2>
+        <section class="homework-priority-panel">
+          <div class="homework-priority-head">
+            <p class="overview-label">Eerst checken</p>
+            <h2>Huiswerk en materialen</h2>
           </div>
-        </div>
-        <p id="currentWeekSummary" class="overview-text">De planning wordt opgehaald.</p>
-        <div class="next-lesson-grid">
           <div id="homeworkSummary" class="stack-list next-lesson-homework"></div>
+        </section>
+
+        <section class="lesson-priority-panel">
+          <div class="next-lesson-head">
+            <div>
+              <p class="overview-label">Eerstvolgende les</p>
+              <h2 id="currentWeekTitle">Nog geen les gevonden</h2>
+            </div>
+          </div>
+          <p id="currentWeekSummary" class="overview-text">De planning wordt opgehaald.</p>
           <div id="projectSummary" class="stack-list next-lesson-project"></div>
-        </div>
+        </section>
+
         <section class="project-rubric-card">
           <div class="project-rubric-head">
             <div>
@@ -82,23 +90,24 @@
         </article>
 
         <article class="overview-card overview-card-compact overview-card-muted">
-          <p class="overview-label">Huidige week</p>
-          <p class="overview-kpi" id="currentWeekChip">Week --</p>
+          <p class="overview-label">Projecten</p>
+          <p class="overview-kpi" id="currentWeekChip">Project --</p>
         </article>
       </aside>
     </section>
 
     <details id="timelineDetails" class="timeline-details">
-      <summary class="timeline-summary">Toon de rest van de jaarplanning</summary>
+      <summary class="timeline-summary">Toon alle projecten</summary>
       <section class="timeline-head">
         <div>
-          <p class="overview-label">Jaarplanning</p>
-          <h2>Alle weken van je klas</h2>
+          <p class="overview-label">Projectplanning</p>
+          <h2>Alle projecten van je klas</h2>
         </div>
-        <p class="timeline-help">Klik op een les om de presentatie te openen en navigeer rustig door de slides.</p>
+        <p class="timeline-help">De projecten staan in de volgorde waarin ze voor je klas gepland zijn.</p>
       </section>
 
-      <nav id="weekJumpBar" class="week-jump-bar" aria-label="Snelle weeknavigatie"></nav>
+      <nav id="weekJumpBar" class="week-jump-bar" aria-label="Snelle projectnavigatie"></nav>
+      <section id="submissionMoments" class="submission-moments" aria-live="polite"></section>
       <section id="weeksGrid" class="weeks-grid" aria-live="polite"></section>
     </details>
   </main>
@@ -120,6 +129,34 @@
         <p id="dialogCounter" class="dialog-counter">0 / 0</p>
         <button id="dialogNext" class="portal-button portal-button-secondary" type="button">Volgende</button>
       </footer>
+    </form>
+  </dialog>
+
+  <dialog id="netschriftDialog" class="presentation-dialog overview-dialog">
+    <form method="dialog" class="presentation-dialog-shell overview-dialog-shell">
+      <header class="presentation-dialog-head">
+        <div>
+          <p class="overview-label">Overzicht</p>
+          <h2>Netschrift</h2>
+          <p id="netschriftDialogMeta" class="dialog-meta">Alles wat tot nu toe in je netschrift moet staan.</p>
+        </div>
+        <button class="dialog-close" type="submit" aria-label="Sluiten">Sluit</button>
+      </header>
+      <section id="netschriftDialogBody" class="overview-dialog-body"></section>
+    </form>
+  </dialog>
+
+  <dialog id="posterDialog" class="presentation-dialog overview-dialog">
+    <form method="dialog" class="presentation-dialog-shell overview-dialog-shell">
+      <header class="presentation-dialog-head">
+        <div>
+          <p class="overview-label">Overzicht</p>
+          <h2>Poster</h2>
+          <p id="posterDialogMeta" class="dialog-meta">Alles wat op de poster van dit project moet staan.</p>
+        </div>
+        <button class="dialog-close" type="submit" aria-label="Sluiten">Sluit</button>
+      </header>
+      <section id="posterDialogBody" class="overview-dialog-body"></section>
     </form>
   </dialog>
 </body>

@@ -18,15 +18,18 @@ public_items=(
   "css/student-portal.css"
   "js/student-portal.js"
   "js/jaarplanning-live.json"
-  "js/jaarplanning-live-20260308.json"
+  "js/zermelo-agenda-live.json"
+  "js/zermelo-leerlingen-live.json"
   "js/leerlingen_per_klas.json"
+  "js/kerndoelen-data.js"
+  "data/kerndoelen"
   "lesdocs"
 )
 
 for item in "${public_items[@]}"; do
-  if [ -e "$ROOT_DIR/docs/$item" ]; then
+  if [ -e "$ROOT_DIR/$item" ]; then
     mkdir -p "$PUBLIC_DIR/$(dirname "$item")"
-    cp -R "$ROOT_DIR/docs/$item" "$PUBLIC_DIR/$item"
+    cp -R "$ROOT_DIR/$item" "$PUBLIC_DIR/$item"
   fi
 done
 
