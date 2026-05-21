@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T06:37:42.599088+00:00",
+  "updatedAt": "2026-05-21T10:24:45.852333+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -113,16 +113,6 @@
       "uid": "1118583@cgu"
     },
     {
-      "classId": "G1D",
-      "start": "2026-05-21T12:20:00+00:00",
-      "end": "2026-05-21T13:05:00+00:00",
-      "summary": "h212 kmt g1d",
-      "description": "h212 kmt g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1118762@cgu"
-    },
-    {
       "classId": "G3B",
       "start": "2026-05-22T06:15:00+00:00",
       "end": "2026-05-22T07:00:00+00:00",
@@ -231,16 +221,6 @@
       "location": "",
       "categories": "",
       "uid": "1119577@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-05-28T12:20:00+00:00",
-      "end": "2026-05-28T13:05:00+00:00",
-      "summary": "h212 kmt g1d",
-      "description": "h212 kmt g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1119787@cgu"
     },
     {
       "classId": "G3B",
