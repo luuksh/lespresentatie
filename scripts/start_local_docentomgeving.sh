@@ -9,7 +9,8 @@ LOG_FILE="/tmp/klassenplattegrond-local.log"
 SYNC_PID_FILE="/tmp/klassenplattegrond-zermelo-sync.pid"
 SYNC_LOG_FILE="/tmp/klassenplattegrond-zermelo-sync.log"
 SYNC_INTERVAL_SECONDS="${ZERMELO_SYNC_INTERVAL_SECONDS:-300}"
-URL="http://127.0.0.1:${PORT}/index.html"
+OPEN_PATH="${OPEN_PATH:-index.html}"
+URL="http://127.0.0.1:${PORT}/${OPEN_PATH}"
 
 if [[ -f "$LOCAL_ENV_FILE" ]]; then
   set -a
@@ -53,12 +54,12 @@ start_zermelo_sync_loop() {
 start_zermelo_sync_loop
 
 if command -v lsof >/dev/null 2>&1 && lsof -iTCP:"${PORT}" -sTCP:LISTEN >/dev/null 2>&1; then
-  open "$URL"
-  echo "Lokale docentomgeving draait al op $URL"
-  if [[ -f "$SYNC_PID_FILE" ]]; then
-    echo "Zermelo-sync draait op de achtergrond (interval ${SYNC_INTERVAL_SECONDS}s)"
+  PIDS="$(lsof -tiTCP:"${PORT}" -sTCP:LISTEN || true)"
+  if [[ -n "$PIDS" ]]; then
+    kill $PIDS >/dev/null 2>&1 || true
+    rm -f "$PID_FILE"
+    sleep 0.5
   fi
-  exit 0
 fi
 
 if ! command -v python3 >/dev/null 2>&1; then
@@ -67,7 +68,7 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 cd "$ROOT_DIR"
-python3 -m http.server "$PORT" --bind 127.0.0.1 >"$LOG_FILE" 2>&1 &
+python3 scripts/local_docentomgeving_server.py "$PORT" >"$LOG_FILE" 2>&1 &
 SERVER_PID=$!
 echo "$SERVER_PID" > "$PID_FILE"
 

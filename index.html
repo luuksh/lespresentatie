@@ -39,11 +39,13 @@
         </article>
       </div>
       <div class="shell-actions">
+        <button id="publishEverythingBtn" class="shell-button shell-button-primary" type="button">Alles opslaan en publiceren</button>
         <a class="shell-button shell-button-primary" href="docent.html">Open docentenbord</a>
         <a class="shell-button shell-button-secondary" href="jaarplanning-studio.html">Open jaarplanningstudio</a>
         <a class="shell-button shell-button-secondary" href="kerndoelen-studio.html">Open kerndoelenstudio</a>
         <a class="shell-button shell-button-secondary" href="presentatie-studio.html">Open presentatiestudio</a>
       </div>
+      <p id="publishEverythingStatus" class="shell-status" aria-live="polite"></p>
     </section>
 
     <section class="shell-grid">
@@ -68,5 +70,91 @@
       </article>
     </section>
   </main>
+  <script>
+    const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
+    const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
+    const BASE_SOURCE = 'js/jaarplanning-live.json';
+    const publishEverythingBtn = document.getElementById('publishEverythingBtn');
+    const publishEverythingStatus = document.getElementById('publishEverythingStatus');
+
+    function setPublishStatus(message, type = 'info') {
+      if (!publishEverythingStatus) return;
+      publishEverythingStatus.textContent = message;
+      publishEverythingStatus.dataset.status = type;
+    }
+
+    async function fetchJson(path) {
+      const url = new URL(path, window.location.href);
+      url.searchParams.set('_t', String(Date.now()));
+      const response = await fetch(url.toString(), { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    }
+
+    async function loadStudioDoc() {
+      const raw = String(localStorage.getItem(STUDIO_KEY) || '').trim();
+      if (raw) return JSON.parse(raw);
+      return fetchJson(BASE_SOURCE);
+    }
+
+    function buildPublishPayload(doc) {
+      const payload = structuredClone(doc && typeof doc === 'object' ? doc : {});
+      payload.studioSource = 'jaarplanning-studio';
+      payload.exportType = 'jaarplanning-presentaties';
+      payload.exportVersion = 2;
+      payload.exportedAt = new Date().toISOString();
+      delete payload.entries;
+      return payload;
+    }
+
+    function autoGitMessage(result = {}) {
+      const git = result.autoGit;
+      if (!git || git.enabled === false) return '';
+      return git.ok
+        ? ` ${git.message || 'Automatisch gepusht.'}`
+        : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
+    }
+
+    function publishErrorMessage(err) {
+      const message = String(err?.message || err || '');
+      if (message.includes('HTTP 501')) {
+        return 'De oude lokale server draait nog. Sluit dit venster en dubbelklik eenmalig op Open Jaarplanning Studio.command; daarna werkt deze knop direct.';
+      }
+      return message;
+    }
+
+    async function publishEverything() {
+      publishEverythingBtn.disabled = true;
+      publishEverythingBtn.textContent = 'Publiceren...';
+      setPublishStatus('Planning en presentaties publiceren...', 'info');
+      try {
+        const payload = buildPublishPayload(await loadStudioDoc());
+        const response = await fetch(PUBLISH_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result?.ok === false) {
+          throw new Error(result?.error || `HTTP ${response.status}`);
+        }
+        const liveDoc = await fetchJson(BASE_SOURCE).catch(() => null);
+        if (liveDoc) localStorage.setItem(STUDIO_KEY, JSON.stringify(liveDoc));
+        setPublishStatus(
+          `Klaar: ${result.entries || 0} planningregels en ${result.presentations || 0} presentaties bijgewerkt.${autoGitMessage(result)}`,
+          result.autoGit?.ok === false ? 'error' : 'success',
+        );
+        publishEverythingBtn.textContent = 'Gepubliceerd';
+        window.setTimeout(() => { publishEverythingBtn.textContent = 'Alles opslaan en publiceren'; }, 1800);
+      } catch (err) {
+        setPublishStatus(`Publiceren mislukt: ${publishErrorMessage(err)}`, 'error');
+        publishEverythingBtn.textContent = 'Alles opslaan en publiceren';
+      } finally {
+        publishEverythingBtn.disabled = false;
+      }
+    }
+
+    publishEverythingBtn?.addEventListener('click', publishEverything);
+  </script>
 </body>
 </html>

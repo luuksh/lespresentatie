@@ -142,8 +142,11 @@ body {
   justify-content: center;
   min-height: 50px;
   border-radius: 999px;
+  border: 0;
   text-decoration: none;
+  font: inherit;
   font-weight: 800;
+  cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -166,6 +169,27 @@ body {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--shell-line);
   color: var(--shell-primary-deep);
+}
+
+.shell-button:disabled {
+  cursor: wait;
+  opacity: 0.74;
+  transform: none;
+}
+
+.shell-status {
+  min-height: 1.4em;
+  margin: 14px 0 0;
+  color: var(--shell-muted);
+  font-weight: 800;
+}
+
+.shell-status[data-status="success"] {
+  color: var(--shell-primary-deep);
+}
+
+.shell-status[data-status="error"] {
+  color: #9f1d1d;
 }
 
 .shell-grid {
