@@ -8,6 +8,7 @@ const KERNDOELEN_URL = String(CONFIG.kerndoelenUrl || 'data/kerndoelen/kerndoele
 const USE_LOCAL_STUDIO_DRAFT = CONFIG.useLocalStudioDraft === true;
 const CURRENT_CLASS_KEY = 'student.portal.class';
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
+const PLATFORM_REFRESH_KEY = 'lespresentatie.platformRefresh';
 
 const classSelect = document.getElementById('classSelect');
 const jumpToCurrentWeekBtn = document.getElementById('jumpToCurrentWeekBtn');
@@ -85,20 +86,58 @@ const PROJECT_ORDER_BY_GRADE = {
     'Persoonlijkheid',
     'Technologie',
     'Renaissance',
+    'Schrijfstijl',
+    'De krater / De eerlijke vinder',
+    'Onder de Paramariboom',
     'Invloed',
     'Taalmakers',
   ],
 };
 const CURRENT_PROGRESS_ANCHORS = [
-  { grade: '1', project: 'Taaltopia', lessonNumber: 5, anchorDate: '2026-05-21' },
-  { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 2, anchorDate: '2026-05-21', useProjectOnFirstLesson: true },
-  { grade: '3', project: 'V-rede', lessonNumber: 2, anchorDate: '2026-05-21' },
-  { classIds: ['G4D', '4G4', '4.4'], project: 'Invloed', lessonNumber: 6, anchorDate: '2026-05-21', useProjectOnFirstLesson: true },
-  { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 7, anchorDate: '2026-05-21', useProjectOnFirstLesson: true },
+  { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
+  { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
+  { grade: '3', project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-22' },
+  { classIds: ['G4D', '4G4', '4.4'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
+  { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
 ];
 const READING_LESSON_EXCEPTIONS = [
-  { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-21', lessonNumber: 2 },
+  { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
+  { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
 ];
+const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+const BASE_SCHEDULE = {
+  G1D: [
+    { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H215' },
+    { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'H216' },
+    { slot: 'C', day: 5, start: '14:20', end: '15:05', room: 'H215' },
+  ],
+  G3B: [
+    { slot: 'A', day: 1, start: '14:40', end: '15:25', room: 'H215' },
+    { slot: 'B', day: 5, start: '08:15', end: '09:00', room: 'H215' },
+  ],
+  G3E: [
+    { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H215' },
+    { slot: 'B', day: 4, start: '08:15', end: '09:00', room: 'H216' },
+  ],
+  G3F: [
+    { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H215' },
+    { slot: 'B', day: 5, start: '13:35', end: '14:20', room: 'H215' },
+  ],
+  G3G: [
+    { slot: 'A', day: 1, start: '13:35', end: '14:20', room: 'H215' },
+    { slot: 'B', day: 5, start: '09:45', end: '10:30', room: 'H215' },
+  ],
+  G4D: [
+    { slot: 'A', day: 4, start: '12:50', end: '13:35', room: 'H216' },
+    { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'H215' },
+    { slot: 'C', day: 5, start: '11:35', end: '12:20', room: 'H215' },
+  ],
+  G4E: [
+    { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H215' },
+    { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'H216' },
+    { slot: 'C', day: 4, start: '11:35', end: '12:20', room: 'H216' },
+  ],
+};
 const READING_PROJECT_NAME = 'heel veel lezen';
 const PROTECTED_START_PROJECTS = new Set(['heel veel lezen', 'netschrift']);
 const POSTER_PRESENTATION_PROJECTS = new Set([
@@ -307,6 +346,36 @@ function agendaEntrySlotSignature(entry) {
   return `${day}-${start.getHours()}:${start.getMinutes()}-${duration}`;
 }
 
+function minutesFromTime(value) {
+  const match = String(value || '').trim().match(/^(\d{1,2}):(\d{2})$/);
+  if (!match) return NaN;
+  return Number(match[1]) * 60 + Number(match[2]);
+}
+
+function baseScheduleForClass(classId) {
+  for (const alias of classPlanningAliases(classId)) {
+    if (BASE_SCHEDULE[alias]) return BASE_SCHEDULE[alias].map((slot) => ({ ...slot }));
+  }
+  return [];
+}
+
+function baseScheduleSlotByDayTime(classId, day, minutes) {
+  if (!Number.isFinite(day) || !Number.isFinite(minutes)) return null;
+  return baseScheduleForClass(classId).find((slot) => (
+    Number(slot.day) === day
+    && minutesFromTime(slot.start) === minutes
+  )) || null;
+}
+
+function baseScheduleSlotForEntry(entry) {
+  if (!entry?.start) return null;
+  const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+  if (Number.isNaN(start.getTime())) return null;
+  const weekday = start.getDay() || 7;
+  const minutes = start.getHours() * 60 + start.getMinutes();
+  return baseScheduleSlotByDayTime(entry.classId, weekday, minutes);
+}
+
 function isDutchAgendaEntry(entry) {
   const text = `${entry?.summary || ''}\n${entry?.description || ''}`.toLowerCase();
   return /\bne\b|\bnetl\b/.test(text);
@@ -469,6 +538,10 @@ function inferAgendaLessonSlots(entries, classId) {
 
 function lessonNumberForAgendaWeek(entries, selectedEntry) {
   if (!selectedEntry) return 0;
+  const baseSlot = baseScheduleSlotForEntry(selectedEntry);
+  if (baseSlot?.slot && LESSON_SLOT_INDEX[baseSlot.slot]) {
+    return LESSON_SLOT_INDEX[baseSlot.slot];
+  }
   const signature = agendaEntrySlotSignature(selectedEntry);
   if (signature) {
     const slotPattern = inferAgendaLessonSlots(entries, selectedEntry.classId);
@@ -486,6 +559,15 @@ function lessonNumberForAgendaWeek(entries, selectedEntry) {
     .sort((left, right) => left.start - right.start);
   const index = inWeek.findIndex((entry) => entry.start.getTime() === selectedEntry.start.getTime());
   return index >= 0 ? index + 1 : 0;
+}
+
+function findAgendaEntryForCurrentOrNext(entries, now = new Date()) {
+  const sorted = [...entries].sort((left, right) => left.start - right.start);
+  if (!sorted.length) return null;
+  return sorted.find((entry) => entry.start <= now && entry.end >= now)
+    || sorted.find((entry) => entry.start >= now)
+    || sorted.filter((entry) => entry.end <= now).at(-1)
+    || null;
 }
 
 function formatLessonDate(value) {
@@ -976,17 +1058,16 @@ function getClassProgressAnchor(classId, now = new Date()) {
   if (!lessons.length) return null;
 
   const agendaEntries = getAgendaEntriesForClass(classId);
-  const activeEntry = agendaEntries.find((entry) => entry.start <= now && entry.end >= now) || null;
-  const nextEntry = agendaEntries.find((entry) => entry.start > now) || null;
-  const anchorLesson = findProgressAnchorLesson(classId, agendaEntries, activeEntry || nextEntry, now);
+  const selectedEntry = findAgendaEntryForCurrentOrNext(agendaEntries, now);
+  const anchorLesson = findProgressAnchorLesson(classId, agendaEntries, selectedEntry, now);
   if (anchorLesson) {
     return {
       doneAll: false,
       source: 'anchor',
       anchorIndex: findLessonIndexByIdentity(lessons, anchorLesson.lesson),
-      agendaEntry: activeEntry || nextEntry || null,
+      agendaEntry: selectedEntry,
       useProjectLessonForAgendaEntry: Boolean(anchorLesson.anchor?.useProjectOnFirstLesson)
-        || lessonNumberForAgendaWeek(agendaEntries, activeEntry || nextEntry) > 1,
+        || lessonNumberForAgendaWeek(agendaEntries, selectedEntry) > 1,
       ...anchorLesson,
     };
   }
@@ -994,7 +1075,7 @@ function getClassProgressAnchor(classId, now = new Date()) {
   const anchorIndex = projectAnchorIndexFromAgenda(classId, lessons, agendaEntries, now);
 
   if (anchorIndex >= lessons.length) {
-    return { doneAll: true, anchorIndex, agendaEntry: activeEntry || nextEntry || null };
+    return { doneAll: true, anchorIndex, agendaEntry: selectedEntry };
   }
 
   const lesson = lessons[anchorIndex];
@@ -1005,8 +1086,8 @@ function getClassProgressAnchor(classId, now = new Date()) {
     doneAll: false,
     source: 'zermelo',
     anchorIndex,
-    agendaEntry: activeEntry || nextEntry || null,
-    useProjectLessonForAgendaEntry: shouldUseProjectLessonForAgendaEntry(classId, activeEntry || nextEntry, anchorIndex, agendaEntries, lessons),
+    agendaEntry: selectedEntry,
+    useProjectLessonForAgendaEntry: shouldUseProjectLessonForAgendaEntry(classId, selectedEntry, anchorIndex, agendaEntries, lessons),
     entry,
     lesson,
     lessonKey,
@@ -1263,6 +1344,24 @@ function buildPresentationTarget(lesson) {
   };
 }
 
+function buildPresentationUrl(target) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('presentation', JSON.stringify(target || {}));
+  url.hash = '';
+  return url.toString();
+}
+
+function presentationTargetFromLocation() {
+  const raw = new URLSearchParams(window.location.search).get('presentation');
+  if (!raw) return null;
+  try {
+    const target = JSON.parse(raw);
+    return target && typeof target === 'object' ? target : null;
+  } catch {
+    return null;
+  }
+}
+
 function resolvePresentation(target) {
   if (!target || !state.doc.presentations || typeof state.doc.presentations !== 'object') {
     return { presentation: null, slideIndex: 0, markerId: '' };
@@ -1314,7 +1413,8 @@ function resolvePresentation(target) {
 }
 
 function getLessonOrderValue(lessonKey) {
-  return ['A', 'B', 'C'].indexOf(String(lessonKey || '').trim().toUpperCase());
+  const index = ['A', 'B', 'C', 'D'].indexOf(String(lessonKey || '').trim().toUpperCase());
+  return index >= 0 ? index : 99;
 }
 
 function getOrderedLessonsForClass(classId) {
@@ -1605,6 +1705,14 @@ function lessonDeliverable(project, lessonTitle = '') {
     if (number === 8) return 'Netschrift bevat eindcontrole en reflectie bij de ingeleverde tekst.';
   }
 
+  if (key === 'de krater / de eerlijke vinder') {
+    return 'Netschrift bevat het vervolg op het einde van het verhaal: korte aanloop, vervolgverhaal, passende slotzin en korte reflectie op je keuzes.';
+  }
+
+  if (key === 'onder de paramariboom') {
+    return 'Netschrift bevat de vier hoofdvragen/thema’s van de laatste dia, met ongeveer twee bladzijden uitwerking per hoofdvraag/thema en concrete voorbeelden uit het boek.';
+  }
+
   if (key === 'grenzen van literatuur') {
     if (number === 1) return 'Netschrift bevat een beschrijving van een ruimte of landschap met alle vijf zintuigen: zien, ruiken, horen, proeven en voelen.';
     if (number === 2) return 'Netschrift bevat een spannende uitbreiding van de ruimtebeschrijving die abrupt eindigt met een cliffhanger.';
@@ -1819,6 +1927,16 @@ function nextMarkerIndexForTarget(presentation, target) {
 }
 
 function getLessonPresentationSlides(presentation, target) {
+  const markerDeck = Array.isArray(presentation?.markerDecks?.[target?.markerId])
+    ? presentation.markerDecks[target.markerId].filter((slide) => slide && typeof slide === 'object')
+    : [];
+  if (markerDeck.some((slide) => (
+    (Array.isArray(slide.items) && slide.items.some((item) => String(item || '').trim()))
+    || String(slide.type || '').trim().toLowerCase() === 'bullets'
+  ))) {
+    return markerDeck;
+  }
+
   const sourceSlides = Array.isArray(presentation?.slides) ? presentation.slides : [];
   if (!sourceSlides.length) return [];
   if (!target?.markerId) return [...sourceSlides];
@@ -1870,6 +1988,22 @@ function uniqueLessonsByIdentity(lessons) {
   });
 }
 
+function uniqueLessonsByChecklistIdentity(lessons) {
+  const seen = new Set();
+  return lessons.filter((lesson) => {
+    const projectKey = normalizedProjectKey(lesson?.project);
+    const markerKey = String(lesson?.presentationMarkerId || '').trim();
+    const titleKey = String(lesson?.lesson || '').trim().toLocaleLowerCase('nl-NL');
+    const presentationKey = String(lesson?.presentationId || '').trim();
+    const key = markerKey
+      ? `${projectKey}__marker__${markerKey}`
+      : `${projectKey}__lesson__${presentationKey}__${titleKey}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function lessonChecklistItem(lesson) {
   const project = String(lesson?.project || '').trim();
   const title = String(lesson?.lesson || project || 'Les').trim();
@@ -1885,9 +2019,54 @@ function lessonChecklistItem(lesson) {
   };
 }
 
+function isBridgeClass(classId) {
+  return gradeLayerFromClassId(classId) === '1';
+}
+
+function bridgeClassNetschriftChecklist(classId) {
+  const normalizedClassId = normalizeClassId(classId);
+  const doneStatus = { state: 'done', label: 'Onderdeel', icon: '✓' };
+  const feedbackTarget = buildPresentationTarget({
+    classId: normalizedClassId,
+    project: 'Netschrift',
+    lesson: 'Feedback-en-forward-opdracht',
+    presentationId: 'netschrift-feedback-en-forward-opdracht',
+  });
+  return [
+    {
+      project: 'Netschrift',
+      title: 'Feedback-en-forward-opdracht',
+      text: 'feedback en feedforward verwerken bij je werk.',
+      status: doneStatus,
+      target: feedbackTarget,
+      hasPresentation: Boolean(resolvePresentation(feedbackTarget).presentation),
+    },
+    {
+      project: 'Escaperoom Yde',
+      title: 'Project Escaperoom Yde',
+      text: 'de creatieve schrijfopdracht.',
+      status: doneStatus,
+      target: null,
+      hasPresentation: false,
+    },
+    {
+      project: 'Verweggers',
+      title: 'Verweggers',
+      text: 'het verhaal over je familie met alle aantekeningen erbij.',
+      status: doneStatus,
+      target: null,
+      hasPresentation: false,
+    },
+  ];
+}
+
 function getNetschriftChecklistForClass(classId) {
-  return uniqueLessonsByIdentity(getProjectOrderedLessonsForClass(classId))
-    .filter((lesson) => getProjectAssessmentMedium(lesson.project).type === 'netschrift')
+  if (isBridgeClass(classId)) return bridgeClassNetschriftChecklist(classId);
+  return uniqueLessonsByChecklistIdentity(getProjectOrderedLessonsForClass(classId))
+    .filter((lesson) => (
+      normalizedProjectKey(lesson.project) !== READING_PROJECT_NAME
+      && getProjectAssessmentMedium(lesson.project).type === 'netschrift'
+    ))
     .map(lessonChecklistItem)
     .filter((item) => item.status.state === 'done' || item.status.state === 'active');
 }
@@ -1921,7 +2100,7 @@ function renderChecklist(items, options = {}) {
           <p class="overview-checklist-title">
             <span class="lesson-status-icon" aria-hidden="true">${escapeHtml(item.status.icon || '•')}</span>
             ${item.hasPresentation
-              ? `<button class="overview-lesson-link" type="button" data-overview-presentation='${escapeHtml(JSON.stringify(item.target))}'>${escapeHtml(item.title)}</button>`
+              ? `<a class="overview-lesson-link" href="${escapeHtml(buildPresentationUrl(item.target))}" data-overview-presentation='${escapeHtml(JSON.stringify(item.target))}'>${escapeHtml(item.title)}</a>`
               : `<span>${escapeHtml(item.title)}</span>`}
           </p>
           <p>${escapeHtml(formatText(item.text))}</p>
@@ -1935,7 +2114,9 @@ function openNetschriftOverview() {
   if (!netschriftDialog || !netschriftDialogBody) return;
   const items = getNetschriftChecklistForClass(state.currentClass);
   if (netschriftDialogMeta) {
-    netschriftDialogMeta.textContent = items.length
+    netschriftDialogMeta.textContent = isBridgeClass(state.currentClass)
+      ? `Klas ${state.currentClass} · ${items.length} onderdelen`
+      : items.length
       ? `Klas ${state.currentClass} · ${items.length} lessen tot nu toe`
       : `Klas ${state.currentClass} · nog geen netschriftlessen afgerond`;
   }
@@ -2077,6 +2258,19 @@ function openPresentation(target) {
   }
   renderPresentationSlide();
   if (!presentationDialog.open) presentationDialog.showModal();
+}
+
+function openPresentationFromLocation() {
+  const target = presentationTargetFromLocation();
+  if (!target) return;
+  const classId = normalizeClassId(target.classId || '');
+  if (classId && state.classes.includes(classId)) {
+    state.currentClass = classId;
+    classSelect.value = classId;
+    localStorage.setItem(CURRENT_CLASS_KEY, classId);
+    renderPortal();
+  }
+  openPresentation(target);
 }
 
 function stepActivePresentation(delta) {
@@ -2368,9 +2562,19 @@ async function boot() {
     classSelect.value = state.currentClass;
 
     renderPortal();
+    openPresentationFromLocation();
   } catch (error) {
     weeksGrid.innerHTML = `<article class="empty-state">Laden mislukt: ${escapeHtml(error?.message || error)}</article>`;
     portalMeta.textContent = 'De jaarplanning kon niet worden geladen.';
+  }
+}
+
+async function refreshPlanningFromPublishedSource() {
+  try {
+    state.doc = normalizeDoc(await fetchJson(PLANNING_URL));
+    renderPortal();
+  } catch (err) {
+    console.warn('Jaarplanning kon niet opnieuw worden geladen:', err);
   }
 }
 
@@ -2381,6 +2585,10 @@ classSelect?.addEventListener('change', () => {
 });
 
 window.addEventListener('storage', (event) => {
+  if (event.key === PLATFORM_REFRESH_KEY) {
+    refreshPlanningFromPublishedSource();
+    return;
+  }
   if (!USE_LOCAL_STUDIO_DRAFT) return;
   if (event.key !== STUDIO_KEY) return;
   const studioDoc = loadStudioDocFromStorage();
@@ -2456,6 +2664,7 @@ document.addEventListener('click', (event) => {
 
   const overviewPresentationButton = target?.closest('[data-overview-presentation]');
   if (overviewPresentationButton) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
     const payload = overviewPresentationButton.getAttribute('data-overview-presentation');
     if (!payload) return;
