@@ -1,81 +1,6 @@
 {
-  "updatedAt": "2026-05-28T07:32:46+02:00",
+  "updatedAt": "2026-05-28T07:36:50+02:00",
   "entries": [
-    {
-      "classId": "1",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Zinsbouwers",
-          "lesson": "Les 1 - De basis van een zin",
-          "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-zinsbouwers",
-          "presentationMarkerId": "marker-les-1-de-basis-van-een-zin"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
-    },
-    {
-      "classId": "1",
-      "week": "44",
-      "lessons": [],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
-    },
-    {
-      "classId": "1",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
-        },
-        {
-          "project": "Verweggers",
-          "lesson": "Les 2 - Migratiegeschiedenis van je familie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
-    },
     {
       "classId": "1",
       "week": "1",
@@ -196,17 +121,10 @@
           "presentationId": "spiegeldicht-kiezen"
         },
         {
-          "project": "Spiegeldicht",
-          "lesson": "Analyse schrijven",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "spiegeldicht-analyse-schrijven"
-        },
-        {
           "project": "Taaltopia",
           "lesson": "Les 5 - Voorbeeldgesprek",
           "homework": "Schrijf 4 korte zinnen die in jullie gesprek kunnen voorkomen en bedenk wie welke zin kan zeggen. Als je iets digitaal uitwerkt, print het gespreksstrookje of schrijf het over. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         }
@@ -242,26 +160,12 @@
           "presentationMarkerId": "marker-les-5-voorbeeldgesprek"
         },
         {
-          "project": "Spiegeldicht",
-          "lesson": "Reactiegedicht schrijven",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "spiegeldicht-reactiegedicht-schrijven"
-        },
-        {
           "project": "Taaltopia",
           "lesson": "Les 6 - Creatief extra en presenteren",
           "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "spiegeldicht-kiezen"
         }
       ],
       "items": []
@@ -295,27 +199,11 @@
         },
         {
           "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
-        },
-        {
-          "project": "Taaltopia",
           "lesson": "Les 6b - Presentatie oefenen en generale repetitie",
           "homework": "Oefen jullie volledige presentatie nog een keer: wie zegt wat, wat wijs je aan op de poster en welk voorbeeld laat je horen. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6b-presentatie-oefenen-generale-repetitie"
-        },
-        {
-          "project": "Zinsbouwers",
-          "lesson": "Les 1 - De basis van een zin",
-          "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-zinsbouwers",
-          "presentationMarkerId": "marker-les-1-de-basis-van-een-zin"
         }
       ],
       "items": []
@@ -371,27 +259,11 @@
         },
         {
           "project": "Zinsbouwers",
-          "lesson": "Les 1 - De basis van een zin",
-          "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-zinsbouwers",
-          "presentationMarkerId": "marker-les-1-de-basis-van-een-zin"
-        },
-        {
-          "project": "Zinsbouwers",
           "lesson": "Les 2 - De werkwoordsgroep",
           "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-zinsbouwers",
-          "presentationMarkerId": "marker-les-2-de-werkwoordsgroep"
-        },
-        {
-          "project": "Zinsbouwers",
-          "lesson": "Les 3 - Wie of wat?",
-          "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
           "lessonKey": "C",
           "presentationId": "project-zinsbouwers",
-          "presentationMarkerId": "marker-les-3-wie-of-wat"
+          "presentationMarkerId": "marker-les-2-de-werkwoordsgroep"
         }
       ],
       "items": []
@@ -419,12 +291,45 @@
           "project": "Zinsbouwers",
           "lesson": "Les 4 - Voor wie of aan wie?",
           "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
-          "lessonKey": "B",
+          "lessonKey": "C",
           "presentationId": "project-zinsbouwers",
           "presentationMarkerId": "marker-les-4-voor-wie-of-aan-wie"
         }
       ],
       "items": []
+    },
+    {
+      "classId": "1",
+      "week": "22",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren"
+        },
+        {
+          "project": "Zinsbouwers",
+          "lesson": "Les 1 - De basis van een zin",
+          "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-zinsbouwers",
+          "presentationMarkerId": "marker-les-1-de-basis-van-een-zin"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
     },
     {
       "classId": "1",
@@ -687,6 +592,48 @@
     },
     {
       "classId": "1",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
+    },
+    {
+      "classId": "1",
+      "week": "5",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Verweggers",
+          "lesson": "Les 1 - Migratie en Cultuur",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-1-migratie-en-cultuur"
+        },
+        {
+          "project": "Verweggers",
+          "lesson": "Les 2 - Migratiegeschiedenis van je familie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-verweggers",
+          "presentationMarkerId": "marker-les-2-migratiegeschiedenis-van-je-familie"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat de feedbackopdracht erin zit, plus voor project Escaperoom Yde de creatieve schrijfopdracht en voor Verweggers het verhaal over je familie met alle aantekeningen erbij."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 1."
+    },
+    {
+      "classId": "1",
       "week": "52",
       "lessons": [],
       "items": [
@@ -771,73 +718,6 @@
         "Geen reguliere lessen: CGU-week 2 - Moralicious."
       ],
       "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
-    },
-    {
-      "classId": "3",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-v-rede",
-          "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
-          "homework": "Netschrift: maak de ladder van betekenis bij jouw onderwerp: scene, patroon, waarde, voorlopige stelling en oproep. Schrijf daarna een brugalinea van 5-7 zinnen van persoonlijk voorbeeld naar maatschappelijk probleem. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-v-rede",
-          "presentationMarkerId": "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
-    },
-    {
-      "classId": "3",
-      "week": "44",
-      "lessons": [],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
-    },
-    {
-      "classId": "3",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Faalfestival",
-          "lesson": "Les 6: Fragment / Faalervaring hertaling",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-faalfestival",
-          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
     },
     {
       "classId": "3",
@@ -1043,6 +923,31 @@
         }
       ],
       "items": []
+    },
+    {
+      "classId": "3",
+      "week": "22",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "V-rede",
+          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
     },
     {
       "classId": "3",
@@ -1317,6 +1222,15 @@
     },
     {
       "classId": "3",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
+    },
+    {
+      "classId": "3",
       "week": "49",
       "lessons": [
         {
@@ -1336,6 +1250,31 @@
         }
       ],
       "items": []
+    },
+    {
+      "classId": "3",
+      "week": "5",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Faalfestival",
+          "lesson": "Les 6: Fragment / Faalervaring hertaling",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-faalfestival",
+          "presentationMarkerId": "marker-les-6-fragment-faalervaring-hertaling"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 3."
     },
     {
       "classId": "3",
@@ -1452,99 +1391,6 @@
         "Geen reguliere lessen: CGU-week 2."
       ],
       "note": "Geen reguliere lessen deze week: CGU-week 2."
-    },
-    {
-      "classId": "4",
-      "week": "22",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt.",
-        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen.",
-        "Laptop mee: toetsmodus voor Invloed.",
-        "Toetsblok 2 van 2: leerlingen schrijven de tekst af, scherpen stijl en structuur aan en doen een laatste kwaliteitscheck.",
-        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
-    },
-    {
-      "classId": "4",
-      "week": "44",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "renaissance-item"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
-    },
-    {
-      "classId": "4",
-      "week": "5",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "netschrift-feedback-en-forward-opdracht"
-        }
-      ],
-      "items": [
-        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt.",
-        "Feedback-en-forwardpunten"
-      ],
-      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
     },
     {
       "classId": "4",
@@ -1775,6 +1621,43 @@
     },
     {
       "classId": "4",
+      "week": "22",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt.",
+        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen.",
+        "Laptop mee: toetsmodus voor Invloed.",
+        "Toetsblok 2 van 2: leerlingen schrijven de tekst af, scherpen stijl en structuur aan en doen een laatste kwaliteitscheck.",
+        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
+    },
+    {
+      "classId": "4",
       "week": "23",
       "lessons": [
         {
@@ -1876,6 +1759,36 @@
     },
     {
       "classId": "4",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 1: Persoonlijkheid",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "persoonlijkheid-les-1-persoonlijkheid-les-1"
+        },
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 2: Big Five",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "persoonlijkheid-les-2-big-five-les-2"
+        }
+      ],
+      "items": [
+        "Overzichtspresentatie"
+      ]
+    },
+    {
+      "classId": "4",
       "week": "4",
       "lessons": [],
       "items": [
@@ -1967,6 +1880,37 @@
         }
       ],
       "items": []
+    },
+    {
+      "classId": "4",
+      "week": "44",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Renaissance",
+          "lesson": "",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "renaissance-item"
+        },
+        {
+          "project": "Renaissance",
+          "lesson": "",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "renaissance-item"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt."
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
     },
     {
       "classId": "4",
@@ -2112,6 +2056,31 @@
     },
     {
       "classId": "4",
+      "week": "5",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Netschrift",
+          "lesson": "Feedback-en-forward-opdracht",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "netschrift-feedback-en-forward-opdracht"
+        }
+      ],
+      "items": [
+        "INLEVERMOMENT_NETSCHRIFT: Netschrift inleveren - zorg dat aantekeningen, opdrachten en feedback zichtbaar zijn bijgewerkt.",
+        "Feedback-en-forwardpunten"
+      ],
+      "note": "Netschrift-inlevermoment voor alle klassen in jaarlaag 4."
+    },
+    {
+      "classId": "4",
       "week": "50",
       "lessons": [
         {
@@ -2173,36 +2142,6 @@
       "items": [
         "Schrijven tekst in toetsmodus",
         "ONDER DE PARAMARIBOOM UIT"
-      ]
-    },
-    {
-      "classId": "4",
-      "week": "37",
-      "lessons": [
-        {
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "A",
-          "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "persoonlijkheid-les-1-persoonlijkheid-les-1"
-        },
-        {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 2: Big Five",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "persoonlijkheid-les-2-big-five-les-2"
-        }
-      ],
-      "items": [
-        "Overzichtspresentatie"
       ]
     },
     {
@@ -2334,6 +2273,1299 @@
       "lessons": [],
       "items": [
         "Schoolagenda: 25-02 AL Open Lesmiddag 13:30-16:00 uur; CGUweek2."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "11",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 11-03 G1 Rep AK."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 18-03 G1 Rep LA."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 25-03 G1 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 01-04 G1 Rep FA."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 08-04 G1 Rep EN."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "17",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 22-04 G1 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "20",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 13-05 G1 Rep GES."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "22",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 27-05 G1 Rep AK."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "27",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 29-06 G1 Rep LA; 30-06 G1 Rep WIS; 01-07 G1 Rep FA; 02-07 G1 Rep EN"
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 14-01 G1 Rep FA."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "4",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 21-01 G1 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 15-10 G1 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "45",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 05-11 G1 Rep AK."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "46",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-11 G1 Rep FA."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "48",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 26-11 G1 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "49",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 03-12 G1 Rep EN."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 10-12 G1 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 17-12 G1 Toetsdag: Rep LA."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "6",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 04-02 G1 Rep GES."
+      ]
+    },
+    {
+      "classId": "G1",
+      "week": "7",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 11-02 G1 Rep EN."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "10",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 06-03 G2 Rep Wis."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "11",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 13-03 G2 Rep NA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 18-03 G2 Rep LA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 27-03 G2 Rep GES."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 02-04 G2 Rep AK."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 10-04 G2 Rep DUI."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "16",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 17-04 G2 Rep GR."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "17",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 22-04 G2 Rep FA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "20",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-05 G2 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "21",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 22-05 G2 Rep EN."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "22",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 29-05 G2 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "24",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-06 G2 Rep GO."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "25",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 19-06 G2 Rep AK."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "27",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 29-06 G2 Rep FA/WIS; 30-06 G2 Rep GR; 01-07 G2 Rep NA/DUI; 02-07 G2 Rep EN ..."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 16-01 G2 Rep AK."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "4",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 23-01 G2 Rep NA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "40",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 03-10 G2 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "41",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 10-10 G2 Rep GES."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 17-10 G2 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 31-10 G2 Rep AK."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "45",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 07-11 G2 Rep EN."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "46",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 14-11 G2 Rep GR."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "47",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 21-11 G2 Rep DU."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "48",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 28-11 G2 Rep FA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "49",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 05-12 G2 Rep NA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "5",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 30-01 G2 Rep FA."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-12 G2 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 17-12 G2 Toetsdag: Rep GES/LA; 18-12 G2 Toetsdag: Rep WIS"
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "6",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 06-02 G2 Rep BIO."
+      ]
+    },
+    {
+      "classId": "G2",
+      "week": "7",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 13-02 G2 Rep EN."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "10",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 05-03 G3 Rep SK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "11",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-03 G3 Rep GES.",
+        "Schoolagenda: 10-03 Bezoek Hoosh."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 19-03 G3 Rep EN."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 26-03 G3 Rep GR."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 02-04 G3 Rep LA."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 09-04 G3 Rep FA."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "16",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 16-04 G3 Rep DU."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "19",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 07-05 G3 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "21",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 21-05 G3 Rep SK.",
+        "Schoolagenda: 18-05 G3 excursie Vught."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "22",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 28-05 G3 Rep AK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "23",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 04-06 G3 Rep GS.",
+        "Schoolagenda: 01-06 G3 bezoek leerlingen uit Munster.",
+        "Schoolagenda: 02-06 G3 bezoek leerlingen uit Munster.",
+        "Schoolagenda: 03-06 G3 bezoek leerlingen uit Munster."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "26",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 25-06 G3 Rep SK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "27",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 29-06 G3 Rep LA; 30-06 G3 Rep WIS/EN; 01-07 G3 Rep NA/FA; 02-07 G3 Rep GR ..."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 15-01 G3 Rep AK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "40",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 02-10 G3 Rep GES."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "41",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 09-10 G3 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 16-10 G3 Rep NA."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 30-10 G3 Rep SK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "45",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 06-11 G3 Rep EN."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "46",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 13-11 G3 Rep AK."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "47",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 20-11 G3 Rep FA."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "48",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 27-11 G3 REP GR.",
+        "Schoolagenda: 24-11 G3 week van de vakkenvoorlichting / Ouderavond Profielkeuze.",
+        "Schoolagenda: 25-11 G3 week van de vakkenvoorlichting.",
+        "Schoolagenda: 26-11 G3 week van de vakkenvoorlichting."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "49",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 04-12 G3 Rep DUI."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "5",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 26-01 G3 Rep GO; 29-01 G3 Rep FA"
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 11-12 G3 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 17-12 G3 Toetsdag: Rep GES/NA; 18-12 G3 Toetsdag: Rep LA/SK"
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "6",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 05-02 G3 Rep EN."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "7",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 12-02 G3 Rep NA."
+      ]
+    },
+    {
+      "classId": "G3",
+      "week": "9",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 26-02 G3 Rep WIS."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "10",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-03 G4 inh rep NA; 05-03 G4 inh SE ANW; 06-03 G4 Rep LA"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "11",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 13-03 G4 Rep SK."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 17-03 G4 Rep WIABC."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 23-03 G4 inh rep LA; 26-03 G4 inh rep SK; 27-03 G4 Rep EC"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 30-03 G4 inh rep WI; 31-03 G4 Rep GR; 02-04 G4 SE ANW"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 09-04 G4 inh rep EC; 10-04 G4 Rep bi"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "16",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 17-04 g4 rep ak."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "17",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 20-04 G4 inh rep GR; 21-04 G4 Rep EN; 22-04 G4 inh rep SE ANW"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "19",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 07-05 G4 inh rep EN; 08-05 G4 Rep WIABC"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "2",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 07-01 G4 inh rep EC; 08-01 G4 inh rep SP; 08-01 G4 inh rep BE"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "20",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 11-05 G4 inh rep AK; 12-05 G4 Rep BE; 13-05 G4 inh Rep BIO"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "21",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 18-05 G4 inh rep WI; 20-05 G4 inh rep BE; 22-05 G4 Rep SK"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "22",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 29-05 G4 Rep NA."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "23",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 01-06 G4 inh rep SK; 05-06 G4 Rep GS",
+        "Schoolagenda: 01-06 G4 bezoek leerlingen uit Munster.",
+        "Schoolagenda: 02-06 G4 bezoek leerlingen uit Munster.",
+        "Schoolagenda: 03-06 G4 bezoek leerlingen uit Munster."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "24",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 08-06 G4 inh rep NA; 09-06 G4 Rep NE; 11-06 G4 SE ANW"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "25",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 15-06 G4 inh rep GS; 16-06 G4 Rep AK; 19-06 G4 Rep FI"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "26",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 22-06 G4 inh rep NE; 23-06 G4 inh rep AK; 24-06 G4 inh rep FI; 25-06 toetsweek: rep latl / rep grtl / rep wic / inh SE ANW ..."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "27",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 29-06 Toetsweek: rep ec / rep sk; 30-06 Toetsweek: rep entl; 01-07 Toetsweek: rep beco / rep dutl / rep fatl; 02-07 Toetsweek: rep biol ..."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 13-01 G4 Rep EN; 16-01 G4 Rep BI"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "4",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 20-01 G4 Rep AK; 23-01 G4 Rep WIABC"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "41",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 10-10 G4 Rep WIABC."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 14-10 G4 Rep EC; 16-10 G4 SE ANW; 17-10 G4 Rep EN",
+        "Schoolagenda: 15-10 G4 Bezoek voorstelling Confrontaties in stadsschouwburh."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 27-10 G4 inh rep WI; 28-10 G4 Rep GS; 29-10 G4 inh rep EC; 30-10 G4 inh rep EN ...",
+        "Schoolagenda: 28-10 G4 Uitwisseling Munster op bezoek bij CGU.",
+        "Schoolagenda: 29-10 G4 Uitwisseling Munster op bezoek bij CGU.",
+        "Schoolagenda: 30-10 G4 Uitwisseling Munster op bezoek bij CGU."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "45",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 03-11 G4 inh SE ANW; 04-11 G4 Rep NA; 07-11 G4 Rep SK"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "46",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 10-11 G4 inh rep GS; 11-11 G4 Rep LA; 13-11 G4 inh rep FI; 14-11 G4 Rep AK"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "47",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 17-11 G4 inh rep NA; 20-11 G4 inh rep SK; 21-11 G4 Rep BI"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "48",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 24-11 G4 inh rep LA; 25-11 G4 Rep GR; 27-11 G4 inh rep AK; 28-11 G4 Rep WIABC",
+        "Schoolagenda: 28-11 G4 Bezoek studiebeurs Jaarbeurs."
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "49",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-12 G4 Rep NA; 04-12 G4 SE ANW; 04-12 G4 inh rep BI"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "5",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 26-01 G4 inh rep EN; 27-01 G4 Rep SK; 29-01 G4 inh rep BI; 29-01 G4 rep fi"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 08-12 G4 inh rep GR; 09-12 G4 Rep EC; 11-12 G4 inh rep WI; 12-12 G4 Rep BE"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 15-12 G4 inh rep NA; 16-12 G4 Rep GS; 17-12 G4 Rep SP (1e uur) en MDT workshop; 18-12 G4 inh SE ANW en MDT workshop"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "6",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-02 G4 inh rep AK; 05-02 G4 SE ANW; 05-02 G4 inh rep WI"
+      ]
+    },
+    {
+      "classId": "G4",
+      "week": "7",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 09-02 G4 inh rep SK; 10-02 G4 rep na; 12-02 G4 inh rep FI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "10",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-03 G5 Rep wiB; 02-03 G5 inh rep wiA; 04-03 G5 inh SE AC; 05-03 G5 inh SE MAAT"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "11",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 09-03 G5 Rep LA; 11-03 G5 Rep FI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 16-03 G5 Rep NA; 16-03 G5 inh rep WiB; 18-03 G5 Rep GR"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 23-03 G5 inh rep LA; 25-03 G5 Rep EC; 26-03 G5 inh rep FI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 30-03 G5 Rep BI; 30-03 G5 inh rep NA; 01-04 G5 Rep SK; 02-04 G5 inh rep GR"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 08-04 G5 SE GS; 08-04 G5 SE WiD (tijdens de les); 09-04 G5 inh rep EC"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "17",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 20-04 G5 inh rep BI; 22-04 G5 inh rep SK"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "19",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 07-05 G5 inh SE GS."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "2",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 08-01 G5 inh SE wiD en inh rep BE."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "20",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 11-05 G5 Rep WIB en WIA; 13-05 G5 SE MAAT"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "21",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 18-05 G5 inh SE WiD."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "22",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 27-05 G5 Rep EC; 28-05 G5 inh rep WiB en WiA"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "23",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 01-06 G5 inh SE MAAT."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "24",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 08-06 G5 inh rep EC; 10-06 G5 Rep NE"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "26",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 22-06 G5 inh rep NE; 25-06 Toetsweek: se econ / se nat; 26-06 Toetsweek: se latl / se grtl"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "27",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 29-06 Toetsweek: rep fatl / rep sptl; 30-06 Toetsweek: rep dutl / se wisabc; 01-07 Toetsweek: se ak / se beco / se fi / se wid; 02-07 Toetsweek: se gs / rep sk ..."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 12-01 G5 inh SE GS en WiD; 14-01 G5 SE FI; 15-01 G5 inh SE AK en BE"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "39",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 23-09 G5 inh rep EN; 23-09 G5 inh rep SK"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "4",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 19-01 G5 Inh SE BI (1e en 2e uur!); 21-01 G5 inh rep wiB (1e uur)"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "40",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 01-10 G5 Rep BI."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "41",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 06-10 G5 SE AK; 08-10 G5 KUBVexcursie/Rep BE",
+        "Schoolagenda: 09-10 G5 excursie ak.",
+        "Schoolagenda: 10-10 G5 excursie Lille (Fa)."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 13-10 G5 SE WID; 13-10 G5 inh rep bi; 15-10 G5 Rep GR/LA; 16-10 G5 inh SE ak (geannuleerd) ..."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 27-10 G5 SE WIB Rep WIA; 27-10 G5 inh rep beco; 28-10 G5 inh rep wiC; 29-10 G5 Rep FI ..."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "45",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 03-11 G5 Rep SK; 03-11 G5 inh rep GR/LA; 05-11 G5 Rep BI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "46",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 10-11 G5 Rep EN; 10-11 G5 inh rep wiA/SE wiB; 12-11 G5 Rep EC; 13-11 G5 inh rep FI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "47",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 17-11 G5 inh rep SK; 19-11 G5 Rep NA/PWS presentaties; 20-11 G5 inh rep BI"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "48",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 24-11 G5 SE AC; 24-11 G5 inh rep EN; 26-11 G5 SE MAAT; 27-11 G5 inh rep EC"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "49",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 01-12 G5 inh SE AC; 01-12 G5 rep FA; 03-12 G5 SE WIA; 04-12 G5 inh rep NA"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "5",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 26-01 Toetsweek: rep netl / se wisd. Inhalen SE fi; 27-01 Toetsweek: rep nat / rep sptl; 28-01 Toetsweek: rep beco / se grtl / se latl; 29-01 Toetsweek: rep fatl / rep schk ..."
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 08-12 G5 Rep BE; 08-12 G5 inh rep FA; 10-12 G5 SE WISD; 11-12 G5 inh SE MAAT"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 15-12 G5 inh SE wiA; 17-12 G5 Toetsdag SE BI SE GS; 18-12 G5 Toetsdag SE AK SEWIC Rep WIB"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "6",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-02 G5 rep Duits; 03-02 G5 inhalen repetities en SE's repetitieweek; 04-02 G5 Rep WIA; 05-02 G5 inh rep be"
+      ]
+    },
+    {
+      "classId": "G5",
+      "week": "7",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 09-02 G5 SE AC; 09-02 G5 inh rep EN; 11-02 G5 SE MAAT; 12-02 G5 inh rep NA"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "10",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 02-03 G6 mondelingen/KuBv expositie; 03-03 G6 inhalen SE/mondelingen; 04-03 G6 mondelingen; 05-03 G6 mondelingen ..."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "12",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 17-03 SE WisD; 18-03 Toetsweek: GRTL, LATL; 19-03 Toetsweek: NE"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "13",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 23-03 Toetsweek: WisA, WisB, WisC; 24-03 Toetsweek: EC, FI; 25-03 Toetsweek: GS, SK; 26-03 Toetsweek: AK, NAT / HPGeindpresentaties ..."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "14",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 30-03 G6 SE inhalen; 02-04 G6 SE herkansing opgave 09:00 uur"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "15",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 08-04 G6 SE herkansen."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "2",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 06-01 G6 inhalen SE; 08-01 G6 Inhalen SE"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "3",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 13-01 G6 Inhaal SE's; 15-01 G6 Inhaal SE's",
+        "Schoolagenda: 14-01 G6.grtl bezoek Toneelvoorstelling Odyssee (8e+9e uur)."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "37",
+      "lessons": [],
+      "items": [
+        "Geen les volgens schoolagenda: 12-09."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "40",
+      "lessons": [],
+      "items": [
+        "Schoolagenda: 29-09 G6 excursie ak."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "42",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 13-10 G6 SE sk/SE gs; 14-10 G6 SE ak/SE wiD; 15-10 G6 SE Du/ SE bio; 16-10 G6 SE fi/ SE na ..."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "44",
+      "lessons": [],
+      "items": [
+        "Toetsdruk: 28-10 G6 inhalen SE.",
+        "Schoolagenda: 29-10 G6 KuBV excursie centraal museum (4e en 5e uur)."
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "50",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 10-12 Toetsweek: G6 Entl en EC; 11-12 Toetsweek: G6 BI / HPGcafé; 12-12 Toetsweek: G6 FI, BE en SK"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "51",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 15-12 Toetsweek: G6 AK, FATL, SPTL en WID; 16-12 Toetsweek: G6 NETL; 17-12 Toetsweek: G6 GRTL, LATL; 18-12 Toetsweek: G6 WIA, B en C / kerstdiner"
+      ]
+    },
+    {
+      "classId": "G6",
+      "week": "9",
+      "lessons": [],
+      "items": [
+        "Hoge toetsdruk deze week; plan geen afrondende projecten. 24-02 Toetsweek: DUTL, FATL +LGO; 25-02 Toetsweek: SPTL, WIB +LGO; 26-02 Toetsweek: PSE NA +LGO; 27-02 Toetsweek: ENTL +LGO",
+        "Schoolagenda: 27-02 G6FATL G6FATL bezoek schouwburg ('s avonds)."
       ]
     }
   ],
@@ -17657,5 +18889,5 @@
       }
     }
   },
-  "sourceRevision": "2026-05-28T07:32:46+02:00-studio"
+  "sourceRevision": "2026-05-28T07:36:50+02:00-studio"
 }
