@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-29T10:53:44+02:00",
+  "updatedAt": "2026-05-29T11:04:20+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -15524,7 +15524,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-05-29T10:53:44+02:00",
+  "sourceRevision": "2026-05-29T11:04:20+02:00",
   "holidays": [
     {
       "title": "Herfstvakantie midden 2024-2025",
@@ -35761,14 +35761,14 @@
         ]
       },
       "markers": {
-        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 1,
-        "marker-invloed-1-framing-herkennen-en-sturen": 6,
-        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 11,
-        "marker-invloed-3-populisme-media-en-volkswil": 15,
-        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 19,
-        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 28,
-        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 32,
-        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 40
+        "marker-invloed-1-framing-herkennen-en-sturen": 1,
+        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 6,
+        "marker-invloed-3-populisme-media-en-volkswil": 10,
+        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 14,
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 23,
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 27,
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 35,
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 40
       },
       "slides": [
         {
@@ -35776,67 +35776,6 @@
           "title": "Invloed",
           "subtitle": "Schrijfvaardigheid",
           "showProjectLogo": true
-        },
-        {
-          "type": "bullets",
-          "title": "Invloed 8: Toetsmodus blok 2",
-          "subtitle": "Invloed",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je de toespraak af en lever je hem in.",
-            "Je voegt slot, stijlversterking en laatste controle toe.",
-            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat moet er nu nog gebeuren?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
-            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
-            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
-            "Controleer of je binnen 400-500 woorden blijft."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Revisietrucs",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
-            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
-            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
-            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
-            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Laatste kwaliteitscheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
-            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
-            "Klinkt het als een toespraak voor de Tweede Kamer?",
-            "Is het over the top, maar nog steeds netjes geschreven?",
-            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Inlevercheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Naam en schrijfvoornemen staan bovenaan.",
-            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
-            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
-            "Bestand is opgeslagen en ingeleverd volgens afspraak."
-          ]
         },
         {
           "type": "bullets",
@@ -36281,6 +36220,67 @@
             "Opening en kernclaim staan stevig.",
             "Minstens 2 kernalinea's zijn uitgewerkt met bronmateriaal en framing.",
             "Je tekst heeft al een duidelijke politieke spreektoon."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 8: Toetsmodus blok 2",
+          "subtitle": "Invloed",
+          "showProjectLogo": false,
+          "items": [
+            "Vandaag maak je de toespraak af en lever je hem in.",
+            "Je voegt slot, stijlversterking en laatste controle toe.",
+            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet er nu nog gebeuren?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
+            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
+            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
+            "Controleer of je binnen 400-500 woorden blijft."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Revisietrucs",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
+            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
+            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
+            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
+            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste kwaliteitscheck",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
+            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
+            "Klinkt het als een toespraak voor de Tweede Kamer?",
+            "Is het over the top, maar nog steeds netjes geschreven?",
+            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inlevercheck",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Naam en schrijfvoornemen staan bovenaan.",
+            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
+            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
+            "Bestand is opgeslagen en ingeleverd volgens afspraak."
           ]
         }
       ]
