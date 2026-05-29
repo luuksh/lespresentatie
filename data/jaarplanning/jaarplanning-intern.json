@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T07:56:33+02:00",
+  "updatedAt": "2026-05-29T10:53:39+02:00",
   "entries": [
     {
       "classId": "1",
@@ -8534,11 +8534,11 @@
           "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
-          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee"
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
       "items": [
-        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen."
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
       ]
     },
     {
@@ -8551,12 +8551,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -8569,11 +8569,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.1",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.1",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -9134,11 +9168,11 @@
           "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
-          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee"
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
       "items": [
-        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen."
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
       ]
     },
     {
@@ -9151,12 +9185,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -9169,11 +9203,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.2",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.2",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -9734,11 +9802,11 @@
           "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
-          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee"
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
       "items": [
-        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen."
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
       ]
     },
     {
@@ -9751,12 +9819,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -9769,11 +9837,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.3",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.3",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -10330,13 +10432,16 @@
       "lessons": [
         {
           "lessonKey": "A",
-          "project": "Heel veel lezen",
-          "lesson": "Heel veel lezen",
-          "presentationId": "project-heel-veel-lezen",
-          "homework": "leesboek en schoolpasje mee"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
-      "items": []
+      "items": [
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
+      ]
     },
     {
       "classId": "4.4",
@@ -10348,12 +10453,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -10366,11 +10471,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.4",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.4",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -10952,17 +11091,15 @@
       "lessons": [
         {
           "lessonKey": "A",
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren",
-          "homework": "netschrift en pen mee"
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
       "items": [
-        "Laptop mee: toetsmodus voor Invloed.",
-        "Toetsblok 2 van 2: leerlingen schrijven de tekst af, scherpen stijl en structuur aan en doen een laatste kwaliteitscheck.",
-        "Docent: laat leerlingen hun tekst inleveren voor beoordeling."
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
       ]
     },
     {
@@ -10975,12 +11112,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -10993,11 +11130,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.5",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.5",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -11583,11 +11754,11 @@
           "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
-          "homework": "Vorm je groep (max. 3) of kies solo, bepaal product, doelgroep en mogelijke expert; noteer minimaal drie ideeen en twee talenten die je inzet. netschrift en pen mee"
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee"
         }
       ],
       "items": [
-        "Docent: open [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) voor de projectintro en eisen."
+        "Taalmakers: projectvoorstel komt in het netschrift. Expert moet volwassen en deskundig zijn, in week 1 contact hebben, en later een beoordeling in het netschrift schrijven."
       ]
     },
     {
@@ -11600,12 +11771,12 @@
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
-          "homework": "Werk je projectvoorstel af en lever het in: wie, wat, voor wie, waarom, talenten, expert en globale planning tot de afsluiting. netschrift en pen mee"
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee"
         }
       ],
       "items": [
         "Schrijfschrift af",
-        "Docent: verwijs weer naar [Taalmakers-opdracht](lesdocs/jaarlaag4/invloed/taalmakers.docx) bij het projectvoorstel."
+        "Projectvoorstel staat in het netschrift. Check: expert is volwassen, deskundig op het onderwerp en in de eerste week benaderd."
       ]
     },
     {
@@ -11618,11 +11789,45 @@
           "lesson": "Taalmakers 3: Werkles en feedbackronde",
           "presentationId": "project-taalmakers",
           "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
-          "homework": "netschrift en pen mee"
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee"
         }
       ],
       "items": [
         "Leesvaardigheid afsluiten literatuur"
+      ]
+    },
+    {
+      "classId": "4.6",
+      "week": "25",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee"
+        }
+      ],
+      "items": [
+        "Taalmakers: laatste werkles voor tentoonstelling en reflectie."
+      ]
+    },
+    {
+      "classId": "4.6",
+      "week": "26",
+      "lessons": [
+        {
+          "lessonKey": "A",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan."
+        }
+      ],
+      "items": [
+        "Taalmakers: tentoonstelling van producten, feedback in gastenboek, expertbeoordeling en reflectie in netschrift."
       ]
     },
     {
@@ -13884,6 +14089,13 @@
               "Welke zin, aanwijzing of overgang moet je nog beter instuderen?"
             ]
           }
+        ],
+        "marker-les-6b-presentatie-oefenen-en-generale-repetitie": [
+          {
+            "type": "title",
+            "title": "Les 6b - Presentatie oefenen en generale repetitie",
+            "subtitle": "Taaltopia"
+          }
         ]
       },
       "slides": [
@@ -13892,6 +14104,74 @@
           "title": "Taaltopia",
           "subtitle": "Taaltopia",
           "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Les 6 - Creatief extra en presenteren",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag maak je vak 6",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Vak 6 is jullie creatieve extra en presentatiehoek.",
+            "Hier laat je iets zien dat de taalwereld nog sterker maakt.",
+            "Daarna maak je de poster af en bereid je een korte toelichting voor."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Ideeën voor vak 6",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Een symbool, vlag of zegel van het volk",
+            "Een mini-kaart van het gebied waar de taal gesproken wordt",
+            "Een ranglijst van beleefde en onbeleefde woorden",
+            "Een spreekspreuk, motto, liedregel of ritueel zinnetje",
+            "Een korte legenda: wanneer gebruik je deze taal en wanneer juist niet?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste postercheck: 6 vakken",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "1. Naam, wereld en doelgroep",
+            "2. Klanken en schrift",
+            "3. Woorden en betekenissen",
+            "4. Grammaticaregels",
+            "5. Voorbeeldgesprek",
+            "6. Creatief extra en presentatiehoek"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mini-presentatie voorbereiden",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Elke groep vertelt straks in ongeveer 1 minuut wat de taal bijzonder maakt.",
+            "Laat minstens 1 woord hardop horen, 1 regel zien en 1 creatief detail uitleggen.",
+            "Verdeel het praatje over meerdere groepsleden.",
+            "Je hoeft geen hele spreekbeurt te houden: kort, duidelijk en trots is genoeg."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tot slot",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Jullie poster is nu opgebouwd uit 6 duidelijke vakken.",
+            "Elke les heeft dus zichtbaar iets opgeleverd.",
+            "Dat maakt de taal overzichtelijker, rijker en makkelijker te presenteren."
+          ]
         },
         {
           "type": "title",
@@ -14098,73 +14378,6 @@
         },
         {
           "type": "title",
-          "title": "Les 4 - Grammaticaregels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag maak je vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vak 4 laat zien hoe zinnen in jullie taal werken.",
-            "Kies 2 tot 4 duidelijke regels.",
-            "Houd het simpel: liever 3 sterke regels dan 8 vage regels."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Handige soorten regels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Woordvolgorde: zeg je ik ga huis of huis ga ik?",
-            "Werkwoorden: krijgen die een extra uitgang?",
-            "Vragen: komt er een vraagwoord vooraan of juist achteraan?",
-            "Meervoud: komt er -en, -ar, -um of iets anders achter?",
-            "Ontkenning: hoe zeg je niet of nooit?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Rijke voorbeeldregels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "In Vareen staat het werkwoord vaak vooraan: Gaat navor thalin.",
-            "Een waarschuwing krijgt het voorvoegsel kha-: khaarek = verboden route.",
-            "Meervoud eindigt op -im: moru = vriend, moruim = vrienden.",
-            "Vragen eindigen op -sa: Navor sa? = Is er een gids?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zo noteer je vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Schrijf elke regel kort op.",
-            "Zet er direct een voorbeeldzin onder.",
-            "Gebruik woorden uit vak 3, zodat de poster echt samenhang krijgt.",
-            "Maak het visueel: nummer de regels of zet ze in kaders."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Checklist vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "2 tot 4 duidelijke regels",
-            "Bij elke regel minstens 1 voorbeeld",
-            "Regels passen bij de sfeer en klanken van de taal",
-            "Een buitenstaander kan snappen hoe je basiszinnen maakt"
-          ]
-        },
-        {
-          "type": "title",
           "title": "Les 5 - Voorbeeldgesprek",
           "subtitle": "",
           "showProjectLogo": false,
@@ -14232,134 +14445,19 @@
         },
         {
           "type": "title",
-          "title": "Les 6 - Creatief extra en presenteren",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag maak je vak 6",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vak 6 is jullie creatieve extra en presentatiehoek.",
-            "Hier laat je iets zien dat de taalwereld nog sterker maakt.",
-            "Daarna maak je de poster af en bereid je een korte toelichting voor."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Ideeën voor vak 6",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een symbool, vlag of zegel van het volk",
-            "Een mini-kaart van het gebied waar de taal gesproken wordt",
-            "Een ranglijst van beleefde en onbeleefde woorden",
-            "Een spreekspreuk, motto, liedregel of ritueel zinnetje",
-            "Een korte legenda: wanneer gebruik je deze taal en wanneer juist niet?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Laatste postercheck: 6 vakken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1. Naam, wereld en doelgroep",
-            "2. Klanken en schrift",
-            "3. Woorden en betekenissen",
-            "4. Grammaticaregels",
-            "5. Voorbeeldgesprek",
-            "6. Creatief extra en presentatiehoek"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Mini-presentatie voorbereiden",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Elke groep vertelt straks in ongeveer 1 minuut wat de taal bijzonder maakt.",
-            "Laat minstens 1 woord hardop horen, 1 regel zien en 1 creatief detail uitleggen.",
-            "Verdeel het praatje over meerdere groepsleden.",
-            "Je hoeft geen hele spreekbeurt te houden: kort, duidelijk en trots is genoeg."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tot slot",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Jullie poster is nu opgebouwd uit 6 duidelijke vakken.",
-            "Elke les heeft dus zichtbaar iets opgeleverd.",
-            "Dat maakt de taal overzichtelijker, rijker en makkelijker te presenteren."
-          ]
-        },
-        {
-          "type": "title",
           "title": "Les 6b - Presentatie oefenen en generale repetitie",
-          "subtitle": "",
+          "subtitle": "Taaltopia",
           "showProjectLogo": false,
           "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "subtitle": "Volledige presentatie oefenen",
-          "showProjectLogo": false,
-          "items": [
-            "Jullie krijgen de les om de volledige presentatie te oefenen en in te studeren.",
-            "Dat mag ook buiten het lokaal, zolang je op tijd terug bent.",
-            "Gebruik de poster actief: wijs aan wat je uitlegt en oefen de overgangen."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Oefenafspraken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verdeel wie welk deel presenteert.",
-            "Oefen hardop, niet alleen fluisterend of lezend.",
-            "Iedereen moet ongeveer 1 minuut helder kunnen spreken over zijn of haar deel.",
-            "Let op verstaanbaarheid, tempo en waar je op de poster naar wijst."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "10 minuten voor het einde",
-          "subtitle": "Terug in het lokaal",
-          "showProjectLogo": false,
-          "items": [
-            "Iedereen komt terug naar het lokaal.",
-            "De docent wijst 2 willekeurige leerlingen uit 2 willekeurige groepjes aan.",
-            "Zij presenteren ieder ongeveer 1 minuut hun eigen deel.",
-            "Dit is een generale repetitie: kort, serieus en met directe feedback."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Feedback na de generale",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat was meteen duidelijk?",
-            "Waar moet nog meer tempo, rust of uitleg in?",
-            "Welke zin, aanwijzing of overgang moet je nog beter instuderen?"
-          ]
         }
       ],
       "markers": {
-        "marker-les-1-naam-wereld-en-doelgroep": 1,
-        "marker-les-2-klanken-en-schrift": 7,
-        "marker-les-3-woorden-en-betekenissen": 13,
-        "marker-les-4-grammaticaregels": 19,
+        "marker-les-6-creatief-extra-en-presenteren": 1,
+        "marker-les-1-naam-wereld-en-doelgroep": 7,
+        "marker-les-2-klanken-en-schrift": 13,
+        "marker-les-3-woorden-en-betekenissen": 19,
         "marker-les-5-voorbeeldgesprek": 25,
-        "marker-les-6-creatief-extra-en-presenteren": 31,
-        "marker-les-6b-presentatie-oefenen-generale-repetitie": 37
+        "marker-les-6b-presentatie-oefenen-en-generale-repetitie": 31
       }
     },
     "project-faalfestival": {
@@ -15819,6 +15917,13 @@
         },
         {
           "type": "title",
+          "title": "Les 6: Fragment / Faalervaring hertaling",
+          "subtitle": "Faalfestival",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
           "title": "Les 10 - Oefenen Faalbattle",
           "subtitle": "Faalfestival",
           "showProjectLogo": false,
@@ -15897,208 +16002,6 @@
           ]
         },
         {
-          "type": "title",
-          "title": "Les 11 - Faalbattle",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Doel van vandaag",
-          "subtitle": "Battle-dag",
-          "showProjectLogo": false,
-          "items": [
-            "Iedere groep overtuigt de klas dat hun hoofdpersonage uit de ballon moet.",
-            "De klas stemt welk personage eruit gaat.",
-            "Het groepje van dat personage is de winnaar van de Faalbattle."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Spelregels Faalbattle",
-          "subtitle": "Ballondebat",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik de kern van je poster als argumentatie.",
-            "Je hoeft niet letterlijk de postertekst voor te lezen.",
-            "Presenteer duidelijk, krachtig en met overtuiging.",
-            "Reageer scherp op andere groepen als dat past binnen de tijd."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Beoordelingsfocus",
-          "subtitle": "Overtuigen + entertainen",
-          "showProjectLogo": false,
-          "items": [
-            "Inhoud: sterke argumenten waarom dit personage de grootste mislukkeling is.",
-            "Performance: energie, timing, podiumpresence, humor.",
-            "Publiek: de klas moet betrokken blijven en mee willen stemmen.",
-            "Samenwerking: jullie treden op als team."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Praktisch verloop (45 min)",
-          "subtitle": "7 groepjes",
-          "showProjectLogo": false,
-          "items": [
-            "Korte opening en uitleg stemronde.",
-            "Groepen presenteren om de beurt.",
-            "Stemmen en uitslag: welk personage wordt uit de ballon gegooid?",
-            "Afsluiting: winnend groepje en korte reflectie."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Publiek heeft ook een taak",
-          "subtitle": "Actief luisteren",
-          "showProjectLogo": false,
-          "items": [
-            "Luister scherp naar argumenten en tegenargumenten.",
-            "Let op: wie overtuigt echt én maakt er een show van?",
-            "Stem op basis van inhoud én impact.",
-            "Speel eerlijk, maar kritisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Einde",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": [
-            "Welk personage is eruit gestemd?",
-            "Waarom werkte deze groep het sterkst?",
-            "Wat neem je mee voor je volgende presentatie?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Moralicious dinsdag 10 maart!",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Les 3: Initialen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zelf een middeleeuws initiaal ontwerpen",
-            "1/12/2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Leerdoelen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tijdsplanning",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat is een initiaal of miniatuur?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "weetjes",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom waren ze belangrijk?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Stijlkenmerken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Hoe werd het gemaakt?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wie maakte ze?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Symboliek",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht: eigen initiaal maken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Samenwerking: wie doet wat?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tentoonstelling & reflectie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
           "type": "bullets",
           "title": "Les 3: Initialen",
           "subtitle": "",
@@ -16290,138 +16193,6 @@
           "showProjectLogo": false,
           "items": [
             "Voldoet je personage aan het middeleeuwse ideaal? Leg uit"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 5: Hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zelf een stukje Middelnederlands hertalen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Leerdoelen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Je weet wat Middelnederlands is",
-            "Je herkent kenmerken en valkuilen",
-            "Je kunt een tekst hertalen naar modern Nederlands"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat is Middelnederlands?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Oudste vorm van het Nederlands (ca. 1200–1500)",
-            "Geen standaardtaal: regionale varianten",
-            "Gebruikt in verhalen, liederen, kronieken",
-            "Geschreven zoals men sprak"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Kenmerken van Middelnederlands",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "• Andere spelling: bv. 'scone' (schone), 'ontfaen' (ontvangen)",
-            "• Uitgangen: 'des conincs' = van de koning, 'haren herten' = haar hart",
-            "• Klankovereenkomsten met Duits of Engels: 'ich', 'dat', 'minne'",
-            "• Valse vrienden:",
-            "• 'schoon' = mooi (niet: netjes)",
-            "• 'vrouwe' = dame / adellijke vrouw (niet: gewoon vrouw)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom is het belangrijk?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Voorloper van onze taal",
-            "Inzicht in taalverandering",
-            "Inzicht in middeleeuwse denkwereld",
-            "Taalhistorisch én cultureel erfgoed"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbeeld",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Middelnederlands:",
-            "“Dat es ene vrouwe scone ende soet, die in haren herten goet.”",
-            "Modern Nederlands:",
-            "“Zij is een mooie, zachtaardige vrouw met een goed hart.”"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Hoe hertaal je?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1. Lees hardop (klankherkenning)",
-            "2. Zoek bekende woorden",
-            "3. Let op zinsvolgorde",
-            "4. Herschrijf pas na letterlijke vertaling",
-            "5. Behoud betekenis en toon"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Taaltrucs & hulptips",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Dubbele ontkenning: 'niet en…' bv. “ende minen sin niet en vertare”",
-            "Clisis: samentrekking → 'het sweert' = '’tsweert'",
-            "Vocaalverlenging: 'gaen', 'wair' i.p.v. 'gaan', 'waar'",
-            "Voorlezen helpt enorm!"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Oefening samen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Voorbeeld:",
-            "“Die ridder quam met ghereet en speere, al te paerde bi den dore.”",
-            "Vraag:",
-            "- Wat betekenen: 'ghereet', 'al te paerde', 'bi den dore'?",
-            "- Samen hertalen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht: zelf hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Fragment van 4 regels",
-            "Zoek betekenis op",
-            "Letterlijk vertalen → vloeiend herschrijven",
-            "Tijd: 35 minuten, individueel of in tweetallen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Reflectie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat vond je moeilijk?",
-            "Welke strategie werkte goed?",
-            "Wat viel mee?",
-            "Wat helpt bij hertalen?"
           ]
         },
         {
@@ -16874,287 +16645,6 @@
         },
         {
           "type": "title",
-          "title": "Les 6: Fragment / Faalervaring hertaling",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Les 2: De middeleeuwen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "We inventariseren op het bord..."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Vrouwen hadden niets te zeggen...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vikingvrouwen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Archeologen bepaalden eeuwenlang het geslacht van een Viking op basis van objecten (wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Er bestaan ruim 30 graven met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
-            "In Birka (graf Bj581) is een vrouw als volwaardige krijger begraven: paard, wapens, strategisch speelbord → elite-krijger.",
-            "Er zijn tientallen afbeeldingen van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
-            "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
-            "De iconische “Vikingvrouw met sleutels” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
-            "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
-            "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
-            "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
-            "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Er waren steeds heksenjachten...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "nkingen heksenvervolging"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "In Europa vonden in de late middeleeuwen en vroegmoderne tijd grootschalige heksenvervolgingen plaats.",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De vervolging trof vooral vrouwen, die gezien werden als zondebokken in tijden van angst, onzekerheid en maatschappelijke spanningen.",
-            "In Nederland werden ongeveer 250 mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
-            "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
-            "Het thema laat zien hoe snel een samenleving kan radicaliseren wanneer angst, bijgeloof en macht samenkomen.",
-            "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "De middeleeuwen waren vies en alles lag stil...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Er gebeurde juist van alles"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middeleeuwen waren géén stilstan d: wielploeg, spinnewiel, mechanische klok, stijgbeugel, windmolen-innovaties, drukpers (1450).",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Door klimaatverbetering (950–1250) bloeit landbouw → enorme bevolkingsgroei (Engeland: 1,5 → 3 miljoen).",
-            "Wereldhandel groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding & bankieren naar Europa",
-            "Architectuur wordt licht en ruim: gotiek (Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
-            "Hygiëne vóór 1300 eigenlijk best goed: dagelijks handen wassen, twee keer per maand baden.",
-            "Magna Carta (1215) → begin van rechtsbescherming (vooral voor elite, maar toch historisch belangrijk).",
-            "Universiteiten ontstaan vanaf 1088: Bologna, daarna heel Europa → onderwijs buiten kloosters.",
-            "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middeleeuwen in het kort",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
-            "Theocentrisme (maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
-            "Kruistochten",
-            "Ontstaan ambachten en steden rond rivieren"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Taalontwikkeling",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
-            "Wat weet je daarvan?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Taalboom",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Ontwikkeling Nederlands",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat valt je op als je naar de dialogen luistert? Wat hoor je allemaal terug?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hebban olla vogala"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opgeschreven ca. 1100 door een Vlaamse monnik in Engeland, als pennenproef (testje van de schrijfpen).",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is mengvorm: Oudnederlands / Oudengels.",
-            "Onze literatuur was vóór 1100 vooral mondeling: liederen, verhalen → pas later op schrift gezet.",
-            "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar weinig van bewaard.",
-            "In Europa bestonden al oudere volkstalige teksten: Hildebrandslied (Duits, 800), Beowulf (Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
-            "Het versje toont:",
-            "hoe schrijvers toen werkten met ganzenveer,",
-            "hoe taal evolueerde,",
-            "en dat liefde een tijdloos thema is.",
-            "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
-            "Conclusie: “Hebban olla vogala…” is klein, maar cultureel enorm belangrijk."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De ridderroman:",
-            "Voorhoofs",
-            "Hoofs",
-            "Satire"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De geestelijke roman",
-            "Mariamirakel",
-            "Mystiek",
-            "Exempelen",
-            "Heiligenlevens"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De wereldlijke literatuur",
-            "Abele spelen",
-            "Rederijkers"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat valt op in de verhalen?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Rijm",
-            "Getallensymboliek",
-            "Kleurensymboliek",
-            "Hemelse en aardse liefde",
-            "Christelijk geloof",
-            "Koning en onderdanen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middelnederlands hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Dubbele ontkenning: ende minen sin niet en vertare",
-            "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-            "Voorlezen helpt!",
-            "WNT"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Boeken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Het maken van een boek, wat een werk",
-            "Een revolutionaire uitvinding",
-            "Miniaturen en initialen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Parchment / perkament:",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gemaakt van dierenhuid (kalf, geit, schaap).",
-            "Dagenlang weken, ontharen, schrapen, opnieuw schrapen → arbeidsintensief en duur.",
-            "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
-            "Resultaat: extreem duurzaam; kan 1000+ jaar meegaan.",
-            "Schrijven / scriptorium:",
-            "Scribe gebruikt ganzenveer, aangescherpt en gespleten voor inkttrek.",
-            "Lijnen worden met een passer/liniaal in het perkament gedrukt.",
-            "Inkt van galnoten of lamp black (roet).",
-            "Fouten worden letterlijk weggekrast → perkament kan dat aan.",
-            "Illuminatie / miniatuur:",
-            "Eerst goud aanbrengen (met gesso of gom), dan kleuren.",
-            "Pigmenten uit mineralen & planten; lagen van licht → donker.",
-            "Wit en zwart voor details en diepte.",
-            "Miniaturen waren prestigeobjecten, soms duurder dan het boek zelf.",
-            "Binding:",
-            "Katernen met linnen draad op leren riemen genaaid.",
-            "Houten kaften, leren omslag, later soms fluweel, edelmetaal, reliëf.",
-            "Gespen om het boek vlak en droog te houden.",
-            "Resultaat: een boek als kunstvoorwerp en statusobject."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Memento Mori",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vraag God dat Hij mij wilt vergeven!",
-            "Reynaert"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Trouw",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hij mag doodvallen die mij adviseert/ dat ik de koning schade zal berokkenen.",
-            "Elegast"
-          ]
-        },
-        {
-          "type": "title",
           "title": "Hertalen",
           "subtitle": "",
           "showProjectLogo": false,
@@ -17180,168 +16670,6 @@
             "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
             "Voorlezen helpt!",
             "WNT"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 8: Poster afmaken & presentatie voorbereiden",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag werk je verder aan je poster en bereid je de presentatie en het ballondebat voor."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Planning van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Tijdsverdeling:",
-            "5 min: uitleg",
-            "35 min: posters afmaken",
-            "20 min: voorbereiding pleidooi & presentatie",
-            "10 min: feedbackronde met andere groep",
-            "10 min: opruimen en inleveren"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Poster aanvullen -complete versie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je je poster helemaal af. Dit zijn alle onderdelen die erop moeten staan:"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "1. Informatief blokje",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zet kort op je poster:",
-            "Genre van het verhaal",
-            "Herkomst (land, tijd, auteur indien bekend)",
-            "Hoofdrolspelers",
-            "Korte samenvatting (max. 5 zinnen)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "2. Initiaal ontwerpen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ontwerp een grote beginletter die past bij jouw personage.",
-            "Gebruik kleur en symbolen",
-            "De letter zegt iets over het karakter",
-            "Middeleeuwse stijl (zoals in kloosterhandschriften)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "3. Eigenschappen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat voor type is jouw personage?",
-            "Noem minstens 3 eigenschappen of kwaliteiten",
-            "Laat zien wanneer het misgaat: wat faalt er?",
-            "Wat leert het personage daarvan?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "4. Faalervaring",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Kies een fragment waarin:",
-            "het personage faalt,",
-            "of een levensles zichtbaar is,",
-            "of het karakter duidelijk blijkt.",
-            "Beschrijf het fragment in eigen woorden; leg uit wat er gebeurt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "5. Levensles uit het verhaal",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat kunnen we leren van dit verhaal?",
-            "Formuleer een duidelijke, relevante les",
-            "Koppel het aan het personage of de situatie",
-            "Bijv. 'Wie liegt, komt zichzelf tegen.' of 'Fouten maken is de weg naar wijsheid.'"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "6. Creatieve verwerking: heden",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verwerk een gebeurtenis uit het verhaal in een modern jasje:",
-            "Kies een moment (bijv. een val, een misstap, een verleiding...)",
-            "Hoe zou dat er nu uitzien?",
-            "Schrijf een kort fragment alsof het nú gebeurt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Checklist: alles op je poster?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Informatief blokje",
-            "Initiaal",
-            "Eigenschappen & faalervaringen",
-            "Fragment + hertaling + uitleg",
-            "Levensles",
-            "Creatieve verwerking in het heden",
-            "Alles compleet, middeleeuwse, creatief én verzorgd? Dan ben je klaar!"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding ballondebat – Ronde 1",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wie is de ultieme faalbaas?",
-            "Maak een pleidooi (1 minuut):",
-            "Hoe gaat jouw personage om met falen?",
-            "Wat leert hij/zij? Is de les nog relevant?",
-            "Welke eigenschappen helpen bij falen?",
-            "Is er een modern equivalent of rolmodel?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding ballondebat – Ronde 2",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hoe win je van je tegenstanders?",
-            "Verzamel info over andere personages:",
-            "Waarom zijn zij géén echte faalbazen?",
-            "Welke zwaktes hebben zij?",
-            "Hoe kun je ze overtuigend tegenspreken?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding posterpresentatie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat vertel je bij de poster?",
-            "1. Wie is je personage en wat zijn zijn/haar eigenschappen?",
-            "2. Wat is het belangrijkste faalmoment?",
-            "3. Hoe zie je het genre terug?",
-            "4. Wat is de levensles – en is die nog actueel?",
-            "5. Hoe hebben jullie het verhaal gemoderniseerd?"
           ]
         },
         {
@@ -17383,21 +16711,15 @@
         }
       ],
       "markers": {
-        "marker-les-10-ff-faalbattle-oefenen-faalbattle": 1,
-        "marker-les-11-ff-faalbattle": 8,
-        "marker-moralicious-dinsdag-10-maart": 15,
-        "marker-les-3-ff-boeken-en-initiaal": 16,
-        "marker-les-3-ff-leesles": 29,
-        "marker-les-4-informatieblok": 42,
-        "marker-les-4-ff-leesles": 46,
-        "marker-les-5-eigenschappen-levensles": 50,
-        "marker-les-1-ff-intro": 61,
-        "marker-les-2-ff-letterkunde-middeleeuwen": 78,
-        "marker-les-6-fragment-faalervaring-hertaling": 101,
-        "marker-les-2-ff-leesles": 102,
-        "marker-les-7-creatieve-verwerking": 125,
-        "marker-les-8-ff-poster-afmaken": 128,
-        "marker-les-9-ff-poster-afmaken-posterpresentaties": 141
+        "marker-les-6-fragment-faalervaring-hertaling": 1,
+        "marker-les-10-ff-faalbattle-oefenen-faalbattle": 2,
+        "marker-les-3-ff-boeken-en-initiaal": 9,
+        "marker-les-4-informatieblok": 22,
+        "marker-les-4-ff-leesles": 26,
+        "marker-les-1-ff-intro": 30,
+        "marker-les-2-ff-leesles": 47,
+        "marker-les-7-creatieve-verwerking": 70,
+        "marker-les-9-ff-poster-afmaken-posterpresentaties": 73
       }
     },
     "project-v-rede": {
@@ -18092,14 +17414,123 @@
               "Project afgerond"
             ]
           }
+        ],
+        "marker-les-3-v-rede-van-persoonlijk-verhaal-naar-maatschappelijk-probleem": [
+          {
+            "type": "title",
+            "title": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+            "subtitle": "V-rede"
+          }
+        ],
+        "marker-les-4-v-rede-raak-je-publiek-met-hoofd-en-hart": [
+          {
+            "type": "title",
+            "title": "Les 4 V-rede: Raak je publiek met hoofd en hart",
+            "subtitle": "V-rede"
+          }
+        ],
+        "marker-les-5-v-rede-bouwplan-voor-een-indrukwekkende-speech": [
+          {
+            "type": "title",
+            "title": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+            "subtitle": "V-rede"
+          }
         ]
       },
       "slides": [
         {
           "type": "title",
           "title": "V-rede",
-          "subtitle": "persoonlijke speech over wat moet veranderen",
+          "subtitle": "V-rede",
           "showProjectLogo": true
+        },
+        {
+          "type": "bullets",
+          "title": "Les 6 V-rede: eerste versie schrijven",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Vandaag schrijf je je eerste volledige V-rede",
+            "Het hoeft nog niet perfect, maar wel af",
+            "Je schrijft alsof je tekst straks uitgesproken wordt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Startvoorbeeld: spreekbare alinea",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Niet: sociale uitsluiting is een problematisch fenomeen met negatieve gevolgen",
+            "Wel: buitengesloten worden klinkt misschien klein, totdat jij degene bent die elke pauze doet alsof je een berichtje leest",
+            "Vraag: welke versie kun je beter hardop uitspreken?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: schrijven voor het oor",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Gebruik korte zinnen op belangrijke momenten",
+            "Herhaal een kernwoord bewust, niet toevallig",
+            "Wissel verhaal, uitleg en oproep af",
+            "Schrijf zinnen die je met adem en pauze kunt zeggen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: alinea-functies",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Alinea 1 opent en maakt nieuwsgierig",
+            "Alinea 2 vertelt het persoonlijke voorbeeld",
+            "Alinea 3 maakt het maatschappelijk breder",
+            "Alinea 4 geeft argumenten en eindigt met oproep/slot"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Demo: schrijfkeuzes",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Begin met een beeld in plaats van uitleg",
+            "Gebruik ik of wij wanneer betrokkenheid nodig is",
+            "Gebruik jij of u alleen als je het publiek direct wilt raken",
+            "Zet je sterkste zin niet verstopt midden in een lange alinea"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Schrijf je volledige eerste versie",
+            "Controleer: opening, persoonlijk verhaal, verbreding, argumenten, oproep, slot",
+            "Onderstreep je sterkste zin",
+            "Zet een ster bij de plek waar je nog twijfelt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voorlezen en bespreken",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "1 of 2 leerlingen lezen een alinea hardop",
+            "Klas luistert naar spreekbaarheid en impact",
+            "Samen kiezen we waar een pauze of herhaling sterker werkt"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "subtitle": "V-rede",
+          "showProjectLogo": false,
+          "items": []
         },
         {
           "type": "bullets",
@@ -18257,363 +17688,18 @@
           ]
         },
         {
-          "type": "bullets",
-          "title": "Les 3 V-rede: van persoonlijke scene naar stelling",
-          "subtitle": "Doel: je onderwerp wordt een scherp maatschappelijk punt",
+          "type": "title",
+          "title": "Les 4 V-rede: Raak je publiek met hoofd en hart",
+          "subtitle": "V-rede",
           "showProjectLogo": false,
-          "items": [
-            "Je gebruikt de scene uit les 2 als bewijs, niet als los verhaaltje",
-            "Je ontdekt welk patroon, welke waarde en welke verandering erbij horen",
-            "Aan het einde staat er een voorlopige stelling en brugalinea in je netschrift"
-          ]
+          "items": []
         },
         {
-          "type": "bullets",
-          "title": "Aansluiting op les 2",
-          "subtitle": "Van raken naar overtuigen",
+          "type": "title",
+          "title": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "subtitle": "V-rede",
           "showProjectLogo": false,
-          "items": [
-            "Les 2: je koos iets dat jou echt raakt en schreef een concrete scene",
-            "Vandaag: je laat zien waarom die scene meer betekent dan alleen jouw ervaring",
-            "Een indrukwekkende speech begint persoonlijk, maar eindigt niet bij jezelf"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: de ladder van betekenis",
-          "subtitle": "Vijf treden voor een sterke V-rede",
-          "showProjectLogo": false,
-          "items": [
-            "Scene: wat gebeurt er precies, waar, met wie, op welk moment?",
-            "Patroon: wat zie je hier vaker gebeuren?",
-            "Waarde: wat staat er op het spel, bijvoorbeeld vrijheid, waardigheid, rechtvaardigheid of veiligheid?",
-            "Stelling: wat moet het publiek anders gaan vinden?",
-            "Oproep: wat moet het publiek anders gaan doen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: geen spreekbeurt, maar betoog",
-          "subtitle": "Je hoeft niet alles uit te leggen",
-          "showProjectLogo": false,
-          "items": [
-            "Een spreekbeurt informeert: dit is mijn onderwerp",
-            "Een betoog stuurt: dit moet u anders zien",
-            "Een V-rede doet allebei: ze laat iets voelen en dwingt daarna tot een standpunt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Model: van zwak naar sterk",
-          "subtitle": "Maak het punt scherper",
-          "showProjectLogo": false,
-          "items": [
-            "Zwak: buitensluiten is niet leuk",
-            "Sterker: wie elke dag alleen staat, leert langzaam dat niemand hem verwacht",
-            "Stelling: een klas is pas veilig als omstanders zich verantwoordelijk voelen voor wie buiten de groep valt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Praktijk: bouw je kern",
-          "subtitle": "Werk eerst in trefwoorden, daarna in zinnen",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep in je scene het detail dat het meest blijft hangen",
-            "Schrijf daaronder: dit laat zien dat ...",
-            "Maak daarna drie mogelijke stellingen en kies de scherpste",
-            "Testvraag: kan iemand het oneens zijn met jouw stelling? Dan is hij bruikbaar"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift: product van vandaag",
-          "subtitle": "Dit moet aan het einde staan",
-          "showProjectLogo": false,
-          "items": [
-            "1. Mijn scene in een kernzin: ...",
-            "2. Het patroon dat ik hierin zie: ...",
-            "3. De waarde die op het spel staat: ...",
-            "4. Mijn voorlopige stelling: ...",
-            "5. Brugalinea van 5 tot 7 zinnen: van scene naar maatschappelijk probleem"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Korte deelronde",
-          "subtitle": "Luisteren als kritisch publiek",
-          "showProjectLogo": false,
-          "items": [
-            "Lees alleen je voorlopige stelling voor",
-            "Publiek reageert met: scherp, te algemeen of nog geen standpunt",
-            "Verbeter je stelling met een sterker werkwoord of concretere doelgroep"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 4 V-rede: overtuigen met hoofd, hart en geloofwaardigheid",
-          "subtitle": "Doel: je speech krijgt retorische kracht",
-          "showProjectLogo": false,
-          "items": [
-            "Je leert ethos, pathos en logos gebruiken zonder trucjes",
-            "Je maakt je stelling geloofwaardig, voelbaar en logisch",
-            "Aan het einde heb je drie sterke bouwstenen voor je speech in je netschrift"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Aansluiting op les 3",
-          "subtitle": "Van stelling naar overtuigingskracht",
-          "showProjectLogo": false,
-          "items": [
-            "Les 3 leverde je stelling en brugalinea op",
-            "Vandaag onderzoek je waarom het publiek jou zou geloven",
-            "Een indrukwekkende speech overtuigt niet met volume, maar met gekozen bewijs"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: Aristoteles in gewone taal",
-          "subtitle": "Ethos, pathos, logos",
-          "showProjectLogo": false,
-          "items": [
-            "Ethos: het publiek vertrouwt jouw stem, omdat je eerlijk, precies en betrokken bent",
-            "Pathos: het publiek voelt de urgentie door beeld, ritme en menselijke gevolgen",
-            "Logos: het publiek kan jouw redenering volgen en ziet waarom je conclusie klopt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: pathos is geen melodrama",
-          "subtitle": "Gevoel werkt pas door precisie",
-          "showProjectLogo": false,
-          "items": [
-            "Niet: dit is superzielig en verschrikkelijk",
-            "Wel: laat een concreet detail zien waardoor het publiek zelf iets voelt",
-            "Sterk pathos vertrouwt op het beeld, niet op uitroeptekens"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: logos is meer dan een feitje",
-          "subtitle": "Maak je redenering zichtbaar",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik oorzaak en gevolg: als wij dit normaal vinden, dan gebeurt er ...",
-            "Gebruik tegenstelling: we zeggen dat ..., maar in werkelijkheid ...",
-            "Gebruik voorbeeld en conclusie: deze scene laat zien dat ... dus ..."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Modelzinnen",
-          "subtitle": "Niet overschrijven, wel nadoen",
-          "showProjectLogo": false,
-          "items": [
-            "Ethos: ik spreek hierover niet omdat ik alles weet, maar omdat ik heb gezien wat stilte doet",
-            "Pathos: hij lachte mee, maar zijn schouders zakten elke keer iets verder",
-            "Logos: als niemand reageert, wordt wegkijken langzaam de regel van de groep"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Praktijk: schrijf drie overtuigingszinnen",
-          "subtitle": "Daarna combineren",
-          "showProjectLogo": false,
-          "items": [
-            "Schrijf een ethoszin: waarom mag jij hierover spreken?",
-            "Schrijf een pathoszin: welk beeld moet blijven hangen?",
-            "Schrijf een logoszin: welke redenering moet het publiek snappen?",
-            "Kies de beste twee en verbind ze tot een alinea van 6 tot 8 zinnen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift: product van vandaag",
-          "subtitle": "Dit gebruik je straks in je eerste versie",
-          "showProjectLogo": false,
-          "items": [
-            "1. Ethoszin",
-            "2. Pathoszin met concreet beeld",
-            "3. Logoszin met oorzaak-gevolg of tegenstelling",
-            "4. Een overtuigingsalinea waarin je persoonlijke scene en stelling samenkomen",
-            "5. Markeer met E, P en L waar ethos, pathos en logos zitten"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 5 V-rede: bouwplan voor een indrukwekkende speech",
-          "subtitle": "Doel: je speech krijgt een route van binnenkomst tot slotzin",
-          "showProjectLogo": false,
-          "items": [
-            "Je ordent je scene, stelling en overtuigingszinnen tot een heldere opbouw",
-            "Je leert hoe een speech spanning en richting krijgt",
-            "Aan het einde heb je een volledig bouwplan plus openingszin en slotzin"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Aansluiting op les 3 en 4",
-          "subtitle": "Je materiaal ligt er al",
-          "showProjectLogo": false,
-          "items": [
-            "Les 3: scene, patroon, waarde, stelling",
-            "Les 4: ethos, pathos, logos en overtuigingsalinea",
-            "Vandaag: je bepaalt in welke volgorde het publiek dit moet horen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: klassieke speechopbouw",
-          "subtitle": "Oud principe, moderne V-rede",
-          "showProjectLogo": false,
-          "items": [
-            "Exordium: opening die aandacht en vertrouwen wint",
-            "Narratio: persoonlijke scene waardoor het publiek de kwestie ziet",
-            "Confirmatio: je stelling en sterkste argumenten",
-            "Peroratio: slot dat terugkeert naar het begin en oproept tot verandering"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: begin niet met je onderwerp",
-          "subtitle": "Begin met spanning",
-          "showProjectLogo": false,
-          "items": [
-            "Niet: mijn V-rede gaat over prestatiedruk",
-            "Wel: om 23.48 uur zat ik nog naar hetzelfde lege document te kijken",
-            "Een goede opening laat het publiek eerst kijken, daarna pas begrijpen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: de kernzin",
-          "subtitle": "De zin die moet blijven hangen",
-          "showProjectLogo": false,
-          "items": [
-            "Je kernzin is kort genoeg om te onthouden",
-            "Hij bevat jouw standpunt, niet alleen je onderwerp",
-            "Hij kan terugkomen in je slot, eventueel net iets sterker geformuleerd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Modelbouwplan",
-          "subtitle": "Voorbeeldroute",
-          "showProjectLogo": false,
-          "items": [
-            "Opening: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
-            "Scene: wat er in de pauze gebeurt en wat niemand zegt",
-            "Stelling: wegkijken maakt buitensluiting normaal",
-            "Argumenten: veiligheid, verantwoordelijkheid van omstanders, effect van kleine keuzes",
-            "Slot: kijk morgen niet naar je scherm als iemand naast jou geen plek heeft"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Praktijk: maak je route",
-          "subtitle": "Van losse zinnen naar spreektekst",
-          "showProjectLogo": false,
-          "items": [
-            "Zet je materiaal onder zes kopjes: opening, scene, probleem, argumenten, oproep, slot",
-            "Kies per kopje maximaal drie kernzinnen",
-            "Schrap alles wat niet helpt om je publiek naar je slot te brengen",
-            "Schrijf opening en slot volledig uit, niet in trefwoorden"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift: product van vandaag",
-          "subtitle": "Startpunt voor les 6",
-          "showProjectLogo": false,
-          "items": [
-            "1. Bouwplan met zes kopjes: opening, scene, maatschappelijk probleem, argumenten, oproep, slot",
-            "2. Per kopje 2 tot 3 kernzinnen of trefwoorden",
-            "3. Een openingszin die begint met beeld, spanning of tegenstelling",
-            "4. Een slotzin waarin je kernzin terugkomt als oproep",
-            "5. Een check: welke zin moet het publiek na afloop onthouden?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 6 V-rede: eerste versie schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag schrijf je je eerste volledige V-rede",
-            "Het hoeft nog niet perfect, maar wel af",
-            "Je schrijft alsof je tekst straks uitgesproken wordt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Startvoorbeeld: spreekbare alinea",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Niet: sociale uitsluiting is een problematisch fenomeen met negatieve gevolgen",
-            "Wel: buitengesloten worden klinkt misschien klein, totdat jij degene bent die elke pauze doet alsof je een berichtje leest",
-            "Vraag: welke versie kun je beter hardop uitspreken?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: schrijven voor het oor",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik korte zinnen op belangrijke momenten",
-            "Herhaal een kernwoord bewust, niet toevallig",
-            "Wissel verhaal, uitleg en oproep af",
-            "Schrijf zinnen die je met adem en pauze kunt zeggen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: alinea-functies",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Alinea 1 opent en maakt nieuwsgierig",
-            "Alinea 2 vertelt het persoonlijke voorbeeld",
-            "Alinea 3 maakt het maatschappelijk breder",
-            "Alinea 4 geeft argumenten en eindigt met oproep/slot"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Demo: schrijfkeuzes",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Begin met een beeld in plaats van uitleg",
-            "Gebruik ik of wij wanneer betrokkenheid nodig is",
-            "Gebruik jij of u alleen als je het publiek direct wilt raken",
-            "Zet je sterkste zin niet verstopt midden in een lange alinea"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Schrijf je volledige eerste versie",
-            "Controleer: opening, persoonlijk verhaal, verbreding, argumenten, oproep, slot",
-            "Onderstreep je sterkste zin",
-            "Zet een ster bij de plek waar je nog twijfelt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorlezen en bespreken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1 of 2 leerlingen lezen een alinea hardop",
-            "Klas luistert naar spreekbaarheid en impact",
-            "Samen kiezen we waar een pauze of herhaling sterker werkt"
-          ]
+          "items": []
         },
         {
           "type": "bullets",
@@ -18834,15 +17920,15 @@
         }
       ],
       "markers": {
-        "marker-les-1-v-rede-wat-is-een-v-rede": 1,
-        "marker-les-2-v-rede-iets-wat-jou-raakt": 8,
-        "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk": 15,
-        "marker-les-4-v-rede-hoofd-en-hart": 23,
-        "marker-les-5-v-rede-bouwplan-indrukwekkende-speech": 31,
-        "marker-les-6-v-rede-eerste-versie-schrijven": 39,
-        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": 46,
-        "marker-les-8-v-rede-presentaties-deel-1": 53,
-        "marker-les-9-v-rede-presentaties-deel-2": 59
+        "marker-les-6-v-rede-eerste-versie-schrijven": 1,
+        "marker-les-3-v-rede-van-persoonlijk-verhaal-naar-maatschappelijk-probleem": 8,
+        "marker-les-1-v-rede-wat-is-een-v-rede": 9,
+        "marker-les-2-v-rede-iets-wat-jou-raakt": 16,
+        "marker-les-4-v-rede-raak-je-publiek-met-hoofd-en-hart": 23,
+        "marker-les-5-v-rede-bouwplan-voor-een-indrukwekkende-speech": 24,
+        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": 25,
+        "marker-les-8-v-rede-presentaties-deel-1": 32,
+        "marker-les-9-v-rede-presentaties-deel-2": 38
       },
       "deck": "project-v-rede",
       "showProjectLogo": true
@@ -23351,555 +22437,15 @@
           "showProjectLogo": true
         },
         {
-          "type": "bullets",
-          "title": "Heel veel lezen 1",
-          "subtitle": "Waarom lezen ertoe doet",
-          "showProjectLogo": false,
-          "items": [
-            "Over vijf jaar zie je het verschil tussen een getraind en een versnipperd brein",
-            "Lezen is geen hobbyproject maar cognitieve training",
-            "Doel dit jaar: minimaal 1 boek per maand en dagelijks 20 minuten lezen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat staat er op het spel?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Social media traint korte prikkels en onrust",
-            "Lezen traint taal, concentratie, verbeelding en denkvermogen",
-            "Wie veel leest, begrijpt sneller en formuleert sterker"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom we dit radicaal aanpakken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Je telefoon verdient niet al je aandacht",
-            "Boeken geven diepgang, rust en woordenschat",
-            "Jij bouwt hiermee een voordeel op dat zichtbaar wordt in school en later"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Projectafspraken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Iedereen leest een echt boek uit de schoolbieb",
-            "Tijdens leestijd ligt je telefoon weg",
-            "Ik houd bij welk boek je leest en hoe je ritme opbouwt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht in deze les",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Bepaal je leesniveau via de niveautest",
-            "Bepaal 2 genres die je aanspreken en 1 genre dat je wilt uitproberen",
-            "Noteer wat voor soort boek jij het liefst in een ruk zou uitlezen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Niveautest en genrekeuze",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik de niveautest als startpunt, niet als hokje",
-            "Kies eerlijk: wat vind jij echt spannend, mooi, grappig of heftig?",
-            "Die notities gebruik je volgende les bij het zoeken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Lesopbouw (45 min)",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "15 min presentatie en gesprek",
-            "15 min niveautest en genres kiezen",
-            "10 min kort nabespreken",
-            "5 min afsluiten en voorbereiding op de biebles"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 2",
-          "subtitle": "Schoolbieb, catalogus, lenen en starten",
-          "showProjectLogo": false,
-          "items": [
-            "Iedereen heeft vandaag zijn schoolpasje bij zich",
-            "Vandaag zoek je een boek dat je echt wilt lezen",
-            "Aan het eind heb je een boek geleend en al een begin gemaakt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zoekroute van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1. Kijk met je niveau en genres in Lezen voor de lijst",
-            "2. Zoek daarna gericht in de catalogus van de schoolbieb",
-            "3. Controleer in de bieb of het boek er echt staat",
-            "4. Leen het meteen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Lezen voor de lijst als keuzehulp",
-          "subtitle": "https://www.jeugdbibliotheek.nl/catalogus.website.html?q=*&pagetype=Lezen%20voor%20de%20lijst",
-          "showProjectLogo": false,
-          "items": [
-            "Filter op niveau, leeftijd en genre",
-            "Zoek 2 of 3 titels die kansrijk zijn",
-            "Lees kort waar het boek over gaat voordat je beslist"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zoeken in de schoolbiebcatalogus",
-          "subtitle": "https://cgu.auralibrary.nl/auraiczoekenx.aspx",
-          "showProjectLogo": false,
-          "items": [
-            "Zoek op titel, auteur of trefwoord",
-            "Let op beschikbaarheid en locatie",
-            "Gebruik je schoolpasje om te lenen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waar let je op bij je keuze?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Je moet nieuwsgierig worden van de eerste bladzijde",
-            "Het niveau moet pittig maar haalbaar zijn",
-            "Je mag best van je veilige smaak afwijken, maar niet blind gokken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tijdsplanning in deze les",
-          "subtitle": "45 minuten",
-          "showProjectLogo": false,
-          "items": [
-            "10 min uitleg catalogus en zoekstrategie",
-            "15 min echt zoeken met Lezen voor de lijst + catalogus",
-            "10 min boek pakken en lenen",
-            "10 min eerste bladzijden lezen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Einde van de les",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Iedereen heeft een boek mee",
-            "Iedereen leest de eerste pagina’s",
-            "Iedereen weet of dit waarschijnlijk een goede match is"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 3",
-          "subtitle": "Stillezen en startcheck",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag lees je vooral in stilte",
-            "We controleren of iedereen echt goed gestart is",
-            "Telefoon weg, boek open, focus aan"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Lees 25-30 minuten in stilte",
-            "Noteer titel, auteur en eerste indruk",
-            "Check na afloop eerlijk: werkt dit boek voor jou?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 4",
-          "subtitle": "Stillezen en boekmatch controleren",
-          "showProjectLogo": false,
-          "items": [
-            "Je leest in stilte verder",
-            "We kijken of je boek echt bij je past",
-            "Zo nodig wissel je gericht, niet impulsief"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Lees opnieuw een stevig blok",
-            "Controleer of je nog steeds nieuwsgierig bent",
-            "Beslis bewust: doorgaan of slim wisselen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 5: Stillezen en startcheck",
+          "type": "title",
+          "title": "Heel veel lezen",
           "subtitle": "Heel veel lezen",
           "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Lees 25-30 minuten in stilte",
-            "Noteer titel, auteur en startdatum",
-            "Check na afloop eerlijk: blijft dit boek bij je?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Controleer of je boek echt goed past",
-            "Durf gericht te wisselen als dat beter is",
-            "Lees daarna zonder scherm in de buurt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Bouw 20 minuten per dag thuis in",
-            "Kies vaste momenten in je week",
-            "Lees daarna geconcentreerd verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Herhaal de rechten van de lezer",
-            "Kies bewust: doorgaan of wisselen",
-            "Lees daarna door zonder afleiding"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Check je eerste maanddoel",
-            "Ben je op koers voor 1 boek per maand?",
-            "Lees daarna weer in stilte verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wissel slim als een boek niet werkt",
-            "Gebruik bieb, niveau en genre bewust",
-            "Lees daarna meteen door in je nieuwe of huidige boek"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 11: Stillezen en focus trainen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Train langere aandacht zonder telefoon",
-            "Lees in een echt stil blok",
-            "Merk op wat dat met je hoofd doet"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wissel leestips uit zonder te spoileren",
-            "Gebruik klasgenoten als boekenvinders",
-            "Lees daarna verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Kies zo nodig een tweede boek",
-            "Blijf het maandritme vasthouden",
-            "Zorg dat je leeslijst blijft groeien"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Koppel je boek aan Lezen voor de lijst",
-            "Controleer niveau, genre en interesse",
-            "Lees daarna verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 15: Stillezen en maandritme vasthouden",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Houd je ritme in drukke weken vast",
-            "Kleine dagelijkse blokken tellen op",
-            "Lees daarna met rust verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 16: Stillezen en zomerstapel voorbereiden",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Maak alvast een zomerstapel",
-            "Kies een volgend boek voordat de vakantie begint",
-            "Lees daarna nog een stevig blok"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zomervakantiequiz",
-          "subtitle": "Lezen, taal en boeken",
-          "showProjectLogo": false,
-          "items": [
-            "Sluit het jaar luchtig en inhoudelijk af",
-            "Herhaal wat je leerde over lezen, kiezen en volhouden",
-            "Vier boeken, taal en denkvermogen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Onderdelen van de quiz",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Boekomslagen en genres herkennen",
-            "Stellingen over leesrechten en leesgewoonten",
-            "Taal- en boekenrondes in teams of duo’s"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 18: Leescirkel en boekadvies geven",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag praat je kort over wat je leest en geef je een klasgenoot een bruikbare leestip."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Planning van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "10 min: stillezen en bladzijdecheck",
-            "15 min: leescirkel in groepjes",
-            "10 min: boekadvies formuleren",
-            "10 min: nieuwe leestip of vervolgstap noteren"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 19: Zomerleesplan en boeken vooruitkiezen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Je rondt het leesproject af met een haalbaar leesplan en een stapel titels voor later."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Planning van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "15 min: stillezen of laatste losse bladzijden",
-            "10 min: terugblik op je leesritme",
-            "10 min: drie nieuwe titels kiezen",
-            "10 min: je zomerleesplan opschrijven"
-          ]
+          "items": []
         }
       ],
       "markers": {
-        "marker-heel-veel-lezen-1-waarom-lezen-ertoe-doet-niveau-en-genre-bepalen": 1,
-        "marker-heel-veel-lezen-2-schoolbieb-catalogus-lenen-en-eerste-leesstart": 8,
-        "marker-heel-veel-lezen-3-stillezen-en-startcheck": 15,
-        "marker-heel-veel-lezen-4-stillezen-en-boekmatch-controleren": 17,
-        "marker-heel-veel-lezen-5-stillezen-en-startcheck": 19,
-        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": 21,
-        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": 23,
-        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": 25,
-        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": 27,
-        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": 29,
-        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": 31,
-        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": 33,
-        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": 35,
-        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": 37,
-        "marker-heel-veel-lezen-15-stillezen-en-maandritme-vasthouden": 39,
-        "marker-heel-veel-lezen-16-stillezen-en-zomerstapel-voorbereiden": 41,
-        "marker-heel-veel-lezen-17-zomervakantiequiz-lezen-taal-en-boeken": 43,
-        "marker-heel-veel-lezen-18-leescirkel-en-boekadvies-geven": 45,
-        "marker-heel-veel-lezen-19-zomerleesplan-en-boeken-vooruitkiezen": 47
+        "marker-heel-veel-lezen": 1
       },
       "markerDecks": {
         "marker-heel-veel-lezen-5-stillezen-en-startcheck": [
@@ -24420,6 +22966,13 @@
               "10 min: je zomerleesplan opschrijven"
             ]
           }
+        ],
+        "marker-heel-veel-lezen": [
+          {
+            "type": "title",
+            "title": "Heel veel lezen",
+            "subtitle": "Heel veel lezen"
+          }
         ]
       },
       "importVersion": 2026031601
@@ -24912,21 +23465,82 @@
         ]
       },
       "markers": {
-        "marker-invloed-1-framing-herkennen-en-sturen": 1,
-        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 6,
-        "marker-invloed-3-populisme-media-en-volkswil": 10,
-        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 14,
-        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 23,
-        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 27,
-        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 35,
-        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 40
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 1,
+        "marker-invloed-1-framing-herkennen-en-sturen": 6,
+        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 11,
+        "marker-invloed-3-populisme-media-en-volkswil": 15,
+        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 19,
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 28,
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 32,
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 40
       },
       "slides": [
         {
           "type": "title",
           "title": "Invloed",
-          "subtitle": "Schrijfvaardigheid",
+          "subtitle": "Invloed",
           "showProjectLogo": true
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 8: Toetsmodus blok 2",
+          "subtitle": "Invloed",
+          "showProjectLogo": false,
+          "items": [
+            "Vandaag maak je de toespraak af en lever je hem in.",
+            "Je voegt slot, stijlversterking en laatste controle toe.",
+            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat moet er nu nog gebeuren?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
+            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
+            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
+            "Controleer of je binnen 400-500 woorden blijft."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Revisietrucs",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
+            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
+            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
+            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
+            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Laatste kwaliteitscheck",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
+            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
+            "Klinkt het als een toespraak voor de Tweede Kamer?",
+            "Is het over the top, maar nog steeds netjes geschreven?",
+            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inlevercheck",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Naam en schrijfvoornemen staan bovenaan.",
+            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
+            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
+            "Bestand is opgeslagen en ingeleverd volgens afspraak."
+          ]
         },
         {
           "type": "bullets",
@@ -25372,67 +23986,6 @@
             "Minstens 2 kernalinea's zijn uitgewerkt met bronmateriaal en framing.",
             "Je tekst heeft al een duidelijke politieke spreektoon."
           ]
-        },
-        {
-          "type": "bullets",
-          "title": "Invloed 8: Toetsmodus blok 2",
-          "subtitle": "Invloed",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je de toespraak af en lever je hem in.",
-            "Je voegt slot, stijlversterking en laatste controle toe.",
-            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat moet er nu nog gebeuren?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
-            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
-            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
-            "Controleer of je binnen 400-500 woorden blijft."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Revisietrucs",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
-            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
-            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
-            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
-            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Laatste kwaliteitscheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
-            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
-            "Klinkt het als een toespraak voor de Tweede Kamer?",
-            "Is het over the top, maar nog steeds netjes geschreven?",
-            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Inlevercheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Naam en schrijfvoornemen staan bovenaan.",
-            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
-            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
-            "Bestand is opgeslagen en ingeleverd volgens afspraak."
-          ]
         }
       ]
     },
@@ -25649,7 +24202,7 @@
         {
           "type": "title",
           "title": "Taalmakers",
-          "subtitle": "Eigen taalproject",
+          "subtitle": "Taalmakers",
           "showProjectLogo": true
         },
         {
@@ -26510,7 +25063,7 @@
         {
           "type": "title",
           "title": "Zinsbouwers",
-          "subtitle": "Grammatica als gereedschap",
+          "subtitle": "Zinsbouwers",
           "showProjectLogo": true
         },
         {
@@ -27172,24 +25725,6 @@
             "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
             "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
           ]
-        },
-        {
-          "type": "title",
-          "title": "Extra oefenronde",
-          "subtitle": "Zinsbouwers",
-          "showProjectLogo": true,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Doel",
-          "subtitle": "Ruimte door het rooster",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik deze les voor herstel, extra toetsmomenten en het afvinken van ontbrekend bewijs.",
-            "Er komt geen nieuwe theorie bij.",
-            "Werk alleen aan onderdelen die nog niet betrouwbaar zijn."
-          ]
         }
       ],
       "markers": {
@@ -27204,10 +25739,447 @@
         "marker-les-9-mengzinnen": 41,
         "marker-les-10-tempo-en-controle": 46,
         "marker-les-11-herstelronde": 51,
-        "marker-les-12-eindronde-en-afvinken": 56,
-        "marker-les-extra-oefenronde": 61
+        "marker-les-12-eindronde-en-afvinken": 56
+      }
+    },
+    "project-netschrift": {
+      "id": "project-netschrift",
+      "presentationType": "project-overview",
+      "title": "Netschrift",
+      "project": "Netschrift",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Netschrift",
+          "subtitle": "Netschrift",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Netschrift bijwerken + spellingscorrectie",
+          "subtitle": "Netschrift",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Feedback-en-feedforward-opdracht",
+          "subtitle": "Netschrift",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Feedback-en-forward-opdracht",
+          "subtitle": "Netschrift",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-netschrift-bijwerken-spellingscorrectie": 1,
+        "marker-feedback-en-feedforward-opdracht": 2,
+        "marker-feedback-en-forward-opdracht": 3
+      },
+      "markerDecks": {
+        "marker-netschrift-bijwerken-spellingscorrectie": [
+          {
+            "type": "title",
+            "title": "Netschrift bijwerken + spellingscorrectie",
+            "subtitle": "Netschrift"
+          }
+        ],
+        "marker-feedback-en-feedforward-opdracht": [
+          {
+            "type": "title",
+            "title": "Feedback-en-feedforward-opdracht",
+            "subtitle": "Netschrift"
+          }
+        ],
+        "marker-feedback-en-forward-opdracht": [
+          {
+            "type": "title",
+            "title": "Feedback-en-forward-opdracht",
+            "subtitle": "Netschrift"
+          }
+        ]
+      }
+    },
+    "project-spiegeldicht": {
+      "id": "project-spiegeldicht",
+      "presentationType": "project-overview",
+      "title": "Spiegeldicht",
+      "project": "Spiegeldicht",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Spiegeldicht",
+          "subtitle": "Spiegeldicht",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Kiezen",
+          "subtitle": "Spiegeldicht",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Analyse schrijven",
+          "subtitle": "Spiegeldicht",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Reactiegedicht schrijven",
+          "subtitle": "Spiegeldicht",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Presentaties",
+          "subtitle": "Spiegeldicht",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-kiezen": 1,
+        "marker-analyse-schrijven": 2,
+        "marker-reactiegedicht-schrijven": 3,
+        "marker-presentaties": 4
+      },
+      "markerDecks": {
+        "marker-kiezen": [
+          {
+            "type": "title",
+            "title": "Kiezen",
+            "subtitle": "Spiegeldicht"
+          }
+        ],
+        "marker-analyse-schrijven": [
+          {
+            "type": "title",
+            "title": "Analyse schrijven",
+            "subtitle": "Spiegeldicht"
+          }
+        ],
+        "marker-reactiegedicht-schrijven": [
+          {
+            "type": "title",
+            "title": "Reactiegedicht schrijven",
+            "subtitle": "Spiegeldicht"
+          }
+        ],
+        "marker-presentaties": [
+          {
+            "type": "title",
+            "title": "Presentaties",
+            "subtitle": "Spiegeldicht"
+          }
+        ]
+      }
+    },
+    "project-grenzen-van-literatuur": {
+      "id": "project-grenzen-van-literatuur",
+      "presentationType": "project-overview",
+      "title": "Grenzen van Literatuur",
+      "project": "Grenzen van Literatuur",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Grenzen van Literatuur",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Les 1 GvL: Ruimte en zintuigen",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 2 GvL: Spanning en cliffhanger",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 3 GvL: Flashback",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 4 GvL: Hoofdpersoon interviewen",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 5 GvL: Motief verwerken",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 6 GvL: Leesvoorkeur",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 7 GvL: Een geheel maken",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 8 GvL: Feedback, afronden en reflecteren",
+          "subtitle": "Grenzen van Literatuur",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-les-1-gvl-ruimte-en-zintuigen": 1,
+        "marker-les-2-gvl-spanning-en-cliffhanger": 2,
+        "marker-les-3-gvl-flashback": 3,
+        "marker-les-4-gvl-hoofdpersoon-interviewen": 4,
+        "marker-les-5-gvl-motief-verwerken": 5,
+        "marker-les-6-gvl-leesvoorkeur": 6,
+        "marker-les-7-gvl-een-geheel-maken": 7,
+        "marker-les-8-gvl-feedback-afronden-en-reflecteren": 8
+      },
+      "markerDecks": {
+        "marker-les-1-gvl-ruimte-en-zintuigen": [
+          {
+            "type": "title",
+            "title": "Les 1 GvL: Ruimte en zintuigen",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-2-gvl-spanning-en-cliffhanger": [
+          {
+            "type": "title",
+            "title": "Les 2 GvL: Spanning en cliffhanger",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-3-gvl-flashback": [
+          {
+            "type": "title",
+            "title": "Les 3 GvL: Flashback",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-4-gvl-hoofdpersoon-interviewen": [
+          {
+            "type": "title",
+            "title": "Les 4 GvL: Hoofdpersoon interviewen",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-5-gvl-motief-verwerken": [
+          {
+            "type": "title",
+            "title": "Les 5 GvL: Motief verwerken",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-6-gvl-leesvoorkeur": [
+          {
+            "type": "title",
+            "title": "Les 6 GvL: Leesvoorkeur",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-7-gvl-een-geheel-maken": [
+          {
+            "type": "title",
+            "title": "Les 7 GvL: Een geheel maken",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ],
+        "marker-les-8-gvl-feedback-afronden-en-reflecteren": [
+          {
+            "type": "title",
+            "title": "Les 8 GvL: Feedback, afronden en reflecteren",
+            "subtitle": "Grenzen van Literatuur"
+          }
+        ]
+      }
+    },
+    "project-technologie": {
+      "id": "project-technologie",
+      "presentationType": "project-overview",
+      "title": "Technologie",
+      "project": "Technologie",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Technologie",
+          "subtitle": "Technologie",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Les 1: Ik en technologie",
+          "subtitle": "Technologie",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 2: Social media",
+          "subtitle": "Technologie",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 3: Hoe verhoud jij je tot technologie?",
+          "subtitle": "Technologie",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 4: Technologie en identiteit",
+          "subtitle": "Technologie",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-les-1-ik-en-technologie": 1,
+        "marker-les-2-social-media": 2,
+        "marker-les-3-hoe-verhoud-jij-je-tot-technologie": 3,
+        "marker-les-4-technologie-en-identiteit": 4
+      },
+      "markerDecks": {
+        "marker-les-1-ik-en-technologie": [
+          {
+            "type": "title",
+            "title": "Les 1: Ik en technologie",
+            "subtitle": "Technologie"
+          }
+        ],
+        "marker-les-2-social-media": [
+          {
+            "type": "title",
+            "title": "Les 2: Social media",
+            "subtitle": "Technologie"
+          }
+        ],
+        "marker-les-3-hoe-verhoud-jij-je-tot-technologie": [
+          {
+            "type": "title",
+            "title": "Les 3: Hoe verhoud jij je tot technologie?",
+            "subtitle": "Technologie"
+          }
+        ],
+        "marker-les-4-technologie-en-identiteit": [
+          {
+            "type": "title",
+            "title": "Les 4: Technologie en identiteit",
+            "subtitle": "Technologie"
+          }
+        ]
+      }
+    },
+    "project-renaissance": {
+      "id": "project-renaissance",
+      "presentationType": "project-overview",
+      "title": "Renaissance",
+      "project": "Renaissance",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Renaissance",
+          "subtitle": "Renaissance",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Overzichtspresentatie",
+          "subtitle": "Renaissance",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-overzichtspresentatie": 1
+      },
+      "markerDecks": {
+        "marker-overzichtspresentatie": [
+          {
+            "type": "title",
+            "title": "Overzichtspresentatie",
+            "subtitle": "Renaissance"
+          }
+        ]
+      }
+    },
+    "project-persoonlijkheid": {
+      "id": "project-persoonlijkheid",
+      "presentationType": "project-overview",
+      "title": "Persoonlijkheid",
+      "project": "Persoonlijkheid",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Persoonlijkheid",
+          "subtitle": "Persoonlijkheid",
+          "showProjectLogo": true
+        },
+        {
+          "type": "title",
+          "title": "Les 1: Persoonlijkheid",
+          "subtitle": "Persoonlijkheid",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 2: Big Five",
+          "subtitle": "Persoonlijkheid",
+          "showProjectLogo": false,
+          "items": []
+        }
+      ],
+      "markers": {
+        "marker-les-1-persoonlijkheid": 1,
+        "marker-les-2-big-five": 2
+      },
+      "markerDecks": {
+        "marker-les-1-persoonlijkheid": [
+          {
+            "type": "title",
+            "title": "Les 1: Persoonlijkheid",
+            "subtitle": "Persoonlijkheid"
+          }
+        ],
+        "marker-les-2-big-five": [
+          {
+            "type": "title",
+            "title": "Les 2: Big Five",
+            "subtitle": "Persoonlijkheid"
+          }
+        ]
       }
     }
   },
-  "sourceRevision": "2026-05-28T07:56:33+02:00-studio"
+  "sourceRevision": "2026-05-29T10:53:39+02:00-studio"
 }
