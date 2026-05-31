@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-29T11:04:20+02:00",
+  "updatedAt": "2026-05-31T14:50:40+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2210,10 +2210,17 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
           "project": "Zinsbouwers",
           "lesson": "Les 2 - De werkwoordsgroep",
           "presentationId": "project-zinsbouwers",
-          "lessonKey": "C",
+          "lessonKey": "B",
           "presentationMarkerId": "marker-les-2-de-werkwoordsgroep",
           "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee"
         }
@@ -5084,10 +5091,17 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
           "presentationId": "project-v-rede",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
           "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
@@ -6809,10 +6823,17 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
           "presentationId": "project-v-rede",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
           "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
@@ -7384,10 +7405,17 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
           "presentationId": "project-v-rede",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
           "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
@@ -7959,10 +7987,17 @@
       "week": "23",
       "lessons": [
         {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "lessonKey": "A",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
           "project": "V-rede",
           "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
           "presentationId": "project-v-rede",
-          "lessonKey": "A",
+          "lessonKey": "B",
           "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
           "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
@@ -11108,6 +11143,13 @@
       "lessons": [
         {
           "lessonKey": "A",
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "presentationId": "project-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee"
+        },
+        {
+          "lessonKey": "B",
           "project": "Taalmakers",
           "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "presentationId": "project-taalmakers",
@@ -26181,5 +26223,5 @@
       }
     }
   },
-  "sourceRevision": "2026-05-29T11:04:20+02:00-studio"
+  "sourceRevision": "2026-05-31T14:50:40+02:00-studio"
 }
