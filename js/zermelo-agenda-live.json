@@ -1,117 +1,7 @@
 {
-  "updatedAt": "2026-05-31T21:54:32.608978+00:00",
+  "updatedAt": "2026-05-31T22:54:39.462721+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
-    {
-      "classId": "G3E",
-      "start": "2026-05-28T06:15:00+00:00",
-      "end": "2026-05-28T07:00:00+00:00",
-      "summary": "h216 ne g3e",
-      "description": "h216 ne g3e",
-      "location": "",
-      "categories": "",
-      "uid": "1119541@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-05-28T07:00:00+00:00",
-      "end": "2026-05-28T07:45:00+00:00",
-      "summary": "h216 ne g1d",
-      "description": "h216 ne g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1119532@cgu"
-    },
-    {
-      "classId": "G4E",
-      "start": "2026-05-28T08:50:00+00:00",
-      "end": "2026-05-28T09:35:00+00:00",
-      "summary": "h216 netl g4.netl5",
-      "description": "h216 netl g4.netl5",
-      "location": "",
-      "categories": "",
-      "uid": "1119855@cgu"
-    },
-    {
-      "classId": "G4E",
-      "start": "2026-05-28T09:35:00+00:00",
-      "end": "2026-05-28T10:20:00+00:00",
-      "summary": "h216 netl g4.netl5",
-      "description": "h216 netl g4.netl5",
-      "location": "",
-      "categories": "",
-      "uid": "1119518@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-05-28T10:50:00+00:00",
-      "end": "2026-05-28T11:35:00+00:00",
-      "summary": "h216 netl g4.netl4",
-      "description": "h216 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1119577@cgu"
-    },
-    {
-      "classId": "G3B",
-      "start": "2026-05-29T06:15:00+00:00",
-      "end": "2026-05-29T07:00:00+00:00",
-      "summary": "h215 ne g3b",
-      "description": "h215 ne g3b",
-      "location": "",
-      "categories": "",
-      "uid": "1119548@cgu"
-    },
-    {
-      "classId": "G3G",
-      "start": "2026-05-29T07:45:00+00:00",
-      "end": "2026-05-29T08:30:00+00:00",
-      "summary": "h215 ne g3g",
-      "description": "h215 ne g3g",
-      "location": "",
-      "categories": "",
-      "uid": "1119484@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-05-29T08:50:00+00:00",
-      "end": "2026-05-29T09:35:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1120031@cgu"
-    },
-    {
-      "classId": "G4D",
-      "start": "2026-05-29T09:35:00+00:00",
-      "end": "2026-05-29T10:20:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
-      "location": "",
-      "categories": "",
-      "uid": "1120131@cgu"
-    },
-    {
-      "classId": "G3F",
-      "start": "2026-05-29T11:35:00+00:00",
-      "end": "2026-05-29T12:20:00+00:00",
-      "summary": "h215 ne g3f",
-      "description": "h215 ne g3f",
-      "location": "",
-      "categories": "",
-      "uid": "1120119@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-05-29T12:20:00+00:00",
-      "end": "2026-05-29T13:05:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1120335@cgu"
-    },
     {
       "classId": "G1D",
       "start": "2026-06-01T07:00:00+00:00",
@@ -281,6 +171,176 @@
       "location": "",
       "categories": "",
       "uid": "1121068@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-06-08T07:00:00+00:00",
+      "end": "2026-06-08T07:45:00+00:00",
+      "summary": "h215 ne g1d",
+      "description": "h215 ne g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1122137@cgu"
+    },
+    {
+      "classId": "G4E",
+      "start": "2026-06-08T07:45:00+00:00",
+      "end": "2026-06-08T08:30:00+00:00",
+      "summary": "h215 netl g4.netl5",
+      "description": "h215 netl g4.netl5",
+      "location": "",
+      "categories": "",
+      "uid": "1122014@cgu"
+    },
+    {
+      "classId": "G3F",
+      "start": "2026-06-08T08:50:00+00:00",
+      "end": "2026-06-08T09:35:00+00:00",
+      "summary": "h215 ne g3f",
+      "description": "h215 ne g3f",
+      "location": "",
+      "categories": "",
+      "uid": "1122437@cgu"
+    },
+    {
+      "classId": "G3E",
+      "start": "2026-06-08T10:50:00+00:00",
+      "end": "2026-06-08T11:35:00+00:00",
+      "summary": "h215 ne g3e",
+      "description": "h215 ne g3e",
+      "location": "",
+      "categories": "",
+      "uid": "1122396@cgu"
+    },
+    {
+      "classId": "G3G",
+      "start": "2026-06-08T11:35:00+00:00",
+      "end": "2026-06-08T12:20:00+00:00",
+      "summary": "h215 ne g3g",
+      "description": "h215 ne g3g",
+      "location": "",
+      "categories": "",
+      "uid": "1122077@cgu"
+    },
+    {
+      "classId": "G3B",
+      "start": "2026-06-08T12:40:00+00:00",
+      "end": "2026-06-08T13:25:00+00:00",
+      "summary": "h215 ne g3b",
+      "description": "h215 ne g3b",
+      "location": "",
+      "categories": "",
+      "uid": "1122004@cgu"
+    },
+    {
+      "classId": "G3E",
+      "start": "2026-06-11T06:15:00+00:00",
+      "end": "2026-06-11T07:00:00+00:00",
+      "summary": "h216 ne g3e",
+      "description": "h216 ne g3e",
+      "location": "",
+      "categories": "",
+      "uid": "1122601@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-06-11T07:00:00+00:00",
+      "end": "2026-06-11T07:45:00+00:00",
+      "summary": "h216 ne g1d",
+      "description": "h216 ne g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1122858@cgu"
+    },
+    {
+      "classId": "G4E",
+      "start": "2026-06-11T08:50:00+00:00",
+      "end": "2026-06-11T09:35:00+00:00",
+      "summary": "h216 netl g4.netl5",
+      "description": "h216 netl g4.netl5",
+      "location": "",
+      "categories": "",
+      "uid": "1123344@cgu"
+    },
+    {
+      "classId": "G4E",
+      "start": "2026-06-11T09:35:00+00:00",
+      "end": "2026-06-11T10:20:00+00:00",
+      "summary": "[x] h216 netl g4.netl5",
+      "description": "h216 netl g4.netl5\nWijzigingen: Les vervalt",
+      "location": "",
+      "categories": "",
+      "uid": "1123163@cgu"
+    },
+    {
+      "classId": "G4D",
+      "start": "2026-06-11T10:50:00+00:00",
+      "end": "2026-06-11T11:35:00+00:00",
+      "summary": "[x] h216 netl g4.netl4",
+      "description": "h216 netl g4.netl4\nWijzigingen: Les vervalt",
+      "location": "",
+      "categories": "",
+      "uid": "1123035@cgu"
+    },
+    {
+      "classId": "G3B",
+      "start": "2026-06-12T07:00:00+00:00",
+      "end": "2026-06-12T07:45:00+00:00",
+      "summary": "[!] h215 ne g3b",
+      "description": "h215 ne g3b\nWijzigingen: De les is verplaatst (komt van vr 8:15u).",
+      "location": "",
+      "categories": "",
+      "uid": "1123264@cgu"
+    },
+    {
+      "classId": "G3G",
+      "start": "2026-06-12T07:45:00+00:00",
+      "end": "2026-06-12T08:30:00+00:00",
+      "summary": "h215 ne g3g",
+      "description": "h215 ne g3g",
+      "location": "",
+      "categories": "",
+      "uid": "1123180@cgu"
+    },
+    {
+      "classId": "G4D",
+      "start": "2026-06-12T08:50:00+00:00",
+      "end": "2026-06-12T09:35:00+00:00",
+      "summary": "h215 netl g4.netl4",
+      "description": "h215 netl g4.netl4",
+      "location": "",
+      "categories": "",
+      "uid": "1123285@cgu"
+    },
+    {
+      "classId": "G4D",
+      "start": "2026-06-12T09:35:00+00:00",
+      "end": "2026-06-12T10:20:00+00:00",
+      "summary": "h215 netl g4.netl4",
+      "description": "h215 netl g4.netl4",
+      "location": "",
+      "categories": "",
+      "uid": "1121815@cgu"
+    },
+    {
+      "classId": "G3F",
+      "start": "2026-06-12T11:35:00+00:00",
+      "end": "2026-06-12T12:20:00+00:00",
+      "summary": "h215 ne g3f",
+      "description": "h215 ne g3f",
+      "location": "",
+      "categories": "",
+      "uid": "1123224@cgu"
+    },
+    {
+      "classId": "G1D",
+      "start": "2026-06-12T12:20:00+00:00",
+      "end": "2026-06-12T13:05:00+00:00",
+      "summary": "h215 ne g1d",
+      "description": "h215 ne g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1123307@cgu"
     }
   ]
 }
