@@ -103,6 +103,7 @@ const CURRENT_PROGRESS_ANCHORS = [
 const READING_LESSON_EXCEPTIONS = [
   { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
   { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
+  { classIds: ['G1D', '1D', 'G3B', '3B', 'G3E', '3E', 'G3F', '3F', 'G3G', '3G', 'G4E', '4G5', '4.5'], date: '2026-06-01', lessonNumber: 1 },
 ];
 const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
 const BASE_SCHEDULE = {
