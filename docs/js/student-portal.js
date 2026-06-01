@@ -2175,12 +2175,27 @@ function netschriftOverviewShortcutHtml() {
   `;
 }
 
+function netschriftProjectSummaryHtml() {
+  const items = getNetschriftChecklistForClass(state.currentClass);
+  if (!items.length) return '';
+  return `
+    <p class="homework-label">Netschrift</p>
+    <div class="project-focus-card">
+      <p class="project-focus-name">Alles wat in je netschrift moet staan</p>
+      <p class="project-focus-lesson">${escapeHtml(items.length)} onderdelen in het netschrift-overzicht.</p>
+      <button class="project-overview-link" type="button" data-open-netschrift-overview="1">Bekijk wat er in je netschrift moet</button>
+    </div>
+  `;
+}
+
 function buildProjectSummaryRows(projectGroup) {
   const project = String(projectGroup?.project || '').trim();
-  if (!project) return [];
+  const netschriftRow = netschriftProjectSummaryHtml();
+  if (!project) return [netschriftRow].filter(Boolean);
   const medium = getProjectAssessmentMedium(project);
   if (medium.type !== 'poster-presentation') {
     return [
+      netschriftRow,
       `
         <p class="homework-label">Poster</p>
         <div class="project-focus-card">
@@ -2188,11 +2203,12 @@ function buildProjectSummaryRows(projectGroup) {
           <p class="project-focus-lesson">Project: ${escapeHtml(project)}</p>
         </div>
       `,
-    ];
+    ].filter(Boolean);
   }
 
   const posterItems = getPosterChecklistForProject(state.currentClass, project);
   return [
+    netschriftRow,
     `
       <p class="homework-label">Poster</p>
       <div class="project-focus-card">
@@ -2202,7 +2218,7 @@ function buildProjectSummaryRows(projectGroup) {
         <button class="project-overview-link" type="button" data-open-poster-overview="${escapeHtml(project)}">Bekijk wat er op je poster moet</button>
       </div>
     `,
-  ];
+  ].filter(Boolean);
 }
 
 function renderRubricChips(container, values, emptyText, className = 'rubric-chip') {

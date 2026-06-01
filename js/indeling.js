@@ -1,5 +1,5 @@
 // js/indeling.js
-const MODULE_VERSION = '20260227-01';
+const MODULE_VERSION = '20260507-02';
 const SAVED_LAYOUTS_KEY = 'lespresentatie.savedlayouts.v1';
 const TEMP_LAYOUT_HISTORY_KEY = 'lespresentatie.templayouthistory.v1';
 const TEMP_LAYOUT_HISTORY_TTL_MS = 3 * 60 * 60 * 1000;

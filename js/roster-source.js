@@ -24,6 +24,9 @@
   function normalizeClassId(value) {
     const raw = String(value || '').replace(/\s+/g, '').toUpperCase();
     if (!raw) return '';
+    if (raw === '5G3') return '';
+    if (raw === '4G4' || raw === '4.4') return 'G4D';
+    if (raw === '4G5' || raw === '4.5') return 'G4E';
 
     const netl = raw.match(/^NETL(\d+)$/);
     if (netl) {
@@ -57,6 +60,14 @@
     if (modern) {
       const number = letterToNumber(modern[2]);
       if (number) aliases.add(`${modern[1]}G${number}`);
+    }
+    if (normalized === 'G4D') {
+      aliases.add('4G4');
+      aliases.add('4.4');
+    }
+    if (normalized === 'G4E') {
+      aliases.add('4G5');
+      aliases.add('4.5');
     }
 
     return [...aliases];
@@ -212,11 +223,7 @@
       grouped.get(normalized).push(rawClassId);
     });
 
-    const preferred = [];
-    grouped.forEach((labels) => {
-      const legacy = labels.find((label) => /^[1-6]G\d+$/.test(label));
-      preferred.push(legacy || labels[0]);
-    });
+    const preferred = [...grouped.keys()];
 
     return preferred.sort((a, b) => a.localeCompare(b, 'nl-NL', { numeric: true, sensitivity: 'base' }));
   }

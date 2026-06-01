@@ -1,13 +1,18 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
-const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
+const STUDIO_BACKUP_KEY = 'lespresentatie.jaarplanningStudioBackups';
+const PLATFORM_REFRESH_KEY = 'lespresentatie.platformRefresh';
+const BASE_SOURCE = 'js/jaarplanning-live.json';
+const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
 
 const projectSelect = document.getElementById('projectSelect');
 const saveProjectBtn = document.getElementById('saveProjectBtn');
 const deleteProjectBtn = document.getElementById('deleteProjectBtn');
 const exportAllBtn = document.getElementById('exportAllBtn');
+const publishAllBtn = document.getElementById('publishAllBtn');
 const projectTitle = document.getElementById('projectTitle');
 const deckTitleInput = document.getElementById('deckTitleInput');
 const deckSubtitleInput = document.getElementById('deckSubtitleInput');
+const linkSelectionBtn = document.getElementById('linkSelectionBtn');
 const markerBody = document.getElementById('markerBody');
 const statusLine = document.getElementById('statusLine');
 
@@ -19,10 +24,84 @@ const state = {
 };
 
 let autosaveTimer = null;
+let activeLinkField = null;
+let renderedProject = '';
+let hasLocalChanges = false;
 
-function setStatus(message, isError = false) {
+function setStatus(message, type = 'info') {
   statusLine.textContent = message;
-  statusLine.style.color = isError ? '#9f1d1d' : '#2c4f7c';
+  statusLine.dataset.status = type === true ? 'error' : String(type || 'info');
+}
+
+function setButtonBusy(button, label) {
+  if (!button) return;
+  if (!button.dataset.defaultLabel) button.dataset.defaultLabel = button.textContent;
+  button.disabled = true;
+  button.classList.add('is-busy');
+  button.textContent = label;
+}
+
+function setButtonDone(button, label, resetDelay = 1800) {
+  if (!button) return;
+  button.disabled = false;
+  button.classList.remove('is-busy');
+  button.classList.add('is-done');
+  button.textContent = label;
+  window.setTimeout(() => {
+    button.classList.remove('is-done');
+    button.textContent = button.dataset.defaultLabel || button.textContent;
+  }, resetDelay);
+}
+
+function resetButton(button) {
+  if (!button) return;
+  button.disabled = false;
+  button.classList.remove('is-busy', 'is-done');
+  button.textContent = button.dataset.defaultLabel || button.textContent;
+}
+
+function markLocalChanges() {
+  hasLocalChanges = true;
+  saveProjectBtn?.classList.add('has-changes');
+  publishAllBtn?.classList.add('has-changes');
+}
+
+function clearLocalChanges() {
+  hasLocalChanges = false;
+  saveProjectBtn?.classList.remove('has-changes');
+  publishAllBtn?.classList.remove('has-changes');
+}
+
+function backupStudioDoc(reason, doc = state.doc) {
+  if (!doc || typeof doc !== 'object') return;
+  try {
+    const backups = JSON.parse(localStorage.getItem(STUDIO_BACKUP_KEY) || '[]');
+    const list = Array.isArray(backups) ? backups : [];
+    list.unshift({
+      createdAt: new Date().toISOString(),
+      reason: String(reason || 'backup'),
+      sourceRevision: String(doc.sourceRevision || ''),
+      updatedAt: String(doc.updatedAt || ''),
+      doc: {
+        sourceRevision: String(doc.sourceRevision || ''),
+        updatedAt: String(doc.updatedAt || ''),
+        presentations: doc.presentations && typeof doc.presentations === 'object'
+          ? structuredClone(doc.presentations)
+          : {},
+      },
+    });
+    let keep = list.slice(0, 10);
+    while (keep.length) {
+      try {
+        localStorage.setItem(STUDIO_BACKUP_KEY, JSON.stringify(keep));
+        return;
+      } catch {
+        keep = keep.slice(0, -1);
+      }
+    }
+  } catch (err) {
+    console.warn('Studio-back-up kon niet worden gemaakt:', err);
+  }
 }
 
 function slugify(value) {
@@ -74,10 +153,14 @@ function parseDocTimestamp(doc) {
 function baseShouldReplaceLocal(baseDoc, localDoc) {
   const baseRevision = String(baseDoc?.sourceRevision || '').trim();
   const localRevision = String(localDoc?.sourceRevision || '').trim();
-  if (baseRevision && localRevision && baseRevision !== localRevision) return true;
-  if (baseRevision && !localRevision) return true;
   const baseStamp = parseDocTimestamp(baseDoc);
   const localStamp = parseDocTimestamp(localDoc);
+  if (baseRevision && localRevision && baseRevision !== localRevision) {
+    return !(localStamp && (!baseStamp || localStamp >= baseStamp));
+  }
+  if (baseRevision && !localRevision) {
+    return !(localStamp && baseStamp && localStamp >= baseStamp);
+  }
   if (!baseStamp || !localStamp) return false;
   return baseStamp > localStamp;
 }
@@ -194,6 +277,24 @@ function saveStudio() {
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
 }
 
+function signalPlatformsRefresh(result = {}) {
+  localStorage.setItem(PLATFORM_REFRESH_KEY, JSON.stringify({
+    updatedAt: result.updatedAt || new Date().toISOString(),
+    sourceRevision: result.sourceRevision || state.doc.sourceRevision || '',
+  }));
+}
+
+async function syncFromPublishedSource(result = {}) {
+  try {
+    const liveDoc = ensureProjectPresentations(await fetchJson(BASE_SOURCE));
+    state.doc = liveDoc;
+    localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+  } catch (err) {
+    console.warn('Live bron kon na publiceren niet worden teruggelezen:', err);
+  }
+  signalPlatformsRefresh(result);
+}
+
 function gradeLayerFromClassId(rawClassId) {
   const cid = String(rawClassId || '').replace(/\s+/g, '').toUpperCase();
   const patterns = [
@@ -269,6 +370,8 @@ function buildExportPayload() {
 
 function exportAll() {
   try {
+    flushAutoSave();
+    saveProject({ auto: true });
     saveStudio();
     const payload = buildExportPayload();
     const stamp = payload.exportedAt.replace(/[:.]/g, '-');
@@ -281,10 +384,65 @@ function exportAll() {
     link.click();
     link.remove();
     window.setTimeout(() => URL.revokeObjectURL(url), 0);
-    setStatus(`Export gedownload: ${payload.counts.entries} planningregels, ${payload.counts.presentations} presentaties.`);
+    setStatus(`Export gedownload: ${payload.counts.entries} planningregels, ${payload.counts.presentations} presentaties.`, 'success');
   } catch (err) {
     console.error(err);
-    setStatus(`Export mislukt: ${err?.message || err}`, true);
+    setStatus(`Export mislukt: ${err?.message || err}`, 'error');
+  }
+}
+
+function autoGitMessage(result = {}) {
+  const git = result.autoGit;
+  if (!git || git.enabled === false) return '';
+  return git.ok
+    ? ` ${git.message || 'Automatisch gepusht.'}`
+    : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
+}
+
+function publishErrorMessage(err) {
+  const message = String(err?.message || err || '');
+  if (message.includes('HTTP 501')) {
+    return 'de oude lokale server draait nog. Sluit dit venster en dubbelklik eenmalig op Open Jaarplanning Studio.command; daarna werkt deze knop direct.';
+  }
+  return message;
+}
+
+async function publishAll({ skipFlush = false, skipCurrentProjectSave = false } = {}) {
+  if (!skipFlush) flushAutoSave();
+  if (!skipCurrentProjectSave) saveProject({ auto: true });
+  backupStudioDoc('voor publiceren');
+  saveStudio();
+  const payload = buildExportPayload();
+  setButtonBusy(publishAllBtn, 'Publiceren...');
+  setStatus('Publiceren naar docent- en leerlingomgeving...', 'busy');
+  try {
+    if (window.location.protocol === 'file:') {
+      throw new Error('Publiceren werkt alleen via http://127.0.0.1:4173. Open de lokale docentomgeving met start-docentomgeving.command.');
+    }
+    const res = await fetch(PUBLISH_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await res.json().catch(() => ({}));
+    if (!res.ok || result?.ok === false) {
+      throw new Error(result?.error || `HTTP ${res.status}`);
+    }
+    state.doc.sourceRevision = String(result.sourceRevision || result.updatedAt || state.doc.sourceRevision || '');
+    state.doc.updatedAt = String(result.updatedAt || state.doc.updatedAt || '');
+    saveStudio();
+    await syncFromPublishedSource(result);
+    clearLocalChanges();
+    setButtonDone(publishAllBtn, 'Gepubliceerd');
+    setStatus(`Gepubliceerd naar omgevingen: ${result.presentations || Object.keys(state.doc.presentations || {}).length} presentaties bijgewerkt.${autoGitMessage(result)} Refresh docent/leerling met Cmd+Shift+R als je de wijziging nog niet ziet.`, result.autoGit?.ok === false ? 'error' : 'success');
+    return true;
+  } catch (err) {
+    console.error(err);
+    resetButton(publishAllBtn);
+    setStatus(`Lokaal opgeslagen, maar publiceren naar de omgevingen is mislukt: ${publishErrorMessage(err)}`, 'error');
+    return false;
+  } finally {
+    if (publishAllBtn?.classList.contains('is-busy')) resetButton(publishAllBtn);
   }
 }
 
@@ -298,18 +456,50 @@ function markerDeckSlideCount(presentation) {
   return total;
 }
 
+function markerDeckHasRealContent(deck) {
+  if (!Array.isArray(deck)) return false;
+  return deck.some((slide) => {
+    if (!slide || typeof slide !== 'object') return false;
+    const items = Array.isArray(slide.items)
+      ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+      : [];
+    return items.length > 0 || String(slide.type || '').trim().toLowerCase() === 'bullets';
+  });
+}
+
+function markerDeckLooksPlaceholder(deck) {
+  if (!Array.isArray(deck) || deck.length !== 1) return false;
+  const slide = deck[0];
+  if (!slide || typeof slide !== 'object') return false;
+  const items = Array.isArray(slide.items)
+    ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+    : [];
+  const title = String(slide.title || '').trim();
+  const subtitle = String(slide.subtitle || '').trim();
+  return !items.length
+    && String(slide.type || 'title').trim().toLowerCase() !== 'bullets'
+    && /^Les\s+\d+\s+V-rede:/i.test(title)
+    && subtitle === 'V-rede';
+}
+
 function presentationImportVersion(presentation) {
   const value = Number(presentation?.importVersion || 0);
   return Number.isFinite(value) ? value : 0;
 }
 
+function basePresentationShouldReplaceLocal(deckId, basePres, localPres) {
+  if (deckId === 'project-v-rede') return false;
+  const baseVersion = presentationImportVersion(basePres);
+  const localVersion = presentationImportVersion(localPres);
+  return baseVersion > localVersion;
+}
+
 function mergePreferRicherBase(baseDoc, storedDoc) {
   const base = ensureProjectPresentations(baseDoc);
   const stored = ensureProjectPresentations(storedDoc);
-  if (baseShouldReplaceLocal(base, stored)) {
-    return base;
-  }
   const merged = normalizeDoc(stored);
+  if (Array.isArray(base.entries) && base.entries.length) merged.entries = structuredClone(base.entries);
+  if (Array.isArray(base.holidays)) merged.holidays = structuredClone(base.holidays);
 
   if (!merged.presentations || typeof merged.presentations !== 'object') {
     merged.presentations = {};
@@ -326,15 +516,36 @@ function mergePreferRicherBase(baseDoc, storedDoc) {
     const localCount = markerDeckSlideCount(localPres);
     const baseMarkers = Object.keys(basePres.markers || {}).length;
     const localMarkers = Object.keys(localPres.markers || {}).length;
-    const baseVersion = presentationImportVersion(basePres);
-    const localVersion = presentationImportVersion(localPres);
 
-    if (
-      baseVersion > localVersion
+    if (deckId !== 'project-v-rede' && (
+      basePresentationShouldReplaceLocal(deckId, basePres, localPres)
       || baseCount > localCount
       || baseMarkers > localMarkers
-    ) {
+    )) {
       merged.presentations[deckId] = structuredClone(basePres);
+      continue;
+    }
+
+    const localDecks = localPres.markerDecks && typeof localPres.markerDecks === 'object'
+      ? localPres.markerDecks
+      : {};
+    const baseDecks = basePres.markerDecks && typeof basePres.markerDecks === 'object'
+      ? basePres.markerDecks
+      : {};
+    let replacedDeck = false;
+    for (const [markerId, baseDeck] of Object.entries(baseDecks)) {
+      const localDeck = localDecks[markerId];
+      if (
+        ((!Array.isArray(localDeck) || !localDeck.length) || markerDeckLooksPlaceholder(localDeck))
+        && markerDeckHasRealContent(baseDeck)
+      ) {
+        localDecks[markerId] = structuredClone(baseDeck);
+        replacedDeck = true;
+      }
+    }
+    if (replacedDeck) {
+      localPres.markerDecks = localDecks;
+      merged.presentations[deckId] = structuredClone(localPres);
     }
   }
 
@@ -463,14 +674,39 @@ function parseSlides(text) {
   return slides;
 }
 
+const REQUIRED_V_REDE_DECK_TEXT = {
+    'marker-les-3-v-rede-persoonlijk-naar-maatschappelijk': "[bullets] Les 3 V-rede: van persoonlijke scene naar stelling\nsubtitle: Doel: je onderwerp wordt een scherp maatschappelijk punt\n- Je gebruikt de scene uit les 2 als bewijs, niet als los verhaaltje\n- Je ontdekt welk patroon, welke waarde en welke verandering erbij horen\n- Aan het einde staat er een voorlopige stelling en brugalinea in je netschrift\n---\n[bullets] Aansluiting op les 2\nsubtitle: Van raken naar overtuigen\n- Les 2: je koos iets dat jou echt raakt en schreef een concrete scene\n- Vandaag: je laat zien waarom die scene meer betekent dan alleen jouw ervaring\n- Een indrukwekkende speech begint persoonlijk, maar eindigt niet bij jezelf\n---\n[bullets] Theorie: de ladder van betekenis\nsubtitle: Vijf treden voor een sterke V-rede\n- Scene: wat gebeurt er precies, waar, met wie, op welk moment?\n- Patroon: wat zie je hier vaker gebeuren?\n- Waarde: wat staat er op het spel, bijvoorbeeld vrijheid, waardigheid, rechtvaardigheid of veiligheid?\n- Stelling: wat moet het publiek anders gaan vinden?\n- Oproep: wat moet het publiek anders gaan doen?\n---\n[bullets] Theorie: geen spreekbeurt, maar betoog\nsubtitle: Je hoeft niet alles uit te leggen\n- Een spreekbeurt informeert: dit is mijn onderwerp\n- Een betoog stuurt: dit moet u anders zien\n- Een V-rede doet allebei: ze laat iets voelen en dwingt daarna tot een standpunt\n---\n[bullets] Model: van zwak naar sterk\nsubtitle: Maak het punt scherper\n- Zwak: buitensluiten is niet leuk\n- Sterker: wie elke dag alleen staat, leert langzaam dat niemand hem verwacht\n- Stelling: een klas is pas veilig als omstanders zich verantwoordelijk voelen voor wie buiten de groep valt\n---\n[bullets] Praktijk: bouw je kern\nsubtitle: Werk eerst in trefwoorden, daarna in zinnen\n- Onderstreep in je scene het detail dat het meest blijft hangen\n- Schrijf daaronder: dit laat zien dat ...\n- Maak daarna drie mogelijke stellingen en kies de scherpste\n- Testvraag: kan iemand het oneens zijn met jouw stelling? Dan is hij bruikbaar\n---\n[bullets] Netschrift: product van vandaag\nsubtitle: Dit moet aan het einde staan\n- 1. Mijn scene in een kernzin: ...\n- 2. Het patroon dat ik hierin zie: ...\n- 3. De waarde die op het spel staat: ...\n- 4. Mijn voorlopige stelling: ...\n- 5. Brugalinea van 5 tot 7 zinnen: van scene naar maatschappelijk probleem\n---\n[bullets] Korte deelronde\nsubtitle: Luisteren als kritisch publiek\n- Lees alleen je voorlopige stelling voor\n- Publiek reageert met: scherp, te algemeen of nog geen standpunt\n- Verbeter je stelling met een sterker werkwoord of concretere doelgroep",
+    'marker-les-4-v-rede-hoofd-en-hart': "[bullets] Les 4 V-rede: overtuigen met hoofd, hart en geloofwaardigheid\nsubtitle: Doel: je speech krijgt retorische kracht\n- Je leert ethos, pathos en logos gebruiken zonder trucjes\n- Je maakt je stelling geloofwaardig, voelbaar en logisch\n- Aan het einde heb je drie sterke bouwstenen voor je speech in je netschrift\n---\n[bullets] Aansluiting op les 3\nsubtitle: Van stelling naar overtuigingskracht\n- Les 3 leverde je stelling en brugalinea op\n- Vandaag onderzoek je waarom het publiek jou zou geloven\n- Een indrukwekkende speech overtuigt niet met volume, maar met gekozen bewijs\n---\n[bullets] Theorie: Aristoteles in gewone taal\nsubtitle: Ethos, pathos, logos\n- Ethos: het publiek vertrouwt jouw stem, omdat je eerlijk, precies en betrokken bent\n- Pathos: het publiek voelt de urgentie door beeld, ritme en menselijke gevolgen\n- Logos: het publiek kan jouw redenering volgen en ziet waarom je conclusie klopt\n---\n[bullets] Theorie: pathos is geen melodrama\nsubtitle: Gevoel werkt pas door precisie\n- Niet: dit is superzielig en verschrikkelijk\n- Wel: laat een concreet detail zien waardoor het publiek zelf iets voelt\n- Sterk pathos vertrouwt op het beeld, niet op uitroeptekens\n---\n[bullets] Theorie: logos is meer dan een feitje\nsubtitle: Maak je redenering zichtbaar\n- Gebruik oorzaak en gevolg: als wij dit normaal vinden, dan gebeurt er ...\n- Gebruik tegenstelling: we zeggen dat ..., maar in werkelijkheid ...\n- Gebruik voorbeeld en conclusie: deze scene laat zien dat ... dus ...\n---\n[bullets] Modelzinnen\nsubtitle: Niet overschrijven, wel nadoen\n- Ethos: ik spreek hierover niet omdat ik alles weet, maar omdat ik heb gezien wat stilte doet\n- Pathos: hij lachte mee, maar zijn schouders zakten elke keer iets verder\n- Logos: als niemand reageert, wordt wegkijken langzaam de regel van de groep\n---\n[bullets] Praktijk: schrijf drie overtuigingszinnen\nsubtitle: Daarna combineren\n- Schrijf een ethoszin: waarom mag jij hierover spreken?\n- Schrijf een pathoszin: welk beeld moet blijven hangen?\n- Schrijf een logoszin: welke redenering moet het publiek snappen?\n- Kies de beste twee en verbind ze tot een alinea van 6 tot 8 zinnen\n---\n[bullets] Netschrift: product van vandaag\nsubtitle: Dit gebruik je straks in je eerste versie\n- 1. Ethoszin\n- 2. Pathoszin met concreet beeld\n- 3. Logoszin met oorzaak-gevolg of tegenstelling\n- 4. Een overtuigingsalinea waarin je persoonlijke scene en stelling samenkomen\n- 5. Markeer met E, P en L waar ethos, pathos en logos zitten",
+    'marker-les-5-v-rede-bouwplan-indrukwekkende-speech': "[bullets] Les 5 V-rede: bouwplan voor een indrukwekkende speech\nsubtitle: Doel: je speech krijgt een route van binnenkomst tot slotzin\n- Je ordent je scene, stelling en overtuigingszinnen tot een heldere opbouw\n- Je leert hoe een speech spanning en richting krijgt\n- Aan het einde heb je een volledig bouwplan plus openingszin en slotzin\n---\n[bullets] Aansluiting op les 3 en 4\nsubtitle: Je materiaal ligt er al\n- Les 3: scene, patroon, waarde, stelling\n- Les 4: ethos, pathos, logos en overtuigingsalinea\n- Vandaag: je bepaalt in welke volgorde het publiek dit moet horen\n---\n[bullets] Theorie: klassieke speechopbouw\nsubtitle: Oud principe, moderne V-rede\n- Exordium: opening die aandacht en vertrouwen wint\n- Narratio: persoonlijke scene waardoor het publiek de kwestie ziet\n- Confirmatio: je stelling en sterkste argumenten\n- Peroratio: slot dat terugkeert naar het begin en oproept tot verandering\n---\n[bullets] Theorie: begin niet met je onderwerp\nsubtitle: Begin met spanning\n- Niet: mijn V-rede gaat over prestatiedruk\n- Wel: om 23.48 uur zat ik nog naar hetzelfde lege document te kijken\n- Een goede opening laat het publiek eerst kijken, daarna pas begrijpen\n---\n[bullets] Theorie: de kernzin\nsubtitle: De zin die moet blijven hangen\n- Je kernzin is kort genoeg om te onthouden\n- Hij bevat jouw standpunt, niet alleen je onderwerp\n- Hij kan terugkomen in je slot, eventueel net iets sterker geformuleerd\n---\n[bullets] Modelbouwplan\nsubtitle: Voorbeeldroute\n- Opening: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten\n- Scene: wat er in de pauze gebeurt en wat niemand zegt\n- Stelling: wegkijken maakt buitensluiting normaal\n- Argumenten: veiligheid, verantwoordelijkheid van omstanders, effect van kleine keuzes\n- Slot: kijk morgen niet naar je scherm als iemand naast jou geen plek heeft\n---\n[bullets] Praktijk: maak je route\nsubtitle: Van losse zinnen naar spreektekst\n- Zet je materiaal onder zes kopjes: opening, scene, probleem, argumenten, oproep, slot\n- Kies per kopje maximaal drie kernzinnen\n- Schrap alles wat niet helpt om je publiek naar je slot te brengen\n- Schrijf opening en slot volledig uit, niet in trefwoorden\n---\n[bullets] Netschrift: product van vandaag\nsubtitle: Startpunt voor les 6\n- 1. Bouwplan met zes kopjes: opening, scene, maatschappelijk probleem, argumenten, oproep, slot\n- 2. Per kopje 2 tot 3 kernzinnen of trefwoorden\n- 3. Een openingszin die begint met beeld, spanning of tegenstelling\n- 4. Een slotzin waarin je kernzin terugkomt als oproep\n- 5. Een check: welke zin moet het publiek na afloop onthouden?"
+};
+
+function requiredVredeDeck(markerId) {
+  const text = REQUIRED_V_REDE_DECK_TEXT[String(markerId || '').trim()];
+  return text ? parseSlides(text) : null;
+}
+
+function deckNeedsVredeRepair(markerId, slides) {
+  if (!requiredVredeDeck(markerId)) return false;
+  return !Array.isArray(slides) || !slides.length || markerDeckLooksPlaceholder(slides);
+}
+
 function queueAutoSave() {
-  const project = String(projectSelect.value || '').trim();
+  const project = String(renderedProject || projectSelect.value || '').trim();
   if (!project) return;
+  markLocalChanges();
   if (autosaveTimer) clearTimeout(autosaveTimer);
   autosaveTimer = window.setTimeout(() => {
     autosaveTimer = null;
-    saveProject({ auto: true });
+    saveProject({ auto: true, project });
   }, AUTOSAVE_DELAY_MS);
+}
+
+function flushAutoSave() {
+  if (!autosaveTimer) return;
+  const project = String(renderedProject || projectSelect.value || '').trim();
+  clearTimeout(autosaveTimer);
+  autosaveTimer = null;
+  if (project) saveProject({ auto: true, project });
 }
 
 function renderProject() {
@@ -486,7 +722,17 @@ function renderProject() {
 
   const rows = markerRowsForProject(project);
   markerBody.innerHTML = '';
+  let madeAutomaticRepair = false;
   for (const row of rows) {
+    if (project === 'V-rede' && deckNeedsVredeRepair(row.markerId, row.slides)) {
+      const required = requiredVredeDeck(row.markerId);
+      if (required) {
+        if (!madeAutomaticRepair) backupStudioDoc('voor automatische V-rede-reparatie');
+        madeAutomaticRepair = true;
+        row.slides = required;
+        pres.markerDecks[row.markerId] = structuredClone(required);
+      }
+    }
     const tr = document.createElement('tr');
     const text = serializeSlides(row.slides)
       .replace(/&/g, '&amp;')
@@ -494,22 +740,65 @@ function renderProject() {
       .replace(/>/g, '&gt;');
     tr.innerHTML = `
       <td>${row.markerId}</td>
-      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[title] Intro\\nsubtitle: ...\\n---\\n[bullets] Kern\\n- punt 1\\n- punt 2">${text}</textarea></td>
+      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[title] Intro met [linktekst](https://voorbeeld.nl)\\nsubtitle: Bekijk [bron](https://voorbeeld.nl)\\n---\\n[bullets] Kern\\n- punt 1 met [link](https://voorbeeld.nl)\\n- punt 2">${text}</textarea></td>
     `;
     markerBody.appendChild(tr);
   }
 
   for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
     textarea.addEventListener('input', queueAutoSave);
+    textarea.addEventListener('focus', () => {
+      activeLinkField = textarea;
+    });
   }
+  renderedProject = project;
 }
 
-function saveProject({ auto = false } = {}) {
-  const project = String(projectSelect.value || '').trim();
-  if (!project) return;
+function isLinkEditableField(element) {
+  return element?.classList?.contains('marker-textarea')
+    || element === deckTitleInput
+    || element === deckSubtitleInput;
+}
+
+function activeLinkEditableField() {
+  return activeLinkField && document.body.contains(activeLinkField)
+    ? activeLinkField
+    : isLinkEditableField(document.activeElement)
+      ? document.activeElement
+      : null;
+}
+
+function insertLinkForSelection() {
+  const field = activeLinkEditableField();
+  if (!field) {
+    setStatus('Selecteer eerst tekst in titel, subtitel of een slide-tekstvak.', true);
+    return;
+  }
+  const url = String(window.prompt('URL voor deze link:', 'https://') || '').trim();
+  if (!url) return;
+  if (!/^https?:\/\//i.test(url)) {
+    setStatus('Gebruik een volledige URL die begint met http:// of https://.', true);
+    return;
+  }
+
+  const start = field.selectionStart ?? field.value.length;
+  const end = field.selectionEnd ?? field.value.length;
+  const selected = field.value.slice(start, end) || 'linktekst';
+  const replacement = `[${selected}](${url})`;
+  field.setRangeText(replacement, start, end, 'select');
+  field.focus();
+  activeLinkField = field;
+  queueAutoSave();
+  setStatus('Link ingevoegd. Het project wordt automatisch opgeslagen.');
+}
+
+function saveProject({ auto = false, project: forcedProject = '' } = {}) {
+  const project = String(forcedProject || projectSelect.value || '').trim();
+  if (!project) return false;
   const deckId = projectDeckId(project);
   const pres = state.doc.presentations[deckId];
-  if (!pres) return;
+  if (!pres) return false;
+  backupStudioDoc(auto ? 'voor autosave' : 'voor handmatig opslaan');
 
   pres.title = String(deckTitleInput.value || '').trim() || project;
   pres.subtitle = String(deckSubtitleInput.value || '').trim() || project;
@@ -524,8 +813,9 @@ function saveProject({ auto = false } = {}) {
   compilePresentationFromMarkerDecks(pres, markerOrder, project);
 
   saveStudio();
-  if (auto) setStatus(`Automatisch opgeslagen: ${project}.`);
-  else setStatus(`Project opgeslagen: ${project}.`);
+  if (auto) setStatus(`Automatisch lokaal opgeslagen: ${project}. Klik op Project opslaan om ook naar de omgevingen te publiceren.`, hasLocalChanges ? 'busy' : 'info');
+  else setStatus(`Project lokaal opgeslagen: ${project}.`);
+  return true;
 }
 
 function deleteProject() {
@@ -591,6 +881,7 @@ async function boot() {
     const baseRaw = await fetchJson(BASE_SOURCE);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
     const seed = fromStorage ? JSON.parse(fromStorage) : null;
+    if (seed) backupStudioDoc('voor laden en samenvoegen', seed);
     state.doc = seed
       ? mergePreferRicherBase(baseRaw, seed)
       : ensureProjectPresentations(baseRaw);
@@ -605,11 +896,53 @@ async function boot() {
   }
 }
 
-projectSelect.addEventListener('change', renderProject);
-saveProjectBtn.addEventListener('click', () => saveProject({ auto: false }));
+projectSelect.addEventListener('change', () => {
+  flushAutoSave();
+  renderProject();
+});
+saveProjectBtn.addEventListener('click', async (event) => {
+  event.preventDefault();
+  setButtonBusy(saveProjectBtn, 'Opslaan...');
+  try {
+    const saved = saveProject({ auto: false });
+    if (!saved) {
+      setStatus('Opslaan mislukt: geen project geselecteerd.', 'error');
+      resetButton(saveProjectBtn);
+      return;
+    }
+    setStatus(`Project lokaal opgeslagen. Publiceren naar omgevingen...`, 'busy');
+    const published = await publishAll({ skipFlush: true, skipCurrentProjectSave: true });
+    if (published) {
+      setButtonDone(saveProjectBtn, 'Opgeslagen + gepubliceerd');
+    } else {
+      resetButton(saveProjectBtn);
+    }
+  } catch (err) {
+    console.error(err);
+    setStatus(`Opslaan mislukt: ${err?.message || err}`, 'error');
+    resetButton(saveProjectBtn);
+  } finally {
+    if (saveProjectBtn?.classList.contains('is-busy')) resetButton(saveProjectBtn);
+  }
+});
 deleteProjectBtn?.addEventListener('click', deleteProject);
 exportAllBtn?.addEventListener('click', exportAll);
+publishAllBtn?.addEventListener('click', publishAll);
+linkSelectionBtn?.addEventListener('click', insertLinkForSelection);
 deckTitleInput.addEventListener('input', queueAutoSave);
 deckSubtitleInput.addEventListener('input', queueAutoSave);
+deckTitleInput.addEventListener('focus', () => {
+  activeLinkField = deckTitleInput;
+});
+deckSubtitleInput.addEventListener('focus', () => {
+  activeLinkField = deckSubtitleInput;
+});
+document.addEventListener('keydown', (event) => {
+  if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+  if (!isLinkEditableField(document.activeElement)) return;
+  event.preventDefault();
+  activeLinkField = document.activeElement;
+  insertLinkForSelection();
+});
 
 boot();

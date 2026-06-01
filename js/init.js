@@ -6,15 +6,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('plattegrond');
   const LAST_LAYOUT_KEY = 'lespresentatie.lastLayoutType';
   const PLAN_STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
+  const PLATFORM_REFRESH_KEY = 'lespresentatie.platformRefresh';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const AGENDA_IMPORT_KEY = 'lespresentatie.agendaImportedPayload';
   const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
+  const LESSON_TRANSITION_LEAD_MS = 60 * 1000;
   const READING_PROJECT_NAME = 'heel veel lezen';
   const READING_BOARD_ASSIGNMENT = 'lees in je leesboek';
+  const STANDARD_READING_PRESENTATION_ID = 'project-heel-veel-lezen';
+  const STANDARD_READING_MARKER_ID = 'marker-heel-veel-lezen';
+  const STANDARD_READING_LESSON = {
+    project: 'Heel veel lezen',
+    lesson: 'Heel veel lezen',
+    lessonKey: 'READ',
+    presentationId: STANDARD_READING_PRESENTATION_ID,
+    presentationMarkerId: STANDARD_READING_MARKER_ID,
+    homework: 'leesboek en schoolpasje mee',
+    isStandardReadingLesson: true,
+  };
   const DEFAULT_BOARD_ASSIGNMENT = 'Zoek je plek en pak je spullen';
   const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+  const CURRENT_PROGRESS_ANCHORS = [
+    { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
+    { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
+    { grade: '3', project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-22' },
+    { classIds: ['G4D', '4G4', '4.4'], project: 'Taalmakers', lessonNumber: 1, anchorDate: '2026-05-29' },
+    { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
+  ];
+  const READING_LESSON_EXCEPTIONS = [
+    { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
+    { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
+  ];
   const WEEKDAY_LABELS = ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'];
   const BASE_SCHEDULE = {
     G1D: [
@@ -86,7 +110,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const presentationPrevBtn = document.getElementById('presentationPrevBtn');
   const presentationNextBtn = document.getElementById('presentationNextBtn');
   const presentationSlideCounter = document.getElementById('presentationSlideCounter');
+  const presentationSeriesPrevBtn = document.getElementById('presentationSeriesPrevBtn');
+  const presentationSeriesNextBtn = document.getElementById('presentationSeriesNextBtn');
+  const presentationSeriesPrevTitle = document.getElementById('presentationSeriesPrevTitle');
+  const presentationSeriesNextTitle = document.getElementById('presentationSeriesNextTitle');
   const opdrachtSelect = document.getElementById('opdrachtSelect');
+  const frontRoomBadge = document.getElementById('frontRoomBadge');
+  const frontTimeBadge = document.getElementById('frontTimeBadge');
+  const frontPresentationBtn = document.getElementById('frontPresentationBtn');
 
   let planningData = {};
   let planningPresentations = {};
@@ -115,6 +146,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeSlideIndex = 0;
   let lastRenderedSlideIndex = -1;
   let currentPlanningLessons = [];
+  let frontPresentationTarget = null;
+  let activeSeriesNav = { presentation: null, items: [], index: -1 };
   let autoBoardAssignmentLessonKey = '';
   let boardAssignmentWriteInProgress = false;
 
@@ -129,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     rebuildClassOptions(classIds);
 
-    const lastClass = localStorage.getItem('lastClassId');
+    const lastClass = mapSpecialClassAlias(localStorage.getItem('lastClassId'));
     if (lastClass && [...klasSelect.options].some((o) => o.value === lastClass)) {
       klasSelect.value = lastClass;
     } else if ([...klasSelect.options].some((o) => o.value === 'G1D')) {
@@ -327,6 +360,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   function mapSpecialClassAlias(value) {
     const cid = normalizeClassId(value);
     if (!cid) return '';
+    if (cid === '5G3') return '';
+    if (cid === '4G4' || cid === '4.4') return 'G4D';
+    if (cid === '4G5' || cid === '4.5') return 'G4E';
     const dottedNetl = cid.match(/^G([1-6])\.NETL(\d+)$/);
     if (dottedNetl) {
       const letter = indexToLetter(Number(dottedNetl[2]));
@@ -353,7 +389,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (/^G\d[A-Z]$/.test(cid)) aliases.add(cid.slice(1));
     if (/^\d[A-Z]$/.test(cid)) aliases.add(`G${cid}`);
     const dotted = cid.match(/^(\d)\.(\d+)$/);
-    if (dotted) aliases.add(`${dotted[1]}G${dotted[2]}`);
+    if (dotted) {
+      aliases.add(`${dotted[1]}G${dotted[2]}`);
+      if (dotted[1] === '4') {
+        const letter = indexToLetter(Number(dotted[2]));
+        if (letter) {
+          aliases.add(`G4${letter}`);
+          const netl = netlCodeFromLetter(letter);
+          if (netl) aliases.add(netl);
+        }
+      }
+    }
     const gym = cid.match(/^(\d)G(\d+)$/);
     if (gym) {
       aliases.add(`${gym[1]}.${gym[2]}`);
@@ -373,6 +419,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (netl) aliases.add(netl);
       const idx = letterToIndex(gLetter[1]);
       if (idx) aliases.add(`4G${idx}`);
+    }
+    if (cid === 'G4D') {
+      aliases.add('4G4');
+      aliases.add('4.4');
+    }
+    if (cid === 'G4E') {
+      aliases.add('4G5');
+      aliases.add('4.5');
     }
     return [...aliases];
   }
@@ -475,6 +529,220 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     return null;
+  }
+
+  function weekNumberFromPlanningKey(value) {
+    const raw = String(value || '').trim().toUpperCase();
+    const match = raw.match(/(?:^|W)(\d{1,2})$/);
+    return match ? Number(match[1]) : Number.NaN;
+  }
+
+  function getPlanningSourceIdsForClass(classId) {
+    const aliases = classIdAliases(classId).map((alias) => normalizeClassId(alias));
+    const gradeId = gradeLayerFromClassId(classId);
+    return [...new Set([
+      'ALL',
+      ...(gradeId ? [normalizeClassId(gradeId), normalizeClassId(`G${gradeId}`)] : []),
+      ...aliases,
+    ].filter(Boolean))];
+  }
+
+  function getPlanningWeekKeysForClass(classId) {
+    const keys = new Set();
+    for (const sourceId of getPlanningSourceIdsForClass(classId)) {
+      const weeks = planningData[sourceId] || {};
+      for (const key of Object.keys(weeks)) keys.add(key);
+    }
+    return [...keys].sort((left, right) => {
+      const leftWeek = weekNumberFromPlanningKey(left);
+      const rightWeek = weekNumberFromPlanningKey(right);
+      if (Number.isFinite(leftWeek) && Number.isFinite(rightWeek)) return leftWeek - rightWeek;
+      return String(left).localeCompare(String(right), 'nl', { numeric: true });
+    });
+  }
+
+  function getMergedPlanningWeekForClass(classId, weekKey) {
+    const key = String(weekKey || '').trim().toUpperCase();
+    if (!key) return null;
+    const sources = getPlanningSourceIdsForClass(classId)
+      .map((sourceId) => planningData[sourceId]?.[key] || null)
+      .filter(Boolean);
+    if (!sources.length) return null;
+    return mergePlanEntries(...sources);
+  }
+
+  function getCurrentProgressAnchor(classId) {
+    const classAliases = classIdAliases(classId).map((alias) => normalizeClassId(alias));
+    const grade = gradeLayerFromClassId(classId);
+    return CURRENT_PROGRESS_ANCHORS.find((anchor) => {
+      const classIds = Array.isArray(anchor.classIds)
+        ? anchor.classIds.map((value) => normalizeClassId(value))
+        : [];
+      if (classIds.some((value) => classAliases.includes(value))) return true;
+      return String(anchor.grade || '') === grade;
+    }) || null;
+  }
+
+  function lessonNumberFromTitle(value) {
+    const match = String(value || '').trim().match(/^(?:les\s*)?\D*(\d+)/i);
+    return match ? Number(match[1]) : Number.NaN;
+  }
+
+  function isSameAgendaEntry(left, right) {
+    if (!left || !right) return false;
+    const leftStart = left.start instanceof Date ? left.start : new Date(left.start || '');
+    const rightStart = right.start instanceof Date ? right.start : new Date(right.start || '');
+    return !Number.isNaN(leftStart.getTime())
+      && !Number.isNaN(rightStart.getTime())
+      && leftStart.getTime() === rightStart.getTime()
+      && classIdMatch(left.classId, right.classId);
+  }
+
+  function isLastAgendaEntryOfWeekForClass(classId, agendaEntry) {
+    if (!agendaEntry?.start) return false;
+    const weekId = isoWeekInfo(agendaEntry.start).id;
+    const weekEntries = agendaEntriesForClass(agendaEntries, classId)
+      .filter((entry) => entry?.start && isoWeekInfo(entry.start).id === weekId)
+      .sort((left, right) => left.start - right.start);
+    const lastEntry = weekEntries[weekEntries.length - 1] || null;
+    return isSameAgendaEntry(lastEntry, agendaEntry);
+  }
+
+  function isClassSpecificProgressOverride(override) {
+    return Array.isArray(override?.classIds) && override.classIds.length > 0;
+  }
+
+  function standardReadingPlanning() {
+    return {
+      weekKey: '',
+      weekData: { lessons: [STANDARD_READING_LESSON], items: [], note: '' },
+      lesson: STANDARD_READING_LESSON,
+    };
+  }
+
+  function isStandardReadingDay(agendaEntry) {
+    if (!agendaEntry?.start) return false;
+    const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
+    return !Number.isNaN(start.getTime()) && start.getDay() === 1;
+  }
+
+  function localDateRange(dateText) {
+    const match = String(dateText || '').trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return null;
+    const start = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]), 0, 0, 0, 0);
+    const end = new Date(start);
+    end.setDate(end.getDate() + 1);
+    return { start, end };
+  }
+
+  function getOrderedPlanningLessonsForClass(classId) {
+    const lessons = [];
+    const seen = new Set();
+    for (const weekKey of getPlanningWeekKeysForClass(classId)) {
+      const weekData = getMergedPlanningWeekForClass(classId, weekKey);
+      for (const lesson of (weekData?.lessons || [])) {
+        if (String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL') === READING_PROJECT_NAME) continue;
+        const key = `${weekKey}__${String(lesson.lessonKey || '').trim().toUpperCase()}__${String(lesson.lesson || '').trim()}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        lessons.push({ weekKey, weekData, lesson });
+      }
+    }
+    return lessons;
+  }
+
+  function getAnchorLessonIndexes(classId, anchor, orderedLessons) {
+    const projectKey = String(anchor.project || '').trim().toLocaleLowerCase('nl-NL');
+    const targetLessonNumbers = (Array.isArray(anchor.lessonNumbers) ? anchor.lessonNumbers : [anchor.lessonNumber])
+      .map((value) => Number(value))
+      .filter((value) => Number.isFinite(value));
+    return targetLessonNumbers
+      .map((lessonNumber) => orderedLessons.findIndex((item) => (
+        String(item.lesson?.project || '').trim().toLocaleLowerCase('nl-NL') === projectKey
+        && lessonNumberFromTitle(item.lesson?.lesson) === lessonNumber
+      )))
+      .filter((index) => index >= 0);
+  }
+
+  function anchorUsesProjectForAgendaEntry(classId, anchor, agendaEntry) {
+    if (!agendaEntry) return false;
+    if (anchor.useProjectOnFirstLesson) return true;
+    const agendaLessonNumber = lessonNumberForWeek(agendaEntries, agendaEntry);
+    if (agendaLessonNumber <= 1) return false;
+    if (isClassSpecificProgressOverride(anchor) && !isLastAgendaEntryOfWeekForClass(classId, agendaEntry)) {
+      return false;
+    }
+    return true;
+  }
+
+  function isReadingLessonException(classId, agendaEntry) {
+    if (!agendaEntry?.start) return false;
+    const date = localDateKey(agendaEntry.start);
+    const lessonNumber = lessonNumberForWeek(agendaEntries, agendaEntry);
+    return READING_LESSON_EXCEPTIONS.some((exception) => {
+      const classIds = Array.isArray(exception.classIds) ? exception.classIds : [];
+      return String(exception.date || '') === date
+        && Number(exception.lessonNumber) === lessonNumber
+        && classIds.some((value) => classIdMatch(classId, value));
+    });
+  }
+
+  function anchorAgendaOffset(classId, anchor, agendaEntry) {
+    if (!agendaEntry?.start) return 0;
+    const anchorRange = localDateRange(anchor.anchorDate);
+    if (!anchorRange) return 0;
+    const classEntries = agendaEntriesForClass(agendaEntries, classId)
+      .filter((entry) => entry?.start && entry.start >= anchorRange.start)
+      .sort((left, right) => left.start - right.start);
+    const anchorEntryIndex = classEntries.findIndex((entry) => (
+      entry.start >= anchorRange.start
+      && anchorUsesProjectForAgendaEntry(classId, anchor, entry)
+    ));
+    if (anchorEntryIndex < 0) return 0;
+    const targetIndex = classEntries.findIndex((entry) => isSameAgendaEntry(entry, agendaEntry));
+    if (targetIndex < 0 || targetIndex <= anchorEntryIndex) return 0;
+    return targetIndex - anchorEntryIndex;
+  }
+
+  function findCurrentProgressPlanning(classId, agendaEntry = null) {
+    if (isStandardReadingDay(agendaEntry)) {
+      return standardReadingPlanning();
+    }
+
+    const anchor = getCurrentProgressAnchor(classId);
+    if (!anchor) return null;
+    const agendaLessonNumber = agendaEntry ? lessonNumberForWeek(agendaEntries, agendaEntry) : 0;
+    if (isReadingLessonException(classId, agendaEntry)) {
+      return standardReadingPlanning();
+    }
+    if (agendaEntry && agendaLessonNumber <= 1 && !anchor.useProjectOnFirstLesson) {
+      return standardReadingPlanning();
+    }
+    if (
+      isClassSpecificProgressOverride(anchor)
+      && agendaEntry
+      && !isLastAgendaEntryOfWeekForClass(classId, agendaEntry)
+      && !anchor.useProjectOnFirstLesson
+    ) {
+      return standardReadingPlanning();
+    }
+
+    const orderedLessons = getOrderedPlanningLessonsForClass(classId);
+    const anchorIndexes = getAnchorLessonIndexes(classId, anchor, orderedLessons);
+    if (!orderedLessons.length || !anchorIndexes.length) return null;
+    const bundleSize = anchorIndexes.length;
+    const offset = anchorAgendaOffset(classId, anchor, agendaEntry);
+    const startIndex = Math.min(...anchorIndexes) + (offset <= 0 ? 0 : bundleSize + offset - 1);
+    const lessonCount = offset <= 0 ? bundleSize : 1;
+    if (startIndex >= orderedLessons.length) return null;
+    const matches = orderedLessons.slice(startIndex, startIndex + lessonCount);
+    const mergedWeekData = mergePlanEntries(...matches.map((match) => match.weekData));
+    return {
+      weekKey: matches[0].weekKey,
+      weekData: mergedWeekData,
+      lesson: matches[0].lesson,
+      lessons: matches.map((match) => match.lesson),
+    };
   }
 
   function coerceItems(value) {
@@ -1115,12 +1383,30 @@ document.addEventListener('DOMContentLoaded', async () => {
       && a.getDate() === b.getDate();
   }
 
+  function agendaEntrySwitchAt(entry) {
+    if (!entry?.end) return null;
+    const end = entry.end instanceof Date ? entry.end : new Date(entry.end);
+    if (Number.isNaN(end.getTime())) return null;
+    return new Date(end.getTime() - LESSON_TRANSITION_LEAD_MS);
+  }
+
+  function isAgendaEntryActiveForSelection(entry, now = new Date()) {
+    if (!entry?.start) return false;
+    const switchAt = agendaEntrySwitchAt(entry);
+    return Boolean(switchAt) && now >= entry.start && now < switchAt;
+  }
+
+  function isAgendaEntryPastForSelection(entry, now = new Date()) {
+    const switchAt = agendaEntrySwitchAt(entry);
+    return Boolean(switchAt) && switchAt <= now;
+  }
+
   function findAgendaEntryForCurrentOrLast(entries, now = new Date()) {
     const sorted = [...entries].sort((a, b) => a.start - b.start);
     if (!sorted.length) return null;
 
-    // 1) Class that is currently being taught right now.
-    const activeNow = sorted.find((entry) => now >= entry.start && now <= entry.end);
+    // 1) Class that is currently being taught, with the next lesson selected 1 minute early.
+    const activeNow = sorted.find((entry) => isAgendaEntryActiveForSelection(entry, now));
     if (activeNow) return activeNow;
 
     // 2) If no active class now, prefer the next upcoming class.
@@ -1128,7 +1414,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (upcoming) return upcoming;
 
     // 3) Final fallback: most recently finished class.
-    const past = sorted.filter((entry) => entry.end <= now);
+    const past = sorted.filter((entry) => isAgendaEntryPastForSelection(entry, now));
     if (past.length) return past[past.length - 1];
     return null;
   }
@@ -1136,7 +1422,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function findAgendaEntryForCurrentOrNext(entries, now = new Date()) {
     const sorted = [...entries].sort((a, b) => a.start - b.start);
     if (!sorted.length) return null;
-    const activeNow = sorted.find((entry) => now >= entry.start && now <= entry.end);
+    const activeNow = sorted.find((entry) => isAgendaEntryActiveForSelection(entry, now));
     if (activeNow) return activeNow;
     return sorted.find((entry) => entry.start >= now) || null;
   }
@@ -1470,10 +1756,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   function baseShouldReplaceLocal(baseDoc, localDoc) {
     const baseRevision = String(baseDoc?.sourceRevision || '').trim();
     const localRevision = String(localDoc?.sourceRevision || '').trim();
-    if (baseRevision && localRevision && baseRevision !== localRevision) return true;
-    if (baseRevision && !localRevision) return true;
     const baseStamp = parseDocTimestamp(baseDoc);
     const localStamp = parseDocTimestamp(localDoc);
+    if (baseRevision && localRevision && baseRevision !== localRevision) {
+      return !(localStamp && (!baseStamp || localStamp >= baseStamp));
+    }
+    if (baseRevision && !localRevision) {
+      return !(localStamp && baseStamp && localStamp >= baseStamp);
+    }
     if (!baseStamp || !localStamp) return false;
     return baseStamp > localStamp;
   }
@@ -1493,13 +1783,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     return Number.isFinite(value) ? value : 0;
   }
 
+  function basePresentationShouldReplaceLocal(deckId, basePres, localPres) {
+    const baseVersion = presentationImportVersion(basePres);
+    const localVersion = presentationImportVersion(localPres);
+    if (deckId === 'project-v-rede' && baseVersion >= localVersion) return true;
+    return baseVersion > localVersion;
+  }
+
+  function markerDeckHasRealContent(deck) {
+    if (!Array.isArray(deck)) return false;
+    return deck.some((slide) => {
+      if (!slide || typeof slide !== 'object') return false;
+      const items = Array.isArray(slide.items)
+        ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+        : [];
+      if (items.length) return true;
+      const type = String(slide.type || '').trim().toLowerCase();
+      const subtitle = String(slide.subtitle || '').trim();
+      return type === 'bullets' || (deck.length > 1 && subtitle);
+    });
+  }
+
+  function markerDeckLacksRealContent(deck) {
+    return !Array.isArray(deck) || !markerDeckHasRealContent(deck);
+  }
+
+  function markerDeckLooksPlaceholder(deck) {
+    if (!Array.isArray(deck) || deck.length !== 1) return false;
+    const slide = deck[0];
+    if (!slide || typeof slide !== 'object') return false;
+    const items = Array.isArray(slide.items)
+      ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+      : [];
+    const title = String(slide.title || '').trim();
+    const subtitle = String(slide.subtitle || '').trim();
+    return !items.length
+      && String(slide.type || 'title').trim().toLowerCase() !== 'bullets'
+      && /^Les\s+\d+\s+V-rede:/i.test(title)
+      && subtitle === 'V-rede';
+  }
+
   function mergeStudioPreferRicherBase(baseDoc, localDoc) {
     const base = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(baseDoc)));
     const local = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(localDoc)));
-    if (baseShouldReplaceLocal(base, local)) {
-      return base;
-    }
     const merged = normalizeStudioDoc(local);
+    if (Array.isArray(base.entries) && base.entries.length) merged.entries = structuredClone(base.entries);
+    if (Array.isArray(base.holidays)) merged.holidays = structuredClone(base.holidays);
 
     if (!merged.presentations || typeof merged.presentations !== 'object') {
       merged.presentations = {};
@@ -1515,15 +1844,30 @@ document.addEventListener('DOMContentLoaded', async () => {
       const localCount = markerDeckSlideCount(localPres);
       const baseMarkers = Object.keys(basePres.markers || {}).length;
       const localMarkers = Object.keys(localPres.markers || {}).length;
-      const baseVersion = presentationImportVersion(basePres);
-      const localVersion = presentationImportVersion(localPres);
 
-      if (
-        baseVersion > localVersion
-        || baseCount > localCount
-        || baseMarkers > localMarkers
-      ) {
-        merged.presentations[deckId] = structuredClone(basePres);
+      const localDecks = localPres.markerDecks && typeof localPres.markerDecks === 'object'
+        ? localPres.markerDecks
+        : {};
+      const baseDecks = basePres.markerDecks && typeof basePres.markerDecks === 'object'
+        ? basePres.markerDecks
+        : {};
+      let replacedPlaceholderDeck = false;
+      for (const [markerId, baseDeck] of Object.entries(baseDecks)) {
+        const localDeck = localDecks[markerId];
+        if (
+          (
+            markerDeckLacksRealContent(localDeck)
+            || markerDeckLooksPlaceholder(localDeck)
+          )
+          && markerDeckHasRealContent(baseDeck)
+        ) {
+          localDecks[markerId] = structuredClone(baseDeck);
+          replacedPlaceholderDeck = true;
+        }
+      }
+      if (replacedPlaceholderDeck) {
+        localPres.markerDecks = localDecks;
+        merged.presentations[deckId] = structuredClone(localPres);
       }
     }
     return ensureProjectOverviewPresentations(collapseToYearLayerDoc(merged));
@@ -1587,7 +1931,102 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
+  function isStandardReadingLesson(lessonOrTarget) {
+    if (!lessonOrTarget || typeof lessonOrTarget !== 'object') return false;
+    if (lessonOrTarget.isStandardReadingLesson) return true;
+    const project = String(lessonOrTarget.project || '').trim().toLocaleLowerCase('nl-NL');
+    const title = String(lessonOrTarget.lesson || lessonOrTarget.title || '').trim().toLocaleLowerCase('nl-NL');
+    const presentationId = String(lessonOrTarget.presentationId || '').trim();
+    return project === READING_PROJECT_NAME
+      || title === READING_PROJECT_NAME
+      || presentationId === STANDARD_READING_PRESENTATION_ID;
+  }
+
+  function standardReadingPresentation() {
+    return {
+      id: STANDARD_READING_PRESENTATION_ID,
+      presentationType: 'standard-reading',
+      title: 'Heel veel lezen',
+      project: 'Heel veel lezen',
+      projectTheme: {
+        borderColor: '#d8c39a',
+        bgStart: '#fffaf0',
+        bgMid: '#f3e4c4',
+        bgEnd: '#ead1a3',
+        shadowColor: 'rgba(87, 61, 34, 0.24)',
+        accent: '#7f2436',
+        accent2: '#b45d3d',
+        accent3: '#d8a957',
+        titleColor: '#211915',
+        subtitleColor: '#674a32',
+        bulletColor: '#2d241e',
+        linkColor: '#7f2436',
+        linkHoverColor: '#4f1722',
+      },
+      markers: {
+        [STANDARD_READING_MARKER_ID]: 0,
+      },
+      markerDecks: {
+        [STANDARD_READING_MARKER_ID]: [
+          {
+            type: 'title',
+            title: 'Heel veel lezen',
+            subtitle: 'Pak je leesboek, zoek rust en lees verder waar je gebleven was.',
+          },
+          {
+            type: 'bullets',
+            title: 'Leeshouding',
+            subtitle: 'Maak er een stille leesstart van',
+            items: [
+              'Leesboek open op je eigen bladzijde.',
+              'Schoolpasje op tafel.',
+              'Telefoon weg, tas dicht.',
+              'Lees in stilte tot de docent het aangeeft.',
+            ],
+          },
+          {
+            type: 'title',
+            title: 'Duik in je verhaal',
+            subtitle: 'Vandaag telt alleen lezen.',
+          },
+        ],
+      },
+      slides: [
+        {
+          type: 'title',
+          title: 'Heel veel lezen',
+          subtitle: 'Pak je leesboek, zoek rust en lees verder waar je gebleven was.',
+        },
+        {
+          type: 'bullets',
+          title: 'Leeshouding',
+          subtitle: 'Maak er een stille leesstart van',
+          items: [
+            'Leesboek open op je eigen bladzijde.',
+            'Schoolpasje op tafel.',
+            'Telefoon weg, tas dicht.',
+            'Lees in stilte tot de docent het aangeeft.',
+          ],
+        },
+        {
+          type: 'title',
+          title: 'Duik in je verhaal',
+          subtitle: 'Vandaag telt alleen lezen.',
+        },
+      ],
+    };
+  }
+
+  function lessonHasInternalPresentation(lesson) {
+    if (isStandardReadingLesson(lesson)) return true;
+    return Boolean(lesson?.presentationId && planningPresentations[lesson.presentationId]);
+  }
+
   function resolveInternalPresentation(target) {
+    if (isStandardReadingLesson(target)) {
+      return { presentation: standardReadingPresentation(), markerId: STANDARD_READING_MARKER_ID };
+    }
+
     if (!target || !planningPresentations || typeof planningPresentations !== 'object') {
       return { presentation: null, markerId: '' };
     }
@@ -1668,7 +2107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .replaceAll('"', '&quot;')
       .replaceAll("'", '&#39;');
 
-    const subtitleHtml = (value) => {
+    const linkedTextHtml = (value) => {
       const raw = String(value || '').trim();
       if (!raw) return '';
       const markdownPattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
@@ -1676,10 +2115,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       const fragments = [];
       let lastIndex = 0;
       let match = null;
+      const appendAutoLinkedText = (text) => {
+        let tailIndex = 0;
+        let urlMatch = null;
+        while ((urlMatch = urlPattern.exec(text))) {
+          if (urlMatch.index > tailIndex) {
+            fragments.push(escapeHtml(text.slice(tailIndex, urlMatch.index)));
+          }
+          const href = escapeHtml(urlMatch[1]);
+          fragments.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${href}</a>`);
+          tailIndex = urlMatch.index + urlMatch[0].length;
+        }
+        if (tailIndex < text.length) {
+          fragments.push(escapeHtml(text.slice(tailIndex)));
+        }
+      };
 
       while ((match = markdownPattern.exec(raw))) {
         if (match.index > lastIndex) {
-          fragments.push(escapeHtml(raw.slice(lastIndex, match.index)));
+          appendAutoLinkedText(raw.slice(lastIndex, match.index));
         }
         const label = escapeHtml(match[1]);
         const href = escapeHtml(match[2]);
@@ -1689,19 +2143,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const tail = raw.slice(lastIndex);
       if (tail) {
-        let tailIndex = 0;
-        let urlMatch = null;
-        while ((urlMatch = urlPattern.exec(tail))) {
-          if (urlMatch.index > tailIndex) {
-            fragments.push(escapeHtml(tail.slice(tailIndex, urlMatch.index)));
-          }
-          const href = escapeHtml(urlMatch[1]);
-          fragments.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${href}</a>`);
-          tailIndex = urlMatch.index + urlMatch[0].length;
-        }
-        if (tailIndex < tail.length) {
-          fragments.push(escapeHtml(tail.slice(tailIndex)));
-        }
+        appendAutoLinkedText(tail);
       }
 
       return fragments.join('');
@@ -1740,29 +2182,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       const items = Array.isArray(slide.items) ? slide.items : [];
+      const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card"${cardStyleAttr}>
+        <article class="presentation-slide-card${titleLengthClass}"${cardStyleAttr}>
           ${logoHtml}
-          <h2 class="presentation-slide-title">${title}</h2>
-          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
+          <h2 class="presentation-slide-title">${linkedTextHtml(title)}</h2>
+          ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
           <ul class="presentation-slide-bullets">
-            ${items.map((item) => `<li>${subtitleHtml(item)}</li>`).join('')}
+            ${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}
           </ul>
         </article>
       `;
     } else {
       const title = String(slide.title || activePresentation.title || 'Presentatie').trim();
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
+      const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card"${cardStyleAttr}>
+        <article class="presentation-slide-card${titleLengthClass}"${cardStyleAttr}>
           ${logoHtml}
-          <h1 class="presentation-slide-title">${title}</h1>
-          ${subtitle ? `<p class="presentation-slide-subtitle">${subtitleHtml(subtitle)}</p>` : ''}
+          <h1 class="presentation-slide-title">${linkedTextHtml(title)}</h1>
+          ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
         </article>
       `;
     }
 
     if (presentationSlideCounter) presentationSlideCounter.textContent = `${idx + 1} / ${slides.length}`;
+    if (presentationInternal) {
+      const progress = slides.length > 1 ? ((idx + 1) / slides.length) : 1;
+      presentationInternal.style.setProperty('--slide-progress', String(progress));
+    }
     if (presentationPrevBtn) presentationPrevBtn.disabled = idx <= 0;
     if (presentationNextBtn) presentationNextBtn.disabled = idx >= slides.length - 1;
     lastRenderedSlideIndex = idx;
@@ -1772,9 +2220,135 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!presentationInternalStage) return;
     presentationInternalStage.innerHTML = `<article class="presentation-slide-card"><p class="presentation-slide-subtitle">${String(message || '').trim()}</p></article>`;
     if (presentationSlideCounter) presentationSlideCounter.textContent = '0 / 0';
+    if (presentationInternal) presentationInternal.style.setProperty('--slide-progress', '0');
     if (presentationPrevBtn) presentationPrevBtn.disabled = true;
     if (presentationNextBtn) presentationNextBtn.disabled = true;
     lastRenderedSlideIndex = -1;
+  }
+
+  function slideIndexForPresentationMarker(presentation, markerId) {
+    const raw = Number(presentation?.markers?.[markerId]);
+    const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+    if (!Number.isInteger(raw) || !slides.length) return -1;
+    return Math.max(0, Math.min(slides.length - 1, raw));
+  }
+
+  function nextSlideIndexAfterPresentationMarker(presentation, markerId) {
+    const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+    const start = slideIndexForPresentationMarker(presentation, markerId);
+    if (start < 0) return slides.length;
+    const markerIndexes = Object.entries(presentation?.markers || {})
+      .filter(([id]) => id !== markerId)
+      .map(([, value]) => Number(value))
+      .filter((value) => Number.isInteger(value) && value > start && value <= slides.length)
+      .sort((a, b) => a - b);
+    return markerIndexes[0] ?? slides.length;
+  }
+
+  function lessonSlidesForPresentationMarker(presentation, markerId) {
+    const markerDeck = Array.isArray(presentation?.markerDecks?.[markerId])
+      ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
+      : [];
+    if (markerDeckHasRealContent(markerDeck)) return markerDeck;
+
+    const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
+    const start = slideIndexForPresentationMarker(presentation, markerId);
+    if (start < 0 || !slides.length) return [];
+    const end = Math.max(start + 1, nextSlideIndexAfterPresentationMarker(presentation, markerId));
+    return slides.slice(start, end);
+  }
+
+  function seriesMarkerTitle(presentation, markerId) {
+    const markerSlides = lessonSlidesForPresentationMarker(presentation, markerId);
+    const firstSlide = markerSlides.find((slide) => String(slide?.title || '').trim()) || markerSlides[0] || null;
+    const title = String(firstSlide?.title || '').trim();
+    if (title) return title;
+    return String(markerId || '')
+      .replace(/^marker-/, '')
+      .replaceAll('-', ' ')
+      .replace(/\b\w/g, (char) => char.toLocaleUpperCase('nl-NL'));
+  }
+
+  function seriesMarkerItems(presentation) {
+    const entries = Object.entries(presentation?.markers || {})
+      .map(([markerId, value]) => ({ markerId, index: Number(value) }))
+      .filter((item) => item.markerId && Number.isInteger(item.index))
+      .sort((a, b) => a.index - b.index);
+    const seen = new Set();
+    return entries
+      .filter((item) => {
+        if (seen.has(item.markerId)) return false;
+        seen.add(item.markerId);
+        return lessonSlidesForPresentationMarker(presentation, item.markerId).length > 0;
+      })
+      .map((item) => ({
+        ...item,
+        title: seriesMarkerTitle(presentation, item.markerId),
+      }));
+  }
+
+  function shortenSeriesTitle(value) {
+    const clean = String(value || '').replace(/\s+/g, ' ').trim();
+    return clean.length > 44 ? `${clean.slice(0, 43).trim()}…` : clean;
+  }
+
+  function updateSeriesNavControls() {
+    const items = activeSeriesNav.items || [];
+    const index = activeSeriesNav.index;
+    const previous = index > 0 ? items[index - 1] : null;
+    const next = index >= 0 && index < items.length - 1 ? items[index + 1] : null;
+
+    if (presentationSeriesPrevBtn) {
+      presentationSeriesPrevBtn.hidden = !previous;
+      presentationSeriesPrevBtn.disabled = !previous;
+      presentationSeriesPrevBtn.title = previous ? `Vorige les: ${previous.title}` : '';
+    }
+    if (presentationSeriesPrevTitle) {
+      presentationSeriesPrevTitle.textContent = previous ? shortenSeriesTitle(previous.title) : '';
+    }
+
+    if (presentationSeriesNextBtn) {
+      presentationSeriesNextBtn.hidden = !next;
+      presentationSeriesNextBtn.disabled = !next;
+      presentationSeriesNextBtn.title = next ? `Volgende les: ${next.title}` : '';
+    }
+    if (presentationSeriesNextTitle) {
+      presentationSeriesNextTitle.textContent = next ? shortenSeriesTitle(next.title) : '';
+    }
+  }
+
+  function setActiveSeriesNav(presentation, markerId) {
+    const items = seriesMarkerItems(presentation);
+    activeSeriesNav = {
+      presentation,
+      items,
+      index: items.findIndex((item) => item.markerId === markerId),
+    };
+    updateSeriesNavControls();
+  }
+
+  function applyPresentationMarker(presentation, markerId) {
+    const titleText = presentation?.project
+      ? `${presentation.project} · ${seriesMarkerTitle(presentation, markerId)}`
+      : seriesMarkerTitle(presentation, markerId);
+    if (presentationEmbedTitle) presentationEmbedTitle.textContent = titleText;
+
+    const lessonSlides = lessonSlidesForPresentationMarker(presentation, markerId);
+    if (lessonSlides.length) {
+      activePresentation = {
+        ...presentation,
+        slides: lessonSlides,
+      };
+      activeSlideIndex = 0;
+    } else {
+      activePresentation = presentation;
+      const markerIdx = Number(presentation?.markers?.[markerId]);
+      activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
+    }
+    lastRenderedSlideIndex = -1;
+    if (presentationInternal) presentationInternal.hidden = false;
+    renderInternalSlide();
+    setActiveSeriesNav(presentation, markerId);
   }
 
   function applyPresentationTarget(target) {
@@ -1787,17 +2361,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resolved = resolveInternalPresentation(target);
     const internal = resolved.presentation;
     if (internal) {
-      activePresentation = internal;
-      const markerIdx = Number(internal?.markers?.[resolved.markerId || target.markerId]);
-      activeSlideIndex = Number.isInteger(markerIdx) ? markerIdx : 0;
-      lastRenderedSlideIndex = -1;
-      if (presentationInternal) presentationInternal.hidden = false;
-      renderInternalSlide();
+      const markerId = resolved.markerId || target.markerId;
+      applyPresentationMarker(internal, markerId);
       return;
     }
 
     activePresentation = null;
     activeSlideIndex = 0;
+    activeSeriesNav = { presentation: null, items: [], index: -1 };
+    updateSeriesNavControls();
     if (presentationInternal) presentationInternal.hidden = false;
     renderInternalNotice('Interne presentatie niet gevonden voor deze lesmarker.');
   }
@@ -1805,18 +2377,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   function openPresentationPanel(target) {
     if (!plattegrondFrame || !target) return;
     applyPresentationTarget(target);
+    document.body.classList.add('presentation-open');
     plattegrondFrame.classList.add('is-flipped');
     isPresentationOpen = true;
+    enterPresentationFullscreen();
   }
 
   function closePresentationPanel() {
     if (!plattegrondFrame) return;
     plattegrondFrame.classList.remove('is-flipped');
+    document.body.classList.remove('presentation-open');
     isPresentationOpen = false;
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch((err) => {
+        console.warn('Fullscreen afsluiten niet beschikbaar:', err);
+      });
+    }
   }
 
   async function togglePresentationFullscreen() {
-    const target = presentationInternal || plattegrondFrame;
+    const target = document.documentElement || presentationInternal || plattegrondFrame;
     if (!target) return;
     try {
       if (document.fullscreenElement) {
@@ -1824,6 +2404,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         await target.requestFullscreen();
       }
+    } catch (err) {
+      console.warn('Fullscreen niet beschikbaar:', err);
+    }
+  }
+
+  async function enterPresentationFullscreen() {
+    const target = document.documentElement || presentationInternal || plattegrondFrame;
+    if (!target || document.fullscreenElement) return;
+    try {
+      await target.requestFullscreen();
     } catch (err) {
       console.warn('Fullscreen niet beschikbaar:', err);
     }
@@ -1913,6 +2503,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  function updateFrontLessonControls({ entry = null, basisSlot = null, lessons = [] } = {}) {
+    const room = entry ? agendaRoomLabel(entry) : String(basisSlot?.room || '').trim();
+    const start = entry?.start instanceof Date ? entry.start : null;
+    const end = entry?.end instanceof Date ? entry.end : null;
+    const timeLabel = start && end
+      ? `${start.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}-${end.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })}`
+      : (basisSlot?.start && basisSlot?.end ? `${basisSlot.start}-${basisSlot.end}` : '-');
+
+    if (frontRoomBadge) frontRoomBadge.textContent = room || '-';
+    if (frontTimeBadge) frontTimeBadge.textContent = timeLabel || '-';
+
+    const lessonWithPresentation = (Array.isArray(lessons) ? lessons : [])
+      .find((lesson) => lessonHasInternalPresentation(lesson));
+    frontPresentationTarget = lessonWithPresentation ? buildPresentationTarget(lessonWithPresentation) : null;
+    if (frontPresentationBtn) {
+      frontPresentationBtn.disabled = !frontPresentationTarget;
+      frontPresentationBtn.textContent = frontPresentationTarget ? 'Ga naar presentatie' : 'Geen presentatie';
+      frontPresentationBtn.title = frontPresentationTarget
+        ? `${frontPresentationTarget.project ? `${frontPresentationTarget.project}: ` : ''}${frontPresentationTarget.title}`
+        : 'Geen presentatie gekoppeld aan deze les';
+    }
+  }
+
+  const NETSCHRIFT_SUBMISSION_PREFIX = 'INLEVERMOMENT_NETSCHRIFT:';
+
+  function isNetschriftSubmissionItem(item) {
+    return String(item || '').trim().startsWith(NETSCHRIFT_SUBMISSION_PREFIX);
+  }
+
+  function cleanNetschriftSubmissionItem(item) {
+    return String(item || '').trim().replace(NETSCHRIFT_SUBMISSION_PREFIX, '').trim();
+  }
+
   function setPlanningItems(items = [], note = '', lessons = [], context = {}) {
     if (!planningItemsEl) return;
     planningItemsEl.replaceChildren();
@@ -1930,7 +2553,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const prefix = document.createElement('span');
       prefix.textContent = 'Les: ';
       lessonLine.appendChild(prefix);
-      if (lesson.presentationId && planningPresentations[lesson.presentationId]) {
+      if (lessonHasInternalPresentation(lesson)) {
         const link = document.createElement('a');
         const target = buildPresentationTarget(lesson);
         link.href = '#';
@@ -1970,7 +2593,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     for (const item of items) {
       const li = document.createElement('li');
-      appendLinkedText(li, item);
+      const submissionItem = isNetschriftSubmissionItem(item);
+      li.className = submissionItem ? 'jaarplanning-note jaarplanning-submission' : '';
+      if (submissionItem) {
+        const label = document.createElement('strong');
+        label.textContent = 'Netschrift inleveren: ';
+        li.appendChild(label);
+        appendLinkedText(li, cleanNetschriftSubmissionItem(item));
+      } else {
+        appendLinkedText(li, item);
+      }
       planningItemsEl.appendChild(li);
     }
     if (note) {
@@ -2129,6 +2761,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   function planningForAgendaEntry(entry) {
     if (!entry) return { lessons: [], items: [], note: '', lessonIndex: 0 };
     const classId = normalizeClassId(entry.classId);
+    const currentProgressPlan = findCurrentProgressPlanning(classId, entry);
+    if (currentProgressPlan) {
+      const lessonIndex = lessonNumberForWeek(agendaEntries, entry);
+      return {
+        lessons: Array.isArray(currentProgressPlan.lessons) && currentProgressPlan.lessons.length
+          ? currentProgressPlan.lessons
+          : [currentProgressPlan.lesson],
+        items: Array.isArray(currentProgressPlan.weekData?.items) ? currentProgressPlan.weekData.items : [],
+        note: String(currentProgressPlan.weekData?.note || '').trim(),
+        lessonIndex,
+      };
+    }
+
     const gradeId = gradeLayerFromClassId(classId);
     const weekInfo = currentWeekCandidates(entry.start);
     const classWeeks = planningData[classId] || {};
@@ -2151,6 +2796,38 @@ document.addEventListener('DOMContentLoaded', async () => {
       note: String(weekData.note || '').trim(),
       lessonIndex,
     };
+  }
+
+  function selectNextLessonDayEntry(entry) {
+    if (!entry) return;
+    const matchingValue = matchingClassOptionValue(entry.classId);
+    if (!matchingValue) return;
+
+    if (klasSelect && klasSelect.value !== matchingValue) {
+      klasSelect.value = matchingValue;
+      localStorage.setItem('lastClassId', matchingValue);
+      window.__autoAppliedProjectLayoutKey = '';
+      if (indelingSelect && indelingSelect.value !== 'h216') {
+        indelingSelect.value = 'h216';
+      }
+      if (indelingSelect) {
+        localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value || 'h216');
+      }
+      laadIndeling();
+    }
+
+    activeAgendaEntry = entry;
+    selectedLessonIndex = lessonNumberForWeek(agendaEntries, entry);
+    if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
+      agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
+    }
+    renderAgendaPreview(agendaEntries, new Date());
+    renderNextLessonDayOverview(agendaEntries, new Date());
+    if (planningStudioClassSelect) {
+      planningStudioClassSelect.value = canonicalClassId(matchingValue);
+    }
+    renderPlanning();
+    updateClockMarkerTarget(new Date());
   }
 
   function renderNextLessonDayOverview(entries = [], now = new Date()) {
@@ -2191,7 +2868,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       const lessonLabel = lesson
         ? `${lesson.project || 'Les'}${lesson.lesson ? ` - ${lesson.lesson}` : ''}`
         : 'Geen gekoppelde jaarplanningles gevonden';
-      li.textContent = `${time} · ${classId} · les ${lessonSlot}${room ? ` · ${room}` : ''} · ${lessonLabel}`;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'agenda-lesson-button';
+      button.textContent = `${time} · ${classId} · les ${lessonSlot}${room ? ` · ${room}` : ''} · ${lessonLabel}`;
+      button.title = `Toon ${classId} les ${lessonSlot} in het lesprogramma`;
+      if (agendaEntryKey(entry) && agendaEntryKey(entry) === agendaEntryKey(activeAgendaEntry)) {
+        button.classList.add('is-selected');
+        button.setAttribute('aria-current', 'true');
+      }
+      button.addEventListener('click', () => selectNextLessonDayEntry(entry));
+      li.appendChild(button);
       nextLessonDayLessons.appendChild(li);
 
       const prepItems = [...plan.items].filter((item) => isPreparationItem(item));
@@ -2272,6 +2959,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (activeHoliday) {
       setPlanningItems([`${String(activeHoliday.title || 'Schoolvakantie').trim()} (${activeHoliday.startDate} t/m ${activeHoliday.endDate})`]);
       dispatchPlanningProjectContext([]);
+      updateFrontLessonControls({ entry: activeAgendaEntry, basisSlot: basisSlotNow, lessons: [] });
       if (planningLastUpdateEl) {
         const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
         const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
@@ -2290,26 +2978,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     const classWeekKey = weekCandidates.find((key) => Boolean(classWeeks[key])) || '';
     const gradeWeekKey = weekCandidates.find((key) => Boolean(gradeWeeks[key])) || '';
     const allWeekKey = weekCandidates.find((key) => Boolean(allWeeks[key])) || '';
-    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
+    let weekData = (classWeekKey || gradeWeekKey || allWeekKey)
       ? mergePlanEntries(
         allWeekKey ? allWeeks[allWeekKey] : null,
         gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
         classWeekKey ? classWeeks[classWeekKey] : null,
       )
       : null;
+    const currentProgressPlan = findCurrentProgressPlanning(classId, activeAgendaEntry);
+    if (currentProgressPlan) {
+      weekData = currentProgressPlan.weekData;
+      planningWeekLabelEl.textContent = title;
+    }
 
-    const lessonSelection = selectLessonsForToday(
-      weekData?.lessons || [],
-      selectedLessonIndex,
-      agendaConnected || selectedLessonIndex > 0
-    );
+    const lessonSelection = currentProgressPlan
+      ? [currentProgressPlan.lesson]
+      : selectLessonsForToday(
+        weekData?.lessons || [],
+        selectedLessonIndex,
+        agendaConnected || selectedLessonIndex > 0
+      );
     currentPlanningLessons = lessonSelection;
     const hasLessons = lessonSelection.length > 0;
     const hasItems = Array.isArray(weekData?.items) && weekData.items.length > 0;
+    const hasNetschriftSubmission = (weekData?.items || []).some(isNetschriftSubmissionItem);
 
     if (!weekData || (!hasLessons && !hasItems)) {
       setPlanningItems(['Geen planning gevonden voor deze klas in deze week.']);
       dispatchPlanningProjectContext([]);
+      updateFrontLessonControls({ entry: activeAgendaEntry, basisSlot: basisSlotNow, lessons: [] });
       if (planningLastUpdateEl) {
         const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
         const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
@@ -2327,13 +3024,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       { deviation: activeAgendaEntry ? agendaDeviationInfo(activeAgendaEntry) : null }
     );
     dispatchPlanningProjectContext(lessonSelection);
+    updateFrontLessonControls({ entry: activeAgendaEntry, basisSlot: basisSlotNow, lessons: lessonSelection });
     if (planningLastUpdateEl) {
       const syncStamp = planningFetchedAt ? `Laatste sync: ${formatSyncTime(planningFetchedAt)}` : '';
       const sourceStamp = planningUpdatedAt ? `Bron bijgewerkt: ${formatSyncTime(planningUpdatedAt)}` : '';
       const agendaStamp = agendaFetchedAt ? `Agenda sync: ${formatSyncTime(agendaFetchedAt)}` : '';
       planningLastUpdateEl.textContent = [syncStamp, sourceStamp, agendaStamp].filter(Boolean).join(' · ');
     }
-    if (agendaConnected && activeAgendaEntry) {
+    if (hasNetschriftSubmission) {
+      setPlanningStatus('Netschrift inlevermoment', 'warn');
+    } else if (agendaConnected && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
       if (room) {
         setPlanningStatus('', 'ok', { room });
@@ -2355,7 +3055,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     refreshPlanningEditor();
   }
 
-  async function fetchPlanning() {
+  async function fetchPlanning({ forceLive = false } = {}) {
     try {
       setPlanningStatus('Synchroniseren...', 'info');
       const url = new URL(defaultPlanningSourceUrl(), window.location.href);
@@ -2363,7 +3063,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const res = await fetch(url.toString(), { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const raw = normalizeStudioDoc(await res.json());
-      planningStudio = planningStudio
+      planningStudio = forceLive
+        ? ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw))
+        : planningStudio
         ? mergeStudioPreferRicherBase(raw, planningStudio)
         : ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw));
       savePlanningStudioToStorage();
@@ -2699,6 +3401,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   presentationBackBtn?.addEventListener('click', () => {
     closePresentationPanel();
   });
+  frontPresentationBtn?.addEventListener('click', () => {
+    if (!frontPresentationTarget) return;
+    openPresentationPanel(frontPresentationTarget);
+  });
   presentationFullscreenBtn?.addEventListener('click', () => {
     togglePresentationFullscreen();
   });
@@ -2712,6 +3418,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const total = Array.isArray(activePresentation.slides) ? activePresentation.slides.length : 0;
     activeSlideIndex = Math.min(Math.max(0, total - 1), activeSlideIndex + 1);
     renderInternalSlide();
+  });
+  presentationSeriesPrevBtn?.addEventListener('click', () => {
+    const target = activeSeriesNav.items?.[activeSeriesNav.index - 1];
+    if (!activeSeriesNav.presentation || !target) return;
+    applyPresentationMarker(activeSeriesNav.presentation, target.markerId);
+  });
+  presentationSeriesNextBtn?.addEventListener('click', () => {
+    const target = activeSeriesNav.items?.[activeSeriesNav.index + 1];
+    if (!activeSeriesNav.presentation || !target) return;
+    applyPresentationMarker(activeSeriesNav.presentation, target.markerId);
   });
 
   document.addEventListener('keydown', (event) => {
@@ -2834,6 +3550,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchAgenda();
   });
   window.addEventListener('storage', (event) => {
+    if (event.key === PLATFORM_REFRESH_KEY) {
+      fetchPlanning({ forceLive: true });
+      return;
+    }
     if (event.key !== PLAN_STUDIO_KEY) return;
     const latest = loadPlanningStudioFromStorage();
     if (!latest) return;

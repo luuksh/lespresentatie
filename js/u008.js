@@ -1,20 +1,17 @@
 export function u008Indeling(leerlingen) {
   const grid = document.getElementById("plattegrond");
+  grid.className = "grid row-layout u008-layout";
   grid.innerHTML = "";
 
   const rijContainer = document.createElement("div");
-  rijContainer.style.display = "flex";
-  rijContainer.style.justifyContent = "center";
-  rijContainer.style.gap = "3em";
+  rijContainer.className = "u008-columns";
 
   let index = 0;
 
   // Linker- en middenkolom: 4 rijen drietafels
   for (let c = 0; c < 2; c++) {
     const kolom = document.createElement("div");
-    kolom.style.display = "flex";
-    kolom.style.flexDirection = "column";
-    kolom.style.gap = "2.2em";
+    kolom.className = "u008-column";
 
     for (let r = 0; r < 4; r++) {
       const namen = [
@@ -31,9 +28,7 @@ export function u008Indeling(leerlingen) {
 
   // Rechterkolom: 3 rijen duotafels
   const rechterKolom = document.createElement("div");
-  rechterKolom.style.display = "flex";
-  rechterKolom.style.flexDirection = "column";
-  rechterKolom.style.gap = "2.2em";
+  rechterKolom.className = "u008-column";
 
   for (let r = 0; r < 3; r++) {
     const namen = [leerlingen[index++] || "-", leerlingen[index++] || "-"];

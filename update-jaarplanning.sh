@@ -6,6 +6,7 @@ cd "$ROOT_DIR"
 
 BUILD_INTERNAL_SCRIPT="scripts/build_jaarplanning_internal.py"
 OUT_JSON="js/jaarplanning-live.json"
+PUBLIC_OUT_JSON="docs/js/jaarplanning-live.json"
 PLAN_DIR_DEFAULT="data/jaarplanning"
 INTERNAL_SOURCE_DEFAULT="$PLAN_DIR_DEFAULT/jaarplanning-intern.json"
 
@@ -28,13 +29,15 @@ fi
 echo "Bronmodus: internal"
 echo "Bronbestand: $INTERNAL_SOURCE"
 python3 "$BUILD_INTERNAL_SCRIPT" -i "$INTERNAL_SOURCE" -o "$OUT_JSON"
+mkdir -p "$(dirname "$PUBLIC_OUT_JSON")"
+cp "$OUT_JSON" "$PUBLIC_OUT_JSON"
 
-if git diff --quiet -- "$OUT_JSON"; then
-  echo "Geen wijzigingen in $OUT_JSON. Klaar."
+if git diff --quiet -- "$OUT_JSON" "$PUBLIC_OUT_JSON"; then
+  echo "Geen wijzigingen in $OUT_JSON of $PUBLIC_OUT_JSON. Klaar."
   exit 0
 fi
 
-git add "$OUT_JSON"
+git add "$OUT_JSON" "$PUBLIC_OUT_JSON"
 COMMIT_MSG="Update jaarplanning live JSON ($(date '+%Y-%m-%d %H:%M'))"
 git commit -m "$COMMIT_MSG"
 

@@ -27,7 +27,18 @@ NON_REGULAR_EXACT = {
 
 LESSON_SLOT_ORDER = {"A": 0, "B": 1, "C": 2}
 EXPECTED_LESSONS_BY_GRADE = {"1": 3, "3": 2, "4": 3}
-REMOVED_PROJECT_TOKENS = ("leesclub", "zinsbouwers")
+REMOVED_PROJECT_TOKENS = ("leesclub",)
+REMOVED_PROJECT_EXACT = {
+    "escape room yde",
+    "escape room yde / bkk",
+    "uitloop / kerstquiz",
+    "vosflix",
+    "voxflix",
+    "nutpot",
+    "afscheid",
+    "afscheid nemen",
+    "startinfo",
+}
 TAALTOPIA_HOMEWORK_BY_LESSON = {
     "Les 1 - Naam, wereld en doelgroep": (
         "Bedenk 2 mogelijke namen voor jullie taal en noteer 3 woorden over de wereld of doelgroep. "
@@ -57,6 +68,10 @@ TAALTOPIA_HOMEWORK_BY_LESSON = {
     "Les 6 - Creatief extra en presenteren": (
         "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. "
         "Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee"
+    ),
+    "Les 6b - Presentatie oefenen en generale repetitie": (
+        "Oefen jullie volledige presentatie nog een keer: wie zegt wat, wat wijs je aan op de poster en welk voorbeeld laat je horen. "
+        "netschrift en pen mee"
     ),
 }
 
@@ -217,11 +232,7 @@ def is_non_regular_marker(project: str, lesson: str) -> bool:
 
 def should_remove_project_text(value: str) -> bool:
     text = str(value or "").strip().casefold()
-    return any(token in text for token in REMOVED_PROJECT_TOKENS)
-
-
-def is_grade_1_class(class_id: str) -> bool:
-    return len(class_id) == 2 and class_id.startswith("1") and class_id[1].isalpha()
+    return text in REMOVED_PROJECT_EXACT or any(token in text for token in REMOVED_PROJECT_TOKENS)
 
 
 def class_grade(class_id: str) -> str:
@@ -242,7 +253,6 @@ def is_reading_lesson(lesson: dict) -> bool:
     project = str(lesson.get("project", "")).strip().casefold()
     return (
         "leesclub" in project
-        or "zinsbouwers" in project
         or "heel veel lezen" in project
     )
 
@@ -253,44 +263,40 @@ def make_heel_veel_lezen_lesson(source_lesson: dict, lesson_key: str) -> dict:
     out["lesson"] = "Heel veel lezen"
     out["lessonKey"] = lesson_key
     out["presentationId"] = "project-heel-veel-lezen"
+    out["homework"] = ensure_homework_contains(
+        out.get("homework", "") if is_reading_lesson(source_lesson) else "",
+        "leesboek en schoolpasje mee",
+    )
     out.pop("presentationMarkerId", None)
     return out
 
 
-def reposition_grade_1_reading(class_id: str, lessons: list[dict]) -> list[dict]:
-    if not is_grade_1_class(class_id) or len(lessons) != 3:
+def ensure_first_lesson_is_reading(class_id: str, lessons: list[dict]) -> list[dict]:
+    if not lessons:
         return lessons
 
     ordered = [dict(lesson) for lesson in sorted(lessons, key=lesson_slot_index)]
-    reading_lessons = [lesson for lesson in ordered if is_reading_lesson(lesson)]
-    if len(reading_lessons) != 1:
-        return lessons
-
-    reading_lesson = make_heel_veel_lezen_lesson(reading_lessons[0], "A")
     project_lessons = [lesson for lesson in ordered if not is_reading_lesson(lesson)]
-    shifted = [reading_lesson, *project_lessons]
-    for key, lesson in zip(("A", "B", "C"), shifted):
+    reading_source = next((lesson for lesson in ordered if is_reading_lesson(lesson)), ordered[0])
+    reading_lesson = make_heel_veel_lezen_lesson(reading_source, "A")
+    lesson_count = min(expected_lessons_for_class(class_id) or len(ordered), len(LESSON_SLOT_ORDER))
+    if class_grade(class_id) == "3" and any(
+        str(lesson.get("project", "")).strip().casefold() == "grenzen van literatuur"
+        for lesson in project_lessons
+    ):
+        lesson_count = min(len(project_lessons) + 1, len(LESSON_SLOT_ORDER))
+    shifted = [reading_lesson, *project_lessons[: max(0, lesson_count - 1)]]
+    for key, lesson in zip(LESSON_SLOT_ORDER, shifted):
         lesson["lessonKey"] = key
     return shifted
 
 
 def prioritize_lessons(class_id: str, lessons: list[dict]) -> list[dict]:
-    expected = expected_lessons_for_class(class_id)
     if not lessons:
         return lessons
 
     ordered = [dict(lesson) for lesson in sorted(lessons, key=lesson_slot_index)]
-    if expected and len(ordered) < expected:
-        reading_lessons = [lesson for lesson in ordered if is_reading_lesson(lesson)]
-        project_lessons = [lesson for lesson in ordered if not is_reading_lesson(lesson)]
-        if reading_lessons and project_lessons:
-            reading_slots_left = max(0, len(ordered) - len(project_lessons))
-            ordered = [*project_lessons, *reading_lessons[:reading_slots_left]]
-            for key, lesson in zip(("A", "B", "C"), ordered):
-                lesson["lessonKey"] = key
-            return ordered
-
-    return reposition_grade_1_reading(class_id, ordered)
+    return ensure_first_lesson_is_reading(class_id, ordered)
 
 
 def filter_presentations(presentations: dict) -> dict:
@@ -303,8 +309,79 @@ def filter_presentations(presentations: dict) -> dict:
             title = str(value.get("title", "")).strip()
             if should_remove_project_text(project) or should_remove_project_text(title):
                 continue
+            value = compile_marker_decks(value)
         kept[key] = value
     return kept
+
+
+def normalize_slide(slide: object) -> dict | None:
+    if not isinstance(slide, dict):
+        return None
+    return {
+        "type": "bullets"
+        if str(slide.get("type", "title")).strip().casefold() == "bullets"
+        else "title",
+        "title": str(slide.get("title", "")).strip(),
+        "subtitle": str(slide.get("subtitle", "")).strip(),
+        "showProjectLogo": bool(slide.get("showProjectLogo")),
+        "items": [
+            str(item).strip()
+            for item in slide.get("items", [])
+            if item and str(item).strip()
+        ]
+        if isinstance(slide.get("items"), list)
+        else [],
+    }
+
+
+def ordered_marker_ids(presentation: dict, marker_decks: dict) -> list[str]:
+    current_markers = presentation.get("markers")
+    if isinstance(current_markers, dict):
+        known = [
+            marker_id
+            for marker_id, _index in sorted(
+                current_markers.items(),
+                key=lambda item: item[1] if isinstance(item[1], int) else 999999,
+            )
+            if marker_id in marker_decks
+        ]
+        remaining = [marker_id for marker_id in marker_decks if marker_id not in known]
+        return [*known, *remaining]
+    return list(marker_decks.keys())
+
+
+def compile_marker_decks(presentation: dict) -> dict:
+    marker_decks = presentation.get("markerDecks")
+    if not isinstance(marker_decks, dict):
+        return presentation
+
+    project_name = str(presentation.get("project", "")).strip()
+    title = str(presentation.get("title", "") or project_name).strip() or project_name
+    subtitle = str(presentation.get("subtitle", "") or project_name).strip() or project_name
+    slides = [
+        {
+            "type": "title",
+            "title": title,
+            "subtitle": subtitle,
+            "showProjectLogo": True,
+        }
+    ]
+    markers: dict[str, int] = {}
+
+    for marker_id in ordered_marker_ids(presentation, marker_decks):
+        raw_deck = marker_decks.get(marker_id)
+        if not isinstance(raw_deck, list):
+            continue
+        deck = [slide for slide in (normalize_slide(item) for item in raw_deck) if slide]
+        if not deck:
+            continue
+        markers[marker_id] = len(slides)
+        slides.extend(deck)
+
+    out = dict(presentation)
+    out["slides"] = slides
+    out["markers"] = markers
+    return out
 
 
 def merge_entry(base: dict, extra: dict) -> dict:

@@ -1,5 +1,6 @@
 export function h216Indeling(leerlingen) {
   const grid = document.getElementById("plattegrond");
+  grid.className = "grid row-layout h216-layout";
   grid.innerHTML = "";
 
   let index = 0;

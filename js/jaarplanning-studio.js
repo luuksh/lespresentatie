@@ -1,5 +1,6 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
-const BASE_SOURCE = 'js/jaarplanning-live-20260308.json';
+const BASE_SOURCE = 'js/jaarplanning-live.json';
+const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
 const STUDIO_SCHEMA_VERSION = 2;
 
 const classSelect = document.getElementById('classSelect');
@@ -18,6 +19,25 @@ const state = {
 function setStatus(message, isError = false) {
   statusLine.textContent = message;
   statusLine.style.color = isError ? '#9f1d1d' : '#2c4f7c';
+}
+
+function setButtonBusy(button, label) {
+  if (!button) return;
+  button.dataset.originalLabel = button.dataset.originalLabel || button.textContent;
+  button.textContent = label;
+  button.disabled = true;
+}
+
+function resetButton(button) {
+  if (!button) return;
+  button.textContent = button.dataset.originalLabel || button.textContent;
+  button.disabled = false;
+}
+
+function setButtonDone(button, label, resetDelay = 1800) {
+  if (!button) return;
+  button.textContent = label;
+  window.setTimeout(() => resetButton(button), resetDelay);
 }
 
 function normalizeClassId(raw) {
@@ -83,11 +103,15 @@ function baseShouldReplaceLocal(baseDoc, localDoc) {
   if (localSchema < STUDIO_SCHEMA_VERSION) return true;
   const baseRevision = String(baseDoc?.sourceRevision || '').trim();
   const localRevision = String(localDoc?.sourceRevision || '').trim();
-  if (baseRevision && localRevision && baseRevision !== localRevision) return true;
-  if (baseRevision && !localRevision) return true;
   if (hasAssessmentData(baseDoc) && !hasAssessmentData(localDoc)) return true;
   const baseStamp = parseDocTimestamp(baseDoc);
   const localStamp = parseDocTimestamp(localDoc);
+  if (baseRevision && localRevision && baseRevision !== localRevision) {
+    return !(localStamp && (!baseStamp || localStamp >= baseStamp));
+  }
+  if (baseRevision && !localRevision) {
+    return !(localStamp && baseStamp && localStamp >= baseStamp);
+  }
   if (!baseStamp || !localStamp) return false;
   return baseStamp > localStamp;
 }
@@ -249,6 +273,16 @@ function saveStudio() {
   localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
 }
 
+async function syncFromPublishedSource() {
+  try {
+    state.doc = collapseToYearLayerDoc(await fetchJson(BASE_SOURCE));
+    localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+    renderSheet();
+  } catch (err) {
+    console.warn('Live bron kon na publiceren niet worden teruggelezen:', err);
+  }
+}
+
 function countSlides(presentation) {
   return Array.isArray(presentation?.slides) ? presentation.slides.length : 0;
 }
@@ -288,6 +322,7 @@ function buildExportPayload() {
 
   return {
     ...fullDoc,
+    studioSource: 'jaarplanning-studio',
     exportType: 'jaarplanning-presentaties',
     exportVersion: 2,
     exportedAt: new Date().toISOString(),
@@ -325,6 +360,55 @@ function exportAll() {
   } catch (err) {
     console.error(err);
     setStatus(`Export mislukt: ${err?.message || err}`, true);
+  }
+}
+
+function autoGitMessage(result = {}) {
+  const git = result.autoGit;
+  if (!git || git.enabled === false) return '';
+  return git.ok
+    ? ` ${git.message || 'Automatisch gepusht.'}`
+    : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
+}
+
+function publishErrorMessage(err) {
+  const message = String(err?.message || err || '');
+  if (message.includes('HTTP 501')) {
+    return 'de oude lokale server draait nog. Sluit dit venster en dubbelklik eenmalig op Open Jaarplanning Studio.command; daarna werkt deze knop direct.';
+  }
+  return message;
+}
+
+async function publishAll() {
+  saveStudio();
+  const payload = buildExportPayload();
+  setButtonBusy(saveAllBtn, 'Opslaan...');
+  setStatus('Opslaan naar lokale en publieke leerlingomgeving...');
+  try {
+    if (window.location.protocol === 'file:') {
+      throw new Error('Publiceren werkt alleen via http://127.0.0.1:4173. Open de lokale docentomgeving met start-docentomgeving.command.');
+    }
+    const res = await fetch(PUBLISH_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await res.json().catch(() => ({}));
+    if (!res.ok || result?.ok === false) {
+      throw new Error(result?.error || `HTTP ${res.status}`);
+    }
+    await syncFromPublishedSource();
+    setButtonDone(saveAllBtn, 'Opgeslagen');
+    setStatus(
+      `Opgeslagen: ${result.entries || payload.counts.entries} planningregels en ${result.presentations || payload.counts.presentations} presentaties bijgewerkt.${autoGitMessage(result)}`,
+      result.autoGit?.ok === false,
+    );
+    return true;
+  } catch (err) {
+    console.error(err);
+    setStatus(`Lokaal opgeslagen, maar publiceren is mislukt: ${publishErrorMessage(err)}`, true);
+    resetButton(saveAllBtn);
+    return false;
   }
 }
 
@@ -408,11 +492,6 @@ function onCellChange(event) {
   setStatus(`Gewijzigd: jaarlaag ${layer}, week ${week}.`);
 }
 
-function saveAll() {
-  saveStudio();
-  setStatus(`Alles opgeslagen voor jaarlaag ${selectedLayer()}.`);
-}
-
 function fillLayerOptions(layers) {
   classSelect.innerHTML = '';
   for (const layer of layers) {
@@ -453,7 +532,7 @@ async function boot() {
   }
 }
 
-saveAllBtn.addEventListener('click', saveAll);
+saveAllBtn.addEventListener('click', publishAll);
 exportAllBtn?.addEventListener('click', exportAll);
 classSelect.addEventListener('change', renderSheet);
 

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
   <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260309-01" />
+  <link rel="stylesheet" href="css/style.css?v=202606010935" />
 
   <script>
     window.APP_CONFIG = {
@@ -16,13 +16,13 @@
       agendaSourceFallbackUrl: 'js/zermelo-agenda-live.json'
     };
   </script>
-  <script src="js/roster-source.js?v=20260323-01"></script>
-  <script type="module" src="js/indeling.js?v=20260309-01"></script>
-  <script type="module" src="js/init.js?v=20260410-01"></script>
+  <script src="js/roster-source.js?v=202606010935"></script>
+  <script type="module" src="js/indeling.js?v=202606010935"></script>
+  <script type="module" src="js/init.js?v=202606010935"></script>
 </head>
 <body>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
-    <p class="opdracht-label">Opdracht op bord</p>
+    <p class="opdracht-label">Redactiebord</p>
     <div class="opdracht-menu">
       <select id="opdrachtSelect" aria-label="Kies een opdracht">
         <option>lees in je leesboek</option>
@@ -153,13 +153,28 @@
                   <select id="klasSelect"></select>
                 </div>
 
+                <div class="field lesson-meta-field">
+                  <span class="label">Lokaal</span>
+                  <span id="frontRoomBadge" class="front-meta-chip">-</span>
+                </div>
+
+                <div class="field lesson-meta-field">
+                  <span class="label">Tijd</span>
+                  <span id="frontTimeBadge" class="front-meta-chip">-</span>
+                </div>
+
+                <div class="field front-presentation-field">
+                  <span class="label">Presentatie</span>
+                  <button id="frontPresentationBtn" type="button" class="btn btn-primary front-presentation-btn" disabled>Ga naar presentatie</button>
+                </div>
+
               </div>
             </div>
             <section id="presentationNotice" class="presentation-notice" aria-live="polite" hidden></section>
 
             <div class="grid-wrapper">
               <div class="bureau-rij">
-                <div class="leraar-bureau">Bureau leraar</div>
+                <div class="leraar-bureau">Docent / redactie</div>
               </div>
               <div class="grid" id="plattegrond"></div>
             </div>
@@ -182,6 +197,22 @@
                   <span id="presentationSlideCounter" class="presentation-slide-counter">1 / 1</span>
                   <button id="presentationNextBtn" type="button" class="btn btn-secondary">Volgende</button>
                 </footer>
+                <nav class="presentation-series-nav" aria-label="Lessenserie navigatie">
+                  <button id="presentationSeriesPrevBtn" type="button" class="presentation-series-btn is-prev" hidden>
+                    <span class="presentation-series-arrow" aria-hidden="true">‹</span>
+                    <span>
+                      <span class="presentation-series-kicker">Vorige les</span>
+                      <span id="presentationSeriesPrevTitle" class="presentation-series-title"></span>
+                    </span>
+                  </button>
+                  <button id="presentationSeriesNextBtn" type="button" class="presentation-series-btn is-next" hidden>
+                    <span>
+                      <span class="presentation-series-kicker">Volgende les</span>
+                      <span id="presentationSeriesNextTitle" class="presentation-series-title"></span>
+                    </span>
+                    <span class="presentation-series-arrow" aria-hidden="true">›</span>
+                  </button>
+                </nav>
               </div>
             </div>
           </section>
@@ -271,7 +302,7 @@
     }
 
     #timerDock .clock-lesson-marker {
-      z-index: 4;
+      z-index: 6;
     }
 
     #timerDock .clock-hand {
@@ -748,8 +779,44 @@
       const boardFrame = document.getElementById('plattegrondFrame');
       const layoutRoot = document.getElementById('layoutRoot');
       const grid = document.getElementById('plattegrond');
+      const gridWrapper = document.querySelector('.grid-wrapper');
       const deskRow = document.querySelector('.bureau-rij');
       const groupLayoutTypes = new Set(['groepjes', 'drietallen', 'vijftallen', 'presentatievolgorde']);
+      const boardScaleVars = [
+        '--desk-w-live',
+        '--desk-h-live',
+        '--desk-font-live',
+        '--desk-row-gap-live',
+        '--desk-col-gap-live',
+        '--desk-pair-gap-live',
+        '--desk-padding-live',
+        '--desk-line-left-live',
+        '--desk-line-right-live',
+        '--desk-line-top-live',
+        '--desk-line-gap-live',
+        '--desk-line-gap-2-live',
+        '--chair-inset-live',
+        '--chair-bottom-live',
+        '--chair-h-live',
+        '--teacher-w-live',
+        '--teacher-h-live',
+        '--teacher-font-live',
+        '--teacher-bottom-live'
+      ];
+
+      function clearBoardScaleVars() {
+        boardScaleVars.forEach((name) => boardFrame?.style.removeProperty(name));
+      }
+
+      function setScaledVar(name, value, scale) {
+        if (!Number.isFinite(value) || value === 0) return;
+        boardFrame.style.setProperty(name, `${Math.round(value * scale * 10) / 10}px`);
+      }
+
+      function readPixelValue(value) {
+        const parsed = Number.parseFloat(value);
+        return Number.isFinite(parsed) ? parsed : 0;
+      }
 
       function nowNL() {
         return new Intl.DateTimeFormat('nl-NL', {
@@ -769,8 +836,10 @@
         const activeType = indelingSel?.value || '';
         const isGroupLayout = groupLayoutTypes.has(activeType);
         boardFrame.classList.toggle('is-group-layout', isGroupLayout);
+        clearBoardScaleVars();
+        gridWrapper?.classList.remove('is-roomy');
         const top = boardScaler.getBoundingClientRect().top;
-        const maxH = Math.max(320, window.innerHeight - top - 8);
+        const maxH = Math.max(320, window.innerHeight - top - 26);
         const maxW = Math.max(320, layoutRoot.clientWidth - 2);
         const compact = window.matchMedia('(max-width: 980px)').matches;
 
@@ -791,9 +860,11 @@
           boardScaler.style.height = `${maxH}px`;
         }
 
+        let contentWidth = 0;
+        let targetWidth = 0;
+
         if (deskRow && grid) {
           const rows = Array.from(grid.querySelectorAll('.tafelrij'));
-          let contentWidth = 0;
 
           if (rows.length) {
             contentWidth = Math.max(...rows.map((row) => Math.ceil(row.scrollWidth || row.getBoundingClientRect().width || 0)));
@@ -821,11 +892,62 @@
             contentWidth = Math.ceil(grid.scrollWidth || grid.clientWidth || 0);
           }
 
-          const targetWidth = Math.max(0, Math.min(contentWidth, grid.clientWidth || contentWidth));
+          targetWidth = Math.max(0, Math.min(contentWidth, grid.clientWidth || contentWidth));
           deskRow.style.width = targetWidth > 0 ? `${targetWidth}px` : '100%';
           deskRow.style.maxWidth = '100%';
           deskRow.style.marginLeft = 'auto';
           deskRow.style.marginRight = 'auto';
+        }
+
+        if (!compact && gridWrapper && grid && contentWidth > 0) {
+          const wrapperStyles = getComputedStyle(gridWrapper);
+          const padX = parseFloat(wrapperStyles.paddingLeft) + parseFloat(wrapperStyles.paddingRight);
+          const padY = parseFloat(wrapperStyles.paddingTop) + parseFloat(wrapperStyles.paddingBottom);
+          const firstDesk = grid.querySelector('.tafel');
+          const firstRow = grid.querySelector('.tafelrij');
+          const firstPair = grid.querySelector('.tafels');
+          const deskRect = firstDesk?.getBoundingClientRect();
+          const teacherRect = deskRow?.querySelector('.leraar-bureau')?.getBoundingClientRect();
+          const deskStyles = firstDesk ? getComputedStyle(firstDesk) : null;
+          const gridStyles = getComputedStyle(grid);
+          const rowStyles = firstRow ? getComputedStyle(firstRow) : null;
+          const pairStyles = firstPair ? getComputedStyle(firstPair) : null;
+          const availableW = Math.max(0, gridWrapper.clientWidth - padX);
+          const availableH = Math.max(0, gridWrapper.clientHeight - padY);
+          const gridHeight = Math.ceil((deskRow?.getBoundingClientRect().height || 0) + grid.getBoundingClientRect().height + 12);
+          const widthZoom = availableW > 0 ? (availableW * 0.76) / contentWidth : 1;
+          const heightZoom = gridHeight > 0 && availableH > 0 ? (availableH * 0.88) / gridHeight : 1;
+          const roomyZoom = Math.min(widthZoom, heightZoom, 1.45);
+          const boardZoom = Math.max(1, Math.min(roomyZoom, 1.45));
+
+          if (boardZoom > 1.04) {
+            setScaledVar('--desk-w-live', deskRect?.width || 0, boardZoom);
+            setScaledVar('--desk-h-live', deskRect?.height || 0, boardZoom);
+            setScaledVar('--desk-font-live', deskStyles ? readPixelValue(deskStyles.fontSize) : 0, boardZoom);
+            setScaledVar('--desk-row-gap-live', readPixelValue(gridStyles.rowGap || gridStyles.gap), boardZoom);
+            setScaledVar('--desk-col-gap-live', rowStyles ? readPixelValue(rowStyles.columnGap || rowStyles.gap) : 0, boardZoom);
+            setScaledVar('--desk-pair-gap-live', pairStyles ? readPixelValue(pairStyles.columnGap || pairStyles.gap) : 0, boardZoom);
+            setScaledVar('--teacher-w-live', teacherRect?.width || 0, boardZoom);
+            setScaledVar('--teacher-h-live', teacherRect?.height || 0, boardZoom);
+            setScaledVar('--teacher-font-live', 12, boardZoom);
+            setScaledVar('--teacher-bottom-live', 12, boardZoom);
+            setScaledVar('--desk-line-left-live', 18, boardZoom);
+            setScaledVar('--desk-line-right-live', 12, boardZoom);
+            setScaledVar('--desk-line-top-live', 13, boardZoom);
+            setScaledVar('--desk-line-gap-live', 17, boardZoom);
+            setScaledVar('--desk-line-gap-2-live', 34, boardZoom);
+            setScaledVar('--chair-inset-live', 32, boardZoom);
+            setScaledVar('--chair-bottom-live', -9, boardZoom);
+            setScaledVar('--chair-h-live', 8, boardZoom);
+            boardFrame.style.setProperty(
+              '--desk-padding-live',
+              `${Math.round(7 * boardZoom * 10) / 10}px ${Math.round(8 * boardZoom * 10) / 10}px ${Math.round(5 * boardZoom * 10) / 10}px ${Math.round(14 * boardZoom * 10) / 10}px`
+            );
+            gridWrapper.classList.add('is-roomy');
+            if (deskRow && targetWidth > 0) {
+              deskRow.style.width = `${Math.min(availableW, targetWidth * boardZoom)}px`;
+            }
+          }
         }
       }
 
@@ -1244,7 +1366,9 @@
         e.preventDefault();
         clockFace.setPointerCapture(e.pointerId);
 
-        const canDragDock = timerDock && getComputedStyle(timerDock).position === 'fixed';
+        const canDragDock = timerDock
+          && getComputedStyle(timerDock).position === 'fixed'
+          && !document.body.classList.contains('presentation-open');
         if (canDragDock && isNearClockEdge(e.clientX, e.clientY)) {
           interactionMode = 'dock-drag';
           const dockRect = timerDock.getBoundingClientRect();

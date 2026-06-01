@@ -45,6 +45,39 @@ h1 { margin: 3px 0 0; font-size: 30px; }
 h2 { margin: 0 0 10px; font-size: 18px; }
 h3 { margin: 8px 0; font-size: 14px; }
 
+.editor-help-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  margin: -2px 0 8px;
+}
+
+.editor-help {
+  margin: -2px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.editor-help-row .editor-help {
+  margin: 0;
+}
+
+.editor-help-row .btn {
+  flex: 0 0 auto;
+}
+
+.editor-help code {
+  color: #123766;
+  background: #edf4ff;
+  border: 1px solid #d6e4f7;
+  border-radius: 6px;
+  padding: 1px 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
 .studio-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -93,11 +126,30 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease, background 0.12s ease;
 }
 
 .btn-primary { color: #fff; background: linear-gradient(180deg, var(--primary), var(--primary-dark)); }
 .btn-secondary { color: var(--ink); background: #e7effd; }
 .btn-danger { color: #fff; background: linear-gradient(180deg, #bf2d2d, #8f1f1f); }
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(15, 31, 55, 0.16);
+}
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.74;
+}
+.btn.is-busy {
+  background: linear-gradient(180deg, #637083, #425064);
+}
+.btn.is-done {
+  background: linear-gradient(180deg, #258253, #17643e);
+  color: #fff;
+}
+.btn.has-changes:not(.is-busy):not(.is-done) {
+  box-shadow: 0 0 0 3px rgba(255, 184, 77, 0.34);
+}
 
 .sidebar-actions {
   display: grid;
@@ -156,6 +208,29 @@ select {
   font-size: 13px;
   color: #2c4f7c;
   font-weight: 600;
+  min-height: 20px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #edf4ff;
+  border: 1px solid #d6e4f7;
+}
+
+.status-line[data-status="busy"] {
+  color: #5a3b00;
+  background: #fff6df;
+  border-color: #f0d48c;
+}
+
+.status-line[data-status="success"] {
+  color: #145434;
+  background: #eaf8f0;
+  border-color: #bde7cd;
+}
+
+.status-line[data-status="error"] {
+  color: #8d1c1c;
+  background: #fff0f0;
+  border-color: #efc4c4;
 }
 
 .studio-actions {
