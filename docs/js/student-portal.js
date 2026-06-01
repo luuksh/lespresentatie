@@ -2160,6 +2160,21 @@ function submissionAlertHtml(nextSubmissionMoment) {
   `;
 }
 
+function netschriftOverviewShortcutHtml() {
+  const items = getNetschriftChecklistForClass(state.currentClass);
+  if (!items.length) return '';
+  return `
+    <div class="submission-alert is-active">
+      <p class="submission-alert-label">
+        <span class="submission-alert-icon" aria-hidden="true">✓</span>
+        <span>Netschriftlijst</span>
+      </p>
+      <p class="submission-alert-text">${escapeHtml(items.length)} onderdelen die in je netschrift moeten staan.</p>
+      <button class="submission-overview-link" type="button" data-open-netschrift-overview="1">Bekijk wat er in je netschrift moet</button>
+    </div>
+  `;
+}
+
 function buildProjectSummaryRows(projectGroup) {
   const project = String(projectGroup?.project || '').trim();
   if (!project) return [];
@@ -2367,7 +2382,7 @@ function renderCurrentWeek(projectGroups) {
 
   const submissionRows = nextSubmissionMoment
     ? [submissionAlertHtml(nextSubmissionMoment)]
-    : [];
+    : [netschriftOverviewShortcutHtml()].filter(Boolean);
   const lessonHomeworkRows = homeworkLessons.length
     ? homeworkLessons.map((lesson, index) => {
       const homework = formatHomeworkContent(lesson.homework);
