@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T09:21:57+02:00",
+  "updatedAt": "2026-06-08T08:56:26+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2218,10 +2218,10 @@
         },
         {
           "project": "Zinsbouwers",
-          "lesson": "Les 2 - De werkwoordsgroep",
+          "lesson": "Les 1 - De basis van een zin",
           "presentationId": "project-zinsbouwers",
           "lessonKey": "B",
-          "presentationMarkerId": "marker-les-2-de-werkwoordsgroep",
+          "presentationMarkerId": "marker-les-1-de-basis-van-een-zin",
           "homework": "Werk je afvinkkaart en minimaal één voorbeeldzin bij in je netschrift. netschrift en pen mee"
         }
       ],
@@ -14420,73 +14420,6 @@
         },
         {
           "type": "title",
-          "title": "Les 4 - Grammaticaregels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag maak je vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vak 4 laat zien hoe zinnen in jullie taal werken.",
-            "Kies 2 tot 4 duidelijke regels.",
-            "Houd het simpel: liever 3 sterke regels dan 8 vage regels."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Handige soorten regels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Woordvolgorde: zeg je ik ga huis of huis ga ik?",
-            "Werkwoorden: krijgen die een extra uitgang?",
-            "Vragen: komt er een vraagwoord vooraan of juist achteraan?",
-            "Meervoud: komt er -en, -ar, -um of iets anders achter?",
-            "Ontkenning: hoe zeg je niet of nooit?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Rijke voorbeeldregels",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "In Vareen staat het werkwoord vaak vooraan: Gaat navor thalin.",
-            "Een waarschuwing krijgt het voorvoegsel kha-: khaarek = verboden route.",
-            "Meervoud eindigt op -im: moru = vriend, moruim = vrienden.",
-            "Vragen eindigen op -sa: Navor sa? = Is er een gids?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zo noteer je vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Schrijf elke regel kort op.",
-            "Zet er direct een voorbeeldzin onder.",
-            "Gebruik woorden uit vak 3, zodat de poster echt samenhang krijgt.",
-            "Maak het visueel: nummer de regels of zet ze in kaders."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Checklist vak 4",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "2 tot 4 duidelijke regels",
-            "Bij elke regel minstens 1 voorbeeld",
-            "Regels passen bij de sfeer en klanken van de taal",
-            "Een buitenstaander kan snappen hoe je basiszinnen maakt"
-          ]
-        },
-        {
-          "type": "title",
           "title": "Les 5 - Voorbeeldgesprek",
           "subtitle": "",
           "showProjectLogo": false,
@@ -14555,9 +14488,55 @@
         {
           "type": "title",
           "title": "Les 6b - Presentatie oefenen en generale repetitie",
-          "subtitle": "Taaltopia",
+          "subtitle": "",
           "showProjectLogo": false,
           "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag",
+          "subtitle": "Volledige presentatie oefenen",
+          "showProjectLogo": false,
+          "items": [
+            "Jullie krijgen de les om de volledige presentatie te oefenen en in te studeren.",
+            "Dat mag ook buiten het lokaal, zolang je op tijd terug bent.",
+            "Gebruik de poster actief: wijs aan wat je uitlegt en oefen de overgangen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefenafspraken",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Verdeel wie welk deel presenteert.",
+            "Oefen hardop, niet alleen fluisterend of lezend.",
+            "Iedereen moet ongeveer 1 minuut helder kunnen spreken over zijn of haar deel.",
+            "Let op verstaanbaarheid, tempo en waar je op de poster naar wijst."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "10 minuten voor het einde",
+          "subtitle": "Terug in het lokaal",
+          "showProjectLogo": false,
+          "items": [
+            "Iedereen komt terug naar het lokaal.",
+            "De docent wijst 2 willekeurige leerlingen uit 2 willekeurige groepjes aan.",
+            "Zij presenteren ieder ongeveer 1 minuut hun eigen deel.",
+            "Dit is een generale repetitie: kort, serieus en met directe feedback."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Feedback na de generale",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Wat was meteen duidelijk?",
+            "Waar moet nog meer tempo, rust of uitleg in?",
+            "Welke zin, aanwijzing of overgang moet je nog beter instuderen?"
+          ]
         }
       ],
       "markers": {
@@ -14565,9 +14544,8 @@
         "marker-les-1-naam-wereld-en-doelgroep": 7,
         "marker-les-2-klanken-en-schrift": 13,
         "marker-les-3-woorden-en-betekenissen": 19,
-        "marker-les-4-grammaticaregels": 25,
-        "marker-les-5-voorbeeldgesprek": 31,
-        "marker-les-6b-presentatie-oefenen-en-generale-repetitie": 37
+        "marker-les-5-voorbeeldgesprek": 25,
+        "marker-les-6b-presentatie-oefenen-generale-repetitie": 31
       }
     },
     "project-faalfestival": {
@@ -16112,201 +16090,6 @@
           ]
         },
         {
-          "type": "title",
-          "title": "Les 11 - Faalbattle",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Doel van vandaag",
-          "subtitle": "Battle-dag",
-          "showProjectLogo": false,
-          "items": [
-            "Iedere groep overtuigt de klas dat hun hoofdpersonage uit de ballon moet.",
-            "De klas stemt welk personage eruit gaat.",
-            "Het groepje van dat personage is de winnaar van de Faalbattle."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Spelregels Faalbattle",
-          "subtitle": "Ballondebat",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik de kern van je poster als argumentatie.",
-            "Je hoeft niet letterlijk de postertekst voor te lezen.",
-            "Presenteer duidelijk, krachtig en met overtuiging.",
-            "Reageer scherp op andere groepen als dat past binnen de tijd."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Beoordelingsfocus",
-          "subtitle": "Overtuigen + entertainen",
-          "showProjectLogo": false,
-          "items": [
-            "Inhoud: sterke argumenten waarom dit personage de grootste mislukkeling is.",
-            "Performance: energie, timing, podiumpresence, humor.",
-            "Publiek: de klas moet betrokken blijven en mee willen stemmen.",
-            "Samenwerking: jullie treden op als team."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Praktisch verloop (45 min)",
-          "subtitle": "7 groepjes",
-          "showProjectLogo": false,
-          "items": [
-            "Korte opening en uitleg stemronde.",
-            "Groepen presenteren om de beurt.",
-            "Stemmen en uitslag: welk personage wordt uit de ballon gegooid?",
-            "Afsluiting: winnend groepje en korte reflectie."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Publiek heeft ook een taak",
-          "subtitle": "Actief luisteren",
-          "showProjectLogo": false,
-          "items": [
-            "Luister scherp naar argumenten en tegenargumenten.",
-            "Let op: wie overtuigt echt én maakt er een show van?",
-            "Stem op basis van inhoud én impact.",
-            "Speel eerlijk, maar kritisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Einde",
-          "subtitle": "Faalfestival",
-          "showProjectLogo": false,
-          "items": [
-            "Welk personage is eruit gestemd?",
-            "Waarom werkte deze groep het sterkst?",
-            "Wat neem je mee voor je volgende presentatie?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 3: Initialen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zelf een middeleeuws initiaal ontwerpen",
-            "1/12/2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Leerdoelen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tijdsplanning",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat is een initiaal of miniatuur?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "weetjes",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom waren ze belangrijk?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Stijlkenmerken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Hoe werd het gemaakt?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wie maakte ze?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Symboliek",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht: eigen initiaal maken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Samenwerking: wie doet wat?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tentoonstelling & reflectie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "12-1-2026"
-          ]
-        },
-        {
           "type": "bullets",
           "title": "Les 3: Initialen",
           "subtitle": "",
@@ -16498,138 +16281,6 @@
           "showProjectLogo": false,
           "items": [
             "Voldoet je personage aan het middeleeuwse ideaal? Leg uit"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 5: Hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zelf een stukje Middelnederlands hertalen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Leerdoelen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Je weet wat Middelnederlands is",
-            "Je herkent kenmerken en valkuilen",
-            "Je kunt een tekst hertalen naar modern Nederlands"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat is Middelnederlands?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Oudste vorm van het Nederlands (ca. 1200–1500)",
-            "Geen standaardtaal: regionale varianten",
-            "Gebruikt in verhalen, liederen, kronieken",
-            "Geschreven zoals men sprak"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Kenmerken van Middelnederlands",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "• Andere spelling: bv. 'scone' (schone), 'ontfaen' (ontvangen)",
-            "• Uitgangen: 'des conincs' = van de koning, 'haren herten' = haar hart",
-            "• Klankovereenkomsten met Duits of Engels: 'ich', 'dat', 'minne'",
-            "• Valse vrienden:",
-            "• 'schoon' = mooi (niet: netjes)",
-            "• 'vrouwe' = dame / adellijke vrouw (niet: gewoon vrouw)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom is het belangrijk?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Voorloper van onze taal",
-            "Inzicht in taalverandering",
-            "Inzicht in middeleeuwse denkwereld",
-            "Taalhistorisch én cultureel erfgoed"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbeeld",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Middelnederlands:",
-            "“Dat es ene vrouwe scone ende soet, die in haren herten goet.”",
-            "Modern Nederlands:",
-            "“Zij is een mooie, zachtaardige vrouw met een goed hart.”"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Hoe hertaal je?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1. Lees hardop (klankherkenning)",
-            "2. Zoek bekende woorden",
-            "3. Let op zinsvolgorde",
-            "4. Herschrijf pas na letterlijke vertaling",
-            "5. Behoud betekenis en toon"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Taaltrucs & hulptips",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Dubbele ontkenning: 'niet en…' bv. “ende minen sin niet en vertare”",
-            "Clisis: samentrekking → 'het sweert' = '’tsweert'",
-            "Vocaalverlenging: 'gaen', 'wair' i.p.v. 'gaan', 'waar'",
-            "Voorlezen helpt enorm!"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Oefening samen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Voorbeeld:",
-            "“Die ridder quam met ghereet en speere, al te paerde bi den dore.”",
-            "Vraag:",
-            "- Wat betekenen: 'ghereet', 'al te paerde', 'bi den dore'?",
-            "- Samen hertalen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht: zelf hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Fragment van 4 regels",
-            "Zoek betekenis op",
-            "Letterlijk vertalen → vloeiend herschrijven",
-            "Tijd: 35 minuten, individueel of in tweetallen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Reflectie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat vond je moeilijk?",
-            "Welke strategie werkte goed?",
-            "Wat viel mee?",
-            "Wat helpt bij hertalen?"
           ]
         },
         {
@@ -17082,280 +16733,6 @@
         },
         {
           "type": "title",
-          "title": "Les 2: De middeleeuwen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Welke vooroordelen denken jullie dat er bestaan over de middeleeuwen?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "We inventariseren op het bord..."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Vrouwen hadden niets te zeggen...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vikingvrouwen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Archeologen bepaalden eeuwenlang het geslacht van een Viking op basis van objecten (wapens = man, sieraden = vrouw). Daardoor is het beeld scheefgegroeid.",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Er bestaan ruim 30 graven met vrouwelijke botten én wapens → historici deden dit lang af als “ruis”.",
-            "In Birka (graf Bj581) is een vrouw als volwaardige krijger begraven: paard, wapens, strategisch speelbord → elite-krijger.",
-            "Er zijn tientallen afbeeldingen van gewapende vrouwen (plaatjes, miniaturen, beeldjes uit Denemarken, Engeland, Polen, Rusland…).",
-            "Walkuren zijn later mythologisch gemaakt door middeleeuwse christelijke schrijvers, maar veel afbeeldingen waren waarschijnlijk realistische weergaven van vrouwen met wapens.",
-            "De iconische “Vikingvrouw met sleutels” is een negentiende-eeuwse uitvinding (Victoriaans ideaalbeeld).",
-            "Sleutels zijn nauwelijks gevonden in vrouwengraven; zwaarden wél massaal in mannengraven → het “sleutelsymbool” is achteraf geprojecteerd.",
-            "Middeleeuwse teksten noemen 20+ vrouwelijke krijgers en nog 50+ in poëzie/mythen — minstens zo vaak als “sleutelvrouwen”.",
-            "De Vikingmaatschappij was martiaal: eer + geweld → iedereen kon vechten, mannen én vrouwen.",
-            "Conclusie: het stereotype van alleen mannelijke krijgers is modern, niet historisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Er waren steeds heksenjachten...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "nkingen heksenvervolging"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "In Europa vonden in de late middeleeuwen en vroegmoderne tijd grootschalige heksenvervolgingen plaats.",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De vervolging trof vooral vrouwen, die gezien werden als zondebokken in tijden van angst, onzekerheid en maatschappelijke spanningen.",
-            "In Nederland werden ongeveer 250 mensen als ‘heks’ verbrand; elders in Europa lagen de aantallen veel hoger.",
-            "Heksenprocessen weerspiegelen middeleeuwse ideeën over magie, religie, sociale orde en genderrollen.",
-            "Het thema laat zien hoe snel een samenleving kan radicaliseren wanneer angst, bijgeloof en macht samenkomen.",
-            "Moderne herdenkingen en monumenten benadrukken hoe de vervolgingen verbonden zijn met historische vormen van vrouwenhaat, uitsluiting en sociale controle."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "De middeleeuwen waren vies en alles lag stil...",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Er gebeurde juist van alles"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middeleeuwen waren géén stilstan d: wielploeg, spinnewiel, mechanische klok, stijgbeugel, windmolen-innovaties, drukpers (1450).",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Door klimaatverbetering (950–1250) bloeit landbouw → enorme bevolkingsgroei (Engeland: 1,5 → 3 miljoen).",
-            "Wereldhandel groeit: kooplieden reizen naar Azië; Arabische handelaren brachten boekhouding & bankieren naar Europa",
-            "Architectuur wordt licht en ruim: gotiek (Saint-Denis) → grote ramen, gekleurd licht, slanke gewelven.",
-            "Hygiëne vóór 1300 eigenlijk best goed: dagelijks handen wassen, twee keer per maand baden.",
-            "Magna Carta (1215) → begin van rechtsbescherming (vooral voor elite, maar toch historisch belangrijk).",
-            "Universiteiten ontstaan vanaf 1088: Bologna, daarna heel Europa → onderwijs buiten kloosters.",
-            "Kortom: De middeleeuwen waren innovatief, internationaal en dynamisch."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middeleeuwen in het kort",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Standenmaatschappij: volk/boeren - burgers (late middeleeuwen) - adel – geestelijkheid (maar daarbinnen wel grote verschillen)",
-            "Theocentrisme (maar daarbinnen waren er ook nog oude gebruiken uit de oude natuurgodsdiensten)",
-            "Kruistochten",
-            "Ontstaan ambachten en steden rond rivieren"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Taalontwikkeling",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hoe zit het ook weer met de geschiedenis van het Nederlands?",
-            "Wat weet je daarvan?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Taalboom",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Ontwikkeling Nederlands",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat valt je op als je naar de dialogen luistert? Wat hoor je allemaal terug?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hebban olla vogala"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opgeschreven ca. 1100 door een Vlaamse monnik in Engeland, als pennenproef (testje van de schrijfpen).",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Oudste bekende stukje Nederlandstalige liefdespoëzie, maar taal is mengvorm: Oudnederlands / Oudengels.",
-            "Onze literatuur was vóór 1100 vooral mondeling: liederen, verhalen → pas later op schrift gezet.",
-            "Oudnederlands werd gesproken ca. 800–1150 – maar er is maar weinig van bewaard.",
-            "In Europa bestonden al oudere volkstalige teksten: Hildebrandslied (Duits, 800), Beowulf (Engels, 11e eeuw), Chanson de Roland (Frans, 1100).",
-            "Het versje toont:",
-            "hoe schrijvers toen werkten met ganzenveer,",
-            "hoe taal evolueerde,",
-            "en dat liefde een tijdloos thema is.",
-            "Voorbeeld van orale traditie: veel middeleeuwse teksten (o.a. Halewijn) werden pas eeuwen later opgeschreven.",
-            "Conclusie: “Hebban olla vogala…” is klein, maar cultureel enorm belangrijk."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De ridderroman:",
-            "Voorhoofs",
-            "Hoofs",
-            "Satire"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De geestelijke roman",
-            "Mariamirakel",
-            "Mystiek",
-            "Exempelen",
-            "Heiligenlevens"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Nederlandse letterkunde",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "De wereldlijke literatuur",
-            "Abele spelen",
-            "Rederijkers"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat valt op in de verhalen?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Rijm",
-            "Getallensymboliek",
-            "Kleurensymboliek",
-            "Hemelse en aardse liefde",
-            "Christelijk geloof",
-            "Koning en onderdanen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Middelnederlands hertalen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Dubbele ontkenning: ende minen sin niet en vertare",
-            "Clisis: samentrekking: 'het sweert' wordt 'tsweert'",
-            "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
-            "Voorlezen helpt!",
-            "WNT"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Boeken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Het maken van een boek, wat een werk",
-            "Een revolutionaire uitvinding",
-            "Miniaturen en initialen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Parchment / perkament:",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gemaakt van dierenhuid (kalf, geit, schaap).",
-            "Dagenlang weken, ontharen, schrapen, opnieuw schrapen → arbeidsintensief en duur.",
-            "Daarna gladmaken, behandelen met puimsteen & poeder, in katernen vouwen.",
-            "Resultaat: extreem duurzaam; kan 1000+ jaar meegaan.",
-            "Schrijven / scriptorium:",
-            "Scribe gebruikt ganzenveer, aangescherpt en gespleten voor inkttrek.",
-            "Lijnen worden met een passer/liniaal in het perkament gedrukt.",
-            "Inkt van galnoten of lamp black (roet).",
-            "Fouten worden letterlijk weggekrast → perkament kan dat aan.",
-            "Illuminatie / miniatuur:",
-            "Eerst goud aanbrengen (met gesso of gom), dan kleuren.",
-            "Pigmenten uit mineralen & planten; lagen van licht → donker.",
-            "Wit en zwart voor details en diepte.",
-            "Miniaturen waren prestigeobjecten, soms duurder dan het boek zelf.",
-            "Binding:",
-            "Katernen met linnen draad op leren riemen genaaid.",
-            "Houten kaften, leren omslag, later soms fluweel, edelmetaal, reliëf.",
-            "Gespen om het boek vlak en droog te houden.",
-            "Resultaat: een boek als kunstvoorwerp en statusobject."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Memento Mori",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vraag God dat Hij mij wilt vergeven!",
-            "Reynaert"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Trouw",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hij mag doodvallen die mij adviseert/ dat ik de koning schade zal berokkenen.",
-            "Elegast"
-          ]
-        },
-        {
-          "type": "title",
           "title": "Hertalen",
           "subtitle": "",
           "showProjectLogo": false,
@@ -17381,168 +16758,6 @@
             "Vocaalverlenging: e of i wordt gebruikt in plaats van dubbele klinker: gaen (gaan), wair (waar)",
             "Voorlezen helpt!",
             "WNT"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 8: Poster afmaken & presentatie voorbereiden",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag werk je verder aan je poster en bereid je de presentatie en het ballondebat voor."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Planning van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Tijdsverdeling:",
-            "5 min: uitleg",
-            "35 min: posters afmaken",
-            "20 min: voorbereiding pleidooi & presentatie",
-            "10 min: feedbackronde met andere groep",
-            "10 min: opruimen en inleveren"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Poster aanvullen -complete versie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je je poster helemaal af. Dit zijn alle onderdelen die erop moeten staan:"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "1. Informatief blokje",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zet kort op je poster:",
-            "Genre van het verhaal",
-            "Herkomst (land, tijd, auteur indien bekend)",
-            "Hoofdrolspelers",
-            "Korte samenvatting (max. 5 zinnen)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "2. Initiaal ontwerpen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ontwerp een grote beginletter die past bij jouw personage.",
-            "Gebruik kleur en symbolen",
-            "De letter zegt iets over het karakter",
-            "Middeleeuwse stijl (zoals in kloosterhandschriften)"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "3. Eigenschappen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat voor type is jouw personage?",
-            "Noem minstens 3 eigenschappen of kwaliteiten",
-            "Laat zien wanneer het misgaat: wat faalt er?",
-            "Wat leert het personage daarvan?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "4. Faalervaring",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Kies een fragment waarin:",
-            "het personage faalt,",
-            "of een levensles zichtbaar is,",
-            "of het karakter duidelijk blijkt.",
-            "Beschrijf het fragment in eigen woorden; leg uit wat er gebeurt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "5. Levensles uit het verhaal",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat kunnen we leren van dit verhaal?",
-            "Formuleer een duidelijke, relevante les",
-            "Koppel het aan het personage of de situatie",
-            "Bijv. 'Wie liegt, komt zichzelf tegen.' of 'Fouten maken is de weg naar wijsheid.'"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "6. Creatieve verwerking: heden",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verwerk een gebeurtenis uit het verhaal in een modern jasje:",
-            "Kies een moment (bijv. een val, een misstap, een verleiding...)",
-            "Hoe zou dat er nu uitzien?",
-            "Schrijf een kort fragment alsof het nú gebeurt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Checklist: alles op je poster?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Informatief blokje",
-            "Initiaal",
-            "Eigenschappen & faalervaringen",
-            "Fragment + hertaling + uitleg",
-            "Levensles",
-            "Creatieve verwerking in het heden",
-            "Alles compleet, middeleeuwse, creatief én verzorgd? Dan ben je klaar!"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding ballondebat – Ronde 1",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wie is de ultieme faalbaas?",
-            "Maak een pleidooi (1 minuut):",
-            "Hoe gaat jouw personage om met falen?",
-            "Wat leert hij/zij? Is de les nog relevant?",
-            "Welke eigenschappen helpen bij falen?",
-            "Is er een modern equivalent of rolmodel?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding ballondebat – Ronde 2",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Hoe win je van je tegenstanders?",
-            "Verzamel info over andere personages:",
-            "Waarom zijn zij géén echte faalbazen?",
-            "Welke zwaktes hebben zij?",
-            "Hoe kun je ze overtuigend tegenspreken?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorbereiding posterpresentatie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat vertel je bij de poster?",
-            "1. Wie is je personage en wat zijn zijn/haar eigenschappen?",
-            "2. Wat is het belangrijkste faalmoment?",
-            "3. Hoe zie je het genre terug?",
-            "4. Wat is de levensles – en is die nog actueel?",
-            "5. Hoe hebben jullie het verhaal gemoderniseerd?"
           ]
         },
         {
@@ -17586,18 +16801,13 @@
       "markers": {
         "marker-les-6-fragment-faalervaring-hertaling": 1,
         "marker-les-10-ff-faalbattle-oefenen-faalbattle": 2,
-        "marker-les-11-ff-faalbattle": 9,
-        "marker-les-3-ff-boeken-en-initiaal": 16,
-        "marker-les-3-ff-leesles": 29,
-        "marker-les-4-informatieblok": 42,
-        "marker-les-4-ff-leesles": 46,
-        "marker-les-5-eigenschappen-levensles": 50,
-        "marker-les-1-ff-intro": 61,
-        "marker-les-2-ff-letterkunde-middeleeuwen": 78,
-        "marker-les-2-ff-leesles": 101,
-        "marker-les-7-creatieve-verwerking": 124,
-        "marker-les-8-ff-poster-afmaken": 127,
-        "marker-les-9-ff-poster-afmaken-posterpresentaties": 140
+        "marker-les-3-ff-boeken-en-initiaal": 9,
+        "marker-les-4-informatieblok": 22,
+        "marker-les-4-ff-leesles": 26,
+        "marker-les-1-ff-intro": 30,
+        "marker-les-2-ff-leesles": 47,
+        "marker-les-7-creatieve-verwerking": 70,
+        "marker-les-9-ff-poster-afmaken-posterpresentaties": 73
       }
     },
     "project-v-rede": {
@@ -18404,11 +17614,97 @@
           ]
         },
         {
-          "type": "title",
-          "title": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
-          "subtitle": "V-rede",
+          "type": "bullets",
+          "title": "Les 3 V-rede: van persoonlijke scene naar stelling",
+          "subtitle": "Doel: je onderwerp wordt een scherp maatschappelijk punt",
           "showProjectLogo": false,
-          "items": []
+          "items": [
+            "Je gebruikt de scene uit les 2 als bewijs, niet als los verhaaltje",
+            "Je ontdekt welk patroon, welke waarde en welke verandering erbij horen",
+            "Aan het einde staat er een voorlopige stelling en brugalinea in je netschrift"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aansluiting op les 2",
+          "subtitle": "Van raken naar overtuigen",
+          "showProjectLogo": false,
+          "items": [
+            "Les 2: je koos iets dat jou echt raakt en schreef een concrete scene",
+            "Vandaag: je laat zien waarom die scene meer betekent dan alleen jouw ervaring",
+            "Een indrukwekkende speech begint persoonlijk, maar eindigt niet bij jezelf"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: de ladder van betekenis",
+          "subtitle": "Vijf treden voor een sterke V-rede",
+          "showProjectLogo": false,
+          "items": [
+            "Scene: wat gebeurt er precies, waar, met wie, op welk moment?",
+            "Patroon: wat zie je hier vaker gebeuren?",
+            "Waarde: wat staat er op het spel, bijvoorbeeld vrijheid, waardigheid, rechtvaardigheid of veiligheid?",
+            "Stelling: wat moet het publiek anders gaan vinden?",
+            "Oproep: wat moet het publiek anders gaan doen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: geen spreekbeurt, maar betoog",
+          "subtitle": "Je hoeft niet alles uit te leggen",
+          "showProjectLogo": false,
+          "items": [
+            "Een spreekbeurt informeert: dit is mijn onderwerp",
+            "Een betoog stuurt: dit moet u anders zien",
+            "Een V-rede doet allebei: ze laat iets voelen en dwingt daarna tot een standpunt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Model: van zwak naar sterk",
+          "subtitle": "Maak het punt scherper",
+          "showProjectLogo": false,
+          "items": [
+            "Zwak: buitensluiten is niet leuk",
+            "Sterker: wie elke dag alleen staat, leert langzaam dat niemand hem verwacht",
+            "Stelling: een klas is pas veilig als omstanders zich verantwoordelijk voelen voor wie buiten de groep valt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Praktijk: bouw je kern",
+          "subtitle": "Werk eerst in trefwoorden, daarna in zinnen",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep in je scene het detail dat het meest blijft hangen",
+            "Schrijf daaronder: dit laat zien dat ...",
+            "Maak daarna drie mogelijke stellingen en kies de scherpste",
+            "Testvraag: kan iemand het oneens zijn met jouw stelling? Dan is hij bruikbaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift: product van vandaag",
+          "subtitle": "Dit moet aan het einde staan",
+          "showProjectLogo": false,
+          "items": [
+            "1. Mijn scene in een kernzin: ...",
+            "2. Het patroon dat ik hierin zie: ...",
+            "3. De waarde die op het spel staat: ...",
+            "4. Mijn voorlopige stelling: ...",
+            "5. Brugalinea van 5 tot 7 zinnen: van scene naar maatschappelijk probleem"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Korte deelronde",
+          "subtitle": "Luisteren als kritisch publiek",
+          "showProjectLogo": false,
+          "items": [
+            "Lees alleen je voorlopige stelling voor",
+            "Publiek reageert met: scherp, te algemeen of nog geen standpunt",
+            "Verbeter je stelling met een sterker werkwoord of concretere doelgroep"
+          ]
         },
         {
           "type": "bullets",
@@ -18566,18 +17862,189 @@
           ]
         },
         {
-          "type": "title",
-          "title": "Les 4 V-rede: Raak je publiek met hoofd en hart",
-          "subtitle": "V-rede",
+          "type": "bullets",
+          "title": "Les 4 V-rede: overtuigen met hoofd, hart en geloofwaardigheid",
+          "subtitle": "Doel: je speech krijgt retorische kracht",
           "showProjectLogo": false,
-          "items": []
+          "items": [
+            "Je leert ethos, pathos en logos gebruiken zonder trucjes",
+            "Je maakt je stelling geloofwaardig, voelbaar en logisch",
+            "Aan het einde heb je drie sterke bouwstenen voor je speech in je netschrift"
+          ]
         },
         {
-          "type": "title",
-          "title": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
-          "subtitle": "V-rede",
+          "type": "bullets",
+          "title": "Aansluiting op les 3",
+          "subtitle": "Van stelling naar overtuigingskracht",
           "showProjectLogo": false,
-          "items": []
+          "items": [
+            "Les 3 leverde je stelling en brugalinea op",
+            "Vandaag onderzoek je waarom het publiek jou zou geloven",
+            "Een indrukwekkende speech overtuigt niet met volume, maar met gekozen bewijs"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: Aristoteles in gewone taal",
+          "subtitle": "Ethos, pathos, logos",
+          "showProjectLogo": false,
+          "items": [
+            "Ethos: het publiek vertrouwt jouw stem, omdat je eerlijk, precies en betrokken bent",
+            "Pathos: het publiek voelt de urgentie door beeld, ritme en menselijke gevolgen",
+            "Logos: het publiek kan jouw redenering volgen en ziet waarom je conclusie klopt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: pathos is geen melodrama",
+          "subtitle": "Gevoel werkt pas door precisie",
+          "showProjectLogo": false,
+          "items": [
+            "Niet: dit is superzielig en verschrikkelijk",
+            "Wel: laat een concreet detail zien waardoor het publiek zelf iets voelt",
+            "Sterk pathos vertrouwt op het beeld, niet op uitroeptekens"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: logos is meer dan een feitje",
+          "subtitle": "Maak je redenering zichtbaar",
+          "showProjectLogo": false,
+          "items": [
+            "Gebruik oorzaak en gevolg: als wij dit normaal vinden, dan gebeurt er ...",
+            "Gebruik tegenstelling: we zeggen dat ..., maar in werkelijkheid ...",
+            "Gebruik voorbeeld en conclusie: deze scene laat zien dat ... dus ..."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Modelzinnen",
+          "subtitle": "Niet overschrijven, wel nadoen",
+          "showProjectLogo": false,
+          "items": [
+            "Ethos: ik spreek hierover niet omdat ik alles weet, maar omdat ik heb gezien wat stilte doet",
+            "Pathos: hij lachte mee, maar zijn schouders zakten elke keer iets verder",
+            "Logos: als niemand reageert, wordt wegkijken langzaam de regel van de groep"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Praktijk: schrijf drie overtuigingszinnen",
+          "subtitle": "Daarna combineren",
+          "showProjectLogo": false,
+          "items": [
+            "Schrijf een ethoszin: waarom mag jij hierover spreken?",
+            "Schrijf een pathoszin: welk beeld moet blijven hangen?",
+            "Schrijf een logoszin: welke redenering moet het publiek snappen?",
+            "Kies de beste twee en verbind ze tot een alinea van 6 tot 8 zinnen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift: product van vandaag",
+          "subtitle": "Dit gebruik je straks in je eerste versie",
+          "showProjectLogo": false,
+          "items": [
+            "1. Ethoszin",
+            "2. Pathoszin met concreet beeld",
+            "3. Logoszin met oorzaak-gevolg of tegenstelling",
+            "4. Een overtuigingsalinea waarin je persoonlijke scene en stelling samenkomen",
+            "5. Markeer met E, P en L waar ethos, pathos en logos zitten"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Les 5 V-rede: bouwplan voor een indrukwekkende speech",
+          "subtitle": "Doel: je speech krijgt een route van binnenkomst tot slotzin",
+          "showProjectLogo": false,
+          "items": [
+            "Je ordent je scene, stelling en overtuigingszinnen tot een heldere opbouw",
+            "Je leert hoe een speech spanning en richting krijgt",
+            "Aan het einde heb je een volledig bouwplan plus openingszin en slotzin"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aansluiting op les 3 en 4",
+          "subtitle": "Je materiaal ligt er al",
+          "showProjectLogo": false,
+          "items": [
+            "Les 3: scene, patroon, waarde, stelling",
+            "Les 4: ethos, pathos, logos en overtuigingsalinea",
+            "Vandaag: je bepaalt in welke volgorde het publiek dit moet horen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: klassieke speechopbouw",
+          "subtitle": "Oud principe, moderne V-rede",
+          "showProjectLogo": false,
+          "items": [
+            "Exordium: opening die aandacht en vertrouwen wint",
+            "Narratio: persoonlijke scene waardoor het publiek de kwestie ziet",
+            "Confirmatio: je stelling en sterkste argumenten",
+            "Peroratio: slot dat terugkeert naar het begin en oproept tot verandering"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: begin niet met je onderwerp",
+          "subtitle": "Begin met spanning",
+          "showProjectLogo": false,
+          "items": [
+            "Niet: mijn V-rede gaat over prestatiedruk",
+            "Wel: om 23.48 uur zat ik nog naar hetzelfde lege document te kijken",
+            "Een goede opening laat het publiek eerst kijken, daarna pas begrijpen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Theorie: de kernzin",
+          "subtitle": "De zin die moet blijven hangen",
+          "showProjectLogo": false,
+          "items": [
+            "Je kernzin is kort genoeg om te onthouden",
+            "Hij bevat jouw standpunt, niet alleen je onderwerp",
+            "Hij kan terugkomen in je slot, eventueel net iets sterker geformuleerd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Modelbouwplan",
+          "subtitle": "Voorbeeldroute",
+          "showProjectLogo": false,
+          "items": [
+            "Opening: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
+            "Scene: wat er in de pauze gebeurt en wat niemand zegt",
+            "Stelling: wegkijken maakt buitensluiting normaal",
+            "Argumenten: veiligheid, verantwoordelijkheid van omstanders, effect van kleine keuzes",
+            "Slot: kijk morgen niet naar je scherm als iemand naast jou geen plek heeft"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Praktijk: maak je route",
+          "subtitle": "Van losse zinnen naar spreektekst",
+          "showProjectLogo": false,
+          "items": [
+            "Zet je materiaal onder zes kopjes: opening, scene, probleem, argumenten, oproep, slot",
+            "Kies per kopje maximaal drie kernzinnen",
+            "Schrap alles wat niet helpt om je publiek naar je slot te brengen",
+            "Schrijf opening en slot volledig uit, niet in trefwoorden"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift: product van vandaag",
+          "subtitle": "Startpunt voor les 6",
+          "showProjectLogo": false,
+          "items": [
+            "1. Bouwplan met zes kopjes: opening, scene, maatschappelijk probleem, argumenten, oproep, slot",
+            "2. Per kopje 2 tot 3 kernzinnen of trefwoorden",
+            "3. Een openingszin die begint met beeld, spanning of tegenstelling",
+            "4. Een slotzin waarin je kernzin terugkomt als oproep",
+            "5. Een check: welke zin moet het publiek na afloop onthouden?"
+          ]
         },
         {
           "type": "bullets",
@@ -18799,14 +18266,14 @@
       ],
       "markers": {
         "marker-les-6-v-rede-eerste-versie-schrijven": 1,
-        "marker-les-3-v-rede-van-persoonlijk-verhaal-naar-maatschappelijk-probleem": 8,
-        "marker-les-1-v-rede-wat-is-een-v-rede": 9,
-        "marker-les-2-v-rede-iets-wat-jou-raakt": 16,
-        "marker-les-4-v-rede-raak-je-publiek-met-hoofd-en-hart": 23,
-        "marker-les-5-v-rede-bouwplan-voor-een-indrukwekkende-speech": 24,
-        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": 25,
-        "marker-les-8-v-rede-presentaties-deel-1": 32,
-        "marker-les-9-v-rede-presentaties-deel-2": 38
+        "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk": 8,
+        "marker-les-1-v-rede-wat-is-een-v-rede": 16,
+        "marker-les-2-v-rede-iets-wat-jou-raakt": 23,
+        "marker-les-4-v-rede-hoofd-en-hart": 30,
+        "marker-les-5-v-rede-bouwplan-indrukwekkende-speech": 38,
+        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": 46,
+        "marker-les-8-v-rede-presentaties-deel-1": 53,
+        "marker-les-9-v-rede-presentaties-deel-2": 59
       },
       "deck": "project-v-rede",
       "showProjectLogo": true
@@ -23316,252 +22783,14 @@
         },
         {
           "type": "title",
-          "title": "Heel veel lezen 1+2: waarom lezen ertoe doet, schoolbieb en eerste leesstart",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
           "title": "Heel veel lezen",
           "subtitle": "Heel veel lezen",
           "showProjectLogo": false,
           "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 5: Stillezen en startcheck",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Lees 25-30 minuten in stilte",
-            "Noteer titel, auteur en startdatum",
-            "Check na afloop eerlijk: blijft dit boek bij je?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 6: Stillezen en boekmatch controleren",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Controleer of je boek echt goed past",
-            "Durf gericht te wisselen als dat beter is",
-            "Lees daarna zonder scherm in de buurt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 7: Stillezen en dagelijks leesritme",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Bouw 20 minuten per dag thuis in",
-            "Kies vaste momenten in je week",
-            "Lees daarna geconcentreerd verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 8: Stillezen en leesrechten toepassen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Herhaal de rechten van de lezer",
-            "Kies bewust: doorgaan of wisselen",
-            "Lees daarna door zonder afleiding"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 9: Stillezen en eerste maanddoel check",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Check je eerste maanddoel",
-            "Ben je op koers voor 1 boek per maand?",
-            "Lees daarna weer in stilte verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 10: Stillezen en slim van boek wisselen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wissel slim als een boek niet werkt",
-            "Gebruik bieb, niveau en genre bewust",
-            "Lees daarna meteen door in je nieuwe of huidige boek"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 11: Stillezen en focus trainen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Train langere aandacht zonder telefoon",
-            "Lees in een echt stil blok",
-            "Merk op wat dat met je hoofd doet"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 12: Stillezen en leestips uitwisselen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wissel leestips uit zonder te spoileren",
-            "Gebruik klasgenoten als boekenvinders",
-            "Lees daarna verder"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 13: Stillezen en tweede boek kiezen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Kies zo nodig een tweede boek",
-            "Blijf het maandritme vasthouden",
-            "Zorg dat je leeslijst blijft groeien"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Heel veel lezen 14: Stillezen en lezen voor de lijst koppelen",
-          "subtitle": "Heel veel lezen",
-          "showProjectLogo": false,
-          "items": [
-            "Stillezen staat centraal",
-            "Iedereen leest zijn eigen boek",
-            "Telefoon blijft weg tijdens leestijd"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Focus van vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Koppel je boek aan Lezen voor de lijst",
-            "Controleer niveau, genre en interesse",
-            "Lees daarna verder"
-          ]
         }
       ],
       "markers": {
-        "marker-heel-veel-lezen-1-2-waarom-lezen-ertoe-doet-schoolbieb-en-eerste-leesstart": 1,
-        "marker-heel-veel-lezen": 2,
-        "marker-heel-veel-lezen-5-stillezen-en-startcheck": 3,
-        "marker-heel-veel-lezen-6-stillezen-en-boekmatch-controleren": 5,
-        "marker-heel-veel-lezen-7-stillezen-en-dagelijks-leesritme": 7,
-        "marker-heel-veel-lezen-8-stillezen-en-leesrechten-toepassen": 9,
-        "marker-heel-veel-lezen-9-stillezen-en-eerste-maanddoel-check": 11,
-        "marker-heel-veel-lezen-10-stillezen-en-slim-van-boek-wisselen": 13,
-        "marker-heel-veel-lezen-11-stillezen-en-focus-trainen": 15,
-        "marker-heel-veel-lezen-12-stillezen-en-leestips-uitwisselen": 17,
-        "marker-heel-veel-lezen-13-stillezen-en-tweede-boek-kiezen": 19,
-        "marker-heel-veel-lezen-14-stillezen-en-lezen-voor-de-lijst-koppelen": 21
+        "marker-heel-veel-lezen": 1
       },
       "markerDecks": {
         "marker-heel-veel-lezen-5-stillezen-en-startcheck": [
@@ -24098,7 +23327,8 @@
           }
         ]
       },
-      "importVersion": 2026031601
+      "importVersion": 2026031601,
+      "subtitle": "Heel veel lezen"
     },
     "project-invloed": {
       "id": "project-invloed",
@@ -25592,7 +24822,8 @@
             "subtitle": "Netschrift"
           }
         ]
-      }
+      },
+      "subtitle": "Netschrift"
     },
     "project-spiegeldicht": {
       "id": "project-spiegeldicht",
@@ -25670,7 +24901,8 @@
             "subtitle": "Spiegeldicht"
           }
         ]
-      }
+      },
+      "subtitle": "Spiegeldicht"
     },
     "project-grenzen-van-literatuur": {
       "id": "project-grenzen-van-literatuur",
@@ -25808,7 +25040,8 @@
             "subtitle": "Grenzen van Literatuur"
           }
         ]
-      }
+      },
+      "subtitle": "Grenzen van Literatuur"
     },
     "project-technologie": {
       "id": "project-technologie",
@@ -25886,7 +25119,8 @@
             "subtitle": "Technologie"
           }
         ]
-      }
+      },
+      "subtitle": "Technologie"
     },
     "project-renaissance": {
       "id": "project-renaissance",
@@ -25919,7 +25153,8 @@
             "subtitle": "Renaissance"
           }
         ]
-      }
+      },
+      "subtitle": "Renaissance"
     },
     "project-persoonlijkheid": {
       "id": "project-persoonlijkheid",
@@ -25967,8 +25202,1353 @@
             "subtitle": "Persoonlijkheid"
           }
         ]
+      },
+      "subtitle": "Persoonlijkheid"
+    },
+    "project-zinsbouwers": {
+      "id": "project-zinsbouwers",
+      "presentationType": "project-overview",
+      "title": "Zinsbouwers",
+      "subtitle": "Grammatica als gereedschap",
+      "project": "Zinsbouwers",
+      "importVersion": 2026060402,
+      "markerDecks": {
+        "marker-les-1-de-basis-van-een-zin": [
+          {
+            "type": "bullets",
+            "title": "Grammaticatoetsje 1D - les 1",
+            "subtitle": "Schrijf de zinnen over. Onderstreep het wwg of nwg. Schrijf erachter: WWG of NWG.",
+            "showProjectLogo": false,
+            "items": [
+              "De hond loopt door de tuin. -> ___________",
+              "Mijn broer is ziek. -> ___________",
+              "Wij hebben gisteren gewonnen. -> ___________",
+              "De soep ruikt heerlijk. -> ___________",
+              "De leerlingen maken hun huiswerk. -> ___________",
+              "Het weer wordt slechter. -> ___________",
+              "Zij blijft de hele dag thuis. -> ___________",
+              "De nieuwe docent lijkt streng. -> ___________"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Les 1 - De basis van een zin",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true,
+            "items": []
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Eerst de ruggengraat van de zin: welk werkwoord verandert mee en wie of wat hoort daarbij?",
+            "items": [
+              "Zinsdelen: persoonsvorm, onderwerp.",
+              "Woordsoorten: werkwoord, zelfstandig naamwoord, lidwoord.",
+              "Blijft meetellen: nog niets.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-2-de-werkwoordsgroep": [
+          {
+            "type": "title",
+            "title": "Les 2 - De werkwoordsgroep",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Na de persoonsvorm zie je de hele werkwoordgroep; daarna kijk je naar woorden die zelfstandige naamwoorden beschrijven.",
+            "items": [
+              "Zinsdelen: werkwoordelijk gezegde.",
+              "Woordsoorten: hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoord, zelfstandig naamwoord, lidwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-3-wie-of-wat": [
+          {
+            "type": "title",
+            "title": "Les 3 - Wie of wat?",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Als onderwerp en gezegde staan, kun je vragen wie of wat de handeling ondergaat.",
+            "items": [
+              "Zinsdelen: lijdend voorwerp.",
+              "Woordsoorten: persoonlijk voornaamwoord, bezittelijk voornaamwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-4-voor-wie-of-aan-wie": [
+          {
+            "type": "title",
+            "title": "Les 4 - Voor wie of aan wie?",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Na het lijdend voorwerp komt de ontvanger of belanghebbende: aan wie, voor wie, bij wie of van wie?",
+            "items": [
+              "Zinsdelen: meewerkend voorwerp.",
+              "Woordsoorten: voorzetsel.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-5-extra-informatie": [
+          {
+            "type": "title",
+            "title": "Les 5 - Extra informatie",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Nu de kern van de zin staat, voeg je informatie toe over tijd, plaats, manier, reden en mate.",
+            "items": [
+              "Zinsdelen: bijwoordelijke bepaling.",
+              "Woordsoorten: bijwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-6-zijn-worden-blijven": [
+          {
+            "type": "title",
+            "title": "Les 6 - Zijn, worden, blijven",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Pas na het werkwoordelijk gezegde is het verschil tussen handeling en toestand goed te zien.",
+            "items": [
+              "Zinsdelen: naamwoordelijk gezegde, naamwoordelijk deel van het gezegde.",
+              "Woordsoorten: koppelwerkwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-7-informatie-binnen-de-naamwoordgroep": [
+          {
+            "type": "title",
+            "title": "Les 7 - Informatie binnen de naamwoordgroep",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Je kijkt nu binnen de naamwoordgroep: welke woorden geven extra informatie of wijzen iets aan?",
+            "items": [
+              "Zinsdelen: bijvoeglijke bepaling.",
+              "Woordsoorten: aanwijzend voornaamwoord, vragend voornaamwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-8-zinnen-verbinden": [
+          {
+            "type": "title",
+            "title": "Les 8 - Zinnen verbinden",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Daarna leer je hoe zinnen verbonden worden en waarom die/dat soms verwijst en soms verbindt.",
+            "items": [
+              "Zinsdelen: geen nieuw zinsdeel, bekende zinsdelen in samengestelde zinnen.",
+              "Woordsoorten: voegwoord, betrekkelijk voornaamwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-9-mengzinnen": [
+          {
+            "type": "title",
+            "title": "Les 9 - Mengzinnen",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "De laatste losse woordsoorten komen erbij; daarna kan alles door elkaar geoefend worden.",
+            "items": [
+              "Zinsdelen: geen nieuw zinsdeel, volledige analyse met alle bekende zinsdelen.",
+              "Woordsoorten: telwoord, onbepaald voornaamwoord.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-10-tempo-en-controle": [
+          {
+            "type": "title",
+            "title": "Les 10 - Tempo en controle",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Doel: sneller werken met een vaste controlevolgorde, zonder nauwkeurigheid te verliezen.",
+            "items": [
+              "Zinsdelen: geen nieuwe onderdelen.",
+              "Woordsoorten: geen nieuwe onderdelen.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-11-herstelronde": [
+          {
+            "type": "title",
+            "title": "Les 11 - Herstelronde",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Doel: zwakke onderdelen repareren met uitleg, slimme fouten en extra toetsmomenten.",
+            "items": [
+              "Zinsdelen: geen nieuwe onderdelen.",
+              "Woordsoorten: geen nieuwe onderdelen.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-12-eindronde-en-afvinken": [
+          {
+            "type": "title",
+            "title": "Les 12 - Eindronde en afvinken",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Vandaag nieuw",
+            "subtitle": "Doel: betrouwbaar toepassen en bewijs verzamelen in netschrift en afvinkkaart.",
+            "items": [
+              "Zinsdelen: geen nieuwe onderdelen.",
+              "Woordsoorten: geen nieuwe onderdelen.",
+              "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+              "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Vrije werkfase",
+            "subtitle": "30 minuten doelgericht leren",
+            "items": [
+              "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+              "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+              "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+              "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Toetsmoment",
+            "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+            "items": [
+              "Naam bovenaan.",
+              "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+              "Zinsdelen, woordsoorten en één korte uitleg.",
+              "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Netschrift",
+            "subtitle": "Product van vandaag",
+            "items": [
+              "Werk je grammatica-gereedschapskist bij.",
+              "Noteer minstens één voorbeeldzin met uitleg.",
+              "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+              "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+            ]
+          }
+        ],
+        "marker-les-extra-oefenronde": [
+          {
+            "type": "title",
+            "title": "Extra oefenronde",
+            "subtitle": "Zinsbouwers",
+            "showProjectLogo": true
+          },
+          {
+            "type": "bullets",
+            "title": "Doel",
+            "subtitle": "Ruimte door het rooster",
+            "items": [
+              "Gebruik deze les voor herstel, extra toetsmomenten en het afvinken van ontbrekend bewijs.",
+              "Er komt geen nieuwe theorie bij.",
+              "Werk alleen aan onderdelen die nog niet betrouwbaar zijn."
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "type": "title",
+          "title": "Zinsbouwers",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true
+        },
+        {
+          "type": "bullets",
+          "title": "Grammaticatoetsje 1D - les 1",
+          "subtitle": "Schrijf de zinnen over. Onderstreep het wwg of nwg. Schrijf erachter: WWG of NWG.",
+          "showProjectLogo": false,
+          "items": [
+            "De hond loopt door de tuin. -> ___________",
+            "Mijn broer is ziek. -> ___________",
+            "Wij hebben gisteren gewonnen. -> ___________",
+            "De soep ruikt heerlijk. -> ___________",
+            "De leerlingen maken hun huiswerk. -> ___________",
+            "Het weer wordt slechter. -> ___________",
+            "Zij blijft de hele dag thuis. -> ___________",
+            "De nieuwe docent lijkt streng. -> ___________"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 1 - De basis van een zin",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Eerst de ruggengraat van de zin: welk werkwoord verandert mee en wie of wat hoort daarbij?",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: persoonsvorm, onderwerp.",
+            "Woordsoorten: werkwoord, zelfstandig naamwoord, lidwoord.",
+            "Blijft meetellen: nog niets.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 2 - De werkwoordsgroep",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Na de persoonsvorm zie je de hele werkwoordgroep; daarna kijk je naar woorden die zelfstandige naamwoorden beschrijven.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: werkwoordelijk gezegde.",
+            "Woordsoorten: hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoord, zelfstandig naamwoord, lidwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 3 - Wie of wat?",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Als onderwerp en gezegde staan, kun je vragen wie of wat de handeling ondergaat.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: lijdend voorwerp.",
+            "Woordsoorten: persoonlijk voornaamwoord, bezittelijk voornaamwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 4 - Voor wie of aan wie?",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Na het lijdend voorwerp komt de ontvanger of belanghebbende: aan wie, voor wie, bij wie of van wie?",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: meewerkend voorwerp.",
+            "Woordsoorten: voorzetsel.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 5 - Extra informatie",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Nu de kern van de zin staat, voeg je informatie toe over tijd, plaats, manier, reden en mate.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: bijwoordelijke bepaling.",
+            "Woordsoorten: bijwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 6 - Zijn, worden, blijven",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Pas na het werkwoordelijk gezegde is het verschil tussen handeling en toestand goed te zien.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: naamwoordelijk gezegde, naamwoordelijk deel van het gezegde.",
+            "Woordsoorten: koppelwerkwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 7 - Informatie binnen de naamwoordgroep",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Je kijkt nu binnen de naamwoordgroep: welke woorden geven extra informatie of wijzen iets aan?",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: bijvoeglijke bepaling.",
+            "Woordsoorten: aanwijzend voornaamwoord, vragend voornaamwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 8 - Zinnen verbinden",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Daarna leer je hoe zinnen verbonden worden en waarom die/dat soms verwijst en soms verbindt.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: geen nieuw zinsdeel, bekende zinsdelen in samengestelde zinnen.",
+            "Woordsoorten: voegwoord, betrekkelijk voornaamwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 9 - Mengzinnen",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "De laatste losse woordsoorten komen erbij; daarna kan alles door elkaar geoefend worden.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: geen nieuw zinsdeel, volledige analyse met alle bekende zinsdelen.",
+            "Woordsoorten: telwoord, onbepaald voornaamwoord.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 10 - Tempo en controle",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Doel: sneller werken met een vaste controlevolgorde, zonder nauwkeurigheid te verliezen.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: geen nieuwe onderdelen.",
+            "Woordsoorten: geen nieuwe onderdelen.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 11 - Herstelronde",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Doel: zwakke onderdelen repareren met uitleg, slimme fouten en extra toetsmomenten.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: geen nieuwe onderdelen.",
+            "Woordsoorten: geen nieuwe onderdelen.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Les 12 - Eindronde en afvinken",
+          "subtitle": "Zinsbouwers",
+          "showProjectLogo": true,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag nieuw",
+          "subtitle": "Doel: betrouwbaar toepassen en bewijs verzamelen in netschrift en afvinkkaart.",
+          "showProjectLogo": false,
+          "items": [
+            "Zinsdelen: geen nieuwe onderdelen.",
+            "Woordsoorten: geen nieuwe onderdelen.",
+            "Blijft meetellen: persoonsvorm, onderwerp, werkwoordelijk gezegde, lijdend voorwerp, meewerkend voorwerp, bijwoordelijke bepaling, naamwoordelijk gezegde, naamwoordelijk deel van het gezegde, bijvoeglijke bepaling, werkwoord, zelfstandig naamwoord, lidwoord, hulpwerkwoord, zelfstandig werkwoord, bijvoeglijk naamwoord, persoonlijk voornaamwoord, bezittelijk voornaamwoord, voorzetsel, bijwoord, koppelwerkwoord, aanwijzend voornaamwoord, vragend voornaamwoord, voegwoord, betrekkelijk voornaamwoord, telwoord, onbepaald voornaamwoord.",
+            "Je moet elk antwoord kunnen uitleggen met een proef, vraag of voorbeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vrije werkfase",
+          "subtitle": "30 minuten doelgericht leren",
+          "showProjectLogo": false,
+          "items": [
+            "Kies een werkvorm waarmee je precies deze nieuwe onderdelen leert of herhaalt.",
+            "Maak oefenzinnen waarin de nieuwe zinsdelen en woordsoorten echt voorkomen.",
+            "Overhoor elkaar hardop: antwoord plus uitleg telt, gokken niet.",
+            "Maak minimaal een stukje bewijs voor je netschrift of afvinkkaart."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Toetsmoment",
+          "subtitle": "Ongeveer 5 minuten, vijf leerlingen",
+          "showProjectLogo": false,
+          "items": [
+            "Naam bovenaan.",
+            "Samenwerkingsnaam of samenwerkingsnamen erbij.",
+            "Zinsdelen, woordsoorten en één korte uitleg.",
+            "Jouw blaadje laat ook iets zien over hoe goed jouw groepje samen heeft geleerd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Netschrift",
+          "subtitle": "Product van vandaag",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je grammatica-gereedschapskist bij.",
+            "Noteer minstens één voorbeeldzin met uitleg.",
+            "Schrijf op wat je nu zeker weet en waar je nog over twijfelt.",
+            "Vul samenwerking of toetsreflectie aan als dat past bij deze les."
+          ]
+        }
+      ],
+      "markers": {
+        "marker-les-1-de-basis-van-een-zin": 1,
+        "marker-les-2-de-werkwoordsgroep": 6,
+        "marker-les-3-wie-of-wat": 11,
+        "marker-les-4-voor-wie-of-aan-wie": 16,
+        "marker-les-5-extra-informatie": 21,
+        "marker-les-6-zijn-worden-blijven": 26,
+        "marker-les-7-informatie-binnen-de-naamwoordgroep": 31,
+        "marker-les-8-zinnen-verbinden": 36,
+        "marker-les-9-mengzinnen": 41,
+        "marker-les-10-tempo-en-controle": 46,
+        "marker-les-11-herstelronde": 51,
+        "marker-les-12-eindronde-en-afvinken": 56
       }
     }
   },
-  "sourceRevision": "2026-06-01T09:21:57+02:00-studio"
+  "sourceRevision": "2026-06-08T08:56:26+02:00-studio"
 }

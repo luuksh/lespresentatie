@@ -1095,6 +1095,43 @@ function getClassProgressAnchor(classId, now = new Date()) {
   };
 }
 
+function plannedLessonForAgendaEntry(classId, agendaEntry) {
+  if (!agendaEntry?.start) return null;
+  const week = isoWeekForDate(agendaEntry.start);
+  if (!Number.isFinite(week)) return null;
+  const entry = getEntryForWeek(classId, week);
+  if (!entry) return null;
+
+  const lessonIndex = lessonNumberForAgendaWeek(state.agendaEntries, agendaEntry);
+  if (!Number.isInteger(lessonIndex) || lessonIndex <= 0) return null;
+  const mappedIndex = Math.min(3, lessonIndex);
+  const mappedKey = lessonLetter(mappedIndex);
+  const lessons = Array.isArray(entry.lessons) ? entry.lessons : [];
+  const keyedLessons = lessons.filter((lesson) => String(lesson?.lessonKey || '').trim());
+  const lesson = keyedLessons.length
+    ? keyedLessons.find((candidate) => String(candidate.lessonKey || '').trim().toUpperCase() === mappedKey)
+    : lessons[Math.max(0, Math.min(lessons.length - 1, mappedIndex - 1))];
+  if (!lesson) return null;
+
+  return {
+    entry,
+    lesson: { ...lesson, week: String(entry.week) },
+    lessonKey: String(lesson.lessonKey || mappedKey).trim().toUpperCase(),
+    lessonIndex,
+  };
+}
+
+function lessonTargetForAgendaSlot(classId, plannedSlot, agendaEntry) {
+  if (!plannedSlot?.entry || !plannedSlot?.lesson || !plannedSlot.lessonKey) return null;
+  return buildPresentationTarget({
+    classId,
+    week: String(plannedSlot.entry.week),
+    lessonKey: plannedSlot.lessonKey,
+    ...plannedSlot.lesson,
+    scheduledDate: agendaEntry?.start?.toISOString?.() || '',
+  });
+}
+
 function findNextLessonForClass(classId, now = new Date()) {
   const progressAnchor = getClassProgressAnchor(classId, now);
   if (progressAnchor?.doneAll) return null;
@@ -1140,6 +1177,34 @@ function findNextLessonForClass(classId, now = new Date()) {
       hasPresentation: Boolean(resolved.presentation),
       hasAgendaDate: false,
       progressSource: progressAnchor?.source || 'fallback',
+    };
+  }
+
+  const plannedSlot = plannedLessonForAgendaEntry(classId, nextAgendaEntry);
+  if (plannedSlot) {
+    const target = lessonTargetForAgendaSlot(classId, plannedSlot, nextAgendaEntry);
+    const resolved = resolvePresentation(target);
+    const pairedAgendaEntry = getPairedBlockAgendaEntry(classId, nextAgendaEntry);
+    const pairedSlot = pairedAgendaEntry
+      ? plannedLessonForAgendaEntry(classId, pairedAgendaEntry)
+      : null;
+    const pairedTarget = pairedSlot
+      ? lessonTargetForAgendaSlot(classId, pairedSlot, pairedAgendaEntry)
+      : null;
+    return {
+      entry: plannedSlot.entry,
+      lesson: plannedSlot.lesson,
+      lessonKey: plannedSlot.lessonKey,
+      date: nextAgendaEntry.start,
+      pairedLesson: pairedSlot?.lesson || null,
+      pairedLessonKey: pairedSlot?.lessonKey || '',
+      pairedDate: pairedAgendaEntry?.start || null,
+      isBlockHour: Boolean(pairedAgendaEntry && pairedSlot),
+      pairedTarget,
+      target,
+      hasPresentation: Boolean(resolved.presentation),
+      hasAgendaDate: true,
+      progressSource: 'planning',
     };
   }
 
