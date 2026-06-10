@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!project || !lessonTitle) continue;
 
         const deckId = projectDeckId(project);
-        const markerId = lessonMarkerId(lessonTitle);
+        const markerId = String(lesson.presentationMarkerId || lessonMarkerId(lessonTitle)).trim();
         lesson.presentationId = deckId;
         lesson.presentationMarkerId = markerId;
 

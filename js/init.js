@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLATFORM_REFRESH_KEY = 'lespresentatie.platformRefresh';
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const AGENDA_IMPORT_KEY = 'lespresentatie.agendaImportedPayload';
+  const MANUAL_LESSON_OVERRIDES_KEY = 'lespresentatie.manualLessonOverridesByAgendaEntry';
   const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeAgendaEntry = null;
   let agendaReferenceEntryKey = '';
   let selectedLessonIndex = 0;
+  let manualLessonOverridesByAgendaEntry = loadManualLessonOverrides();
   let clockMarkerTimer = null;
   let isPresentationOpen = false;
   let activePresentation = null;
@@ -788,7 +790,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!project || !lessonTitle) continue;
 
         const deckId = projectDeckId(project);
-        const markerId = lessonMarkerId(lessonTitle);
+        const markerId = String(lesson.presentationMarkerId || lessonMarkerId(lessonTitle)).trim();
         lesson.presentationId = deckId;
         lesson.presentationMarkerId = markerId;
 
@@ -1572,6 +1574,112 @@ document.addEventListener('DOMContentLoaded', async () => {
       : 0;
   }
 
+  function loadManualLessonOverrides() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(MANUAL_LESSON_OVERRIDES_KEY) || '{}');
+      return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function saveManualLessonOverrides() {
+    localStorage.setItem(MANUAL_LESSON_OVERRIDES_KEY, JSON.stringify(manualLessonOverridesByAgendaEntry));
+  }
+
+  function lessonOverrideId(lesson) {
+    if (!lesson || typeof lesson !== 'object') return '';
+    return [
+      String(lesson.lessonKey || '').trim().toUpperCase(),
+      String(lesson.project || '').trim(),
+      String(lesson.lesson || '').trim()
+    ].join('|');
+  }
+
+  function lessonChoiceLabel(lesson, index = 0) {
+    const slot = String(lesson?.lessonKey || '').trim().toUpperCase();
+    const prefix = slot || lessonLetter(Math.min(index + 1, 3));
+    const project = String(lesson?.project || '').trim() || 'Les';
+    const title = String(lesson?.lesson || '').trim();
+    return `${prefix}: ${project}${title ? ` - ${title}` : ''}`;
+  }
+
+  function setManualLessonOverride(entry, lessonId) {
+    const key = agendaEntryKey(entry);
+    if (!key) return;
+    const value = String(lessonId || '').trim();
+    if (value) {
+      manualLessonOverridesByAgendaEntry[key] = value;
+    } else {
+      delete manualLessonOverridesByAgendaEntry[key];
+    }
+    saveManualLessonOverrides();
+  }
+
+  function manualLessonOverrideIdForEntry(entry) {
+    const key = agendaEntryKey(entry);
+    return key ? String(manualLessonOverridesByAgendaEntry[key] || '').trim() : '';
+  }
+
+  function planningWeekDataForEntry(entry) {
+    if (!entry) return { weekData: { lessons: [], items: [], note: '' }, lessonIndex: 0 };
+    const classId = normalizeClassId(entry.classId);
+    const gradeId = gradeLayerFromClassId(classId);
+    const weekInfo = currentWeekCandidates(entry.start);
+    const classWeeks = planningData[classId] || {};
+    const gradeWeeks = planningData[gradeId] || {};
+    const allWeeks = planningData.ALL || {};
+    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
+    const gradeWeekKey = weekInfo.keys.find((key) => Boolean(gradeWeeks[key])) || '';
+    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
+    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
+      ? mergePlanEntries(
+        allWeekKey ? allWeeks[allWeekKey] : null,
+        gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
+        classWeekKey ? classWeeks[classWeekKey] : null,
+      )
+      : { lessons: [], items: [], note: '' };
+    return {
+      weekData,
+      lessonIndex: lessonNumberForWeek(agendaEntries, entry),
+    };
+  }
+
+  function availableLessonsForAgendaEntry(entry) {
+    const classId = normalizeClassId(entry?.classId || '');
+    const anchorProject = String(getCurrentProgressAnchor(classId)?.project || '').trim();
+    const fallbackProject = (planningWeekDataForEntry(entry).weekData.lessons || [])
+      .map((lesson) => String(lesson?.project || '').trim())
+      .find((project) => project && project.toLocaleLowerCase('nl-NL') !== READING_PROJECT_NAME) || '';
+    const currentProject = anchorProject || fallbackProject;
+    const currentProjectKey = currentProject.toLocaleLowerCase('nl-NL');
+    const options = [];
+    const seen = new Set();
+    const pushLesson = (lesson) => {
+      if (!lesson || typeof lesson !== 'object') return;
+      const key = lessonOverrideId(lesson);
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      options.push(lesson);
+    };
+
+    pushLesson(STANDARD_READING_LESSON);
+    if (!currentProjectKey) return options;
+
+    for (const item of getOrderedPlanningLessonsForClass(classId)) {
+      const projectKey = String(item.lesson?.project || '').trim().toLocaleLowerCase('nl-NL');
+      if (projectKey === currentProjectKey) pushLesson(item.lesson);
+    }
+    return options;
+  }
+
+  function manualLessonForAgendaEntry(entry) {
+    const selectedId = manualLessonOverrideIdForEntry(entry);
+    if (!selectedId) return null;
+    return availableLessonsForAgendaEntry(entry)
+      .find((lesson) => lessonOverrideId(lesson) === selectedId) || null;
+  }
+
   function agendaEntryKey(entry) {
     if (!entry) return '';
     const classId = normalizeClassId(entry.classId);
@@ -1844,6 +1952,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       const localCount = markerDeckSlideCount(localPres);
       const baseMarkers = Object.keys(basePres.markers || {}).length;
       const localMarkers = Object.keys(localPres.markers || {}).length;
+
+      if (
+        basePresentationShouldReplaceLocal(deckId, basePres, localPres)
+        || baseCount > localCount
+        || baseMarkers > localMarkers
+      ) {
+        merged.presentations[deckId] = structuredClone(basePres);
+        continue;
+      }
 
       const localDecks = localPres.markerDecks && typeof localPres.markerDecks === 'object'
         ? localPres.markerDecks
@@ -2761,6 +2878,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   function planningForAgendaEntry(entry) {
     if (!entry) return { lessons: [], items: [], note: '', lessonIndex: 0 };
     const classId = normalizeClassId(entry.classId);
+    const manualLesson = manualLessonForAgendaEntry(entry);
+    const weekPlan = planningWeekDataForEntry(entry);
+    if (manualLesson) {
+      return {
+        lessons: [manualLesson],
+        items: Array.isArray(weekPlan.weekData?.items) ? weekPlan.weekData.items : [],
+        note: String(weekPlan.weekData?.note || '').trim(),
+        lessonIndex: weekPlan.lessonIndex,
+        isManual: true,
+      };
+    }
     const currentProgressPlan = findCurrentProgressPlanning(classId, entry);
     if (currentProgressPlan) {
       const lessonIndex = lessonNumberForWeek(agendaEntries, entry);
@@ -2774,27 +2902,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       };
     }
 
-    const gradeId = gradeLayerFromClassId(classId);
-    const weekInfo = currentWeekCandidates(entry.start);
-    const classWeeks = planningData[classId] || {};
-    const gradeWeeks = planningData[gradeId] || {};
-    const allWeeks = planningData.ALL || {};
-    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
-    const gradeWeekKey = weekInfo.keys.find((key) => Boolean(gradeWeeks[key])) || '';
-    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
-    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
-      ? mergePlanEntries(
-        allWeekKey ? allWeeks[allWeekKey] : null,
-        gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
-        classWeekKey ? classWeeks[classWeekKey] : null,
-      )
-      : { lessons: [], items: [], note: '' };
-    const lessonIndex = lessonNumberForWeek(agendaEntries, entry);
     return {
-      lessons: selectLessonsForToday(weekData.lessons || [], lessonIndex, true),
-      items: Array.isArray(weekData.items) ? weekData.items : [],
-      note: String(weekData.note || '').trim(),
-      lessonIndex,
+      lessons: selectLessonsForToday(weekPlan.weekData.lessons || [], weekPlan.lessonIndex, true),
+      items: Array.isArray(weekPlan.weekData.items) ? weekPlan.weekData.items : [],
+      note: String(weekPlan.weekData.note || '').trim(),
+      lessonIndex: weekPlan.lessonIndex,
     };
   }
 
@@ -2877,8 +2989,51 @@ document.addEventListener('DOMContentLoaded', async () => {
         button.classList.add('is-selected');
         button.setAttribute('aria-current', 'true');
       }
-      button.addEventListener('click', () => selectNextLessonDayEntry(entry));
-      li.appendChild(button);
+
+      const availableLessons = availableLessonsForAgendaEntry(entry);
+      if (availableLessons.length) {
+        button.title = `Kies of toon ${classId} les ${lessonSlot}`;
+        button.addEventListener('click', () => {
+          const wasOpen = li.classList.contains('is-choosing-lesson');
+          nextLessonDayLessons
+            .querySelectorAll('.is-choosing-lesson')
+            .forEach((item) => {
+              if (item !== li) item.classList.remove('is-choosing-lesson');
+            });
+          li.classList.toggle('is-choosing-lesson', !wasOpen);
+          if (!wasOpen) {
+            window.setTimeout(() => li.querySelector('.agenda-lesson-choice')?.focus(), 0);
+          }
+        });
+        li.appendChild(button);
+
+        const choice = document.createElement('select');
+        choice.className = 'agenda-lesson-choice';
+        choice.title = `Kies handmatig de jaarplanningsles voor ${classId}`;
+        const autoOption = document.createElement('option');
+        autoOption.value = '';
+        autoOption.textContent = `Automatisch: les ${lessonSlot} · ${lessonLabel}`;
+        choice.appendChild(autoOption);
+
+        const selectedOverrideId = manualLessonOverrideIdForEntry(entry);
+        for (const [index, availableLesson] of availableLessons.entries()) {
+          const option = document.createElement('option');
+          option.value = lessonOverrideId(availableLesson);
+          option.textContent = lessonChoiceLabel(availableLesson, index);
+          choice.appendChild(option);
+        }
+        choice.value = selectedOverrideId;
+        if (selectedOverrideId) choice.classList.add('is-overridden');
+        choice.addEventListener('change', () => {
+          setManualLessonOverride(entry, choice.value);
+          selectNextLessonDayEntry(entry);
+          renderNextLessonDayOverview(agendaEntries, new Date());
+        });
+        li.appendChild(choice);
+      } else {
+        button.addEventListener('click', () => selectNextLessonDayEntry(entry));
+        li.appendChild(button);
+      }
       nextLessonDayLessons.appendChild(li);
 
       const prepItems = [...plan.items].filter((item) => isPreparationItem(item));
@@ -2986,17 +3141,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       )
       : null;
     const currentProgressPlan = findCurrentProgressPlanning(classId, activeAgendaEntry);
-    if (currentProgressPlan) {
+    const manualLesson = manualLessonForAgendaEntry(activeAgendaEntry);
+    const effectiveLessonIndex = selectedLessonIndex;
+    if (currentProgressPlan && !manualLesson) {
       weekData = currentProgressPlan.weekData;
       planningWeekLabelEl.textContent = title;
     }
 
-    const lessonSelection = currentProgressPlan
+    const lessonSelection = manualLesson
+      ? [manualLesson]
+      : currentProgressPlan
       ? [currentProgressPlan.lesson]
       : selectLessonsForToday(
         weekData?.lessons || [],
-        selectedLessonIndex,
-        agendaConnected || selectedLessonIndex > 0
+        effectiveLessonIndex,
+        agendaConnected || effectiveLessonIndex > 0
       );
     currentPlanningLessons = lessonSelection;
     const hasLessons = lessonSelection.length > 0;
@@ -3033,6 +3192,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     if (hasNetschriftSubmission) {
       setPlanningStatus('Netschrift inlevermoment', 'warn');
+    } else if (manualLesson) {
+      setPlanningStatus('Handmatig gekozen uit eerstvolgende lesdag', 'info');
     } else if (agendaConnected && activeAgendaEntry) {
       const room = agendaRoomLabel(activeAgendaEntry);
       if (room) {
@@ -3127,8 +3288,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const rawText = await res.text();
         const contentType = res.headers.get('content-type') || '';
-        agendaEntries = parseAgendaPayload(rawText, contentType)
+        const parsedEntries = parseAgendaPayload(rawText, contentType)
           .sort((a, b) => a.start - b.start);
+        if (!parsedEntries.length && sourceAttempts.length > 1 && attempt !== sourceAttempts[sourceAttempts.length - 1]) {
+          throw new Error('Geen agenda-events gevonden in deze bron');
+        }
+        agendaEntries = parsedEntries;
         ensureAgendaClassesAvailable(agendaEntries);
         agendaFetchedAt = new Date().toISOString();
         agendaLastFetchStatus = `ok (${res.status})${attempt.label === 'fallback' ? ' via fallback' : ''}`;

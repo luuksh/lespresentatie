@@ -90,6 +90,15 @@ def auto_commit_and_push(response: dict) -> dict:
     if not truthy_env(AUTO_GIT_PUSH_ENV, True):
         return {"enabled": False, "ok": True, "message": "Automatische git-push staat uit."}
 
+    unmerged = run_git_check(["diff", "--name-only", "--diff-filter=U"]).stdout.splitlines()
+    if unmerged:
+        return {
+            "enabled": True,
+            "ok": False,
+            "message": "Git heeft nog conflicten; publiceer eerst de opgeloste bestanden.",
+            "unmerged": unmerged,
+        }
+
     target_files = [
         str(response.get(key, "")).strip()
         for key in ("internal", "live", "docsLive")

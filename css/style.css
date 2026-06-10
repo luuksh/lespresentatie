@@ -2864,6 +2864,41 @@ body.drawer-open .side-drawer.left {
   font-weight: 700;
 }
 
+.agenda-lesson-choice {
+  display: none;
+  width: 100%;
+  margin-top: 4px;
+  min-height: 30px;
+  border: 1px solid rgba(82, 58, 39, 0.24);
+  border-radius: 6px;
+  padding: 0 6px;
+  background: #fffdf6;
+  color: #463428;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.agenda-preview-list li.is-choosing-lesson {
+  margin-bottom: 8px;
+}
+
+.agenda-preview-list li.is-choosing-lesson .agenda-lesson-choice {
+  display: block;
+}
+
+.agenda-lesson-choice:focus {
+  outline: none;
+  border-color: #8a2135;
+  box-shadow: 0 0 0 3px rgba(138, 33, 53, 0.13);
+}
+
+.agenda-lesson-choice.is-overridden {
+  border-color: #8da9d3;
+  background: #eef5ff;
+  color: #273f67;
+}
+
 .status-text {
   min-height: 16px;
   margin-top: 8px;

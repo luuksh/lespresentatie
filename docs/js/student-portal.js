@@ -1011,21 +1011,72 @@ function progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries,
 function progressAnchorAgendaOffset(classId, anchor, agendaEntries, targetEntry, now = new Date()) {
   const anchorRange = localDateRange(anchor.anchorDate);
   if (!anchorRange) return 0;
-  const projectEntries = agendaEntries
+  const classEntries = agendaEntries
     .filter((entry) => entry?.start && entry.start >= anchorRange.start)
-    .filter((entry) => progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry))
     .sort((left, right) => left.start - right.start);
-  const anchorEntryIndex = projectEntries.findIndex((entry) => entry.start >= anchorRange.start);
+  const anchorEntryIndex = classEntries.findIndex((entry) => (
+    entry.start >= anchorRange.start
+    && progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry)
+  ));
   if (anchorEntryIndex < 0) return 0;
   const targetIndex = targetEntry
-    ? projectEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
+    ? classEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
     : -1;
   if (targetIndex > anchorEntryIndex) return targetIndex - anchorEntryIndex;
   if (targetIndex >= 0) return 0;
-  return projectEntries.filter((entry, index) => {
+  return classEntries.filter((entry, index) => {
     const end = entry.end instanceof Date ? entry.end : new Date(entry.end || entry.start);
     return index >= anchorEntryIndex && !Number.isNaN(end.getTime()) && end < now;
   }).length;
+}
+
+function teacherProgressPlanningForAgendaEntry(classId, agendaEntries, agendaEntry) {
+  if (isStandardReadingDay(agendaEntry)) {
+    return { entry: null, lesson: STANDARD_READING_LESSON, lessonKey: STANDARD_READING_LESSON.lessonKey, source: 'reading' };
+  }
+
+  const anchor = getCurrentProgressAnchor(classId);
+  if (!anchor) return null;
+  const agendaLessonNumber = agendaEntry ? lessonNumberForAgendaWeek(agendaEntries, agendaEntry) : 0;
+  if (isReadingLessonException(classId, agendaEntry, agendaEntries)) {
+    return { entry: null, lesson: STANDARD_READING_LESSON, lessonKey: STANDARD_READING_LESSON.lessonKey, source: 'reading' };
+  }
+  if (agendaEntry && agendaLessonNumber <= 1 && !anchor.useProjectOnFirstLesson) {
+    return { entry: null, lesson: STANDARD_READING_LESSON, lessonKey: STANDARD_READING_LESSON.lessonKey, source: 'reading' };
+  }
+  if (
+    Array.isArray(anchor.classIds)
+    && anchor.classIds.length
+    && agendaEntry
+    && !isLastDutchAgendaEntryOfWeek(classId, agendaEntry, agendaEntries)
+    && !anchor.useProjectOnFirstLesson
+  ) {
+    return { entry: null, lesson: STANDARD_READING_LESSON, lessonKey: STANDARD_READING_LESSON.lessonKey, source: 'reading' };
+  }
+
+  const orderedLessons = getProjectOrderedLessonsForClass(classId)
+    .filter((candidate) => String(candidate.project || '').trim().toLocaleLowerCase('nl-NL') !== READING_PROJECT_NAME);
+  const projectName = String(anchor.project || '').trim().toLocaleLowerCase('nl-NL');
+  const targetLessonNumbers = (Array.isArray(anchor.lessonNumbers) ? anchor.lessonNumbers : [anchor.lessonNumber])
+    .map((value) => Number(value))
+    .filter((value) => Number.isFinite(value));
+  const anchorIndexes = targetLessonNumbers
+    .map((lessonNumber) => orderedLessons.findIndex((candidate) => (
+      String(candidate.project || '').trim().toLocaleLowerCase('nl-NL') === projectName
+      && lessonNumberFromTitle(candidate.lesson) === lessonNumber
+    )))
+    .filter((index) => index >= 0);
+  if (!orderedLessons.length || !anchorIndexes.length) return null;
+
+  const bundleSize = anchorIndexes.length;
+  const offset = progressAnchorAgendaOffset(classId, anchor, agendaEntries, agendaEntry);
+  const startIndex = Math.min(...anchorIndexes) + (offset <= 0 ? 0 : bundleSize + offset - 1);
+  const lesson = orderedLessons[startIndex] || null;
+  if (!lesson) return null;
+  const lessonKey = String(lesson.lessonKey || '').trim().toUpperCase();
+  const entry = getEntryForWeek(classId, lesson.week);
+  if (!entry || !lessonKey) return null;
+  return { entry, lesson, lessonKey, source: 'anchor', anchorIndex: findLessonIndexByIdentity(getProjectOrderedLessonsForClass(classId), lesson) };
 }
 
 function findProgressAnchorLesson(classId, agendaEntries, targetEntry, now = new Date()) {
@@ -1141,6 +1192,60 @@ function findNextLessonForClass(classId, now = new Date()) {
   if (progressAnchor?.doneAll) return null;
   const nextAgendaEntry = progressAnchor?.agendaEntry || null;
   const fallbackLessons = getProjectOrderedLessonsForClass(classId);
+  const agendaEntries = getAgendaEntriesForClass(classId);
+  const teacherPlan = nextAgendaEntry
+    ? teacherProgressPlanningForAgendaEntry(classId, agendaEntries, nextAgendaEntry)
+    : null;
+  if (teacherPlan?.entry && teacherPlan?.lesson && teacherPlan?.lessonKey) {
+    const target = buildPresentationTarget({
+      classId,
+      week: String(teacherPlan.entry.week),
+      lessonKey: teacherPlan.lessonKey,
+      ...teacherPlan.lesson,
+      scheduledDate: nextAgendaEntry.start.toISOString(),
+    });
+    const resolved = resolvePresentation(target);
+    return {
+      entry: teacherPlan.entry,
+      lesson: teacherPlan.lesson,
+      lessonKey: teacherPlan.lessonKey,
+      date: nextAgendaEntry.start,
+      pairedLesson: null,
+      pairedLessonKey: '',
+      pairedDate: null,
+      isBlockHour: false,
+      target,
+      hasPresentation: Boolean(resolved.presentation),
+      hasAgendaDate: true,
+      progressSource: teacherPlan.source || 'anchor',
+    };
+  }
+  if (teacherPlan?.lesson?.isStandardReadingLesson && nextAgendaEntry) {
+    const fallbackEntry = getEntryForWeek(classId, isoWeekForDate(nextAgendaEntry.start)) || getEntriesForClass(classId)[0] || null;
+    if (fallbackEntry) {
+      const target = buildPresentationTarget({
+        classId,
+        week: String(fallbackEntry.week),
+        lessonKey: STANDARD_READING_LESSON.lessonKey,
+        ...STANDARD_READING_LESSON,
+        scheduledDate: nextAgendaEntry.start.toISOString(),
+      });
+      return {
+        entry: fallbackEntry,
+        lesson: { ...STANDARD_READING_LESSON, week: String(fallbackEntry.week) },
+        lessonKey: STANDARD_READING_LESSON.lessonKey,
+        date: nextAgendaEntry.start,
+        pairedLesson: null,
+        pairedLessonKey: '',
+        pairedDate: null,
+        isBlockHour: false,
+        target,
+        hasPresentation: false,
+        hasAgendaDate: true,
+        progressSource: 'reading',
+      };
+    }
+  }
   const fallbackLesson = fallbackLessons.find((candidate) => (
     progressAnchor
       ? findLessonIndexByIdentity(fallbackLessons, candidate) >= progressAnchor.anchorIndex

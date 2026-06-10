@@ -175,7 +175,7 @@ function collectProjectMarkers(doc) {
       if (isNonRegularMarker(project, lessonTitle)) continue;
       if (!project || !lessonTitle) continue;
       const deckId = projectDeckId(project);
-      const markerId = lessonMarkerId(lessonTitle);
+      const markerId = String(lesson?.presentationMarkerId || lessonMarkerId(lessonTitle)).trim();
       lesson.presentationId = deckId;
       lesson.presentationMarkerId = markerId;
       if (!out[deckId]) out[deckId] = { project, markers: new Map() };
