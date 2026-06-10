@@ -97,13 +97,12 @@ const CURRENT_PROGRESS_ANCHORS = [
   { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
   { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
   { grade: '3', project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-22' },
-  { classIds: ['G4D', '4G4', '4.4'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
+  { classIds: ['G4D', '4G4', '4.4'], project: 'Taalmakers', lessonNumber: 1, anchorDate: '2026-05-29' },
   { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
 ];
 const READING_LESSON_EXCEPTIONS = [
   { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
   { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
-  { classIds: ['G1D', '1D', 'G3B', '3B', 'G3E', '3E', 'G3F', '3F', 'G3G', '3G', 'G4E', '4G5', '4.5'], date: '2026-06-01', lessonNumber: 1 },
 ];
 const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
 const BASE_SCHEDULE = {
@@ -991,8 +990,15 @@ function isReadingLessonException(classId, agendaEntry, agendaEntries = getAgend
   });
 }
 
+function isStandardReadingDay(agendaEntry) {
+  if (!agendaEntry?.start) return false;
+  const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
+  return !Number.isNaN(start.getTime()) && start.getDay() === 1;
+}
+
 function progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, agendaEntry) {
   if (isReadingLessonException(classId, agendaEntry, agendaEntries)) return false;
+  if (isStandardReadingDay(agendaEntry)) return false;
   if (!agendaEntry) return false;
   if (anchor.useProjectOnFirstLesson) return true;
   if (lessonNumberForAgendaWeek(agendaEntries, agendaEntry) <= 1) return false;
@@ -1005,20 +1011,18 @@ function progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries,
 function progressAnchorAgendaOffset(classId, anchor, agendaEntries, targetEntry, now = new Date()) {
   const anchorRange = localDateRange(anchor.anchorDate);
   if (!anchorRange) return 0;
-  const classEntries = agendaEntries
+  const projectEntries = agendaEntries
     .filter((entry) => entry?.start && entry.start >= anchorRange.start)
+    .filter((entry) => progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry))
     .sort((left, right) => left.start - right.start);
-  const anchorEntryIndex = classEntries.findIndex((entry) => (
-    entry.start >= anchorRange.start
-    && progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry)
-  ));
+  const anchorEntryIndex = projectEntries.findIndex((entry) => entry.start >= anchorRange.start);
   if (anchorEntryIndex < 0) return 0;
   const targetIndex = targetEntry
-    ? classEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
+    ? projectEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
     : -1;
   if (targetIndex > anchorEntryIndex) return targetIndex - anchorEntryIndex;
   if (targetIndex >= 0) return 0;
-  return classEntries.filter((entry, index) => {
+  return projectEntries.filter((entry, index) => {
     const end = entry.end instanceof Date ? entry.end : new Date(entry.end || entry.start);
     return index >= anchorEntryIndex && !Number.isNaN(end.getTime()) && end < now;
   }).length;
@@ -1148,6 +1152,8 @@ function findNextLessonForClass(classId, now = new Date()) {
     nextAgendaEntry
     && progressAnchor
     && (
+      isStandardReadingDay(nextAgendaEntry)
+      ||
       !progressAnchor.useProjectLessonForAgendaEntry
       || isReadingLessonException(classId, nextAgendaEntry, getAgendaEntriesForClass(classId))
     )
@@ -1180,7 +1186,7 @@ function findNextLessonForClass(classId, now = new Date()) {
     };
   }
 
-  const plannedSlot = plannedLessonForAgendaEntry(classId, nextAgendaEntry);
+  const plannedSlot = !progressAnchor ? plannedLessonForAgendaEntry(classId, nextAgendaEntry) : null;
   if (plannedSlot) {
     const target = lessonTargetForAgendaSlot(classId, plannedSlot, nextAgendaEntry);
     const resolved = resolvePresentation(target);
