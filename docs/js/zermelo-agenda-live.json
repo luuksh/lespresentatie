@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T18:08:06.090879+00:00",
+  "updatedAt": "2026-06-14T19:56:00.054314+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -206,8 +206,8 @@
       "classId": "G3E",
       "start": "2026-06-15T10:50:00+00:00",
       "end": "2026-06-15T11:35:00+00:00",
-      "summary": "h215 ne g3e",
-      "description": "h215 ne g3e",
+      "summary": "[!] h215 ne g3e",
+      "description": "h215 ne g3e\nWijzigingen: De docent is vervangen (was hijn).",
       "location": "",
       "categories": "",
       "uid": "1124110@cgu"
@@ -216,8 +216,8 @@
       "classId": "G3G",
       "start": "2026-06-15T11:35:00+00:00",
       "end": "2026-06-15T12:20:00+00:00",
-      "summary": "h215 ne g3g",
-      "description": "h215 ne g3g",
+      "summary": "[x] h215 ne g3g",
+      "description": "h215 ne g3g\nWijzigingen: Les vervalt",
       "location": "",
       "categories": "",
       "uid": "1124132@cgu"
@@ -226,8 +226,8 @@
       "classId": "G3B",
       "start": "2026-06-15T12:40:00+00:00",
       "end": "2026-06-15T13:25:00+00:00",
-      "summary": "h215 ne g3b",
-      "description": "h215 ne g3b",
+      "summary": "[x] h215 ne g3b",
+      "description": "h215 ne g3b\nWijzigingen: Les vervalt",
       "location": "",
       "categories": "",
       "uid": "1124557@cgu"
