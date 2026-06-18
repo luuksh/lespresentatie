@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T05:03:21.747390+00:00",
+  "updatedAt": "2026-06-18T09:44:03.015323+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -124,50 +124,50 @@
     },
     {
       "classId": "G3G",
-      "start": "2026-06-19T07:45:00+00:00",
-      "end": "2026-06-19T08:30:00+00:00",
-      "summary": "h215 ne g3g",
-      "description": "h215 ne g3g",
+      "start": "2026-06-19T07:30:00+00:00",
+      "end": "2026-06-19T08:00:00+00:00",
+      "summary": "[!] h215 ne g3g",
+      "description": "h215 ne g3g\nWijzigingen: De les is verplaatst (komt van vr 9:45u).",
       "location": "",
       "categories": "",
       "uid": "1125121@cgu"
     },
     {
       "classId": "G4D",
-      "start": "2026-06-19T08:50:00+00:00",
-      "end": "2026-06-19T09:35:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
+      "start": "2026-06-19T08:15:00+00:00",
+      "end": "2026-06-19T08:45:00+00:00",
+      "summary": "[!] h215 netl g4.netl4",
+      "description": "h215 netl g4.netl4\nWijzigingen: De les is verplaatst (komt van vr 10:50u).",
       "location": "",
       "categories": "",
       "uid": "1125128@cgu"
     },
     {
       "classId": "G4D",
-      "start": "2026-06-19T09:35:00+00:00",
-      "end": "2026-06-19T10:20:00+00:00",
-      "summary": "h215 netl g4.netl4",
-      "description": "h215 netl g4.netl4",
+      "start": "2026-06-19T08:45:00+00:00",
+      "end": "2026-06-19T09:15:00+00:00",
+      "summary": "[!] h215 netl g4.netl4",
+      "description": "h215 netl g4.netl4\nWijzigingen: De les is verplaatst (komt van vr 11:35u).",
       "location": "",
       "categories": "",
       "uid": "1125188@cgu"
     },
     {
       "classId": "G3F",
-      "start": "2026-06-19T11:35:00+00:00",
-      "end": "2026-06-19T12:20:00+00:00",
-      "summary": "h215 ne g3f",
-      "description": "h215 ne g3f",
+      "start": "2026-06-19T10:15:00+00:00",
+      "end": "2026-06-19T10:45:00+00:00",
+      "summary": "[!] h215 ne g3f",
+      "description": "h215 ne g3f\nWijzigingen: De les is verplaatst (komt van vr 13:35u).",
       "location": "",
       "categories": "",
       "uid": "1125113@cgu"
     },
     {
       "classId": "G1D",
-      "start": "2026-06-19T12:20:00+00:00",
-      "end": "2026-06-19T13:05:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
+      "start": "2026-06-19T10:45:00+00:00",
+      "end": "2026-06-19T11:15:00+00:00",
+      "summary": "[!] h215 ne g1d",
+      "description": "h215 ne g1d\nWijzigingen: De les is verplaatst (komt van vr 14:20u).",
       "location": "",
       "categories": "",
       "uid": "1125132@cgu"
