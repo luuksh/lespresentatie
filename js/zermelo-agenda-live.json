@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T11:20:19.486675+00:00",
+  "updatedAt": "2026-06-22T16:09:03.477635+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -66,16 +66,16 @@
       "classId": "G3E",
       "start": "2026-06-25T06:15:00+00:00",
       "end": "2026-06-25T07:00:00+00:00",
-      "summary": "h216 ne g3e",
-      "description": "h216 ne g3e",
+      "summary": "[o] [toets] h216 sk",
+      "description": "h216 sk\nOpmerkingen: Toets: g3e rep sk",
       "location": "",
       "categories": "",
-      "uid": "1126468@cgu"
+      "uid": "1131547@cgu"
     },
     {
       "classId": "G1D",
       "start": "2026-06-25T07:00:00+00:00",
-      "end": "2026-06-25T07:45:00+00:00",
+      "end": "2026-06-25T07:30:00+00:00",
       "summary": "h216 ne g1d",
       "description": "h216 ne g1d",
       "location": "",
@@ -83,44 +83,14 @@
       "uid": "1126523@cgu"
     },
     {
-      "classId": "G3B",
-      "start": "2026-06-26T06:15:00+00:00",
-      "end": "2026-06-26T07:00:00+00:00",
-      "summary": "h215 ne g3b",
-      "description": "h215 ne g3b",
+      "classId": "G3E",
+      "start": "2026-06-25T07:30:00+00:00",
+      "end": "2026-06-25T08:00:00+00:00",
+      "summary": "[!] h216 ne g3e",
+      "description": "h216 ne g3e\nWijzigingen: De les is verplaatst (komt van do 8:15u).",
       "location": "",
       "categories": "",
-      "uid": "1126765@cgu"
-    },
-    {
-      "classId": "G3G",
-      "start": "2026-06-26T07:45:00+00:00",
-      "end": "2026-06-26T08:30:00+00:00",
-      "summary": "h215 ne g3g",
-      "description": "h215 ne g3g",
-      "location": "",
-      "categories": "",
-      "uid": "1126695@cgu"
-    },
-    {
-      "classId": "G3F",
-      "start": "2026-06-26T11:35:00+00:00",
-      "end": "2026-06-26T12:20:00+00:00",
-      "summary": "h215 ne g3f",
-      "description": "h215 ne g3f",
-      "location": "",
-      "categories": "",
-      "uid": "1126896@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-06-26T12:20:00+00:00",
-      "end": "2026-06-26T13:05:00+00:00",
-      "summary": "h215 ne g1d",
-      "description": "h215 ne g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1126655@cgu"
+      "uid": "1126468@cgu"
     },
     {
       "classId": "G1D",
