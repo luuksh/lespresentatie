@@ -1,5 +1,46 @@
 {
-  "updatedAt": "2026-08-28T02:14:47.026860+00:00",
+  "updatedAt": "2026-08-28T14:22:45.077520+00:00",
   "sourceType": "zermelo-ical",
-  "entries": []
+  "entries": [
+    {
+      "classId": "G1D",
+      "start": "2026-09-04T06:15:00+00:00",
+      "end": "2026-09-04T07:00:00+00:00",
+      "summary": "u008 ne g1d",
+      "description": "u008 ne g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1143859@cgu"
+    },
+    {
+      "classId": "G4B",
+      "start": "2026-09-04T07:00:00+00:00",
+      "end": "2026-09-04T07:45:00+00:00",
+      "summary": "u008 netl g4b",
+      "description": "u008 netl g4b",
+      "location": "",
+      "categories": "",
+      "uid": "1143872@cgu"
+    },
+    {
+      "classId": "G3B",
+      "start": "2026-09-04T08:50:00+00:00",
+      "end": "2026-09-04T09:35:00+00:00",
+      "summary": "u008 ne g3b",
+      "description": "u008 ne g3b",
+      "location": "",
+      "categories": "",
+      "uid": "1143849@cgu"
+    },
+    {
+      "classId": "G3E",
+      "start": "2026-09-04T09:35:00+00:00",
+      "end": "2026-09-04T10:20:00+00:00",
+      "summary": "u008 ne g3e",
+      "description": "u008 ne g3e",
+      "location": "",
+      "categories": "",
+      "uid": "1143798@cgu"
+    }
+  ]
 }
