@@ -1,0 +1,686 @@
+{
+  "updatedAt": "2026-09-01T05:39:47.967Z",
+  "source": "docentplatform",
+  "entries": [
+    {
+      "agendaKey": "G1D|2026-09-04T06:15:00.000Z|2026-09-04T07:00:00.000Z",
+      "classId": "G1D",
+      "start": "2026-09-04T06:15:00.000Z",
+      "end": "2026-09-04T07:00:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 4,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "lessonKey": "B",
+          "classId": "G1D",
+          "scheduledDate": "2026-09-04T06:15:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3B|2026-09-04T08:50:00.000Z|2026-09-04T09:35:00.000Z",
+      "classId": "G3B",
+      "start": "2026-09-04T08:50:00.000Z",
+      "end": "2026-09-04T09:35:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "homework": "Netschrift: maak de ladder van betekenis bij jouw onderwerp: scene, patroon, waarde, voorlopige stelling en oproep. Schrijf daarna een brugalinea van 5-7 zinnen van persoonlijk voorbeeld naar maatschappelijk probleem. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk",
+          "lessonKey": "B",
+          "classId": "G3B",
+          "scheduledDate": "2026-09-04T08:50:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3E|2026-09-04T09:35:00.000Z|2026-09-04T10:20:00.000Z",
+      "classId": "G3E",
+      "start": "2026-09-04T09:35:00.000Z",
+      "end": "2026-09-04T10:20:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "homework": "Netschrift: maak de ladder van betekenis bij jouw onderwerp: scene, patroon, waarde, voorlopige stelling en oproep. Schrijf daarna een brugalinea van 5-7 zinnen van persoonlijk voorbeeld naar maatschappelijk probleem. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk",
+          "lessonKey": "B",
+          "classId": "G3E",
+          "scheduledDate": "2026-09-04T09:35:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3F|2026-09-07T07:00:00.000Z|2026-09-07T07:45:00.000Z",
+      "classId": "G3F",
+      "start": "2026-09-07T07:00:00.000Z",
+      "end": "2026-09-07T07:45:00.000Z",
+      "room": "H212",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G3F",
+          "scheduledDate": "2026-09-07T07:00:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3C|2026-09-07T07:45:00.000Z|2026-09-07T08:30:00.000Z",
+      "classId": "G3C",
+      "start": "2026-09-07T07:45:00.000Z",
+      "end": "2026-09-07T08:30:00.000Z",
+      "room": "H212",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G3C",
+          "scheduledDate": "2026-09-07T07:45:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1C|2026-09-07T08:50:00.000Z|2026-09-07T09:35:00.000Z",
+      "classId": "G1C",
+      "start": "2026-09-07T08:50:00.000Z",
+      "end": "2026-09-07T09:35:00.000Z",
+      "room": "H212",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G1C",
+          "scheduledDate": "2026-09-07T08:50:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4C|2026-09-07T10:50:00.000Z|2026-09-07T11:35:00.000Z",
+      "classId": "G4C",
+      "start": "2026-09-07T10:50:00.000Z",
+      "end": "2026-09-07T11:35:00.000Z",
+      "room": "H216",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G4C",
+          "scheduledDate": "2026-09-07T10:50:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4C|2026-09-07T11:35:00.000Z|2026-09-07T12:20:00.000Z",
+      "classId": "G4C",
+      "start": "2026-09-07T11:35:00.000Z",
+      "end": "2026-09-07T12:20:00.000Z",
+      "room": "H216",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G4C",
+          "scheduledDate": "2026-09-07T11:35:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1C|2026-09-08T06:15:00.000Z|2026-09-08T07:00:00.000Z",
+      "classId": "G1C",
+      "start": "2026-09-08T06:15:00.000Z",
+      "end": "2026-09-08T07:00:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "lessonKey": "C",
+          "classId": "G1C",
+          "scheduledDate": "2026-09-08T06:15:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3B|2026-09-08T07:00:00.000Z|2026-09-08T07:45:00.000Z",
+      "classId": "G3B",
+      "start": "2026-09-08T07:00:00.000Z",
+      "end": "2026-09-08T07:45:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G3B",
+          "scheduledDate": "2026-09-08T07:00:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3E|2026-09-08T07:45:00.000Z|2026-09-08T08:30:00.000Z",
+      "classId": "G3E",
+      "start": "2026-09-08T07:45:00.000Z",
+      "end": "2026-09-08T08:30:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 4 V-rede: Raak je publiek met hoofd en hart",
+          "homework": "Netschrift: schrijf een ethoszin, pathoszin en logoszin bij jouw stelling. Combineer de beste twee tot een overtuigingsalinea en markeer E/P/L in de kantlijn. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-4-v-rede-hoofd-en-hart",
+          "lessonKey": "B",
+          "classId": "G3E",
+          "scheduledDate": "2026-09-08T07:45:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 11-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3C|2026-09-08T08:50:00.000Z|2026-09-08T09:35:00.000Z",
+      "classId": "G3C",
+      "start": "2026-09-08T08:50:00.000Z",
+      "end": "2026-09-08T09:35:00.000Z",
+      "room": "H216",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "homework": "Netschrift: maak de ladder van betekenis bij jouw onderwerp: scene, patroon, waarde, voorlopige stelling en oproep. Schrijf daarna een brugalinea van 5-7 zinnen van persoonlijk voorbeeld naar maatschappelijk probleem. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk",
+          "lessonKey": "B",
+          "classId": "G3C",
+          "scheduledDate": "2026-09-08T08:50:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4C|2026-09-08T10:50:00.000Z|2026-09-08T11:35:00.000Z",
+      "classId": "G4C",
+      "start": "2026-09-08T10:50:00.000Z",
+      "end": "2026-09-08T11:35:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 2: Big Five",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-persoonlijkheid",
+          "presentationMarkerId": "marker-les-2-big-five",
+          "lessonKey": "C",
+          "classId": "G4C",
+          "scheduledDate": "2026-09-08T10:50:00.000Z"
+        }
+      ],
+      "items": [
+        "Overzichtspresentatie"
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1D|2026-09-08T12:40:00.000Z|2026-09-08T13:25:00.000Z",
+      "classId": "G1D",
+      "start": "2026-09-08T12:40:00.000Z",
+      "end": "2026-09-08T13:25:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "lessonKey": "C",
+          "classId": "G1D",
+          "scheduledDate": "2026-09-08T12:40:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4B|2026-09-10T06:15:00.000Z|2026-09-10T07:00:00.000Z",
+      "classId": "G4B",
+      "start": "2026-09-10T06:15:00.000Z",
+      "end": "2026-09-10T07:00:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 1,
+      "lessonSlot": "A",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Heel veel lezen",
+          "lesson": "Heel veel lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "lessonKey": "A",
+          "classId": "G4B",
+          "scheduledDate": "2026-09-10T06:15:00.000Z"
+        }
+      ],
+      "items": [
+        "Overzichtspresentatie"
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4B|2026-09-10T07:00:00.000Z|2026-09-10T07:45:00.000Z",
+      "classId": "G4B",
+      "start": "2026-09-10T07:00:00.000Z",
+      "end": "2026-09-10T07:45:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 1: Persoonlijkheid",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-persoonlijkheid",
+          "presentationMarkerId": "marker-les-1-persoonlijkheid",
+          "lessonKey": "B",
+          "classId": "G4B",
+          "scheduledDate": "2026-09-10T07:00:00.000Z"
+        }
+      ],
+      "items": [
+        "Overzichtspresentatie"
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1D|2026-09-10T07:45:00.000Z|2026-09-10T08:30:00.000Z",
+      "classId": "G1D",
+      "start": "2026-09-10T07:45:00.000Z",
+      "end": "2026-09-10T08:30:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Presentaties",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-presentaties",
+          "lessonKey": "B",
+          "classId": "G1D",
+          "scheduledDate": "2026-09-10T07:45:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1D|2026-09-10T08:50:00.000Z|2026-09-10T09:35:00.000Z",
+      "classId": "G1D",
+      "start": "2026-09-10T08:50:00.000Z",
+      "end": "2026-09-10T09:35:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "lessonKey": "C",
+          "classId": "G1D",
+          "scheduledDate": "2026-09-10T08:50:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3F|2026-09-10T09:35:00.000Z|2026-09-10T10:20:00.000Z",
+      "classId": "G3F",
+      "start": "2026-09-10T09:35:00.000Z",
+      "end": "2026-09-10T10:20:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "homework": "Netschrift: maak de ladder van betekenis bij jouw onderwerp: scene, patroon, waarde, voorlopige stelling en oproep. Schrijf daarna een brugalinea van 5-7 zinnen van persoonlijk voorbeeld naar maatschappelijk probleem. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-3-v-rede-persoonlijk-naar-maatschappelijk",
+          "lessonKey": "B",
+          "classId": "G3F",
+          "scheduledDate": "2026-09-10T09:35:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1C|2026-09-10T10:50:00.000Z|2026-09-10T11:35:00.000Z",
+      "classId": "G1C",
+      "start": "2026-09-10T10:50:00.000Z",
+      "end": "2026-09-10T11:35:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Presentaties",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-presentaties",
+          "lessonKey": "B",
+          "classId": "G1C",
+          "scheduledDate": "2026-09-10T10:50:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G1D|2026-09-11T06:15:00.000Z|2026-09-11T07:00:00.000Z",
+      "classId": "G1D",
+      "start": "2026-09-11T06:15:00.000Z",
+      "end": "2026-09-11T07:00:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 4,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6b - Presentatie oefenen en generale repetitie",
+          "homework": "Oefen jullie volledige presentatie nog een keer: wie zegt wat, wat wijs je aan op de poster en welk voorbeeld laat je horen. netschrift en pen mee",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6b-presentatie-oefenen-generale-repetitie",
+          "lessonKey": "B",
+          "classId": "G1D",
+          "scheduledDate": "2026-09-11T06:15:00.000Z"
+        }
+      ],
+      "items": [
+        "30-minutenrooster volgens schoolagenda: 06-05, 07-05, 08-05."
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G4B|2026-09-11T07:00:00.000Z|2026-09-11T07:45:00.000Z",
+      "classId": "G4B",
+      "start": "2026-09-11T07:00:00.000Z",
+      "end": "2026-09-11T07:45:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 2: Big Five",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-persoonlijkheid",
+          "presentationMarkerId": "marker-les-2-big-five",
+          "lessonKey": "C",
+          "classId": "G4B",
+          "scheduledDate": "2026-09-11T07:00:00.000Z"
+        }
+      ],
+      "items": [
+        "Overzichtspresentatie"
+      ],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3B|2026-09-11T08:50:00.000Z|2026-09-11T09:35:00.000Z",
+      "classId": "G3B",
+      "start": "2026-09-11T08:50:00.000Z",
+      "end": "2026-09-11T09:35:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
+          "lessonKey": "B",
+          "classId": "G3B",
+          "scheduledDate": "2026-09-11T08:50:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    },
+    {
+      "agendaKey": "G3E|2026-09-11T09:35:00.000Z|2026-09-11T10:20:00.000Z",
+      "classId": "G3E",
+      "start": "2026-09-11T09:35:00.000Z",
+      "end": "2026-09-11T10:20:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 2,
+      "lessonSlot": "B",
+      "isManual": false,
+      "source": "docentplatform",
+      "lessons": [
+        {
+          "project": "V-rede",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee",
+          "presentationId": "project-v-rede",
+          "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
+          "lessonKey": "B",
+          "classId": "G3E",
+          "scheduledDate": "2026-09-11T09:35:00.000Z"
+        }
+      ],
+      "items": [],
+      "note": ""
+    }
+  ]
+}

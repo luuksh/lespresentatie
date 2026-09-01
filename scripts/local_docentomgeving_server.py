@@ -18,13 +18,18 @@ MAX_BODY_BYTES = 20 * 1024 * 1024
 AUTO_GIT_PUSH_ENV = "KLASSENPLATTEGROND_AUTO_GIT_PUSH"
 PUBLIC_PORTAL_FILES = [
     "index.html",
+    "docent.html",
     "css/internal-shell.css",
+    "css/style.css",
     "leerlingen.html",
     "docs/leerlingen.html",
     "css/student-portal.css",
     "docs/css/student-portal.css",
     "js/student-portal.js",
+    "js/init.js",
     "docs/js/student-portal.js",
+    "js/docent-lesselectie-live.json",
+    "docs/js/docent-lesselectie-live.json",
     "scripts/apply_presentatie_studio_export.py",
     "scripts/local_docentomgeving_server.py",
     "scripts/start_local_docentomgeving.sh",
@@ -157,10 +162,22 @@ class Handler(SimpleHTTPRequestHandler):
 
     def end_headers(self) -> None:
         self.send_header("Cache-Control", "no-store")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         super().end_headers()
 
+    def do_OPTIONS(self) -> None:
+        self.send_response(HTTPStatus.NO_CONTENT)
+        self.end_headers()
+
     def do_POST(self) -> None:
-        if self.path.split("?", 1)[0] != "/api/presentatie-studio/publish":
+        route = self.path.split("?", 1)[0]
+        if route == "/api/docent-lesselectie/publish":
+            self.publish_teacher_lesson_selection()
+            return
+
+        if route != "/api/presentatie-studio/publish":
             self.send_error(HTTPStatus.NOT_FOUND, "Onbekende API-route")
             return
 
@@ -216,6 +233,62 @@ class Handler(SimpleHTTPRequestHandler):
         finally:
             temp_path.unlink(missing_ok=True)
 
+    def publish_teacher_lesson_selection(self) -> None:
+        length_raw = self.headers.get("Content-Length", "0")
+        try:
+            length = int(length_raw)
+        except ValueError:
+            self.send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "Ongeldige Content-Length."})
+            return
+
+        if length <= 0 or length > MAX_BODY_BYTES:
+            self.send_json(HTTPStatus.REQUEST_ENTITY_TOO_LARGE, {
+                "ok": False,
+                "error": "Docentlesselectie is leeg of te groot.",
+            })
+            return
+
+        body = self.rfile.read(length)
+        try:
+            payload = json.loads(body.decode("utf-8"))
+        except Exception as exc:
+            self.send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": f"Ongeldige JSON: {exc}"})
+            return
+
+        if not isinstance(payload, dict) or not isinstance(payload.get("entries"), list):
+            self.send_json(HTTPStatus.BAD_REQUEST, {
+                "ok": False,
+                "error": "Docentlesselectie moet een object met entries zijn.",
+            })
+            return
+
+        payload["updatedAt"] = str(payload.get("updatedAt") or "").strip() or current_utc_iso()
+        encoded = json.dumps(payload, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
+        written = []
+        for rel_path in ("js/docent-lesselectie-live.json", "docs/js/docent-lesselectie-live.json"):
+            target = ROOT / rel_path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(encoded)
+            written.append(rel_path)
+
+        response = {
+            "ok": True,
+            "updatedAt": payload["updatedAt"],
+            "live": written[0],
+            "docsLive": written[1],
+            "entryCount": len(payload.get("entries", [])),
+        }
+        try:
+            response["autoGit"] = auto_commit_and_push(response)
+        except subprocess.CalledProcessError as exc:
+            message = (exc.stderr or exc.stdout or str(exc)).strip()
+            response["autoGit"] = {
+                "enabled": truthy_env(AUTO_GIT_PUSH_ENV, True),
+                "ok": False,
+                "message": message,
+            }
+        self.send_json(HTTPStatus.OK, response)
+
     def send_json(self, status: HTTPStatus, payload: dict) -> None:
         encoded = (json.dumps(payload, ensure_ascii=False) + "\n").encode("utf-8")
         self.send_response(status)
@@ -223,6 +296,12 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(encoded)))
         self.end_headers()
         self.wfile.write(encoded)
+
+
+def current_utc_iso() -> str:
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
 def main() -> int:

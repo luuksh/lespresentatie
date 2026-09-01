@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const AGENDA_SOURCE_KEY = 'lespresentatie.agendaSourceUrl';
   const AGENDA_IMPORT_KEY = 'lespresentatie.agendaImportedPayload';
   const MANUAL_LESSON_OVERRIDES_KEY = 'lespresentatie.manualLessonOverridesByAgendaEntry';
+  const TEACHER_LESSON_SELECTION_PUBLISH_URL = '/api/docent-lesselectie/publish';
   const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
   const DEFAULT_BOARD_ASSIGNMENT = 'Zoek je plek en pak je spullen';
   const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+  const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
+  const MENTOR_SOURCE_CLASS_ID = 'G1D';
+  const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
+  const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
   const CURRENT_PROGRESS_ANCHORS = [
     { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
     { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
@@ -152,6 +157,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   let activeSeriesNav = { presentation: null, items: [], index: -1 };
   let autoBoardAssignmentLessonKey = '';
   let boardAssignmentWriteInProgress = false;
+  let teacherLessonSelectionPublishTimer = null;
+  let lastTeacherLessonSelectionSnapshot = '';
 
   try {
     const rosterSource = window.__rosterSource;
@@ -162,7 +169,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? await rosterSource.listClassIds()
       : Object.keys(klassen);
 
-    rebuildClassOptions(classIds);
+    rebuildClassOptions([...classIds, ...VIRTUAL_CLASS_IDS]);
 
     const lastClass = mapSpecialClassAlias(localStorage.getItem('lastClassId'));
     if (lastClass && [...klasSelect.options].some((o) => o.value === lastClass)) {
@@ -443,7 +450,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function sortClassIds(values = []) {
     const collator = new Intl.Collator('nl-NL', { numeric: true, sensitivity: 'base' });
     return [...new Set(values.map((value) => mapSpecialClassAlias(value)).filter(Boolean))]
-      .sort((a, b) => collator.compare(a, b));
+      .sort((a, b) => {
+        if (a === MENTOR_LESSON_CLASS_ID) return b === MENTOR_LESSON_CLASS_ID ? 0 : -1;
+        if (b === MENTOR_LESSON_CLASS_ID) return 1;
+        return collator.compare(a, b);
+      });
+  }
+
+  function classOptionLabel(classId) {
+    return normalizeClassId(classId) === MENTOR_LESSON_CLASS_ID ? 'Mentorles' : `Klas ${classId}`;
   }
 
   function rebuildClassOptions(classIds = []) {
@@ -453,7 +468,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const klas of sortClassIds(classIds)) {
       const option = document.createElement('option');
       option.value = klas;
-      option.textContent = `Klas ${klas}`;
+      option.textContent = classOptionLabel(klas);
       klasSelect.appendChild(option);
     }
     if (previousValue && [...klasSelect.options].some((option) => option.value === previousValue)) {
@@ -478,6 +493,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter(Boolean);
     if (!agendaClassIds.length) return;
     rebuildClassOptions([
+      ...VIRTUAL_CLASS_IDS,
       ...[...klasSelect.options].map((option) => option.value),
       ...agendaClassIds
     ]);
@@ -1081,23 +1097,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function agendaSubjectText(value) {
-    return normalizeClassId(value)
+    return String(value || '')
+      .toUpperCase()
       .replace(/[^A-Z0-9.]+/g, ' ')
       .trim();
   }
 
-  function isDutchAgendaText(value) {
+  function containsMentorLessonCode(value) {
+    return MENTOR_LESSON_CODE_PATTERN.test(agendaSubjectText(value));
+  }
+
+  function resolveAgendaClassId(classId, subjectText = '') {
+    const normalized = mapSpecialClassAlias(classId);
+    if (normalized === MENTOR_SOURCE_CLASS_ID && containsMentorLessonCode(subjectText)) {
+      return MENTOR_LESSON_CLASS_ID;
+    }
+    return normalized;
+  }
+
+  function isDutchAgendaText(value, classId = '') {
     const text = agendaSubjectText(value);
     if (!text) return true;
+    if (resolveAgendaClassId(classId, value) === MENTOR_LESSON_CLASS_ID) return true;
     if (/\bKMT\b/.test(text)) return false;
     if (/\b(NETL|NE|NED|NEDERLANDS)\b/.test(text)) return true;
     return true;
   }
 
-  function isDutchAgendaRow(row) {
+  function isDutchAgendaRow(row, classId = '') {
     if (!row || typeof row !== 'object') return true;
     return isDutchAgendaText(
-      `${row.summary || row.SUMMARY || ''}\n${row.description || row.DESCRIPTION || ''}\n${row.categories || row.CATEGORIES || ''}`
+      `${row.summary || row.SUMMARY || ''}\n${row.description || row.DESCRIPTION || ''}\n${row.categories || row.CATEGORIES || ''}`,
+      classId
     );
   }
 
@@ -1207,7 +1238,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
-    if (!isDutchAgendaRow(row)) return null;
+    const subjectText = `${row.summary || ''}\n${row.description || ''}\n${row.location || ''}\n${row.categories || ''}`;
     const explicitClass = pickClassId(
       row.classId
       ?? row.klas
@@ -1220,9 +1251,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? ''
     );
     const inferredClass = inferClassIdFromText(
-      `${row.summary || ''}\n${row.description || ''}\n${row.location || ''}\n${row.categories || ''}`
+      subjectText
     );
-    const classId = explicitClass || inferredClass;
+    const classId = resolveAgendaClassId(explicitClass || inferredClass, subjectText);
+    if (!isDutchAgendaRow(row, classId)) return null;
     const start = parseDateTime(
       row.start
       ?? row.startTime
@@ -1339,16 +1371,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     return events
       .map((event) => {
-        if (!isDutchAgendaRow(event)) return null;
-        const classId = pickClassId(event['X-CLASS'])
+        const subjectText = `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`;
+        const classId = resolveAgendaClassId(pickClassId(event['X-CLASS'])
           || inferClassIdFromText(
-            `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`
+            subjectText
           )
           || extractClassIdFromText(event.SUMMARY)
           || extractClassIdFromText(event.DESCRIPTION)
           || extractClassIdFromText(event.CATEGORIES)
           || extractClassIdFromText(event.LOCATION)
-          || '';
+          || '', subjectText);
+        if (!isDutchAgendaRow(event, classId)) return null;
         const start = parseIcsDateValue(event.DTSTART);
         const end = parseIcsDateValue(event.DTEND);
         const room = extractRoomFromText(
@@ -2910,6 +2943,82 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
+  function canPublishTeacherLessonSelection() {
+    return window.location.protocol === 'file:'
+      || ['127.0.0.1', 'localhost'].includes(window.location.hostname);
+  }
+
+  function teacherLessonSelectionPublishUrl() {
+    if (window.location.protocol === 'file:') {
+      return 'http://127.0.0.1:4173/api/docent-lesselectie/publish';
+    }
+    return TEACHER_LESSON_SELECTION_PUBLISH_URL;
+  }
+
+  function serializeTeacherLessonSelection(now = new Date()) {
+    const entries = [...agendaEntries]
+      .filter((entry) => entry && entry.end >= now)
+      .sort((a, b) => a.start - b.start)
+      .slice(0, 80)
+      .map((entry) => {
+        const classId = normalizeClassId(entry.classId);
+        const plan = planningForAgendaEntry(entry);
+        const lessons = Array.isArray(plan.lessons) ? plan.lessons.filter(Boolean) : [];
+        return {
+          agendaKey: agendaEntryKey(entry),
+          classId,
+          start: entry.start instanceof Date ? entry.start.toISOString() : '',
+          end: entry.end instanceof Date ? entry.end.toISOString() : '',
+          room: agendaRoomLabel(entry),
+          summary: String(entry.summary || '').trim(),
+          description: String(entry.description || '').trim(),
+          lessonIndex: Number(plan.lessonIndex || 0),
+          lessonSlot: plan.lessonIndex ? lessonLetter(Math.min(plan.lessonIndex, 3)) : '',
+          isManual: Boolean(plan.isManual),
+          source: plan.isManual ? 'manual' : 'docentplatform',
+          lessons: lessons.map((lesson) => ({
+            ...lesson,
+            classId,
+            scheduledDate: entry.start instanceof Date ? entry.start.toISOString() : '',
+          })),
+          items: Array.isArray(plan.items) ? plan.items.map((item) => String(item || '').trim()).filter(Boolean) : [],
+          note: String(plan.note || '').trim(),
+        };
+      })
+      .filter((entry) => entry.classId && entry.start && entry.end && entry.lessons.length);
+
+    return {
+      updatedAt: new Date().toISOString(),
+      source: 'docentplatform',
+      entries,
+    };
+  }
+
+  function scheduleTeacherLessonSelectionPublish() {
+    if (!canPublishTeacherLessonSelection()) return;
+    window.clearTimeout(teacherLessonSelectionPublishTimer);
+    teacherLessonSelectionPublishTimer = window.setTimeout(publishTeacherLessonSelection, 250);
+  }
+
+  async function publishTeacherLessonSelection() {
+    if (!canPublishTeacherLessonSelection()) return;
+    const payload = serializeTeacherLessonSelection(new Date());
+    const snapshot = JSON.stringify(payload.entries);
+    if (snapshot === lastTeacherLessonSelectionSnapshot) return;
+    lastTeacherLessonSelectionSnapshot = snapshot;
+    try {
+      const response = await fetch(teacherLessonSelectionPublishUrl(), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      localStorage.setItem(PLATFORM_REFRESH_KEY, String(Date.now()));
+    } catch (error) {
+      console.warn('Docentlesselectie kon niet worden gepubliceerd:', error);
+    }
+  }
+
   function selectNextLessonDayEntry(entry) {
     if (!entry) return;
     const matchingValue = matchingClassOptionValue(entry.classId);
@@ -3028,6 +3137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           setManualLessonOverride(entry, choice.value);
           selectNextLessonDayEntry(entry);
           renderNextLessonDayOverview(agendaEntries, new Date());
+          scheduleTeacherLessonSelectionPublish();
         });
         li.appendChild(choice);
       } else {
@@ -3065,6 +3175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       appendLinkedText(li, `${prep} (${[...classes].sort((a, b) => a.localeCompare(b, 'nl')).join(', ')})`);
       nextLessonDayPrep.appendChild(li);
     }
+    scheduleTeacherLessonSelectionPublish();
   }
 
   function selectLessonsForToday(lessons, lessonIndex, strictMatch = false) {
@@ -3213,6 +3324,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       setPlanningStatus('Agenda niet gekoppeld · toon weekprogramma', 'info');
     }
     syncAutomaticBoardAssignment(now);
+    scheduleTeacherLessonSelectionPublish();
     refreshPlanningEditor();
   }
 

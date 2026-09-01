@@ -4,6 +4,7 @@ const CONFIG = window.STUDENT_PORTAL_CONFIG || {};
 const PLANNING_URL = String(CONFIG.planningUrl || 'js/jaarplanning-live.json');
 const CLASSES_URL = String(CONFIG.classesUrl || 'js/leerlingen_per_klas.json');
 const AGENDA_URL = String(CONFIG.agendaUrl || 'js/zermelo-agenda-live.json');
+const TEACHER_SELECTION_URL = String(CONFIG.teacherSelectionUrl || 'js/docent-lesselectie-live.json');
 const KERNDOELEN_URL = String(CONFIG.kerndoelenUrl || 'data/kerndoelen/kerndoelen-map.json');
 const USE_LOCAL_STUDIO_DRAFT = CONFIG.useLocalStudioDraft === true;
 const CURRENT_CLASS_KEY = 'student.portal.class';
@@ -50,6 +51,7 @@ const state = {
   doc: { entries: [], presentations: {}, updatedAt: '' },
   kerndoelenDoc: null,
   agendaEntries: [],
+  teacherSelectionEntries: [],
   classes: [],
   currentClass: '',
   currentWeek: currentIsoWeek(),
@@ -61,6 +63,10 @@ const state = {
 };
 
 const UNTITLED_PROJECT_LABEL = 'Losse lessen';
+const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
+const MENTOR_SOURCE_CLASS_ID = 'G1D';
+const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
+const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
 const NETSCHRIFT_SUBMISSION_PREFIX = 'INLEVERMOMENT_NETSCHRIFT:';
 const PROJECT_ORDER_BY_GRADE = {
   1: [
@@ -281,9 +287,29 @@ function preferFreshStudioDoc(baseDoc) {
     : normalizeDoc(baseDoc);
 }
 
+function agendaSubjectText(value) {
+  return String(value || '')
+    .toUpperCase()
+    .replace(/[^A-Z0-9.]+/g, ' ')
+    .trim();
+}
+
+function containsMentorLessonCode(value) {
+  return MENTOR_LESSON_CODE_PATTERN.test(agendaSubjectText(value));
+}
+
+function resolveAgendaClassId(classId, subjectText = '') {
+  const normalized = normalizeClassId(classId);
+  if (normalized === MENTOR_SOURCE_CLASS_ID && containsMentorLessonCode(subjectText)) {
+    return MENTOR_LESSON_CLASS_ID;
+  }
+  return normalized;
+}
+
 function normalizeAgendaEntry(row) {
   if (!row || typeof row !== 'object') return null;
-  const classId = normalizeClassId(row.classId || row.klas || row.class || '');
+  const subjectText = `${row.summary || ''}\n${row.description || ''}\n${row.categories || ''}`;
+  const classId = resolveAgendaClassId(row.classId || row.klas || row.class || '', subjectText);
   const start = new Date(row.start || row.startTime || row.startDateTime || '');
   const end = new Date(row.end || row.endTime || row.endDateTime || '');
   if (!classId || Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return null;
@@ -300,6 +326,36 @@ function normalizeAgendaDoc(raw) {
   const entries = Array.isArray(raw?.entries) ? raw.entries : [];
   return entries
     .map((entry) => normalizeAgendaEntry(entry))
+    .filter(Boolean)
+    .sort((left, right) => left.start - right.start);
+}
+
+function normalizeTeacherSelectionEntry(row) {
+  if (!row || typeof row !== 'object') return null;
+  const classId = normalizeClassId(row.classId || row.klas || row.class || '');
+  const start = new Date(row.start || row.startTime || row.startDateTime || '');
+  const end = new Date(row.end || row.endTime || row.endDateTime || row.start || '');
+  const lessons = Array.isArray(row.lessons)
+    ? row.lessons.filter((lesson) => lesson && typeof lesson === 'object')
+    : [];
+  if (!classId || Number.isNaN(start.getTime()) || Number.isNaN(end.getTime()) || !lessons.length) {
+    return null;
+  }
+  return {
+    ...row,
+    classId,
+    start,
+    end,
+    lessons,
+    items: Array.isArray(row.items) ? row.items.map((item) => String(item).trim()).filter(Boolean) : [],
+    note: String(row.note || '').trim(),
+  };
+}
+
+function normalizeTeacherSelectionDoc(raw) {
+  const entries = Array.isArray(raw?.entries) ? raw.entries : [];
+  return entries
+    .map((entry) => normalizeTeacherSelectionEntry(entry))
     .filter(Boolean)
     .sort((left, right) => left.start - right.start);
 }
@@ -377,8 +433,10 @@ function baseScheduleSlotForEntry(entry) {
 }
 
 function isDutchAgendaEntry(entry) {
-  const text = `${entry?.summary || ''}\n${entry?.description || ''}`.toLowerCase();
-  return /\bne\b|\bnetl\b/.test(text);
+  const classId = normalizeClassId(entry?.classId);
+  if (classId === MENTOR_LESSON_CLASS_ID) return true;
+  const text = agendaSubjectText(`${entry?.summary || ''}\n${entry?.description || ''}`);
+  return /\bNE\b|\bNETL\b/.test(text);
 }
 
 function parseDateOnly(value) {
@@ -676,9 +734,14 @@ function classPlanningAliases(rawClassId) {
 
 function classSortKey(rawClassId) {
   const cid = normalizeClassId(rawClassId);
+  if (cid === MENTOR_LESSON_CLASS_ID) return '00-MENTORLES';
   const grade = Number(gradeLayerFromClassId(cid) || 99);
   const suffix = cid.replace(/^G?[1-6]/, '').replace(/^[45]G/, '');
   return `${String(grade).padStart(2, '0')}-${suffix}-${cid}`;
+}
+
+function classOptionLabel(classId) {
+  return normalizeClassId(classId) === MENTOR_LESSON_CLASS_ID ? 'Mentorles' : `Klas ${classId}`;
 }
 
 function getEntriesForClass(classId) {
@@ -1187,7 +1250,53 @@ function lessonTargetForAgendaSlot(classId, plannedSlot, agendaEntry) {
   });
 }
 
+function teacherSelectedLessonForClass(classId, now = new Date()) {
+  const normalizedClassId = normalizeClassId(classId);
+  if (!normalizedClassId || !state.teacherSelectionEntries.length) return null;
+  const selection = state.teacherSelectionEntries
+    .filter((entry) => entry.classId === normalizedClassId && entry.end >= now)
+    .sort((left, right) => left.start - right.start)[0] || null;
+  const lesson = selection?.lessons?.[0] || null;
+  if (!selection || !lesson) return null;
+
+  const lessonKey = String(lesson.lessonKey || selection.lessonSlot || '').trim().toUpperCase();
+  const week = String(lesson.week || isoWeekForDate(selection.start) || '').trim();
+  const entry = getEntryForWeek(normalizedClassId, week) || getEntriesForClass(normalizedClassId)[0] || null;
+  if (!entry || !lessonKey) return null;
+
+  const exactLesson = {
+    ...lesson,
+    classId: normalizedClassId,
+    week: String(entry.week || week),
+    scheduledDate: selection.start.toISOString(),
+  };
+  const target = buildPresentationTarget({
+    ...exactLesson,
+    classId: normalizedClassId,
+    week: String(entry.week || week),
+    lessonKey,
+  });
+  const resolved = exactLesson.isStandardReadingLesson ? { presentation: null } : resolvePresentation(target);
+  return {
+    entry,
+    lesson: exactLesson,
+    lessonKey,
+    date: selection.start,
+    pairedLesson: null,
+    pairedLessonKey: '',
+    pairedDate: null,
+    isBlockHour: false,
+    target,
+    hasPresentation: Boolean(resolved.presentation),
+    hasAgendaDate: true,
+    progressSource: selection.isManual ? 'docent-handmatig' : 'docentplatform',
+  };
+}
+
 function findNextLessonForClass(classId, now = new Date()) {
+  const teacherSelection = teacherSelectedLessonForClass(classId, now);
+  if (teacherSelection) return teacherSelection;
+
   const progressAnchor = getClassProgressAnchor(classId, now);
   if (progressAnchor?.doneAll) return null;
   const nextAgendaEntry = progressAnchor?.agendaEntry || null;
@@ -2732,7 +2841,7 @@ function fillClassOptions() {
   for (const classId of state.classes) {
     const option = document.createElement('option');
     option.value = classId;
-    option.textContent = `Klas ${classId}`;
+    option.textContent = classOptionLabel(classId);
     classSelect.appendChild(option);
   }
 }
@@ -2747,19 +2856,23 @@ async function fetchJson(url) {
 
 async function boot() {
   try {
-    const [planningRaw, classMap, agendaRaw, kerndoelenRaw] = await Promise.all([
+    const [planningRaw, classMap, agendaRaw, teacherSelectionRaw, kerndoelenRaw] = await Promise.all([
       fetchJson(PLANNING_URL),
       fetchJson(CLASSES_URL),
       fetchJson(AGENDA_URL).catch(() => ({ entries: [] })),
+      fetchJson(TEACHER_SELECTION_URL).catch(() => ({ entries: [] })),
       loadKerndoelenDoc(KERNDOELEN_URL).catch(() => null),
     ]);
 
     state.doc = preferFreshStudioDoc(planningRaw);
     state.agendaEntries = normalizeAgendaDoc(agendaRaw);
+    state.teacherSelectionEntries = normalizeTeacherSelectionDoc(teacherSelectionRaw);
     state.kerndoelenDoc = kerndoelenRaw;
     state.classes = [...new Set([
+      ...VIRTUAL_CLASS_IDS,
       ...classesFromClassMap(classMap),
       ...state.agendaEntries.map((entry) => normalizeClassId(entry.classId)),
+      ...state.teacherSelectionEntries.map((entry) => normalizeClassId(entry.classId)),
     ])]
       .filter(Boolean)
       .sort((left, right) => classSortKey(left).localeCompare(classSortKey(right), 'nl'));
@@ -2779,7 +2892,12 @@ async function boot() {
 
 async function refreshPlanningFromPublishedSource() {
   try {
-    state.doc = normalizeDoc(await fetchJson(PLANNING_URL));
+    const [planningRaw, teacherSelectionRaw] = await Promise.all([
+      fetchJson(PLANNING_URL),
+      fetchJson(TEACHER_SELECTION_URL).catch(() => ({ entries: [] })),
+    ]);
+    state.doc = normalizeDoc(planningRaw);
+    state.teacherSelectionEntries = normalizeTeacherSelectionDoc(teacherSelectionRaw);
     renderPortal();
   } catch (err) {
     console.warn('Jaarplanning kon niet opnieuw worden geladen:', err);
