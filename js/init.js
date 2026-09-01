@@ -1806,6 +1806,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     agendaReferenceEntryKey = bestEntryKey;
 
+    if (bestEntry && classIdMatch(bestEntry.classId, MENTOR_LESSON_CLASS_ID)) {
+      selectClassFromAgenda(MENTOR_LESSON_CLASS_ID);
+      activeAgendaClassId = MENTOR_LESSON_CLASS_ID;
+      activeAgendaEntry = bestEntry;
+      if (activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
+        laadIndeling();
+      }
+      selectedLessonIndex = lessonNumberForWeek(agendaEntries, activeAgendaEntry);
+      return;
+    }
+
     const selectedClassId = normalizeClassId(klasSelect?.value || '');
     const selectedClassEntry = selectedClassId
       ? findAgendaEntryForCurrentOrLast(agendaEntriesForClass(agendaEntries, selectedClassId), now)
