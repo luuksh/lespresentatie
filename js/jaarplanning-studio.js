@@ -2,6 +2,8 @@ const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
 const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
 const STUDIO_SCHEMA_VERSION = 2;
+const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
+const SPECIAL_PLANNING_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
@@ -63,6 +65,16 @@ function gradeLayerFromClassId(rawClassId) {
   return '';
 }
 
+function planningLayerFromClassId(rawClassId) {
+  const cid = normalizeClassId(rawClassId);
+  if (SPECIAL_PLANNING_CLASS_IDS.includes(cid)) return cid;
+  return gradeLayerFromClassId(cid);
+}
+
+function planningLayerLabel(layer) {
+  return normalizeClassId(layer) === MENTOR_LESSON_CLASS_ID ? 'Mentorles' : `Jaarlaag ${layer}`;
+}
+
 function normalizeDoc(raw) {
   const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
   if (!Array.isArray(doc.entries)) doc.entries = [];
@@ -122,8 +134,8 @@ function collapseToYearLayerDoc(doc) {
   const passthrough = [];
 
   for (const entry of source.entries || []) {
-    const grade = gradeLayerFromClassId(entry.classId);
-    if (!grade) {
+    const layer = planningLayerFromClassId(entry.classId);
+    if (!layer) {
       if (String(entry?.classId || '').trim().toUpperCase() === 'ALL') {
         passthrough.push(entry);
       }
@@ -131,9 +143,9 @@ function collapseToYearLayerDoc(doc) {
     }
     const week = String(entry.week || '').trim();
     if (!week) continue;
-    const key = `${grade}__${week}`;
+    const key = `${layer}__${week}`;
     if (!merged.has(key)) {
-      merged.set(key, { classId: grade, week, lessons: [], items: [], notes: [] });
+      merged.set(key, { classId: layer, week, lessons: [], items: [], notes: [] });
     }
     const bucket = merged.get(key);
     for (const lesson of Array.isArray(entry.lessons) ? entry.lessons : []) {
@@ -179,11 +191,12 @@ async function fetchJson(path) {
 }
 
 function layersFromDoc(doc) {
-  return [...new Set(doc.entries.map((e) => gradeLayerFromClassId(e.classId)).filter(Boolean))].sort();
+  return [...new Set(doc.entries.map((e) => planningLayerFromClassId(e.classId)).filter(Boolean))]
+    .sort((left, right) => planningLayerLabel(left).localeCompare(planningLayerLabel(right), 'nl', { numeric: true, sensitivity: 'base' }));
 }
 
 function selectedLayer() {
-  return gradeLayerFromClassId(classSelect.value);
+  return planningLayerFromClassId(classSelect.value);
 }
 
 function parseWeek(weekRaw) {
@@ -199,7 +212,7 @@ function parseWeek(weekRaw) {
 
 function findLayerWeekEntry(layer, week) {
   return state.doc.entries.find((entry) => (
-    gradeLayerFromClassId(entry.classId) === layer && parseWeek(entry.week) === week
+    planningLayerFromClassId(entry.classId) === layer && parseWeek(entry.week) === week
   )) || null;
 }
 
@@ -298,9 +311,9 @@ function buildExportPayload() {
   const fullDoc = structuredClone(state.doc);
   const yearLayers = [...new Set(
     (state.doc.entries || [])
-      .map((entry) => gradeLayerFromClassId(entry?.classId || ''))
+      .map((entry) => planningLayerFromClassId(entry?.classId || ''))
       .filter(Boolean)
-  )].sort((a, b) => Number(a) - Number(b));
+  )].sort((left, right) => planningLayerLabel(left).localeCompare(planningLayerLabel(right), 'nl', { numeric: true, sensitivity: 'base' }));
   const presentations = fullDoc.presentations || {};
   const presentationEntries = Object.entries(presentations).map(([id, presentation]) => ({
     id,
@@ -414,7 +427,7 @@ async function publishAll() {
 
 function renderSheet() {
   const layer = selectedLayer();
-  editorTitle.textContent = `Jaarplanning Raster · jaarlaag ${layer}`;
+  editorTitle.textContent = `Jaarplanning Raster · ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}`;
   sheetBody.innerHTML = '';
 
   for (let week = 1; week <= 53; week += 1) {
@@ -489,7 +502,7 @@ function onCellChange(event) {
   }
 
   saveStudio();
-  setStatus(`Gewijzigd: jaarlaag ${layer}, week ${week}.`);
+  setStatus(`Gewijzigd: ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}, week ${week}.`);
 }
 
 function fillLayerOptions(layers) {
@@ -497,7 +510,7 @@ function fillLayerOptions(layers) {
   for (const layer of layers) {
     const option = document.createElement('option');
     option.value = layer;
-    option.textContent = `Jaarlaag ${layer}`;
+    option.textContent = planningLayerLabel(layer);
     classSelect.appendChild(option);
   }
 }
@@ -516,8 +529,9 @@ async function boot() {
       ? localDoc
       : collapseToYearLayerDoc(baseRaw);
 
-    const uiLayers = Object.keys(classRaw || {}).map((cid) => gradeLayerFromClassId(cid)).filter(Boolean);
-    const allLayers = [...new Set([...uiLayers, ...layersFromDoc(state.doc)])].sort();
+    const uiLayers = Object.keys(classRaw || {}).map((cid) => planningLayerFromClassId(cid)).filter(Boolean);
+    const allLayers = [...new Set([...uiLayers, ...SPECIAL_PLANNING_CLASS_IDS, ...layersFromDoc(state.doc)])]
+      .sort((left, right) => planningLayerLabel(left).localeCompare(planningLayerLabel(right), 'nl', { numeric: true, sensitivity: 'base' }));
     state.layers = allLayers;
 
     fillLayerOptions(allLayers);

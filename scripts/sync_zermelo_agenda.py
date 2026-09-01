@@ -21,6 +21,9 @@ except ImportError:  # pragma: no cover
 
 OUT_PATH = Path("js/zermelo-agenda-live.json")
 PUBLIC_OUT_PATH = Path("docs/js/zermelo-agenda-live.json")
+MENTOR_LESSON_CLASS_ID = "MENTORLES"
+MENTOR_SOURCE_CLASS_ID = "G1D"
+MENTOR_LESSON_PATTERN = re.compile(r"\b(?:REP|KMT)\b")
 CLASS_PATTERNS = [
     re.compile(r"\bG[1-6]\.NETL\d+\b"),
     re.compile(r"\bNETL\d+\b"),
@@ -166,9 +169,23 @@ def extract_class_id(*values: str) -> str:
     return ""
 
 
-def is_dutch_agenda_text(*values: str) -> bool:
+def contains_mentor_lesson_code(*values: str) -> bool:
+    combined = re.sub(r"[^A-Z0-9.]+", " ", "\n".join(values).upper()).strip()
+    return bool(MENTOR_LESSON_PATTERN.search(combined))
+
+
+def resolve_agenda_class_id(class_id: str, *values: str) -> str:
+    normalized = normalize_class_id(class_id)
+    if normalized == MENTOR_SOURCE_CLASS_ID and contains_mentor_lesson_code(*values):
+        return MENTOR_LESSON_CLASS_ID
+    return normalized
+
+
+def is_dutch_agenda_text(*values: str, class_id: str = "") -> bool:
     combined = re.sub(r"[^A-Z0-9.]+", " ", "\n".join(values).upper()).strip()
     if not combined:
+        return True
+    if resolve_agenda_class_id(class_id, *values) == MENTOR_LESSON_CLASS_ID:
         return True
     if re.search(r"\bKMT\b", combined):
         return False
@@ -189,9 +206,14 @@ def to_entry(event: dict) -> dict | None:
 
     start = parse_ics_datetime(start_val, start_params)
     end = parse_ics_datetime(end_val, end_params)
-    if not is_dutch_agenda_text(summary, description, categories):
+    raw_class_id = extract_class_id(x_class, summary, description, location, categories)
+    class_id = resolve_agenda_class_id(
+        raw_class_id, summary, description, location, categories
+    )
+    if not is_dutch_agenda_text(
+        summary, description, categories, location, class_id=raw_class_id
+    ):
         return None
-    class_id = extract_class_id(x_class, summary, description, location, categories)
     if not class_id or not start or not end:
         return None
 

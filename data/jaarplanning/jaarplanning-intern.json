@@ -4487,11 +4487,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -4502,11 +4502,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -4514,48 +4514,19 @@
     {
       "classId": "3A",
       "week": "23",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3A",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3A",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -5062,11 +5033,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -5077,11 +5048,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -5096,14 +5067,6 @@
           "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
           "homework": "leesboek en schoolpasje mee"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "B",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
       ],
       "items": []
@@ -5111,33 +5074,13 @@
     {
       "classId": "3B",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3B",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -5644,11 +5587,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -5659,11 +5602,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -5671,48 +5614,19 @@
     {
       "classId": "3C",
       "week": "23",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3C",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3C",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -6219,11 +6133,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -6234,11 +6148,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -6246,48 +6160,19 @@
     {
       "classId": "3D",
       "week": "23",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3D",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3D",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -6794,11 +6679,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -6828,14 +6713,6 @@
           "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
           "homework": "leesboek en schoolpasje mee"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "B",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
       ],
       "items": []
@@ -6843,33 +6720,13 @@
     {
       "classId": "3E",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3E",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -7376,11 +7233,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -7391,11 +7248,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -7410,14 +7267,6 @@
           "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
           "homework": "leesboek en schoolpasje mee"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "B",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
       ],
       "items": []
@@ -7425,33 +7274,13 @@
     {
       "classId": "3F",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3F",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -7958,11 +7787,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+          "lesson": "Les 5 V-rede: Een sterke opening schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-5-v-rede-bouwplan-indrukwekkende-speech",
-          "homework": "Netschrift: maak je bouwplan met opening, scene, maatschappelijk probleem, argumenten, oproep en slot. Schrijf je openingszin, kernzin en slotzin volledig uit. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende openingen voor jouw V-rede, bijvoorbeeld anekdote, vraag, tegenstelling of detail. Kies de sterkste opening en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -7973,11 +7802,11 @@
       "lessons": [
         {
           "project": "V-rede",
-          "lesson": "Les 6 V-rede: Eerste versie schrijven",
+          "lesson": "Les 6 V-rede: Afsluiting schrijven",
           "presentationId": "project-v-rede",
           "lessonKey": "A",
           "presentationMarkerId": "marker-les-6-v-rede-eerste-versie-schrijven",
-          "homework": "Netschrift: schrijf je eerste volledige V-rede met opening, persoonlijk verhaal, maatschappelijke verbreding, argumenten, oproep en slot. netschrift en pen mee"
+          "homework": "Netschrift: schrijf drie verschillende afsluitingen voor jouw V-rede, bijvoorbeeld cirkel, oproep, vooruitblik, drieslag, contrast of kernzin. Kies de sterkste afsluiting en schrijf kort waarom die werkt. netschrift en pen mee"
         }
       ],
       "items": []
@@ -7992,14 +7821,6 @@
           "presentationId": "project-heel-veel-lezen",
           "lessonKey": "A",
           "homework": "leesboek en schoolpasje mee"
-        },
-        {
-          "project": "V-rede",
-          "lesson": "Les 7 V-rede: Herschrijven en voordracht oefenen",
-          "presentationId": "project-v-rede",
-          "lessonKey": "B",
-          "presentationMarkerId": "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen",
-          "homework": "Netschrift: verwerk feedback, herschrijf opening of slot, verbeter drie zinnen en noteer een voordracht-tip voor jezelf. Neem je definitieve tekst mee. netschrift en pen mee"
         }
       ],
       "items": []
@@ -8007,33 +7828,13 @@
     {
       "classId": "3G",
       "week": "24",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 8 V-rede: Presentaties deel 1",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-8-v-rede-presentaties-deel-1",
-          "homework": "Bereid je V-rede voor: oefen hardop met timing, stem, pauzes en houding. Neem je definitieve tekst mee. netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en feedback geven"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
       "classId": "3G",
       "week": "25",
-      "lessons": [
-        {
-          "project": "V-rede",
-          "lesson": "Les 9 V-rede: Presentaties deel 2",
-          "presentationId": "project-v-rede",
-          "lessonKey": "A",
-          "presentationMarkerId": "marker-les-9-v-rede-presentaties-deel-2",
-          "homework": "Netschrift: rond af met een korte reflectie op je V-rede: wat raakte je publiek, welke tip kreeg je en wat neem je mee? netschrift en pen mee",
-          "assessment": "Presentatie: V-rede voordragen en korte reflectie"
-        }
-      ],
+      "lessons": [],
       "items": []
     },
     {
@@ -17138,12 +16939,12 @@
         "marker-les-5-v-rede-bouwplan-indrukwekkende-speech": [
           {
             "type": "bullets",
-            "title": "Les 5 V-rede: bouwplan voor een indrukwekkende speech",
-            "subtitle": "Doel: je speech krijgt een route van binnenkomst tot slotzin",
+            "title": "Les 5 V-rede: een sterke opening schrijven",
+            "subtitle": "Doel: je kiest een persoonlijke opening die meteen aandacht pakt",
             "items": [
-              "Je ordent je scene, stelling en overtuigingszinnen tot een heldere opbouw",
-              "Je leert hoe een speech spanning en richting krijgt",
-              "Aan het einde heb je een volledig bouwplan plus openingszin en slotzin"
+              "Je gebruikt je scene, stelling en argumenten als materiaal",
+              "Je probeert verschillende manieren van openen uit",
+              "Aan het einde kies je één opening die persoonlijk, scherp en spreekbaar is"
             ]
           },
           {
@@ -17151,20 +16952,21 @@
             "title": "Aansluiting op les 3 en 4",
             "subtitle": "Je materiaal ligt er al",
             "items": [
-              "Les 3: scene, patroon, waarde, stelling",
-              "Les 4: ethos, pathos, logos en overtuigingsalinea",
-              "Vandaag: je bepaalt in welke volgorde het publiek dit moet horen"
+              "Les 2: scene die laat zien wat het publiek moet voelen",
+              "Les 3: stelling of maatschappelijk probleem",
+              "Les 4: drie argumenten of overtuigingsbouwstenen",
+              "Vandaag: je zet daaronder de onderdelen die je V-rede compleet maken"
             ]
           },
           {
             "type": "bullets",
-            "title": "Theorie: klassieke speechopbouw",
-            "subtitle": "Oud principe, moderne V-rede",
+            "title": "Theorie: de opening in een speech",
+            "subtitle": "Exordium: binnenkomen bij je publiek",
             "items": [
-              "Exordium: opening die aandacht en vertrouwen wint",
-              "Narratio: persoonlijke scene waardoor het publiek de kwestie ziet",
-              "Confirmatio: je stelling en sterkste argumenten",
-              "Peroratio: slot dat terugkeert naar het begin en oproept tot verandering"
+              "De opening wint aandacht: het publiek wil verder luisteren",
+              "De opening wint vertrouwen: jij klinkt echt en betrokken",
+              "De opening zet richting: het publiek voelt waar de V-rede naartoe gaat",
+              "Vandaag werk je alleen aan die binnenkomst"
             ]
           },
           {
@@ -17179,35 +16981,82 @@
           },
           {
             "type": "bullets",
+            "title": "Theorie: wat doet een sterke opening?",
+            "subtitle": "Professioneel, persoonlijk en direct",
+            "items": [
+              "Een sterke opening zet het publiek meteen in een moment",
+              "Je begint klein en concreet: een plek, tijdstip, handeling of detail",
+              "Je laat iets voelen voordat je uitlegt wat je onderwerp is",
+              "Je opening bevat al een spoor van je stelling: het publiek voelt dat er iets moet veranderen"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Manieren om sterk te openen",
+            "subtitle": "Zoals in een stijlgids: kies bewust",
+            "items": [
+              "Anekdote: begin met een kort persoonlijk moment",
+              "Vraag: stel een vraag die het publiek meteen betrekt",
+              "Tegenstelling: laat twee werelden botsen",
+              "Citaat of uitspraak: begin met woorden die schuren of raken",
+              "Feit of cijfer: geef één opvallend gegeven en maak het menselijk",
+              "Detail of voorwerp: zoom in op iets kleins dat symbool wordt"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Oefenen: drie openingen proberen",
+            "subtitle": "Zelfde onderwerp, ander effect",
+            "items": [
+              "Anekdote: in de pauze schoof iedereen een stoel op, behalve de stoel naast mij",
+              "Vraag: wanneer wordt zwijgen eigenlijk meedoen?",
+              "Tegenstelling: de klas was vol, maar één plek bleef leeg",
+              "Detail: op tafel lag een onaangeraakte broodtrommel naast een lege stoel",
+              "Kies daarna: welke opening voelt persoonlijk, scherp en niet gespeeld?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Schrijf je eigen opening",
+            "subtitle": "Vier zinnen, geen uitleg vooraf",
+            "items": [
+              "Zin 1: zet ons midden in jouw scene met tijd, plek of handeling",
+              "Zin 2: voeg een concreet detail toe dat iets laat voelen",
+              "Zin 3: maak de spanning groter met een tegenstelling of vraag",
+              "Zin 4: stuur naar je stelling zonder die al helemaal uit te leggen"
+            ]
+          },
+          {
+            "type": "bullets",
             "title": "Theorie: de kernzin",
             "subtitle": "De zin die moet blijven hangen",
             "items": [
               "Je kernzin is kort genoeg om te onthouden",
               "Hij bevat jouw standpunt, niet alleen je onderwerp",
-              "Hij kan terugkomen in je slot, eventueel net iets sterker geformuleerd"
+              "Hij helpt je opening richting geven zonder alles al uit te leggen"
             ]
           },
           {
             "type": "bullets",
-            "title": "Modelbouwplan",
-            "subtitle": "Voorbeeldroute",
+            "title": "Modelopening",
+            "subtitle": "Eén onderwerp, drie mogelijke binnenkomsten",
             "items": [
-              "Opening: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
-              "Scene: wat er in de pauze gebeurt en wat niemand zegt",
-              "Stelling: wegkijken maakt buitensluiting normaal",
-              "Argumenten: veiligheid, verantwoordelijkheid van omstanders, effect van kleine keuzes",
-              "Slot: kijk morgen niet naar je scherm als iemand naast jou geen plek heeft"
+              "Anekdote: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
+              "Vraag: wanneer wordt niets doen hetzelfde als meedoen?",
+              "Tegenstelling: de aula was vol, maar naast hem bleef het leeg",
+              "Detail: zijn broodtrommel lag open, maar hij nam geen hap",
+              "Kies de opening die het meest echt voelt bij jouw V-rede"
             ]
           },
           {
             "type": "bullets",
-            "title": "Praktijk: maak je route",
-            "subtitle": "Van losse zinnen naar spreektekst",
+            "title": "Praktijk: kies je opening",
+            "subtitle": "Van probeersels naar één sterke start",
             "items": [
-              "Zet je materiaal onder zes kopjes: opening, scene, probleem, argumenten, oproep, slot",
-              "Kies per kopje maximaal drie kernzinnen",
-              "Schrap alles wat niet helpt om je publiek naar je slot te brengen",
-              "Schrijf opening en slot volledig uit, niet in trefwoorden"
+              "Zet boven je bestaande werk: Mijn V-rede",
+              "Schrijf drie verschillende openingen bij je scene",
+              "Lees ze zacht hardop en luister welke het best klinkt",
+              "Kies één opening en schrijf erbij waarom die werkt"
             ]
           },
           {
@@ -17215,291 +17064,93 @@
             "title": "Netschrift: product van vandaag",
             "subtitle": "Startpunt voor les 6",
             "items": [
-              "1. Bouwplan met zes kopjes: opening, scene, maatschappelijk probleem, argumenten, oproep, slot",
-              "2. Per kopje 2 tot 3 kernzinnen of trefwoorden",
-              "3. Een openingszin die begint met beeld, spanning of tegenstelling",
-              "4. Een slotzin waarin je kernzin terugkomt als oproep",
-              "5. Een check: welke zin moet het publiek na afloop onthouden?"
+              "1. Bovenaan: Mijn V-rede",
+              "2. Daaronder: je scene uit les 2",
+              "3. Daaronder: je stelling uit les 3",
+              "4. Daaronder: je drie argumenten uit les 4",
+              "5. Nieuw onderaan: drie openingsvarianten en je gekozen opening"
             ]
           }
         ],
         "marker-les-6-v-rede-eerste-versie-schrijven": [
           {
             "type": "bullets",
-            "title": "Les 6 V-rede: eerste versie schrijven",
-            "subtitle": "",
+            "title": "Les 6 V-rede: afsluiting schrijven",
+            "subtitle": "Doel: je kiest een slot dat blijft hangen",
             "items": [
-              "Vandaag schrijf je je eerste volledige V-rede",
-              "Het hoeft nog niet perfect, maar wel af",
-              "Je schrijft alsof je tekst straks uitgesproken wordt"
+              "Vandaag werk je alleen aan de afsluiting van je V-rede",
+              "Je probeert meerdere soorten afsluitingen uit",
+              "Aan het einde kies je één slot dat krachtig, persoonlijk en spreekbaar is"
             ]
           },
           {
             "type": "bullets",
-            "title": "Startvoorbeeld: spreekbare alinea",
-            "subtitle": "",
+            "title": "Aansluiting op les 5",
+            "subtitle": "Van sterke start naar sterk einde",
             "items": [
-              "Niet: sociale uitsluiting is een problematisch fenomeen met negatieve gevolgen",
-              "Wel: buitengesloten worden klinkt misschien klein, totdat jij degene bent die elke pauze doet alsof je een berichtje leest",
-              "Vraag: welke versie kun je beter hardop uitspreken?"
+              "Les 5: je koos een aandachtstrekkende opening",
+              "Vandaag: je bepaalt hoe je publiek de zaal uitgaat",
+              "Een goede afsluiting geeft richting: wat moet het publiek onthouden, voelen of doen?",
+              "Je slot hoeft niet lang te zijn, maar wel raak"
             ]
           },
           {
             "type": "bullets",
-            "title": "Theorie: schrijven voor het oor",
-            "subtitle": "",
+            "title": "Theorie: wat doet een sterke afsluiting?",
+            "subtitle": "Je laatste zinnen bepalen wat blijft hangen",
             "items": [
-              "Gebruik korte zinnen op belangrijke momenten",
-              "Herhaal een kernwoord bewust, niet toevallig",
-              "Wissel verhaal, uitleg en oproep af",
-              "Schrijf zinnen die je met adem en pauze kunt zeggen"
+              "Een afsluiting herhaalt niet alles, maar maakt je punt scherper",
+              "Je publiek moet voelen: nu moet er iets gebeuren",
+              "Je kiest één duidelijke beweging: terug naar je opening, vooruit naar actie of samenvatten in één krachtige zin",
+              "Een goed slot klinkt alsof je het uit je hoofd zou kunnen zeggen"
             ]
           },
           {
             "type": "bullets",
-            "title": "Theorie: alinea-functies",
-            "subtitle": "",
+            "title": "Manieren om sterk af te sluiten",
+            "subtitle": "Zoals in een stijlgids: kies bewust",
             "items": [
-              "Alinea 1 opent en maakt nieuwsgierig",
-              "Alinea 2 vertelt het persoonlijke voorbeeld",
-              "Alinea 3 maakt het maatschappelijk breder",
-              "Alinea 4 geeft argumenten en eindigt met oproep/slot"
+              "Cirkel: kom terug op je openingsbeeld of eerste zin",
+              "Oproep: zeg concreet wat het publiek morgen anders kan doen",
+              "Vooruitblik: laat zien wat er verandert als mensen luisteren",
+              "Drieslag: eindig met drie korte, oplopende zinnen",
+              "Contrast: zet de wereld van nu tegenover de wereld die jij wilt",
+              "Kernzin: laat je belangrijkste zin nog één keer terugkomen"
             ]
           },
           {
             "type": "bullets",
-            "title": "Demo: schrijfkeuzes",
-            "subtitle": "",
+            "title": "Oefenen: drie afsluitingen proberen",
+            "subtitle": "Zelfde speech, ander laatste effect",
             "items": [
-              "Begin met een beeld in plaats van uitleg",
-              "Gebruik ik of wij wanneer betrokkenheid nodig is",
-              "Gebruik jij of u alleen als je het publiek direct wilt raken",
-              "Zet je sterkste zin niet verstopt midden in een lange alinea"
+              "Cirkel: laat morgen niet weer één stoel vrij blijven",
+              "Oproep: kijk op, schuif op, maak plaats voordat iemand het hoeft te vragen",
+              "Contrast: niet een volle aula met lege plekken, maar een klas waarin iedereen gezien wordt",
+              "Schrijf zelf drie varianten bij jouw V-rede",
+              "Kies daarna: welke afsluiting klinkt krachtig, persoonlijk en uitvoerbaar?"
             ]
           },
           {
             "type": "bullets",
-            "title": "Netschrift",
-            "subtitle": "",
+            "title": "Check: werkt je afsluiting?",
+            "subtitle": "Niet mooi doen, raak eindigen",
             "items": [
-              "Schrijf je volledige eerste versie",
-              "Controleer: opening, persoonlijk verhaal, verbreding, argumenten, oproep, slot",
-              "Onderstreep je sterkste zin",
-              "Zet een ster bij de plek waar je nog twijfelt"
+              "Is je laatste zin kort genoeg om te onthouden?",
+              "Past je afsluiting bij je opening en stelling?",
+              "Zit er een duidelijke oproep, gedachte of keuze in?",
+              "Kun je hem rustig en overtuigend hardop zeggen?"
             ]
           },
           {
             "type": "bullets",
-            "title": "Voorlezen en bespreken",
-            "subtitle": "",
+            "title": "Netschrift: product van vandaag",
+            "subtitle": "Dit is de afronding van het project in je schrift",
             "items": [
-              "1 of 2 leerlingen lezen een alinea hardop",
-              "Klas luistert naar spreekbaarheid en impact",
-              "Samen kiezen we waar een pauze of herhaling sterker werkt"
-            ]
-          }
-        ],
-        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": [
-          {
-            "type": "bullets",
-            "title": "Les 7 V-rede: herschrijven en voordracht oefenen",
-            "subtitle": "",
-            "items": [
-              "Vandaag maak je van een eerste versie een voordrachttekst",
-              "Je verbetert inhoud, stijl en uitvoering",
-              "Je oefent hardop zodat je tekst niet alleen op papier werkt"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Startvoorbeeld: voor en na",
-            "subtitle": "",
-            "items": [
-              "Voor: ik vind dat mensen moeten stoppen met buitensluiten omdat dat slecht is",
-              "Na: stop met lachen alsof het niets is, want voor iemand anders kan jouw grap de reden zijn om morgen stil te blijven",
-              "Vraag: wat is er inhoudelijk en stilistisch verbeterd?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Theorie: vier herschrijflagen",
-            "subtitle": "",
-            "items": [
-              "Inhoud: is je punt helder en belangrijk?",
-              "Structuur: snapt het publiek de route?",
-              "Stijl: zijn je zinnen concreet, ritmisch en precies?",
-              "Voordracht: waar pauzeer je, versnel je of kijk je op?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Theorie: stijlmiddelen voor speeches",
-            "subtitle": "",
-            "items": [
-              "Herhaling: laat een kernzin terugkomen",
-              "Contrast: zet wat er is tegenover wat er zou moeten zijn",
-              "Drieslag: geef drie korte voorbeelden of oproepen",
-              "Retorische vraag: laat het publiek zelf meedenken"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Demo: spreektekst markeren",
-            "subtitle": "",
-            "items": [
-              "Zet schuine strepen waar je pauzeert",
-              "Markeer woorden die nadruk krijgen",
-              "Schrap zinnen die je punt niet sterker maken",
-              "Schrijf een slotzin die je uit je hoofd kunt zeggen"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Netschrift",
-            "subtitle": "",
-            "items": [
-              "Noteer twee feedbackpunten van een klasgenoot",
-              "Herschrijf je opening of slot helemaal",
-              "Verbeter drie zinnen met concreter beeld, ritme of herhaling",
-              "Noteer je voordrachtplan: tempo, pauzes, blik en houding"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Voorlezen en bespreken",
-            "subtitle": "",
-            "items": [
-              "1 of 2 leerlingen dragen 30 seconden voor",
-              "Klas geeft een compliment op inhoud en een tip op voordracht",
-              "Samen scherpen we een slotzin aan"
-            ]
-          }
-        ],
-        "marker-les-8-v-rede-presentaties-deel-1": [
-          {
-            "type": "bullets",
-            "title": "Les 8 V-rede: presentaties deel 1",
-            "subtitle": "",
-            "items": [
-              "Vandaag draagt de eerste helft van de klas de V-rede voor",
-              "De rest luistert actief en schrijft gerichte feedback",
-              "Elke speech krijgt aandacht en respect"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Startvoorbeeld: luisteren naar impact",
-            "subtitle": "",
-            "items": [
-              "Voor de eerste presentatie kijken we naar drie vragen",
-              "Waar begint de spreker persoonlijk?",
-              "Wanneer wordt het groter dan een eigen ervaring?",
-              "Welke zin blijft hangen?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Theorie: wat maakt voordracht overtuigend?",
-            "subtitle": "",
-            "items": [
-              "Contact: je kijkt op bij belangrijke zinnen",
-              "Stem: je varieert in tempo, volume en pauzes",
-              "Houding: je staat rustig en gericht",
-              "Keuze: niet alles hard, maar de juiste woorden belangrijk maken"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Feedbackschema",
-            "subtitle": "",
-            "items": [
-              "Compliment op inhoud: welk verhaal, argument of beeld werkte sterk?",
-              "Compliment op voordracht: wat deed de spreker goed met stem, blik of houding?",
-              "Tip: welke ene keuze zou de speech nog sterker maken?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Netschrift tijdens presentaties",
-            "subtitle": "",
-            "items": [
-              "Noteer per spreker een zin die indruk maakte",
-              "Schrijf bij minimaal drie sprekers een compliment en tip",
-              "Let op persoonlijke inzet, maatschappelijke verbreding en slotoproep"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Afronding",
-            "subtitle": "",
-            "items": [
-              "Korte klassikale terugblik: welke zinnen bleven hangen?",
-              "Wat leren we hiervan voor de tweede presentatieronde?",
-              "Applaus na elke V-rede"
-            ]
-          }
-        ],
-        "marker-les-9-v-rede-presentaties-deel-2": [
-          {
-            "type": "bullets",
-            "title": "Les 9 V-rede: presentaties deel 2",
-            "subtitle": "",
-            "items": [
-              "Vandaag draagt de tweede helft van de klas de V-rede voor",
-              "We ronden het project af met reflectie",
-              "Je kijkt terug op inhoud, impact en groei"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Startvoorbeeld: een sterk slot herkennen",
-            "subtitle": "",
-            "items": [
-              "Een goed slot herhaalt niet alleen de opdracht",
-              "Het keert terug naar het begin, maakt de kern duidelijk en geeft een oproep",
-              "Luistervraag: welke spreker eindigt met een zin die nog even blijft hangen?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Theorie: publiek als onderdeel van de speech",
-            "subtitle": "",
-            "items": [
-              "Een speech is geslaagd als het publiek iets anders ziet dan daarvoor",
-              "Luisteren is actief: je merkt beeld, argument, emotie en oproep op",
-              "Feedback helpt benoemen waarom iets raakt"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Feedbackschema",
-            "subtitle": "",
-            "items": [
-              "Compliment op persoonlijke betrokkenheid",
-              "Compliment op maatschappelijke verbreding",
-              "Tip op voordracht of formulering",
-              "Noteer de zin die je het meest onthoudt"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Netschrift: eindreflectie",
-            "subtitle": "",
-            "items": [
-              "Wat wilde jij met je V-rede bereiken?",
-              "Welke reactie, tip of vraag kreeg je?",
-              "Welke zin uit jouw speech werkte het sterkst?",
-              "Wat zou je bij een volgende speech anders doen?"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Afronding",
-            "subtitle": "",
-            "items": [
-              "We verzamelen kenmerken van de sterkste speeches",
-              "Korte terugblik op persoonlijke onderwerpen die maatschappelijk werden",
-              "Project afgerond"
+              "1. Drie verschillende afsluitingen bij jouw V-rede",
+              "2. Bij elke afsluiting: welke soort is dit?",
+              "3. Je gekozen afsluiting volledig uitgeschreven",
+              "4. Eén zin uitleg: waarom past dit slot het best bij jouw V-rede?",
+              "5. Controleer of opening en afsluiting samen één geheel vormen"
             ]
           }
         ],
@@ -17520,7 +17171,7 @@
         "marker-les-5-v-rede-bouwplan-voor-een-indrukwekkende-speech": [
           {
             "type": "title",
-            "title": "Les 5 V-rede: Bouwplan voor een indrukwekkende speech",
+            "title": "Les 5 V-rede: Een sterke opening schrijven",
             "subtitle": "V-rede"
           }
         ]
@@ -17529,89 +17180,95 @@
         {
           "type": "title",
           "title": "V-rede",
-          "subtitle": "V-rede",
+          "subtitle": "persoonlijke speech over wat moet veranderen",
           "showProjectLogo": true
         },
         {
           "type": "bullets",
-          "title": "Les 6 V-rede: eerste versie schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Les 6 V-rede: afsluiting schrijven",
+          "subtitle": "Doel: je kiest een slot dat blijft hangen",
           "items": [
-            "Vandaag schrijf je je eerste volledige V-rede",
-            "Het hoeft nog niet perfect, maar wel af",
-            "Je schrijft alsof je tekst straks uitgesproken wordt"
-          ]
+            "Vandaag werk je alleen aan de afsluiting van je V-rede",
+            "Je probeert meerdere soorten afsluitingen uit",
+            "Aan het einde kies je één slot dat krachtig, persoonlijk en spreekbaar is"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Startvoorbeeld: spreekbare alinea",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Aansluiting op les 5",
+          "subtitle": "Van sterke start naar sterk einde",
           "items": [
-            "Niet: sociale uitsluiting is een problematisch fenomeen met negatieve gevolgen",
-            "Wel: buitengesloten worden klinkt misschien klein, totdat jij degene bent die elke pauze doet alsof je een berichtje leest",
-            "Vraag: welke versie kun je beter hardop uitspreken?"
-          ]
+            "Les 5: je koos een aandachtstrekkende opening",
+            "Vandaag: je bepaalt hoe je publiek de zaal uitgaat",
+            "Een goede afsluiting geeft richting: wat moet het publiek onthouden, voelen of doen?",
+            "Je slot hoeft niet lang te zijn, maar wel raak"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Theorie: schrijven voor het oor",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Theorie: wat doet een sterke afsluiting?",
+          "subtitle": "Je laatste zinnen bepalen wat blijft hangen",
           "items": [
-            "Gebruik korte zinnen op belangrijke momenten",
-            "Herhaal een kernwoord bewust, niet toevallig",
-            "Wissel verhaal, uitleg en oproep af",
-            "Schrijf zinnen die je met adem en pauze kunt zeggen"
-          ]
+            "Een afsluiting herhaalt niet alles, maar maakt je punt scherper",
+            "Je publiek moet voelen: nu moet er iets gebeuren",
+            "Je kiest één duidelijke beweging: terug naar je opening, vooruit naar actie of samenvatten in één krachtige zin",
+            "Een goed slot klinkt alsof je het uit je hoofd zou kunnen zeggen"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Theorie: alinea-functies",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Manieren om sterk af te sluiten",
+          "subtitle": "Zoals in een stijlgids: kies bewust",
           "items": [
-            "Alinea 1 opent en maakt nieuwsgierig",
-            "Alinea 2 vertelt het persoonlijke voorbeeld",
-            "Alinea 3 maakt het maatschappelijk breder",
-            "Alinea 4 geeft argumenten en eindigt met oproep/slot"
-          ]
+            "Cirkel: kom terug op je openingsbeeld of eerste zin",
+            "Oproep: zeg concreet wat het publiek morgen anders kan doen",
+            "Vooruitblik: laat zien wat er verandert als mensen luisteren",
+            "Drieslag: eindig met drie korte, oplopende zinnen",
+            "Contrast: zet de wereld van nu tegenover de wereld die jij wilt",
+            "Kernzin: laat je belangrijkste zin nog één keer terugkomen"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Demo: schrijfkeuzes",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Oefenen: drie afsluitingen proberen",
+          "subtitle": "Zelfde speech, ander laatste effect",
           "items": [
-            "Begin met een beeld in plaats van uitleg",
-            "Gebruik ik of wij wanneer betrokkenheid nodig is",
-            "Gebruik jij of u alleen als je het publiek direct wilt raken",
-            "Zet je sterkste zin niet verstopt midden in een lange alinea"
-          ]
+            "Cirkel: laat morgen niet weer één stoel vrij blijven",
+            "Oproep: kijk op, schuif op, maak plaats voordat iemand het hoeft te vragen",
+            "Contrast: niet een volle aula met lege plekken, maar een klas waarin iedereen gezien wordt",
+            "Schrijf zelf drie varianten bij jouw V-rede",
+            "Kies daarna: welke afsluiting klinkt krachtig, persoonlijk en uitvoerbaar?"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Netschrift",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Check: werkt je afsluiting?",
+          "subtitle": "Niet mooi doen, raak eindigen",
           "items": [
-            "Schrijf je volledige eerste versie",
-            "Controleer: opening, persoonlijk verhaal, verbreding, argumenten, oproep, slot",
-            "Onderstreep je sterkste zin",
-            "Zet een ster bij de plek waar je nog twijfelt"
-          ]
+            "Is je laatste zin kort genoeg om te onthouden?",
+            "Past je afsluiting bij je opening en stelling?",
+            "Zit er een duidelijke oproep, gedachte of keuze in?",
+            "Kun je hem rustig en overtuigend hardop zeggen?"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
-          "title": "Voorlezen en bespreken",
-          "subtitle": "",
-          "showProjectLogo": false,
+          "title": "Netschrift: product van vandaag",
+          "subtitle": "Dit is de afronding van het project in je schrift",
           "items": [
-            "1 of 2 leerlingen lezen een alinea hardop",
-            "Klas luistert naar spreekbaarheid en impact",
-            "Samen kiezen we waar een pauze of herhaling sterker werkt"
-          ]
+            "1. Drie verschillende afsluitingen bij jouw V-rede",
+            "2. Bij elke afsluiting: welke soort is dit?",
+            "3. Je gekozen afsluiting volledig uitgeschreven",
+            "4. Eén zin uitleg: waarom past dit slot het best bij jouw V-rede?",
+            "5. Controleer of opening en afsluiting samen één geheel vormen"
+          ],
+          "showProjectLogo": false
         },
         {
           "type": "bullets",
@@ -17688,11 +17345,11 @@
           "subtitle": "Dit moet aan het einde staan",
           "showProjectLogo": false,
           "items": [
-            "1. Mijn scene in een kernzin: ...",
-            "2. Het patroon dat ik hierin zie: ...",
-            "3. De waarde die op het spel staat: ...",
-            "4. Mijn voorlopige stelling: ...",
-            "5. Brugalinea van 5 tot 7 zinnen: van scene naar maatschappelijk probleem"
+            "1. Bovenaan: Mijn V-rede",
+            "2. Daaronder: je scene uit les 2",
+            "3. Daaronder: je stelling uit les 3",
+            "4. Daaronder: je drie argumenten uit les 4",
+            "5. Nieuw onderaan: drie openingsvarianten en je gekozen opening"
           ]
         },
         {
@@ -17945,22 +17602,22 @@
           "subtitle": "Dit gebruik je straks in je eerste versie",
           "showProjectLogo": false,
           "items": [
-            "1. Ethoszin",
-            "2. Pathoszin met concreet beeld",
-            "3. Logoszin met oorzaak-gevolg of tegenstelling",
-            "4. Een overtuigingsalinea waarin je persoonlijke scene en stelling samenkomen",
-            "5. Markeer met E, P en L waar ethos, pathos en logos zitten"
+            "1. Bovenaan: Mijn V-rede",
+            "2. Daaronder: je scene uit les 2",
+            "3. Daaronder: je stelling uit les 3",
+            "4. Daaronder: je drie argumenten uit les 4",
+            "5. Nieuw onderaan: drie openingsvarianten en je gekozen opening"
           ]
         },
         {
           "type": "bullets",
-          "title": "Les 5 V-rede: bouwplan voor een indrukwekkende speech",
-          "subtitle": "Doel: je speech krijgt een route van binnenkomst tot slotzin",
+          "title": "Les 5 V-rede: een sterke opening schrijven",
+          "subtitle": "Doel: je kiest een persoonlijke opening die meteen aandacht pakt",
           "showProjectLogo": false,
           "items": [
-            "Je ordent je scene, stelling en overtuigingszinnen tot een heldere opbouw",
-            "Je leert hoe een speech spanning en richting krijgt",
-            "Aan het einde heb je een volledig bouwplan plus openingszin en slotzin"
+            "Je gebruikt je scene, stelling en argumenten als materiaal",
+            "Je probeert verschillende manieren van openen uit",
+            "Aan het einde kies je één opening die persoonlijk, scherp en spreekbaar is"
           ]
         },
         {
@@ -17969,21 +17626,22 @@
           "subtitle": "Je materiaal ligt er al",
           "showProjectLogo": false,
           "items": [
-            "Les 3: scene, patroon, waarde, stelling",
-            "Les 4: ethos, pathos, logos en overtuigingsalinea",
-            "Vandaag: je bepaalt in welke volgorde het publiek dit moet horen"
+            "Les 2: scene die laat zien wat het publiek moet voelen",
+            "Les 3: stelling of maatschappelijk probleem",
+            "Les 4: drie argumenten of overtuigingsbouwstenen",
+            "Vandaag: je zet daaronder de onderdelen die je V-rede compleet maken"
           ]
         },
         {
           "type": "bullets",
-          "title": "Theorie: klassieke speechopbouw",
-          "subtitle": "Oud principe, moderne V-rede",
+          "title": "Theorie: de opening in een speech",
+          "subtitle": "Exordium: binnenkomen bij je publiek",
           "showProjectLogo": false,
           "items": [
-            "Exordium: opening die aandacht en vertrouwen wint",
-            "Narratio: persoonlijke scene waardoor het publiek de kwestie ziet",
-            "Confirmatio: je stelling en sterkste argumenten",
-            "Peroratio: slot dat terugkeert naar het begin en oproept tot verandering"
+            "De opening wint aandacht: het publiek wil verder luisteren",
+            "De opening wint vertrouwen: jij klinkt echt en betrokken",
+            "De opening zet richting: het publiek voelt waar de V-rede naartoe gaat",
+            "Vandaag werk je alleen aan die binnenkomst"
           ]
         },
         {
@@ -17999,38 +17657,89 @@
         },
         {
           "type": "bullets",
+          "title": "Theorie: wat doet een sterke opening?",
+          "subtitle": "Professioneel, persoonlijk en direct",
+          "showProjectLogo": false,
+          "items": [
+            "Een sterke opening zet het publiek meteen in een moment",
+            "Je begint klein en concreet: een plek, tijdstip, handeling of detail",
+            "Je laat iets voelen voordat je uitlegt wat je onderwerp is",
+            "Je opening bevat al een spoor van je stelling: het publiek voelt dat er iets moet veranderen"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Manieren om sterk te openen",
+          "subtitle": "Zoals in een stijlgids: kies bewust",
+          "showProjectLogo": false,
+          "items": [
+            "Anekdote: begin met een kort persoonlijk moment",
+            "Vraag: stel een vraag die het publiek meteen betrekt",
+            "Tegenstelling: laat twee werelden botsen",
+            "Citaat of uitspraak: begin met woorden die schuren of raken",
+            "Feit of cijfer: geef één opvallend gegeven en maak het menselijk",
+            "Detail of voorwerp: zoom in op iets kleins dat symbool wordt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefenen: drie openingen proberen",
+          "subtitle": "Zelfde onderwerp, ander effect",
+          "showProjectLogo": false,
+          "items": [
+            "Anekdote: in de pauze schoof iedereen een stoel op, behalve de stoel naast mij",
+            "Vraag: wanneer wordt zwijgen eigenlijk meedoen?",
+            "Tegenstelling: de klas was vol, maar één plek bleef leeg",
+            "Detail: op tafel lag een onaangeraakte broodtrommel naast een lege stoel",
+            "Kies daarna: welke opening voelt persoonlijk, scherp en niet gespeeld?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Schrijf je eigen opening",
+          "subtitle": "Vier zinnen, geen uitleg vooraf",
+          "showProjectLogo": false,
+          "items": [
+            "Zin 1: zet ons midden in jouw scene met tijd, plek of handeling",
+            "Zin 2: voeg een concreet detail toe dat iets laat voelen",
+            "Zin 3: maak de spanning groter met een tegenstelling of vraag",
+            "Zin 4: stuur naar je stelling zonder die al helemaal uit te leggen"
+          ]
+        },
+        {
+          "type": "bullets",
           "title": "Theorie: de kernzin",
           "subtitle": "De zin die moet blijven hangen",
           "showProjectLogo": false,
           "items": [
             "Je kernzin is kort genoeg om te onthouden",
             "Hij bevat jouw standpunt, niet alleen je onderwerp",
-            "Hij kan terugkomen in je slot, eventueel net iets sterker geformuleerd"
+            "Hij helpt je opening richting geven zonder alles al uit te leggen"
           ]
         },
         {
           "type": "bullets",
-          "title": "Modelbouwplan",
-          "subtitle": "Voorbeeldroute",
+          "title": "Modelopening",
+          "subtitle": "Eén onderwerp, drie mogelijke binnenkomsten",
           "showProjectLogo": false,
           "items": [
-            "Opening: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
-            "Scene: wat er in de pauze gebeurt en wat niemand zegt",
-            "Stelling: wegkijken maakt buitensluiting normaal",
-            "Argumenten: veiligheid, verantwoordelijkheid van omstanders, effect van kleine keuzes",
-            "Slot: kijk morgen niet naar je scherm als iemand naast jou geen plek heeft"
+            "Anekdote: een leerling doet alsof hij een bericht leest, omdat niemand naast hem komt zitten",
+            "Vraag: wanneer wordt niets doen hetzelfde als meedoen?",
+            "Tegenstelling: de aula was vol, maar naast hem bleef het leeg",
+            "Detail: zijn broodtrommel lag open, maar hij nam geen hap",
+            "Kies de opening die het meest echt voelt bij jouw V-rede"
           ]
         },
         {
           "type": "bullets",
-          "title": "Praktijk: maak je route",
-          "subtitle": "Van losse zinnen naar spreektekst",
+          "title": "Praktijk: kies je opening",
+          "subtitle": "Van probeersels naar één sterke start",
           "showProjectLogo": false,
           "items": [
-            "Zet je materiaal onder zes kopjes: opening, scene, probleem, argumenten, oproep, slot",
-            "Kies per kopje maximaal drie kernzinnen",
-            "Schrap alles wat niet helpt om je publiek naar je slot te brengen",
-            "Schrijf opening en slot volledig uit, niet in trefwoorden"
+            "Zet boven je bestaande werk: Mijn V-rede",
+            "Schrijf drie verschillende openingen bij je scene",
+            "Lees ze zacht hardop en luister welke het best klinkt",
+            "Kies één opening en schrijf erbij waarom die werkt"
           ]
         },
         {
@@ -18039,229 +17748,33 @@
           "subtitle": "Startpunt voor les 6",
           "showProjectLogo": false,
           "items": [
-            "1. Bouwplan met zes kopjes: opening, scene, maatschappelijk probleem, argumenten, oproep, slot",
-            "2. Per kopje 2 tot 3 kernzinnen of trefwoorden",
-            "3. Een openingszin die begint met beeld, spanning of tegenstelling",
-            "4. Een slotzin waarin je kernzin terugkomt als oproep",
-            "5. Een check: welke zin moet het publiek na afloop onthouden?"
+            "1. Bovenaan: Mijn V-rede",
+            "2. Daaronder: je scene uit les 2",
+            "3. Daaronder: je stelling uit les 3",
+            "4. Daaronder: je drie argumenten uit les 4",
+            "5. Nieuw onderaan: drie openingsvarianten en je gekozen opening"
           ]
         },
         {
-          "type": "bullets",
-          "title": "Les 7 V-rede: herschrijven en voordracht oefenen",
-          "subtitle": "",
+          "type": "title",
+          "title": "Les 3 V-rede: Van persoonlijk verhaal naar maatschappelijk probleem",
+          "subtitle": "V-rede",
           "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je van een eerste versie een voordrachttekst",
-            "Je verbetert inhoud, stijl en uitvoering",
-            "Je oefent hardop zodat je tekst niet alleen op papier werkt"
-          ]
+          "items": []
         },
         {
-          "type": "bullets",
-          "title": "Startvoorbeeld: voor en na",
-          "subtitle": "",
+          "type": "title",
+          "title": "Les 4 V-rede: Raak je publiek met hoofd en hart",
+          "subtitle": "V-rede",
           "showProjectLogo": false,
-          "items": [
-            "Voor: ik vind dat mensen moeten stoppen met buitensluiten omdat dat slecht is",
-            "Na: stop met lachen alsof het niets is, want voor iemand anders kan jouw grap de reden zijn om morgen stil te blijven",
-            "Vraag: wat is er inhoudelijk en stilistisch verbeterd?"
-          ]
+          "items": []
         },
         {
-          "type": "bullets",
-          "title": "Theorie: vier herschrijflagen",
-          "subtitle": "",
+          "type": "title",
+          "title": "Les 5 V-rede: Een sterke opening schrijven",
+          "subtitle": "V-rede",
           "showProjectLogo": false,
-          "items": [
-            "Inhoud: is je punt helder en belangrijk?",
-            "Structuur: snapt het publiek de route?",
-            "Stijl: zijn je zinnen concreet, ritmisch en precies?",
-            "Voordracht: waar pauzeer je, versnel je of kijk je op?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: stijlmiddelen voor speeches",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Herhaling: laat een kernzin terugkomen",
-            "Contrast: zet wat er is tegenover wat er zou moeten zijn",
-            "Drieslag: geef drie korte voorbeelden of oproepen",
-            "Retorische vraag: laat het publiek zelf meedenken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Demo: spreektekst markeren",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zet schuine strepen waar je pauzeert",
-            "Markeer woorden die nadruk krijgen",
-            "Schrap zinnen die je punt niet sterker maken",
-            "Schrijf een slotzin die je uit je hoofd kunt zeggen"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Noteer twee feedbackpunten van een klasgenoot",
-            "Herschrijf je opening of slot helemaal",
-            "Verbeter drie zinnen met concreter beeld, ritme of herhaling",
-            "Noteer je voordrachtplan: tempo, pauzes, blik en houding"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Voorlezen en bespreken",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1 of 2 leerlingen dragen 30 seconden voor",
-            "Klas geeft een compliment op inhoud en een tip op voordracht",
-            "Samen scherpen we een slotzin aan"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 8 V-rede: presentaties deel 1",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag draagt de eerste helft van de klas de V-rede voor",
-            "De rest luistert actief en schrijft gerichte feedback",
-            "Elke speech krijgt aandacht en respect"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Startvoorbeeld: luisteren naar impact",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Voor de eerste presentatie kijken we naar drie vragen",
-            "Waar begint de spreker persoonlijk?",
-            "Wanneer wordt het groter dan een eigen ervaring?",
-            "Welke zin blijft hangen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: wat maakt voordracht overtuigend?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Contact: je kijkt op bij belangrijke zinnen",
-            "Stem: je varieert in tempo, volume en pauzes",
-            "Houding: je staat rustig en gericht",
-            "Keuze: niet alles hard, maar de juiste woorden belangrijk maken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Feedbackschema",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Compliment op inhoud: welk verhaal, argument of beeld werkte sterk?",
-            "Compliment op voordracht: wat deed de spreker goed met stem, blik of houding?",
-            "Tip: welke ene keuze zou de speech nog sterker maken?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift tijdens presentaties",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Noteer per spreker een zin die indruk maakte",
-            "Schrijf bij minimaal drie sprekers een compliment en tip",
-            "Let op persoonlijke inzet, maatschappelijke verbreding en slotoproep"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Afronding",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Korte klassikale terugblik: welke zinnen bleven hangen?",
-            "Wat leren we hiervan voor de tweede presentatieronde?",
-            "Applaus na elke V-rede"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Les 9 V-rede: presentaties deel 2",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag draagt de tweede helft van de klas de V-rede voor",
-            "We ronden het project af met reflectie",
-            "Je kijkt terug op inhoud, impact en groei"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Startvoorbeeld: een sterk slot herkennen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een goed slot herhaalt niet alleen de opdracht",
-            "Het keert terug naar het begin, maakt de kern duidelijk en geeft een oproep",
-            "Luistervraag: welke spreker eindigt met een zin die nog even blijft hangen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Theorie: publiek als onderdeel van de speech",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een speech is geslaagd als het publiek iets anders ziet dan daarvoor",
-            "Luisteren is actief: je merkt beeld, argument, emotie en oproep op",
-            "Feedback helpt benoemen waarom iets raakt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Feedbackschema",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Compliment op persoonlijke betrokkenheid",
-            "Compliment op maatschappelijke verbreding",
-            "Tip op voordracht of formulering",
-            "Noteer de zin die je het meest onthoudt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Netschrift: eindreflectie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat wilde jij met je V-rede bereiken?",
-            "Welke reactie, tip of vraag kreeg je?",
-            "Welke zin uit jouw speech werkte het sterkst?",
-            "Wat zou je bij een volgende speech anders doen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Afronding",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "We verzamelen kenmerken van de sterkste speeches",
-            "Korte terugblik op persoonlijke onderwerpen die maatschappelijk werden",
-            "Project afgerond"
-          ]
+          "items": []
         }
       ],
       "markers": {
@@ -18271,9 +17784,9 @@
         "marker-les-2-v-rede-iets-wat-jou-raakt": 23,
         "marker-les-4-v-rede-hoofd-en-hart": 30,
         "marker-les-5-v-rede-bouwplan-indrukwekkende-speech": 38,
-        "marker-les-7-v-rede-herschrijven-en-voordracht-oefenen": 46,
-        "marker-les-8-v-rede-presentaties-deel-1": 53,
-        "marker-les-9-v-rede-presentaties-deel-2": 59
+        "marker-les-3-v-rede-van-persoonlijk-verhaal-naar-maatschappelijk-probleem": 50,
+        "marker-les-4-v-rede-raak-je-publiek-met-hoofd-en-hart": 51,
+        "marker-les-5-v-rede-bouwplan-voor-een-indrukwekkende-speech": 52
       },
       "deck": "project-v-rede",
       "showProjectLogo": true

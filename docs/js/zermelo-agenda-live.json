@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T02:02:47.157279+00:00",
+  "updatedAt": "2026-09-01T06:16:00.738503+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -21,6 +21,16 @@
       "location": "",
       "categories": "",
       "uid": "1143872@cgu"
+    },
+    {
+      "classId": "MENTORLES",
+      "start": "2026-09-04T07:45:00+00:00",
+      "end": "2026-09-04T08:30:00+00:00",
+      "summary": "u008 kmt g1d",
+      "description": "u008 kmt g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1143989@cgu"
     },
     {
       "classId": "G3B",
@@ -231,6 +241,16 @@
       "location": "",
       "categories": "",
       "uid": "1138418@cgu"
+    },
+    {
+      "classId": "MENTORLES",
+      "start": "2026-09-11T07:45:00+00:00",
+      "end": "2026-09-11T08:30:00+00:00",
+      "summary": "u008 kmt g1d",
+      "description": "u008 kmt g1d",
+      "location": "",
+      "categories": "",
+      "uid": "1138403@cgu"
     },
     {
       "classId": "G3B",

@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const READING_BOARD_ASSIGNMENT = 'lees in je leesboek';
   const DEFAULT_BOARD_ASSIGNMENT = 'Zoek je plek en pak je spullen';
   const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+  const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
+  const MENTOR_SOURCE_CLASS_ID = 'G1D';
+  const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
+  const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
   const WEEKDAY_LABELS = ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'];
   const BASE_SCHEDULE = {
     G1D: [
@@ -127,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? await rosterSource.listClassIds()
       : Object.keys(klassen);
 
-    rebuildClassOptions(classIds);
+    rebuildClassOptions([...classIds, ...VIRTUAL_CLASS_IDS]);
 
     const lastClass = localStorage.getItem('lastClassId');
     if (lastClass && [...klasSelect.options].some((o) => o.value === lastClass)) {
@@ -387,7 +391,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function sortClassIds(values = []) {
     const collator = new Intl.Collator('nl-NL', { numeric: true, sensitivity: 'base' });
     return [...new Set(values.map((value) => mapSpecialClassAlias(value)).filter(Boolean))]
-      .sort((a, b) => collator.compare(a, b));
+      .sort((a, b) => {
+        if (a === MENTOR_LESSON_CLASS_ID) return b === MENTOR_LESSON_CLASS_ID ? 0 : -1;
+        if (b === MENTOR_LESSON_CLASS_ID) return 1;
+        return collator.compare(a, b);
+      });
+  }
+
+  function classOptionLabel(classId) {
+    return normalizeClassId(classId) === MENTOR_LESSON_CLASS_ID ? 'Mentorles' : `Klas ${classId}`;
   }
 
   function rebuildClassOptions(classIds = []) {
@@ -397,7 +409,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const klas of sortClassIds(classIds)) {
       const option = document.createElement('option');
       option.value = klas;
-      option.textContent = `Klas ${klas}`;
+      option.textContent = classOptionLabel(klas);
       klasSelect.appendChild(option);
     }
     if (previousValue && [...klasSelect.options].some((option) => option.value === previousValue)) {
@@ -422,6 +434,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter(Boolean);
     if (!agendaClassIds.length) return;
     rebuildClassOptions([
+      ...VIRTUAL_CLASS_IDS,
       ...[...klasSelect.options].map((option) => option.value),
       ...agendaClassIds
     ]);
@@ -811,23 +824,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function agendaSubjectText(value) {
-    return normalizeClassId(value)
+    return String(value || '')
+      .toUpperCase()
       .replace(/[^A-Z0-9.]+/g, ' ')
       .trim();
   }
 
-  function isDutchAgendaText(value) {
+  function containsMentorLessonCode(value) {
+    return MENTOR_LESSON_CODE_PATTERN.test(agendaSubjectText(value));
+  }
+
+  function resolveAgendaClassId(classId, subjectText = '') {
+    const normalized = mapSpecialClassAlias(classId);
+    if (normalized === MENTOR_SOURCE_CLASS_ID && containsMentorLessonCode(subjectText)) {
+      return MENTOR_LESSON_CLASS_ID;
+    }
+    return normalized;
+  }
+
+  function isDutchAgendaText(value, classId = '') {
     const text = agendaSubjectText(value);
     if (!text) return true;
+    if (resolveAgendaClassId(classId, value) === MENTOR_LESSON_CLASS_ID) return true;
     if (/\bKMT\b/.test(text)) return false;
     if (/\b(NETL|NE|NED|NEDERLANDS)\b/.test(text)) return true;
     return true;
   }
 
-  function isDutchAgendaRow(row) {
+  function isDutchAgendaRow(row, classId = '') {
     if (!row || typeof row !== 'object') return true;
     return isDutchAgendaText(
-      `${row.summary || row.SUMMARY || ''}\n${row.description || row.DESCRIPTION || ''}\n${row.categories || row.CATEGORIES || ''}`
+      `${row.summary || row.SUMMARY || ''}\n${row.description || row.DESCRIPTION || ''}\n${row.categories || row.CATEGORIES || ''}`,
+      classId
     );
   }
 
@@ -937,7 +965,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function normalizeAgendaEntry(row) {
     if (!row || typeof row !== 'object') return null;
-    if (!isDutchAgendaRow(row)) return null;
+    const subjectText = `${row.summary || ''}\n${row.description || ''}\n${row.location || ''}\n${row.categories || ''}`;
     const explicitClass = pickClassId(
       row.classId
       ?? row.klas
@@ -950,9 +978,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       ?? ''
     );
     const inferredClass = inferClassIdFromText(
-      `${row.summary || ''}\n${row.description || ''}\n${row.location || ''}\n${row.categories || ''}`
+      subjectText
     );
-    const classId = explicitClass || inferredClass;
+    const classId = resolveAgendaClassId(explicitClass || inferredClass, subjectText);
+    if (!isDutchAgendaRow(row, classId)) return null;
     const start = parseDateTime(
       row.start
       ?? row.startTime
@@ -1069,16 +1098,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     return events
       .map((event) => {
-        if (!isDutchAgendaRow(event)) return null;
-        const classId = pickClassId(event['X-CLASS'])
+        const subjectText = `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`;
+        const classId = resolveAgendaClassId(pickClassId(event['X-CLASS'])
           || inferClassIdFromText(
-            `${event.SUMMARY || ''}\n${event.DESCRIPTION || ''}\n${event.CATEGORIES || ''}\n${event.LOCATION || ''}`
+            subjectText
           )
           || extractClassIdFromText(event.SUMMARY)
           || extractClassIdFromText(event.DESCRIPTION)
           || extractClassIdFromText(event.CATEGORIES)
           || extractClassIdFromText(event.LOCATION)
-          || '';
+          || '', subjectText);
+        if (!isDutchAgendaRow(event, classId)) return null;
         const start = parseIcsDateValue(event.DTSTART);
         const end = parseIcsDateValue(event.DTEND);
         const room = extractRoomFromText(

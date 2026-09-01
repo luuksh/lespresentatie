@@ -67,6 +67,7 @@ const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
 const MENTOR_SOURCE_CLASS_ID = 'G1D';
 const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
 const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
+const SCHOOL_YEAR_START_WEEK = 36;
 const NETSCHRIFT_SUBMISSION_PREFIX = 'INLEVERMOMENT_NETSCHRIFT:';
 const PROJECT_ORDER_BY_GRADE = {
   1: [
@@ -200,7 +201,9 @@ function parseWeek(weekRaw) {
 function academicWeekOrder(weekRaw) {
   const week = parseWeek(weekRaw);
   if (!Number.isFinite(week)) return Number.POSITIVE_INFINITY;
-  return week >= 32 ? week - 32 : week + 21;
+  return week >= SCHOOL_YEAR_START_WEEK
+    ? week - SCHOOL_YEAR_START_WEEK
+    : week + (53 - SCHOOL_YEAR_START_WEEK + 1);
 }
 
 function currentIsoWeek() {
@@ -467,8 +470,8 @@ function academicIsoYearForWeek(weekRaw) {
   const currentWeek = currentIsoWeek();
   const currentYear = new Date().getFullYear();
   if (!Number.isFinite(week) || !Number.isFinite(currentWeek)) return currentYear;
-  if (currentWeek < 32 && week >= 32) return currentYear - 1;
-  if (currentWeek >= 32 && week < 32) return currentYear + 1;
+  if (currentWeek < SCHOOL_YEAR_START_WEEK && week >= SCHOOL_YEAR_START_WEEK) return currentYear - 1;
+  if (currentWeek >= SCHOOL_YEAR_START_WEEK && week < SCHOOL_YEAR_START_WEEK) return currentYear + 1;
   return currentYear;
 }
 
@@ -759,7 +762,7 @@ function getEntriesForClass(classId) {
   return [...weeks]
     .map((week) => getEntryForWeek(classId, week))
     .filter(Boolean)
-    .sort((left, right) => parseWeek(left.week) - parseWeek(right.week));
+    .sort((left, right) => academicWeekOrder(left.week) - academicWeekOrder(right.week));
 }
 
 function getEntryForWeek(classId, week) {
@@ -1002,11 +1005,12 @@ function shouldUseProjectLessonForAgendaEntry(classId, agendaEntry, anchorIndex,
   return isLastDutchAgendaEntryOfWeek(classId, agendaEntry, agendaEntries);
 }
 
-function getCurrentProgressAnchor(classId) {
+function getCurrentProgressAnchor(classId, now = new Date()) {
   const normalizedClassId = normalizeClassId(classId);
   const classAliases = classPlanningAliases(normalizedClassId);
   const grade = gradeLayerFromClassId(normalizedClassId);
   return CURRENT_PROGRESS_ANCHORS.find((anchor) => {
+    if (!currentProgressAnchorApplies(anchor, now)) return false;
     const classIds = Array.isArray(anchor.classIds)
       ? anchor.classIds.map((value) => normalizeClassId(value))
       : [];
@@ -1036,6 +1040,26 @@ function localDateKey(date = new Date()) {
   const m = String(value.getMonth() + 1).padStart(2, '0');
   const d = String(value.getDate()).padStart(2, '0');
   return `${y}-${m}-${d}`;
+}
+
+function schoolYearStartDateFor(date = new Date()) {
+  const value = date instanceof Date ? new Date(date.getTime()) : new Date(date);
+  if (Number.isNaN(value.getTime())) return null;
+  const week = isoWeekForDate(value);
+  if (!Number.isFinite(week)) return null;
+
+  const isoPivot = new Date(Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()));
+  const isoDay = isoPivot.getUTCDay() || 7;
+  isoPivot.setUTCDate(isoPivot.getUTCDate() + 4 - isoDay);
+  const isoYear = isoPivot.getUTCFullYear();
+  const startYear = week >= SCHOOL_YEAR_START_WEEK ? isoYear : isoYear - 1;
+  return isoWeekMonday(startYear, SCHOOL_YEAR_START_WEEK);
+}
+
+function currentProgressAnchorApplies(anchor, now = new Date()) {
+  const anchorDate = parseDateOnly(anchor?.anchorDate);
+  const schoolYearStart = schoolYearStartDateFor(now);
+  return !anchorDate || !schoolYearStart || anchorDate >= schoolYearStart;
 }
 
 function isReadingLessonException(classId, agendaEntry, agendaEntries = getAgendaEntriesForClass(classId)) {
@@ -1143,7 +1167,7 @@ function teacherProgressPlanningForAgendaEntry(classId, agendaEntries, agendaEnt
 }
 
 function findProgressAnchorLesson(classId, agendaEntries, targetEntry, now = new Date()) {
-  const anchor = getCurrentProgressAnchor(classId);
+  const anchor = getCurrentProgressAnchor(classId, now);
   if (!anchor) return null;
   const projectName = String(anchor.project || '').trim().toLocaleLowerCase('nl-NL');
   const targetLessonNumbers = (Array.isArray(anchor.lessonNumbers) ? anchor.lessonNumbers : [anchor.lessonNumber])
@@ -1712,7 +1736,7 @@ function getOrderedLessonsForClass(classId) {
     })))
     .filter((lesson) => String(lesson.lessonKey || '').trim())
     .sort((left, right) => {
-      const weekDelta = parseWeek(left.week) - parseWeek(right.week);
+      const weekDelta = academicWeekOrder(left.week) - academicWeekOrder(right.week);
       if (weekDelta !== 0) return weekDelta;
       return getLessonOrderValue(left.lessonKey) - getLessonOrderValue(right.lessonKey);
     });
