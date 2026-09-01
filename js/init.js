@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const MENTOR_SOURCE_CLASS_ID = 'G1D';
   const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
   const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
+  const SCHOOL_YEAR_START_WEEK = 36;
   const CURRENT_PROGRESS_ANCHORS = [
     { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
     { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
@@ -524,6 +525,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     return { id, weekNo, label };
   }
 
+  function isoWeekMonday(isoYear, weekNumber) {
+    if (!Number.isInteger(weekNumber) || weekNumber < 1 || weekNumber > 53) return null;
+    const simple = new Date(Number(isoYear), 0, 4);
+    if (Number.isNaN(simple.getTime())) return null;
+    const day = simple.getDay() || 7;
+    const monday = new Date(simple);
+    monday.setDate(simple.getDate() - day + 1 + ((weekNumber - 1) * 7));
+    monday.setHours(0, 0, 0, 0);
+    return monday;
+  }
+
+  function schoolYearStartDateFor(date = new Date()) {
+    const value = date instanceof Date ? date : new Date(date);
+    if (Number.isNaN(value.getTime())) return null;
+    const week = isoWeekInfo(value);
+    const isoYear = Number(String(week.id || '').slice(0, 4));
+    if (!Number.isFinite(week.weekNo) || !Number.isFinite(isoYear)) return null;
+    const startYear = week.weekNo >= SCHOOL_YEAR_START_WEEK ? isoYear : isoYear - 1;
+    return isoWeekMonday(startYear, SCHOOL_YEAR_START_WEEK);
+  }
+
   function currentWeekCandidates(date = new Date()) {
     const week = isoWeekInfo(date);
     return {
@@ -555,6 +577,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     return match ? Number(match[1]) : Number.NaN;
   }
 
+  function academicWeekOrder(weekRaw) {
+    const week = weekNumberFromPlanningKey(weekRaw);
+    if (!Number.isFinite(week)) return Number.POSITIVE_INFINITY;
+    return week >= SCHOOL_YEAR_START_WEEK
+      ? week - SCHOOL_YEAR_START_WEEK
+      : week + (53 - SCHOOL_YEAR_START_WEEK + 1);
+  }
+
   function getPlanningSourceIdsForClass(classId) {
     const aliases = classIdAliases(classId).map((alias) => normalizeClassId(alias));
     const gradeId = gradeLayerFromClassId(classId);
@@ -574,7 +604,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return [...keys].sort((left, right) => {
       const leftWeek = weekNumberFromPlanningKey(left);
       const rightWeek = weekNumberFromPlanningKey(right);
-      if (Number.isFinite(leftWeek) && Number.isFinite(rightWeek)) return leftWeek - rightWeek;
+      if (Number.isFinite(leftWeek) && Number.isFinite(rightWeek)) return academicWeekOrder(leftWeek) - academicWeekOrder(rightWeek);
       return String(left).localeCompare(String(right), 'nl', { numeric: true });
     });
   }
@@ -593,6 +623,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const classAliases = classIdAliases(classId).map((alias) => normalizeClassId(alias));
     const grade = gradeLayerFromClassId(classId);
     return CURRENT_PROGRESS_ANCHORS.find((anchor) => {
+      const anchorRange = localDateRange(anchor?.anchorDate);
+      const schoolYearStart = schoolYearStartDateFor();
+      if (anchorRange && schoolYearStart && anchorRange.start < schoolYearStart) return false;
       const classIds = Array.isArray(anchor.classIds)
         ? anchor.classIds.map((value) => normalizeClassId(value))
         : [];
