@@ -199,6 +199,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     }));
   }
 
+  function defaultLayoutForRoom(room) {
+    const normalizedRoom = String(room || '').replace(/\s+/g, '').toUpperCase();
+    return normalizedRoom === 'U008' ? 'u008' : 'h216';
+  }
+
+  function currentDefaultLayoutForClass(classId) {
+    const currentEntry = findAgendaEntryForCurrentOrLast(
+      agendaEntriesForClass(agendaEntries, normalizeClassId(classId)),
+      new Date()
+    );
+    return defaultLayoutForRoom(agendaRoomLabel(currentEntry));
+  }
+
+  function applyDefaultLayoutForClass(classId) {
+    const nextType = currentDefaultLayoutForClass(classId);
+    return applyDefaultLayoutType(nextType);
+  }
+
+  function applyDefaultLayoutForRoom(room) {
+    return applyDefaultLayoutType(defaultLayoutForRoom(room));
+  }
+
+  function applyDefaultLayoutType(nextType) {
+    let changed = false;
+    if (nextType && hasTypeOption(nextType) && indelingSelect.value !== nextType) {
+      indelingSelect.value = nextType;
+      changed = true;
+    }
+    localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value || nextType || 'h216');
+    return changed;
+  }
+
   function boardAssignmentOptionText(value) {
     const target = String(value || '').trim();
     if (!target || !opdrachtSelect) return '';
@@ -324,10 +356,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   klasSelect.addEventListener('change', () => {
     if (klasSelect.value) localStorage.setItem('lastClassId', klasSelect.value);
     window.__autoAppliedProjectLayoutKey = '';
-    if (indelingSelect.value !== 'h216') {
-      indelingSelect.value = 'h216';
-    }
-    localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value || 'h216');
+    applyDefaultLayoutForClass(klasSelect.value);
     laadIndeling();
     renderPlanning();
     refreshPlanningEditor();
@@ -1786,6 +1815,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? selectedClassId
       : normalizeClassId(bestEntry?.classId || '');
     activeAgendaEntry = selectedClassEntry || bestEntry || null;
+    if (activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
+      laadIndeling();
+    }
     selectedLessonIndex = activeAgendaEntry
       ? lessonNumberForWeek(agendaEntries, activeAgendaEntry)
       : 0;
@@ -3061,12 +3093,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       klasSelect.value = matchingValue;
       localStorage.setItem('lastClassId', matchingValue);
       window.__autoAppliedProjectLayoutKey = '';
-      if (indelingSelect && indelingSelect.value !== 'h216') {
-        indelingSelect.value = 'h216';
-      }
-      if (indelingSelect) {
-        localStorage.setItem(LAST_LAYOUT_KEY, indelingSelect.value || 'h216');
-      }
+      applyDefaultLayoutForRoom(agendaRoomLabel(entry));
       laadIndeling();
     }
 
