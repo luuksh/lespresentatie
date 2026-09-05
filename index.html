@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-06" />
-  <script type="module" src="js/lesstudio.js?v=20260905-12"></script>
+  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-07" />
+  <script type="module" src="js/lesstudio.js?v=20260905-13"></script>
 </head>
 <body>
   <main class="lesson-app">
@@ -81,7 +81,10 @@
             <p class="app-kicker">Jaarplanning</p>
             <h2 id="planningTitle">Lesvolgorde</h2>
           </div>
-          <button id="newLessonTopBtn" type="button" class="primary-action">+ Nieuwe les</button>
+          <div class="panel-actions">
+            <button id="clearPlanningBtn" type="button" class="secondary-action danger">Planning leegmaken</button>
+            <button id="newLessonTopBtn" type="button" class="primary-action">+ Nieuwe les</button>
+          </div>
         </div>
         <div id="planningTimeline" class="timeline"></div>
       </section>

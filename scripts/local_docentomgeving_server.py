@@ -18,6 +18,11 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_BODY_BYTES = 20 * 1024 * 1024
 AUTO_GIT_PUSH_ENV = "KLASSENPLATTEGROND_AUTO_GIT_PUSH"
 PUBLIC_PORTAL_FILES = [
+    "data/jaarplanning/jaarplanning-intern.json",
+    "docs",
+    "assets",
+    "lesdocs",
+    "data/kerndoelen",
     "index.html",
     "docent.html",
     "css/internal-shell.css",
@@ -42,12 +47,25 @@ PUBLIC_PORTAL_FILES = [
     "docs/js/kerndoelen-data.js",
     "js/docent-lesselectie-live.json",
     "docs/js/docent-lesselectie-live.json",
+    "js/jaarplanning-live.json",
+    "docs/js/jaarplanning-live.json",
+    "js/zermelo-agenda-live.json",
+    "docs/js/zermelo-agenda-live.json",
+    "js/zermelo-leerlingen-live.json",
+    "docs/js/zermelo-leerlingen-live.json",
     "scripts/apply_presentatie_studio_export.py",
     "scripts/build_jaarplanning_internal.py",
     "scripts/local_docentomgeving_server.py",
     "scripts/start_local_docentomgeving.sh",
     "Open Jaarplanning Studio.command",
 ]
+PUBLISH_RESPONSE_PATH_KEYS = (
+    "internal",
+    "live",
+    "docsLive",
+    "mirroredAssets",
+    "cacheBusted",
+)
 
 
 def truthy_env(name: str, default: bool = True) -> bool:
@@ -122,6 +140,40 @@ def reset_publish_index() -> None:
     run_git_check(["restore", "--staged", "."])
 
 
+def normalize_publish_path(value: object) -> str:
+    if not isinstance(value, str):
+        return ""
+    rel_path = os.path.normpath(value.strip().replace("\\", "/"))
+    if rel_path in {"", "."}:
+        return ""
+    if os.path.isabs(rel_path) or rel_path == ".." or rel_path.startswith("../"):
+        return ""
+    if rel_path == ".git" or rel_path.startswith(".git/"):
+        return ""
+    return rel_path
+
+
+def append_publish_paths(targets: list[str], value: object) -> None:
+    if isinstance(value, list):
+        for item in value:
+            append_publish_paths(targets, item)
+        return
+    rel_path = normalize_publish_path(value)
+    if rel_path and (ROOT / rel_path).exists():
+        targets.append(rel_path)
+
+
+def publish_target_files(response: dict, resolved_unmerged: list[str]) -> list[str]:
+    target_files: list[str] = []
+    for key in PUBLISH_RESPONSE_PATH_KEYS:
+        append_publish_paths(target_files, response.get(key))
+    for path in PUBLIC_PORTAL_FILES:
+        append_publish_paths(target_files, path)
+    for path in resolved_unmerged:
+        append_publish_paths(target_files, path)
+    return list(dict.fromkeys(target_files))
+
+
 def auto_commit_and_push(response: dict) -> dict:
     if not truthy_env(AUTO_GIT_PUSH_ENV, True):
         return {"enabled": False, "ok": True, "message": "Automatische git-push staat uit."}
@@ -143,14 +195,7 @@ def auto_commit_and_push(response: dict) -> dict:
                 "unmerged": message_paths,
             }
 
-    target_files = [
-        str(response.get(key, "")).strip()
-        for key in ("internal", "live", "docsLive")
-            if str(response.get(key, "")).strip()
-    ]
-    target_files.extend(path for path in PUBLIC_PORTAL_FILES if (ROOT / path).exists())
-    target_files.extend(path for path in resolved_unmerged if (ROOT / path).exists())
-    target_files = list(dict.fromkeys(target_files))
+    target_files = publish_target_files(response, resolved_unmerged)
     if not target_files:
         return {"enabled": True, "ok": False, "message": "Geen publicatiebestanden gevonden voor git."}
 
@@ -191,6 +236,26 @@ def auto_commit_and_push(response: dict) -> dict:
         "message": push_message,
         "branch": branch,
     }
+
+
+def push_pending_publication_state_on_startup() -> None:
+    if not truthy_env(AUTO_GIT_PUSH_ENV, True):
+        print("Automatische opstart-publicatie staat uit.", flush=True)
+        return
+    try:
+        result = auto_commit_and_push({"updatedAt": current_utc_iso()})
+    except subprocess.CalledProcessError as exc:
+        message = (exc.stderr or exc.stdout or str(exc)).strip()
+        print(f"Automatische opstart-publicatie mislukt: {message}", flush=True)
+        return
+    except Exception as exc:
+        print(f"Automatische opstart-publicatie mislukt: {exc}", flush=True)
+        return
+
+    if result.get("ok"):
+        print(f"Automatische opstart-publicatie: {result.get('message', 'klaar')}", flush=True)
+    else:
+        print(f"Automatische opstart-publicatie mislukt: {result.get('message', 'onbekende fout')}", flush=True)
 
 
 class Server(ThreadingHTTPServer):
@@ -347,6 +412,7 @@ def current_utc_iso() -> str:
 
 def main() -> int:
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 4173
+    push_pending_publication_state_on_startup()
     server = Server(("127.0.0.1", port), Handler)
     print(f"Lokale docentomgeving luistert op http://127.0.0.1:{port}/index.html", flush=True)
     server.serve_forever()
