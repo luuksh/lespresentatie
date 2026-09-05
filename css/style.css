@@ -1018,6 +1018,7 @@ body.presentation-open .presentation-internal-stage {
   --slide-bullet-color: #133760;
   --slide-link-color: #1652a5;
   --slide-link-hover: #0f3e84;
+  --slide-fit-scale: 1;
   position: relative;
   border-radius: 20px;
   border: 1px solid var(--slide-border);
@@ -1063,16 +1064,33 @@ body.presentation-open .presentation-slide-card {
     0 0 0 12px rgba(229, 202, 147, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.96),
     inset 28px 0 0 rgba(84, 40, 50, 0.08);
-  padding: clamp(30px, 3.8vw, 58px) clamp(42px, 5vw, 78px) clamp(30px, 3.8vw, 58px) clamp(58px, 6vw, 98px);
+  padding:
+    calc(52px * var(--slide-fit-scale, 1))
+    calc(74px * var(--slide-fit-scale, 1))
+    calc(52px * var(--slide-fit-scale, 1))
+    calc(92px * var(--slide-fit-scale, 1));
+}
+
+body.presentation-open .presentation-slide-card.is-fit-compact {
+  padding:
+    calc(38px * var(--slide-fit-scale, 1))
+    calc(58px * var(--slide-fit-scale, 1))
+    calc(38px * var(--slide-fit-scale, 1))
+    calc(74px * var(--slide-fit-scale, 1));
+}
+
+body.presentation-open .presentation-slide-card.is-fit-overflow {
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 body.presentation-open .presentation-slide-card.is-long-title .presentation-slide-title {
-  font-size: clamp(30px, 3.65vw, 58px);
+  font-size: calc(56px * var(--slide-fit-scale, 1));
   max-width: 28ch;
 }
 
 body.presentation-open .presentation-slide-card.is-extra-long-title .presentation-slide-title {
-  font-size: clamp(26px, 3.2vw, 48px);
+  font-size: calc(46px * var(--slide-fit-scale, 1));
   max-width: 34ch;
 }
 
@@ -1104,14 +1122,16 @@ body.presentation-open .presentation-slide-card.is-extra-long-title .presentatio
   letter-spacing: 0;
   color: var(--slide-title-color);
   text-wrap: balance;
+  overflow-wrap: anywhere;
+  hyphens: auto;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.45);
 }
 
 body.presentation-open .presentation-slide-title {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(34px, 4.2vw, 68px);
+  font-size: calc(64px * var(--slide-fit-scale, 1));
   font-weight: 800;
-  max-width: 24ch;
+  max-width: 28ch;
   text-shadow:
     0 2px 0 rgba(255, 255, 255, 0.7),
     0 12px 30px rgba(23, 40, 72, 0.1);
@@ -1124,20 +1144,29 @@ body.presentation-open .presentation-slide-title {
   font-weight: 700;
   line-height: 1.32;
   max-width: 38ch;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 body.presentation-open .presentation-slide-subtitle {
   display: inline-flex;
   align-self: flex-start;
-  min-height: 34px;
+  min-height: calc(34px * var(--slide-fit-scale, 1));
   align-items: center;
   border: 1px solid rgba(197, 154, 74, 0.34);
   border-radius: 999px;
   background: rgba(255, 247, 227, 0.68);
-  padding: 2px 14px;
-  margin-top: clamp(10px, 1.4vw, 18px);
-  font-size: clamp(20px, 2.1vw, 30px);
+  padding:
+    calc(2px * var(--slide-fit-scale, 1))
+    calc(14px * var(--slide-fit-scale, 1));
+  margin-top: calc(16px * var(--slide-fit-scale, 1));
+  font-size: calc(28px * var(--slide-fit-scale, 1));
   color: var(--slide-subtitle-color);
+}
+
+body.presentation-open .presentation-slide-card.is-fit-compact .presentation-slide-subtitle {
+  max-width: 48ch;
+  border-radius: 14px;
 }
 
 .presentation-slide-title a,
@@ -1163,14 +1192,16 @@ body.presentation-open .presentation-slide-subtitle {
   color: var(--slide-bullet-color);
   display: grid;
   gap: 10px;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 body.presentation-open .presentation-slide-bullets {
-  margin-top: clamp(18px, 2vw, 28px);
-  font-size: clamp(22px, 2.45vw, 36px);
-  line-height: 1.18;
-  gap: clamp(10px, 1.4vw, 18px);
-  max-width: 34ch;
+  margin-top: calc(26px * var(--slide-fit-scale, 1));
+  font-size: calc(34px * var(--slide-fit-scale, 1));
+  line-height: 1.16;
+  gap: calc(16px * var(--slide-fit-scale, 1));
+  max-width: 38ch;
 }
 
 .presentation-slide-bullets li {
@@ -1179,7 +1210,7 @@ body.presentation-open .presentation-slide-bullets {
 }
 
 body.presentation-open .presentation-slide-bullets li {
-  padding-left: clamp(36px, 4vw, 58px);
+  padding-left: calc(52px * var(--slide-fit-scale, 1));
 }
 
 .presentation-slide-bullets li::before {
@@ -1196,8 +1227,8 @@ body.presentation-open .presentation-slide-bullets li {
 
 body.presentation-open .presentation-slide-bullets li::before {
   top: 0.36em;
-  width: clamp(16px, 1.4vw, 24px);
-  height: clamp(16px, 1.4vw, 24px);
+  width: calc(20px * var(--slide-fit-scale, 1));
+  height: calc(20px * var(--slide-fit-scale, 1));
   border-radius: 50% 50% 50% 12%;
   background:
     radial-gradient(circle at 35% 28%, #fff4cb 0%, #d7a745 30%, #8b2134 68%, #4f1220 100%);

@@ -15,13 +15,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
   const LESSON_TRANSITION_LEAD_MS = 60 * 1000;
-  const READING_PROJECT_NAME = 'heel veel lezen';
+  const READING_PROJECT_NAME = 'leesmeters';
+  const READING_PROJECT_ALIASES = new Set([READING_PROJECT_NAME, 'heel veel lezen']);
   const READING_BOARD_ASSIGNMENT = 'lees in je leesboek';
   const STANDARD_READING_PRESENTATION_ID = 'project-heel-veel-lezen';
   const STANDARD_READING_MARKER_ID = 'marker-heel-veel-lezen';
   const STANDARD_READING_LESSON = {
-    project: 'Heel veel lezen',
-    lesson: 'Heel veel lezen',
+    project: 'Leesmeters',
+    lesson: 'Leesmeters',
     lessonKey: 'READ',
     presentationId: STANDARD_READING_PRESENTATION_ID,
     presentationMarkerId: STANDARD_READING_MARKER_ID,
@@ -35,6 +36,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
   const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
   const SCHOOL_YEAR_START_WEEK = 36;
+  const STARTWEEK_PLANNING_WEEK = 35;
+  const STARTWEEK_PLANNING_WEEK_BY_DATE = Object.freeze({
+    '2026-09-01': STARTWEEK_PLANNING_WEEK,
+    '2026-09-02': STARTWEEK_PLANNING_WEEK,
+    '2026-09-03': STARTWEEK_PLANNING_WEEK,
+  });
   const CURRENT_PROGRESS_ANCHORS = [
     { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
     { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
@@ -46,38 +53,53 @@ document.addEventListener('DOMContentLoaded', async () => {
     { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
     { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
   ];
+  const FIXED_READING_MOMENTS = {
+    G1C: { day: 4, start: '12:50' },
+    G1D: { day: 4, start: '10:50' },
+    G3B: { day: 2, start: '09:00' },
+    G3C: { day: 2, start: '10:50' },
+    G3E: { day: 2, start: '09:45' },
+    G3F: { day: 4, start: '11:35' },
+    G4B: { day: 4, start: '08:15' },
+    G4C: { day: 2, start: '12:50' },
+  };
   const WEEKDAY_LABELS = ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'];
   const BASE_SCHEDULE = {
+    G1C: [
+      { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H212' },
+      { slot: 'B', day: 2, start: '08:15', end: '09:00', room: 'U105' },
+      { slot: 'C', day: 4, start: '12:50', end: '13:35', room: 'U105' },
+    ],
     G1D: [
-      { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H215' },
-      { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'H216' },
-      { slot: 'C', day: 5, start: '14:20', end: '15:05', room: 'H215' },
+      { slot: 'A', day: 2, start: '14:40', end: '15:25', room: 'U105' },
+      { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'U105' },
+      { slot: 'C', day: 5, start: '08:15', end: '09:00', room: 'U008' },
     ],
     G3B: [
-      { slot: 'A', day: 1, start: '14:40', end: '15:25', room: 'H215' },
-      { slot: 'B', day: 5, start: '08:15', end: '09:00', room: 'H215' },
+      { slot: 'A', day: 2, start: '09:00', end: '09:45', room: 'U105' },
+      { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'U008' },
+    ],
+    G3C: [
+      { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H212' },
+      { slot: 'B', day: 2, start: '10:50', end: '11:35', room: 'H216' },
     ],
     G3E: [
-      { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H215' },
-      { slot: 'B', day: 4, start: '08:15', end: '09:00', room: 'H216' },
+      { slot: 'A', day: 2, start: '09:45', end: '10:30', room: 'U105' },
+      { slot: 'B', day: 5, start: '11:35', end: '12:20', room: 'U008' },
     ],
     G3F: [
-      { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H215' },
-      { slot: 'B', day: 5, start: '13:35', end: '14:20', room: 'H215' },
+      { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H212' },
+      { slot: 'B', day: 4, start: '11:35', end: '12:20', room: 'U105' },
     ],
-    G3G: [
-      { slot: 'A', day: 1, start: '13:35', end: '14:20', room: 'H215' },
-      { slot: 'B', day: 5, start: '09:45', end: '10:30', room: 'H215' },
+    G4B: [
+      { slot: 'A', day: 4, start: '08:15', end: '09:00', room: 'U105' },
+      { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'U105' },
+      { slot: 'C', day: 5, start: '09:00', end: '09:45', room: 'U008' },
     ],
-    G4D: [
-      { slot: 'A', day: 4, start: '12:50', end: '13:35', room: 'H216' },
-      { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'H215' },
-      { slot: 'C', day: 5, start: '11:35', end: '12:20', room: 'H215' },
-    ],
-    G4E: [
-      { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H215' },
-      { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'H216' },
-      { slot: 'C', day: 4, start: '11:35', end: '12:20', room: 'H216' },
+    G4C: [
+      { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H216' },
+      { slot: 'B', day: 1, start: '13:35', end: '14:20', room: 'H216' },
+      { slot: 'C', day: 2, start: '12:50', end: '13:35', room: 'U105' },
     ],
   };
 
@@ -149,6 +171,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let selectedLessonIndex = 0;
   let manualLessonOverridesByAgendaEntry = loadManualLessonOverrides();
   let clockMarkerTimer = null;
+  let suppressClassChangeLayoutRefresh = false;
   let isPresentationOpen = false;
   let activePresentation = null;
   let activeSlideIndex = 0;
@@ -274,15 +297,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (persist) writeBoardAssignment(text);
   }
 
+  function normalizedProjectName(value) {
+    return String(value || '').trim().toLocaleLowerCase('nl-NL');
+  }
+
+  function isReadingProjectName(value) {
+    return READING_PROJECT_ALIASES.has(normalizedProjectName(value));
+  }
+
   function currentLessonAllowsReadingAssignment(now = new Date()) {
     if (!activeAgendaEntry || !(activeAgendaEntry.start instanceof Date) || !(activeAgendaEntry.end instanceof Date)) {
       return false;
     }
     if (now < activeAgendaEntry.start || now > activeAgendaEntry.end) return false;
     if ((now.getTime() - activeAgendaEntry.start.getTime()) < 5 * 60 * 1000) return false;
-    return currentPlanningLessons.some((lesson) => (
-      String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL').includes(READING_PROJECT_NAME)
-    ));
+    return currentPlanningLessons.some((lesson) => isReadingProjectName(lesson?.project));
   }
 
   function syncAutomaticBoardAssignment(now = new Date()) {
@@ -355,9 +384,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   klasSelect.addEventListener('change', () => {
     if (klasSelect.value) localStorage.setItem('lastClassId', klasSelect.value);
-    window.__autoAppliedProjectLayoutKey = '';
-    applyDefaultLayoutForClass(klasSelect.value);
-    laadIndeling();
+    if (!suppressClassChangeLayoutRefresh) {
+      window.__autoAppliedProjectLayoutKey = '';
+      applyDefaultLayoutForClass(klasSelect.value);
+      laadIndeling();
+    }
     renderPlanning();
     refreshPlanningEditor();
   });
@@ -457,7 +488,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const netl = netlCodeFromLetter(gLetter[1]);
       if (netl) aliases.add(netl);
       const idx = letterToIndex(gLetter[1]);
-      if (idx) aliases.add(`4G${idx}`);
+      if (idx) {
+        aliases.add(`4G${idx}`);
+        aliases.add(`4.${idx}`);
+      }
     }
     if (cid === 'G4D') {
       aliases.add('4G4');
@@ -575,16 +609,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     return isoWeekMonday(startYear, SCHOOL_YEAR_START_WEEK);
   }
 
+  function planningWeekKeys(weekNo, year = '') {
+    const numeric = Number(weekNo);
+    const padded = String(numeric).padStart(2, '0');
+    return [
+      year ? `${year}-W${padded}` : '',
+      `W${padded}`,
+      String(numeric),
+      padded
+    ].filter(Boolean);
+  }
+
+  function startweekPlanningWeekForDate(date = new Date()) {
+    const value = date instanceof Date ? date : new Date(date);
+    if (Number.isNaN(value.getTime())) return 0;
+    return Number(STARTWEEK_PLANNING_WEEK_BY_DATE[localDateKey(value)] || 0);
+  }
+
   function currentWeekCandidates(date = new Date()) {
+    const startweekNo = startweekPlanningWeekForDate(date);
+    if (startweekNo) {
+      const value = date instanceof Date ? date : new Date(date);
+      const year = value.getFullYear();
+      const fmt = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'short' });
+      const start = new Date(2026, 8, 1);
+      const end = new Date(2026, 8, 3);
+      const week = {
+        id: `${year}-W${String(startweekNo).padStart(2, '0')}`,
+        weekNo: startweekNo,
+        label: `Startweek ${startweekNo} (${fmt.format(start)} t/m ${fmt.format(end)})`
+      };
+      return { week, keys: planningWeekKeys(startweekNo, year) };
+    }
     const week = isoWeekInfo(date);
     return {
       week,
-      keys: [
-        week.id,
-        `W${String(week.weekNo).padStart(2, '0')}`,
-        String(week.weekNo),
-        String(week.weekNo).padStart(2, '0')
-      ]
+      keys: planningWeekKeys(week.weekNo, String(week.id || '').slice(0, 4))
     };
   }
 
@@ -609,6 +669,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function academicWeekOrder(weekRaw) {
     const week = weekNumberFromPlanningKey(weekRaw);
     if (!Number.isFinite(week)) return Number.POSITIVE_INFINITY;
+    if (week === STARTWEEK_PLANNING_WEEK) return -1;
     return week >= SCHOOL_YEAR_START_WEEK
       ? week - SCHOOL_YEAR_START_WEEK
       : week + (53 - SCHOOL_YEAR_START_WEEK + 1);
@@ -700,10 +761,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
+  function hasExplicitStartLessons(weekData) {
+    return (weekData?.lessons || []).some((lesson) => {
+      const project = String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL');
+      const presentationId = String(lesson?.presentationId || '').trim();
+      return project.startsWith('start nederlands')
+        || presentationId.startsWith('project-startlessen-jaarlaag-');
+    });
+  }
+
   function isStandardReadingDay(agendaEntry) {
     if (!agendaEntry?.start) return false;
     const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
-    return !Number.isNaN(start.getTime()) && start.getDay() === 1;
+    if (Number.isNaN(start.getTime())) return false;
+    const classId = mapSpecialClassAlias(agendaEntry.classId);
+    const fixedMoment = FIXED_READING_MOMENTS[classId];
+    if (!fixedMoment) return false;
+    return (start.getDay() || 7) === fixedMoment.day
+      && minutesOfDate(start) === parseClockMinutes(fixedMoment.start);
   }
 
   function localDateRange(dateText) {
@@ -721,7 +796,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const weekKey of getPlanningWeekKeysForClass(classId)) {
       const weekData = getMergedPlanningWeekForClass(classId, weekKey);
       for (const lesson of (weekData?.lessons || [])) {
-        if (String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL') === READING_PROJECT_NAME) continue;
+        if (isReadingProjectName(lesson?.project)) continue;
         const key = `${weekKey}__${String(lesson.lessonKey || '').trim().toUpperCase()}__${String(lesson.lesson || '').trim()}`;
         if (seen.has(key)) continue;
         seen.add(key);
@@ -1182,6 +1257,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!text) return true;
     if (resolveAgendaClassId(classId, value) === MENTOR_LESSON_CLASS_ID) return true;
     if (/\bKMT\b/.test(text)) return false;
+    if (/\bWTU\b/.test(text)) return false;
     if (/\b(NETL|NE|NED|NEDERLANDS)\b/.test(text)) return true;
     return true;
   }
@@ -1498,6 +1574,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     return Boolean(switchAt) && switchAt <= now;
   }
 
+  function isAutomaticLessonTransitionWindow(now = new Date()) {
+    return agendaEntries.some((entry) => {
+      if (!entry?.start || !entry?.end) return false;
+      const start = entry.start instanceof Date ? entry.start : new Date(entry.start);
+      const end = entry.end instanceof Date ? entry.end : new Date(entry.end);
+      const switchAt = agendaEntrySwitchAt(entry);
+      if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return false;
+      const startLead = new Date(start.getTime() - LESSON_TRANSITION_LEAD_MS);
+      return (switchAt && now >= switchAt && now <= end)
+        || (now >= startLead && now <= start);
+    });
+  }
+
+  function normalizeRefreshSource(source) {
+    return String(source || 'auto').trim().toLowerCase() === 'manual' ? 'manual' : 'auto';
+  }
+
   function findAgendaEntryForCurrentOrLast(entries, now = new Date()) {
     const sorted = [...entries].sort((a, b) => a.start - b.start);
     if (!sorted.length) return null;
@@ -1719,20 +1812,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   function planningWeekDataForEntry(entry) {
     if (!entry) return { weekData: { lessons: [], items: [], note: '' }, lessonIndex: 0 };
     const classId = normalizeClassId(entry.classId);
-    const gradeId = gradeLayerFromClassId(classId);
     const weekInfo = currentWeekCandidates(entry.start);
-    const classWeeks = planningData[classId] || {};
-    const gradeWeeks = planningData[gradeId] || {};
-    const allWeeks = planningData.ALL || {};
-    const classWeekKey = weekInfo.keys.find((key) => Boolean(classWeeks[key])) || '';
-    const gradeWeekKey = weekInfo.keys.find((key) => Boolean(gradeWeeks[key])) || '';
-    const allWeekKey = weekInfo.keys.find((key) => Boolean(allWeeks[key])) || '';
-    const weekData = (classWeekKey || gradeWeekKey || allWeekKey)
-      ? mergePlanEntries(
-        allWeekKey ? allWeeks[allWeekKey] : null,
-        gradeWeekKey ? gradeWeeks[gradeWeekKey] : null,
-        classWeekKey ? classWeeks[classWeekKey] : null,
-      )
+    const weekKey = weekInfo.keys.find((key) => getMergedPlanningWeekForClass(classId, key)) || '';
+    const weekData = weekKey
+      ? getMergedPlanningWeekForClass(classId, weekKey)
       : { lessons: [], items: [], note: '' };
     return {
       weekData,
@@ -1745,9 +1828,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const anchorProject = String(getCurrentProgressAnchor(classId)?.project || '').trim();
     const fallbackProject = (planningWeekDataForEntry(entry).weekData.lessons || [])
       .map((lesson) => String(lesson?.project || '').trim())
-      .find((project) => project && project.toLocaleLowerCase('nl-NL') !== READING_PROJECT_NAME) || '';
+      .find((project) => project && !isReadingProjectName(project)) || '';
     const currentProject = anchorProject || fallbackProject;
-    const currentProjectKey = currentProject.toLocaleLowerCase('nl-NL');
+    const currentProjectKey = normalizedProjectName(currentProject);
     const options = [];
     const seen = new Set();
     const pushLesson = (lesson) => {
@@ -1784,33 +1867,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${classId}|${start}|${end}`;
   }
 
-  function applyAgendaLessonTransition(entry) {
+  function applyAgendaLessonTransition(entry, { refreshLayout = true } = {}) {
     if (!entry) return false;
     closePresentationPanel();
-    const switchedClass = selectClassFromAgenda(entry.classId);
-    if (!switchedClass) {
+    const switchedClass = selectClassFromAgenda(entry.classId, { refreshLayout });
+    if (!switchedClass && refreshLayout) {
       laadIndeling();
     }
     return true;
   }
 
-  function syncAgendaSelection(now = new Date(), allowLessonTransition = false) {
+  function syncAgendaSelection(now = new Date(), options = {}) {
+    const config = typeof options === 'boolean'
+      ? { allowLessonTransition: options, source: 'auto' }
+      : options;
+    const allowLessonTransition = Boolean(config?.allowLessonTransition);
+    const isManualRefresh = normalizeRefreshSource(config?.source) === 'manual';
+    const allowLayoutRefresh = isManualRefresh || isAutomaticLessonTransitionWindow(now);
     const bestEntry = findAgendaEntryForCurrentOrLast(agendaEntries, now);
     const bestEntryKey = agendaEntryKey(bestEntry);
     const shouldTransition = allowLessonTransition
+      && allowLayoutRefresh
       && Boolean(bestEntryKey)
       && bestEntryKey !== agendaReferenceEntryKey;
 
     if (shouldTransition) {
-      applyAgendaLessonTransition(bestEntry);
+      applyAgendaLessonTransition(bestEntry, { refreshLayout: allowLayoutRefresh });
+      agendaReferenceEntryKey = bestEntryKey;
+    } else if (isManualRefresh || !bestEntryKey || bestEntryKey === agendaReferenceEntryKey) {
+      agendaReferenceEntryKey = bestEntryKey;
     }
-    agendaReferenceEntryKey = bestEntryKey;
 
     if (bestEntry && classIdMatch(bestEntry.classId, MENTOR_LESSON_CLASS_ID)) {
-      selectClassFromAgenda(MENTOR_LESSON_CLASS_ID);
+      if (allowLayoutRefresh) {
+        selectClassFromAgenda(MENTOR_LESSON_CLASS_ID, { refreshLayout: allowLayoutRefresh });
+      }
       activeAgendaClassId = MENTOR_LESSON_CLASS_ID;
       activeAgendaEntry = bestEntry;
-      if (activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
+      if (allowLayoutRefresh && activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
         laadIndeling();
       }
       selectedLessonIndex = lessonNumberForWeek(agendaEntries, activeAgendaEntry);
@@ -1826,7 +1920,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? selectedClassId
       : normalizeClassId(bestEntry?.classId || '');
     activeAgendaEntry = selectedClassEntry || bestEntry || null;
-    if (activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
+    if (allowLayoutRefresh && activeAgendaEntry && applyDefaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry))) {
       laadIndeling();
     }
     selectedLessonIndex = activeAgendaEntry
@@ -1847,7 +1941,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return String(window.APP_CONFIG?.agendaSourceFallbackUrl || 'js/zermelo-agenda-live.json').trim();
   }
 
-  function applyImportedAgenda(rawText, sourceLabel = 'import') {
+  function applyImportedAgenda(rawText, sourceLabel = 'import', { source = 'auto' } = {}) {
     agendaEntries = parseAgendaPayload(rawText, 'application/json').sort((a, b) => a.start - b.start);
     ensureAgendaClassesAvailable(agendaEntries);
     agendaFetchedAt = new Date().toISOString();
@@ -1855,7 +1949,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     agendaLastContentType = 'application/json';
     agendaLastError = '';
     agendaLastResolvedSource = sourceLabel;
-    syncAgendaSelection(new Date(), true);
+    syncAgendaSelection(new Date(), { allowLessonTransition: true, source });
 
     if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
       agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -1866,7 +1960,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateClockMarkerTarget(new Date());
   }
 
-  function selectClassFromAgenda(classId) {
+  function selectClassFromAgenda(classId, { refreshLayout = true } = {}) {
     const normalized = ensureClassOption(classId) || normalizeClassId(classId);
     if (!normalized || !klasSelect) return false;
     const aliases = classIdAliases(normalized);
@@ -1874,7 +1968,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!matchingValue) return false;
     if (klasSelect.value !== matchingValue) {
       klasSelect.value = matchingValue;
-      klasSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      const previousSuppressClassChangeLayoutRefresh = suppressClassChangeLayoutRefresh;
+      suppressClassChangeLayoutRefresh = !refreshLayout;
+      try {
+        klasSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      } finally {
+        suppressClassChangeLayoutRefresh = previousSuppressClassChangeLayoutRefresh;
+      }
     } else if (matchingValue) {
       localStorage.setItem('lastClassId', matchingValue);
     }
@@ -1908,8 +2008,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const passthrough = [];
 
     for (const entry of source.entries || []) {
-      const grade = gradeLayerFromClassId(entry.classId);
-      if (!grade) {
+      const normalizedClassId = normalizeClassId(entry.classId);
+      const layer = normalizedClassId === MENTOR_LESSON_CLASS_ID
+        ? MENTOR_LESSON_CLASS_ID
+        : gradeLayerFromClassId(entry.classId);
+      if (!layer) {
         if (String(entry?.classId || '').trim().toUpperCase() === 'ALL') {
           passthrough.push(entry);
         }
@@ -1917,9 +2020,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       const week = String(entry.week || '').trim();
       if (!week) continue;
-      const key = `${grade}__${week}`;
+      const key = `${layer}__${week}`;
       if (!merged.has(key)) {
-        merged.set(key, { classId: grade, week, lessons: [], items: [], notes: [] });
+        merged.set(key, { classId: layer, week, lessons: [], items: [], notes: [] });
       }
       const bucket = merged.get(key);
       for (const lesson of Array.isArray(entry.lessons) ? entry.lessons : []) {
@@ -1961,6 +2064,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!doc.presentations || typeof doc.presentations !== 'object') doc.presentations = {};
     doc.sourceRevision = String(doc.sourceRevision || '').trim();
     return doc;
+  }
+
+  function hasMentorStartweekPlanning(doc) {
+    const entries = Array.isArray(doc?.entries) ? doc.entries : [];
+    const entry = entries.find((row) => (
+      normalizeClassId(row?.classId) === MENTOR_LESSON_CLASS_ID
+      && String(row?.week || '').trim() === String(STARTWEEK_PLANNING_WEEK)
+    ));
+    const lessons = Array.isArray(entry?.lessons) ? entry.lessons : [];
+    return ['A', 'B', 'C'].every((slot) => lessons.some((lesson) => (
+      String(lesson?.lessonKey || '').trim().toUpperCase() === slot
+      && String(lesson?.presentationId || '').trim() === 'project-mentorles-1d'
+    )));
   }
 
   function parseDocTimestamp(doc) {
@@ -2103,7 +2219,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const raw = String(localStorage.getItem(PLAN_STUDIO_KEY) || '').trim();
     if (!raw) return null;
     try {
-      return normalizeStudioDoc(JSON.parse(raw));
+      const doc = normalizeStudioDoc(JSON.parse(raw));
+      if (!hasMentorStartweekPlanning(doc)) {
+        localStorage.removeItem(PLAN_STUDIO_KEY);
+        return null;
+      }
+      return doc;
     } catch {
       return null;
     }
@@ -2111,7 +2232,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function savePlanningStudioToStorage() {
     if (!planningStudio) return;
-    localStorage.setItem(PLAN_STUDIO_KEY, JSON.stringify(planningStudio));
+    try {
+      localStorage.setItem(PLAN_STUDIO_KEY, JSON.stringify(planningStudio));
+    } catch (err) {
+      const isQuotaError = err?.name === 'QuotaExceededError'
+        || err?.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+        || err?.code === 22
+        || err?.code === 1014;
+      if (!isQuotaError) throw err;
+      try { localStorage.removeItem(PLAN_STUDIO_KEY); } catch {}
+      console.warn('Browseropslag is vol; jaarplanning-studiocache is overgeslagen.', err);
+    }
   }
 
   function rebuildPlanningFromStudio() {
@@ -2163,8 +2294,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const project = String(lessonOrTarget.project || '').trim().toLocaleLowerCase('nl-NL');
     const title = String(lessonOrTarget.lesson || lessonOrTarget.title || '').trim().toLocaleLowerCase('nl-NL');
     const presentationId = String(lessonOrTarget.presentationId || '').trim();
-    return project === READING_PROJECT_NAME
-      || title === READING_PROJECT_NAME
+    return isReadingProjectName(project)
+      || isReadingProjectName(title)
       || presentationId === STANDARD_READING_PRESENTATION_ID;
   }
 
@@ -2172,8 +2303,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     return {
       id: STANDARD_READING_PRESENTATION_ID,
       presentationType: 'standard-reading',
-      title: 'Heel veel lezen',
-      project: 'Heel veel lezen',
+      title: 'Leesmeters',
+      project: 'Leesmeters',
       projectTheme: {
         borderColor: '#d8c39a',
         bgStart: '#fffaf0',
@@ -2196,7 +2327,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         [STANDARD_READING_MARKER_ID]: [
           {
             type: 'title',
-            title: 'Heel veel lezen',
+            title: 'Leesmeters',
             subtitle: 'Pak je leesboek, zoek rust en lees verder waar je gebleven was.',
           },
           {
@@ -2220,7 +2351,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       slides: [
         {
           type: 'title',
-          title: 'Heel veel lezen',
+          title: 'Leesmeters',
           subtitle: 'Pak je leesboek, zoek rust en lees verder waar je gebleven was.',
         },
         {
@@ -2440,6 +2571,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (presentationPrevBtn) presentationPrevBtn.disabled = idx <= 0;
     if (presentationNextBtn) presentationNextBtn.disabled = idx >= slides.length - 1;
     lastRenderedSlideIndex = idx;
+    scheduleInternalSlideFit();
+  }
+
+  function internalSlideOverflows(card) {
+    if (!card) return false;
+    return card.scrollHeight > card.clientHeight + 2 || card.scrollWidth > card.clientWidth + 2;
+  }
+
+  function scheduleInternalSlideFit() {
+    window.requestAnimationFrame(() => fitInternalSlideText());
+  }
+
+  function fitInternalSlideText() {
+    if (!presentationInternalStage) return;
+    const card = presentationInternalStage.querySelector('.presentation-slide-card');
+    if (!card) return;
+
+    card.classList.remove('is-fit-compact', 'is-fit-overflow');
+    card.style.setProperty('--slide-fit-scale', '1');
+    if (!document.body.classList.contains('presentation-open') && !isPresentationOpen) return;
+
+    const minScale = 0.68;
+    let scale = 1;
+    for (let i = 0; i < 10 && internalSlideOverflows(card) && scale > minScale; i += 1) {
+      scale = Math.max(minScale, scale - 0.04);
+      card.style.setProperty('--slide-fit-scale', scale.toFixed(2));
+      if (scale <= 0.8) card.classList.add('is-fit-compact');
+    }
+    if (internalSlideOverflows(card)) {
+      card.classList.add('is-fit-overflow');
+    }
   }
 
   function renderInternalNotice(message) {
@@ -2459,6 +2621,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     return Math.max(0, Math.min(slides.length - 1, raw));
   }
 
+  function presentationMarkerIsDeleted(presentation, markerId) {
+    const deleted = Array.isArray(presentation?.deletedMarkerIds) ? presentation.deletedMarkerIds : [];
+    return deleted.some((id) => String(id || '').trim() === String(markerId || '').trim());
+  }
+
   function nextSlideIndexAfterPresentationMarker(presentation, markerId) {
     const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
     const start = slideIndexForPresentationMarker(presentation, markerId);
@@ -2472,6 +2639,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function lessonSlidesForPresentationMarker(presentation, markerId) {
+    if (presentationMarkerIsDeleted(presentation, markerId)) return [];
     const markerDeck = Array.isArray(presentation?.markerDecks?.[markerId])
       ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
       : [];
@@ -2554,6 +2722,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function applyPresentationMarker(presentation, markerId) {
+    if (presentationMarkerIsDeleted(presentation, markerId)) {
+      if (presentationEmbedTitle) presentationEmbedTitle.textContent = presentation?.project || 'Presentatie';
+      activePresentation = null;
+      activeSlideIndex = 0;
+      activeSeriesNav = { presentation: null, items: [], index: -1 };
+      updateSeriesNavControls();
+      if (presentationInternal) presentationInternal.hidden = false;
+      renderInternalNotice('Deze presentatie is verwijderd.');
+      return;
+    }
+
     const titleText = presentation?.project
       ? `${presentation.project} · ${seriesMarkerTitle(presentation, markerId)}`
       : seriesMarkerTitle(presentation, markerId);
@@ -2607,6 +2786,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     plattegrondFrame.classList.add('is-flipped');
     isPresentationOpen = true;
     enterPresentationFullscreen();
+    scheduleInternalSlideFit();
   }
 
   function closePresentationPanel() {
@@ -2630,6 +2810,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         await target.requestFullscreen();
       }
+      scheduleInternalSlideFit();
     } catch (err) {
       console.warn('Fullscreen niet beschikbaar:', err);
     }
@@ -2640,6 +2821,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!target || document.fullscreenElement) return;
     try {
       await target.requestFullscreen();
+      scheduleInternalSlideFit();
     } catch (err) {
       console.warn('Fullscreen niet beschikbaar:', err);
     }
@@ -2851,6 +3033,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         classId: normalizeClassId(klasSelect?.value || ''),
         primaryProject: uniqueProjects[0] || '',
         projects: uniqueProjects,
+        defaultLayoutType: defaultLayoutForRoom(agendaRoomLabel(activeAgendaEntry)),
         timestamp: Date.now()
       }
     }));
@@ -2989,13 +3172,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     const classId = normalizeClassId(entry.classId);
     const manualLesson = manualLessonForAgendaEntry(entry);
     const weekPlan = planningWeekDataForEntry(entry);
+    const startweekNo = startweekPlanningWeekForDate(entry.start);
+    const startweekEntry = classId === MENTOR_LESSON_CLASS_ID && startweekNo
+      ? getMergedPlanningWeekForClass(MENTOR_LESSON_CLASS_ID, String(startweekNo))
+      : null;
+    const effectiveWeekPlan = startweekEntry
+      ? { weekData: startweekEntry, lessonIndex: lessonNumberForWeek(agendaEntries, entry) }
+      : weekPlan;
     if (manualLesson) {
       return {
         lessons: [manualLesson],
-        items: Array.isArray(weekPlan.weekData?.items) ? weekPlan.weekData.items : [],
-        note: String(weekPlan.weekData?.note || '').trim(),
-        lessonIndex: weekPlan.lessonIndex,
+        items: Array.isArray(effectiveWeekPlan.weekData?.items) ? effectiveWeekPlan.weekData.items : [],
+        note: String(effectiveWeekPlan.weekData?.note || '').trim(),
+        lessonIndex: effectiveWeekPlan.lessonIndex,
         isManual: true,
+      };
+    }
+    const plannedLessons = selectLessonsForToday(effectiveWeekPlan.weekData.lessons || [], effectiveWeekPlan.lessonIndex, true);
+    if (hasExplicitStartLessons(effectiveWeekPlan.weekData)) {
+      return {
+        lessons: plannedLessons,
+        items: Array.isArray(effectiveWeekPlan.weekData.items) ? effectiveWeekPlan.weekData.items : [],
+        note: String(effectiveWeekPlan.weekData.note || '').trim(),
+        lessonIndex: effectiveWeekPlan.lessonIndex,
       };
     }
     const currentProgressPlan = findCurrentProgressPlanning(classId, entry);
@@ -3012,10 +3211,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     return {
-      lessons: selectLessonsForToday(weekPlan.weekData.lessons || [], weekPlan.lessonIndex, true),
-      items: Array.isArray(weekPlan.weekData.items) ? weekPlan.weekData.items : [],
-      note: String(weekPlan.weekData.note || '').trim(),
-      lessonIndex: weekPlan.lessonIndex,
+      lessons: plannedLessons,
+      items: Array.isArray(effectiveWeekPlan.weekData.items) ? effectiveWeekPlan.weekData.items : [],
+      note: String(effectiveWeekPlan.weekData.note || '').trim(),
+      lessonIndex: effectiveWeekPlan.lessonIndex,
     };
   }
 
@@ -3040,6 +3239,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const classId = normalizeClassId(entry.classId);
         const plan = planningForAgendaEntry(entry);
         const lessons = Array.isArray(plan.lessons) ? plan.lessons.filter(Boolean) : [];
+        const isStartweekSelection = classId === MENTOR_LESSON_CLASS_ID
+          && Boolean(startweekPlanningWeekForDate(entry.start));
         return {
           agendaKey: agendaEntryKey(entry),
           classId,
@@ -3051,7 +3252,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           lessonIndex: Number(plan.lessonIndex || 0),
           lessonSlot: plan.lessonIndex ? lessonLetter(Math.min(plan.lessonIndex, 3)) : '',
           isManual: Boolean(plan.isManual),
-          source: plan.isManual ? 'manual' : 'docentplatform',
+          source: plan.isManual ? 'manual' : (isStartweekSelection ? 'startweek' : 'docentplatform'),
           lessons: lessons.map((lesson) => ({
             ...lesson,
             classId,
@@ -3322,6 +3523,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         classWeekKey ? classWeeks[classWeekKey] : null,
       )
       : null;
+    const startweekNo = startweekPlanningWeekForDate(planAnchorDate);
+    if (classId === MENTOR_LESSON_CLASS_ID && startweekNo) {
+      weekData = getMergedPlanningWeekForClass(MENTOR_LESSON_CLASS_ID, String(startweekNo)) || weekData;
+    }
     const currentProgressPlan = findCurrentProgressPlanning(classId, activeAgendaEntry);
     const manualLesson = manualLessonForAgendaEntry(activeAgendaEntry);
     const effectiveLessonIndex = selectedLessonIndex;
@@ -3430,13 +3635,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  async function fetchAgenda() {
+  async function fetchAgenda({ source = 'auto' } = {}) {
     if (agendaFetchInProgress) return;
     agendaFetchInProgress = true;
     try {
     const fallbackSourceUrl = resolveAgendaFallbackSourceUrl();
     if (!agendaSourceUrl && agendaImportedRaw) {
-      applyImportedAgenda(agendaImportedRaw, 'import (lokaal)');
+      applyImportedAgenda(agendaImportedRaw, 'import (lokaal)', { source });
       return;
     }
     if (!agendaSourceUrl && !fallbackSourceUrl) {
@@ -3490,7 +3695,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     if (loaded) {
-      syncAgendaSelection(new Date(), true);
+      syncAgendaSelection(new Date(), { allowLessonTransition: true, source });
 
       if (agendaDebugOutput && agendaDebugOutput.style.display !== 'none') {
         agendaDebugOutput.value = formatAgendaDebug(agendaEntries, new Date());
@@ -3504,7 +3709,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     {
       console.error('Fout bij laden agenda-bronnen:', lastErr);
       if (agendaImportedRaw) {
-        applyImportedAgenda(agendaImportedRaw, 'import (fallback)');
+        applyImportedAgenda(agendaImportedRaw, 'import (fallback)', { source });
         return;
       }
       agendaEntries = [];
@@ -3700,7 +3905,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningEditorNote.value = String(entry.note || '');
   }
 
-  function applyAgendaSource(url, persist = true) {
+  function applyAgendaSource(url, persist = true, { source = persist ? 'manual' : 'auto' } = {}) {
     agendaSourceUrl = String(url || '').trim();
     if (agendaSourceInput) agendaSourceInput.value = agendaSourceUrl;
     if (persist) {
@@ -3708,7 +3913,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       else localStorage.removeItem(AGENDA_SOURCE_KEY);
     }
     resetAgendaTimer();
-    fetchAgenda();
+    fetchAgenda({ source });
   }
 
   planningEditorSaveBtn?.addEventListener('click', () => {
@@ -3743,7 +3948,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   planningRefreshBtn?.addEventListener('click', () => {
     fetchPlanning();
-    fetchAgenda();
+    fetchAgenda({ source: 'manual' });
   });
 
   presentationBackBtn?.addEventListener('click', () => {
@@ -3836,7 +4041,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!parsed.length) throw new Error('Geen geldige agenda-events gevonden in dit bestand.');
       agendaImportedRaw = text;
       localStorage.setItem(AGENDA_IMPORT_KEY, text);
-      applyImportedAgenda(text, `import:${file.name}`);
+      applyImportedAgenda(text, `import:${file.name}`, { source: 'manual' });
     } catch (err) {
       const msg = err?.message ? String(err.message) : String(err || 'Onbekende importfout');
       alert(`Import mislukt: ${msg}`);
@@ -3884,7 +4089,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   resetPlanningTimer();
   renderPlanning();
 
-  applyAgendaSource(resolveAgendaSourceUrl(), false);
+  applyAgendaSource(resolveAgendaSourceUrl(), false, { source: 'manual' });
   window.addEventListener('focus', () => {
     if (!agendaSourceUrl && !resolveAgendaFallbackSourceUrl()) return;
     fetchAgenda();
@@ -3912,6 +4117,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     planningStudio = latest;
     rebuildPlanningFromStudio();
     renderPlanning();
+  });
+  window.addEventListener('resize', () => {
+    if (isPresentationOpen) scheduleInternalSlideFit();
+  });
+  document.addEventListener('fullscreenchange', () => {
+    if (isPresentationOpen) scheduleInternalSlideFit();
   });
   if (clockMarkerTimer) clearInterval(clockMarkerTimer);
   clockMarkerTimer = setInterval(() => {

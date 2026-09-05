@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -21,12 +22,19 @@ PUBLIC_PORTAL_FILES = [
     "docent.html",
     "css/internal-shell.css",
     "css/style.css",
+    "css/jaarplanning-studio.css",
+    "css/presentatie-studio.css",
     "leerlingen.html",
     "docs/leerlingen.html",
     "css/student-portal.css",
     "docs/css/student-portal.css",
+    "jaarplanning-studio.html",
+    "presentatie-studio.html",
+    "js/jaarplanning-studio.js",
+    "js/presentatie-studio.js",
     "js/student-portal.js",
     "js/init.js",
+    "docs/js/init.js",
     "docs/js/student-portal.js",
     "js/docent-lesselectie-live.json",
     "docs/js/docent-lesselectie-live.json",
@@ -64,6 +72,26 @@ def run_git_check(args: list[str]) -> subprocess.CompletedProcess[str]:
     )
 
 
+def unmerged_files() -> list[str]:
+    return run_git_check(["diff", "--name-only", "--diff-filter=U"]).stdout.splitlines()
+
+
+def has_conflict_markers(rel_path: str) -> bool:
+    try:
+        text = (ROOT / rel_path).read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return True
+    return bool(re.search(r"^(<<<<<<<|=======|>>>>>>>)", text, re.MULTILINE))
+
+
+def stage_marker_free_unmerged_files(paths: list[str]) -> list[str]:
+    marker_free = [path for path in paths if not has_conflict_markers(path)]
+    if not marker_free:
+        return []
+    run_git(["add", "--", *marker_free])
+    return marker_free
+
+
 def push_with_remote_sync(branch: str) -> tuple[bool, str]:
     first_push = run_git_check(["push", "origin", branch])
     if first_push.returncode == 0:
@@ -85,7 +113,7 @@ def push_with_remote_sync(branch: str) -> tuple[bool, str]:
 
 
 def reset_publish_index() -> None:
-    unmerged = run_git_check(["diff", "--name-only", "--diff-filter=U"]).stdout.splitlines()
+    unmerged = unmerged_files()
     if unmerged:
         run_git(["add", "--", *unmerged])
     run_git_check(["restore", "--staged", "."])
@@ -95,26 +123,36 @@ def auto_commit_and_push(response: dict) -> dict:
     if not truthy_env(AUTO_GIT_PUSH_ENV, True):
         return {"enabled": False, "ok": True, "message": "Automatische git-push staat uit."}
 
-    unmerged = run_git_check(["diff", "--name-only", "--diff-filter=U"]).stdout.splitlines()
+    resolved_unmerged: list[str] = []
+    unmerged = unmerged_files()
     if unmerged:
-        return {
-            "enabled": True,
-            "ok": False,
-            "message": "Git heeft nog conflicten; publiceer eerst de opgeloste bestanden.",
-            "unmerged": unmerged,
-        }
+        blocked = [path for path in unmerged if has_conflict_markers(path)]
+        if not blocked:
+            resolved_unmerged = stage_marker_free_unmerged_files(unmerged)
+            unmerged = unmerged_files()
+            blocked = [path for path in unmerged if has_conflict_markers(path)]
+        if unmerged:
+            message_paths = blocked or unmerged
+            return {
+                "enabled": True,
+                "ok": False,
+                "message": "Git heeft nog conflicten; los deze bestanden eerst op.",
+                "unmerged": message_paths,
+            }
 
     target_files = [
         str(response.get(key, "")).strip()
         for key in ("internal", "live", "docsLive")
-        if str(response.get(key, "")).strip()
+            if str(response.get(key, "")).strip()
     ]
     target_files.extend(path for path in PUBLIC_PORTAL_FILES if (ROOT / path).exists())
+    target_files.extend(path for path in resolved_unmerged if (ROOT / path).exists())
     target_files = list(dict.fromkeys(target_files))
     if not target_files:
         return {"enabled": True, "ok": False, "message": "Geen publicatiebestanden gevonden voor git."}
 
-    reset_publish_index()
+    if not resolved_unmerged:
+        reset_publish_index()
 
     changed = run_git(["status", "--porcelain", "--", *target_files]).stdout.strip()
     if not changed:

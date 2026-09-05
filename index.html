@@ -123,6 +123,20 @@
       return message;
     }
 
+    function cacheStudioDoc(doc) {
+      try {
+        localStorage.setItem(STUDIO_KEY, JSON.stringify(doc));
+      } catch (err) {
+        const isQuotaError = err?.name === 'QuotaExceededError'
+          || err?.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+          || err?.code === 22
+          || err?.code === 1014;
+        if (!isQuotaError) throw err;
+        try { localStorage.removeItem(STUDIO_KEY); } catch {}
+        console.warn('Browseropslag is vol; jaarplanning-studiocache is overgeslagen.', err);
+      }
+    }
+
     async function publishEverything() {
       publishEverythingBtn.disabled = true;
       publishEverythingBtn.textContent = 'Publiceren...';
@@ -139,7 +153,7 @@
           throw new Error(result?.error || `HTTP ${response.status}`);
         }
         const liveDoc = await fetchJson(BASE_SOURCE).catch(() => null);
-        if (liveDoc) localStorage.setItem(STUDIO_KEY, JSON.stringify(liveDoc));
+        if (liveDoc) cacheStudioDoc(liveDoc);
         setPublishStatus(
           `Klaar: ${result.entries || 0} planningregels en ${result.presentations || 0} presentaties bijgewerkt.${autoGitMessage(result)}`,
           result.autoGit?.ok === false ? 'error' : 'success',

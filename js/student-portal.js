@@ -54,7 +54,7 @@ const state = {
   teacherSelectionEntries: [],
   classes: [],
   currentClass: '',
-  currentWeek: currentIsoWeek(),
+  currentWeek: currentPlanningWeek(),
   activePresentation: null,
   activePresentationTarget: null,
   activeSlideIndex: 0,
@@ -68,10 +68,16 @@ const MENTOR_SOURCE_CLASS_ID = 'G1D';
 const MENTOR_LESSON_CODE_PATTERN = /\b(?:REP|KMT)\b/;
 const VIRTUAL_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
 const SCHOOL_YEAR_START_WEEK = 36;
+const STARTWEEK_PLANNING_WEEK = 35;
+const STARTWEEK_PLANNING_WEEK_BY_DATE = Object.freeze({
+  '2026-09-01': STARTWEEK_PLANNING_WEEK,
+  '2026-09-02': STARTWEEK_PLANNING_WEEK,
+  '2026-09-03': STARTWEEK_PLANNING_WEEK,
+});
 const NETSCHRIFT_SUBMISSION_PREFIX = 'INLEVERMOMENT_NETSCHRIFT:';
 const PROJECT_ORDER_BY_GRADE = {
   1: [
-    'Heel veel lezen',
+    'Leesmeters',
     'Netschrift',
     'Droomschool',
     'Verweggers',
@@ -81,14 +87,14 @@ const PROJECT_ORDER_BY_GRADE = {
     'Klasfeed',
   ],
   3: [
-    'Heel veel lezen',
+    'Leesmeters',
     'Netschrift',
     'Grenzen van Literatuur',
     'Faalfestival',
     'V-rede',
   ],
   4: [
-    'Heel veel lezen',
+    'Leesmeters',
     'Netschrift',
     'Persoonlijkheid',
     'Technologie',
@@ -112,41 +118,57 @@ const READING_LESSON_EXCEPTIONS = [
   { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
 ];
 const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
+const FIXED_READING_MOMENTS = {
+  G1C: { day: 4, start: '12:50' },
+  G1D: { day: 4, start: '10:50' },
+  G3B: { day: 2, start: '09:00' },
+  G3C: { day: 2, start: '10:50' },
+  G3E: { day: 2, start: '09:45' },
+  G3F: { day: 4, start: '11:35' },
+  G4B: { day: 4, start: '08:15' },
+  G4C: { day: 2, start: '12:50' },
+};
 const BASE_SCHEDULE = {
+  G1C: [
+    { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H212' },
+    { slot: 'B', day: 2, start: '08:15', end: '09:00', room: 'U105' },
+    { slot: 'C', day: 4, start: '12:50', end: '13:35', room: 'U105' },
+  ],
   G1D: [
-    { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H215' },
-    { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'H216' },
-    { slot: 'C', day: 5, start: '14:20', end: '15:05', room: 'H215' },
+    { slot: 'A', day: 2, start: '14:40', end: '15:25', room: 'U105' },
+    { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'U105' },
+    { slot: 'C', day: 5, start: '08:15', end: '09:00', room: 'U008' },
   ],
   G3B: [
-    { slot: 'A', day: 1, start: '14:40', end: '15:25', room: 'H215' },
-    { slot: 'B', day: 5, start: '08:15', end: '09:00', room: 'H215' },
+    { slot: 'A', day: 2, start: '09:00', end: '09:45', room: 'U105' },
+    { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'U008' },
+  ],
+  G3C: [
+    { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H212' },
+    { slot: 'B', day: 2, start: '10:50', end: '11:35', room: 'H216' },
   ],
   G3E: [
-    { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H215' },
-    { slot: 'B', day: 4, start: '08:15', end: '09:00', room: 'H216' },
+    { slot: 'A', day: 2, start: '09:45', end: '10:30', room: 'U105' },
+    { slot: 'B', day: 5, start: '11:35', end: '12:20', room: 'U008' },
   ],
   G3F: [
-    { slot: 'A', day: 1, start: '10:50', end: '11:35', room: 'H215' },
-    { slot: 'B', day: 5, start: '13:35', end: '14:20', room: 'H215' },
+    { slot: 'A', day: 1, start: '09:00', end: '09:45', room: 'H212' },
+    { slot: 'B', day: 4, start: '11:35', end: '12:20', room: 'U105' },
   ],
-  G3G: [
-    { slot: 'A', day: 1, start: '13:35', end: '14:20', room: 'H215' },
-    { slot: 'B', day: 5, start: '09:45', end: '10:30', room: 'H215' },
+  G4B: [
+    { slot: 'A', day: 4, start: '08:15', end: '09:00', room: 'U105' },
+    { slot: 'B', day: 4, start: '09:00', end: '09:45', room: 'U105' },
+    { slot: 'C', day: 5, start: '09:00', end: '09:45', room: 'U008' },
   ],
-  G4D: [
-    { slot: 'A', day: 4, start: '12:50', end: '13:35', room: 'H216' },
-    { slot: 'B', day: 5, start: '10:50', end: '11:35', room: 'H215' },
-    { slot: 'C', day: 5, start: '11:35', end: '12:20', room: 'H215' },
-  ],
-  G4E: [
-    { slot: 'A', day: 1, start: '09:45', end: '10:30', room: 'H215' },
-    { slot: 'B', day: 4, start: '10:50', end: '11:35', room: 'H216' },
-    { slot: 'C', day: 4, start: '11:35', end: '12:20', room: 'H216' },
+  G4C: [
+    { slot: 'A', day: 1, start: '12:50', end: '13:35', room: 'H216' },
+    { slot: 'B', day: 1, start: '13:35', end: '14:20', room: 'H216' },
+    { slot: 'C', day: 2, start: '12:50', end: '13:35', room: 'U105' },
   ],
 };
-const READING_PROJECT_NAME = 'heel veel lezen';
-const PROTECTED_START_PROJECTS = new Set(['heel veel lezen', 'netschrift']);
+const READING_PROJECT_NAME = 'leesmeters';
+const READING_PROJECT_ALIASES = new Set([READING_PROJECT_NAME, 'heel veel lezen']);
+const PROTECTED_START_PROJECTS = new Set([...READING_PROJECT_ALIASES, 'netschrift']);
 const POSTER_PRESENTATION_PROJECTS = new Set([
   'faalfestival',
   'renaissance',
@@ -155,8 +177,8 @@ const POSTER_PRESENTATION_PROJECTS = new Set([
   'taaltopia',
 ]);
 const STANDARD_READING_LESSON = {
-  project: 'Heel veel lezen',
-  lesson: 'Heel veel lezen',
+  project: 'Leesmeters',
+  lesson: 'Leesmeters',
   lessonKey: 'READ',
   presentationId: '',
   presentationMarkerId: '',
@@ -201,6 +223,7 @@ function parseWeek(weekRaw) {
 function academicWeekOrder(weekRaw) {
   const week = parseWeek(weekRaw);
   if (!Number.isFinite(week)) return Number.POSITIVE_INFINITY;
+  if (week === STARTWEEK_PLANNING_WEEK) return -1;
   return week >= SCHOOL_YEAR_START_WEEK
     ? week - SCHOOL_YEAR_START_WEEK
     : week + (53 - SCHOOL_YEAR_START_WEEK + 1);
@@ -223,6 +246,21 @@ function isoWeekForDate(date) {
   local.setUTCDate(local.getUTCDate() + 4 - day);
   const yearStart = new Date(Date.UTC(local.getUTCFullYear(), 0, 1));
   return Math.ceil((((local - yearStart) / 86400000) + 1) / 7);
+}
+
+function startweekPlanningWeekForDate(date = new Date()) {
+  const value = date instanceof Date ? date : new Date(date);
+  if (Number.isNaN(value.getTime())) return NaN;
+  return Number(STARTWEEK_PLANNING_WEEK_BY_DATE[localDateKey(value)] || NaN);
+}
+
+function planningWeekForDate(date = new Date()) {
+  const startweek = startweekPlanningWeekForDate(date);
+  return Number.isFinite(startweek) ? startweek : isoWeekForDate(date);
+}
+
+function currentPlanningWeek() {
+  return planningWeekForDate(new Date());
 }
 
 function normalizeDoc(raw) {
@@ -457,6 +495,9 @@ function parseDateOnly(value) {
 function weekBoundsForWeekNumber(week) {
   const weekNumber = Number(week);
   if (!Number.isInteger(weekNumber)) return null;
+  if (weekNumber === STARTWEEK_PLANNING_WEEK) {
+    return { monday: new Date(2026, 8, 1), sunday: new Date(2026, 8, 3, 23, 59, 59, 999) };
+  }
   const monday = isoWeekMonday(academicIsoYearForWeek(weekNumber), weekNumber);
   if (!monday) return null;
   const sunday = new Date(monday);
@@ -470,6 +511,7 @@ function academicIsoYearForWeek(weekRaw) {
   const currentWeek = currentIsoWeek();
   const currentYear = new Date().getFullYear();
   if (!Number.isFinite(week) || !Number.isFinite(currentWeek)) return currentYear;
+  if (week === STARTWEEK_PLANNING_WEEK) return currentYear;
   if (currentWeek < SCHOOL_YEAR_START_WEEK && week >= SCHOOL_YEAR_START_WEEK) return currentYear - 1;
   if (currentWeek >= SCHOOL_YEAR_START_WEEK && week < SCHOOL_YEAR_START_WEEK) return currentYear + 1;
   return currentYear;
@@ -557,7 +599,7 @@ function inferAgendaLessonSlots(entries, classId) {
 
   for (const entry of entries) {
     if (!(entry.classId === classId && isDutchAgendaEntry(entry))) continue;
-    const week = isoWeekForDate(entry.start);
+    const week = planningWeekForDate(entry.start);
     const key = String(week);
     if (!weeklyLessons.has(key)) weeklyLessons.set(key, []);
     weeklyLessons.get(key).push(entry);
@@ -565,7 +607,7 @@ function inferAgendaLessonSlots(entries, classId) {
 
   for (const lessonEntries of weeklyLessons.values()) {
     const ordered = [...lessonEntries].sort((left, right) => left.start - right.start);
-    const week = isoWeekForDate(ordered[0]?.start);
+    const week = planningWeekForDate(ordered[0]?.start);
     if (weekHasPlannedException(classId, week)) continue;
     ordered.forEach((entry, index) => {
       const signature = agendaEntrySlotSignature(entry);
@@ -858,7 +900,7 @@ function getAgendaLessonsForWeek(classId, week) {
     .filter((entry) => (
       agendaMatchesClass(entry, classId)
       && isDutchAgendaEntry(entry)
-      && isoWeekForDate(entry.start) === weekNumber
+      && planningWeekForDate(entry.start) === weekNumber
     ))
     .sort((left, right) => left.start - right.start);
 }
@@ -947,7 +989,7 @@ function getAgendaEntriesForClass(classId) {
 function agendaEntryWeekKey(entry) {
   const date = entry?.start instanceof Date ? entry.start : new Date(entry?.start || '');
   if (Number.isNaN(date.getTime())) return '';
-  return String(isoWeekForDate(date));
+  return String(planningWeekForDate(date));
 }
 
 function isSameAgendaEntry(left, right) {
@@ -1080,7 +1122,20 @@ function isReadingLessonException(classId, agendaEntry, agendaEntries = getAgend
 function isStandardReadingDay(agendaEntry) {
   if (!agendaEntry?.start) return false;
   const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
-  return !Number.isNaN(start.getTime()) && start.getDay() === 1;
+  if (Number.isNaN(start.getTime())) return false;
+  const fixedMoment = FIXED_READING_MOMENTS[normalizeClassId(agendaEntry.classId)];
+  if (!fixedMoment) return false;
+  return (start.getDay() || 7) === fixedMoment.day
+    && (start.getHours() * 60 + start.getMinutes()) === minutesFromTime(fixedMoment.start);
+}
+
+function hasExplicitStartLessons(entry) {
+  return (entry?.lessons || []).some((lesson) => {
+    const project = String(lesson?.project || '').trim().toLocaleLowerCase('nl-NL');
+    const presentationId = String(lesson?.presentationId || '').trim();
+    return project.startsWith('start nederlands')
+      || presentationId.startsWith('project-startlessen-jaarlaag-');
+  });
 }
 
 function progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, agendaEntry) {
@@ -1118,6 +1173,11 @@ function progressAnchorAgendaOffset(classId, anchor, agendaEntries, targetEntry,
 }
 
 function teacherProgressPlanningForAgendaEntry(classId, agendaEntries, agendaEntry) {
+  const plannedSlot = plannedLessonForAgendaEntry(classId, agendaEntry);
+  if (plannedSlot && hasExplicitStartLessons(plannedSlot.entry)) {
+    return { ...plannedSlot, source: 'planning' };
+  }
+
   if (isStandardReadingDay(agendaEntry)) {
     return { entry: null, lesson: STANDARD_READING_LESSON, lessonKey: STANDARD_READING_LESSON.lessonKey, source: 'reading' };
   }
@@ -1142,7 +1202,7 @@ function teacherProgressPlanningForAgendaEntry(classId, agendaEntries, agendaEnt
   }
 
   const orderedLessons = getProjectOrderedLessonsForClass(classId)
-    .filter((candidate) => String(candidate.project || '').trim().toLocaleLowerCase('nl-NL') !== READING_PROJECT_NAME);
+    .filter((candidate) => !isReadingProjectName(candidate.project));
   const projectName = String(anchor.project || '').trim().toLocaleLowerCase('nl-NL');
   const targetLessonNumbers = (Array.isArray(anchor.lessonNumbers) ? anchor.lessonNumbers : [anchor.lessonNumber])
     .map((value) => Number(value))
@@ -1176,7 +1236,7 @@ function findProgressAnchorLesson(classId, agendaEntries, targetEntry, now = new
   if (!projectName || !targetLessonNumbers.length) return null;
 
   const orderedLessons = getProjectOrderedLessonsForClass(classId)
-    .filter((candidate) => String(candidate.project || '').trim().toLocaleLowerCase('nl-NL') !== READING_PROJECT_NAME);
+    .filter((candidate) => !isReadingProjectName(candidate.project));
   const anchorIndexes = targetLessonNumbers
     .map((lessonNumber) => orderedLessons.findIndex((candidate) => (
       String(candidate.project || '').trim().toLocaleLowerCase('nl-NL') === projectName
@@ -1239,7 +1299,7 @@ function getClassProgressAnchor(classId, now = new Date()) {
 
 function plannedLessonForAgendaEntry(classId, agendaEntry) {
   if (!agendaEntry?.start) return null;
-  const week = isoWeekForDate(agendaEntry.start);
+  const week = planningWeekForDate(agendaEntry.start);
   if (!Number.isFinite(week)) return null;
   const entry = getEntryForWeek(classId, week);
   if (!entry) return null;
@@ -1284,7 +1344,7 @@ function teacherSelectedLessonForClass(classId, now = new Date()) {
   if (!selection || !lesson) return null;
 
   const lessonKey = String(lesson.lessonKey || selection.lessonSlot || '').trim().toUpperCase();
-  const week = String(lesson.week || isoWeekForDate(selection.start) || '').trim();
+  const week = String(lesson.week || planningWeekForDate(selection.start) || '').trim();
   const entry = getEntryForWeek(normalizedClassId, week) || getEntriesForClass(normalizedClassId)[0] || null;
   if (!entry || !lessonKey) return null;
 
@@ -1354,7 +1414,7 @@ function findNextLessonForClass(classId, now = new Date()) {
     };
   }
   if (teacherPlan?.lesson?.isStandardReadingLesson && nextAgendaEntry) {
-    const fallbackEntry = getEntryForWeek(classId, isoWeekForDate(nextAgendaEntry.start)) || getEntriesForClass(classId)[0] || null;
+    const fallbackEntry = getEntryForWeek(classId, planningWeekForDate(nextAgendaEntry.start)) || getEntriesForClass(classId)[0] || null;
     if (fallbackEntry) {
       const target = buildPresentationTarget({
         classId,
@@ -1457,7 +1517,7 @@ function findNextLessonForClass(classId, now = new Date()) {
   const lesson = progressAnchor?.lesson || null;
   const resolvedEntry = entry || (fallbackLesson ? getEntryForWeek(classId, fallbackLesson.week) : null);
   const resolvedLesson = useStandardReadingLesson
-    ? { ...STANDARD_READING_LESSON, week: String(resolvedEntry?.week || isoWeekForDate(nextAgendaEntry.start)) }
+    ? { ...STANDARD_READING_LESSON, week: String(resolvedEntry?.week || planningWeekForDate(nextAgendaEntry.start)) }
     : (lesson || fallbackLesson);
   const resolvedLessonKey = useStandardReadingLesson
     ? STANDARD_READING_LESSON.lessonKey
@@ -1928,6 +1988,10 @@ function normalizedProjectKey(project) {
   return String(project || '').trim().toLocaleLowerCase('nl-NL');
 }
 
+function isReadingProjectName(project) {
+  return READING_PROJECT_ALIASES.has(normalizedProjectKey(project));
+}
+
 function lessonNumberFromAnyTitle(value) {
   const raw = String(value || '').trim();
   const explicit = raw.match(/(?:^|\s)les\s*(\d+)/i);
@@ -2080,7 +2144,7 @@ function lessonDeliverable(project, lessonTitle = '') {
   }
 
   if (key === 'netschrift') return 'Netschrift bevat bijgewerkte inhoud, verbeterde spelling en feedback/feedforward-punten.';
-  if (key === 'heel veel lezen') return 'Netschrift bevat leeslog: datum, boek, gelezen bladzijden en een korte leesreactie of vraag.';
+  if (isReadingProjectName(key)) return 'Netschrift bevat leeslog: datum, boek, gelezen bladzijden en een korte leesreactie of vraag.';
 
   return 'Netschrift bevat concreet bewijs van de opdracht van vandaag: aantekeningen, uitgewerkt voorbeeld, feedback of reflectie.';
 }
@@ -2115,6 +2179,21 @@ function getProjectOverviewPresentation(project) {
   const presentationId = projectDeckId(project);
   const presentation = state.doc.presentations[presentationId];
   return presentation && typeof presentation === 'object' ? presentation : null;
+}
+
+function explicitNetschriftItemsForTarget(target) {
+  const resolved = resolvePresentation(target);
+  const presentation = resolved.presentation;
+  const markerId = String(resolved.markerId || target?.markerId || '').trim();
+  if (!presentation || !markerId || presentationMarkerIsDeleted(presentation, markerId)) return [];
+  const items = presentation.lessonMeta?.[markerId]?.netschrift?.items;
+  return Array.isArray(items)
+    ? items.map((item) => String(item || '').trim()).filter(Boolean)
+    : [];
+}
+
+function explicitNetschriftItemsForLesson(lesson) {
+  return explicitNetschriftItemsForTarget(buildPresentationTarget(lesson));
 }
 
 function getProjectCulmination(classId, project) {
@@ -2199,6 +2278,16 @@ function lessonBuildSlide(phase, target) {
   const project = String(target?.project || '').trim();
   const title = String(target?.title || '').trim();
   if (!project && !title) return null;
+  const explicitItems = explicitNetschriftItemsForTarget(target);
+  if (explicitItems.length) {
+    return {
+      type: `lesson-${phase}-netschrift`,
+      emphasis: true,
+      title: phase === 'start' ? 'Deze les in je netschrift' : 'Na deze les in je netschrift',
+      subtitle: '',
+      items: explicitItems,
+    };
+  }
   const buildTargets = getLessonBuildTargets(project, title);
   const isStart = phase === 'start';
   const mediumName = buildTargets.medium.type === 'poster-presentation' ? 'poster' : 'netschrift';
@@ -2219,6 +2308,11 @@ function slideIndexForMarker(presentation, markerId) {
   return Math.max(0, Math.min(slides.length - 1, raw));
 }
 
+function presentationMarkerIsDeleted(presentation, markerId) {
+  const deleted = Array.isArray(presentation?.deletedMarkerIds) ? presentation.deletedMarkerIds : [];
+  return deleted.some((id) => String(id || '').trim() === String(markerId || '').trim());
+}
+
 function nextMarkerIndexForTarget(presentation, target) {
   const markers = presentation?.markers;
   const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
@@ -2237,6 +2331,7 @@ function nextMarkerIndexForTarget(presentation, target) {
 }
 
 function getLessonPresentationSlides(presentation, target) {
+  if (target?.markerId && presentationMarkerIsDeleted(presentation, target.markerId)) return [];
   const markerDeck = Array.isArray(presentation?.markerDecks?.[target?.markerId])
     ? presentation.markerDecks[target.markerId].filter((slide) => slide && typeof slide === 'object')
     : [];
@@ -2319,14 +2414,24 @@ function lessonChecklistItem(lesson) {
   const title = String(lesson?.lesson || project || 'Les').trim();
   const target = buildPresentationTarget(lesson);
   const hasPresentation = Boolean(resolvePresentation(target).presentation);
+  const explicitItems = explicitNetschriftItemsForTarget(target);
   return {
     project,
     title,
-    text: lessonDeliverable(project, title),
+    text: explicitItems[0] || lessonDeliverable(project, title),
+    parts: explicitItems.length ? explicitItems : [lessonDeliverable(project, title)],
     status: getLessonTimelineStatus(state.currentClass, lesson),
     target,
     hasPresentation,
   };
+}
+
+function lessonNetschriftChecklistItems(lesson) {
+  const project = String(lesson?.project || '').trim();
+  const explicitItems = explicitNetschriftItemsForLesson(lesson);
+  if (explicitItems.length) return [lessonChecklistItem(lesson)];
+  if (getProjectAssessmentMedium(project).type !== 'netschrift') return [];
+  return [lessonChecklistItem(lesson)];
 }
 
 function isBridgeClass(classId) {
@@ -2373,11 +2478,8 @@ function bridgeClassNetschriftChecklist(classId) {
 function getNetschriftChecklistForClass(classId) {
   if (isBridgeClass(classId)) return bridgeClassNetschriftChecklist(classId);
   return uniqueLessonsByChecklistIdentity(getProjectOrderedLessonsForClass(classId))
-    .filter((lesson) => (
-      normalizedProjectKey(lesson.project) !== READING_PROJECT_NAME
-      && getProjectAssessmentMedium(lesson.project).type === 'netschrift'
-    ))
-    .map(lessonChecklistItem)
+    .filter((lesson) => !isReadingProjectName(lesson.project))
+    .flatMap(lessonNetschriftChecklistItems)
     .filter((item) => item.status.state === 'done' || item.status.state === 'active');
 }
 
@@ -2413,7 +2515,11 @@ function renderChecklist(items, options = {}) {
               ? `<a class="overview-lesson-link" href="${escapeHtml(buildPresentationUrl(item.target))}" data-overview-presentation='${escapeHtml(JSON.stringify(item.target))}'>${escapeHtml(item.title)}</a>`
               : `<span>${escapeHtml(item.title)}</span>`}
           </p>
-          <p>${escapeHtml(formatText(item.text))}</p>
+          <ul class="overview-checklist-parts">
+            ${(Array.isArray(item.parts) && item.parts.length ? item.parts : [item.text])
+              .map((part) => `<li>${escapeHtml(formatText(part))}</li>`)
+              .join('')}
+          </ul>
         </li>
       `).join('')}
     </ol>
@@ -2469,16 +2575,24 @@ function submissionAlertHtml(nextSubmissionMoment) {
   `;
 }
 
+function checklistPartCount(items) {
+  return (Array.isArray(items) ? items : []).reduce((total, item) => {
+    const parts = Array.isArray(item?.parts) && item.parts.length ? item.parts : [item?.text].filter(Boolean);
+    return total + parts.length;
+  }, 0);
+}
+
 function netschriftOverviewShortcutHtml() {
   const items = getNetschriftChecklistForClass(state.currentClass);
   if (!items.length) return '';
+  const partCount = checklistPartCount(items);
   return `
     <div class="submission-alert is-active">
       <p class="submission-alert-label">
         <span class="submission-alert-icon" aria-hidden="true">✓</span>
         <span>Netschriftlijst</span>
       </p>
-      <p class="submission-alert-text">${escapeHtml(items.length)} onderdelen die in je netschrift moeten staan.</p>
+      <p class="submission-alert-text">${escapeHtml(partCount)} onderdelen die in je netschrift moeten staan.</p>
       <button class="submission-overview-link" type="button" data-open-netschrift-overview="1">Bekijk wat er in je netschrift moet</button>
     </div>
   `;
@@ -2487,11 +2601,12 @@ function netschriftOverviewShortcutHtml() {
 function netschriftProjectSummaryHtml() {
   const items = getNetschriftChecklistForClass(state.currentClass);
   if (!items.length) return '';
+  const partCount = checklistPartCount(items);
   return `
     <p class="homework-label">Netschrift</p>
     <div class="project-focus-card">
       <p class="project-focus-name">Alles wat in je netschrift moet staan</p>
-      <p class="project-focus-lesson">${escapeHtml(items.length)} onderdelen in het netschrift-overzicht.</p>
+      <p class="project-focus-lesson">${escapeHtml(partCount)} onderdelen in het netschrift-overzicht.</p>
       <button class="project-overview-link" type="button" data-open-netschrift-overview="1">Bekijk wat er in je netschrift moet</button>
     </div>
   `;
