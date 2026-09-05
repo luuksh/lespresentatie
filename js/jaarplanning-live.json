@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:04:23+02:00",
+  "updatedAt": "2026-09-05T22:19:39+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -3611,14 +3611,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
         }
       ],
       "items": [
@@ -4266,14 +4258,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
         }
       ],
       "items": [
@@ -4915,14 +4899,6 @@
       "classId": "3C",
       "week": "37",
       "lessons": [
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
-        },
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
@@ -5576,14 +5552,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
         }
       ],
       "items": [
@@ -6231,14 +6199,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
         }
       ],
       "items": [
@@ -6880,14 +6840,6 @@
       "classId": "3F",
       "week": "37",
       "lessons": [
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
-        },
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
@@ -7541,14 +7493,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
         }
       ],
       "items": [
@@ -13760,7 +13704,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-09-05T22:04:23+02:00",
+  "sourceRevision": "2026-09-05T22:19:39+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
