@@ -52,7 +52,7 @@ const state = {
   teacherSelectionEntries: [],
   classes: [],
   currentClass: '',
-  currentWeek: currentPlanningWeek(),
+  currentWeek: 0,
   activePresentation: null,
   activePresentationTarget: null,
   activeSlideIndex: 0,
@@ -1080,7 +1080,7 @@ function inferScheduledLessonForWeek(classId, week, lessonKey) {
 
   const weekNumber = Number(week);
   if (!Number.isFinite(weekNumber)) return null;
-  const year = new Date().getFullYear();
+  const year = academicIsoYearForWeek(weekNumber);
   const monday = isoWeekMonday(year, weekNumber);
   if (!monday) return null;
 
@@ -2126,6 +2126,52 @@ function predictedScheduleForLesson(classId, lesson) {
     || null;
 }
 
+function dateForProjectLesson(classId, lesson, fallbackBound = 'start') {
+  const predictedSchedule = predictedScheduleForLesson(classId, lesson);
+  const scheduledDate = fallbackBound === 'end'
+    ? (predictedSchedule?.end || predictedSchedule?.start)
+    : predictedSchedule?.start;
+  const resolved = scheduledDate
+    ? (scheduledDate instanceof Date ? scheduledDate : new Date(scheduledDate))
+    : null;
+  if (resolved && !Number.isNaN(resolved.getTime())) return resolved;
+
+  const bounds = weekBoundsForWeekNumber(parseWeek(lesson?.week));
+  const fallbackDate = fallbackBound === 'end' ? bounds?.sunday : bounds?.monday;
+  return fallbackDate && !Number.isNaN(fallbackDate.getTime()) ? fallbackDate : null;
+}
+
+function formatProjectRangeDate(value, includeYear = false) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('nl-NL', {
+    day: 'numeric',
+    month: 'short',
+    ...(includeYear ? { year: 'numeric' } : {}),
+  }).format(date);
+}
+
+function projectDateRangeLabel(group, classId = state.currentClass) {
+  const lessons = Array.isArray(group?.lessons) ? group.lessons : [];
+  const starts = lessons
+    .map((lesson) => dateForProjectLesson(classId, lesson, 'start'))
+    .filter(Boolean)
+    .sort((left, right) => left - right);
+  const ends = lessons
+    .map((lesson) => dateForProjectLesson(classId, lesson, 'end'))
+    .filter(Boolean)
+    .sort((left, right) => left - right);
+  const start = starts[0] || null;
+  const end = ends[ends.length - 1] || start;
+  if (!start) return '';
+
+  const includeYear = start.getFullYear() !== end.getFullYear();
+  if (start.toDateString() === end.toDateString()) {
+    return formatProjectRangeDate(start, includeYear);
+  }
+  return `${formatProjectRangeDate(start, includeYear)} t/m ${formatProjectRangeDate(end, includeYear)}`;
+}
+
 function projectTimelineState(group) {
   const statuses = (group?.lessons || []).map((lesson) => getLessonTimelineStatus(state.currentClass, lesson).state);
   if (!statuses.length) return 'future';
@@ -3102,7 +3148,8 @@ function renderWeeks() {
 
   for (const group of projectGroups) {
     const projectStatus = projectTimelineState(group);
-    const article = document.createElement('article');
+    const projectRange = projectDateRangeLabel(group, state.currentClass);
+    const article = document.createElement('details');
     article.className = `week-card is-${projectStatus}`;
     article.id = group.id;
     if (group.order === 1) article.classList.add('is-current');
@@ -3156,10 +3203,11 @@ function renderWeeks() {
       : '<article class="empty-state">Geen lespresentaties ingepland in dit project.</article>';
 
     article.innerHTML = `
-      <header class="week-card-head">
+      <summary class="week-card-summary">
         <div>
           <p class="overview-label">Klas ${escapeHtml(state.currentClass)}</p>
           <h3>${escapeHtml(group.project)}</h3>
+          ${projectRange ? `<p class="project-date-range">Geschat: ${escapeHtml(projectRange)}</p>` : ''}
         </div>
         <div class="week-card-badges">
           <span class="project-progress-badge project-progress-${escapeHtml(projectStatus)}">
@@ -3168,7 +3216,7 @@ function renderWeeks() {
           </span>
           <span class="week-badge">Project ${group.order} · ${group.lessons.length} lessen</span>
         </div>
-      </header>
+      </summary>
       ${lessonsHtml}
     `;
 
@@ -3179,6 +3227,7 @@ function renderWeeks() {
     jumpButton.className = `week-jump-chip${group.order === 1 ? ' is-current' : ''}`;
     jumpButton.textContent = group.project;
     jumpButton.addEventListener('click', () => {
+      article.open = true;
       article.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     weekJumpBar?.appendChild(jumpButton);
@@ -3224,6 +3273,7 @@ async function fetchJson(url) {
 
 async function boot() {
   try {
+    state.currentWeek = currentPlanningWeek();
     const [planningRaw, classMap, agendaRaw, teacherSelectionRaw, kerndoelenRaw] = await Promise.all([
       fetchJson(PLANNING_URL),
       fetchJson(CLASSES_URL).catch(() => ({})),
@@ -3302,6 +3352,7 @@ jumpToCurrentWeekBtn?.addEventListener('click', () => {
     timelineDetails,
   ].find(Boolean);
   if (targetEl) {
+    targetEl.closest?.('details.week-card')?.setAttribute('open', '');
     targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }

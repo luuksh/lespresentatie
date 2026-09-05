@@ -895,6 +895,10 @@ body::before {
   padding: 22px;
 }
 
+.week-card:not([open]) {
+  padding-bottom: 18px;
+}
+
 .week-card::before {
   content: "";
   position: absolute;
@@ -930,12 +934,48 @@ body::before {
   border-color: rgba(15, 118, 110, 0.28);
 }
 
-.week-card-head {
+.week-card-summary {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
+  padding-right: 46px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.week-card-summary::marker {
+  content: "";
+}
+
+.week-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.week-card-summary::after {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--portal-muted-strong);
+  font-weight: 900;
+  box-shadow: var(--portal-shadow-sm);
+}
+
+.week-card[open] .week-card-summary {
   margin-bottom: 16px;
+}
+
+.week-card[open] .week-card-summary::after {
+  content: "-";
 }
 
 .week-card h3,
@@ -946,6 +986,13 @@ body::before {
 .week-card h3 {
   font-size: 1.7rem;
   letter-spacing: -0.03em;
+}
+
+.project-date-range {
+  margin: 6px 0 0;
+  color: var(--portal-muted-strong);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .week-card-badges {
