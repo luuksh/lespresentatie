@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:04:08+02:00",
+  "updatedAt": "2026-09-05T22:04:10+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2764,7 +2764,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2795,7 +2795,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2826,7 +2826,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2857,7 +2857,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2888,7 +2888,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2919,7 +2919,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2950,7 +2950,7 @@
           "classId": "1",
           "week": "38",
           "sequenceIndex": 3,
-          "manualStatus": "done"
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -32186,7 +32186,7 @@
       "subtitle": "Start Nederlands 4"
     }
   },
-  "sourceRevision": "2026-09-05T22:04:08+02:00-studio",
+  "sourceRevision": "2026-09-05T22:04:10+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
