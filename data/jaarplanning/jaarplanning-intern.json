@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:04:10+02:00",
+  "updatedAt": "2026-09-05T22:04:23+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2756,13 +2756,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2787,13 +2787,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2818,13 +2818,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2849,13 +2849,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2880,13 +2880,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2911,13 +2911,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2942,13 +2942,13 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 5: Pitch voorbereiden",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-5-pitch-voorbereiden",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "35",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2972,15 +2972,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3002,15 +3003,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3032,15 +3034,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3062,15 +3065,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3092,15 +3096,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3122,15 +3127,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3152,15 +3158,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Netschrift",
-          "lesson": "Netschrift bijwerken + spellingscorrectie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-netschrift-bijwerken-spellingscorrectie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "38",
-          "sequenceIndex": 4
+          "week": "35",
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -32186,7 +32193,7 @@
       "subtitle": "Start Nederlands 4"
     }
   },
-  "sourceRevision": "2026-09-05T22:04:10+02:00-studio",
+  "sourceRevision": "2026-09-05T22:04:23+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
