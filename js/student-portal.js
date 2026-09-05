@@ -1432,10 +1432,30 @@ function getClassProgressAnchor(classId, now = new Date()) {
   const selectedEntry = findAgendaEntryForCurrentOrNext(agendaEntries, now);
   const anchorLesson = findProgressAnchorLesson(classId, agendaEntries, selectedEntry, now);
   if (anchorLesson) {
+    const anchorIndex = findLessonIndexByIdentity(lessons, anchorLesson.lesson);
+    const manualIndex = adjustedAnchorIndexByManualStatus(lessons, anchorIndex);
+    if (manualIndex >= lessons.length) return { doneAll: true, anchorIndex: manualIndex, agendaEntry: selectedEntry, source: 'handmatig' };
+    if (manualIndex !== anchorIndex) {
+      const manualLesson = lessons[manualIndex];
+      const manualLessonKey = String(manualLesson.lessonKey || '').trim().toUpperCase();
+      const manualEntry = getEntryForWeek(classId, manualLesson.week);
+      if (manualEntry && manualLessonKey) {
+        return {
+          doneAll: false,
+          source: 'handmatig',
+          anchorIndex: manualIndex,
+          agendaEntry: selectedEntry,
+          useProjectLessonForAgendaEntry: true,
+          entry: manualEntry,
+          lesson: manualLesson,
+          lessonKey: manualLessonKey,
+        };
+      }
+    }
     return {
       doneAll: false,
       source: 'anchor',
-      anchorIndex: findLessonIndexByIdentity(lessons, anchorLesson.lesson),
+      anchorIndex,
       agendaEntry: selectedEntry,
       useProjectLessonForAgendaEntry: Boolean(anchorLesson.anchor?.useProjectOnFirstLesson)
         || lessonNumberForAgendaWeek(agendaEntries, selectedEntry) > 1,
@@ -1443,7 +1463,10 @@ function getClassProgressAnchor(classId, now = new Date()) {
     };
   }
 
-  const anchorIndex = projectAnchorIndexFromAgenda(classId, lessons, agendaEntries, now);
+  const anchorIndex = adjustedAnchorIndexByManualStatus(
+    lessons,
+    projectAnchorIndexFromAgenda(classId, lessons, agendaEntries, now),
+  );
 
   if (anchorIndex >= lessons.length) {
     return { doneAll: true, anchorIndex, agendaEntry: selectedEntry };
@@ -1554,7 +1577,7 @@ function findNextLessonForClass(classId, now = new Date()) {
   const nextAgendaEntry = progressAnchor?.agendaEntry || null;
   const fallbackLessons = getProjectOrderedLessonsForClass(classId);
   const agendaEntries = getAgendaEntriesForClass(classId);
-  const teacherPlan = nextAgendaEntry
+  const teacherPlan = nextAgendaEntry && progressAnchor?.source !== 'handmatig'
     ? teacherProgressPlanningForAgendaEntry(classId, agendaEntries, nextAgendaEntry)
     : null;
   if (teacherPlan?.entry && teacherPlan?.lesson && teacherPlan?.lessonKey) {
@@ -2027,9 +2050,30 @@ function firstPresentationTargetForGroup(group) {
   return lesson ? buildPresentationTarget(lesson) : null;
 }
 
+function manualLessonStatus(lesson) {
+  const value = String(lesson?.manualStatus || lesson?.statusOverride || '').trim().toLowerCase();
+  if (value === 'done' || value === 'todo') return value;
+  if (lesson?.lessonDone === true || lesson?.completed === true) return 'done';
+  return '';
+}
+
+function adjustedAnchorIndexByManualStatus(lessons, anchorIndex) {
+  const safeIndex = Math.max(0, Math.min(
+    Number.isInteger(anchorIndex) ? anchorIndex : 0,
+    lessons.length,
+  ));
+  const firstForcedTodo = lessons.findIndex((lesson) => manualLessonStatus(lesson) === 'todo');
+  let index = firstForcedTodo >= 0 && firstForcedTodo < safeIndex ? firstForcedTodo : safeIndex;
+  while (index < lessons.length && manualLessonStatus(lessons[index]) === 'done') index += 1;
+  return index;
+}
+
 function getLessonTimelineStatus(classId, lesson, now = new Date()) {
   const week = String(lesson?.week || '').trim();
   const lessonKey = String(lesson?.lessonKey || '').trim().toUpperCase();
+  const manualStatus = manualLessonStatus(lesson);
+  if (manualStatus === 'done') return { state: 'done', label: 'Afgevinkt', icon: '✓' };
+  if (manualStatus === 'todo') return { state: 'future', label: 'Niet geweest', icon: '○' };
   const progressAnchor = getClassProgressAnchor(classId, now);
   if (progressAnchor) {
     const orderedLessons = getProjectOrderedLessonsForClass(classId);
