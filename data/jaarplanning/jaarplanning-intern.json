@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:02:57+02:00",
+  "updatedAt": "2026-09-05T22:03:00+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2762,7 +2762,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2793,7 +2793,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2824,7 +2824,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2855,7 +2855,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2886,7 +2886,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2917,7 +2917,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2948,7 +2948,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
-          "week": "38",
+          "week": "36",
           "sequenceIndex": 3,
           "manualStatus": "todo"
         }
@@ -2979,7 +2979,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3010,7 +3010,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3041,7 +3041,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3072,7 +3072,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3103,7 +3103,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3134,7 +3134,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -3165,7 +3165,7 @@
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
-          "week": "39",
+          "week": "37",
           "sequenceIndex": 4,
           "manualStatus": "todo"
         }
@@ -32193,7 +32193,7 @@
       "subtitle": "Start Nederlands 4"
     }
   },
-  "sourceRevision": "2026-09-05T22:02:57+02:00-studio",
+  "sourceRevision": "2026-09-05T22:03:00+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
