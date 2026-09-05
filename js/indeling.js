@@ -1124,11 +1124,14 @@ async function autoApplyLayoutForProject(projectName, classId = getCurrentClassI
   return false;
 }
 
-function applyDefaultBusLayout() {
+function applyDefaultLayout(type = 'h216') {
   const typeSel = document.getElementById('indelingSelect');
   const currentType = getCurrentType();
-  if (!typeSel || currentType === 'h216') return;
-  typeSel.value = 'h216';
+  const targetType = String(type || '').trim() || 'h216';
+  const hasTargetOption = typeSel && [...typeSel.options].some((option) => option.value === targetType);
+  if (isGroupLayoutType(currentType)) return;
+  if (!hasTargetOption || currentType === targetType) return;
+  typeSel.value = targetType;
   typeSel.dispatchEvent(new Event('change', { bubbles: true }));
 }
 
@@ -1216,15 +1219,16 @@ function applyDefaultBusLayout() {
     window.__planningProjectContext = detail;
     const classId = String(detail.classId || '').trim() || getCurrentClassId();
     const primaryProject = String(detail.primaryProject || '').trim();
+    const defaultLayoutType = String(detail.defaultLayoutType || '').trim() || 'h216';
     if (!primaryProject) {
       window.__autoAppliedProjectLayoutKey = '';
-      applyDefaultBusLayout();
+      applyDefaultLayout(defaultLayoutType);
       return;
     }
     void autoApplyLayoutForProject(primaryProject, classId).then((applied) => {
       if (!applied) {
         window.__autoAppliedProjectLayoutKey = '';
-        applyDefaultBusLayout();
+        applyDefaultLayout(defaultLayoutType);
       }
     });
   });

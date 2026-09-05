@@ -4,17 +4,17 @@
   "sourceWorkbook": "/Users/luukhijne/Downloads/Kerndoelen Visie en Magister.xlsx",
   "projects": [
     {
-      "id": "heel-veel-lezen",
-      "name": "Heel veel lezen",
+      "id": "leesmeters",
+      "name": "Leesmeters",
       "column": 9,
       "primaryMagisterSkill": "Literatuur",
       "secondaryMagisterSkills": [
         "Diep lezen"
       ],
       "skillRationale": "De projectpresentatie draait om leesritme, boekkeuze, leeservaring, leesplezier en langdurig boeklezen. Dat maakt Literatuur de hoofdvaardigheid; Diep lezen ondersteunt het begrijpen en volhouden van teksten.",
-      "sourceBasis": "Projectdeck 'Heel veel lezen' in jaarplanning-live.json, met nadruk op boeken kiezen, stillezen, leesrechten, boekmatch en leescirkel.",
-      "assessmentSummary": "In Heel veel lezen verschuift de beoordeling vooral op Literatuur: leesroutine opbouwen, boeken kiezen, leeservaring verdiepen en een duurzame leeshouding ontwikkelen.",
-      "studentFacingDescription": "Tijdens Heel veel lezen bouw je een stevig leesritme op. Je wordt beoordeeld op hoe aandachtig je leest, hoe goed je passende boeken kiest en hoe bewust je nadenkt over wat lezen met jou en je begrip doet.",
+      "sourceBasis": "Projectdeck 'Leesmeters' in jaarplanning-live.json, met nadruk op boeken kiezen, stillezen, leesrechten, boekmatch en leescirkel.",
+      "assessmentSummary": "In Leesmeters verschuift de beoordeling vooral op Literatuur: leesroutine opbouwen, boeken kiezen, leeservaring verdiepen en een duurzame leeshouding ontwikkelen.",
+      "studentFacingDescription": "Tijdens Leesmeters bouw je een stevig leesritme op. Je wordt beoordeeld op hoe aandachtig je leest, hoe goed je passende boeken kiest en hoe bewust je nadenkt over wat lezen met jou en je begrip doet.",
       "magisterNote": "Na dit project vooral Diep lezen verschuiven. Kijk naar leeshouding, volhouden, tekstbegrip, woordenschat in context en reflectie op boekkeuze.",
       "teacherNotes": "Gebruik leesgedrag, check-ins en reflectiemomenten samen als bewijs. Het accent ligt minder op product en meer op leesontwikkeling, boekmatch en volgehouden begrip.",
       "stats": {
@@ -111,12 +111,12 @@
         "Spreken",
         "Schrijven"
       ],
-      "skillRationale": "Faalfestival bouwt voort op boeken, hoofdpersonages, levenslessen, hertalingen, posters en de Faalbattle. Het vertrekpunt is literaire interpretatie; spreken en schrijven ondersteunen de verwerking en performance.",
-      "sourceBasis": "Projectdeck 'Faalfestival' in jaarplanning-live.json, met hoofdpersonages, posterpresentaties, faalbattle en argumentatieve performance.",
-      "assessmentSummary": "In Faalfestival verschuift de beoordeling vooral op Literatuur: personages en verhalen interpreteren en die analyse creatief en mondeling uitwerken in poster en battle.",
-      "studentFacingDescription": "Tijdens Faalfestival onderzoek je hoe verhalen over falen werken en maak je daar zelf iets van. Je wordt beoordeeld op hoe aandachtig je leest, hoe je betekenis geeft aan wat je leest en hoe je dat creatief of mondeling uitwerkt.",
-      "magisterNote": "Na Faalfestival vooral brede taalvaardigheden en Diep lezen verschuiven rond tekstbegrip, thematische verwerking en presentatie van een eigen uitwerking.",
-      "teacherNotes": "Gebruik poster, hertaling en faalbattle samen als bewijs. Het project vraagt om begrip van teksten en om een veilige maar duidelijke beoordeling van verwerking en presentatie.",
+      "skillRationale": "Faalfestival bouwt voort op dieplezen, middeleeuwse verhalen, personageanalyse, hertaling, creatieve verwerking, poster en Faalbattle. De inhoud wordt eerst individueel in het netschrift opgebouwd; de gezamenlijke poster en presentatie maken de selectie zichtbaar.",
+      "sourceBasis": "Projectdeck 'Faalfestival' in jaarplanning-live.json, met individuele netschriftversies per onderdeel, groepsselectie voor de poster, posterpresentaties, Faalbattle en reflectie.",
+      "assessmentSummary": "In Faalfestival wordt het individuele netschrift beoordeeld op inhoud: onderzoek, analyse, hertaling, keuzes, verbetering en reflectie. Poster en presentatie worden beoordeeld op presenteren: heldere selectie, visuele ondersteuning, overtuigend spreken en samenwerking.",
+      "studentFacingDescription": "Tijdens Faalfestival onderzoek je middeleeuwse verhalen over falen. Elk onderdeel werk je eerst zelf uit in je netschrift; daarna kiest je groep wat op de poster komt. Je netschrift telt voor de inhoud, de poster en presentatie tellen voor hoe jullie het presenteren.",
+      "magisterNote": "Na Faalfestival vooral Literatuur verschuiven op basis van het individuele netschrift; Spreken/Schrijven ondersteunen via posterpresentatie, Faalbattle en reflectie.",
+      "teacherNotes": "Beoordeel inhoud primair individueel via het netschrift. Gebruik poster, presentatie en Faalbattle voor presentatievaardigheid en samenwerking; voorkom dat een sterke groepsposter zwakke individuele inhoud maskeert.",
       "stats": {
         "focus": 3,
         "support": 4
@@ -524,9 +524,9 @@
       "note": "sterk bij lees- en literatuurprojecten",
       "projects": {
         "faalfestival": "support",
-        "heel-veel-lezen": "support",
         "poezie": "support",
-        "renaissance": "support"
+        "renaissance": "support",
+        "leesmeters": "support"
       }
     },
     {
@@ -541,9 +541,9 @@
       "specification": "",
       "note": "vooral impliciet, zelden expliciet criterium",
       "projects": {
-        "heel-veel-lezen": "support",
         "renaissance": "support",
-        "technologie": "support"
+        "technologie": "support",
+        "leesmeters": "support"
       }
     },
     {
@@ -816,7 +816,7 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus"
+        "leesmeters": "focus"
       }
     },
     {
@@ -831,7 +831,7 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus"
+        "leesmeters": "focus"
       }
     },
     {
@@ -846,7 +846,7 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus"
+        "leesmeters": "focus"
       }
     },
     {
@@ -874,7 +874,7 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus"
+        "leesmeters": "focus"
       }
     },
     {
@@ -889,7 +889,7 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus"
+        "leesmeters": "focus"
       }
     },
     {
@@ -904,8 +904,8 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus",
-        "verweggers": "focus"
+        "verweggers": "focus",
+        "leesmeters": "focus"
       }
     },
     {
@@ -920,9 +920,9 @@
       "specification": "",
       "note": "",
       "projects": {
-        "heel-veel-lezen": "focus",
         "poezie": "focus",
-        "verweggers": "focus"
+        "verweggers": "focus",
+        "leesmeters": "focus"
       }
     },
     {

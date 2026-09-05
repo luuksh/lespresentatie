@@ -142,6 +142,156 @@ textarea {
   background: linear-gradient(180deg, #cf4f48, var(--danger));
 }
 
+.lesson-order-panel {
+  border: 1px solid #cfdcf0;
+  border-radius: 10px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.lesson-order-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.lesson-order-head h3,
+.lesson-order-head p {
+  margin: 0;
+}
+
+.lesson-order-head > p {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-order-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.lesson-order-section {
+  min-width: 0;
+}
+
+.lesson-order-section h4 {
+  margin: 0 0 8px;
+  color: #284a77;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lesson-order-cards {
+  display: grid;
+  gap: 8px;
+}
+
+.lesson-order-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+  border: 1px solid #d7e3f4;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+}
+
+.lesson-order-card[draggable="true"] {
+  cursor: grab;
+}
+
+.lesson-order-card.is-dragging {
+  opacity: 0.55;
+}
+
+.lesson-order-card.is-drop-before {
+  box-shadow: inset 0 3px 0 #1f5ec2;
+}
+
+.lesson-order-card.is-drop-after {
+  box-shadow: inset 0 -3px 0 #1f5ec2;
+}
+
+.lesson-order-card.is-active {
+  border-color: #8fb0e3;
+  background: #f3f7ff;
+}
+
+.lesson-order-card.is-locked {
+  background: #f7f8fb;
+}
+
+.lesson-order-status,
+.lesson-order-card h5,
+.lesson-order-card p {
+  margin: 0;
+}
+
+.lesson-order-status {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.lesson-order-card h5 {
+  margin-top: 4px;
+  color: #102644;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.lesson-order-card p:not(.lesson-order-status) {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lesson-order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 5px;
+  width: 112px;
+}
+
+.lesson-order-actions button,
+.lesson-order-actions a {
+  min-height: 28px;
+  border: 0;
+  border-radius: 7px;
+  background: #e7effd;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+.lesson-order-actions button:hover,
+.lesson-order-actions a:hover {
+  background: #d7e5fb;
+}
+
+.lesson-order-empty {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .sheet-wrap {
   border: 1px solid #cfdcf0;
   border-radius: 10px;
@@ -225,6 +375,16 @@ textarea {
 @media (max-width: 980px) {
   .studio-grid {
     grid-template-columns: 1fr;
+  }
+
+  .lesson-order-head {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .lesson-order-list {
+    grid-template-columns: 1fr;
+    max-height: none;
   }
 
   .sheet-wrap {

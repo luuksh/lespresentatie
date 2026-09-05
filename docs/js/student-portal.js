@@ -1,5 +1,3 @@
-import { buildProjectSnapshot, loadKerndoelenDoc, slugifyProject } from './kerndoelen-data.js';
-
 const CONFIG = window.STUDENT_PORTAL_CONFIG || {};
 const PLANNING_URL = String(CONFIG.planningUrl || 'js/jaarplanning-live.json');
 const CLASSES_URL = String(CONFIG.classesUrl || 'js/leerlingen_per_klas.json');
@@ -106,6 +104,66 @@ const PROJECT_ORDER_BY_GRADE = {
     'Taalmakers',
   ],
 };
+
+function slugifyProject(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function fallbackProjectBySlug(doc, value) {
+  const slug = slugifyProject(value);
+  return (doc?.projects || []).find((project) => slugifyProject(project.id || project.name) === slug) || null;
+}
+
+function fallbackRecordsForProject(doc, projectId) {
+  const slug = slugifyProject(projectId);
+  return (doc?.records || [])
+    .filter((record) => record?.projects?.[slug])
+    .sort((left, right) => {
+      const numberDelta = Number(left.kerndoelNumber || 0) - Number(right.kerndoelNumber || 0);
+      if (numberDelta !== 0) return numberDelta;
+      const codeDelta = String(left.subgoalCode || '').localeCompare(String(right.subgoalCode || ''), 'nl');
+      if (codeDelta !== 0) return codeDelta;
+      return String(left.label || '').localeCompare(String(right.label || ''), 'nl');
+    });
+}
+
+function buildProjectSnapshot(doc, projectId) {
+  const project = fallbackProjectBySlug(doc, projectId);
+  if (!project) return null;
+  const projectSlug = slugifyProject(project.id || project.name);
+  const records = fallbackRecordsForProject(doc, projectSlug);
+  const focusRecords = records.filter((record) => record.projects?.[projectSlug] === 'focus');
+  const supportRecords = records.filter((record) => record.projects?.[projectSlug] === 'support');
+  const skills = [...new Set(
+    focusRecords
+      .map((record) => String(record.magisterSkill || '').trim())
+      .filter(Boolean)
+  )].sort((left, right) => left.localeCompare(right, 'nl'));
+  return {
+    project,
+    records,
+    focusRecords,
+    supportRecords,
+    skills: project.primaryMagisterSkill
+      ? [project.primaryMagisterSkill, ...(project.secondaryMagisterSkills || []).filter((value) => value !== project.primaryMagisterSkill)]
+      : skills,
+  };
+}
+
+async function loadKerndoelenDocSafe(url) {
+  try {
+    const module = await import('./kerndoelen-data.js');
+    return module.loadKerndoelenDoc(url);
+  } catch (err) {
+    console.warn('Kerndoelenkaart kon niet worden geladen; de planning blijft beschikbaar.', err);
+    return null;
+  }
+}
 const CURRENT_PROGRESS_ANCHORS = [
   { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
   { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
@@ -271,12 +329,13 @@ function normalizeReadingLocks(raw) {
     const rawDay = value && typeof value === 'object' ? value.day || value.weekday : value;
     const day = normalizeWeekday(rawDay);
     if (normalizedClass && day) {
-      out[normalizedClass] = { day };
+      const start = normalizeTime(value && typeof value === 'object' ? value.start || value.time : '');
+      out[normalizedClass] = start ? { day, start } : { day };
       continue;
     }
     const lessonKey = String((value && typeof value === 'object' ? value.lessonKey || value.slot : value) || '').trim().toUpperCase();
-    const slotDay = dayForClassSlot(normalizedClass, lessonKey);
-    if (normalizedClass && slotDay) out[normalizedClass] = { day: slotDay };
+    const slot = scheduleSlotForClassSlot(normalizedClass, lessonKey);
+    if (normalizedClass && slot) out[normalizedClass] = { day: slot.day, start: slot.start };
   }
   return out;
 }
@@ -486,6 +545,14 @@ function minutesFromTime(value) {
   return Number(match[1]) * 60 + Number(match[2]);
 }
 
+function normalizeTime(value) {
+  const minutes = minutesFromTime(value);
+  if (!Number.isFinite(minutes)) return '';
+  const hour = Math.floor(minutes / 60);
+  const minute = minutes % 60;
+  return `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+}
+
 function baseScheduleForClass(classId) {
   for (const alias of classPlanningAliases(classId)) {
     if (BASE_SCHEDULE[alias]) return BASE_SCHEDULE[alias].map((slot) => ({ ...slot }));
@@ -493,25 +560,31 @@ function baseScheduleForClass(classId) {
   return [];
 }
 
-function dayForClassSlot(classId, lessonKey) {
+function scheduleSlotForClassSlot(classId, lessonKey) {
   const cleanKey = String(lessonKey || '').trim().toUpperCase();
   const slot = baseScheduleForClass(classId).find((item) => item.slot === cleanKey);
-  return Number(slot?.day) || 0;
+  return slot ? { day: Number(slot.day), start: normalizeTime(slot.start), slot: slot.slot } : null;
+}
+
+function readingMomentForClass(classId) {
+  for (const alias of classPlanningAliases(classId)) {
+    const day = normalizeWeekday(state.doc.readingLocks?.[alias]?.day);
+    if (day) return { day, start: normalizeTime(state.doc.readingLocks?.[alias]?.start) };
+    const legacyLessonKey = state.doc.readingLocks?.[alias]?.lessonKey;
+    const legacySlot = scheduleSlotForClassSlot(alias, legacyLessonKey);
+    if (legacySlot) return { day: legacySlot.day, start: legacySlot.start };
+  }
+  return { day: 0, start: '' };
 }
 
 function readingDayForClass(classId) {
-  for (const alias of classPlanningAliases(classId)) {
-    const day = normalizeWeekday(state.doc.readingLocks?.[alias]?.day);
-    if (day) return day;
-    const legacyLessonKey = state.doc.readingLocks?.[alias]?.lessonKey;
-    const legacyDay = dayForClassSlot(alias, legacyLessonKey);
-    if (legacyDay) return legacyDay;
-  }
-  return 0;
+  return readingMomentForClass(classId).day || 0;
 }
 
 function fixedReadingMomentForClass(classId) {
-  const lockedDay = readingDayForClass(classId);
+  const lockedMoment = readingMomentForClass(classId);
+  const lockedDay = lockedMoment.day;
+  if (lockedDay && lockedMoment.start) return lockedMoment;
   if (lockedDay) {
     const scheduleSlot = baseScheduleForClass(classId)
       .filter((slot) => Number(slot.day) === lockedDay)
@@ -753,6 +826,18 @@ function formatLessonDate(value) {
 }
 
 function formatLessonDateTime(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('nl-NL', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date);
+}
+
+function lessonPredictionLabel(value) {
   const date = value instanceof Date ? value : new Date(value);
   if (Number.isNaN(date.getTime())) return '';
   return new Intl.DateTimeFormat('nl-NL', {
@@ -1192,8 +1277,12 @@ function isStandardReadingDay(agendaEntry) {
   if (!agendaEntry?.start) return false;
   const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
   if (Number.isNaN(start.getTime())) return false;
-  const fixedDay = fixedReadingDayForClass(agendaEntry.classId);
+  const fixedMoment = fixedReadingMomentForClass(agendaEntry.classId);
+  const fixedDay = fixedMoment?.day || fixedReadingDayForClass(agendaEntry.classId);
   if (!fixedDay || (start.getDay() || 7) !== fixedDay) return false;
+  if (fixedMoment?.start) {
+    return start.getHours() * 60 + start.getMinutes() === minutesFromTime(fixedMoment.start);
+  }
   const agendaEntries = getAgendaEntriesForClass(agendaEntry.classId);
   const weekKey = agendaEntryWeekKey(agendaEntry);
   const firstOnDay = agendaEntries
@@ -1205,9 +1294,7 @@ function isStandardReadingDay(agendaEntry) {
     })
     .sort((left, right) => left.start - right.start)[0] || null;
   if (firstOnDay) return isSameAgendaEntry(firstOnDay, agendaEntry);
-  const fixedMoment = fixedReadingMomentForClass(agendaEntry.classId);
-  return Boolean(fixedMoment)
-    && (start.getHours() * 60 + start.getMinutes()) === minutesFromTime(fixedMoment.start);
+  return false;
 }
 
 function hasExplicitStartLessons(entry) {
@@ -1985,6 +2072,14 @@ function getLessonTimelineStatus(classId, lesson, now = new Date()) {
     if (lessonOrder === currentOrder) return { state: 'active', label: 'Deze week', icon: '•' };
   }
   return { state: 'future', label: 'Nog te doen', icon: '○' };
+}
+
+function predictedScheduleForLesson(classId, lesson) {
+  const week = String(lesson?.week || '').trim();
+  const lessonKey = String(lesson?.lessonKey || '').trim().toUpperCase();
+  return getScheduledLessonForWeek(classId, week, lessonKey)
+    || inferScheduledLessonForWeek(classId, week, lessonKey)
+    || null;
 }
 
 function projectTimelineState(group) {
@@ -2980,6 +3075,13 @@ function renderWeeks() {
           ...lesson,
         });
         const timelineStatus = getLessonTimelineStatus(state.currentClass, lesson);
+        const predictedSchedule = predictedScheduleForLesson(state.currentClass, lesson);
+        const predictedDate = predictedSchedule?.start
+          ? (predictedSchedule.start instanceof Date ? predictedSchedule.start : new Date(predictedSchedule.start))
+          : null;
+        const predictionLabel = predictedDate && !Number.isNaN(predictedDate.getTime())
+          ? lessonPredictionLabel(predictedDate)
+          : '';
         const culmination = isAssessment ? getProjectCulmination(state.currentClass, project) : null;
         const lessonAnchorId = `lesson-${normalizeClassId(state.currentClass)}-${parseWeek(lesson.week)}-${lessonKey}`;
         const target = buildPresentationTarget({
@@ -2987,6 +3089,7 @@ function renderWeeks() {
           week: String(lesson.week),
           lessonKey,
           ...lesson,
+          scheduledDate: predictedDate && !Number.isNaN(predictedDate.getTime()) ? predictedDate.toISOString() : '',
         });
         const hasPresentation = Boolean(resolvePresentation(target).presentation);
         return `
@@ -2995,6 +3098,7 @@ function renderWeeks() {
               <span class="lesson-status-icon" aria-hidden="true">${escapeHtml(timelineStatus.icon)}</span>
               <span>${escapeHtml(timelineStatus.label)}</span>
             </p>
+            ${predictionLabel ? `<p class="lesson-date">Verwacht: ${escapeHtml(predictionLabel)}</p>` : ''}
             ${isAssessment ? `<p class="assessment-chip">Eindbeoordeling${culmination?.assessmentType ? ` · ${escapeHtml(culmination.assessmentType)}` : ''}</p>` : ''}
             <h4>${escapeHtml(title)}</h4>
             ${project ? `<p><strong>Project:</strong> ${escapeHtml(project)}</p>` : ''}
@@ -3078,10 +3182,10 @@ async function boot() {
   try {
     const [planningRaw, classMap, agendaRaw, teacherSelectionRaw, kerndoelenRaw] = await Promise.all([
       fetchJson(PLANNING_URL),
-      fetchJson(CLASSES_URL),
+      fetchJson(CLASSES_URL).catch(() => ({})),
       fetchJson(AGENDA_URL).catch(() => ({ entries: [] })),
       fetchJson(TEACHER_SELECTION_URL).catch(() => ({ entries: [] })),
-      loadKerndoelenDoc(KERNDOELEN_URL).catch(() => null),
+      loadKerndoelenDocSafe(KERNDOELEN_URL),
     ]);
 
     state.doc = preferFreshStudioDoc(planningRaw);

@@ -1,7 +1,37 @@
 {
-  "updatedAt": "2026-09-05T18:17:26.882655+00:00",
+  "updatedAt": "2026-09-05T19:32:43.215083+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
+    {
+      "classId": "MENTORLES",
+      "start": "2026-09-01T08:30:00+00:00",
+      "end": "2026-09-01T11:00:00+00:00",
+      "summary": "h215 kmt g1d mentorles 1",
+      "description": "h215 kmt g1d - mentorles 1 1D welkom en wegwijs",
+      "location": "H215",
+      "categories": "",
+      "uid": "mentorles-eerste-dag-1d-20260901@codex"
+    },
+    {
+      "classId": "MENTORLES",
+      "start": "2026-09-02T07:00:00+00:00",
+      "end": "2026-09-02T10:00:00+00:00",
+      "summary": "h215 kmt g1d mentorles 2 ict-carrousel",
+      "description": "h215 kmt g1d - mentorles 2 1D ICT-carrousel",
+      "location": "H215",
+      "categories": "",
+      "uid": "mentorles-startweek-1d-les-2-20260902@codex"
+    },
+    {
+      "classId": "MENTORLES",
+      "start": "2026-09-03T07:00:00+00:00",
+      "end": "2026-09-03T10:00:00+00:00",
+      "summary": "h215 kmt g1d mentorles 3 u in utrecht",
+      "description": "h215 kmt g1d - mentorles 3 1D U in Utrecht",
+      "location": "H215",
+      "categories": "",
+      "uid": "mentorles-startweek-1d-les-3-20260903@codex"
+    },
     {
       "classId": "G1D",
       "start": "2026-09-04T06:15:00+00:00",
@@ -181,16 +211,6 @@
       "location": "",
       "categories": "",
       "uid": "1137759@cgu"
-    },
-    {
-      "classId": "G1D",
-      "start": "2026-09-10T07:45:00+00:00",
-      "end": "2026-09-10T08:30:00+00:00",
-      "summary": "u105 wtu g1d",
-      "description": "u105 wtu g1d",
-      "location": "",
-      "categories": "",
-      "uid": "1144113@cgu"
     },
     {
       "classId": "G1D",

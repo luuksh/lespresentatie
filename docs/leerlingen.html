@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaarplanning | Nederlands</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/student-portal.css?v=202609051657" />
+  <link rel="stylesheet" href="css/student-portal.css?v=202609052135" />
   <script>
     window.STUDENT_PORTAL_CONFIG = {
       planningUrl: 'js/jaarplanning-live.json',
@@ -13,10 +13,11 @@
       agendaUrl: 'js/zermelo-agenda-live.json?v=20260409-04',
       teacherSelectionUrl: 'js/docent-lesselectie-live.json',
       kerndoelenUrl: 'data/kerndoelen/kerndoelen-map.json',
-      internalHubUrl: 'index.html'
+      internalHubUrl: 'index.html',
+      useLocalStudioDraft: ['127.0.0.1', 'localhost'].includes(location.hostname)
     };
   </script>
-  <script type="module" src="js/student-portal.js?v=202609051657"></script>
+  <script type="module" src="js/student-portal.js?v=202609052135"></script>
 </head>
 <body>
   <main class="portal-shell">

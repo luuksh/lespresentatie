@@ -32,6 +32,38 @@ CLASS_PATTERNS = [
     re.compile(r"\b\dG\d+\b"),
     re.compile(r"\b\d\.\d+\b"),
 ]
+EXTRA_LOCAL_ENTRIES = [
+    {
+        "classId": MENTOR_LESSON_CLASS_ID,
+        "start": "2026-09-01T08:30:00+00:00",
+        "end": "2026-09-01T11:00:00+00:00",
+        "summary": "h215 kmt g1d mentorles 1",
+        "description": "h215 kmt g1d - mentorles 1 1D welkom en wegwijs",
+        "location": "H215",
+        "categories": "",
+        "uid": "mentorles-eerste-dag-1d-20260901@codex",
+    },
+    {
+        "classId": MENTOR_LESSON_CLASS_ID,
+        "start": "2026-09-02T07:00:00+00:00",
+        "end": "2026-09-02T10:00:00+00:00",
+        "summary": "h215 kmt g1d mentorles 2 ict-carrousel",
+        "description": "h215 kmt g1d - mentorles 2 1D ICT-carrousel",
+        "location": "H215",
+        "categories": "",
+        "uid": "mentorles-startweek-1d-les-2-20260902@codex",
+    },
+    {
+        "classId": MENTOR_LESSON_CLASS_ID,
+        "start": "2026-09-03T07:00:00+00:00",
+        "end": "2026-09-03T10:00:00+00:00",
+        "summary": "h215 kmt g1d mentorles 3 u in utrecht",
+        "description": "h215 kmt g1d - mentorles 3 1D U in Utrecht",
+        "location": "H215",
+        "categories": "",
+        "uid": "mentorles-startweek-1d-les-3-20260903@codex",
+    },
+]
 
 
 def normalize_class_id(value: str) -> str:
@@ -189,6 +221,8 @@ def is_dutch_agenda_text(*values: str, class_id: str = "") -> bool:
         return True
     if re.search(r"\bKMT\b", combined):
         return False
+    if re.search(r"\bWTU\b", combined):
+        return False
     if re.search(r"\b(NETL|NE|NED|NEDERLANDS)\b", combined):
         return True
     return True
@@ -234,6 +268,17 @@ def to_entry(event: dict) -> dict | None:
     }
 
 
+def add_extra_local_entries(entries: list[dict]) -> list[dict]:
+    seen_uids = {str(entry.get("uid") or "").strip() for entry in entries}
+    output = list(entries)
+    for entry in EXTRA_LOCAL_ENTRIES:
+        uid = str(entry.get("uid") or "").strip()
+        if uid and uid not in seen_uids:
+            output.append(dict(entry))
+            seen_uids.add(uid)
+    return output
+
+
 def fetch_ics(url: str) -> str:
     insecure = os.getenv("ZERMELO_ICAL_INSECURE", "").strip().lower() in {"1", "true", "yes", "on"}
     ca_bundle = os.getenv("ZERMELO_CA_BUNDLE", "").strip()
@@ -271,7 +316,9 @@ def main() -> int:
         return 4
 
     events = parse_ics_events(raw)
-    entries = [entry for entry in (to_entry(ev) for ev in events) if entry]
+    entries = add_extra_local_entries(
+        [entry for entry in (to_entry(ev) for ev in events) if entry]
+    )
     entries.sort(key=lambda item: (item["start"], item["classId"]))
 
     payload = {

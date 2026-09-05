@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-01" />
-  <script type="module" src="js/lesstudio.js?v=20260905-01"></script>
+  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-02" />
+  <script type="module" src="js/lesstudio.js?v=20260905-02"></script>
 </head>
 <body>
   <main class="lesson-app">
@@ -17,6 +17,7 @@
       </div>
       <nav class="main-tabs" aria-label="Hoofdnavigatie">
         <button type="button" class="main-tab is-active" data-view="studio">Lesstudio</button>
+        <button type="button" class="main-tab" data-view="presentations">Presentaties</button>
         <a class="main-tab main-tab-link" href="docent.html">Docentenbord</a>
         <button type="button" class="main-tab" data-view="curriculum">Curriculum</button>
         <button type="button" class="main-tab" data-view="netschrift">Netschrift</button>
@@ -51,17 +52,12 @@
             <select id="readingClassSelect"></select>
           </label>
           <label class="field">
-            <span>Vaste weekdag</span>
+            <span>Vast lesmoment</span>
             <select id="readingDaySelect">
-              <option value="">Kies vaste dag</option>
-              <option value="1">Maandag</option>
-              <option value="2">Dinsdag</option>
-              <option value="3">Woensdag</option>
-              <option value="4">Donderdag</option>
-              <option value="5">Vrijdag</option>
+              <option value="">Zermelo laden...</option>
             </select>
           </label>
-          <p id="readingLockLine" class="inline-note">Kies een klas en vaste Leesmeters-dag.</p>
+          <p id="readingLockLine" class="inline-note">Kies een klas en vast Leesmeters-moment.</p>
         </section>
         <div class="side-section">
           <div class="section-head">
@@ -129,8 +125,8 @@
                 <span>Project</span>
                 <input id="lessonProjectInput" type="text" />
               </label>
-              <label class="field">
-                <span>Week</span>
+              <label class="field" hidden>
+                <span>Interne positie</span>
                 <input id="lessonWeekInput" type="text" />
               </label>
               <label class="field" hidden>
@@ -165,6 +161,17 @@
           </section>
         </article>
       </section>
+    </section>
+
+    <section id="presentationLibraryView" class="app-view dashboard-view presentation-library-view" hidden>
+      <header class="dashboard-head">
+        <div>
+          <p class="app-kicker">Bibliotheek</p>
+          <h2>Alle presentaties</h2>
+        </div>
+        <a class="primary-action library-studio-link" href="presentatie-studio.html">Open oude presentatiestudio</a>
+      </header>
+      <div id="presentationLibrary" class="presentation-library"></div>
     </section>
 
     <section id="curriculumView" class="app-view dashboard-view" hidden>

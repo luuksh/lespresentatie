@@ -4,6 +4,10 @@ const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
 const STUDIO_SCHEMA_VERSION = 2;
 const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
 const SPECIAL_PLANNING_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
+const SCHOOL_YEAR_START_WEEK = 36;
+const STARTWEEK_PLANNING_WEEK = 35;
+const MENTOR_STARTWEEK_PRESENTATION_ID = 'project-mentorles-1d';
+const MAX_ISO_WEEK = 53;
 
 const classSelect = document.getElementById('classSelect');
 const saveAllBtn = document.getElementById('saveAllBtn');
@@ -11,6 +15,8 @@ const exportAllBtn = document.getElementById('exportAllBtn');
 const editorTitle = document.getElementById('editorTitle');
 const sheetBody = document.getElementById('sheetBody');
 const statusLine = document.getElementById('statusLine');
+const lessonOrderPanel = document.getElementById('lessonOrderPanel');
+const AUTOSAVE_DELAY_MS = 900;
 
 const state = {
   baseDoc: { entries: [], presentations: {}, updatedAt: '' },
@@ -18,9 +24,37 @@ const state = {
   layers: [],
 };
 
+let publishInFlight = false;
+let publishQueuedAfterCurrent = false;
+let autosaveTimer = null;
+
 function setStatus(message, isError = false) {
   statusLine.textContent = message;
   statusLine.style.color = isError ? '#9f1d1d' : '#2c4f7c';
+}
+
+function setBusyStatus(message) {
+  statusLine.textContent = message;
+  statusLine.style.color = '#5a3b00';
+}
+
+function isStorageQuotaError(err) {
+  return err?.name === 'QuotaExceededError'
+    || err?.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+    || err?.code === 22
+    || err?.code === 1014;
+}
+
+function trySaveStudioCache() {
+  try {
+    localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+    return true;
+  } catch (err) {
+    if (!isStorageQuotaError(err)) throw err;
+    try { localStorage.removeItem(STUDIO_KEY); } catch {}
+    console.warn('Browseropslag is vol; jaarplanning-studiocache is overgeslagen.', err);
+    return false;
+  }
 }
 
 function setButtonBusy(button, label) {
@@ -75,6 +109,17 @@ function planningLayerLabel(layer) {
   return normalizeClassId(layer) === MENTOR_LESSON_CLASS_ID ? 'Mentorles' : `Jaarlaag ${layer}`;
 }
 
+function schoolYearWeeks() {
+  const regularWeeks = Array.from(
+    { length: MAX_ISO_WEEK },
+    (_, index) => ((SCHOOL_YEAR_START_WEEK - 1 + index) % MAX_ISO_WEEK) + 1,
+  );
+  return [
+    STARTWEEK_PLANNING_WEEK,
+    ...regularWeeks.filter((week) => week !== STARTWEEK_PLANNING_WEEK),
+  ];
+}
+
 function normalizeDoc(raw) {
   const doc = (raw && typeof raw === 'object') ? structuredClone(raw) : {};
   if (!Array.isArray(doc.entries)) doc.entries = [];
@@ -101,6 +146,19 @@ function hasAssessmentData(doc) {
   return (doc?.entries || []).some((entry) => (
     (entry?.lessons || []).some((lesson) => String(lesson?.assessment || '').trim())
   ));
+}
+
+function hasMentorStartweekPlanning(doc) {
+  const entries = Array.isArray(doc?.entries) ? doc.entries : [];
+  const entry = entries.find((row) => (
+    normalizeClassId(row?.classId) === MENTOR_LESSON_CLASS_ID
+    && String(row?.week || '').trim() === String(STARTWEEK_PLANNING_WEEK)
+  ));
+  const lessons = Array.isArray(entry?.lessons) ? entry.lessons : [];
+  return ['A', 'B', 'C'].every((slot) => lessons.some((lesson) => (
+    String(lesson?.lessonKey || '').trim().toUpperCase() === slot
+    && String(lesson?.presentationId || '').trim() === MENTOR_STARTWEEK_PRESENTATION_ID
+  )));
 }
 
 function parseDocTimestamp(doc) {
@@ -210,6 +268,32 @@ function parseWeek(weekRaw) {
   return NaN;
 }
 
+function academicWeekOrder(weekRaw) {
+  const week = parseWeek(weekRaw);
+  if (!Number.isFinite(week)) return Number.POSITIVE_INFINITY;
+  if (week === STARTWEEK_PLANNING_WEEK) return -1;
+  return week >= SCHOOL_YEAR_START_WEEK
+    ? week - SCHOOL_YEAR_START_WEEK
+    : week + (MAX_ISO_WEEK - SCHOOL_YEAR_START_WEEK + 1);
+}
+
+function currentIsoWeek() {
+  const now = new Date();
+  const local = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+  const day = local.getUTCDay() || 7;
+  local.setUTCDate(local.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(local.getUTCFullYear(), 0, 1));
+  return Math.ceil((((local - yearStart) / 86400000) + 1) / 7);
+}
+
+function lessonTimelineStatus(weekRaw) {
+  const lessonOrder = academicWeekOrder(weekRaw);
+  const currentOrder = academicWeekOrder(currentIsoWeek());
+  if (lessonOrder < currentOrder) return { state: 'done', label: 'Afgelopen', icon: '✓' };
+  if (lessonOrder === currentOrder) return { state: 'active', label: 'Nu', icon: '•' };
+  return { state: 'future', label: 'Hierna', icon: '○' };
+}
+
 function findLayerWeekEntry(layer, week) {
   return state.doc.entries.find((entry) => (
     planningLayerFromClassId(entry.classId) === layer && parseWeek(entry.week) === week
@@ -281,16 +365,241 @@ function setNote(entry, value) {
   else delete entry.note;
 }
 
+function escapeHtml(value) {
+  return String(value || '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function isReadingProjectName(project) {
+  const key = String(project || '').trim().toLocaleLowerCase('nl-NL');
+  return key === 'leesmeters' || key === 'heel veel lezen';
+}
+
+function lessonSlotOrderValue(lessonKey) {
+  return { A: 0, B: 1, C: 2 }[String(lessonKey || '').trim().toUpperCase()] ?? 99;
+}
+
+function lessonSlotsForLayer(layer, { editableOnly = false } = {}) {
+  const slots = [];
+  const weeks = schoolYearWeeks();
+  for (const week of weeks) {
+    const entry = findLayerWeekEntry(layer, week);
+    if (!entry || !Array.isArray(entry.lessons)) continue;
+    entry.lessons
+      .map((lesson, lessonIndex) => ({ lesson, lessonIndex }))
+      .filter((item) => item.lesson && typeof item.lesson === 'object')
+      .sort((left, right) => lessonSlotOrderValue(left.lesson.lessonKey) - lessonSlotOrderValue(right.lesson.lessonKey))
+      .forEach(({ lesson, lessonIndex }) => {
+        const project = String(lesson.project || '').trim();
+        const title = String(lesson.lesson || '').trim();
+        if (!project && !title) return;
+        const locked = isReadingProjectName(project);
+        if (editableOnly && locked) return;
+        slots.push({
+          entry,
+          lesson,
+          lessonIndex,
+          week: String(entry.week || week),
+          lessonKey: String(lesson.lessonKey || '').trim().toUpperCase(),
+          locked,
+        });
+      });
+  }
+  return slots;
+}
+
+function lessonTitleForCard(slot) {
+  return String(slot?.lesson?.lesson || slot?.lesson?.project || 'Les zonder titel').trim();
+}
+
+function presentationStudioUrlForLesson(lesson) {
+  const project = String(lesson?.project || '').trim();
+  const markerId = String(lesson?.presentationMarkerId || '').trim();
+  const url = new URL('presentatie-studio.html', window.location.href);
+  if (project) url.searchParams.set('project', project);
+  if (markerId) url.searchParams.set('marker', markerId);
+  return url.toString();
+}
+
+function cleanupEmptyEntries() {
+  state.doc.entries = (state.doc.entries || []).filter((entry) => {
+    const hasLessons = Array.isArray(entry?.lessons) && entry.lessons.length > 0;
+    const hasItems = Array.isArray(entry?.items) && entry.items.length > 0;
+    const hasNote = Boolean(String(entry?.note || '').trim());
+    return hasLessons || hasItems || hasNote;
+  });
+}
+
+function persistPlanningMutation(message) {
+  saveStudio();
+  renderSheet();
+  renderLessonOrderPanel();
+  setBusyStatus(message);
+  queueAutoPublish();
+}
+
+function moveArrayItem(items, fromIndex, toIndex) {
+  const copy = [...items];
+  const [item] = copy.splice(fromIndex, 1);
+  copy.splice(toIndex, 0, item);
+  return copy;
+}
+
+function reorderEditableLessons(fromIndex, toIndex) {
+  const layer = selectedLayer();
+  const slots = lessonSlotsForLayer(layer, { editableOnly: true });
+  if (fromIndex < 0 || toIndex < 0 || fromIndex >= slots.length || toIndex >= slots.length || fromIndex === toIndex) return;
+  const reorderedLessons = moveArrayItem(slots.map((slot) => structuredClone(slot.lesson)), fromIndex, toIndex);
+  reorderedLessons.forEach((lesson, index) => {
+    const slot = slots[index];
+    slot.entry.lessons[slot.lessonIndex] = {
+      ...lesson,
+      lessonKey: slot.lessonKey || lesson.lessonKey,
+      preserveLessonKey: true,
+    };
+  });
+  persistPlanningMutation(`Lesvolgorde aangepast voor ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}. Publiceren start automatisch.`);
+}
+
+function unplanEditableLesson(index) {
+  const layer = selectedLayer();
+  const slots = lessonSlotsForLayer(layer, { editableOnly: true });
+  const slot = slots[index];
+  if (!slot) return;
+  const title = lessonTitleForCard(slot);
+  const confirmed = window.confirm(`"${title}" uit deze jaarplanning halen? De presentatie zelf blijft bestaan.`);
+  if (!confirmed) return;
+  slot.entry.lessons.splice(slot.lessonIndex, 1);
+  cleanupEmptyEntries();
+  persistPlanningMutation(`"${title}" uit de jaarplanning gehaald. Publiceren start automatisch.`);
+}
+
+function renderLessonOrderPanel() {
+  if (!lessonOrderPanel) return;
+  const layer = selectedLayer();
+  const slots = lessonSlotsForLayer(layer);
+  const editableIndexBySlot = new Map();
+  lessonSlotsForLayer(layer, { editableOnly: true }).forEach((slot, index) => {
+    editableIndexBySlot.set(slot.lesson, index);
+  });
+  if (!slots.length) {
+    lessonOrderPanel.innerHTML = '<p class="lesson-order-empty">Nog geen lessen in deze planning.</p>';
+    return;
+  }
+
+  const groups = [
+    { state: 'done', title: 'Afgelopen', items: [] },
+    { state: 'active', title: 'Nu', items: [] },
+    { state: 'future', title: 'Hierna', items: [] },
+  ];
+  for (const slot of slots) {
+    const status = lessonTimelineStatus(slot.week);
+    const group = groups.find((item) => item.state === status.state) || groups[2];
+    group.items.push({ slot, status, editableIndex: editableIndexBySlot.get(slot.lesson) });
+  }
+
+  lessonOrderPanel.innerHTML = groups
+    .filter((group) => group.items.length)
+    .map((group) => `
+      <section class="lesson-order-section">
+        <h4>${escapeHtml(group.title)}</h4>
+        <div class="lesson-order-cards">
+          ${group.items.map(({ slot, status, editableIndex }) => {
+            const lesson = slot.lesson;
+            const project = String(lesson.project || '').trim();
+            const title = lessonTitleForCard(slot);
+            const canEditOrder = Number.isInteger(editableIndex);
+            return `
+              <article
+                class="lesson-order-card is-${escapeHtml(status.state)}${slot.locked ? ' is-locked' : ''}"
+                ${canEditOrder ? `draggable="true" data-order-index="${editableIndex}"` : ''}
+              >
+                <div>
+                  <p class="lesson-order-status">
+                    <span aria-hidden="true">${escapeHtml(status.icon)}</span>
+                    <span>${escapeHtml(status.label)} · W${escapeHtml(slot.week)}${slot.lessonKey ? ` · ${escapeHtml(slot.lessonKey)}` : ''}</span>
+                  </p>
+                  <h5>${escapeHtml(title)}</h5>
+                  ${project ? `<p>${escapeHtml(project)}</p>` : ''}
+                </div>
+                <div class="lesson-order-actions">
+                  ${canEditOrder ? '<button type="button" data-move-lesson="-1" title="Omhoog">↑</button><button type="button" data-move-lesson="1" title="Omlaag">↓</button>' : ''}
+                  ${project ? `<a href="${escapeHtml(presentationStudioUrlForLesson(lesson))}" target="_blank" rel="noopener noreferrer">Bewerk</a>` : ''}
+                  ${canEditOrder ? '<button type="button" data-unplan-lesson="1">Uit planning</button>' : ''}
+                </div>
+              </article>
+            `;
+          }).join('')}
+        </div>
+      </section>
+    `)
+    .join('');
+
+  bindLessonOrderPanel();
+}
+
+function bindLessonOrderPanel() {
+  if (!lessonOrderPanel) return;
+  let draggedIndex = -1;
+  for (const card of lessonOrderPanel.querySelectorAll('[data-order-index]')) {
+    card.addEventListener('dragstart', (event) => {
+      draggedIndex = Number(card.dataset.orderIndex);
+      card.classList.add('is-dragging');
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', String(draggedIndex));
+    });
+    card.addEventListener('dragend', () => {
+      card.classList.remove('is-dragging');
+      for (const item of lessonOrderPanel.querySelectorAll('[data-order-index]')) item.classList.remove('is-drop-before', 'is-drop-after');
+      draggedIndex = -1;
+    });
+    card.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      const rect = card.getBoundingClientRect();
+      const after = event.clientY > rect.top + rect.height / 2;
+      card.classList.toggle('is-drop-before', !after);
+      card.classList.toggle('is-drop-after', after);
+    });
+    card.addEventListener('dragleave', () => {
+      card.classList.remove('is-drop-before', 'is-drop-after');
+    });
+    card.addEventListener('drop', (event) => {
+      event.preventDefault();
+      const from = Number(event.dataTransfer.getData('text/plain') || draggedIndex);
+      const target = Number(card.dataset.orderIndex);
+      if (!Number.isInteger(from) || !Number.isInteger(target) || from === target) return;
+      const rect = card.getBoundingClientRect();
+      const after = event.clientY > rect.top + rect.height / 2;
+      const to = after && from < target ? target : after ? target + 1 : from < target ? target - 1 : target;
+      reorderEditableLessons(from, Math.max(0, to));
+    });
+    card.querySelectorAll('[data-move-lesson]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const from = Number(card.dataset.orderIndex);
+        reorderEditableLessons(from, from + Number(button.dataset.moveLesson || 0));
+      });
+    });
+    card.querySelector('[data-unplan-lesson]')?.addEventListener('click', () => {
+      unplanEditableLesson(Number(card.dataset.orderIndex));
+    });
+  }
+}
+
 function saveStudio() {
   state.doc.updatedAt = new Date().toISOString();
-  localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+  return trySaveStudioCache();
 }
 
 async function syncFromPublishedSource() {
   try {
     state.doc = collapseToYearLayerDoc(await fetchJson(BASE_SOURCE));
-    localStorage.setItem(STUDIO_KEY, JSON.stringify(state.doc));
+    saveStudio();
     renderSheet();
+    renderLessonOrderPanel();
   } catch (err) {
     console.warn('Live bron kon na publiceren niet worden teruggelezen:', err);
   }
@@ -330,6 +639,9 @@ function buildExportPayload() {
       : {},
     markers: presentation?.markers && typeof presentation.markers === 'object'
       ? structuredClone(presentation.markers)
+      : {},
+    lessonMeta: presentation?.lessonMeta && typeof presentation.lessonMeta === 'object'
+      ? structuredClone(presentation.lessonMeta)
       : {},
   }));
 
@@ -392,11 +704,35 @@ function publishErrorMessage(err) {
   return message;
 }
 
-async function publishAll() {
+function queueAutoPublish() {
+  if (publishInFlight) {
+    publishQueuedAfterCurrent = true;
+    return;
+  }
+  if (autosaveTimer) clearTimeout(autosaveTimer);
+  autosaveTimer = window.setTimeout(() => {
+    autosaveTimer = null;
+    void publishAll({ auto: true });
+  }, AUTOSAVE_DELAY_MS);
+}
+
+async function publishAll({ auto = false } = {}) {
+  if (publishInFlight) {
+    publishQueuedAfterCurrent = true;
+    setBusyStatus('Er loopt al een publicatie. De nieuwste wijziging wordt daarna meegenomen.');
+    return false;
+  }
+  publishInFlight = true;
+  if (autosaveTimer) {
+    clearTimeout(autosaveTimer);
+    autosaveTimer = null;
+  }
   saveStudio();
   const payload = buildExportPayload();
-  setButtonBusy(saveAllBtn, 'Opslaan...');
-  setStatus('Opslaan naar lokale en publieke leerlingomgeving...');
+  setButtonBusy(saveAllBtn, auto ? 'Auto-publiceren...' : 'Opslaan...');
+  setBusyStatus(auto
+    ? 'Automatisch opslaan en publiceren naar docent- en leerlingomgeving...'
+    : 'Opslaan naar lokale en publieke leerlingomgeving...');
   try {
     if (window.location.protocol === 'file:') {
       throw new Error('Publiceren werkt alleen via http://127.0.0.1:4173. Open de lokale docentomgeving met start-docentomgeving.command.');
@@ -411,9 +747,9 @@ async function publishAll() {
       throw new Error(result?.error || `HTTP ${res.status}`);
     }
     await syncFromPublishedSource();
-    setButtonDone(saveAllBtn, 'Opgeslagen');
+    setButtonDone(saveAllBtn, auto ? 'Online' : 'Opgeslagen');
     setStatus(
-      `Opgeslagen: ${result.entries || payload.counts.entries} planningregels en ${result.presentations || payload.counts.presentations} presentaties bijgewerkt.${autoGitMessage(result)}`,
+      `${auto ? 'Automatisch opgeslagen' : 'Opgeslagen'}: ${result.entries || payload.counts.entries} planningregels en ${result.presentations || payload.counts.presentations} presentaties bijgewerkt.${autoGitMessage(result)}`,
       result.autoGit?.ok === false,
     );
     return true;
@@ -422,6 +758,12 @@ async function publishAll() {
     setStatus(`Lokaal opgeslagen, maar publiceren is mislukt: ${publishErrorMessage(err)}`, true);
     resetButton(saveAllBtn);
     return false;
+  } finally {
+    publishInFlight = false;
+    if (publishQueuedAfterCurrent) {
+      publishQueuedAfterCurrent = false;
+      queueAutoPublish();
+    }
   }
 }
 
@@ -430,7 +772,7 @@ function renderSheet() {
   editorTitle.textContent = `Jaarplanning Raster · ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}`;
   sheetBody.innerHTML = '';
 
-  for (let week = 1; week <= 53; week += 1) {
+  for (const week of schoolYearWeeks()) {
     const entry = normalizeWeekEntry(layer, week, findLayerWeekEntry(layer, week));
     const parts = lessonParts(entry);
     const tr = document.createElement('tr');
@@ -502,7 +844,9 @@ function onCellChange(event) {
   }
 
   saveStudio();
-  setStatus(`Gewijzigd: ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}, week ${week}.`);
+  renderLessonOrderPanel();
+  setBusyStatus(`Gewijzigd: ${planningLayerLabel(layer).toLocaleLowerCase('nl-NL')}, week ${week}. Publiceren start automatisch.`);
+  queueAutoPublish();
 }
 
 function fillLayerOptions(layers) {
@@ -524,7 +868,11 @@ async function boot() {
 
     state.baseDoc = collapseToYearLayerDoc(baseRaw);
     const fromStorage = localStorage.getItem(STUDIO_KEY);
-    const localDoc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : null;
+    let localDoc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : null;
+    if (localDoc && !hasMentorStartweekPlanning(localDoc)) {
+      localStorage.removeItem(STUDIO_KEY);
+      localDoc = null;
+    }
     state.doc = (localDoc && !baseShouldReplaceLocal(state.baseDoc, localDoc))
       ? localDoc
       : collapseToYearLayerDoc(baseRaw);
@@ -539,6 +887,7 @@ async function boot() {
 
     saveStudio();
     renderSheet();
+    renderLessonOrderPanel();
     setStatus('Studio klaar. Excel-overzicht actief.');
   } catch (err) {
     console.error(err);
@@ -549,5 +898,6 @@ async function boot() {
 saveAllBtn.addEventListener('click', publishAll);
 exportAllBtn?.addEventListener('click', exportAll);
 classSelect.addEventListener('change', renderSheet);
+classSelect.addEventListener('change', renderLessonOrderPanel);
 
 boot();

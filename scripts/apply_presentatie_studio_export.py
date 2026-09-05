@@ -32,6 +32,16 @@ CLASS_SLOT_DAY = {
     "4B": {"A": 4, "B": 4, "C": 5},
     "4C": {"A": 1, "B": 1, "C": 2},
 }
+CLASS_SLOT_START = {
+    "1C": {"A": "10:50", "B": "08:15", "C": "12:50"},
+    "1D": {"A": "14:40", "B": "10:50", "C": "08:15"},
+    "3B": {"A": "09:00", "B": "10:50"},
+    "3C": {"A": "09:45", "B": "10:50"},
+    "3E": {"A": "09:45", "B": "11:35"},
+    "3F": {"A": "09:00", "B": "11:35"},
+    "4B": {"A": "08:15", "B": "09:00", "C": "09:00"},
+    "4C": {"A": "12:50", "B": "13:35", "C": "12:50"},
+}
 
 
 def cache_version(stamp: str) -> str:
@@ -132,11 +142,19 @@ def normalize_weekday(value: object) -> int:
     return names.get(text, 0)
 
 
-def normalize_reading_locks(raw: object) -> dict[str, dict[str, int]]:
+def normalize_time(value: object) -> str:
+    text = str(value or "").strip()
+    match = re.match(r"^(\d{1,2}):(\d{2})$", text)
+    if not match:
+        return ""
+    return f"{int(match.group(1)):02d}:{int(match.group(2)):02d}"
+
+
+def normalize_reading_locks(raw: object) -> dict[str, dict[str, int | str]]:
     if not isinstance(raw, dict):
         return {}
 
-    out: dict[str, dict[str, int]] = {}
+    out: dict[str, dict[str, int | str]] = {}
     for class_id, value in raw.items():
         normalized_class = str(class_id or "").strip().upper()
         if normalized_class.startswith("G") and len(normalized_class) >= 3 and normalized_class[1].isdigit():
@@ -145,7 +163,8 @@ def normalize_reading_locks(raw: object) -> dict[str, dict[str, int]]:
             value.get("day") or value.get("weekday") if isinstance(value, dict) else value
         )
         if normalized_class and day:
-            out[normalized_class] = {"day": day}
+            start = normalize_time(value.get("start") or value.get("time") if isinstance(value, dict) else "")
+            out[normalized_class] = {"day": day, "start": start} if start else {"day": day}
             continue
         if isinstance(value, dict):
             lesson_key = str(value.get("lessonKey") or value.get("slot") or "").strip().upper()
@@ -153,7 +172,8 @@ def normalize_reading_locks(raw: object) -> dict[str, dict[str, int]]:
             lesson_key = str(value or "").strip().upper()
         slot_day = CLASS_SLOT_DAY.get(normalized_class, {}).get(lesson_key, 0)
         if normalized_class and slot_day:
-            out[normalized_class] = {"day": slot_day}
+            start = CLASS_SLOT_START.get(normalized_class, {}).get(lesson_key, "")
+            out[normalized_class] = {"day": slot_day, "start": start} if start else {"day": slot_day}
     return out
 
 

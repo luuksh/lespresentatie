@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaarplanning Studio</title>
   <link rel="stylesheet" href="css/jaarplanning-studio.css?v=20260308-01" />
-  <script type="module" src="js/jaarplanning-studio.js?v=202609010736"></script>
+  <script type="module" src="js/jaarplanning-studio.js?v=202609011445"></script>
 </head>
 <body>
   <main class="studio-layout">
@@ -35,6 +35,16 @@
 
       <section class="studio-card studio-editor">
         <h2 id="editorTitle">Jaarplanning Raster</h2>
+        <section class="lesson-order-panel" aria-label="Visuele lesvolgorde">
+          <header class="lesson-order-head">
+            <div>
+              <p class="studio-kicker">Chronologische volgorde</p>
+              <h3>Lesvolgorde</h3>
+            </div>
+            <p>Sleep lessen om ze tussen bestaande lessen te plaatsen. Het raster eronder blijft de bron.</p>
+          </header>
+          <div id="lessonOrderPanel" class="lesson-order-list"></div>
+        </section>
         <div class="sheet-wrap">
           <table class="sheet" id="sheetTable">
             <thead>
