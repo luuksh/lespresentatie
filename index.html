@@ -3,172 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intern Platform | Klassenplattegrond</title>
+  <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/internal-shell.css?v=20260309-01" />
+  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-01" />
+  <script type="module" src="js/lesstudio.js?v=20260905-01"></script>
 </head>
-<body class="internal-shell">
-  <main class="shell-layout">
-    <header class="shell-masthead">
+<body>
+  <main class="lesson-app">
+    <header class="lesson-topbar">
       <div>
-        <p class="shell-kicker">Klassenplattegrond</p>
-        <p class="shell-masthead-title">Interne docentomgeving</p>
+        <p class="app-kicker">Klassenplattegrond</p>
+        <h1>Lesstudio</h1>
       </div>
-      <div class="shell-badges" aria-label="Interne onderdelen">
-        <span class="shell-badge">Docentenbord</span>
-        <span class="shell-badge">Studio</span>
-        <span class="shell-badge">Presentaties</span>
+      <nav class="main-tabs" aria-label="Hoofdnavigatie">
+        <button type="button" class="main-tab is-active" data-view="studio">Lesstudio</button>
+        <button type="button" class="main-tab" data-view="curriculum">Curriculum</button>
+        <button type="button" class="main-tab" data-view="netschrift">Netschrift</button>
+        <a class="main-tab main-tab-link" href="leerlingen.html" target="_blank" rel="noopener noreferrer">Leerlingweergave</a>
+      </nav>
+      <div class="save-state">
+        <span id="globalStatusDot" class="save-dot" aria-hidden="true"></span>
+        <span id="globalStatusText">Laden...</span>
+        <button id="retryPublishBtn" type="button" hidden>Opnieuw</button>
       </div>
     </header>
 
-    <section class="shell-hero">
-      <p class="shell-kicker">Beveiligde omgeving</p>
-      <h1>Intern platform voor jaarplanning en lesaansturing</h1>
-      <p class="shell-intro">
-        Dit is de interne omgeving voor docentgebruik. De openbare leerlingenomgeving staat los hiervan en hoort op
-        een publieke URL te staan. Deze interne omgeving is bedoeld om achter echte hosting-authenticatie te draaien.
-      </p>
-      <div class="shell-highlight-row">
-        <article class="shell-highlight">
-          <p class="shell-card-label">Scheiding</p>
-          <strong>Publiek en intern zijn losgekoppeld</strong>
+    <section id="studioView" class="app-view studio-workspace">
+      <aside class="context-panel">
+        <label class="field">
+          <span>Schooljaar</span>
+          <select id="schoolYearSelect">
+            <option value="2026-2027">2026-2027</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Leerjaar / klas</span>
+          <select id="layerSelect"></select>
+        </label>
+        <div class="side-section">
+          <div class="section-head">
+            <h2>Projecten</h2>
+            <button id="newProjectBtn" type="button" class="icon-btn" title="Nieuw project">+</button>
+          </div>
+          <div id="projectList" class="project-list"></div>
+        </div>
+        <div class="side-links">
+          <a href="docent.html">Docentenbord</a>
+          <a href="jaarplanning-studio.html">Oude jaarplanning</a>
+          <a href="presentatie-studio.html">Oude presentatiestudio</a>
+          <a href="kerndoelen-studio.html">Kerndoelenstudio</a>
+          <a href="DEPLOY_SECURITY.md">Techniek</a>
+        </div>
+      </aside>
+
+      <section class="planning-panel">
+        <div class="panel-head">
+          <div>
+            <p class="app-kicker">Jaarplanning</p>
+            <h2 id="planningTitle">Lesvolgorde</h2>
+          </div>
+          <button id="newLessonTopBtn" type="button" class="primary-action">+ Nieuwe les</button>
+        </div>
+        <div id="planningTimeline" class="timeline"></div>
+      </section>
+
+      <section class="editor-panel">
+        <div class="editor-empty" id="editorEmpty">
+          <h2>Selecteer een les</h2>
+          <p>Kies links een project of in het midden een les om inhoud, huiswerk, netschrift en doelen te beheren.</p>
+        </div>
+
+        <article id="lessonEditor" class="lesson-editor" hidden>
+          <header class="editor-head">
+            <div>
+              <p id="lessonContext" class="app-kicker">Les</p>
+              <input id="lessonTitleInput" class="title-input" type="text" aria-label="Lestitel" />
+            </div>
+            <div class="editor-actions">
+              <button id="openPresentationBtn" type="button">Open</button>
+              <button id="unplanLessonBtn" type="button">Uit planning</button>
+              <button id="deletePresentationBtn" type="button" class="danger">Verwijder presentatie</button>
+            </div>
+          </header>
+
+          <div class="editor-tabs" role="tablist" aria-label="Leseditor">
+            <button type="button" class="editor-tab is-active" data-editor-tab="presentation">Presentatie</button>
+            <button type="button" class="editor-tab" data-editor-tab="lesson">Lesinfo</button>
+            <button type="button" class="editor-tab" data-editor-tab="goals">Doelen & beoordeling</button>
+          </div>
+
+          <section class="editor-tabpanel is-active" data-editor-panel="presentation">
+            <label class="field">
+              <span>Presentatietekst</span>
+              <textarea id="slidesTextarea" class="slides-textarea" spellcheck="false" placeholder="[title] Intro&#10;subtitle: Project&#10;---&#10;[bullets] Kern&#10;- punt 1&#10;- punt 2"></textarea>
+            </label>
+            <div id="slidePreview" class="slide-preview"></div>
+          </section>
+
+          <section class="editor-tabpanel" data-editor-panel="lesson">
+            <div class="form-grid">
+              <label class="field">
+                <span>Project</span>
+                <input id="lessonProjectInput" type="text" />
+              </label>
+              <label class="field">
+                <span>Week</span>
+                <input id="lessonWeekInput" type="text" />
+              </label>
+              <label class="field">
+                <span>Lespositie</span>
+                <select id="lessonKeySelect">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span>Huiswerk</span>
+              <textarea id="homeworkTextarea" rows="4"></textarea>
+            </label>
+            <label class="field">
+              <span>Netschrift: wat moet na deze les in het netschrift staan?</span>
+              <textarea id="netschriftTextarea" rows="5" placeholder="- Drie inzichten uit het artikel&#10;- Antwoord op de onderzoeksvraag"></textarea>
+            </label>
+            <label class="field">
+              <span>Docentnotitie</span>
+              <textarea id="teacherNoteTextarea" rows="3"></textarea>
+            </label>
+          </section>
+
+          <section class="editor-tabpanel" data-editor-panel="goals">
+            <div id="projectGoalsSummary" class="goals-summary"></div>
+            <label class="field">
+              <span>Beoordelingsmoment</span>
+              <textarea id="assessmentTextarea" rows="3"></textarea>
+            </label>
+          </section>
         </article>
-        <article class="shell-highlight">
-          <p class="shell-card-label">Login</p>
-          <strong>Ontworpen voor Basic Auth of SSO</strong>
-        </article>
-      </div>
-      <div class="shell-actions">
-        <button id="publishEverythingBtn" class="shell-button shell-button-primary" type="button">Alles opslaan en publiceren</button>
-        <a class="shell-button shell-button-primary" href="docent.html">Open docentenbord</a>
-        <a class="shell-button shell-button-secondary" href="jaarplanning-studio.html">Open jaarplanningstudio</a>
-        <a class="shell-button shell-button-secondary" href="kerndoelen-studio.html">Open kerndoelenstudio</a>
-        <a class="shell-button shell-button-secondary" href="presentatie-studio.html">Open presentatiestudio</a>
-      </div>
-      <p id="publishEverythingStatus" class="shell-status" aria-live="polite"></p>
+      </section>
     </section>
 
-    <section class="shell-grid">
-      <article class="shell-card">
-        <p class="shell-card-label">Openbaar</p>
-        <h2>Leerlingenplatform</h2>
-        <p>Lokale preview van de publieke omgeving voor leerlingen.</p>
-        <a class="shell-inline-link" href="leerlingen.html">Bekijk leerlingenportal</a>
-      </article>
+    <section id="curriculumView" class="app-view dashboard-view" hidden>
+      <header class="dashboard-head">
+        <div>
+          <p class="app-kicker">Analyse</p>
+          <h2>Curriculum</h2>
+        </div>
+        <select id="curriculumLayerSelect"></select>
+      </header>
+      <div id="curriculumDashboard" class="dashboard-grid"></div>
+    </section>
 
-      <article class="shell-card">
-        <p class="shell-card-label">Werkflow</p>
-        <h2>Dagelijkse route</h2>
-        <p>Start in het docentenbord, werk planning en projectbeoordeling bij in de studio's en controleer de publieke portal live.</p>
-      </article>
-
-      <article class="shell-card">
-        <p class="shell-card-label">Deploy</p>
-        <h2>Beveiliging</h2>
-        <p>Gebruik bij publicatie een aparte interne host of pad achter Basic Auth / SSO zodat browserwachtwoorden werken.</p>
-        <a class="shell-inline-link" href="DEPLOY_SECURITY.md">Lees deploy-notitie</a>
-      </article>
+    <section id="netschriftView" class="app-view dashboard-view" hidden>
+      <header class="dashboard-head">
+        <div>
+          <p class="app-kicker">Overzicht</p>
+          <h2>Netschrift</h2>
+        </div>
+        <select id="netschriftLayerSelect"></select>
+      </header>
+      <div id="netschriftDashboard" class="dashboard-grid"></div>
     </section>
   </main>
-  <script>
-    const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
-    const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
-    const BASE_SOURCE = 'js/jaarplanning-live.json';
-    const publishEverythingBtn = document.getElementById('publishEverythingBtn');
-    const publishEverythingStatus = document.getElementById('publishEverythingStatus');
 
-    function setPublishStatus(message, type = 'info') {
-      if (!publishEverythingStatus) return;
-      publishEverythingStatus.textContent = message;
-      publishEverythingStatus.dataset.status = type;
-    }
-
-    async function fetchJson(path) {
-      const url = new URL(path, window.location.href);
-      url.searchParams.set('_t', String(Date.now()));
-      const response = await fetch(url.toString(), { cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    }
-
-    async function loadStudioDoc() {
-      const raw = String(localStorage.getItem(STUDIO_KEY) || '').trim();
-      if (raw) return JSON.parse(raw);
-      return fetchJson(BASE_SOURCE);
-    }
-
-    function buildPublishPayload(doc) {
-      const payload = structuredClone(doc && typeof doc === 'object' ? doc : {});
-      payload.studioSource = 'jaarplanning-studio';
-      payload.exportType = 'jaarplanning-presentaties';
-      payload.exportVersion = 2;
-      payload.exportedAt = new Date().toISOString();
-      delete payload.entries;
-      return payload;
-    }
-
-    function autoGitMessage(result = {}) {
-      const git = result.autoGit;
-      if (!git || git.enabled === false) return '';
-      return git.ok
-        ? ` ${git.message || 'Automatisch gepusht.'}`
-        : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
-    }
-
-    function publishErrorMessage(err) {
-      const message = String(err?.message || err || '');
-      if (message.includes('HTTP 501')) {
-        return 'De oude lokale server draait nog. Sluit dit venster en dubbelklik eenmalig op Open Jaarplanning Studio.command; daarna werkt deze knop direct.';
-      }
-      return message;
-    }
-
-    function cacheStudioDoc(doc) {
-      try {
-        localStorage.setItem(STUDIO_KEY, JSON.stringify(doc));
-      } catch (err) {
-        const isQuotaError = err?.name === 'QuotaExceededError'
-          || err?.name === 'NS_ERROR_DOM_QUOTA_REACHED'
-          || err?.code === 22
-          || err?.code === 1014;
-        if (!isQuotaError) throw err;
-        try { localStorage.removeItem(STUDIO_KEY); } catch {}
-        console.warn('Browseropslag is vol; jaarplanning-studiocache is overgeslagen.', err);
-      }
-    }
-
-    async function publishEverything() {
-      publishEverythingBtn.disabled = true;
-      publishEverythingBtn.textContent = 'Publiceren...';
-      setPublishStatus('Planning en presentaties publiceren...', 'info');
-      try {
-        const payload = buildPublishPayload(await loadStudioDoc());
-        const response = await fetch(PUBLISH_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok || result?.ok === false) {
-          throw new Error(result?.error || `HTTP ${response.status}`);
-        }
-        const liveDoc = await fetchJson(BASE_SOURCE).catch(() => null);
-        if (liveDoc) cacheStudioDoc(liveDoc);
-        setPublishStatus(
-          `Klaar: ${result.entries || 0} planningregels en ${result.presentations || 0} presentaties bijgewerkt.${autoGitMessage(result)}`,
-          result.autoGit?.ok === false ? 'error' : 'success',
-        );
-        publishEverythingBtn.textContent = 'Gepubliceerd';
-        window.setTimeout(() => { publishEverythingBtn.textContent = 'Alles opslaan en publiceren'; }, 1800);
-      } catch (err) {
-        setPublishStatus(`Publiceren mislukt: ${publishErrorMessage(err)}`, 'error');
-        publishEverythingBtn.textContent = 'Alles opslaan en publiceren';
-      } finally {
-        publishEverythingBtn.disabled = false;
-      }
-    }
-
-    publishEverythingBtn?.addEventListener('click', publishEverything);
-  </script>
+  <dialog id="presentationDialog" class="presentation-dialog">
+    <header>
+      <strong id="dialogTitle">Presentatie</strong>
+      <button id="dialogCloseBtn" type="button">Sluiten</button>
+    </header>
+    <div id="dialogStage" class="dialog-stage"></div>
+    <footer>
+      <button id="dialogPrevBtn" type="button">Vorige</button>
+      <span id="dialogCounter">1 / 1</span>
+      <button id="dialogNextBtn" type="button">Volgende</button>
+    </footer>
+  </dialog>
 </body>
 </html>
