@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T13:25:45.360Z",
+  "updatedAt": "2026-09-05T19:25:07.265Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -169,10 +169,10 @@
       "lessons": [
         {
           "project": "Start Nederlands 1",
-          "lesson": "Startles 1: Welkom bij Nederlands",
+          "lesson": "Startles 2: Maak het van jou",
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-1",
+          "presentationMarkerId": "marker-startles-1-2",
           "lessonKey": "B",
           "classId": "G1C",
           "scheduledDate": "2026-09-08T06:15:00.000Z"
@@ -276,36 +276,6 @@
         "Leesmeters blijft de vaste dinsdagles."
       ],
       "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
-    },
-    {
-      "agendaKey": "G4C|2026-09-08T10:50:00.000Z|2026-09-08T11:35:00.000Z",
-      "classId": "G4C",
-      "start": "2026-09-08T10:50:00.000Z",
-      "end": "2026-09-08T11:35:00.000Z",
-      "room": "U105",
-      "summary": "",
-      "description": "",
-      "lessonIndex": 3,
-      "lessonSlot": "C",
-      "isManual": false,
-      "source": "docentplatform",
-      "lessons": [
-        {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 2: Maak het bruikbaar",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-2",
-          "lessonKey": "C",
-          "classId": "G4C",
-          "scheduledDate": "2026-09-08T10:50:00.000Z"
-        }
-      ],
-      "items": [
-        "Start Nederlands 4: beoordeling kort neerzetten, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
-        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden."
-      ],
-      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G1D|2026-09-08T12:40:00.000Z|2026-09-08T13:25:00.000Z",
@@ -412,10 +382,10 @@
       "lessons": [
         {
           "project": "Start Nederlands 1",
-          "lesson": "Startles 1: Welkom bij Nederlands",
+          "lesson": "Startles 2: Maak het van jou",
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-1",
+          "presentationMarkerId": "marker-startles-1-2",
           "lessonKey": "B",
           "classId": "G1D",
           "scheduledDate": "2026-09-10T08:50:00.000Z"
@@ -472,11 +442,11 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Startles 2: Maak het van jou",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "presentationId": "project-leesmeters",
+          "presentationMarkerId": "marker-leesmeters",
           "lessonKey": "C",
           "classId": "G1C",
           "scheduledDate": "2026-09-10T10:50:00.000Z"
@@ -502,11 +472,11 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Startles 2: Maak het van jou",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "presentationId": "project-leesmeters",
+          "presentationMarkerId": "marker-leesmeters",
           "lessonKey": "C",
           "classId": "G1D",
           "scheduledDate": "2026-09-11T06:15:00.000Z"
@@ -517,36 +487,6 @@
         "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
       ],
       "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
-    },
-    {
-      "agendaKey": "G4B|2026-09-11T07:00:00.000Z|2026-09-11T07:45:00.000Z",
-      "classId": "G4B",
-      "start": "2026-09-11T07:00:00.000Z",
-      "end": "2026-09-11T07:45:00.000Z",
-      "room": "U008",
-      "summary": "",
-      "description": "",
-      "lessonIndex": 3,
-      "lessonSlot": "C",
-      "isManual": false,
-      "source": "docentplatform",
-      "lessons": [
-        {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 2: Maak het bruikbaar",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-2",
-          "lessonKey": "C",
-          "classId": "G4B",
-          "scheduledDate": "2026-09-11T07:00:00.000Z"
-        }
-      ],
-      "items": [
-        "Start Nederlands 4: beoordeling kort neerzetten, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
-        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden."
-      ],
-      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G3B|2026-09-11T08:50:00.000Z|2026-09-11T09:35:00.000Z",

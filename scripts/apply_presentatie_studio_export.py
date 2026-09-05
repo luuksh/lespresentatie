@@ -22,6 +22,12 @@ STUDENT_HTML_PATHS = [
     ROOT / "leerlingen.html",
     ROOT / "docs/leerlingen.html",
 ]
+PUBLIC_ASSET_MIRRORS = [
+    ("leerlingen.html", "docs/leerlingen.html"),
+    ("css/student-portal.css", "docs/css/student-portal.css"),
+    ("js/student-portal.js", "docs/js/student-portal.js"),
+    ("js/kerndoelen-data.js", "docs/js/kerndoelen-data.js"),
+]
 CLASS_SLOT_DAY = {
     "1C": {"A": 1, "B": 2, "C": 4},
     "1D": {"A": 2, "B": 4, "C": 5},
@@ -66,6 +72,19 @@ def bump_student_portal_cache(stamp: str) -> list[str]:
             path.write_text(next_text, encoding="utf-8")
             changed.append(str(path.relative_to(ROOT)))
     return changed
+
+
+def mirror_public_assets() -> list[str]:
+    copied: list[str] = []
+    for source_rel, target_rel in PUBLIC_ASSET_MIRRORS:
+        source = ROOT / source_rel
+        target = ROOT / target_rel
+        if not source.exists():
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+        copied.append(target_rel)
+    return copied
 
 
 def parse_args() -> argparse.Namespace:
@@ -298,6 +317,7 @@ def main() -> int:
 
     DOCS_LIVE_PATH.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(LIVE_PATH, DOCS_LIVE_PATH)
+    mirrored_assets = mirror_public_assets()
     cache_busted = bump_student_portal_cache(stamp)
 
     print(json.dumps({
@@ -309,6 +329,7 @@ def main() -> int:
         "internal": str(INTERNAL_PATH.relative_to(ROOT)),
         "live": str(LIVE_PATH.relative_to(ROOT)),
         "docsLive": str(DOCS_LIVE_PATH.relative_to(ROOT)),
+        "mirroredAssets": mirrored_assets,
         "cacheBusted": cache_busted,
         "backups": backups,
     }, ensure_ascii=False))

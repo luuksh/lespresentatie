@@ -3367,3 +3367,164 @@ body.drawer-open .side-drawer.left {
   }
 
 }
+
+/* Docentbord-refresh: rustiger paneel, duidelijkere controls, minder decoratieve drukte. */
+:root {
+  --primaire-kleur: #8b2842;
+  --hover-kleur: #5f1b31;
+  --achtergrond: #eef3f7;
+  --ink-950: #14212f;
+  --ink-800: #2e3e50;
+  --ink-600: #657184;
+  --surface: #fbfcfd;
+  --surface-soft: #edf3ee;
+  --line: #d6dde3;
+  --line-strong: #b6c2cc;
+  --shadow-sm: 0 8px 22px rgba(26, 38, 52, 0.08);
+  --shadow-md: 0 16px 40px rgba(26, 38, 52, 0.12);
+}
+
+body:not(.presentation-open) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0) 280px),
+    radial-gradient(760px 360px at 12% -12%, rgba(35, 118, 90, 0.15), transparent 58%),
+    radial-gradient(620px 300px at 92% 0%, rgba(139, 40, 66, 0.13), transparent 62%),
+    linear-gradient(135deg, #f7f9fb 0%, #eef3f7 48%, #edf3ee 100%);
+}
+
+body:not(.presentation-open)::before {
+  content: none;
+}
+
+#opdrachtMount {
+  border-color: rgba(20, 33, 47, 0.38);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(139, 40, 66, 0.96) 0 86px, rgba(200, 139, 44, 0.95) 86px 94px, transparent 94px),
+    linear-gradient(180deg, #253548 0%, #14212f 100%);
+  box-shadow: 0 12px 30px rgba(26, 38, 52, 0.16);
+}
+
+#opdrachtSelect {
+  border-radius: 6px;
+  border-color: rgba(255, 255, 255, 0.46);
+  background:
+    linear-gradient(90deg, rgba(139, 40, 66, 0.06) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, #ffffff 0%, #eef3f7 100%);
+  background-size: 24px 24px, auto;
+  color: #14212f;
+  font-family: var(--font-ui);
+  text-shadow: none;
+}
+
+.plattegrond-frame {
+  border-color: rgba(95, 109, 123, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(139, 40, 66, 0.08) 0 8px, transparent 8px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 249, 251, 0.98) 100%);
+  box-shadow: 0 16px 38px rgba(26, 38, 52, 0.12);
+}
+
+.topbar {
+  border-color: rgba(95, 109, 123, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(26, 38, 52, 0.08);
+}
+
+.field .label,
+.panel-title,
+.agenda-preview-meta,
+.jaarplanning-week,
+.clock-state,
+.timer-btn,
+.opdracht-label,
+.studio-kicker {
+  letter-spacing: 0;
+}
+
+select,
+input,
+textarea {
+  border-color: #cfd9e1;
+  border-radius: 6px;
+}
+
+select:focus,
+input:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(35, 83, 127, 0.16);
+  outline-offset: 2px;
+  border-color: #7fa3c7;
+}
+
+.btn,
+.drawer-quick-toggle,
+.drawer-handle {
+  border-radius: 6px;
+  font-weight: 850;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #9c3150, #5f1b31);
+  box-shadow: 0 10px 20px rgba(139, 40, 66, 0.2);
+}
+
+.btn-secondary {
+  background: #eef3f7;
+  color: #24364a;
+}
+
+.btn-danger {
+  background: linear-gradient(180deg, #c6534d, #b5423c);
+}
+
+.side-drawer.left {
+  border-color: rgba(95, 109, 123, 0.22);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 42px rgba(26, 38, 52, 0.16);
+}
+
+.drawer-content {
+  scrollbar-width: thin;
+}
+
+.card,
+.agenda-preview,
+.jaarplanning-widget .jaarplanning-panel {
+  border-color: rgba(95, 109, 123, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 22px rgba(26, 38, 52, 0.08);
+}
+
+.panel-title {
+  color: #14212f;
+}
+
+.panel-help {
+  color: #657184;
+}
+
+.jaarplanning-widget .jaarplanning-panel {
+  background: #ffffff;
+}
+
+.jaarplanning-status,
+.jaarplanning-last-update {
+  color: #657184;
+}
+
+@media (max-width: 760px) {
+  #opdrachtMount {
+    padding-left: 96px;
+  }
+
+  .side-drawer.left {
+    border-radius: 0;
+  }
+}
