@@ -41,6 +41,28 @@
           <span>Leerjaar / klas</span>
           <select id="layerSelect"></select>
         </label>
+        <section class="reading-lock-panel" aria-label="Vaste Leesmeters-plek">
+          <div>
+            <p class="app-kicker">Leesmeters</p>
+            <h2>Vaste plek</h2>
+          </div>
+          <label class="field">
+            <span>Klas</span>
+            <select id="readingClassSelect"></select>
+          </label>
+          <label class="field">
+            <span>Vaste weekdag</span>
+            <select id="readingDaySelect">
+              <option value="">Kies vaste dag</option>
+              <option value="1">Maandag</option>
+              <option value="2">Dinsdag</option>
+              <option value="3">Woensdag</option>
+              <option value="4">Donderdag</option>
+              <option value="5">Vrijdag</option>
+            </select>
+          </label>
+          <p id="readingLockLine" class="inline-note">Kies een klas en vaste Leesmeters-dag.</p>
+        </section>
         <div class="side-section">
           <div class="section-head">
             <h2>Projecten</h2>
@@ -111,7 +133,7 @@
                 <span>Week</span>
                 <input id="lessonWeekInput" type="text" />
               </label>
-              <label class="field">
+              <label class="field" hidden>
                 <span>Lespositie</span>
                 <select id="lessonKeySelect">
                   <option value="A">A</option>

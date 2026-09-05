@@ -263,12 +263,49 @@ function currentPlanningWeek() {
   return planningWeekForDate(new Date());
 }
 
+function normalizeReadingLocks(raw) {
+  const out = {};
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+  for (const [classId, value] of Object.entries(raw)) {
+    const normalizedClass = normalizeClassId(classId);
+    const rawDay = value && typeof value === 'object' ? value.day || value.weekday : value;
+    const day = normalizeWeekday(rawDay);
+    if (normalizedClass && day) {
+      out[normalizedClass] = { day };
+      continue;
+    }
+    const lessonKey = String((value && typeof value === 'object' ? value.lessonKey || value.slot : value) || '').trim().toUpperCase();
+    const slotDay = dayForClassSlot(normalizedClass, lessonKey);
+    if (normalizedClass && slotDay) out[normalizedClass] = { day: slotDay };
+  }
+  return out;
+}
+
+function normalizeWeekday(value) {
+  const text = String(value || '').trim().toLocaleLowerCase('nl-NL');
+  if (/^[1-5]$/.test(text)) return Number(text);
+  const names = {
+    maandag: 1,
+    ma: 1,
+    dinsdag: 2,
+    di: 2,
+    woensdag: 3,
+    wo: 3,
+    donderdag: 4,
+    do: 4,
+    vrijdag: 5,
+    vr: 5,
+  };
+  return names[text] || 0;
+}
+
 function normalizeDoc(raw) {
   const safe = raw && typeof raw === 'object' ? structuredClone(raw) : {};
   if (!Array.isArray(safe.entries)) safe.entries = [];
   if (!Array.isArray(safe.holidays)) safe.holidays = [];
   if (!Array.isArray(safe.schoolCalendar)) safe.schoolCalendar = [];
   if (!safe.presentations || typeof safe.presentations !== 'object') safe.presentations = {};
+  safe.readingLocks = normalizeReadingLocks(safe.readingLocks);
   safe.entries = safe.entries
     .filter((entry) => entry && typeof entry === 'object')
     .map((entry) => ({
@@ -454,6 +491,38 @@ function baseScheduleForClass(classId) {
     if (BASE_SCHEDULE[alias]) return BASE_SCHEDULE[alias].map((slot) => ({ ...slot }));
   }
   return [];
+}
+
+function dayForClassSlot(classId, lessonKey) {
+  const cleanKey = String(lessonKey || '').trim().toUpperCase();
+  const slot = baseScheduleForClass(classId).find((item) => item.slot === cleanKey);
+  return Number(slot?.day) || 0;
+}
+
+function readingDayForClass(classId) {
+  for (const alias of classPlanningAliases(classId)) {
+    const day = normalizeWeekday(state.doc.readingLocks?.[alias]?.day);
+    if (day) return day;
+    const legacyLessonKey = state.doc.readingLocks?.[alias]?.lessonKey;
+    const legacyDay = dayForClassSlot(alias, legacyLessonKey);
+    if (legacyDay) return legacyDay;
+  }
+  return 0;
+}
+
+function fixedReadingMomentForClass(classId) {
+  const lockedDay = readingDayForClass(classId);
+  if (lockedDay) {
+    const scheduleSlot = baseScheduleForClass(classId)
+      .filter((slot) => Number(slot.day) === lockedDay)
+      .sort((left, right) => minutesFromTime(left.start) - minutesFromTime(right.start))[0];
+    if (scheduleSlot) return scheduleSlot;
+  }
+  return FIXED_READING_MOMENTS[normalizeClassId(classId)] || null;
+}
+
+function fixedReadingDayForClass(classId) {
+  return readingDayForClass(classId) || Number(FIXED_READING_MOMENTS[normalizeClassId(classId)]?.day || 0);
 }
 
 function baseScheduleSlotByDayTime(classId, day, minutes) {
@@ -1123,9 +1192,21 @@ function isStandardReadingDay(agendaEntry) {
   if (!agendaEntry?.start) return false;
   const start = agendaEntry.start instanceof Date ? agendaEntry.start : new Date(agendaEntry.start);
   if (Number.isNaN(start.getTime())) return false;
-  const fixedMoment = FIXED_READING_MOMENTS[normalizeClassId(agendaEntry.classId)];
-  if (!fixedMoment) return false;
-  return (start.getDay() || 7) === fixedMoment.day
+  const fixedDay = fixedReadingDayForClass(agendaEntry.classId);
+  if (!fixedDay || (start.getDay() || 7) !== fixedDay) return false;
+  const agendaEntries = getAgendaEntriesForClass(agendaEntry.classId);
+  const weekKey = agendaEntryWeekKey(agendaEntry);
+  const firstOnDay = agendaEntries
+    .filter((entry) => {
+      const entryStart = entry.start instanceof Date ? entry.start : new Date(entry.start);
+      return !Number.isNaN(entryStart.getTime())
+        && agendaEntryWeekKey(entry) === weekKey
+        && (entryStart.getDay() || 7) === fixedDay;
+    })
+    .sort((left, right) => left.start - right.start)[0] || null;
+  if (firstOnDay) return isSameAgendaEntry(firstOnDay, agendaEntry);
+  const fixedMoment = fixedReadingMomentForClass(agendaEntry.classId);
+  return Boolean(fixedMoment)
     && (start.getHours() * 60 + start.getMinutes()) === minutesFromTime(fixedMoment.start);
 }
 

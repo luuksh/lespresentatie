@@ -41,6 +41,7 @@ PUBLIC_PORTAL_FILES = [
     "js/docent-lesselectie-live.json",
     "docs/js/docent-lesselectie-live.json",
     "scripts/apply_presentatie_studio_export.py",
+    "scripts/build_jaarplanning_internal.py",
     "scripts/local_docentomgeving_server.py",
     "scripts/start_local_docentomgeving.sh",
     "Open Jaarplanning Studio.command",
@@ -56,8 +57,7 @@ def truthy_env(name: str, default: bool = True) -> bool:
 
 def run_git(args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        ["git", *args],
-        cwd=ROOT,
+        ["git", "-C", str(ROOT), *args],
         text=True,
         capture_output=True,
         check=True,
@@ -66,8 +66,7 @@ def run_git(args: list[str]) -> subprocess.CompletedProcess[str]:
 
 def run_git_check(args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        ["git", *args],
-        cwd=ROOT,
+        ["git", "-C", str(ROOT), *args],
         text=True,
         capture_output=True,
         check=False,

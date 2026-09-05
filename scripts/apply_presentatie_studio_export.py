@@ -22,6 +22,16 @@ STUDENT_HTML_PATHS = [
     ROOT / "leerlingen.html",
     ROOT / "docs/leerlingen.html",
 ]
+CLASS_SLOT_DAY = {
+    "1C": {"A": 1, "B": 2, "C": 4},
+    "1D": {"A": 2, "B": 4, "C": 5},
+    "3B": {"A": 2, "B": 5},
+    "3C": {"A": 1, "B": 2},
+    "3E": {"A": 2, "B": 5},
+    "3F": {"A": 1, "B": 4},
+    "4B": {"A": 4, "B": 4, "C": 5},
+    "4C": {"A": 1, "B": 1, "C": 2},
+}
 
 
 def cache_version(stamp: str) -> str:
@@ -101,6 +111,50 @@ def extract_entries(payload: dict) -> list[dict] | None:
     if not cleaned:
         raise ValueError("Export bevat geen geldige planningregels.")
     return cleaned
+
+
+def normalize_weekday(value: object) -> int:
+    text = str(value or "").strip().casefold()
+    if text in {"1", "2", "3", "4", "5"}:
+        return int(text)
+    names = {
+        "maandag": 1,
+        "ma": 1,
+        "dinsdag": 2,
+        "di": 2,
+        "woensdag": 3,
+        "wo": 3,
+        "donderdag": 4,
+        "do": 4,
+        "vrijdag": 5,
+        "vr": 5,
+    }
+    return names.get(text, 0)
+
+
+def normalize_reading_locks(raw: object) -> dict[str, dict[str, int]]:
+    if not isinstance(raw, dict):
+        return {}
+
+    out: dict[str, dict[str, int]] = {}
+    for class_id, value in raw.items():
+        normalized_class = str(class_id or "").strip().upper()
+        if normalized_class.startswith("G") and len(normalized_class) >= 3 and normalized_class[1].isdigit():
+            normalized_class = normalized_class[1:]
+        day = normalize_weekday(
+            value.get("day") or value.get("weekday") if isinstance(value, dict) else value
+        )
+        if normalized_class and day:
+            out[normalized_class] = {"day": day}
+            continue
+        if isinstance(value, dict):
+            lesson_key = str(value.get("lessonKey") or value.get("slot") or "").strip().upper()
+        else:
+            lesson_key = str(value or "").strip().upper()
+        slot_day = CLASS_SLOT_DAY.get(normalized_class, {}).get(lesson_key, 0)
+        if normalized_class and slot_day:
+            out[normalized_class] = {"day": slot_day}
+    return out
 
 
 def grade_from_class_id(class_id: str) -> str:
@@ -198,6 +252,9 @@ def main() -> int:
     ]
     if entries is not None:
         internal["entries"] = expand_year_layer_entries(entries, internal.get("entries", []))
+    if "readingLocks" in payload:
+        reading_locks = normalize_reading_locks(payload.get("readingLocks"))
+        internal["readingLocks"] = reading_locks
     internal["presentations"] = presentations
     internal["updatedAt"] = stamp
     internal["sourceRevision"] = f"{stamp}-studio"
