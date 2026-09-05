@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:02:48+02:00",
+  "updatedAt": "2026-09-05T22:02:57+02:00",
   "entries": [
     {
       "classId": "1",
@@ -2755,15 +2755,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2785,15 +2786,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2815,15 +2817,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2845,15 +2848,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2875,15 +2879,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2905,15 +2910,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2935,15 +2941,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "classId": "1",
           "week": "38",
-          "sequenceIndex": 3
+          "sequenceIndex": 3,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2965,15 +2972,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -2995,15 +3003,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3025,15 +3034,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3055,15 +3065,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3085,15 +3096,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3115,15 +3127,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3145,15 +3158,16 @@
           "presentationMarkerId": "marker-leesmeters"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "classId": "1",
           "week": "39",
-          "sequenceIndex": 4
+          "sequenceIndex": 4,
+          "manualStatus": "todo"
         }
       ],
       "items": [
@@ -3279,7 +3293,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3290,7 +3304,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3311,7 +3325,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3322,7 +3336,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3343,7 +3357,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3354,7 +3368,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3375,7 +3389,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3386,7 +3400,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3407,7 +3421,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3418,7 +3432,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3439,7 +3453,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3450,7 +3464,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -3471,7 +3485,7 @@
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "classId": "1",
-          "week": "46",
+          "week": "43",
           "sequenceIndex": 15
         },
         {
@@ -3482,7 +3496,7 @@
           "presentationId": "project-spiegeldicht",
           "presentationMarkerId": "marker-kiezen",
           "classId": "1",
-          "week": "41",
+          "week": "43",
           "sequenceIndex": 16
         }
       ],
@@ -32179,7 +32193,7 @@
       "subtitle": "Start Nederlands 4"
     }
   },
-  "sourceRevision": "2026-09-05T22:02:48+02:00-studio",
+  "sourceRevision": "2026-09-05T22:02:57+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,

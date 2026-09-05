@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:02:48+02:00",
+  "updatedAt": "2026-09-05T22:02:57+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -337,12 +337,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         }
       ],
@@ -364,12 +364,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
@@ -809,12 +809,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         }
       ],
@@ -836,12 +836,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
@@ -1274,12 +1274,12 @@
       "week": "36",
       "lessons": [
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         },
         {
@@ -1301,12 +1301,12 @@
       "week": "37",
       "lessons": [
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         },
         {
@@ -1746,12 +1746,12 @@
       "week": "36",
       "lessons": [
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         },
         {
@@ -1773,12 +1773,12 @@
       "week": "37",
       "lessons": [
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         },
         {
@@ -2225,12 +2225,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         }
       ],
@@ -2252,12 +2252,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
@@ -2697,12 +2697,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         }
       ],
@@ -2724,12 +2724,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
@@ -3169,12 +3169,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 1 - Migratie en Cultuur",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-1-migratie-en-cultuur",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         }
       ],
@@ -3196,12 +3196,12 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Verweggers",
-          "lesson": "Les 3 - Socratisch gesprek over migratie",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-verweggers",
-          "presentationMarkerId": "marker-les-3-socratisch-gesprek-over-migratie",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
@@ -13760,7 +13760,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-09-05T22:02:48+02:00",
+  "sourceRevision": "2026-09-05T22:02:57+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
