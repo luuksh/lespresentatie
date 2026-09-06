@@ -503,6 +503,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     return leftAliases.some((alias) => rightAliases.has(alias));
   }
 
+  function normalizeProgressStatus(value) {
+    const clean = String(value || '').trim().toLowerCase();
+    return clean === 'done' || clean === 'todo' ? clean : '';
+  }
+
+  function normalizeProgressByClass(raw) {
+    const out = {};
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+    for (const [classId, value] of Object.entries(raw)) {
+      const cleanClass = normalizeClassId(classId);
+      const cleanValue = normalizeProgressStatus(value && typeof value === 'object' ? value.status : value);
+      if (cleanClass && cleanValue) out[cleanClass] = cleanValue;
+    }
+    return out;
+  }
+
+  function manualLessonStatus(lesson) {
+    const value = normalizeProgressStatus(lesson?.manualStatus || lesson?.statusOverride);
+    if (value === 'done' || value === 'todo') return value;
+    if (lesson?.lessonDone === true || lesson?.completed === true) return 'done';
+    return '';
+  }
+
+  function manualLessonStatusForClass(lesson, classId) {
+    const progress = normalizeProgressByClass(lesson?.progressByClass);
+    for (const alias of classIdAliases(classId)) {
+      const value = progress[normalizeClassId(alias)];
+      if (value) return value;
+    }
+    return manualLessonStatus(lesson);
+  }
+
   function sortClassIds(values = []) {
     const collator = new Intl.Collator('nl-NL', { numeric: true, sensitivity: 'base' });
     return [...new Set(values.map((value) => mapSpecialClassAlias(value)).filter(Boolean))]
@@ -811,6 +843,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter((index) => index >= 0);
   }
 
+  function adjustedProgressLessonIndex(classId, orderedLessons, anchorIndex) {
+    const safeIndex = Math.max(0, Math.min(
+      Number.isInteger(anchorIndex) ? anchorIndex : 0,
+      orderedLessons.length,
+    ));
+    const firstForcedTodo = orderedLessons.findIndex((item) => manualLessonStatusForClass(item.lesson, classId) === 'todo');
+    let index = firstForcedTodo >= 0 && firstForcedTodo < safeIndex ? firstForcedTodo : safeIndex;
+    while (index < orderedLessons.length && manualLessonStatusForClass(orderedLessons[index].lesson, classId) === 'done') {
+      index += 1;
+    }
+    return index;
+  }
+
   function anchorUsesProjectForAgendaEntry(classId, anchor, agendaEntry) {
     if (!agendaEntry) return false;
     if (anchor.useProjectOnFirstLesson) return true;
@@ -871,7 +916,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (projectIndex < 0) return null;
 
     const orderedLessons = getOrderedPlanningLessonsForClass(classId);
-    const match = orderedLessons[projectIndex] || null;
+    const adjustedIndex = adjustedProgressLessonIndex(classId, orderedLessons, projectIndex);
+    const match = orderedLessons[adjustedIndex] || null;
     if (!match?.lesson) return null;
 
     const mergedWeekData = mergePlanEntries(weekData, match.weekData);
@@ -930,8 +976,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!orderedLessons.length || !anchorIndexes.length) return null;
     const bundleSize = anchorIndexes.length;
     const offset = anchorAgendaOffset(classId, anchor, agendaEntry);
-    const startIndex = Math.min(...anchorIndexes) + (offset <= 0 ? 0 : bundleSize + offset - 1);
-    const lessonCount = offset <= 0 ? bundleSize : 1;
+    const automaticIndex = Math.min(...anchorIndexes) + (offset <= 0 ? 0 : bundleSize + offset - 1);
+    const startIndex = adjustedProgressLessonIndex(classId, orderedLessons, automaticIndex);
+    const lessonCount = startIndex === automaticIndex && offset <= 0 ? bundleSize : 1;
     if (startIndex >= orderedLessons.length) return null;
     const matches = orderedLessons.slice(startIndex, startIndex + lessonCount);
     const mergedWeekData = mergePlanEntries(...matches.map((match) => match.weekData));
@@ -1093,7 +1140,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     ).trim();
     const lessonKey = String(row.lessonKey ?? row.slot ?? row.lesKey ?? row.key ?? '').trim().toUpperCase();
     if (!project && !lesson && !homework) return null;
-    return { project, lesson, homework, presentationId, presentationMarkerId, lessonKey };
+    const normalizedLesson = { project, lesson, homework, presentationId, presentationMarkerId, lessonKey };
+    const progressByClass = normalizeProgressByClass(row.progressByClass);
+    if (Object.keys(progressByClass).length) normalizedLesson.progressByClass = progressByClass;
+    const legacyStatus = manualLessonStatus(row);
+    if (legacyStatus) normalizedLesson.manualStatus = legacyStatus;
+    return normalizedLesson;
   }
 
   function coerceLessons(value) {

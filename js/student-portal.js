@@ -331,6 +331,22 @@ function normalizeReadingLocks(raw) {
   return out;
 }
 
+function normalizeProgressStatus(value) {
+  const clean = String(value || '').trim().toLowerCase();
+  return clean === 'done' || clean === 'todo' ? clean : '';
+}
+
+function normalizeProgressByClass(raw) {
+  const out = {};
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+  for (const [classId, value] of Object.entries(raw)) {
+    const cleanClass = normalizeClassId(classId);
+    const cleanValue = normalizeProgressStatus(value && typeof value === 'object' ? value.status : value);
+    if (cleanClass && cleanValue) out[cleanClass] = cleanValue;
+  }
+  return out;
+}
+
 function normalizeWeekday(value) {
   const text = String(value || '').trim().toLocaleLowerCase('nl-NL');
   if (/^[1-5]$/.test(text)) return Number(text);
@@ -361,7 +377,14 @@ function normalizeDoc(raw) {
     .map((entry) => ({
       classId: normalizeClassId(entry.classId),
       week: String(entry.week || '').trim(),
-      lessons: Array.isArray(entry.lessons) ? entry.lessons : [],
+      lessons: Array.isArray(entry.lessons) ? entry.lessons.map((lesson) => {
+        if (!lesson || typeof lesson !== 'object') return lesson;
+        const normalizedLesson = { ...lesson };
+        const progressByClass = normalizeProgressByClass(normalizedLesson.progressByClass);
+        if (Object.keys(progressByClass).length) normalizedLesson.progressByClass = progressByClass;
+        else delete normalizedLesson.progressByClass;
+        return normalizedLesson;
+      }) : [],
       items: Array.isArray(entry.items) ? entry.items.map((item) => String(item).trim()).filter(Boolean) : [],
       note: String(entry.note || '').trim(),
     }))
@@ -906,6 +929,7 @@ function classPlanningAliases(rawClassId) {
   if (upperGradeLetter) {
     const idx = letterToIndex(upperGradeLetter[1]);
     if (idx) {
+      push(`4${upperGradeLetter[1]}`);
       push(`4G${idx}`);
       push(`4.${idx}`);
     }
@@ -1424,7 +1448,7 @@ function getClassProgressAnchor(classId, now = new Date()) {
   const anchorLesson = findProgressAnchorLesson(classId, agendaEntries, selectedEntry, now);
   if (anchorLesson) {
     const anchorIndex = findLessonIndexByIdentity(lessons, anchorLesson.lesson);
-    const manualIndex = adjustedAnchorIndexByManualStatus(lessons, anchorIndex);
+    const manualIndex = adjustedAnchorIndexByManualStatus(lessons, anchorIndex, classId);
     if (manualIndex >= lessons.length) return { doneAll: true, anchorIndex: manualIndex, agendaEntry: selectedEntry, source: 'handmatig' };
     if (manualIndex !== anchorIndex) {
       const manualLesson = lessons[manualIndex];
@@ -1457,6 +1481,7 @@ function getClassProgressAnchor(classId, now = new Date()) {
   const anchorIndex = adjustedAnchorIndexByManualStatus(
     lessons,
     projectAnchorIndexFromAgenda(classId, lessons, agendaEntries, now),
+    classId,
   );
 
   if (anchorIndex >= lessons.length) {
@@ -2042,29 +2067,38 @@ function firstPresentationTargetForGroup(group) {
 }
 
 function manualLessonStatus(lesson) {
-  const value = String(lesson?.manualStatus || lesson?.statusOverride || '').trim().toLowerCase();
+  const value = normalizeProgressStatus(lesson?.manualStatus || lesson?.statusOverride);
   if (value === 'done' || value === 'todo') return value;
   if (lesson?.lessonDone === true || lesson?.completed === true) return 'done';
   return '';
 }
 
-function adjustedAnchorIndexByManualStatus(lessons, anchorIndex) {
+function manualLessonStatusForClass(lesson, classId) {
+  const progress = normalizeProgressByClass(lesson?.progressByClass);
+  for (const alias of classPlanningAliases(classId)) {
+    const value = progress[alias];
+    if (value) return value;
+  }
+  return manualLessonStatus(lesson);
+}
+
+function adjustedAnchorIndexByManualStatus(lessons, anchorIndex, classId) {
   const safeIndex = Math.max(0, Math.min(
     Number.isInteger(anchorIndex) ? anchorIndex : 0,
     lessons.length,
   ));
-  const firstForcedTodo = lessons.findIndex((lesson) => manualLessonStatus(lesson) === 'todo');
+  const firstForcedTodo = lessons.findIndex((lesson) => manualLessonStatusForClass(lesson, classId) === 'todo');
   let index = firstForcedTodo >= 0 && firstForcedTodo < safeIndex ? firstForcedTodo : safeIndex;
-  while (index < lessons.length && manualLessonStatus(lessons[index]) === 'done') index += 1;
+  while (index < lessons.length && manualLessonStatusForClass(lessons[index], classId) === 'done') index += 1;
   return index;
 }
 
 function getLessonTimelineStatus(classId, lesson, now = new Date()) {
   const week = String(lesson?.week || '').trim();
   const lessonKey = String(lesson?.lessonKey || '').trim().toUpperCase();
-  const manualStatus = manualLessonStatus(lesson);
-  if (manualStatus === 'done') return { state: 'done', label: 'Afgevinkt', icon: '✓' };
-  if (manualStatus === 'todo') return { state: 'future', label: 'Niet geweest', icon: '○' };
+  const manualStatus = manualLessonStatusForClass(lesson, classId);
+  if (manualStatus === 'done') return { state: 'done', label: 'Handmatig afgevinkt', icon: '✓' };
+  if (manualStatus === 'todo') return { state: 'future', label: 'Handmatig open', icon: '○' };
   const progressAnchor = getClassProgressAnchor(classId, now);
   if (progressAnchor) {
     const orderedLessons = getProjectOrderedLessonsForClass(classId);

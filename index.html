@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/lesstudio.css?v=20260905-08" />
-  <script type="module" src="js/lesstudio.js?v=202609060800"></script>
+  <link rel="stylesheet" href="css/lesstudio.css?v=202609060945" />
+  <script type="module" src="js/lesstudio.js?v=202609060945"></script>
 </head>
 <body>
   <main class="lesson-app">
@@ -82,6 +82,10 @@
             <h2 id="planningTitle">Lesvolgorde</h2>
           </div>
           <div class="panel-actions">
+            <label class="field progress-class-field">
+              <span>Voortgangsklas</span>
+              <select id="progressClassSelect"></select>
+            </label>
             <button id="clearPlanningBtn" type="button" class="secondary-action danger">Planning leegmaken</button>
             <button id="newLessonTopBtn" type="button" class="primary-action">+ Nieuwe les</button>
           </div>
@@ -102,7 +106,7 @@
               <input id="lessonTitleInput" class="title-input" type="text" aria-label="Lestitel" />
             </div>
             <div class="editor-actions">
-              <button id="openPresentationBtn" type="button">Open</button>
+              <button id="openPresentationBtn" type="button">Preview</button>
               <button id="unplanLessonBtn" type="button">Uit planning</button>
               <button id="deletePresentationBtn" type="button" class="danger">Verwijder presentatie</button>
             </div>
@@ -200,17 +204,13 @@
     </section>
   </main>
 
-  <dialog id="presentationDialog" class="presentation-dialog">
-    <header>
-      <strong id="dialogTitle">Presentatie</strong>
-      <button id="dialogCloseBtn" type="button">Sluiten</button>
-    </header>
-    <div id="dialogStage" class="dialog-stage"></div>
-    <footer>
-      <button id="dialogPrevBtn" type="button">Vorige</button>
-      <span id="dialogCounter">1 / 1</span>
-      <button id="dialogNextBtn" type="button">Volgende</button>
-    </footer>
+  <dialog id="presentationDialog" class="presentation-dialog presentation-preview-dialog">
+    <iframe id="dialogFrame" class="presentation-preview-frame" title="Presentatie-preview" allow="fullscreen"></iframe>
+    <button id="dialogCloseBtn" class="presentation-preview-close" type="button">Sluiten</button>
+    <div id="dialogStage" class="dialog-stage" hidden></div>
+    <button id="dialogPrevBtn" type="button" hidden>Vorige</button>
+    <span id="dialogCounter" hidden>1 / 1</span>
+    <button id="dialogNextBtn" type="button" hidden>Volgende</button>
   </dialog>
 </body>
 </html>
