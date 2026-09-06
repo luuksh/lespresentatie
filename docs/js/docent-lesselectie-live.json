@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:17:59.175Z",
+  "updatedAt": "2026-09-06T14:22:53.082Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -86,7 +86,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nMaak je eerste netschriftpagina af.\nNeem iedere les je leesboek, netschrift en pen mee.\nNeem volgende les ook potlood, kleurpotloden of fineliner mee.",
+          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nNeem volgende les je netschrift, pen en kennismakingsformulier mee.\nNeem ook potlood, kleurpotloden of fineliner mee. netschrift en pen mee",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
@@ -330,7 +330,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nMaak je eerste netschriftpagina af.\nNeem iedere les je leesboek, netschrift en pen mee.\nNeem volgende les ook potlood, kleurpotloden of fineliner mee.",
+          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nNeem volgende les je netschrift, pen en kennismakingsformulier mee.\nNeem ook potlood, kleurpotloden of fineliner mee. netschrift en pen mee",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
