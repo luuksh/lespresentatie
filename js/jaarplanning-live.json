@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:38:13+02:00",
+  "updatedAt": "2026-09-06T08:38:35+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:38:13+02:00",
+  "sourceRevision": "2026-09-06T08:38:35+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41737,7 +41737,10 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "netschrift en pen mee",
             "assessment": "",
-            "teacherNote": ""
+            "teacherNote": "",
+            "progressByClass": {
+              "1D": "done"
+            }
           },
           "homework": {
             "items": [

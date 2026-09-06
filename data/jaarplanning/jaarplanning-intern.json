@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:38:12+02:00",
+  "updatedAt": "2026-09-06T08:38:35+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3838,7 +3838,10 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": ""
+          "teacherNote": "",
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -3874,7 +3877,10 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": ""
+          "teacherNote": "",
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -33318,7 +33324,10 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "netschrift en pen mee",
             "assessment": "",
-            "teacherNote": ""
+            "teacherNote": "",
+            "progressByClass": {
+              "1D": "done"
+            }
           },
           "homework": {
             "items": [
@@ -34769,7 +34778,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:38:12+02:00-studio",
+  "sourceRevision": "2026-09-06T08:38:35+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
