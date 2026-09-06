@@ -31,6 +31,7 @@ PUBLIC_PORTAL_FILES = [
     "leeglokaal.html",
     "css/internal-shell.css",
     "css/style.css",
+    "css/rich-presentations.css",
     "css/lesstudio.css",
     "css/jaarplanning-studio.css",
     "css/presentatie-studio.css",

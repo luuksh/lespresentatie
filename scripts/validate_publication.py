@@ -31,6 +31,7 @@ FORBIDDEN_PUBLIC_PATHS = {
     "leeglokaal.html",
     "timer.html",
     "css/style.css",
+    "css/rich-presentations.css",
     "css/lesstudio.css",
     "css/jaarplanning-studio.css",
     "css/presentatie-studio.css",

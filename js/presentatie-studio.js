@@ -1647,7 +1647,7 @@ function renderProject() {
         <span class="marker-id">${row.markerId}</span>
         <p class="marker-planning">${escapeHtml(planningSummaryForMarker(project, row.markerId))}</p>
       </td>
-      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[netschrift]\\n- Wat moet aan het einde van deze les in het netschrift staan?\\n---\\n[title] Intro met [linktekst](https://voorbeeld.nl)\\nsubtitle: Bekijk [bron](https://voorbeeld.nl)\\n---\\n[metadata]\\nvaardigheden: Schrijven; Reflectie\\nkerndoelen: KD1\\nsubkerndoelen: 1A">${text}</textarea></td>
+      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[netschrift]\\n- Wat moet aan het einde van deze les in het netschrift staan?\\n---\\n[title] Intro met [linktekst](https://voorbeeld.nl)\\nsubtitle: Bekijk [bron](https://voorbeeld.nl)\\n---\\n[visual] Beeld dat de les opent\\nsubtitle: Kijk eerst goed. Wat valt op?\\nimage: https://voorbeeld.nl/beeld.jpg\\ncaption: Korte context bij het beeld\\nsource: Bron of maker\\nlayout: image-right\\n---\\n[metadata]\\nvaardigheden: Schrijven; Reflectie\\nkerndoelen: KD1\\nsubkerndoelen: 1A">${text}</textarea></td>
       <td><textarea class="netschrift-textarea" data-netschrift-marker="${row.markerId}" placeholder="Wat moet na deze les in het netschrift staan?\\nBijvoorbeeld:\\n- Drie inzichten uit het artikel\\n- Antwoord op de onderzoeksvraag">${netschriftText}</textarea></td>
     `;
     markerBody.appendChild(tr);
