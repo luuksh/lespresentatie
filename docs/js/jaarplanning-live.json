@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:55:26+02:00",
+  "updatedAt": "2026-09-06T16:56:41+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:55:26+02:00",
+  "sourceRevision": "2026-09-06T16:56:41+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -42511,14 +42511,11 @@
         "marker-startles-3-2": {
           "netschrift": {
             "items": [
-              "Netschrift bevat titel, datum, verzorgde indeling en de startopdracht van deze les.",
-              "Je startpagina heeft een sterke titel.",
+              "Titel: Mijn startpunt bij Nederlands - september 2026.",
               "Je verwerkt minimaal drie antwoorden uit het duo-interview.",
-              "Je maakt geen ingevuld vragenlijstje.",
-              "Je gebruikt woorden, kaders, symbolen of kleine illustraties.",
-              "Je bewaart ruimte voor ontwikkeling: hier kijken we later op terug.",
-              "Titelblad, inhoudsopgave, leesmeters, woordenlijst en grammatica zijn gecontroleerd.",
-              "Je voorkant of titelblad is persoonlijker gemaakt of duidelijk ontworpen."
+              "Je schrijft erbij wat die antwoorden over jou laten zien.",
+              "Je pagina is geen vragenlijstje, maar een verzorgde startpagina.",
+              "Je sluit af met één zin: Dit wil ik dit jaar durven proberen..."
             ]
           },
           "curriculum": {
