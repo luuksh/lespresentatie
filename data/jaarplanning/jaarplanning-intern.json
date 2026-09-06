@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:25:37+02:00",
+  "updatedAt": "2026-09-06T08:29:59+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -2419,6 +2419,86 @@
       "items": []
     },
     {
+      "classId": "1C",
+      "week": "36",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
+        }
+      ],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1.",
+        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
+      ],
+      "note": "Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 1 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
+    },
+    {
+      "classId": "1D",
+      "week": "36",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
+        }
+      ],
+      "items": [
+        "Geen reguliere lessen: CGU-Week 1.",
+        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
+      ],
+      "note": "Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 1 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
+    },
+    {
       "classId": "1A",
       "week": "36",
       "lessons": [
@@ -2428,6 +2508,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
         }
       ],
       "items": [
@@ -2446,6 +2548,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
         }
       ],
       "items": [
@@ -2464,6 +2588,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
         }
       ],
       "items": [
@@ -2482,6 +2628,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
         }
       ],
       "items": [
@@ -2500,6 +2668,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3,
+          "classId": "1C",
+          "week": "36"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4,
+          "classId": "1C",
+          "week": "36"
         }
       ],
       "items": [
@@ -2509,6 +2699,86 @@
       "note": "Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 1 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
     },
     {
+      "classId": "1C",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
+        }
+      ],
+      "items": [
+        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
+        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
+      ],
+      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+    },
+    {
+      "classId": "1D",
+      "week": "37",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
+        }
+      ],
+      "items": [
+        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
+        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
+      ],
+      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+    },
+    {
       "classId": "1A",
       "week": "37",
       "lessons": [
@@ -2518,6 +2788,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
         }
       ],
       "items": [
@@ -2536,6 +2828,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
         }
       ],
       "items": [
@@ -2554,6 +2868,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
         }
       ],
       "items": [
@@ -2572,6 +2908,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
         }
       ],
       "items": [
@@ -2590,6 +2948,28 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
+        },
+        {
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5,
+          "classId": "1C",
+          "week": "37"
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6,
+          "classId": "1C",
+          "week": "37"
         }
       ],
       "items": [
@@ -3327,7 +3707,7 @@
       "note": "Geen reguliere lessen deze week: CGU-week 2 - Moralicious."
     },
     {
-      "classId": "1",
+      "classId": "1C",
       "week": "35",
       "lessons": [
         {
@@ -3337,12 +3717,81 @@
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
           "sequenceIndex": 1
+        },
+        {
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
+          "homework": "netschrift en pen mee",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
+          "classId": "1C",
+          "lessonKey": "A",
+          "sequenceIndex": 1,
+          "week": "35",
+          "progressByClass": {
+            "1D": "done"
+          }
+        },
+        {
+          "project": "Start Nederlands 1",
+          "lesson": "Les 2 - Maak het van jou",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-2",
+          "sequenceIndex": 2,
+          "classId": "1C",
+          "week": "35"
         }
       ],
       "items": []
     },
     {
-      "classId": "1",
+      "classId": "1D",
+      "week": "35",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "B",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 1
+        },
+        {
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
+          "homework": "netschrift en pen mee",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
+          "classId": "1C",
+          "lessonKey": "A",
+          "sequenceIndex": 1,
+          "week": "35",
+          "progressByClass": {
+            "1D": "done"
+          }
+        },
+        {
+          "project": "Start Nederlands 1",
+          "lesson": "Les 2 - Maak het van jou",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-2",
+          "sequenceIndex": 2,
+          "classId": "1C",
+          "week": "35"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
       "week": "38",
       "lessons": [
         {
@@ -3352,12 +3801,71 @@
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
           "sequenceIndex": 7
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 7,
+          "classId": "1C",
+          "week": "38"
+        },
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "sequenceIndex": 8,
+          "classId": "1C",
+          "week": "38"
         }
       ],
       "items": []
     },
     {
-      "classId": "1",
+      "classId": "1D",
+      "week": "38",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "B",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 7
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 7,
+          "classId": "1C",
+          "week": "38"
+        },
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "sequenceIndex": 8,
+          "classId": "1C",
+          "week": "38"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
       "week": "39",
       "lessons": [
         {
@@ -3367,6 +3875,43 @@
           "lessonKey": "B",
           "presentationId": "project-heel-veel-lezen",
           "sequenceIndex": 9
+        },
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "sequenceIndex": 9,
+          "classId": "1C",
+          "week": "39"
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1D",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "B",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 9
+        },
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "sequenceIndex": 9,
+          "classId": "1C",
+          "week": "39"
         }
       ],
       "items": []
@@ -12264,6 +12809,53 @@
       "note": "Persoonlijkheid schuift een week op doordat week 37 de algemene startlessen Nederlands 4 bevat."
     },
     {
+      "classId": "MENTORLES",
+      "week": "35",
+      "lessons": [
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 0: kennismakingsmiddag",
+          "homework": "",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-mentorles-0-kennismakingsmiddag",
+          "lessonKey": "0"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 1",
+          "homework": "",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-eerste-mentorles-welkom-en-wegwijs",
+          "lessonKey": "A"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 2",
+          "homework": "",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-tweede-mentorles-ict-carrousel",
+          "lessonKey": "B"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 3",
+          "homework": "",
+          "assessment": "",
+          "teacherNote": "",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-derde-mentorles-u-in-utrecht-en-klasstart",
+          "lessonKey": "C"
+        }
+      ],
+      "items": []
+    },
+    {
       "classId": "ALL",
       "week": "1",
       "lessons": [],
@@ -12409,325 +13001,6 @@
         "Schoolagenda: 25-02 AL Open Lesmiddag 13:30-16:00 uur; CGUweek2."
       ],
       "note": ""
-    },
-    {
-      "classId": "MENTORLES",
-      "week": "35",
-      "lessons": [
-        {
-          "project": "Mentorles 1D",
-          "lesson": "Mentorles 0: kennismakingsmiddag",
-          "homework": "",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-mentorles-1d",
-          "presentationMarkerId": "marker-mentorles-0-kennismakingsmiddag",
-          "lessonKey": "0"
-        },
-        {
-          "project": "Mentorles 1D",
-          "lesson": "Mentorles 1",
-          "homework": "",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-mentorles-1d",
-          "presentationMarkerId": "marker-eerste-mentorles-welkom-en-wegwijs",
-          "lessonKey": "A"
-        },
-        {
-          "project": "Mentorles 1D",
-          "lesson": "Mentorles 2",
-          "homework": "",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-mentorles-1d",
-          "presentationMarkerId": "marker-tweede-mentorles-ict-carrousel",
-          "lessonKey": "B"
-        },
-        {
-          "project": "Mentorles 1D",
-          "lesson": "Mentorles 3",
-          "homework": "",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-mentorles-1d",
-          "presentationMarkerId": "marker-derde-mentorles-u-in-utrecht-en-klasstart",
-          "lessonKey": "C"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "35",
-      "lessons": [
-        {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "netschrift en pen mee",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-1",
-          "classId": "1C",
-          "lessonKey": "A",
-          "sequenceIndex": 1,
-          "week": "35"
-        },
-        {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 2 - Maak het van jou",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
-          "classId": "1C",
-          "week": "35"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "36",
-      "lessons": [
-        {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "classId": "1C",
-          "week": "36"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 4,
-          "classId": "1C",
-          "week": "36"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "37",
-      "lessons": [
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 5,
-          "classId": "1C",
-          "week": "37"
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 6,
-          "classId": "1C",
-          "week": "37"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "38",
-      "lessons": [
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 7,
-          "classId": "1C",
-          "week": "38"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 8,
-          "classId": "1C",
-          "week": "38"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1C",
-      "week": "39",
-      "lessons": [
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 9,
-          "classId": "1C",
-          "week": "39"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "35",
-      "lessons": [
-        {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 2 - Maak het van jou",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 1,
-          "classId": "1D",
-          "week": "35"
-        },
-        {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "netschrift en pen mee",
-          "assessment": "",
-          "teacherNote": "",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-1",
-          "classId": "1D",
-          "lessonKey": "B",
-          "sequenceIndex": 2,
-          "week": "35"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "36",
-      "lessons": [
-        {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "classId": "1D",
-          "week": "36"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 4,
-          "classId": "1D",
-          "week": "36"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "37",
-      "lessons": [
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 5,
-          "classId": "1D",
-          "week": "37"
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 6,
-          "classId": "1D",
-          "week": "37"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "38",
-      "lessons": [
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 7,
-          "classId": "1D",
-          "week": "38"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 8,
-          "classId": "1D",
-          "week": "38"
-        }
-      ],
-      "items": []
-    },
-    {
-      "classId": "1D",
-      "week": "39",
-      "lessons": [
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 9,
-          "classId": "1D",
-          "week": "39"
-        }
-      ],
-      "items": []
     }
   ],
   "presentations": {
@@ -33544,7 +33817,10 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "netschrift en pen mee",
             "assessment": "",
-            "teacherNote": ""
+            "teacherNote": "",
+            "progressByClass": {
+              "1D": "done"
+            }
           }
         }
       }
@@ -35212,7 +35488,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:25:37+02:00-studio",
+  "sourceRevision": "2026-09-06T08:29:59+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
