@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T06:01:12.862Z",
+  "updatedAt": "2026-09-06T06:30:13.868Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -84,11 +84,11 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "lessonKey": "A",
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
@@ -174,11 +174,11 @@
       "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 2 - Maak het van jou",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-2",
           "lessonKey": "C",
           "classId": "G1C",
           "scheduledDate": "2026-09-08T06:15:00.000Z"
@@ -331,11 +331,11 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-08T12:40:00.000Z"
@@ -419,7 +419,7 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "datumprojectie",
+      "source": "docentplatform",
       "lessons": [
         {
           "project": "Leesmeters",
@@ -433,11 +433,8 @@
           "scheduledDate": "2026-09-10T08:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G3F|2026-09-10T09:35:00.000Z|2026-09-10T10:20:00.000Z",
@@ -482,7 +479,7 @@
       "lessonIndex": 3,
       "lessonSlot": "C",
       "isManual": false,
-      "source": "datumprojectie",
+      "source": "docentplatform",
       "lessons": [
         {
           "project": "Leesmeters",
@@ -496,11 +493,8 @@
           "scheduledDate": "2026-09-10T10:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G1D|2026-09-11T06:15:00.000Z|2026-09-11T07:00:00.000Z",
@@ -517,10 +511,10 @@
       "lessons": [
         {
           "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
+          "presentationMarkerId": "marker-les-1-intro",
           "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-11T06:15:00.000Z"
