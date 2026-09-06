@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:33:23+02:00",
+  "updatedAt": "2026-09-06T08:34:26+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -32485,11 +32485,14 @@
           "variant": ""
         },
         {
-          "type": "title",
-          "title": "---",
+          "type": "bullets",
+          "title": "Kern",
           "subtitle": "",
           "showProjectLogo": false,
-          "items": [],
+          "items": [
+            "Eerste punt",
+            "Tweede punt"
+          ],
           "emphasis": false,
           "variant": ""
         },
@@ -32957,9 +32960,13 @@
             "subtitle": "De wereld als taallaboratorium"
           },
           {
-            "type": "title",
-            "title": "---",
-            "subtitle": ""
+            "type": "bullets",
+            "title": "Kern",
+            "subtitle": "",
+            "items": [
+              "Eerste punt",
+              "Tweede punt"
+            ]
           },
           {
             "type": "title",
@@ -34797,7 +34804,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:33:23+02:00-studio",
+  "sourceRevision": "2026-09-06T08:34:26+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
