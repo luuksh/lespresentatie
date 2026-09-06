@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
-  <link rel="stylesheet" href="css/lesstudio.css?v=202609060945" />
-  <script type="module" src="js/lesstudio.js?v=202609060956"></script>
+  <link rel="stylesheet" href="css/lesstudio.css?v=202609060820" />
+  <script type="module" src="js/lesstudio.js?v=202609060820-missing-lessons"></script>
 </head>
 <body>
   <main class="lesson-app">
@@ -25,6 +25,7 @@
       <div class="save-state">
         <span id="globalStatusDot" class="save-dot" aria-hidden="true"></span>
         <span id="globalStatusText">Laden...</span>
+        <button id="undoLastChangeBtn" type="button" hidden>Herstel</button>
         <button id="retryPublishBtn" type="button" hidden>Opnieuw</button>
       </div>
     </header>
@@ -67,10 +68,13 @@
         </div>
         <div class="side-links">
           <a href="docent.html">Docentenbord</a>
-          <a href="jaarplanning-studio.html">Oude jaarplanning</a>
-          <a href="presentatie-studio.html">Oude presentatiestudio</a>
           <a href="kerndoelen-studio.html">Kerndoelenstudio</a>
-          <a href="DEPLOY_SECURITY.md">Techniek</a>
+          <details class="side-advanced">
+            <summary>Beheer en archief</summary>
+            <a href="jaarplanning-studio.html">Oude jaarplanning</a>
+            <a href="presentatie-studio.html">Oude presentatiestudio</a>
+            <a href="DEPLOY_SECURITY.md">Techniek</a>
+          </details>
         </div>
       </aside>
 
@@ -85,8 +89,11 @@
               <span>Voortgangsklas</span>
               <select id="progressClassSelect"></select>
             </label>
-            <button id="clearPlanningBtn" type="button" class="secondary-action danger">Planning leegmaken</button>
             <button id="newLessonTopBtn" type="button" class="primary-action">+ Nieuwe les</button>
+            <details class="danger-menu panel-danger-menu">
+              <summary>Meer</summary>
+              <button id="clearPlanningBtn" type="button" class="secondary-action danger">Planning leegmaken</button>
+            </details>
           </div>
         </div>
         <div id="planningTimeline" class="timeline"></div>
@@ -106,10 +113,20 @@
             </div>
             <div class="editor-actions">
               <button id="openPresentationBtn" type="button">Preview</button>
-              <button id="unplanLessonBtn" type="button">Uit planning</button>
-              <button id="deletePresentationBtn" type="button" class="danger">Verwijder presentatie</button>
+              <details class="danger-menu editor-danger-menu">
+                <summary>Meer</summary>
+                <button id="unplanLessonBtn" type="button">Uit planning</button>
+                <button id="deletePresentationBtn" type="button" class="danger">Verwijder presentatie</button>
+              </details>
             </div>
           </header>
+
+          <div class="lesson-flow-actions" aria-label="Snelle lesacties">
+            <button id="openBoardPresentationBtn" type="button" class="primary-action">Open op bord</button>
+            <button id="markLessonDoneBtn" type="button" class="secondary-action">Vink les af</button>
+            <button id="openNetschriftBtn" type="button" class="secondary-action">Netschriftcheck</button>
+            <button id="selectNextLessonBtn" type="button" class="secondary-action">Volgende les</button>
+          </div>
 
           <div class="editor-tabs" role="tablist" aria-label="Leseditor">
             <button type="button" class="editor-tab is-active" data-editor-tab="presentation">Presentatie</button>
@@ -120,6 +137,13 @@
           <section class="editor-tabpanel is-active" data-editor-panel="presentation">
             <label class="field">
               <span>Presentatietekst</span>
+              <div class="slide-snippet-toolbar" aria-label="Presentatieblok toevoegen">
+                <button type="button" data-slide-snippet="title">Titeldia</button>
+                <button type="button" data-slide-snippet="bullets">Bullets</button>
+                <button type="button" data-slide-snippet="netschrift">Netschrift</button>
+                <button type="button" data-slide-snippet="homework">Huiswerk</button>
+                <button type="button" data-slide-snippet="metadata">Kerndoelen</button>
+              </div>
               <textarea id="slidesTextarea" class="slides-textarea" spellcheck="false" placeholder="[netschrift]&#10;- Wat moet aan het einde van deze les in het netschrift staan?&#10;---&#10;[title] Intro&#10;subtitle: Project&#10;---&#10;[metadata]&#10;vaardigheden: Schrijven; Reflectie&#10;kerndoelen: KD1&#10;subkerndoelen: 1A"></textarea>
             </label>
             <div id="slidePreview" class="slide-preview"></div>

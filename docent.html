@@ -49,17 +49,24 @@
   <aside class="side-drawer left" aria-label="Docentpaneel">
     <button class="drawer-handle" aria-label="Open docentpaneel">Docent</button>
     <div class="drawer-content">
-      <section class="card control-card">
-        <h2 class="panel-title">Sessiebediening</h2>
-        <p class="panel-help">Koppel een plattegrond aan een project. Zodra dat project voor deze klas opent, verschijnt die indeling automatisch.</p>
+      <nav class="drawer-section-nav" aria-label="Docentpaneel onderdelen">
+        <a href="#docentVandaag">Vandaag</a>
+        <a href="#docentPlattegrond">Plattegrond</a>
+        <a href="#docentVoorbereiding">Voorbereiding</a>
+        <a href="#docentAgenda">Agenda</a>
+      </nav>
+
+      <section id="docentVandaag" class="card control-card control-card-primary">
+        <h2 class="panel-title">Vandaag in de les</h2>
+        <p class="panel-help">Gebruik dit paneel tijdens de les: kies klas en indeling boven de plattegrond, open de presentatie op het bord en vink absenties direct op de namen aan.</p>
 
         <div class="controls-row">
           <button id="toggle-view-btn" type="button" class="btn btn-secondary">Docentweergave (spiegel)</button>
         </div>
       </section>
 
-      <section class="card control-card">
-        <h2 class="panel-title">Opgeslagen Plattegronden</h2>
+      <section id="docentPlattegrond" class="card control-card">
+        <h2 class="panel-title">Plattegrond</h2>
         <div class="toolbar presets-panel">
           <select id="savedLayoutSelect" class="presets-select"></select>
           <div class="btn-group">
@@ -78,33 +85,43 @@
         </div>
       </section>
 
-      <section class="card control-card">
-        <h2 class="panel-title">Jaarplanning Studio</h2>
-        <p class="panel-help">Open de volledige studio in een aparte pagina.</p>
+      <section id="docentVoorbereiding" class="card control-card">
+        <h2 class="panel-title">Voorbereiding</h2>
+        <p class="panel-help">Werk lessen, huiswerk, presentaties en doelen bij in de Lesstudio.</p>
         <div class="btn-group">
-          <a href="jaarplanning-studio.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Jaarplanning Studio</a>
-          <a href="presentatie-studio.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Open Presentatiestudio</a>
+          <a href="index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Lesstudio</a>
+          <a href="leerlingen.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Leerlingweergave</a>
         </div>
+        <details class="advanced-panel">
+          <summary>Oude studio's en techniek</summary>
+          <div class="btn-group">
+            <a href="jaarplanning-studio.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Oude jaarplanning</a>
+            <a href="presentatie-studio.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Oude presentatiestudio</a>
+          </div>
+        </details>
       </section>
 
-      <section class="card control-card">
+      <section id="docentAgenda" class="card control-card">
         <h2 class="panel-title">Zermelo live agenda</h2>
-        <p class="panel-help">Plak hier de URL van je live agenda JSON. De app kiest dan automatisch je klas en de les A/B/C voor vandaag.</p>
-        <div class="toolbar jaarplanning-settings">
-          <input
-            id="agendaSourceInput"
-            type="url"
-            class="jaarplanning-source-input"
-            placeholder="https://.../agenda.json"
-            autocomplete="off"
-          />
-          <div class="btn-group">
-            <button id="agendaSourceSave" type="button" class="btn btn-primary">Opslaan</button>
-            <button id="agendaSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
-            <button id="agendaImportBtn" type="button" class="btn btn-secondary">Importeer JSON/ICAL</button>
-            <button id="agendaDebugBtn" type="button" class="btn btn-secondary">Toon agenda-debug</button>
+        <p class="panel-help">De app gebruikt je rooster om de juiste klas, les en voorbereiding voor vandaag te kiezen.</p>
+        <details class="advanced-panel">
+          <summary>Agenda koppelen of debuggen</summary>
+          <div class="toolbar jaarplanning-settings">
+            <input
+              id="agendaSourceInput"
+              type="url"
+              class="jaarplanning-source-input"
+              placeholder="https://.../agenda.json"
+              autocomplete="off"
+            />
+            <div class="btn-group">
+              <button id="agendaSourceSave" type="button" class="btn btn-primary">Opslaan</button>
+              <button id="agendaSourceClear" type="button" class="btn btn-secondary">Leegmaken</button>
+              <button id="agendaImportBtn" type="button" class="btn btn-secondary">Importeer JSON/ICAL</button>
+              <button id="agendaDebugBtn" type="button" class="btn btn-secondary">Toon agenda-debug</button>
+            </div>
           </div>
-        </div>
+        </details>
         <input id="agendaImportFile" type="file" accept=".json,application/json,.ics,text/calendar,text/plain" style="display:none;" />
         <textarea
           id="agendaDebugOutput"

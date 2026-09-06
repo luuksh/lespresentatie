@@ -1,7 +1,52 @@
 {
-  "updatedAt": "2026-09-06T07:58:32+02:00",
+  "updatedAt": "2026-09-06T08:24:27+02:00",
   "sourceType": "internal-json",
   "entries": [
+    {
+      "classId": "1",
+      "week": "35",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 1
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1",
+      "week": "38",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 7
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 9
+        }
+      ],
+      "items": []
+    },
     {
       "classId": "1",
       "week": "44",
@@ -317,24 +362,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 3
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 4
         }
       ],
       "items": [
@@ -353,15 +380,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -780,24 +798,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 3
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 4
         }
       ],
       "items": [
@@ -816,15 +816,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -1255,12 +1246,12 @@
           "sequenceIndex": 1
         },
         {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
           "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 2
         }
       ],
@@ -1272,11 +1263,11 @@
       "lessons": [
         {
           "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         },
         {
@@ -1284,54 +1275,24 @@
           "lesson": "Leesmeters",
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "B",
-          "presentationId": "project-heel-veel-lezen"
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 3
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         }
       ],
-      "items": [
-        "Geen reguliere lessen: CGU-Week 1.",
-        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
-      ],
-      "note": "Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 1 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
+      "items": []
     },
     {
       "classId": "1C",
       "week": "37",
-      "lessons": [
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
-        },
-        {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "B",
-          "presentationId": "project-heel-veel-lezen"
-        }
-      ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
-    },
-    {
-      "classId": "1C",
-      "week": "38",
       "lessons": [
         {
           "project": "Droomschool",
@@ -1340,6 +1301,39 @@
           "lessonKey": "A",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5
+        },
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "B",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 5
+        },
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1C",
+      "week": "38",
+      "lessons": [
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "sequenceIndex": 7
         },
         {
@@ -1351,12 +1345,12 @@
           "sequenceIndex": 7
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
           "sequenceIndex": 8
         }
       ],
@@ -1800,12 +1794,12 @@
           "sequenceIndex": 1
         },
         {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 2
         },
         {
@@ -1825,20 +1819,20 @@
       "lessons": [
         {
           "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
+          "presentationMarkerId": "marker-les-1-intro",
           "sequenceIndex": 3
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
           "sequenceIndex": 4
         },
         {
@@ -1846,45 +1840,15 @@
           "lesson": "Leesmeters",
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen"
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 3
         }
       ],
-      "items": [
-        "Geen reguliere lessen: CGU-Week 1.",
-        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
-      ],
-      "note": "Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 1 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
+      "items": []
     },
     {
       "classId": "1D",
       "week": "37",
-      "lessons": [
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "A",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
-        },
-        {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "lessonKey": "C",
-          "presentationId": "project-heel-veel-lezen"
-        }
-      ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
-    },
-    {
-      "classId": "1D",
-      "week": "38",
       "lessons": [
         {
           "project": "Droomschool",
@@ -1893,7 +1857,7 @@
           "lessonKey": "A",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 7
+          "sequenceIndex": 5
         },
         {
           "project": "Taaltopia",
@@ -1902,6 +1866,39 @@
           "lessonKey": "B",
           "presentationId": "project-taaltopia",
           "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "C",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 5
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "1D",
+      "week": "38",
+      "lessons": [
+        {
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "lessonKey": "A",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 7
+        },
+        {
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
           "sequenceIndex": 8
         },
         {
@@ -2349,24 +2346,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 3
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 4
         }
       ],
       "items": [
@@ -2385,15 +2364,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -2812,24 +2782,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 3
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 4
         }
       ],
       "items": [
@@ -2848,15 +2800,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -3275,24 +3218,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 3
-        },
-        {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 4
         }
       ],
       "items": [
@@ -3311,15 +3236,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Spiegeldicht",
-          "lesson": "Kiezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-spiegeldicht",
-          "presentationMarkerId": "marker-kiezen",
-          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -13747,9 +13663,44 @@
         "Hoge toetsdruk deze week; plan geen afrondende projecten. 24-02 Toetsweek: DUTL, FATL +LGO; 25-02 Toetsweek: SPTL, WIB +LGO; 26-02 Toetsweek: PSE NA +LGO; 27-02 Toetsweek: ENTL +LGO",
         "Schoolagenda: 27-02 G6FATL G6FATL bezoek schouwburg ('s avonds)."
       ]
+    },
+    {
+      "classId": "MENTORLES",
+      "week": "35",
+      "lessons": [
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 1",
+          "lessonKey": "A",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-eerste-mentorles-welkom-en-wegwijs"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 2",
+          "lessonKey": "B",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-tweede-mentorles-ict-carrousel"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 3",
+          "lessonKey": "C",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-derde-mentorles-u-in-utrecht-en-klasstart"
+        },
+        {
+          "project": "Mentorles 1D",
+          "lesson": "Mentorles 0: kennismakingsmiddag",
+          "lessonKey": "0",
+          "presentationId": "project-mentorles-1d",
+          "presentationMarkerId": "marker-mentorles-0-kennismakingsmiddag"
+        }
+      ],
+      "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T07:58:32+02:00",
+  "sourceRevision": "2026-09-06T08:24:27+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41028,12 +40979,426 @@
           "subtitle": "Dit is pas het begin",
           "showProjectLogo": false,
           "items": []
+        },
+        {
+          "type": "title",
+          "title": "Welkom bij Nederlands",
+          "subtitle": "De wereld als taallaboratorium",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Je bent allang met Nederlands bezig",
+          "subtitle": "Heb je vandaag al...",
+          "showProjectLogo": false,
+          "items": [
+            "Gepraat?",
+            "Geappt?",
+            "Gelezen?",
+            "Geluisterd?",
+            "Nagedacht?",
+            "Geschreven?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Praat jij altijd hetzelfde?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Tegen je beste vriend(in)?",
+            "Tegen je ouders?",
+            "Tegen een docent?",
+            "Tegen iemand die je niet kent?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Jij bent een taalmaker",
+          "subtitle": "Bij Nederlands ga je lezen, schrijven, spreken, denken, onderzoeken en maken.",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe ziet Nederlands eruit?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Je bent zoveel mogelijk actief bezig.",
+            "Iedere les: leesboek en pen.",
+            "Je laptop gebruiken we alleen als die iets toevoegt.",
+            "Proberen, struikelen, opnieuw proberen, groeien."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Hoe word je beter in Nederlands?",
+          "subtitle": "In Magister zie je vaardigheden met O, V en G.",
+          "showProjectLogo": false,
+          "items": [
+            "Diep lezen",
+            "Literatuur",
+            "Schrijven",
+            "Spreken",
+            "Taalkunde",
+            "Je netschrift laat zien waarin je groeit."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "En dit wordt jouw Nederlands",
+          "subtitle": "In het netschrift wordt zichtbaar wat jij leest, schrijft, denkt, ontdekt, maakt en leert.",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom met de hand?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Je onthoudt beter.",
+            "Je denkt rustiger.",
+            "Je traint je concentratie.",
+            "Je formuleert je eigen gedachten.",
+            "Je werk wordt persoonlijker."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat is een fantastisch netschrift?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren",
+            "Het gaat wel om: Verzorgd; Overzichtelijk; Leesbaar; Persoonlijk"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De Netschriftcode",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Nieuwe opdracht: titel en datum.",
+            "Gebruik witruimte.",
+            "Schrijf rustig en leesbaar.",
+            "Werk met tussenkopjes, alinea's en kaders.",
+            "Foutje? Een nette streep erdoor."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "We richten hem samen in",
+          "subtitle": "Niet vooruitwerken.",
+          "showProjectLogo": false,
+          "items": [
+            "Leg klaar: netschrift, pen of potlood en liniaal.",
+            "We doen dit stap voor stap.",
+            "Controleer steeds of je op de juiste pagina zit."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 1: titelblad",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Eerste pagina: Netschrift Nederlands.",
+            "Naam, klas en schooljaar 2026-2027.",
+            "Nog niet uitgebreid versieren.",
+            "Dat doen we volgende les."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 2: inhoudsopgave",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Leesmeters",
+            "Project 1",
+            "Project 2",
+            "Project 3"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 3: leesmeters",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Reserveer tien pagina's.",
+            "Hier houd je je leesontwikkeling bij.",
+            "Daarna beginnen de projecten.",
+            "Vanaf nu nummeren we gebruikte pagina's."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Ieder project krijgt straks",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Een nieuw voorblad.",
+            "Een tabje.",
+            "Een plek in je inhoudsopgave.",
+            "Aan het einde: een korte terugblik."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Stap 4: draai je schrift om",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Begin vanaf de achterkant.",
+            "Reserveer vier pagina's voor de woordenlijst.",
+            "Daarna komt grammatica.",
+            "Zo houd je oefening en projecten overzichtelijk."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Je eerste echte pagina",
+          "subtitle": "Ik & Nederlands - september 2026",
+          "showProjectLogo": false,
+          "items": [
+            "Mijn top 3 boeken tot nu toe.",
+            "Een boek dat ik echt niet leuk vond.",
+            "Een strip, graphic novel of luisterboek mag ook.",
+            "Maak het persoonlijk en verzorgd."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wie ben jij bij Nederlands?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Hier ben ik volgens mij al goed in.",
+            "Dit vind ik lastig.",
+            "Hier wil ik dit jaar beter in worden.",
+            "Aan het einde van dit jaar hoop ik dat..."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Maak er geen vragenlijst van",
+          "subtitle": "Dit is je eerste netschriftpagina: titel, indeling, witruimte, kaders, letters en kleine illustraties.",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Dit is bladzijde een",
+          "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?",
+          "showProjectLogo": false,
+          "items": []
         }
       ],
       "markers": {
-        "marker-startles-1-2": 1
+        "marker-startles-1-2": 1,
+        "marker-startles-1-1": 15
       },
       "markerDecks": {
+        "marker-startles-1-1": [
+          {
+            "type": "title",
+            "title": "Welkom bij Nederlands",
+            "subtitle": "De wereld als taallaboratorium"
+          },
+          {
+            "type": "bullets",
+            "title": "Je bent allang met Nederlands bezig",
+            "subtitle": "Heb je vandaag al...",
+            "items": [
+              "Gepraat?",
+              "Geappt?",
+              "Gelezen?",
+              "Geluisterd?",
+              "Nagedacht?",
+              "Geschreven?"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Praat jij altijd hetzelfde?",
+            "subtitle": "",
+            "items": [
+              "Tegen je beste vriend(in)?",
+              "Tegen je ouders?",
+              "Tegen een docent?",
+              "Tegen iemand die je niet kent?"
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Jij bent een taalmaker",
+            "subtitle": "Bij Nederlands ga je lezen, schrijven, spreken, denken, onderzoeken en maken."
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe ziet Nederlands eruit?",
+            "subtitle": "",
+            "items": [
+              "Je bent zoveel mogelijk actief bezig.",
+              "Iedere les: leesboek en pen.",
+              "Je laptop gebruiken we alleen als die iets toevoegt.",
+              "Proberen, struikelen, opnieuw proberen, groeien."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Hoe word je beter in Nederlands?",
+            "subtitle": "In Magister zie je vaardigheden met O, V en G.",
+            "items": [
+              "Diep lezen",
+              "Literatuur",
+              "Schrijven",
+              "Spreken",
+              "Taalkunde",
+              "Je netschrift laat zien waarin je groeit."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "En dit wordt jouw Nederlands",
+            "subtitle": "In het netschrift wordt zichtbaar wat jij leest, schrijft, denkt, ontdekt, maakt en leert."
+          },
+          {
+            "type": "bullets",
+            "title": "Waarom met de hand?",
+            "subtitle": "",
+            "items": [
+              "Je onthoudt beter.",
+              "Je denkt rustiger.",
+              "Je traint je concentratie.",
+              "Je formuleert je eigen gedachten.",
+              "Je werk wordt persoonlijker."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wat is een fantastisch netschrift?",
+            "subtitle": "",
+            "items": [
+              "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren",
+              "Het gaat wel om: Verzorgd; Overzichtelijk; Leesbaar; Persoonlijk"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "De Netschriftcode",
+            "subtitle": "",
+            "items": [
+              "Nieuwe opdracht: titel en datum.",
+              "Gebruik witruimte.",
+              "Schrijf rustig en leesbaar.",
+              "Werk met tussenkopjes, alinea's en kaders.",
+              "Foutje? Een nette streep erdoor."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "We richten hem samen in",
+            "subtitle": "Niet vooruitwerken.",
+            "items": [
+              "Leg klaar: netschrift, pen of potlood en liniaal.",
+              "We doen dit stap voor stap.",
+              "Controleer steeds of je op de juiste pagina zit."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 1: titelblad",
+            "subtitle": "",
+            "items": [
+              "Eerste pagina: Netschrift Nederlands.",
+              "Naam, klas en schooljaar 2026-2027.",
+              "Nog niet uitgebreid versieren.",
+              "Dat doen we volgende les."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 2: inhoudsopgave",
+            "subtitle": "",
+            "items": [
+              "Leesmeters",
+              "Project 1",
+              "Project 2",
+              "Project 3"
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 3: leesmeters",
+            "subtitle": "",
+            "items": [
+              "Reserveer tien pagina's.",
+              "Hier houd je je leesontwikkeling bij.",
+              "Daarna beginnen de projecten.",
+              "Vanaf nu nummeren we gebruikte pagina's."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Ieder project krijgt straks",
+            "subtitle": "",
+            "items": [
+              "Een nieuw voorblad.",
+              "Een tabje.",
+              "Een plek in je inhoudsopgave.",
+              "Aan het einde: een korte terugblik."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Stap 4: draai je schrift om",
+            "subtitle": "",
+            "items": [
+              "Begin vanaf de achterkant.",
+              "Reserveer vier pagina's voor de woordenlijst.",
+              "Daarna komt grammatica.",
+              "Zo houd je oefening en projecten overzichtelijk."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Je eerste echte pagina",
+            "subtitle": "Ik & Nederlands - september 2026",
+            "items": [
+              "Mijn top 3 boeken tot nu toe.",
+              "Een boek dat ik echt niet leuk vond.",
+              "Een strip, graphic novel of luisterboek mag ook.",
+              "Maak het persoonlijk en verzorgd."
+            ]
+          },
+          {
+            "type": "bullets",
+            "title": "Wie ben jij bij Nederlands?",
+            "subtitle": "",
+            "items": [
+              "Hier ben ik volgens mij al goed in.",
+              "Dit vind ik lastig.",
+              "Hier wil ik dit jaar beter in worden.",
+              "Aan het einde van dit jaar hoop ik dat..."
+            ]
+          },
+          {
+            "type": "title",
+            "title": "Maak er geen vragenlijst van",
+            "subtitle": "Dit is je eerste netschriftpagina: titel, indeling, witruimte, kaders, letters en kleine illustraties."
+          },
+          {
+            "type": "title",
+            "title": "Dit is bladzijde een",
+            "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?"
+          }
+        ],
         "marker-startles-1-2": [
           {
             "type": "title",
@@ -41181,19 +41546,9 @@
             "title": "Maak er iets bijzonders van",
             "subtitle": "Dit is pas het begin"
           }
-        ],
-        "marker-startles-1-1": [
-          {
-            "type": "title",
-            "title": "Startles 1: Welkom bij Nederlands",
-            "subtitle": "Start Nederlands 1"
-          }
         ]
       },
       "subtitle": "Start Nederlands 1",
-      "deletedMarkerIds": [
-        "marker-startles-1-1"
-      ],
       "lessonMeta": {
         "marker-startles-1-2": {
           "netschrift": {
@@ -41223,16 +41578,28 @@
         "marker-startles-1-1": {
           "netschrift": {
             "items": [
-              "Netschrift bevat titel, datum, verzorgde indeling en de startopdracht van deze les."
+              "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren",
+              "Het gaat wel om: Verzorgd; Overzichtelijk; Leesbaar; Persoonlijk",
+              "Nieuwe opdracht: titel en datum.",
+              "Gebruik witruimte.",
+              "Schrijf rustig en leesbaar.",
+              "Werk met tussenkopjes, alinea's en kaders.",
+              "Foutje? Een nette streep erdoor."
             ]
           },
           "curriculum": {
             "lessonGoals": [
-              "Netschrift bevat titel, datum, verzorgde indeling en de startopdracht van deze les."
+              "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren"
             ],
             "skills": [],
             "kerndoelen": [],
             "subkerndoelen": []
+          },
+          "planning": {
+            "lesson": "Les 1 - Welkom bij Nederlands",
+            "homework": "netschrift en pen mee",
+            "assessment": "",
+            "teacherNote": ""
           }
         }
       }
