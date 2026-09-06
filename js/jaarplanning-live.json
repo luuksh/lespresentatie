@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:56:41+02:00",
+  "updatedAt": "2026-09-06T16:57:36+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:56:41+02:00",
+  "sourceRevision": "2026-09-06T16:57:36+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -42579,172 +42579,6 @@
         },
         {
           "type": "title",
-          "title": "Les 2 - Een moment waarop taal ertoe deed",
-          "subtitle": "Van interview naar korte tekst",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Lesroute",
-          "subtitle": "45 minuten",
-          "showProjectLogo": false,
-          "items": [
-            "0-5 min: interview terugpakken.",
-            "5-10 min: taalmoment kiezen.",
-            "10-27 min: tekst schrijven.",
-            "27-35 min: verbeteren.",
-            "35-42 min: netschrift controleren.",
-            "42-45 min: beste zin."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Van interview naar tekst",
-          "subtitle": "Wat neem je mee?",
-          "showProjectLogo": false,
-          "items": [
-            "Het moment.",
-            "De letterlijke woorden.",
-            "De toon.",
-            "Het gevolg.",
-            "Wat dit laat zien over taal."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Twee opties",
-          "subtitle": "Jij kiest je invalshoek",
-          "showProjectLogo": false,
-          "items": [
-            "Optie 1: je schrijft over je eigen taalmoment.",
-            "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
-            "Optie 1: persoonlijker.",
-            "Optie 2: je moet goed samenvatten en interpreteren.",
-            "Beide: concreet, precies en goed uitgelegd."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Eén moment",
-          "subtitle": "Niet alles tegelijk",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Is je moment geschikt?",
-          "subtitle": "Test het voordat je schrijft",
-          "showProjectLogo": false,
-          "items": [
-            "Kan ik vertellen wat er gebeurde?",
-            "Weet ik welke woorden belangrijk waren?",
-            "Kan ik uitleggen waarom die woorden effect hadden?",
-            "Is het concreet genoeg?",
-            "Kan ik hierover 150-200 woorden schrijven?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Schrijfopdracht",
-          "subtitle": "150-200 woorden",
-          "showProjectLogo": false,
-          "items": [
-            "Beschrijf één concreet moment.",
-            "Gebruik minimaal één letterlijk woord of zinnetje.",
-            "Leg uit wat dat woord of zinnetje deed.",
-            "Vertel wat er veranderde.",
-            "Sluit af met wat dit laat zien over taal."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Opbouw",
-          "subtitle": "Alleen gebruiken als je vastloopt",
-          "showProjectLogo": false,
-          "items": [
-            "Eerst gebeurde er...",
-            "De woorden die ertoe deden waren...",
-            "Daardoor klonk het alsof...",
-            "Het effect was...",
-            "Dit laat zien dat taal..."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Schrijven in klas 4",
-          "subtitle": "Concreet en precies",
-          "showProjectLogo": false,
-          "items": [
-            "Vermijd: het was gewoon bijzonder.",
-            "Gebruik: door dat ene woord...",
-            "Vermijd: taal is belangrijk.",
-            "Gebruik: toen merkte ik dat...",
-            "Leg oorzaak en gevolg uit."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Eén zin sterker",
-          "subtitle": "Verbeter zichtbaar",
-          "showProjectLogo": false,
-          "items": [
-            "Eerst: Het kwam verkeerd over.",
-            "Sterker: Door dat ene woord klonk het alsof ik boos was.",
-            "Eerst: Die zin was mooi.",
-            "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
-            "Eerst: Toen begreep ik taal beter.",
-            "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Herlezen",
-          "subtitle": "Tweede ronde",
-          "showProjectLogo": false,
-          "items": [
-            "Staat er een duidelijke titel?",
-            "Is het moment concreet?",
-            "Staat er een letterlijk woord of zinnetje in?",
-            "Leg je uit waarom dat belangrijk was?",
-            "Heb je één zin zichtbaar verbeterd?",
-            "Heb je je beste zin onderstreept?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Buurcheck",
-          "subtitle": "Eén minuut feedback",
-          "showProjectLogo": false,
-          "items": [
-            "Welk moment staat centraal?",
-            "Welke zin blijft hangen?",
-            "Waar wordt het nog te algemeen?",
-            "Waar kan één concreet woord bij?",
-            "Welke verbetering zie je al?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Beste zin",
-          "subtitle": "Sluit af met bewijs",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep je beste zin.",
-            "Schrijf eronder: deze zin werkt omdat...",
-            "Noteer één ding dat je volgende keer sterker wilt doen.",
-            "Zet de opdracht in je inhoudsopgave."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Vanaf hier begint je ontwikkeling",
-          "subtitle": "Idee - versie - feedback - verbetering - reflectie",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
           "title": "Les 1 - Welkom bij Nederlands 4",
           "subtitle": "De wereld als taallaboratorium",
           "showProjectLogo": false,
@@ -43027,11 +42861,177 @@
           "subtitle": "Vanaf hier moet ontwikkeling zichtbaar worden",
           "showProjectLogo": false,
           "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 2 - Een moment waarop taal ertoe deed",
+          "subtitle": "Van interview naar korte tekst",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Lesroute",
+          "subtitle": "45 minuten",
+          "showProjectLogo": false,
+          "items": [
+            "0-5 min: interview terugpakken.",
+            "5-10 min: taalmoment kiezen.",
+            "10-27 min: tekst schrijven.",
+            "27-35 min: verbeteren.",
+            "35-42 min: netschrift controleren.",
+            "42-45 min: beste zin."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Van interview naar tekst",
+          "subtitle": "Wat neem je mee?",
+          "showProjectLogo": false,
+          "items": [
+            "Het moment.",
+            "De letterlijke woorden.",
+            "De toon.",
+            "Het gevolg.",
+            "Wat dit laat zien over taal."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Twee opties",
+          "subtitle": "Jij kiest je invalshoek",
+          "showProjectLogo": false,
+          "items": [
+            "Optie 1: je schrijft over je eigen taalmoment.",
+            "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
+            "Optie 1: persoonlijker.",
+            "Optie 2: je moet goed samenvatten en interpreteren.",
+            "Beide: concreet, precies en goed uitgelegd."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Eén moment",
+          "subtitle": "Niet alles tegelijk",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Is je moment geschikt?",
+          "subtitle": "Test het voordat je schrijft",
+          "showProjectLogo": false,
+          "items": [
+            "Kan ik vertellen wat er gebeurde?",
+            "Weet ik welke woorden belangrijk waren?",
+            "Kan ik uitleggen waarom die woorden effect hadden?",
+            "Is het concreet genoeg?",
+            "Kan ik hierover 150-200 woorden schrijven?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Schrijfopdracht",
+          "subtitle": "150-200 woorden",
+          "showProjectLogo": false,
+          "items": [
+            "Beschrijf één concreet moment.",
+            "Gebruik minimaal één letterlijk woord of zinnetje.",
+            "Leg uit wat dat woord of zinnetje deed.",
+            "Vertel wat er veranderde.",
+            "Sluit af met wat dit laat zien over taal."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Opbouw",
+          "subtitle": "Alleen gebruiken als je vastloopt",
+          "showProjectLogo": false,
+          "items": [
+            "Eerst gebeurde er...",
+            "De woorden die ertoe deden waren...",
+            "Daardoor klonk het alsof...",
+            "Het effect was...",
+            "Dit laat zien dat taal..."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Schrijven in klas 4",
+          "subtitle": "Concreet en precies",
+          "showProjectLogo": false,
+          "items": [
+            "Vermijd: het was gewoon bijzonder.",
+            "Gebruik: door dat ene woord...",
+            "Vermijd: taal is belangrijk.",
+            "Gebruik: toen merkte ik dat...",
+            "Leg oorzaak en gevolg uit."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Eén zin sterker",
+          "subtitle": "Verbeter zichtbaar",
+          "showProjectLogo": false,
+          "items": [
+            "Eerst: Het kwam verkeerd over.",
+            "Sterker: Door dat ene woord klonk het alsof ik boos was.",
+            "Eerst: Die zin was mooi.",
+            "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
+            "Eerst: Toen begreep ik taal beter.",
+            "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Herlezen",
+          "subtitle": "Tweede ronde",
+          "showProjectLogo": false,
+          "items": [
+            "Staat er een duidelijke titel?",
+            "Is het moment concreet?",
+            "Staat er een letterlijk woord of zinnetje in?",
+            "Leg je uit waarom dat belangrijk was?",
+            "Heb je één zin zichtbaar verbeterd?",
+            "Heb je je beste zin onderstreept?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Buurcheck",
+          "subtitle": "Eén minuut feedback",
+          "showProjectLogo": false,
+          "items": [
+            "Welk moment staat centraal?",
+            "Welke zin blijft hangen?",
+            "Waar wordt het nog te algemeen?",
+            "Waar kan één concreet woord bij?",
+            "Welke verbetering zie je al?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Beste zin",
+          "subtitle": "Sluit af met bewijs",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep je beste zin.",
+            "Schrijf eronder: deze zin werkt omdat...",
+            "Noteer één ding dat je volgende keer sterker wilt doen.",
+            "Zet de opdracht in je inhoudsopgave."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Vanaf hier begint je ontwikkeling",
+          "subtitle": "Idee - versie - feedback - verbetering - reflectie",
+          "showProjectLogo": false,
+          "items": []
         }
       ],
       "markers": {
-        "marker-startles-4-2": 1,
-        "marker-startles-4-1": 15
+        "marker-startles-4-1": 1,
+        "marker-startles-4-2": 25
       },
       "markerDecks": {
         "marker-startles-4-1": [
@@ -43499,17 +43499,11 @@
         "marker-startles-4-1": {
           "netschrift": {
             "items": [
-              "Je verzamelt ideeën, analyses, eerste versies en verbeteringen.",
-              "Je bewaart werk waar je later op terug wilt kunnen kijken.",
-              "Je maakt zichtbaar hoe je tot een antwoord of product bent gekomen.",
-              "Ook bij groepswerk begint het denkwerk individueel in je netschrift.",
-              "Aan het einde van het jaar kun je je eigen ontwikkeling terugzien.",
-              "Iedere nieuwe opdracht begint met een duidelijke titel en datum.",
-              "Gebruik witruimte, alinea's en tussenkopjes voor structuur.",
-              "Schrijf rustig en leesbaar.",
-              "Gebruik kaders, schema's of illustraties wanneer die iets verduidelijken.",
-              "Corrigeer fouten netjes; verbeteringen mogen zichtbaar blijven.",
-              "Belangrijke pagina's krijgen extra aandacht."
+              "Titel: Start Nederlands 4 - taal doet ertoe.",
+              "Je hebt de basis van je netschrift ingericht.",
+              "Je hebt interviewnotities gemaakt over één of meer taalmomenten.",
+              "Je hebt minimaal één letterlijk woord of zinnetje uit het interview genoteerd.",
+              "Je hebt gemarkeerd welk taalmoment je volgende les mogelijk gebruikt."
             ]
           },
           "curriculum": {
