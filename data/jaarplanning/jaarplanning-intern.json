@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T10:04:26+02:00",
+  "updatedAt": "2026-09-06T10:06:23+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3832,16 +3832,11 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1,
-          "progressByClass": {
-            "1D": "done"
-          },
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 1
         },
         {
           "project": "Leesmeters",
@@ -3859,9 +3854,7 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 2
         }
       ],
       "items": []
@@ -3873,16 +3866,11 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1,
-          "progressByClass": {
-            "1D": "done"
-          },
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 1
         },
         {
           "project": "Leesmeters",
@@ -3900,9 +3888,7 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 2
         }
       ],
       "items": []
@@ -32490,27 +32476,21 @@
           "title": "Welkom bij Nederlands",
           "subtitle": "De wereld als taallaboratorium",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "title",
           "title": "Les 1 - Welkom bij Nederlands",
           "subtitle": "Start Nederlands 1",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "title",
           "title": "---",
           "subtitle": "Heb je vandaag al...",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "bullets",
@@ -32522,18 +32502,14 @@
             "Tegen je ouders?",
             "Tegen een docent?",
             "Tegen iemand die je niet kent?"
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "title",
           "title": "Jij bent een taalmaker",
           "subtitle": "Bij Nederlands ga je lezen, schrijven, spreken, denken, onderzoeken en maken.",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "bullets",
@@ -32545,9 +32521,7 @@
             "Iedere les: leesboek en pen.",
             "Je laptop gebruiken we alleen als die iets toevoegt.",
             "Proberen, struikelen, opnieuw proberen, groeien."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32561,18 +32535,14 @@
             "Spreken",
             "Taalkunde",
             "Je netschrift laat zien waarin je groeit."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "title",
           "title": "En dit wordt jouw Nederlands",
           "subtitle": "In het netschrift wordt zichtbaar wat jij leest, schrijft, denkt, ontdekt, maakt en leert.",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "bullets",
@@ -32585,9 +32555,7 @@
             "Je traint je concentratie.",
             "Je formuleert je eigen gedachten.",
             "Je werk wordt persoonlijker."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32597,9 +32565,7 @@
           "items": [
             "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren",
             "Het gaat wel om: Verzorgd; Overzichtelijk; Leesbaar; Persoonlijk"
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32612,9 +32578,7 @@
             "Schrijf rustig en leesbaar.",
             "Werk met tussenkopjes, alinea's en kaders.",
             "Foutje? Een nette streep erdoor."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32625,9 +32589,7 @@
             "Leg klaar: netschrift, pen of potlood en liniaal.",
             "We doen dit stap voor stap.",
             "Controleer steeds of je op de juiste pagina zit."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32639,9 +32601,7 @@
             "Naam, klas en schooljaar 2026-2027.",
             "Nog niet uitgebreid versieren.",
             "Dat doen we volgende les."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32653,9 +32613,7 @@
             "Project 1",
             "Project 2",
             "Project 3"
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32667,9 +32625,7 @@
             "Hier houd je je leesontwikkeling bij.",
             "Daarna beginnen de projecten.",
             "Vanaf nu nummeren we gebruikte pagina's."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32681,9 +32637,7 @@
             "Een tabje.",
             "Een plek in je inhoudsopgave.",
             "Aan het einde: een korte terugblik."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32695,9 +32649,7 @@
             "Reserveer vier pagina's voor de woordenlijst.",
             "Daarna komt grammatica.",
             "Zo houd je oefening en projecten overzichtelijk."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32709,9 +32661,7 @@
             "Een boek dat ik echt niet leuk vond.",
             "Een strip, graphic novel of luisterboek mag ook.",
             "Maak het persoonlijk en verzorgd."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32723,36 +32673,28 @@
             "Dit vind ik lastig.",
             "Hier wil ik dit jaar beter in worden.",
             "Aan het einde van dit jaar hoop ik dat..."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "title",
           "title": "Maak er geen vragenlijst van",
           "subtitle": "Dit is je eerste netschriftpagina: titel, indeling, witruimte, kaders, letters en kleine illustraties.",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "title",
           "title": "Dit is bladzijde een",
           "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "title",
           "title": "Les 2 - Maak het van jou",
           "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "bullets",
@@ -32765,9 +32707,7 @@
             "Je ontwerpt eerst op kladpapier.",
             "Je maakt je voorkant en titelblad.",
             "We bekijken aan het einde elkaars ideeën."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32780,9 +32720,7 @@
             "Hoe wordt kleur gebruikt?",
             "Waar is bewust ruimte leeg gelaten?",
             "Waardoor voelt alles als één geheel?"
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32795,9 +32733,7 @@
             "Je kunt een collage maken.",
             "Je kunt woorden en symbolen gebruiken.",
             "Een eenvoudig ontwerp kan juist heel sterk zijn."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32810,9 +32746,7 @@
             "Er zit minimaal iets in dat bij jou past.",
             "Er zit minimaal iets in dat bij taal, lezen of verhalen past.",
             "De rest bepaal jij."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32825,9 +32759,7 @@
             "Plaatsen, natuur of eten.",
             "Hobby's, woorden of symbolen.",
             "Initialen of iets waar jij veel mee hebt."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32841,9 +32773,7 @@
             "Verhalen en tekstballonnen.",
             "Aanhalingstekens of alfabet.",
             "Een zin of woord dat jij mooi vindt."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32856,9 +32786,7 @@
             "DOODLES: één grote titel met kleine tekeningen eromheen.",
             "TYPOGRAFIE: maak van letters en woorden het ontwerp.",
             "MINIMALISTISCH: één sterk beeld, een titel en een strak kader."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32870,9 +32798,7 @@
             "MAAK IETS GROOT: durf de hele voorkant te gebruiken.",
             "BEPERK JE KLEUREN: een paar kleuren geven samenhang.",
             "Bonus: een kader kan losse onderdelen één geheel maken."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32885,18 +32811,14 @@
             "Bepaal waar je belangrijkste beeld komt.",
             "Bepaal waar je naam komt.",
             "Kijk of je ontwerp in evenwicht is."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "title",
           "title": "Aan de slag",
           "subtitle": "Maak je voorkant",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         },
         {
           "type": "bullets",
@@ -32908,9 +32830,7 @@
             "Laat iets van je voorkant terugkomen.",
             "Gebruik bijvoorbeeld dezelfde letters, kleuren, vormen of symbolen.",
             "Zorg dat NETSCHRIFT NEDERLANDS, je naam, klas en schooljaar duidelijk blijven."
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "bullets",
@@ -32923,18 +32843,14 @@
             "Zoek één idee dat jij zelf nooit had bedacht.",
             "Niet: wie heeft de mooiste?",
             "Wel: wat heeft iemand hier slim gedaan?"
-          ],
-          "emphasis": false,
-          "variant": ""
+          ]
         },
         {
           "type": "title",
           "title": "Maak er iets bijzonders van",
           "subtitle": "Dit is pas het begin",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": ""
+          "items": []
         }
       ],
       "markers": {
@@ -34810,7 +34726,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T10:04:26+02:00-studio",
+  "sourceRevision": "2026-09-06T10:06:23+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
