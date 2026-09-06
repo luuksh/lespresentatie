@@ -477,6 +477,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     const gLetter = cid.match(/^G4([A-Z])$/);
     if (gLetter) {
+      aliases.add(`4${gLetter[1]}`);
       const netl = netlCodeFromLetter(gLetter[1]);
       if (netl) aliases.add(netl);
       const idx = letterToIndex(gLetter[1]);
