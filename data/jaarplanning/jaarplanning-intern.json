@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:50:29+02:00",
+  "updatedAt": "2026-09-06T16:50:33+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -12812,7 +12812,7 @@
         {
           "project": "Start Nederlands 4",
           "lesson": "Les 2 - Maak het van jou",
-          "homework": "",
+          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je tekst af als die nog niet klaar is.\nVerbeter minimaal één zin zichtbaar.",
           "assessment": "",
           "teacherNote": "",
           "presentationId": "project-start-nederlands-4",
@@ -36438,452 +36438,432 @@
           "url": ""
         },
         {
-          "type": "title",
-          "title": "Les 2 - Maak het van jou",
-          "subtitle": "Vormgeving met een functie",
+          "type": "hero",
+          "title": "Les 2 - Een moment waarop taal ertoe deed",
+          "subtitle": "Van interview naar korte tekst",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "SCHRIJVEN 1",
           "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met kleurvlakken en tekst.",
+          "caption": "Je gebruikt het interview als materiaal. Daarna maak je er jouw tekst van.",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met kleurvlakken en tekst.",
+              "caption": "Je gebruikt het interview als materiaal. Daarna maak je er jouw tekst van.",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Vandaag",
-          "subtitle": "Van schrift naar jouw netschrift",
+          "type": "timeline",
+          "title": "Lesroute",
+          "subtitle": "45 minuten",
           "showProjectLogo": false,
           "items": [
-            "Je ontdekt waardoor een ontwerp sterk werkt.",
-            "Je kiest een eigen visuele stijl.",
-            "Je ontwerpt eerst op kladpapier.",
-            "Je maakt je voorkant en titelblad.",
-            "Je gebruikt dezelfde principes later bij je projectvoorbladen."
+            "0-5 min: interview terugpakken.",
+            "5-10 min: taalmoment kiezen.",
+            "10-27 min: tekst schrijven.",
+            "27-35 min: verbeteren.",
+            "35-42 min: netschrift controleren.",
+            "42-45 min: beste zin."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "KIEZEN - SCHRIJVEN - VERBETEREN",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Mixed-media collage.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Mixed-media collage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Kijk als een ontwerper",
-          "subtitle": "Wat maakt iets sterk?",
+          "type": "visual",
+          "title": "Van interview naar tekst",
+          "subtitle": "Wat neem je mee?",
           "showProjectLogo": false,
           "items": [
-            "Waar kijk je als eerste naar?",
-            "Wat is groot en wat is klein?",
-            "Welke vormen, letters of beelden worden herhaald?",
-            "Waar is bewust ruimte leeg gelaten?",
-            "Waardoor voelen verschillende onderdelen als één geheel?"
+            "Het moment.",
+            "De letterlijke woorden.",
+            "De toon.",
+            "Het gevolg.",
+            "Wat dit laat zien over taal."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-left",
+          "kicker": "VOORONDERZOEK",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "compare",
+          "title": "Twee opties",
+          "subtitle": "Jij kiest je invalshoek",
+          "showProjectLogo": false,
+          "items": [
+            "Optie 1: je schrijft over je eigen taalmoment.",
+            "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
+            "Optie 1: persoonlijker.",
+            "Optie 2: je moet goed samenvatten en interpreteren.",
+            "Beide: concreet, precies en goed uitgelegd."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "EIGEN ERVARING OF VERHAAL VAN DE ANDER",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met tekststroken.",
           "caption": "",
           "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Vorm volgt inhoud",
-          "subtitle": "Mooi is niet genoeg",
-          "showProjectLogo": false,
-          "items": [
-            "Een duidelijke titel vertelt meteen waar een pagina over gaat.",
-            "Grootteverschillen laten zien wat belangrijk is.",
-            "Witruimte geeft rust.",
-            "Kaders en lijnen kunnen informatie groeperen.",
-            "Beeld kan de inhoud versterken.",
-            "Vormgeving mag de inhoud nooit moeilijker leesbaar maken."
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met tekststroken.",
+              "caption": "",
+              "source": ""
+            }
           ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Je hoeft niet te kunnen tekenen",
-          "subtitle": "Ontwerpen kan op allerlei manieren",
-          "showProjectLogo": false,
-          "items": [
-            "Typografisch: woorden en letters vormen het beeld.",
-            "Illustratief: je werkt vooral met tekeningen.",
-            "Collage: je combineert beelden, vormen en taal.",
-            "Grafisch: je werkt met lijnen, patronen en vormen.",
-            "Minimalistisch: je gebruikt weinig elementen, maar plaatst ze bewust.",
-            "Of ontwikkel een eigen combinatie."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "De opdracht",
-          "subtitle": "Ontwerp je voorkant",
-          "showProjectLogo": false,
-          "items": [
-            "NEDERLANDS moet duidelijk zichtbaar zijn.",
-            "Je naam en klas moeten goed vindbaar zijn.",
-            "Verwerk minimaal één element dat iets over jou zegt.",
-            "Verwerk minimaal één verwijzing naar taal, literatuur of communicatie.",
-            "Zorg dat alles samen één ontwerp wordt."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat past bij jou?",
-          "subtitle": "Zoek je materiaal",
-          "showProjectLogo": false,
-          "items": [
-            "Muziek, boeken, films of series.",
-            "Sport, games of hobby's.",
-            "Plaatsen, natuur of reizen.",
-            "Woorden of zinnen die je mooi vindt.",
-            "Symbolen, initialen of patronen.",
-            "Iets waar je nieuwsgierig naar bent of veel mee bezig bent."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "En wat past bij Nederlands?",
-          "subtitle": "Mogelijke bouwstenen",
-          "showProjectLogo": false,
-          "items": [
-            "Boeken en boekenruggen.",
-            "Letters, woorden en zinnen.",
-            "Pen, papier of inkt.",
-            "Kranten, verhalen of gedichten.",
-            "Tekstballonnen en aanhalingstekens.",
-            "Typografie of handschrift."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Geen inspiratie?",
-          "subtitle": "Kies een ontwerprecept",
-          "showProjectLogo": false,
-          "items": [
-            "COLLAGE: combineer beelden, woorden, vormen en fragmenten.",
-            "BOEKENPLANK: gebruik boekenruggen als persoonlijk portret.",
-            "DOODLES: één sterke titel met kleine elementen eromheen.",
-            "TYPOGRAFIE: maak taal zelf tot het beeld.",
-            "MINIMALISTISCH: één sterk element, een titel en veel bewuste ruimte."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Vier ontwerptrucs",
-          "subtitle": "Hiermee wordt bijna ieder ontwerp sterker",
-          "showProjectLogo": false,
-          "items": [
-            "HERHAAL: laat een vorm, letter of symbool terugkomen.",
-            "VERGROOT: maak je belangrijkste element echt groot.",
-            "BEPERK: kies liever een paar bewuste kleuren dan alles tegelijk.",
-            "GROEPEER: zet onderdelen die bij elkaar horen ook zichtbaar bij elkaar."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Eerst ontwerpen",
-          "subtitle": "Nog niet op je schrift",
-          "showProjectLogo": false,
-          "items": [
-            "Teken op kladpapier de vorm van je voorkant.",
-            "Bepaal waar NEDERLANDS komt.",
-            "Bepaal je belangrijkste beeld, woord of vorm.",
-            "Geef naam en klas een plek.",
-            "Kijk bewust naar lege ruimte.",
-            "Pas je schets aan voordat je begint."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Aan de slag",
-          "subtitle": "Maak je voorkant",
+          "type": "spotlight",
+          "title": "Eén moment",
+          "subtitle": "Niet alles tegelijk",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
+          "kicker": "FOCUS",
+          "text": "Maak het klein, dan wordt het sterker.",
+          "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Letterpressletters.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Letterpressletters.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Tijdens het werken",
-          "subtitle": "Kijk af en toe van een afstand",
+          "type": "question",
+          "title": "Is je moment geschikt?",
+          "subtitle": "Test het voordat je schrijft",
           "showProjectLogo": false,
           "items": [
-            "Is meteen duidelijk waar je naar moet kijken?",
-            "Is NEDERLANDS goed leesbaar?",
-            "Voelt het ontwerp als één geheel?",
-            "Is er genoeg rust?",
-            "Zie je er iets van jezelf in terug?",
-            "Verander gerust iets als het nog niet werkt."
+            "Kan ik vertellen wat er gebeurde?",
+            "Weet ik welke woorden belangrijk waren?",
+            "Kan ik uitleggen waarom die woorden effect hadden?",
+            "Is het concreet genoeg?",
+            "Kan ik hierover 150-200 woorden schrijven?"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "CHECK JE KEUZE",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Boekcover met sterke structuur.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Boekcover met sterke structuur.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Daarna",
-          "subtitle": "Maak je titelblad af",
+          "type": "task",
+          "title": "Schrijfopdracht",
+          "subtitle": "150-200 woorden",
           "showProjectLogo": false,
           "items": [
-            "Laat minimaal één element van je voorkant terugkomen.",
-            "Dat kan een lettertype, vorm, patroon, symbool of kleur zijn.",
-            "Houd NETSCHRIFT NEDERLANDS duidelijk zichtbaar.",
-            "Zorg dat naam, klas en schooljaar goed leesbaar zijn.",
-            "Voorkant en titelblad horen zichtbaar bij elkaar."
+            "Beschrijf één concreet moment.",
+            "Gebruik minimaal één letterlijk woord of zinnetje.",
+            "Leg uit wat dat woord of zinnetje deed.",
+            "Vertel wat er veranderde.",
+            "Sluit af met wat dit laat zien over taal."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "EEN MOMENT WAAROP TAAL ERTOE DEED",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Mixed-media papiercollage.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Mixed-media papiercollage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Voor later",
-          "subtitle": "Zo maak je een projectvoorblad",
+          "type": "writing-frame",
+          "title": "Opbouw",
+          "subtitle": "Alleen gebruiken als je vastloopt",
           "showProjectLogo": false,
           "items": [
-            "Zet projectnummer en projecttitel duidelijk op de pagina.",
-            "Noteer welke vaardigheid of vaardigheden centraal staan.",
-            "Kies één sterk beeld, symbool of vorm die bij het project past.",
-            "Gebruik dezelfde principes: hiërarchie, witruimte en samenhang.",
-            "Voeg je tabje toe en werk de inhoudsopgave bij."
+            "Eerst gebeurde er...",
+            "De woorden die ertoe deden waren...",
+            "Daardoor klonk het alsof...",
+            "Het effect was...",
+            "Dit laat zien dat taal..."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "HELDERE LIJN",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Galerij",
-          "subtitle": "Kijk naar keuzes, niet naar talent",
+          "type": "source",
+          "title": "Schrijven in klas 4",
+          "subtitle": "Concreet en precies",
           "showProjectLogo": false,
           "items": [
-            "Leg je netschrift met de voorkant omhoog.",
-            "Loop rustig rond en bekijk verschillende ontwerpen.",
-            "Zoek één ontwerpkeuze die je sterk vindt.",
-            "Bedenk waarom die keuze werkt.",
-            "Onthoud één idee dat je later zelf zou kunnen gebruiken."
+            "Vermijd: het was gewoon bijzonder.",
+            "Gebruik: door dat ene woord...",
+            "Vermijd: taal is belangrijk.",
+            "Gebruik: toen merkte ik dat...",
+            "Leg oorzaak en gevolg uit."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
+          "kicker": "LAAT ZIEN WAT JE KUNT",
+          "text": "Een sterke tekst beschrijft niet alleen een gebeurtenis, maar laat zien hoe woorden betekenis, toon of gevolg veranderden.",
+          "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Close-up van drukletters.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Close-up van drukletters.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
           "url": ""
         },
         {
-          "type": "bullets",
-          "title": "Terug naar je eigen schrift",
-          "subtitle": "Nog één verbetering",
+          "type": "before-after",
+          "title": "Eén zin sterker",
+          "subtitle": "Verbeter zichtbaar",
           "showProjectLogo": false,
           "items": [
-            "Bekijk je eigen ontwerp opnieuw.",
-            "Wat werkt al sterk?",
-            "Waar kan nog meer rust, samenhang of duidelijkheid komen?",
-            "Voer één kleine verbetering uit.",
-            "Zet daarna je naam ook duidelijk op de rug van het schrift."
+            "Eerst: Het kwam verkeerd over.",
+            "Sterker: Door dat ene woord klonk het alsof ik boos was.",
+            "Eerst: Die zin was mooi.",
+            "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
+            "Eerst: Toen begreep ik taal beter.",
+            "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "REVISIE",
           "text": "",
-          "image": "",
-          "imageAlt": "",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met kleurvlakken.",
           "caption": "",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met kleurvlakken.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "checklist",
+          "title": "Herlezen",
+          "subtitle": "Tweede ronde",
+          "showProjectLogo": false,
+          "items": [
+            "Staat er een duidelijke titel?",
+            "Is het moment concreet?",
+            "Staat er een letterlijk woord of zinnetje in?",
+            "Leg je uit waarom dat belangrijk was?",
+            "Heb je één zin zichtbaar verbeterd?",
+            "Heb je je beste zin onderstreept?"
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "TEKST IS NOOIT METEEN AF",
+          "text": "",
+          "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+          "imageAlt": "Close-up van boekpagina's.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+              "alt": "Close-up van boekpagina's.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "question",
+          "title": "Buurcheck",
+          "subtitle": "Eén minuut feedback",
+          "showProjectLogo": false,
+          "items": [
+            "Welk moment staat centraal?",
+            "Welke zin blijft hangen?",
+            "Waar wordt het nog te algemeen?",
+            "Waar kan één concreet woord bij?",
+            "Welke verbetering zie je al?"
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "KORT EN BRUIKBAAR",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+          "imageAlt": "Boekenkast met ritme.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+              "alt": "Boekenkast met ritme.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "task",
+          "title": "Beste zin",
+          "subtitle": "Sluit af met bewijs",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep je beste zin.",
+            "Schrijf eronder: deze zin werkt omdat...",
+            "Noteer één ding dat je volgende keer sterker wilt doen.",
+            "Zet de opdracht in je inhoudsopgave."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "WAAROM WERKT DIE?",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
@@ -36891,20 +36871,27 @@
         },
         {
           "type": "title",
-          "title": "Dit is je werkplaats",
-          "subtitle": "Lezen - denken - schrijven - verbeteren",
+          "title": "Vanaf hier begint je ontwikkeling",
+          "subtitle": "Idee - versie - feedback - verbetering - reflectie",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "",
+          "kicker": "NEDERLANDS 4",
           "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met tekst en kleur.",
+          "caption": "Dit is je eerste bewijsstuk: niet perfect, wel bewust gemaakt.",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met tekst en kleur.",
+              "caption": "Dit is je eerste bewijsstuk: niet perfect, wel bewust gemaakt.",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
@@ -37177,204 +37164,202 @@
         ],
         "marker-startles-4-2": [
           {
-            "type": "title",
-            "title": "Les 2 - Maak het van jou",
-            "subtitle": "Vormgeving met een functie"
+            "type": "hero",
+            "title": "Les 2 - Een moment waarop taal ertoe deed",
+            "subtitle": "Van interview naar korte tekst",
+            "items": [],
+            "kicker": "SCHRIJVEN 1",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met kleurvlakken en tekst.",
+            "caption": "Je gebruikt het interview als materiaal. Daarna maak je er jouw tekst van."
           },
           {
-            "type": "bullets",
-            "title": "Vandaag",
-            "subtitle": "Van schrift naar jouw netschrift",
+            "type": "timeline",
+            "title": "Lesroute",
+            "subtitle": "45 minuten",
             "items": [
-              "Je ontdekt waardoor een ontwerp sterk werkt.",
-              "Je kiest een eigen visuele stijl.",
-              "Je ontwerpt eerst op kladpapier.",
-              "Je maakt je voorkant en titelblad.",
-              "Je gebruikt dezelfde principes later bij je projectvoorbladen."
-            ]
+              "0-5 min: interview terugpakken.",
+              "5-10 min: taalmoment kiezen.",
+              "10-27 min: tekst schrijven.",
+              "27-35 min: verbeteren.",
+              "35-42 min: netschrift controleren.",
+              "42-45 min: beste zin."
+            ],
+            "kicker": "KIEZEN - SCHRIJVEN - VERBETEREN",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media collage."
           },
           {
-            "type": "bullets",
-            "title": "Kijk als een ontwerper",
-            "subtitle": "Wat maakt iets sterk?",
+            "type": "visual",
+            "title": "Van interview naar tekst",
+            "subtitle": "Wat neem je mee?",
             "items": [
-              "Waar kijk je als eerste naar?",
-              "Wat is groot en wat is klein?",
-              "Welke vormen, letters of beelden worden herhaald?",
-              "Waar is bewust ruimte leeg gelaten?",
-              "Waardoor voelen verschillende onderdelen als één geheel?"
-            ]
+              "Het moment.",
+              "De letterlijke woorden.",
+              "De toon.",
+              "Het gevolg.",
+              "Wat dit laat zien over taal."
+            ],
+            "kicker": "VOORONDERZOEK",
+            "layout": "image-left",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage."
           },
           {
-            "type": "bullets",
-            "title": "Vorm volgt inhoud",
-            "subtitle": "Mooi is niet genoeg",
+            "type": "compare",
+            "title": "Twee opties",
+            "subtitle": "Jij kiest je invalshoek",
             "items": [
-              "Een duidelijke titel vertelt meteen waar een pagina over gaat.",
-              "Grootteverschillen laten zien wat belangrijk is.",
-              "Witruimte geeft rust.",
-              "Kaders en lijnen kunnen informatie groeperen.",
-              "Beeld kan de inhoud versterken.",
-              "Vormgeving mag de inhoud nooit moeilijker leesbaar maken."
-            ]
+              "Optie 1: je schrijft over je eigen taalmoment.",
+              "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
+              "Optie 1: persoonlijker.",
+              "Optie 2: je moet goed samenvatten en interpreteren.",
+              "Beide: concreet, precies en goed uitgelegd."
+            ],
+            "kicker": "EIGEN ERVARING OF VERHAAL VAN DE ANDER",
+            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met tekststroken."
           },
           {
-            "type": "bullets",
-            "title": "Je hoeft niet te kunnen tekenen",
-            "subtitle": "Ontwerpen kan op allerlei manieren",
+            "type": "spotlight",
+            "title": "Eén moment",
+            "subtitle": "Niet alles tegelijk",
+            "items": [],
+            "kicker": "FOCUS",
+            "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Letterpressletters.",
+            "text": "Maak het klein, dan wordt het sterker."
+          },
+          {
+            "type": "question",
+            "title": "Is je moment geschikt?",
+            "subtitle": "Test het voordat je schrijft",
             "items": [
-              "Typografisch: woorden en letters vormen het beeld.",
-              "Illustratief: je werkt vooral met tekeningen.",
-              "Collage: je combineert beelden, vormen en taal.",
-              "Grafisch: je werkt met lijnen, patronen en vormen.",
-              "Minimalistisch: je gebruikt weinig elementen, maar plaatst ze bewust.",
-              "Of ontwikkel een eigen combinatie."
-            ]
+              "Kan ik vertellen wat er gebeurde?",
+              "Weet ik welke woorden belangrijk waren?",
+              "Kan ik uitleggen waarom die woorden effect hadden?",
+              "Is het concreet genoeg?",
+              "Kan ik hierover 150-200 woorden schrijven?"
+            ],
+            "kicker": "CHECK JE KEUZE",
+            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Boekcover met sterke structuur."
           },
           {
-            "type": "bullets",
-            "title": "De opdracht",
-            "subtitle": "Ontwerp je voorkant",
+            "type": "task",
+            "title": "Schrijfopdracht",
+            "subtitle": "150-200 woorden",
             "items": [
-              "NEDERLANDS moet duidelijk zichtbaar zijn.",
-              "Je naam en klas moeten goed vindbaar zijn.",
-              "Verwerk minimaal één element dat iets over jou zegt.",
-              "Verwerk minimaal één verwijzing naar taal, literatuur of communicatie.",
-              "Zorg dat alles samen één ontwerp wordt."
-            ]
+              "Beschrijf één concreet moment.",
+              "Gebruik minimaal één letterlijk woord of zinnetje.",
+              "Leg uit wat dat woord of zinnetje deed.",
+              "Vertel wat er veranderde.",
+              "Sluit af met wat dit laat zien over taal."
+            ],
+            "kicker": "EEN MOMENT WAAROP TAAL ERTOE DEED",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media papiercollage."
           },
           {
-            "type": "bullets",
-            "title": "Wat past bij jou?",
-            "subtitle": "Zoek je materiaal",
+            "type": "writing-frame",
+            "title": "Opbouw",
+            "subtitle": "Alleen gebruiken als je vastloopt",
             "items": [
-              "Muziek, boeken, films of series.",
-              "Sport, games of hobby's.",
-              "Plaatsen, natuur of reizen.",
-              "Woorden of zinnen die je mooi vindt.",
-              "Symbolen, initialen of patronen.",
-              "Iets waar je nieuwsgierig naar bent of veel mee bezig bent."
-            ]
+              "Eerst gebeurde er...",
+              "De woorden die ertoe deden waren...",
+              "Daardoor klonk het alsof...",
+              "Het effect was...",
+              "Dit laat zien dat taal..."
+            ],
+            "kicker": "HELDERE LIJN",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage."
           },
           {
-            "type": "bullets",
-            "title": "En wat past bij Nederlands?",
-            "subtitle": "Mogelijke bouwstenen",
+            "type": "source",
+            "title": "Schrijven in klas 4",
+            "subtitle": "Concreet en precies",
             "items": [
-              "Boeken en boekenruggen.",
-              "Letters, woorden en zinnen.",
-              "Pen, papier of inkt.",
-              "Kranten, verhalen of gedichten.",
-              "Tekstballonnen en aanhalingstekens.",
-              "Typografie of handschrift."
-            ]
+              "Vermijd: het was gewoon bijzonder.",
+              "Gebruik: door dat ene woord...",
+              "Vermijd: taal is belangrijk.",
+              "Gebruik: toen merkte ik dat...",
+              "Leg oorzaak en gevolg uit."
+            ],
+            "kicker": "LAAT ZIEN WAT JE KUNT",
+            "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van drukletters.",
+            "text": "Een sterke tekst beschrijft niet alleen een gebeurtenis, maar laat zien hoe woorden betekenis, toon of gevolg veranderden."
           },
           {
-            "type": "bullets",
-            "title": "Geen inspiratie?",
-            "subtitle": "Kies een ontwerprecept",
+            "type": "before-after",
+            "title": "Eén zin sterker",
+            "subtitle": "Verbeter zichtbaar",
             "items": [
-              "COLLAGE: combineer beelden, woorden, vormen en fragmenten.",
-              "BOEKENPLANK: gebruik boekenruggen als persoonlijk portret.",
-              "DOODLES: één sterke titel met kleine elementen eromheen.",
-              "TYPOGRAFIE: maak taal zelf tot het beeld.",
-              "MINIMALISTISCH: één sterk element, een titel en veel bewuste ruimte."
-            ]
+              "Eerst: Het kwam verkeerd over.",
+              "Sterker: Door dat ene woord klonk het alsof ik boos was.",
+              "Eerst: Die zin was mooi.",
+              "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
+              "Eerst: Toen begreep ik taal beter.",
+              "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
+            ],
+            "kicker": "REVISIE",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met kleurvlakken."
           },
           {
-            "type": "bullets",
-            "title": "Vier ontwerptrucs",
-            "subtitle": "Hiermee wordt bijna ieder ontwerp sterker",
+            "type": "checklist",
+            "title": "Herlezen",
+            "subtitle": "Tweede ronde",
             "items": [
-              "HERHAAL: laat een vorm, letter of symbool terugkomen.",
-              "VERGROOT: maak je belangrijkste element echt groot.",
-              "BEPERK: kies liever een paar bewuste kleuren dan alles tegelijk.",
-              "GROEPEER: zet onderdelen die bij elkaar horen ook zichtbaar bij elkaar."
-            ]
+              "Staat er een duidelijke titel?",
+              "Is het moment concreet?",
+              "Staat er een letterlijk woord of zinnetje in?",
+              "Leg je uit waarom dat belangrijk was?",
+              "Heb je één zin zichtbaar verbeterd?",
+              "Heb je je beste zin onderstreept?"
+            ],
+            "kicker": "TEKST IS NOOIT METEEN AF",
+            "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+            "imageAlt": "Close-up van boekpagina's."
           },
           {
-            "type": "bullets",
-            "title": "Eerst ontwerpen",
-            "subtitle": "Nog niet op je schrift",
+            "type": "question",
+            "title": "Buurcheck",
+            "subtitle": "Eén minuut feedback",
             "items": [
-              "Teken op kladpapier de vorm van je voorkant.",
-              "Bepaal waar NEDERLANDS komt.",
-              "Bepaal je belangrijkste beeld, woord of vorm.",
-              "Geef naam en klas een plek.",
-              "Kijk bewust naar lege ruimte.",
-              "Pas je schets aan voordat je begint."
-            ]
+              "Welk moment staat centraal?",
+              "Welke zin blijft hangen?",
+              "Waar wordt het nog te algemeen?",
+              "Waar kan één concreet woord bij?",
+              "Welke verbetering zie je al?"
+            ],
+            "kicker": "KORT EN BRUIKBAAR",
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+            "imageAlt": "Boekenkast met ritme."
           },
           {
-            "type": "title",
-            "title": "Aan de slag",
-            "subtitle": "Maak je voorkant"
-          },
-          {
-            "type": "bullets",
-            "title": "Tijdens het werken",
-            "subtitle": "Kijk af en toe van een afstand",
+            "type": "task",
+            "title": "Beste zin",
+            "subtitle": "Sluit af met bewijs",
             "items": [
-              "Is meteen duidelijk waar je naar moet kijken?",
-              "Is NEDERLANDS goed leesbaar?",
-              "Voelt het ontwerp als één geheel?",
-              "Is er genoeg rust?",
-              "Zie je er iets van jezelf in terug?",
-              "Verander gerust iets als het nog niet werkt."
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Daarna",
-            "subtitle": "Maak je titelblad af",
-            "items": [
-              "Laat minimaal één element van je voorkant terugkomen.",
-              "Dat kan een lettertype, vorm, patroon, symbool of kleur zijn.",
-              "Houd NETSCHRIFT NEDERLANDS duidelijk zichtbaar.",
-              "Zorg dat naam, klas en schooljaar goed leesbaar zijn.",
-              "Voorkant en titelblad horen zichtbaar bij elkaar."
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Voor later",
-            "subtitle": "Zo maak je een projectvoorblad",
-            "items": [
-              "Zet projectnummer en projecttitel duidelijk op de pagina.",
-              "Noteer welke vaardigheid of vaardigheden centraal staan.",
-              "Kies één sterk beeld, symbool of vorm die bij het project past.",
-              "Gebruik dezelfde principes: hiërarchie, witruimte en samenhang.",
-              "Voeg je tabje toe en werk de inhoudsopgave bij."
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Galerij",
-            "subtitle": "Kijk naar keuzes, niet naar talent",
-            "items": [
-              "Leg je netschrift met de voorkant omhoog.",
-              "Loop rustig rond en bekijk verschillende ontwerpen.",
-              "Zoek één ontwerpkeuze die je sterk vindt.",
-              "Bedenk waarom die keuze werkt.",
-              "Onthoud één idee dat je later zelf zou kunnen gebruiken."
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Terug naar je eigen schrift",
-            "subtitle": "Nog één verbetering",
-            "items": [
-              "Bekijk je eigen ontwerp opnieuw.",
-              "Wat werkt al sterk?",
-              "Waar kan nog meer rust, samenhang of duidelijkheid komen?",
-              "Voer één kleine verbetering uit.",
-              "Zet daarna je naam ook duidelijk op de rug van het schrift."
-            ]
+              "Onderstreep je beste zin.",
+              "Schrijf eronder: deze zin werkt omdat...",
+              "Noteer één ding dat je volgende keer sterker wilt doen.",
+              "Zet de opdracht in je inhoudsopgave."
+            ],
+            "kicker": "WAAROM WERKT DIE?",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage."
           },
           {
             "type": "title",
-            "title": "Dit is je werkplaats",
-            "subtitle": "Lezen - denken - schrijven - verbeteren"
+            "title": "Vanaf hier begint je ontwikkeling",
+            "subtitle": "Idee - versie - feedback - verbetering - reflectie",
+            "kicker": "NEDERLANDS 4",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met tekst en kleur.",
+            "caption": "Dit is je eerste bewijsstuk: niet perfect, wel bewust gemaakt."
           }
         ]
       },
@@ -37419,26 +37404,63 @@
         "marker-startles-4-2": {
           "netschrift": {
             "items": [
-              "Je ontdekt waardoor een ontwerp sterk werkt.",
-              "Je kiest een eigen visuele stijl.",
-              "Je ontwerpt eerst op kladpapier.",
-              "Je maakt je voorkant en titelblad.",
-              "Je gebruikt dezelfde principes later bij je projectvoorbladen."
+              "Titel: Een moment waarop taal ertoe deed.",
+              "Je schrijft 150-200 woorden.",
+              "Je gebruikt je interview als vooronderzoek.",
+              "Je kiest één concreet taalmoment: van jezelf of van je klasgenoot.",
+              "Je gebruikt minimaal één letterlijk woord of zinnetje.",
+              "Je legt uit waarom juist die taal belangrijk was.",
+              "Je verbetert minimaal één formulering zichtbaar.",
+              "Je onderstreept je beste zin en schrijft waarom die werkt."
             ]
           },
           "curriculum": {
             "lessonGoals": [
-              "Je ontdekt waardoor een ontwerp sterk werkt."
+              "Je gebruikt interviewmateriaal als voorbereiding op schrijven.",
+              "Je kiest één concreet moment waarop taal verschil maakte.",
+              "Je schrijft een korte tekst met duidelijke opbouw.",
+              "Je formuleert preciezer door zichtbaar te verbeteren.",
+              "Je koppelt je tekst aan de vaardigheid schrijven."
             ],
-            "skills": [],
-            "kerndoelen": [],
+            "skills": [
+              "Schrijven",
+              "Reflectie",
+              "Taalverzorging",
+              "Feedback geven",
+              "Tekst verbeteren"
+            ],
+            "kerndoelen": [
+              "1 Taalcompetentie",
+              "3 Produceert teksten",
+              "5 Reflecteert op taalactiviteiten",
+              "7 Taal en identiteit",
+              "beeldstijl:",
+              "editorial typography",
+              "papiercollage",
+              "revisie zichtbaar",
+              "bovenbouwtoon",
+              "bondig en stijlvol"
+            ],
             "subkerndoelen": []
+          },
+          "homework": {
+            "items": [
+              "Neem je netschrift, pen en leesboek mee.",
+              "Maak je tekst af als die nog niet klaar is.",
+              "Verbeter minimaal één zin zichtbaar."
+            ]
+          },
+          "planning": {
+            "lesson": "Les 2 - Maak het van jou",
+            "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je tekst af als die nog niet klaar is.\nVerbeter minimaal één zin zichtbaar.",
+            "assessment": "",
+            "teacherNote": ""
           }
         }
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:50:29+02:00-studio",
+  "sourceRevision": "2026-09-06T16:50:33+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
