@@ -1447,27 +1447,62 @@ function renderStudioPlayerSlide() {
   const slides = Array.isArray(activeStudioPresentation.slides) ? activeStudioPresentation.slides : [];
   const idx = Math.max(0, Math.min(slides.length - 1, activeStudioPresentation.index || 0));
   activeStudioPresentation.index = idx;
-  const slide = slides[idx] || {};
+  const slide = normalizeSlide(slides[idx] || {});
   const title = String(slide.title || activeStudioPresentation.title || 'Presentatie').trim();
   const subtitle = String(slide.subtitle || '').trim();
   const items = Array.isArray(slide.items) ? slide.items.map((item) => String(item || '').trim()).filter(Boolean) : [];
   const type = String(slide.type || 'title').trim().toLowerCase();
-  const content = type === 'bullets' || items.length
+  const src = String(slide.image || '').trim();
+  const media = src && !/^javascript:/i.test(src)
     ? `
+      <figure class="studio-player-media">
+        <img src="${escapeHtml(src)}" alt="${escapeHtml(slide.imageAlt || slide.caption || title)}" loading="lazy">
+        ${slide.caption || slide.source ? `<figcaption>${linkedTextHtml([slide.caption, slide.source].filter(Boolean).join(' · '))}</figcaption>` : ''}
+      </figure>
+    `
+    : '';
+  let content = '';
+  if (type === 'quote' || slide.quote) {
+    content = `
+      <div class="studio-player-copy">
+        ${slide.kicker ? `<p class="studio-player-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
+        ${title ? `<h2 class="studio-player-slide-title">${linkedTextHtml(title)}</h2>` : ''}
+        <blockquote class="studio-player-quote">${linkedTextHtml(slide.quote || subtitle || title)}</blockquote>
+        ${slide.attribution ? `<p class="studio-player-attribution">${linkedTextHtml(slide.attribution)}</p>` : ''}
+      </div>
+    `;
+  } else if (type === 'bullets' || items.length || type !== 'title') {
+    const listTag = type === 'steps' ? 'ol' : 'ul';
+    const listClass = type === 'compare' ? ' studio-player-compare' : '';
+    content = `
+      <div class="studio-player-copy">
+        ${slide.kicker ? `<p class="studio-player-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
       <h2 class="studio-player-slide-title">${linkedTextHtml(title)}</h2>
       ${subtitle ? `<p class="studio-player-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
-      <ul class="studio-player-bullets">${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}</ul>
-    `
-    : `
+        ${items.length ? `<${listTag} class="studio-player-bullets${listClass}">${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}</${listTag}>` : ''}
+      </div>
+    `;
+  } else {
+    content = `
       <h1 class="studio-player-slide-title">${linkedTextHtml(title)}</h1>
       ${subtitle ? `<p class="studio-player-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
     `;
+  }
+  if (media) {
+    content = slide.layout === 'image-left'
+      ? `${media}${content}`
+      : `${content}${media}`;
+  }
 
   if (studioPlayerStage) {
     const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const layout = String(slide.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
     const classes = ['studio-player-slide'];
+    if (type) classes.push(`is-${type}`);
     if (slide.emphasis) classes.push('is-emphasis');
     if (variant) classes.push(`is-${variant}`);
+    if (media) classes.push('has-media');
+    if (layout) classes.push(`layout-${layout}`);
     studioPlayerStage.innerHTML = `<article class="${classes.join(' ')}">${content}</article>`;
   }
   if (studioPlayerTitle) studioPlayerTitle.textContent = activeStudioPresentation.title || 'Presentatie';
