@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:33:13+02:00",
+  "updatedAt": "2026-09-06T08:33:16+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -32494,18 +32494,11 @@
           "variant": ""
         },
         {
-          "type": "bullets",
-          "title": "Je bent allang met Nederlands bezig",
+          "type": "title",
+          "title": "---",
           "subtitle": "Heb je vandaag al...",
           "showProjectLogo": false,
-          "items": [
-            "Gepraat?",
-            "Geappt?",
-            "Gelezen?",
-            "Geluisterd?",
-            "Nagedacht?",
-            "Geschreven?"
-          ],
+          "items": [],
           "emphasis": false,
           "variant": ""
         },
@@ -32951,17 +32944,9 @@
             "subtitle": ""
           },
           {
-            "type": "bullets",
-            "title": "Je bent allang met Nederlands bezig",
-            "subtitle": "Heb je vandaag al...",
-            "items": [
-              "Gepraat?",
-              "Geappt?",
-              "Gelezen?",
-              "Geluisterd?",
-              "Nagedacht?",
-              "Geschreven?"
-            ]
+            "type": "title",
+            "title": "---",
+            "subtitle": "Heb je vandaag al..."
           },
           {
             "type": "bullets",
@@ -33318,13 +33303,7 @@
         "marker-startles-1-1": {
           "netschrift": {
             "items": [
-              "Het gaat niet om: Perfect handschrift; Fantastisch kunnen tekenen; Zo veel mogelijk versieren",
-              "Het gaat wel om: Verzorgd; Overzichtelijk; Leesbaar; Persoonlijk",
-              "Nieuwe opdracht: titel en datum.",
-              "Gebruik witruimte.",
-              "Schrijf rustig en leesbaar.",
-              "Werk met tussenkopjes, alinea's en kaders.",
-              "Foutje? Een nette streep erdoor."
+              "Wat moet aan het einde van deze les in het netschrift staan?"
             ]
           },
           "curriculum": {
@@ -34785,7 +34764,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:33:13+02:00-studio",
+  "sourceRevision": "2026-09-06T08:33:16+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
