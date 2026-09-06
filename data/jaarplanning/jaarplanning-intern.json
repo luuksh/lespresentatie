@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T09:50:55+02:00",
+  "updatedAt": "2026-09-06T09:51:01+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3836,7 +3836,10 @@
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -3872,7 +3875,10 @@
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -33344,7 +33350,7 @@
           },
           "planning": {
             "lesson": "Les 1 - Welkom bij Nederlands",
-            "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
+            "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
@@ -34800,7 +34806,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T09:50:55+02:00-studio",
+  "sourceRevision": "2026-09-06T09:51:01+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
