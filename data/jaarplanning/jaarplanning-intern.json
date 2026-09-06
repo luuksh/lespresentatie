@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T12:17:22+02:00",
+  "updatedAt": "2026-09-06T12:17:26+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -34711,9 +34711,9 @@
             "subtitle": "Dit woord moet je meteen zien",
             "items": [],
             "kicker": "🖋 Maak één ding groot",
+            "text": "NEDERLANDS",
             "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-            "imageAlt": "Een vulpen.",
-            "text": "NEDERLANDS"
+            "imageAlt": "Een vulpen."
           },
           {
             "type": "question",
@@ -36497,7 +36497,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T12:17:22+02:00-studio",
+  "sourceRevision": "2026-09-06T12:17:26+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
