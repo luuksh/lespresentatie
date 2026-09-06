@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:51:01+02:00",
+  "updatedAt": "2026-09-06T16:54:53+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:51:01+02:00",
+  "sourceRevision": "2026-09-06T16:54:53+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -33306,13 +33306,13 @@
       },
       "markers": {
         "marker-invloed-1-framing-herkennen-en-sturen": 1,
-        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 6,
-        "marker-invloed-3-populisme-media-en-volkswil": 10,
-        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 14,
-        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 23,
-        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 27,
-        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 35,
-        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 40
+        "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren": 6,
+        "marker-invloed-3-populisme-media-en-volkswil": 11,
+        "marker-invloed-2-complottheorieen-en-wantrouwen-lezen": 15,
+        "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie": 19,
+        "marker-invloed-4-drogredenen-denkfouten-en-complotbouw": 23,
+        "marker-invloed-7-toetsmodus-blok-1-op-laptop": 32,
+        "marker-invloed-6-schrijfplan-frame-en-spiekbrief": 37
       },
       "slides": [
         {
@@ -33378,46 +33378,63 @@
         },
         {
           "type": "bullets",
-          "title": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "title": "Invloed 8: Toetsmodus blok 2",
           "subtitle": "Invloed",
           "showProjectLogo": false,
           "items": [
-            "Je onderzoekt waarom mensen in complottheorieen geloven.",
-            "Je leest het geprinte artikel van de Universiteit Leiden.",
-            "Je leert wantrouwen en onzekerheid taal te geven."
+            "Vandaag maak je de toespraak af en lever je hem in.",
+            "Je voegt slot, stijlversterking en laatste controle toe.",
+            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
           ]
         },
         {
           "type": "bullets",
-          "title": "Voor het lezen",
+          "title": "Wat moet er nu nog gebeuren?",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Welke complotten kom jij op sociale media tegen?",
-            "Waarom klikken mensen toch door?",
-            "Wat is het verschil tussen iets geloven en iets serieus nemen?"
+            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
+            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
+            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
+            "Controleer of je binnen 400-500 woorden blijft."
           ]
         },
         {
           "type": "bullets",
-          "title": "Kern van het artikel",
+          "title": "Revisietrucs",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Vervang de hoe-vraag door de waarom-vraag.",
-            "Mensen letterlijk nemen is niet hetzelfde als mensen serieus nemen.",
-            "Wantrouwen groeit waar kennisclaims botsen en instituties vertrouwen verliezen."
+            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
+            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
+            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
+            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
+            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
           ]
         },
         {
           "type": "bullets",
-          "title": "Tijdens en na het lezen",
+          "title": "Laatste kwaliteitscheck",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Vat alinea 4 in gewone taal samen.",
-            "Leg uit wat epistemologische onzekerheid hier betekent.",
-            "Bespreek: moet je complottheorieen bestrijden, begrijpen of allebei?"
+            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
+            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
+            "Klinkt het als een toespraak voor de Tweede Kamer?",
+            "Is het over the top, maar nog steeds netjes geschreven?",
+            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Inlevercheck",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Naam en schrijfvoornemen staan bovenaan.",
+            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
+            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
+            "Bestand is opgeslagen en ingeleverd volgens afspraak."
           ]
         },
         {
@@ -33462,6 +33479,94 @@
             "Schrijf in drie zinnen: hoe ontstaat volgens dit artikel publieke woede?",
             "Bespreek: wanneer is stevige taal verhelderend, en wanneer manipulatief?",
             "Verzamel bruikbare formuleringen voor je eigen schrijfopdracht."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "subtitle": "Invloed",
+          "showProjectLogo": false,
+          "items": [
+            "Je onderzoekt waarom mensen in complottheorieen geloven.",
+            "Je leest het geprinte artikel van de Universiteit Leiden.",
+            "Je leert wantrouwen en onzekerheid taal te geven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Voor het lezen",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Welke complotten kom jij op sociale media tegen?",
+            "Waarom klikken mensen toch door?",
+            "Wat is het verschil tussen iets geloven en iets serieus nemen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kern van het artikel",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Vervang de hoe-vraag door de waarom-vraag.",
+            "Mensen letterlijk nemen is niet hetzelfde als mensen serieus nemen.",
+            "Wantrouwen groeit waar kennisclaims botsen en instituties vertrouwen verliezen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tijdens en na het lezen",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Vat alinea 4 in gewone taal samen.",
+            "Leg uit wat epistemologische onzekerheid hier betekent.",
+            "Bespreek: moet je complottheorieen bestrijden, begrijpen of allebei?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "subtitle": "Invloed",
+          "showProjectLogo": false,
+          "items": [
+            "Je ontdekt hoe kleine woordjes een zin net even sturen.",
+            "Je koppelt subtiele manipulatie aan framing en toon.",
+            "Je oefent met herschrijven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vergelijk deze drie zinnen",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Moet je naar de wc?",
+            "Moet je alweer naar de wc?",
+            "Moet je nou alweer naar de wc?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat doen kleine woordjes?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Woorden als al, nou, maar, even en eens kleuren houding en verwachting.",
+            "Ze laten irritatie, verbazing, druk of gezelligheid meeklinken.",
+            "Juist omdat ze klein zijn, glippen ze makkelijk langs je aandacht."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Oefenen",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Herschrijf drie neutrale zinnen in een sturende variant.",
+            "Herschrijf daarna een manipulatieve zin weer neutraal.",
+            "Kies een woordje dat jij straks slim in je tekst wilt gebruiken."
           ]
         },
         {
@@ -33567,46 +33672,63 @@
         },
         {
           "type": "bullets",
-          "title": "Invloed 5: Kleine woordjes en subtiele manipulatie",
+          "title": "Invloed 7: Toetsmodus blok 1",
           "subtitle": "Invloed",
           "showProjectLogo": false,
           "items": [
-            "Je ontdekt hoe kleine woordjes een zin net even sturen.",
-            "Je koppelt subtiele manipulatie aan framing en toon.",
-            "Je oefent met herschrijven."
+            "Laptop open, toetsmodus aan, A4-spiekbriefje naast je.",
+            "Vandaag schrijf je de opening, de claim en de eerste kernalinea's.",
+            "Je werkt aan een tekst die klinkt als een echte toespraak, niet als losse antwoorden."
           ]
         },
         {
           "type": "bullets",
-          "title": "Vergelijk deze drie zinnen",
+          "title": "Totaalopdracht: 90 minuten schrijven",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Moet je naar de wc?",
-            "Moet je alweer naar de wc?",
-            "Moet je nou alweer naar de wc?"
+            "Blok 1: bouwen aan inhoud, structuur en toon.",
+            "Blok 2: afmaken, aanscherpen, controleren en inleveren.",
+            "Richtlijn: 400-500 woorden, verdeeld over 5-7 alinea's.",
+            "Elke alinea heeft een functie; niets staat erin omdat je nog woorden nodig had."
           ]
         },
         {
           "type": "bullets",
-          "title": "Wat doen kleine woordjes?",
+          "title": "Structuur van een sterke toespraak",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Woorden als al, nou, maar, even en eens kleuren houding en verwachting.",
-            "Ze laten irritatie, verbazing, druk of gezelligheid meeklinken.",
-            "Juist omdat ze klein zijn, glippen ze makkelijk langs je aandacht."
+            "1. Aanspreking en haakje: Geachte Kamerleden... + beeld, vraag of waarschuwing.",
+            "2. Kernclaim: dit is wat er volgens jou echt aan de hand is.",
+            "3. Bewijsblok 1: een bronfeit dat jij verdacht maakt.",
+            "4. Bewijsblok 2: een voorbeeld of mini-verhaal dat emotie oproept.",
+            "5. Tegenstander en slotoproep: wie profiteert, wat moet de Kamer doen?"
           ]
         },
         {
           "type": "bullets",
-          "title": "Oefenen",
+          "title": "Maak het fantastisch",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Herschrijf drie neutrale zinnen in een sturende variant.",
-            "Herschrijf daarna een manipulatieve zin weer neutraal.",
-            "Kies een woordje dat jij straks slim in je tekst wilt gebruiken."
+            "Herhaal je framewoord 3-5 keer, steeds net anders.",
+            "Gebruik contrast: zij noemen het gemak, ik noem het controle.",
+            "Stel retorische vragen waarop jouw antwoord al vaststaat.",
+            "Gebruik kleine woordjes om te sturen: zogenaamd, natuurlijk, slechts, alweer, kennelijk.",
+            "Laat humor uit overdrijving komen, niet uit slordigheid."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Doel voor vandaag",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Naam en schrijfvoornemen bovenaan.",
+            "Opening en kernclaim staan stevig.",
+            "Minstens 2 kernalinea's zijn uitgewerkt met bronmateriaal en framing.",
+            "Je tekst heeft al een duidelijke politieke spreektoon."
           ]
         },
         {
@@ -33703,128 +33825,6 @@
             "Je hebt 10 framewoorden of sturende formuleringen verzameld.",
             "Je hebt je tekststructuur in vijf blokken uitgewerkt.",
             "Je A4-spiekbriefje is compleet en bruikbaar in toetsmodus."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Invloed 7: Toetsmodus blok 1",
-          "subtitle": "Invloed",
-          "showProjectLogo": false,
-          "items": [
-            "Laptop open, toetsmodus aan, A4-spiekbriefje naast je.",
-            "Vandaag schrijf je de opening, de claim en de eerste kernalinea's.",
-            "Je werkt aan een tekst die klinkt als een echte toespraak, niet als losse antwoorden."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Totaalopdracht: 90 minuten schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Blok 1: bouwen aan inhoud, structuur en toon.",
-            "Blok 2: afmaken, aanscherpen, controleren en inleveren.",
-            "Richtlijn: 400-500 woorden, verdeeld over 5-7 alinea's.",
-            "Elke alinea heeft een functie; niets staat erin omdat je nog woorden nodig had."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Structuur van een sterke toespraak",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "1. Aanspreking en haakje: Geachte Kamerleden... + beeld, vraag of waarschuwing.",
-            "2. Kernclaim: dit is wat er volgens jou echt aan de hand is.",
-            "3. Bewijsblok 1: een bronfeit dat jij verdacht maakt.",
-            "4. Bewijsblok 2: een voorbeeld of mini-verhaal dat emotie oproept.",
-            "5. Tegenstander en slotoproep: wie profiteert, wat moet de Kamer doen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Maak het fantastisch",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Herhaal je framewoord 3-5 keer, steeds net anders.",
-            "Gebruik contrast: zij noemen het gemak, ik noem het controle.",
-            "Stel retorische vragen waarop jouw antwoord al vaststaat.",
-            "Gebruik kleine woordjes om te sturen: zogenaamd, natuurlijk, slechts, alweer, kennelijk.",
-            "Laat humor uit overdrijving komen, niet uit slordigheid."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Doel voor vandaag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Naam en schrijfvoornemen bovenaan.",
-            "Opening en kernclaim staan stevig.",
-            "Minstens 2 kernalinea's zijn uitgewerkt met bronmateriaal en framing.",
-            "Je tekst heeft al een duidelijke politieke spreektoon."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Invloed 8: Toetsmodus blok 2",
-          "subtitle": "Invloed",
-          "showProjectLogo": false,
-          "items": [
-            "Vandaag maak je de toespraak af en lever je hem in.",
-            "Je voegt slot, stijlversterking en laatste controle toe.",
-            "Doel: een complete tekst die bewust, scherp en beoordeelbaar is."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat moet er nu nog gebeuren?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Maak je bewijsblokken af en verbind ze met signaalwoorden.",
-            "Voeg een duidelijke tegenstander toe: wie heeft belang bij deze situatie?",
-            "Schrijf een slot met oproep aan de Kamer: onderzoek, verbod, commissie, waarschuwing of actieplan.",
-            "Controleer of je binnen 400-500 woorden blijft."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Revisietrucs",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep je framewoorden: zijn ze herkenbaar en consequent?",
-            "Zet bij elke alinea in de kantlijn: opening, claim, bewijs, aanval of oproep.",
-            "Vervang vlakke werkwoorden door sturende werkwoorden: verbergen, sturen, misleiden, verkopen, sussen.",
-            "Voeg 1 scherpe drieslag toe: niet toevallig, niet onschuldig, niet zonder gevolgen.",
-            "Schrap zinnen die niets bewijzen, niets sturen en niet grappig zijn."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Laatste kwaliteitscheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Is de complottheorie direct duidelijk voor een lezer die niets van jouw plan weet?",
-            "Gebruik je minimaal 3 technieken: frame, drogreden, denkfout, retorische vraag, overdrijving, kleine woordjes?",
-            "Klinkt het als een toespraak voor de Tweede Kamer?",
-            "Is het over the top, maar nog steeds netjes geschreven?",
-            "Respecteer je artikel 1: geen discriminatie of aanvallen op beschermde groepen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Inlevercheck",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Naam en schrijfvoornemen staan bovenaan.",
-            "Tekst is 400-500 woorden en heeft 5-7 alinea's.",
-            "Frame, structuur, bronmateriaal en stijltrucs zijn zichtbaar aanwezig.",
-            "Bestand is opgeslagen en ingeleverd volgens afspraak."
           ]
         }
       ],
@@ -34235,10 +34235,10 @@
       },
       "markers": {
         "marker-taalmakers-1-projectstart-ideeen-en-groepjes": 1,
-        "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning": 6,
-        "marker-taalmakers-3-werkles-en-feedbackronde": 10,
-        "marker-taalmakers-4-werkles-en-tussenstand": 13,
-        "marker-taalmakers-5-presenteren-gastenboek-en-reflectie": 16
+        "marker-taalmakers-3-werkles-en-feedbackronde": 6,
+        "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning": 9,
+        "marker-taalmakers-5-presenteren-gastenboek-en-reflectie": 13,
+        "marker-taalmakers-4-werkles-en-tussenstand": 16
       },
       "slides": [
         {
@@ -34306,6 +34306,39 @@
         },
         {
           "type": "bullets",
+          "title": "Taalmakers 3: Werkles en feedbackronde",
+          "subtitle": "Taalmakers",
+          "showProjectLogo": false,
+          "items": [
+            "Werkles: proces staat centraal.",
+            "Je laat zien dat je voortgang boekt.",
+            "Je vraagt tussentijds gerichte feedback."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Doelen van deze les",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Werk zichtbaar aan je product.",
+            "Maak keuzes en leg die vast.",
+            "Noteer wat lukt, schuurt of vastloopt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Feedbackronde",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Wat is je volgende concrete stap?",
+            "Wat moet duidelijker voor je doelgroep?",
+            "Waar heb je hulp of materiaal voor nodig?"
+          ]
+        },
+        {
+          "type": "bullets",
           "title": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
           "subtitle": "Taalmakers",
           "showProjectLogo": false,
@@ -34351,35 +34384,35 @@
         },
         {
           "type": "bullets",
-          "title": "Taalmakers 3: Werkles en feedbackronde",
+          "title": "Taalmakers 5: Presenteren, gastenboek en reflectie",
           "subtitle": "Taalmakers",
           "showProjectLogo": false,
           "items": [
-            "Werkles: proces staat centraal.",
-            "Je laat zien dat je voortgang boekt.",
-            "Je vraagt tussentijds gerichte feedback."
+            "Laat je product zien, horen of ervaren.",
+            "Geef en ontvang serieuze feedback.",
+            "Rond af met een korte reflectie."
           ]
         },
         {
           "type": "bullets",
-          "title": "Doelen van deze les",
+          "title": "Afsluiting",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Werk zichtbaar aan je product.",
-            "Maak keuzes en leg die vast.",
-            "Noteer wat lukt, schuurt of vastloopt."
+            "Presenteer je product aan de klas.",
+            "Laat bezoekers of klasgenoten feedback achterlaten.",
+            "Leg uit wat je wilde maken en wat daarvan gelukt is."
           ]
         },
         {
           "type": "bullets",
-          "title": "Feedbackronde",
+          "title": "Reflectie in je netschrift",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
-            "Wat is je volgende concrete stap?",
-            "Wat moet duidelijker voor je doelgroep?",
-            "Waar heb je hulp of materiaal voor nodig?"
+            "Wat vond je leuk aan het project?",
+            "Wat heb je geleerd over taal, jezelf en eventueel samenwerken?",
+            "Waar ben je trots op en wat zou je een volgende keer anders doen?"
           ]
         },
         {
@@ -34413,39 +34446,6 @@
             "Werk aan inhoud, vorm en verzorging.",
             "Denk vooruit: wat moet er in de laatste les te zien of te horen zijn?",
             "Bereid naamkaartje, uitleg of gastenboek voor als dat past."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "subtitle": "Taalmakers",
-          "showProjectLogo": false,
-          "items": [
-            "Laat je product zien, horen of ervaren.",
-            "Geef en ontvang serieuze feedback.",
-            "Rond af met een korte reflectie."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Afsluiting",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Presenteer je product aan de klas.",
-            "Laat bezoekers of klasgenoten feedback achterlaten.",
-            "Leg uit wat je wilde maken en wat daarvan gelukt is."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Reflectie in je netschrift",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat vond je leuk aan het project?",
-            "Wat heb je geleerd over taal, jezelf en eventueel samenwerken?",
-            "Waar ben je trots op en wat zou je een volgende keer anders doen?"
           ]
         }
       ],
@@ -35209,14 +35209,14 @@
         },
         {
           "type": "title",
-          "title": "Les 1: Ik en technologie",
+          "title": "Les 3: Hoe verhoud jij je tot technologie?",
           "subtitle": "Technologie",
           "showProjectLogo": false,
           "items": []
         },
         {
           "type": "title",
-          "title": "Les 3: Hoe verhoud jij je tot technologie?",
+          "title": "Les 1: Ik en technologie",
           "subtitle": "Technologie",
           "showProjectLogo": false,
           "items": []
@@ -35237,8 +35237,8 @@
         }
       ],
       "markers": {
-        "marker-les-1-ik-en-technologie": 1,
-        "marker-les-3-hoe-verhoud-jij-je-tot-technologie": 2,
+        "marker-les-3-hoe-verhoud-jij-je-tot-technologie": 1,
+        "marker-les-1-ik-en-technologie": 2,
         "marker-les-2-social-media": 3,
         "marker-les-4-technologie-en-identiteit": 4
       },
@@ -35476,22 +35476,22 @@
         },
         {
           "type": "title",
-          "title": "Les 1: Persoonlijkheid",
+          "title": "Les 2: Big Five",
           "subtitle": "Persoonlijkheid",
           "showProjectLogo": false,
           "items": []
         },
         {
           "type": "title",
-          "title": "Les 2: Big Five",
+          "title": "Les 1: Persoonlijkheid",
           "subtitle": "Persoonlijkheid",
           "showProjectLogo": false,
           "items": []
         }
       ],
       "markers": {
-        "marker-les-1-persoonlijkheid": 1,
-        "marker-les-2-big-five": 2
+        "marker-les-2-big-five": 1,
+        "marker-les-1-persoonlijkheid": 2
       },
       "markerDecks": {
         "marker-les-1-persoonlijkheid": [
@@ -42587,6 +42587,172 @@
         },
         {
           "type": "title",
+          "title": "Les 2 - Een moment waarop taal ertoe deed",
+          "subtitle": "Van interview naar korte tekst",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Lesroute",
+          "subtitle": "45 minuten",
+          "showProjectLogo": false,
+          "items": [
+            "0-5 min: interview terugpakken.",
+            "5-10 min: taalmoment kiezen.",
+            "10-27 min: tekst schrijven.",
+            "27-35 min: verbeteren.",
+            "35-42 min: netschrift controleren.",
+            "42-45 min: beste zin."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Van interview naar tekst",
+          "subtitle": "Wat neem je mee?",
+          "showProjectLogo": false,
+          "items": [
+            "Het moment.",
+            "De letterlijke woorden.",
+            "De toon.",
+            "Het gevolg.",
+            "Wat dit laat zien over taal."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Twee opties",
+          "subtitle": "Jij kiest je invalshoek",
+          "showProjectLogo": false,
+          "items": [
+            "Optie 1: je schrijft over je eigen taalmoment.",
+            "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
+            "Optie 1: persoonlijker.",
+            "Optie 2: je moet goed samenvatten en interpreteren.",
+            "Beide: concreet, precies en goed uitgelegd."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Eén moment",
+          "subtitle": "Niet alles tegelijk",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Is je moment geschikt?",
+          "subtitle": "Test het voordat je schrijft",
+          "showProjectLogo": false,
+          "items": [
+            "Kan ik vertellen wat er gebeurde?",
+            "Weet ik welke woorden belangrijk waren?",
+            "Kan ik uitleggen waarom die woorden effect hadden?",
+            "Is het concreet genoeg?",
+            "Kan ik hierover 150-200 woorden schrijven?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Schrijfopdracht",
+          "subtitle": "150-200 woorden",
+          "showProjectLogo": false,
+          "items": [
+            "Beschrijf één concreet moment.",
+            "Gebruik minimaal één letterlijk woord of zinnetje.",
+            "Leg uit wat dat woord of zinnetje deed.",
+            "Vertel wat er veranderde.",
+            "Sluit af met wat dit laat zien over taal."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Opbouw",
+          "subtitle": "Alleen gebruiken als je vastloopt",
+          "showProjectLogo": false,
+          "items": [
+            "Eerst gebeurde er...",
+            "De woorden die ertoe deden waren...",
+            "Daardoor klonk het alsof...",
+            "Het effect was...",
+            "Dit laat zien dat taal..."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Schrijven in klas 4",
+          "subtitle": "Concreet en precies",
+          "showProjectLogo": false,
+          "items": [
+            "Vermijd: het was gewoon bijzonder.",
+            "Gebruik: door dat ene woord...",
+            "Vermijd: taal is belangrijk.",
+            "Gebruik: toen merkte ik dat...",
+            "Leg oorzaak en gevolg uit."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Eén zin sterker",
+          "subtitle": "Verbeter zichtbaar",
+          "showProjectLogo": false,
+          "items": [
+            "Eerst: Het kwam verkeerd over.",
+            "Sterker: Door dat ene woord klonk het alsof ik boos was.",
+            "Eerst: Die zin was mooi.",
+            "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
+            "Eerst: Toen begreep ik taal beter.",
+            "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Herlezen",
+          "subtitle": "Tweede ronde",
+          "showProjectLogo": false,
+          "items": [
+            "Staat er een duidelijke titel?",
+            "Is het moment concreet?",
+            "Staat er een letterlijk woord of zinnetje in?",
+            "Leg je uit waarom dat belangrijk was?",
+            "Heb je één zin zichtbaar verbeterd?",
+            "Heb je je beste zin onderstreept?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Buurcheck",
+          "subtitle": "Eén minuut feedback",
+          "showProjectLogo": false,
+          "items": [
+            "Welk moment staat centraal?",
+            "Welke zin blijft hangen?",
+            "Waar wordt het nog te algemeen?",
+            "Waar kan één concreet woord bij?",
+            "Welke verbetering zie je al?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Beste zin",
+          "subtitle": "Sluit af met bewijs",
+          "showProjectLogo": false,
+          "items": [
+            "Onderstreep je beste zin.",
+            "Schrijf eronder: deze zin werkt omdat...",
+            "Noteer één ding dat je volgende keer sterker wilt doen.",
+            "Zet de opdracht in je inhoudsopgave."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Vanaf hier begint je ontwikkeling",
+          "subtitle": "Idee - versie - feedback - verbetering - reflectie",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
           "title": "Les 1 - Welkom bij Nederlands 4",
           "subtitle": "De wereld als taallaboratorium",
           "showProjectLogo": false,
@@ -42869,177 +43035,11 @@
           "subtitle": "Vanaf hier moet ontwikkeling zichtbaar worden",
           "showProjectLogo": false,
           "items": []
-        },
-        {
-          "type": "title",
-          "title": "Les 2 - Een moment waarop taal ertoe deed",
-          "subtitle": "Van interview naar korte tekst",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Lesroute",
-          "subtitle": "45 minuten",
-          "showProjectLogo": false,
-          "items": [
-            "0-5 min: interview terugpakken.",
-            "5-10 min: taalmoment kiezen.",
-            "10-27 min: tekst schrijven.",
-            "27-35 min: verbeteren.",
-            "35-42 min: netschrift controleren.",
-            "42-45 min: beste zin."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Van interview naar tekst",
-          "subtitle": "Wat neem je mee?",
-          "showProjectLogo": false,
-          "items": [
-            "Het moment.",
-            "De letterlijke woorden.",
-            "De toon.",
-            "Het gevolg.",
-            "Wat dit laat zien over taal."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Twee opties",
-          "subtitle": "Jij kiest je invalshoek",
-          "showProjectLogo": false,
-          "items": [
-            "Optie 1: je schrijft over je eigen taalmoment.",
-            "Optie 2: je schrijft over iets wat je klasgenoot vertelde.",
-            "Optie 1: persoonlijker.",
-            "Optie 2: je moet goed samenvatten en interpreteren.",
-            "Beide: concreet, precies en goed uitgelegd."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Eén moment",
-          "subtitle": "Niet alles tegelijk",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Is je moment geschikt?",
-          "subtitle": "Test het voordat je schrijft",
-          "showProjectLogo": false,
-          "items": [
-            "Kan ik vertellen wat er gebeurde?",
-            "Weet ik welke woorden belangrijk waren?",
-            "Kan ik uitleggen waarom die woorden effect hadden?",
-            "Is het concreet genoeg?",
-            "Kan ik hierover 150-200 woorden schrijven?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Schrijfopdracht",
-          "subtitle": "150-200 woorden",
-          "showProjectLogo": false,
-          "items": [
-            "Beschrijf één concreet moment.",
-            "Gebruik minimaal één letterlijk woord of zinnetje.",
-            "Leg uit wat dat woord of zinnetje deed.",
-            "Vertel wat er veranderde.",
-            "Sluit af met wat dit laat zien over taal."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Opbouw",
-          "subtitle": "Alleen gebruiken als je vastloopt",
-          "showProjectLogo": false,
-          "items": [
-            "Eerst gebeurde er...",
-            "De woorden die ertoe deden waren...",
-            "Daardoor klonk het alsof...",
-            "Het effect was...",
-            "Dit laat zien dat taal..."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Schrijven in klas 4",
-          "subtitle": "Concreet en precies",
-          "showProjectLogo": false,
-          "items": [
-            "Vermijd: het was gewoon bijzonder.",
-            "Gebruik: door dat ene woord...",
-            "Vermijd: taal is belangrijk.",
-            "Gebruik: toen merkte ik dat...",
-            "Leg oorzaak en gevolg uit."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Eén zin sterker",
-          "subtitle": "Verbeter zichtbaar",
-          "showProjectLogo": false,
-          "items": [
-            "Eerst: Het kwam verkeerd over.",
-            "Sterker: Door dat ene woord klonk het alsof ik boos was.",
-            "Eerst: Die zin was mooi.",
-            "Sterker: Die zin zei precies wat ik zelf niet durfde te zeggen.",
-            "Eerst: Toen begreep ik taal beter.",
-            "Sterker: Toen merkte ik dat toon soms belangrijker is dan inhoud."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Herlezen",
-          "subtitle": "Tweede ronde",
-          "showProjectLogo": false,
-          "items": [
-            "Staat er een duidelijke titel?",
-            "Is het moment concreet?",
-            "Staat er een letterlijk woord of zinnetje in?",
-            "Leg je uit waarom dat belangrijk was?",
-            "Heb je één zin zichtbaar verbeterd?",
-            "Heb je je beste zin onderstreept?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Buurcheck",
-          "subtitle": "Eén minuut feedback",
-          "showProjectLogo": false,
-          "items": [
-            "Welk moment staat centraal?",
-            "Welke zin blijft hangen?",
-            "Waar wordt het nog te algemeen?",
-            "Waar kan één concreet woord bij?",
-            "Welke verbetering zie je al?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Beste zin",
-          "subtitle": "Sluit af met bewijs",
-          "showProjectLogo": false,
-          "items": [
-            "Onderstreep je beste zin.",
-            "Schrijf eronder: deze zin werkt omdat...",
-            "Noteer één ding dat je volgende keer sterker wilt doen.",
-            "Zet de opdracht in je inhoudsopgave."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Vanaf hier begint je ontwikkeling",
-          "subtitle": "Idee - versie - feedback - verbetering - reflectie",
-          "showProjectLogo": false,
-          "items": []
         }
       ],
       "markers": {
-        "marker-startles-4-1": 1,
-        "marker-startles-4-2": 25
+        "marker-startles-4-2": 1,
+        "marker-startles-4-1": 15
       },
       "markerDecks": {
         "marker-startles-4-1": [
