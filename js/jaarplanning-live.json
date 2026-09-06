@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:29:59+02:00",
+  "updatedAt": "2026-09-06T08:33:13+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -1290,12 +1290,12 @@
       "lessons": [
         {
           "project": "Droomschool",
-          "lesson": "Les 1: Intro",
+          "lesson": "Les 3: Projectplan",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 4
         },
         {
           "project": "Leesmeters",
@@ -1306,12 +1306,12 @@
         },
         {
           "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
           "lessonKey": "C",
           "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 4
+          "presentationMarkerId": "marker-les-1-intro",
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -1325,13 +1325,13 @@
       "week": "37",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
           "lessonKey": "A",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
-          "sequenceIndex": 5
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "sequenceIndex": 6
         },
         {
           "project": "Leesmeters",
@@ -1341,13 +1341,13 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
-          "sequenceIndex": 6
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:29:59+02:00",
+  "sourceRevision": "2026-09-06T08:33:13+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -27114,6 +27114,85 @@
         },
         {
           "type": "bullets",
+          "title": "Les 3 Projectplan schrijven",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Van idee naar plan: hoe voeren we het écht uit?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Een concreet uitvoeringsplan opstellen",
+            "Duidelijke stappen, verantwoordelijkheden en planning",
+            "Obstakels voorzien en oplossingen bedenken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Een goed projectplan bevat:",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Probleem en doel",
+            "Oplossing (jullie idee)",
+            "Stappenplan / tijdlijn",
+            "Wie doet wat?",
+            "Wat hebben we nodig?",
+            "Wat zijn mogelijke obstakels en oplossingen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag: invullen projectplan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Gebruik het werkblad of digitaal formulier",
+            "Werk nauwkeurig en volledig",
+            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
+            "Maak je plan duidelijk en concreet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse feedback",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Ruil je plan met een ander groepje",
+            "Beoordeel elkaars plan op:",
+            "Duidelijkheid",
+            "Realisme",
+            "Originaliteit",
+            "Volledigheid",
+            "Geef tips + tops terug aan elkaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werk feedback in je plan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Verwerk de feedback in je eigen plan",
+            "Check nog eens de onderdelen van het plan",
+            "Lever de definitieve versie digitaal of op papier in"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les: schrijf je pitch!",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
           "title": "Les 1 – Wat kan beter op school?",
           "subtitle": "",
           "showProjectLogo": false,
@@ -27197,85 +27276,6 @@
         {
           "type": "title",
           "title": "Voorbereiding voor volgende keer",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Les 3 Projectplan schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Van idee naar plan: hoe voeren we het écht uit?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat leer je vandaag?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een concreet uitvoeringsplan opstellen",
-            "Duidelijke stappen, verantwoordelijkheden en planning",
-            "Obstakels voorzien en oplossingen bedenken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Een goed projectplan bevat:",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Probleem en doel",
-            "Oplossing (jullie idee)",
-            "Stappenplan / tijdlijn",
-            "Wie doet wat?",
-            "Wat hebben we nodig?",
-            "Wat zijn mogelijke obstakels en oplossingen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Aan de slag: invullen projectplan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik het werkblad of digitaal formulier",
-            "Werk nauwkeurig en volledig",
-            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
-            "Maak je plan duidelijk en concreet"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tussentijdse feedback",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ruil je plan met een ander groepje",
-            "Beoordeel elkaars plan op:",
-            "Duidelijkheid",
-            "Realisme",
-            "Originaliteit",
-            "Volledigheid",
-            "Geef tips + tops terug aan elkaar"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Werk feedback in je plan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verwerk de feedback in je eigen plan",
-            "Check nog eens de onderdelen van het plan",
-            "Lever de definitieve versie digitaal of op papier in"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Volgende les: schrijf je pitch!",
           "subtitle": "",
           "showProjectLogo": false,
           "items": []
@@ -27545,8 +27545,8 @@
         }
       ],
       "markers": {
-        "marker-les-1-intro": 1,
-        "marker-les-3-projectplan": 9,
+        "marker-les-3-projectplan": 1,
+        "marker-les-1-intro": 8,
         "marker-les-2-realiteitscheck": 16,
         "marker-les-4-projectbeschrijving": 19,
         "marker-les-5-pitch-voorbereiden": 26,
@@ -36140,10 +36140,10 @@
       },
       "markers": {
         "marker-eerste-mentorles-welkom-en-wegwijs": 1,
-        "marker-derde-mentorles-u-in-utrecht-en-klasstart": 23,
-        "marker-tweede-mentorles-ict-carrousel": 48,
-        "marker-mentorles-0-kennismaking": 72,
-        "marker-mentorles-0-kennismakingsmiddag": 85
+        "marker-tweede-mentorles-ict-carrousel": 23,
+        "marker-derde-mentorles-u-in-utrecht-en-klasstart": 47,
+        "marker-mentorles-0-kennismakingsmiddag": 72,
+        "marker-mentorles-0-kennismaking": 85
       },
       "markerDecks": {
         "marker-eerste-mentorles-welkom-en-wegwijs": [
@@ -37500,6 +37500,295 @@
         },
         {
           "type": "title",
+          "title": "Mentorles 2",
+          "subtitle": "ICT-carrousel",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Namenbal",
+          "subtitle": "Hoeveel namen weten we al?",
+          "showProjectLogo": false,
+          "items": [
+            "Ronde 1: vang de bal en zeg je naam.",
+            "Ronde 2: vang de bal, zeg de naam van degene van wie je hem krijgt en daarna je eigen naam.",
+            "Ronde 3: hoe snel krijgen we de bal de hele klas rond zonder namen te vergeten?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Groepjes voor vandaag",
+          "subtitle": "Kijk op het smartboard en ga bij je groep zitten.",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Programma",
+          "subtitle": "Vandaag richten we de digitale basis in.",
+          "showProjectLogo": false,
+          "items": [
+            "Speurtocht",
+            "Office 365",
+            "Pauze",
+            "Magister.Learn",
+            "Pauze",
+            "Zermelo en quiz",
+            "Vooruitblik"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Speurtocht",
+          "subtitle": "09.00-09.50 uur",
+          "showProjectLogo": false,
+          "items": [
+            "Werk met je groepje.",
+            "Volg de aanwijzingen van je mentor en hulpmentoren.",
+            "Zorg dat iedereen uit je groep meedoet."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wifi",
+          "subtitle": "Eduroam instellen",
+          "showProjectLogo": false,
+          "items": [
+            "Ga naar de instellingen op je device.",
+            "Open de wifi-instellingen.",
+            "Klik op Eduroam.",
+            "Vul je gebruikersnaam en wachtwoord in.",
+            "Lukt dit niet? Log tijdelijk in op CGU-gast met wachtwoord gast2019."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Office 365",
+          "subtitle": "Portal, Outlook, OneDrive en Teams",
+          "showProjectLogo": false,
+          "items": [
+            "Ga naar portal.office.com.",
+            "Log in met schoolmail en wachtwoord.",
+            "Outlook gebruik je voor mailcontact.",
+            "OneDrive gebruik je om bestanden online op te slaan, te bewerken en samen te werken.",
+            "Teams gebruik je onder andere voor contact met je mentor.",
+            "Voeg portal.office.com toe aan je favorieten.",
+            "Ga nu naar OneDrive."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht 1",
+          "subtitle": "Samenwerken in Word",
+          "showProjectLogo": false,
+          "items": [
+            "Ga met je groepje bij elkaar zitten.",
+            "Ga naar portal.office.com.",
+            "Een groepslid maakt een Word-document aan via Maken.",
+            "Geef het document de titel Omgang devices.",
+            "Deel het document met alle groepsleden en met je mentor.",
+            "Noteer 5 afspraken over hoe je wel met je device omgaat en 5 afspraken over hoe niet.",
+            "Zoek het document daarna terug in OneDrive: bij Bestanden of bij Gedeeld."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Opdracht 2",
+          "subtitle": "OneDrive ordenen",
+          "showProjectLogo": false,
+          "items": [
+            "Ga naar portal.office.com.",
+            "Open OneDrive via de 9 puntjes linksboven.",
+            "Klik op Mijn bestanden en daarna op Map.",
+            "Maak een map CGU aan.",
+            "Maak in CGU voor elk vak een aparte map.",
+            "Plaats Omgang devices in Klassikaal mentoruur, of maak een eigen document met de belangrijkste regels."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Mappen voor je vakken",
+          "subtitle": "Maak deze structuur in OneDrive.",
+          "showProjectLogo": false,
+          "items": [
+            "Aardrijkskunde, Biologie, Cultuurdag",
+            "Duits, Engels, Frans, Geschiedenis",
+            "Godsdienst, INW, Klassikaal mentoruur",
+            "Latijn, Lichamelijke Opvoeding",
+            "Nederlands, Wiskunde"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Pauze",
+          "subtitle": "Over 15 minuten terug",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Zermelo",
+          "subtitle": "Rooster bekijken",
+          "showProjectLogo": false,
+          "items": [
+            "Ga naar cgu.zermelo.nl of cgu.zportal.nl.",
+            "Log in met je leerlingnummer en wachtwoord CGU12345.",
+            "Kies daarna voor Portal.",
+            "Ouders gebruiken de WebApp voor rooster en ouderavonden.",
+            "Jij gebruikt de WebApp op je mobiel en de Portal op je laptop."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Zermelo WebApp installeren",
+          "subtitle": "Voor je mobiel",
+          "showProjectLogo": false,
+          "items": [
+            "Open een browser en typ cgu.zportal.nl.",
+            "Zet een vinkje bij ingelogd blijven.",
+            "Log in en kies voor WebApp.",
+            "In bijvoorbeeld Google Chrome kun je de WebApp aan je beginscherm koppelen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat betekent het?",
+          "subtitle": "Roosterkleuren en symbolen",
+          "showProjectLogo": false,
+          "items": [
+            "Een vervallen les is rood.",
+            "Een activiteit is groen, zoals deze CGU-week.",
+            "Een toets is geel.",
+            "Let op: een symbool geeft extra informatie."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Quizje",
+          "subtitle": "Gebruik Zermelo om antwoorden te vinden.",
+          "showProjectLogo": false,
+          "items": [
+            "Waar heb je komende maandag het 2e uur les?",
+            "Wat is de voorletter van docent ZESS?",
+            "Welk vak heb je volgende week dinsdag het 7e uur?",
+            "Van wie heb je volgende week woensdag het 4e uur les?",
+            "Waar geeft je mentor volgende week donderdag les?",
+            "Welk lesuur begint om 12.50 uur?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Quizje vervolg",
+          "subtitle": "Blijf precies kijken naar tijd, vak en lokaal.",
+          "showProjectLogo": false,
+          "items": [
+            "Hoe laat begint vanaf volgende week het eerste uur?",
+            "Hoe laat ben je volgende week donderdag uit?",
+            "Wat is het wachtwoord van Zermelo?",
+            "Van wie heb je komende vrijdag het 4e uur les?",
+            "Hoe laat begint vanaf volgende week de 1e pauze?",
+            "Wat neem je komende woensdag het 3e uur mee naar de les?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Magister",
+          "subtitle": "Agenda, rooster, cijfers en ELO",
+          "showProjectLogo": false,
+          "items": [
+            "Ga naar cgu.magister.net.",
+            "Log in met je leerlingnummer en wachtwoord.",
+            "Je gebruikt Magister voor agenda, rooster en cijfers.",
+            "Via Magister ga je ook naar Magister.Learn, de ELO."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Pauze",
+          "subtitle": "Over 20 minuten terug",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "De ELO",
+          "subtitle": "Magister.Learn openen",
+          "showProjectLogo": false,
+          "items": [
+            "Log in op Magister.",
+            "Klik linksboven op de bolletjes.",
+            "Kies Magister.Learn.",
+            "Ga naar het vak 1 KMT.",
+            "Zoek de ICT ELO-carrousel."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "De Magister-agenda",
+          "subtitle": "Zo werkt je digitale agenda.",
+          "showProjectLogo": false,
+          "items": [
+            "Je mentor laat de Magister-agenda zien.",
+            "Kijk waar je lessen, huiswerk en afspraken vindt.",
+            "Check wat je zelf moet noteren en wat al klaarstaat."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Huiswerk KMT",
+          "subtitle": "Voor je digitale schooltas",
+          "showProjectLogo": false,
+          "items": [
+            "Maak voor alle vakken een mapje aan in OneDrive.",
+            "Controleer of Omgang devices op de juiste plek staat.",
+            "Zorg dat je morgen weet waar je bestanden staan."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Regels device",
+          "subtitle": "Onze basisafspraken",
+          "showProjectLogo": false,
+          "items": [
+            "We halen het device pas uit de tas als de docent dat aangeeft.",
+            "Tijdens uitleg kijken we naar het bord en niet naar ons scherm.",
+            "We sturen geen spam naar elkaar.",
+            "We gebruiken devices op school voor schoolwerk.",
+            "We blijven altijd van elkaars device af.",
+            "We gebruiken devices niet in de pauze.",
+            "We maken geen digitale opnames van elkaar: geen foto, film of geluid."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Verwachtingen",
+          "subtitle": "Wat mogen leerlingen van docenten verwachten?",
+          "showProjectLogo": false,
+          "items": [
+            "Docenten geven duidelijk aan of je je device moet pakken.",
+            "Docenten geven aan wanneer uitleg op het bord staat en devices niet nodig zijn.",
+            "Docenten zetten huiswerk op de ELO en alleen voor de eigen klas."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Morgen",
+          "subtitle": "U in Utrecht",
+          "showProjectLogo": false,
+          "items": [
+            "08.30 uur aanwezig in hetzelfde lokaal.",
+            "Mee: lunch, pen, papier, kleding voor de weersverwachting en wandelschoenen.",
+            "08.30-10.00 uur mentorles met mentor en hulpmentoren.",
+            "Daarna lopen we samen naar Kinepolis bij de Jaarbeurs.",
+            "Spullen blijven in het lokaal, behalve lunch, pen en schrift.",
+            "Na de les van Roel en Daniel lopen we samen naar de Domtoren.",
+            "Je loopt met je groepje door Utrecht en beantwoordt vragen.",
+            "We eindigen bij de Domtoren en lopen samen terug naar school."
+          ]
+        },
+        {
+          "type": "title",
           "title": "Mentorles 3",
           "subtitle": "U in Utrecht en samen starten",
           "showProjectLogo": false,
@@ -37799,297 +38088,8 @@
         },
         {
           "type": "title",
-          "title": "Mentorles 2",
-          "subtitle": "ICT-carrousel",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Namenbal",
-          "subtitle": "Hoeveel namen weten we al?",
-          "showProjectLogo": false,
-          "items": [
-            "Ronde 1: vang de bal en zeg je naam.",
-            "Ronde 2: vang de bal, zeg de naam van degene van wie je hem krijgt en daarna je eigen naam.",
-            "Ronde 3: hoe snel krijgen we de bal de hele klas rond zonder namen te vergeten?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Groepjes voor vandaag",
-          "subtitle": "Kijk op het smartboard en ga bij je groep zitten.",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Programma",
-          "subtitle": "Vandaag richten we de digitale basis in.",
-          "showProjectLogo": false,
-          "items": [
-            "Speurtocht",
-            "Office 365",
-            "Pauze",
-            "Magister.Learn",
-            "Pauze",
-            "Zermelo en quiz",
-            "Vooruitblik"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Speurtocht",
-          "subtitle": "09.00-09.50 uur",
-          "showProjectLogo": false,
-          "items": [
-            "Werk met je groepje.",
-            "Volg de aanwijzingen van je mentor en hulpmentoren.",
-            "Zorg dat iedereen uit je groep meedoet."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wifi",
-          "subtitle": "Eduroam instellen",
-          "showProjectLogo": false,
-          "items": [
-            "Ga naar de instellingen op je device.",
-            "Open de wifi-instellingen.",
-            "Klik op Eduroam.",
-            "Vul je gebruikersnaam en wachtwoord in.",
-            "Lukt dit niet? Log tijdelijk in op CGU-gast met wachtwoord gast2019."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Office 365",
-          "subtitle": "Portal, Outlook, OneDrive en Teams",
-          "showProjectLogo": false,
-          "items": [
-            "Ga naar portal.office.com.",
-            "Log in met schoolmail en wachtwoord.",
-            "Outlook gebruik je voor mailcontact.",
-            "OneDrive gebruik je om bestanden online op te slaan, te bewerken en samen te werken.",
-            "Teams gebruik je onder andere voor contact met je mentor.",
-            "Voeg portal.office.com toe aan je favorieten.",
-            "Ga nu naar OneDrive."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht 1",
-          "subtitle": "Samenwerken in Word",
-          "showProjectLogo": false,
-          "items": [
-            "Ga met je groepje bij elkaar zitten.",
-            "Ga naar portal.office.com.",
-            "Een groepslid maakt een Word-document aan via Maken.",
-            "Geef het document de titel Omgang devices.",
-            "Deel het document met alle groepsleden en met je mentor.",
-            "Noteer 5 afspraken over hoe je wel met je device omgaat en 5 afspraken over hoe niet.",
-            "Zoek het document daarna terug in OneDrive: bij Bestanden of bij Gedeeld."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Opdracht 2",
-          "subtitle": "OneDrive ordenen",
-          "showProjectLogo": false,
-          "items": [
-            "Ga naar portal.office.com.",
-            "Open OneDrive via de 9 puntjes linksboven.",
-            "Klik op Mijn bestanden en daarna op Map.",
-            "Maak een map CGU aan.",
-            "Maak in CGU voor elk vak een aparte map.",
-            "Plaats Omgang devices in Klassikaal mentoruur, of maak een eigen document met de belangrijkste regels."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Mappen voor je vakken",
-          "subtitle": "Maak deze structuur in OneDrive.",
-          "showProjectLogo": false,
-          "items": [
-            "Aardrijkskunde, Biologie, Cultuurdag",
-            "Duits, Engels, Frans, Geschiedenis",
-            "Godsdienst, INW, Klassikaal mentoruur",
-            "Latijn, Lichamelijke Opvoeding",
-            "Nederlands, Wiskunde"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Pauze",
-          "subtitle": "Over 15 minuten terug",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Zermelo",
-          "subtitle": "Rooster bekijken",
-          "showProjectLogo": false,
-          "items": [
-            "Ga naar cgu.zermelo.nl of cgu.zportal.nl.",
-            "Log in met je leerlingnummer en wachtwoord CGU12345.",
-            "Kies daarna voor Portal.",
-            "Ouders gebruiken de WebApp voor rooster en ouderavonden.",
-            "Jij gebruikt de WebApp op je mobiel en de Portal op je laptop."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Zermelo WebApp installeren",
-          "subtitle": "Voor je mobiel",
-          "showProjectLogo": false,
-          "items": [
-            "Open een browser en typ cgu.zportal.nl.",
-            "Zet een vinkje bij ingelogd blijven.",
-            "Log in en kies voor WebApp.",
-            "In bijvoorbeeld Google Chrome kun je de WebApp aan je beginscherm koppelen."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat betekent het?",
-          "subtitle": "Roosterkleuren en symbolen",
-          "showProjectLogo": false,
-          "items": [
-            "Een vervallen les is rood.",
-            "Een activiteit is groen, zoals deze CGU-week.",
-            "Een toets is geel.",
-            "Let op: een symbool geeft extra informatie."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Quizje",
-          "subtitle": "Gebruik Zermelo om antwoorden te vinden.",
-          "showProjectLogo": false,
-          "items": [
-            "Waar heb je komende maandag het 2e uur les?",
-            "Wat is de voorletter van docent ZESS?",
-            "Welk vak heb je volgende week dinsdag het 7e uur?",
-            "Van wie heb je volgende week woensdag het 4e uur les?",
-            "Waar geeft je mentor volgende week donderdag les?",
-            "Welk lesuur begint om 12.50 uur?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Quizje vervolg",
-          "subtitle": "Blijf precies kijken naar tijd, vak en lokaal.",
-          "showProjectLogo": false,
-          "items": [
-            "Hoe laat begint vanaf volgende week het eerste uur?",
-            "Hoe laat ben je volgende week donderdag uit?",
-            "Wat is het wachtwoord van Zermelo?",
-            "Van wie heb je komende vrijdag het 4e uur les?",
-            "Hoe laat begint vanaf volgende week de 1e pauze?",
-            "Wat neem je komende woensdag het 3e uur mee naar de les?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Magister",
-          "subtitle": "Agenda, rooster, cijfers en ELO",
-          "showProjectLogo": false,
-          "items": [
-            "Ga naar cgu.magister.net.",
-            "Log in met je leerlingnummer en wachtwoord.",
-            "Je gebruikt Magister voor agenda, rooster en cijfers.",
-            "Via Magister ga je ook naar Magister.Learn, de ELO."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Pauze",
-          "subtitle": "Over 20 minuten terug",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "De ELO",
-          "subtitle": "Magister.Learn openen",
-          "showProjectLogo": false,
-          "items": [
-            "Log in op Magister.",
-            "Klik linksboven op de bolletjes.",
-            "Kies Magister.Learn.",
-            "Ga naar het vak 1 KMT.",
-            "Zoek de ICT ELO-carrousel."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "De Magister-agenda",
-          "subtitle": "Zo werkt je digitale agenda.",
-          "showProjectLogo": false,
-          "items": [
-            "Je mentor laat de Magister-agenda zien.",
-            "Kijk waar je lessen, huiswerk en afspraken vindt.",
-            "Check wat je zelf moet noteren en wat al klaarstaat."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Huiswerk KMT",
-          "subtitle": "Voor je digitale schooltas",
-          "showProjectLogo": false,
-          "items": [
-            "Maak voor alle vakken een mapje aan in OneDrive.",
-            "Controleer of Omgang devices op de juiste plek staat.",
-            "Zorg dat je morgen weet waar je bestanden staan."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Regels device",
-          "subtitle": "Onze basisafspraken",
-          "showProjectLogo": false,
-          "items": [
-            "We halen het device pas uit de tas als de docent dat aangeeft.",
-            "Tijdens uitleg kijken we naar het bord en niet naar ons scherm.",
-            "We sturen geen spam naar elkaar.",
-            "We gebruiken devices op school voor schoolwerk.",
-            "We blijven altijd van elkaars device af.",
-            "We gebruiken devices niet in de pauze.",
-            "We maken geen digitale opnames van elkaar: geen foto, film of geluid."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Verwachtingen",
-          "subtitle": "Wat mogen leerlingen van docenten verwachten?",
-          "showProjectLogo": false,
-          "items": [
-            "Docenten geven duidelijk aan of je je device moet pakken.",
-            "Docenten geven aan wanneer uitleg op het bord staat en devices niet nodig zijn.",
-            "Docenten zetten huiswerk op de ELO en alleen voor de eigen klas."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Morgen",
-          "subtitle": "U in Utrecht",
-          "showProjectLogo": false,
-          "items": [
-            "08.30 uur aanwezig in hetzelfde lokaal.",
-            "Mee: lunch, pen, papier, kleding voor de weersverwachting en wandelschoenen.",
-            "08.30-10.00 uur mentorles met mentor en hulpmentoren.",
-            "Daarna lopen we samen naar Kinepolis bij de Jaarbeurs.",
-            "Spullen blijven in het lokaal, behalve lunch, pen en schrift.",
-            "Na de les van Roel en Daniel lopen we samen naar de Domtoren.",
-            "Je loopt met je groepje door Utrecht en beantwoordt vragen.",
-            "We eindigen bij de Domtoren en lopen samen terug naar school."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Welkom in 1D!",
-          "subtitle": "Kennismakingsmiddag",
+          "title": "Mentorles 0: kennismakingsmiddag",
+          "subtitle": "Welkom in 1D!",
           "showProjectLogo": false,
           "items": []
         },
@@ -38245,8 +38245,8 @@
         },
         {
           "type": "title",
-          "title": "Mentorles 0: kennismakingsmiddag",
-          "subtitle": "Welkom in 1D!",
+          "title": "Welkom in 1D!",
+          "subtitle": "Kennismakingsmiddag",
           "showProjectLogo": false,
           "items": []
         },
@@ -40966,171 +40966,15 @@
         },
         {
           "type": "title",
-          "title": "Les 2 - Maak het van jou",
-          "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Vandaag",
-          "subtitle": "Van schrift naar jouw boek",
-          "showProjectLogo": false,
-          "items": [
-            "Je ontdekt waardoor een bladzijde of voorkant er sterk uitziet.",
-            "Je kiest een eigen stijl.",
-            "Je ontwerpt eerst op kladpapier.",
-            "Je maakt je voorkant en titelblad.",
-            "We bekijken aan het einde elkaars ideeën."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat maakt iets mooi?",
-          "subtitle": "Kijk als een ontwerper",
-          "showProjectLogo": false,
-          "items": [
-            "Waar kijk je als eerste naar?",
-            "Welke dingen worden herhaald?",
-            "Hoe wordt kleur gebruikt?",
-            "Waar is bewust ruimte leeg gelaten?",
-            "Waardoor voelt alles als één geheel?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Belangrijk",
-          "subtitle": "Mooi is niet hetzelfde als goed kunnen tekenen",
-          "showProjectLogo": false,
-          "items": [
-            "Je kunt werken met letters.",
-            "Je kunt werken met vormen en patronen.",
-            "Je kunt een collage maken.",
-            "Je kunt woorden en symbolen gebruiken.",
-            "Een eenvoudig ontwerp kan juist heel sterk zijn."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Dit moet op je voorkant",
-          "subtitle": "De basis",
-          "showProjectLogo": false,
-          "items": [
-            "NEDERLANDS staat duidelijk op de voorkant.",
-            "Je naam en klas zijn goed vindbaar.",
-            "Er zit minimaal iets in dat bij jou past.",
-            "Er zit minimaal iets in dat bij taal, lezen of verhalen past.",
-            "De rest bepaal jij."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat past bij jou?",
-          "subtitle": "Kies 3-5 dingen",
-          "showProjectLogo": false,
-          "items": [
-            "Muziek, boeken, sport of games.",
-            "Films, series of dieren.",
-            "Plaatsen, natuur of eten.",
-            "Hobby's, woorden of symbolen.",
-            "Initialen of iets waar jij veel mee hebt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat past bij Nederlands?",
-          "subtitle": "Ideeën",
-          "showProjectLogo": false,
-          "items": [
-            "Boeken en boekenruggen.",
-            "Letters en woorden.",
-            "Pen, papier of inkt.",
-            "Verhalen en tekstballonnen.",
-            "Aanhalingstekens of alfabet.",
-            "Een zin of woord dat jij mooi vindt."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Geen inspiratie?",
-          "subtitle": "Kies een ontwerprecept",
-          "showProjectLogo": false,
-          "items": [
-            "COLLAGE: plaatjes, woorden, vormen en stickers.",
-            "BOEKENPLANK: boekenruggen met titels die bij jou passen.",
-            "DOODLES: één grote titel met kleine tekeningen eromheen.",
-            "TYPOGRAFIE: maak van letters en woorden het ontwerp.",
-            "MINIMALISTISCH: één sterk beeld, een titel en een strak kader."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Drie ontwerptrucs",
-          "subtitle": "Hiermee wordt bijna ieder ontwerp sterker",
-          "showProjectLogo": false,
-          "items": [
-            "HERHAAL: één vorm is los; herhaling wordt een patroon.",
-            "MAAK IETS GROOT: durf de hele voorkant te gebruiken.",
-            "BEPERK JE KLEUREN: een paar kleuren geven samenhang.",
-            "Bonus: een kader kan losse onderdelen één geheel maken."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Eerst een schets",
-          "subtitle": "Nog niet op je schrift",
-          "showProjectLogo": false,
-          "items": [
-            "Teken de vorm van je schrift op kladpapier.",
-            "Bepaal waar NEDERLANDS komt.",
-            "Bepaal waar je belangrijkste beeld komt.",
-            "Bepaal waar je naam komt.",
-            "Kijk of je ontwerp in evenwicht is."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Aan de slag",
-          "subtitle": "Maak je voorkant",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Daarna",
-          "subtitle": "Je titelblad",
-          "showProjectLogo": false,
-          "items": [
-            "Werk je titelblad verder uit.",
-            "Laat iets van je voorkant terugkomen.",
-            "Gebruik bijvoorbeeld dezelfde letters, kleuren, vormen of symbolen.",
-            "Zorg dat NETSCHRIFT NEDERLANDS, je naam, klas en schooljaar duidelijk blijven."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Galerij",
-          "subtitle": "Kijk bij elkaar",
-          "showProjectLogo": false,
-          "items": [
-            "Leg je netschrift met de voorkant omhoog.",
-            "Loop rustig rond en bekijk de andere ontwerpen.",
-            "Zoek één idee dat jij zelf nooit had bedacht.",
-            "Niet: wie heeft de mooiste?",
-            "Wel: wat heeft iemand hier slim gedaan?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Maak er iets bijzonders van",
-          "subtitle": "Dit is pas het begin",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
           "title": "Welkom bij Nederlands",
           "subtitle": "De wereld als taallaboratorium",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "---",
+          "subtitle": "",
           "showProjectLogo": false,
           "items": []
         },
@@ -41344,11 +41188,174 @@
           "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?",
           "showProjectLogo": false,
           "items": []
+        },
+        {
+          "type": "title",
+          "title": "Les 2 - Maak het van jou",
+          "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Vandaag",
+          "subtitle": "Van schrift naar jouw boek",
+          "showProjectLogo": false,
+          "items": [
+            "Je ontdekt waardoor een bladzijde of voorkant er sterk uitziet.",
+            "Je kiest een eigen stijl.",
+            "Je ontwerpt eerst op kladpapier.",
+            "Je maakt je voorkant en titelblad.",
+            "We bekijken aan het einde elkaars ideeën."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat maakt iets mooi?",
+          "subtitle": "Kijk als een ontwerper",
+          "showProjectLogo": false,
+          "items": [
+            "Waar kijk je als eerste naar?",
+            "Welke dingen worden herhaald?",
+            "Hoe wordt kleur gebruikt?",
+            "Waar is bewust ruimte leeg gelaten?",
+            "Waardoor voelt alles als één geheel?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Belangrijk",
+          "subtitle": "Mooi is niet hetzelfde als goed kunnen tekenen",
+          "showProjectLogo": false,
+          "items": [
+            "Je kunt werken met letters.",
+            "Je kunt werken met vormen en patronen.",
+            "Je kunt een collage maken.",
+            "Je kunt woorden en symbolen gebruiken.",
+            "Een eenvoudig ontwerp kan juist heel sterk zijn."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Dit moet op je voorkant",
+          "subtitle": "De basis",
+          "showProjectLogo": false,
+          "items": [
+            "NEDERLANDS staat duidelijk op de voorkant.",
+            "Je naam en klas zijn goed vindbaar.",
+            "Er zit minimaal iets in dat bij jou past.",
+            "Er zit minimaal iets in dat bij taal, lezen of verhalen past.",
+            "De rest bepaal jij."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat past bij jou?",
+          "subtitle": "Kies 3-5 dingen",
+          "showProjectLogo": false,
+          "items": [
+            "Muziek, boeken, sport of games.",
+            "Films, series of dieren.",
+            "Plaatsen, natuur of eten.",
+            "Hobby's, woorden of symbolen.",
+            "Initialen of iets waar jij veel mee hebt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat past bij Nederlands?",
+          "subtitle": "Ideeën",
+          "showProjectLogo": false,
+          "items": [
+            "Boeken en boekenruggen.",
+            "Letters en woorden.",
+            "Pen, papier of inkt.",
+            "Verhalen en tekstballonnen.",
+            "Aanhalingstekens of alfabet.",
+            "Een zin of woord dat jij mooi vindt."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Geen inspiratie?",
+          "subtitle": "Kies een ontwerprecept",
+          "showProjectLogo": false,
+          "items": [
+            "COLLAGE: plaatjes, woorden, vormen en stickers.",
+            "BOEKENPLANK: boekenruggen met titels die bij jou passen.",
+            "DOODLES: één grote titel met kleine tekeningen eromheen.",
+            "TYPOGRAFIE: maak van letters en woorden het ontwerp.",
+            "MINIMALISTISCH: één sterk beeld, een titel en een strak kader."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Drie ontwerptrucs",
+          "subtitle": "Hiermee wordt bijna ieder ontwerp sterker",
+          "showProjectLogo": false,
+          "items": [
+            "HERHAAL: één vorm is los; herhaling wordt een patroon.",
+            "MAAK IETS GROOT: durf de hele voorkant te gebruiken.",
+            "BEPERK JE KLEUREN: een paar kleuren geven samenhang.",
+            "Bonus: een kader kan losse onderdelen één geheel maken."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Eerst een schets",
+          "subtitle": "Nog niet op je schrift",
+          "showProjectLogo": false,
+          "items": [
+            "Teken de vorm van je schrift op kladpapier.",
+            "Bepaal waar NEDERLANDS komt.",
+            "Bepaal waar je belangrijkste beeld komt.",
+            "Bepaal waar je naam komt.",
+            "Kijk of je ontwerp in evenwicht is."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Aan de slag",
+          "subtitle": "Maak je voorkant",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Daarna",
+          "subtitle": "Je titelblad",
+          "showProjectLogo": false,
+          "items": [
+            "Werk je titelblad verder uit.",
+            "Laat iets van je voorkant terugkomen.",
+            "Gebruik bijvoorbeeld dezelfde letters, kleuren, vormen of symbolen.",
+            "Zorg dat NETSCHRIFT NEDERLANDS, je naam, klas en schooljaar duidelijk blijven."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Galerij",
+          "subtitle": "Kijk bij elkaar",
+          "showProjectLogo": false,
+          "items": [
+            "Leg je netschrift met de voorkant omhoog.",
+            "Loop rustig rond en bekijk de andere ontwerpen.",
+            "Zoek één idee dat jij zelf nooit had bedacht.",
+            "Niet: wie heeft de mooiste?",
+            "Wel: wat heeft iemand hier slim gedaan?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Maak er iets bijzonders van",
+          "subtitle": "Dit is pas het begin",
+          "showProjectLogo": false,
+          "items": []
         }
       ],
       "markers": {
-        "marker-startles-1-2": 1,
-        "marker-startles-1-1": 15
+        "marker-startles-1-1": 1,
+        "marker-startles-1-2": 22
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -41356,6 +41363,11 @@
             "type": "title",
             "title": "Welkom bij Nederlands",
             "subtitle": "De wereld als taallaboratorium"
+          },
+          {
+            "type": "title",
+            "title": "---",
+            "subtitle": ""
           },
           {
             "type": "bullets",
@@ -41746,10 +41758,7 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "netschrift en pen mee",
             "assessment": "",
-            "teacherNote": "",
-            "progressByClass": {
-              "1D": "done"
-            }
+            "teacherNote": ""
           }
         }
       }
