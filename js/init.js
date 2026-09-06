@@ -52,6 +52,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       useProjectOnFirstLesson: true,
     },
   ];
+  const PROJECT_ORDER_BY_GRADE = {
+    1: [
+      'Start Nederlands 1',
+      'Leesmeters',
+      'Netschrift',
+      'Droomschool',
+      'Verweggers',
+      'Taaltopia',
+      'Spiegeldicht',
+      'Nutspot',
+      'Klasfeed',
+    ],
+  };
   const READING_LESSON_EXCEPTIONS = [];
   const FIXED_READING_MOMENTS = {
     G1C: { day: 4, start: '12:50' },
@@ -837,7 +850,66 @@ document.addEventListener('DOMContentLoaded', async () => {
         lessons.push({ weekKey, weekData, lesson });
       }
     }
-    return lessons;
+    const gradeOrder = PROJECT_ORDER_BY_GRADE[gradeLayerFromClassId(classId)] || [];
+    if (!gradeOrder.length) return lessons;
+    const rankByProject = new Map(gradeOrder.map((project, index) => [normalizedProjectName(project), index]));
+    return lessons
+      .map((item, sourceOrder) => ({ ...item, sourceOrder }))
+      .sort((left, right) => {
+        const leftProject = normalizedProjectName(left.lesson?.project);
+        const rightProject = normalizedProjectName(right.lesson?.project);
+        const leftRank = rankByProject.has(leftProject) ? rankByProject.get(leftProject) : 999;
+        const rightRank = rankByProject.has(rightProject) ? rankByProject.get(rightProject) : 999;
+        if (leftRank !== rightRank) return leftRank - rightRank;
+        if (leftProject !== rightProject) return leftProject.localeCompare(rightProject, 'nl', { numeric: true, sensitivity: 'base' });
+        const markerDelta = markerOrderIndexForLesson(left.lesson) - markerOrderIndexForLesson(right.lesson);
+        if (markerDelta !== 0) return markerDelta;
+        const titleDelta = lessonTitleOrderValue(left.lesson) - lessonTitleOrderValue(right.lesson);
+        if (titleDelta !== 0) return titleDelta;
+        return left.sourceOrder - right.sourceOrder;
+      })
+      .map(({ sourceOrder, ...item }) => item);
+  }
+
+  function presentationCandidatesForLesson(lesson) {
+    const candidates = [];
+    const seen = new Set();
+    const add = (presentation) => {
+      if (!presentation || typeof presentation !== 'object') return;
+      const id = String(presentation.id || '').trim();
+      if (id && seen.has(id)) return;
+      if (id) seen.add(id);
+      candidates.push(presentation);
+    };
+    const project = String(lesson?.project || '').trim();
+    add(planningPresentations?.[String(lesson?.presentationId || '').trim()]);
+    add(planningPresentations?.[projectDeckId(project)]);
+    for (const presentation of Object.values(planningPresentations || {})) {
+      const presentationProject = String(presentation?.project || presentation?.title || '').trim();
+      if (presentationProject === project) add(presentation);
+    }
+    return candidates;
+  }
+
+  function markerOrderIndexForLesson(lesson) {
+    const markerId = String(lesson?.presentationMarkerId || '').trim();
+    if (!markerId) return Number.POSITIVE_INFINITY;
+    for (const presentation of presentationCandidatesForLesson(lesson)) {
+      const markerIds = Object.keys(presentation?.markerDecks || {});
+      const deckIndex = markerIds.indexOf(markerId);
+      if (deckIndex >= 0) return deckIndex;
+      const slideIndex = Number(presentation?.markers?.[markerId]);
+      if (Number.isFinite(slideIndex)) return slideIndex;
+    }
+    return Number.POSITIVE_INFINITY;
+  }
+
+  function lessonTitleOrderValue(lesson) {
+    const text = `${lesson?.lesson || ''} ${lesson?.presentationMarkerId || ''}`;
+    const match = text.match(/\bles\s*(\d{1,3})([a-z])?\b/i);
+    if (!match) return Number.POSITIVE_INFINITY;
+    const suffix = match[2] ? match[2].toLowerCase().charCodeAt(0) - 96 : 0;
+    return Number(match[1]) * 100 + suffix;
   }
 
   function getAnchorLessonIndexes(classId, anchor, orderedLessons) {

@@ -75,6 +75,7 @@ const STARTWEEK_PLANNING_WEEK_BY_DATE = Object.freeze({
 const NETSCHRIFT_SUBMISSION_PREFIX = 'INLEVERMOMENT_NETSCHRIFT:';
 const PROJECT_ORDER_BY_GRADE = {
   1: [
+    'Start Nederlands 1',
     'Leesmeters',
     'Netschrift',
     'Droomschool',
@@ -2039,6 +2040,57 @@ function getLessonOrderValue(lessonKey) {
   return index >= 0 ? index : 99;
 }
 
+function presentationCandidatesForLesson(lesson) {
+  const candidates = [];
+  const seen = new Set();
+  const add = (presentation) => {
+    if (!presentation || typeof presentation !== 'object') return;
+    const id = String(presentation.id || '').trim();
+    if (id && seen.has(id)) return;
+    if (id) seen.add(id);
+    candidates.push(presentation);
+  };
+  const project = String(lesson?.project || '').trim();
+  add(state.doc.presentations?.[String(lesson?.presentationId || '').trim()]);
+  add(state.doc.presentations?.[projectDeckId(project)]);
+  for (const presentation of Object.values(state.doc.presentations || {})) {
+    const presentationProject = String(presentation?.project || presentation?.title || '').trim();
+    if (presentationProject === project) add(presentation);
+  }
+  return candidates;
+}
+
+function markerOrderIndexForLesson(lesson) {
+  const markerId = String(lesson?.presentationMarkerId || '').trim();
+  if (!markerId) return Number.POSITIVE_INFINITY;
+  for (const presentation of presentationCandidatesForLesson(lesson)) {
+    const markerIds = Object.keys(presentation?.markerDecks || {});
+    const deckIndex = markerIds.indexOf(markerId);
+    if (deckIndex >= 0) return deckIndex;
+    const slideIndex = Number(presentation?.markers?.[markerId]);
+    if (Number.isFinite(slideIndex)) return slideIndex;
+  }
+  return Number.POSITIVE_INFINITY;
+}
+
+function lessonTitleOrderValue(lesson) {
+  const text = `${lesson?.lesson || ''} ${lesson?.presentationMarkerId || ''}`;
+  const match = text.match(/\bles\s*(\d{1,3})([a-z])?\b/i);
+  if (!match) return Number.POSITIVE_INFINITY;
+  const suffix = match[2] ? match[2].toLowerCase().charCodeAt(0) - 96 : 0;
+  return Number(match[1]) * 100 + suffix;
+}
+
+function projectLessonOrder(left, right) {
+  const markerDelta = markerOrderIndexForLesson(left) - markerOrderIndexForLesson(right);
+  if (markerDelta !== 0) return markerDelta;
+  const titleDelta = lessonTitleOrderValue(left) - lessonTitleOrderValue(right);
+  if (titleDelta !== 0) return titleDelta;
+  const weekDelta = academicWeekOrder(left.week) - academicWeekOrder(right.week);
+  if (weekDelta !== 0) return weekDelta;
+  return getLessonOrderValue(left.lessonKey) - getLessonOrderValue(right.lessonKey);
+}
+
 function getOrderedLessonsForClass(classId) {
   return getEntriesForClass(classId)
     .flatMap((entry) => (entry.lessons || []).map((lesson) => ({
@@ -2085,6 +2137,7 @@ function getProjectGroupsForClass(classId) {
   return groups
     .map((group, index) => ({
     ...group,
+    lessons: [...group.lessons].sort(projectLessonOrder),
     id: projectGroupId(classId, group.project, index),
     sourceOrder: index,
   }))
