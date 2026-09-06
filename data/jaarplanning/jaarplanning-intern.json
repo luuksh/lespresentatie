@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:34:26+02:00",
+  "updatedAt": "2026-09-06T08:37:39+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -32757,6 +32757,18 @@
           "variant": ""
         },
         {
+          "type": "bullets",
+          "title": "Kern",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Eerste punt",
+            "Tweede punt"
+          ],
+          "emphasis": false,
+          "variant": ""
+        },
+        {
           "type": "title",
           "title": "Les 2 - Maak het van jou",
           "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
@@ -32950,7 +32962,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 24
+        "marker-startles-1-2": 25
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -33157,6 +33169,15 @@
             "type": "title",
             "title": "Dit is bladzijde een",
             "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?"
+          },
+          {
+            "type": "bullets",
+            "title": "Kern",
+            "subtitle": "",
+            "items": [
+              "Eerste punt",
+              "Tweede punt"
+            ]
           }
         ],
         "marker-startles-1-2": [
@@ -34804,7 +34825,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:34:26+02:00-studio",
+  "sourceRevision": "2026-09-06T08:37:39+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,

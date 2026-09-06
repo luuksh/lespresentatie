@@ -1137,6 +1137,15 @@ function getPairedBlockAgendaEntry(classId, firstEntry) {
   )) || null;
 }
 
+function getPairedTeacherSelectionEntry(classId, firstEntry) {
+  if (!firstEntry) return null;
+  return state.teacherSelectionEntries.find((entry) => (
+    entry !== firstEntry
+    && agendaMatchesClass(entry, classId)
+    && sameMinute(entry.start, firstEntry.end)
+  )) || null;
+}
+
 function lessonIdentity(lesson) {
   return `${parseWeek(lesson?.week)}__${String(lesson?.lessonKey || '').trim().toUpperCase()}`;
 }
@@ -1555,6 +1564,21 @@ function teacherSelectedLessonForClass(classId, now = new Date()) {
   const entry = getEntryForWeek(normalizedClassId, week) || getEntriesForClass(normalizedClassId)[0] || null;
   if (!entry || !lessonKey) return null;
 
+  const pairedSelection = getPairedTeacherSelectionEntry(normalizedClassId, selection);
+  const pairedLesson = selection.lessons?.[1] || pairedSelection?.lessons?.[0] || null;
+  const pairedLessonKey = pairedLesson
+    ? String(pairedLesson.lessonKey || pairedSelection?.lessonSlot || '').trim().toUpperCase()
+    : '';
+  const pairedTarget = pairedLesson && pairedLessonKey
+    ? buildPresentationTarget({
+      ...pairedLesson,
+      classId: normalizedClassId,
+      week: String(pairedLesson.week || entry.week || week),
+      lessonKey: pairedLessonKey,
+      scheduledDate: pairedSelection?.start?.toISOString?.() || selection.start.toISOString(),
+    })
+    : null;
+
   const exactLesson = {
     ...lesson,
     classId: normalizedClassId,
@@ -1573,10 +1597,11 @@ function teacherSelectedLessonForClass(classId, now = new Date()) {
     lesson: exactLesson,
     lessonKey,
     date: selection.start,
-    pairedLesson: null,
-    pairedLessonKey: '',
-    pairedDate: null,
-    isBlockHour: false,
+    pairedLesson,
+    pairedLessonKey,
+    pairedDate: pairedSelection?.start || (pairedLesson ? selection.start : null),
+    isBlockHour: Boolean(pairedLesson),
+    pairedTarget,
     target,
     hasPresentation: Boolean(resolved.presentation),
     hasAgendaDate: true,
@@ -1605,15 +1630,29 @@ function findNextLessonForClass(classId, now = new Date()) {
       scheduledDate: nextAgendaEntry.start.toISOString(),
     });
     const resolved = resolvePresentation(target);
+    const pairedAgendaEntry = getPairedBlockAgendaEntry(classId, nextAgendaEntry);
+    const pairedPlan = pairedAgendaEntry
+      ? teacherProgressPlanningForAgendaEntry(classId, agendaEntries, pairedAgendaEntry)
+      : null;
+    const pairedTarget = pairedPlan?.entry && pairedPlan?.lesson && pairedPlan?.lessonKey
+      ? buildPresentationTarget({
+        classId,
+        week: String(pairedPlan.entry.week),
+        lessonKey: pairedPlan.lessonKey,
+        ...pairedPlan.lesson,
+        scheduledDate: pairedAgendaEntry.start.toISOString(),
+      })
+      : null;
     return {
       entry: teacherPlan.entry,
       lesson: teacherPlan.lesson,
       lessonKey: teacherPlan.lessonKey,
       date: nextAgendaEntry.start,
-      pairedLesson: null,
-      pairedLessonKey: '',
-      pairedDate: null,
-      isBlockHour: false,
+      pairedLesson: pairedPlan?.lesson || null,
+      pairedLessonKey: pairedPlan?.lessonKey || '',
+      pairedDate: pairedAgendaEntry?.start || null,
+      isBlockHour: Boolean(pairedAgendaEntry && pairedPlan?.lesson),
+      pairedTarget,
       target,
       hasPresentation: Boolean(resolved.presentation),
       hasAgendaDate: true,
