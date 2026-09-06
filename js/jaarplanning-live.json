@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T11:03:26+02:00",
+  "updatedAt": "2026-09-06T11:09:02+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T11:03:26+02:00",
+  "sourceRevision": "2026-09-06T11:09:02+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -27114,85 +27114,6 @@
         },
         {
           "type": "bullets",
-          "title": "Les 3 Projectplan schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Van idee naar plan: hoe voeren we het écht uit?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat leer je vandaag?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een concreet uitvoeringsplan opstellen",
-            "Duidelijke stappen, verantwoordelijkheden en planning",
-            "Obstakels voorzien en oplossingen bedenken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Een goed projectplan bevat:",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Probleem en doel",
-            "Oplossing (jullie idee)",
-            "Stappenplan / tijdlijn",
-            "Wie doet wat?",
-            "Wat hebben we nodig?",
-            "Wat zijn mogelijke obstakels en oplossingen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Aan de slag: invullen projectplan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik het werkblad of digitaal formulier",
-            "Werk nauwkeurig en volledig",
-            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
-            "Maak je plan duidelijk en concreet"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tussentijdse feedback",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ruil je plan met een ander groepje",
-            "Beoordeel elkaars plan op:",
-            "Duidelijkheid",
-            "Realisme",
-            "Originaliteit",
-            "Volledigheid",
-            "Geef tips + tops terug aan elkaar"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Werk feedback in je plan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verwerk de feedback in je eigen plan",
-            "Check nog eens de onderdelen van het plan",
-            "Lever de definitieve versie digitaal of op papier in"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Volgende les: schrijf je pitch!",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
           "title": "Les 1 – Wat kan beter op school?",
           "subtitle": "",
           "showProjectLogo": false,
@@ -27276,6 +27197,85 @@
         {
           "type": "title",
           "title": "Voorbereiding voor volgende keer",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Les 3 Projectplan schrijven",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Van idee naar plan: hoe voeren we het écht uit?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Een concreet uitvoeringsplan opstellen",
+            "Duidelijke stappen, verantwoordelijkheden en planning",
+            "Obstakels voorzien en oplossingen bedenken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Een goed projectplan bevat:",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Probleem en doel",
+            "Oplossing (jullie idee)",
+            "Stappenplan / tijdlijn",
+            "Wie doet wat?",
+            "Wat hebben we nodig?",
+            "Wat zijn mogelijke obstakels en oplossingen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag: invullen projectplan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Gebruik het werkblad of digitaal formulier",
+            "Werk nauwkeurig en volledig",
+            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
+            "Maak je plan duidelijk en concreet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse feedback",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Ruil je plan met een ander groepje",
+            "Beoordeel elkaars plan op:",
+            "Duidelijkheid",
+            "Realisme",
+            "Originaliteit",
+            "Volledigheid",
+            "Geef tips + tops terug aan elkaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werk feedback in je plan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Verwerk de feedback in je eigen plan",
+            "Check nog eens de onderdelen van het plan",
+            "Lever de definitieve versie digitaal of op papier in"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les: schrijf je pitch!",
           "subtitle": "",
           "showProjectLogo": false,
           "items": []
@@ -27545,8 +27545,8 @@
         }
       ],
       "markers": {
-        "marker-les-3-projectplan": 1,
-        "marker-les-1-intro": 8,
+        "marker-les-1-intro": 1,
+        "marker-les-3-projectplan": 9,
         "marker-les-2-realiteitscheck": 16,
         "marker-les-4-projectbeschrijving": 19,
         "marker-les-5-pitch-voorbereiden": 26,
@@ -27566,6 +27566,17 @@
             "skills": [],
             "kerndoelen": [],
             "subkerndoelen": []
+          },
+          "homework": {
+            "items": [
+              "netschrift en pen mee"
+            ]
+          },
+          "planning": {
+            "lesson": "Les 1: Intro",
+            "homework": "netschrift en pen mee",
+            "assessment": "",
+            "teacherNote": ""
           }
         },
         "marker-les-2-realiteitscheck": {
@@ -41191,64 +41202,84 @@
         },
         {
           "type": "title",
-          "title": "Een schrift kan meer zijn dan een schrift",
-          "subtitle": "Kijk eerst naar vorm, kleur, letters en ruimte",
+          "title": "Eerste indruk",
+          "subtitle": "Kijk naar een voorkant alsof je hem nog niet kent",
+          "showProjectLogo": false,
+          "items": [
+            "Waar kijk je als eerste naar?",
+            "Wat zegt de voorkant over de maker?",
+            "Waardoor voelt het verzorgd?"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Inspiratiebeelden",
+          "subtitle": "Beelden die je later kunt zoeken of tonen",
+          "showProjectLogo": false,
+          "items": [
+            "Zoekterm: creative notebook cover typography",
+            "Zoekterm: handmade journal cover collage",
+            "Zoekterm: sketchbook cover design letters",
+            "Zoekterm: bullet journal title page Dutch school"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "NEDERLANDS",
+          "subtitle": "",
           "showProjectLogo": false,
           "items": []
         },
         {
           "type": "title",
-          "title": "Kijk als een ontwerper",
-          "subtitle": "Wat maakt een voorkant sterk?",
+          "title": "Ontwerpwoorden",
+          "subtitle": "Gebruik deze woorden als je naar voorbeelden kijkt",
           "showProjectLogo": false,
           "items": [
-            "Waar kijk je als eerste naar?",
-            "Wat wordt herhaald?",
-            "Welke kleuren vallen op?",
-            "Waar is bewust ruimte leeg gelaten?",
-            "Waardoor voelt alles als één geheel?"
+            "Herhaling: iets komt bewust terug",
+            "Contrast: iets valt op door verschil",
+            "Kader: losse onderdelen horen bij elkaar",
+            "Ruimte: leegte maakt het rustiger",
+            "Balans: links, rechts, boven en onder voelen logisch"
           ]
         },
         {
           "type": "title",
           "title": "Mooi tekenen of slim ontwerpen",
-          "subtitle": "Dat zijn twee verschillende dingen",
-          "showProjectLogo": false,
-          "items": [
-            "Goed kunnen tekenen: je maakt herkenbare plaatjes met veel detail.",
-            "Slim ontwerpen: je kiest letters, vormen, ruimte en kleur bewust."
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Belangrijk",
           "subtitle": "Je hoeft geen tekenwonder te zijn",
           "showProjectLogo": false,
           "items": [
-            "Je kunt werken met letters.",
-            "Je kunt vormen en patronen gebruiken.",
-            "Je kunt een collage maken.",
-            "Je kunt woorden en symbolen combineren.",
-            "Een eenvoudig ontwerp kan juist sterk zijn."
+            "Tekenen: herkenbare plaatjes maken met veel detail",
+            "Ontwerpen: letters, vormen, kleur en ruimte bewust kiezen"
           ]
         },
         {
           "type": "title",
-          "title": "Dit moet op je voorkant",
-          "subtitle": "De basis moet duidelijk zijn",
+          "title": "Twee sterke keuzes",
+          "subtitle": "Wat maakt het verschil?",
           "showProjectLogo": false,
           "items": [
-            "Zet NEDERLANDS groot en leesbaar op de voorkant.",
-            "Zet je naam en klas op een logische plek.",
-            "Laat iets van jezelf zien.",
-            "Laat iets zien dat bij taal, lezen of verhalen past.",
-            "Kies minimaal één ontwerptruc."
+            "Druk en vol: veel losse ideeën zonder duidelijke volgorde",
+            "Rustig en duidelijk: één hoofdidee, herhaling en genoeg ruimte"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Welk ontwerp past bij jou?",
+          "subtitle": "Kies snel een richting",
+          "showProjectLogo": false,
+          "items": [
+            "Collage met plaatjes, woorden en vormen",
+            "Grote letters met kleine tekeningen eromheen",
+            "Boekenplank met titels die bij jou passen",
+            "Minimalistisch met één sterk beeld en een strak kader",
+            "Typografie met letters en woorden als ontwerp"
           ]
         },
         {
           "type": "title",
           "title": "Wat past bij jou?",
-          "subtitle": "Kies 3 tot 5 dingen die iets over jou zeggen",
+          "subtitle": "Kies 3 tot 5 dingen",
           "showProjectLogo": false,
           "items": [
             "Muziek, boeken, sport of games",
@@ -41260,36 +41291,29 @@
         },
         {
           "type": "title",
-          "title": "Nederlands zichtbaar maken",
-          "subtitle": "Denk aan taal, lezen, schrijven en verhalen",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
           "title": "Wat past bij Nederlands?",
           "subtitle": "Ideeën voor beeld en vorm",
           "showProjectLogo": false,
           "items": [
             "Boeken en boekenruggen",
             "Letters en woorden",
-            "Pen, papier of inkt",
+            "Pen, papier en inkt",
             "Verhalen en tekstballonnen",
-            "Aanhalingstekens of alfabet",
+            "Aanhalingstekens en alfabet",
             "Een zin of woord dat jij mooi vindt"
           ]
         },
         {
           "type": "title",
-          "title": "Vijf ontwerprecepten",
-          "subtitle": "Kies er één als je vastloopt",
+          "title": "Dit moet op je voorkant",
+          "subtitle": "Hier kijk ik straks naar",
           "showProjectLogo": false,
           "items": [
-            "Collage: plaatjes, woorden, vormen en stickers.",
-            "Boekenplank: boekenruggen met titels die bij jou passen.",
-            "Doodles: één grote titel met kleine tekeningen eromheen.",
-            "Typografie: letters en woorden vormen het ontwerp.",
-            "Minimalistisch: één sterk beeld, een titel en een strak kader."
+            "Duidelijk: NEDERLANDS is meteen leesbaar",
+            "Vindbaar: je naam en klas staan logisch",
+            "Persoonlijk: er zit iets van jou in",
+            "Passend: er zit iets van taal, lezen of verhalen in",
+            "Ontworpen: je gebruikt minimaal één ontwerptruc"
           ]
         },
         {
@@ -41307,34 +41331,41 @@
         },
         {
           "type": "title",
-          "title": "Drie trucs die bijna altijd werken",
-          "subtitle": "Herhaling, formaat en kleur",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Ontwerptrucs",
-          "subtitle": "Maak je ontwerp sterker",
+          "title": "Voor je op je schrift werkt",
+          "subtitle": "Controleer je schets",
           "showProjectLogo": false,
           "items": [
-            "Herhaal één vorm, letter of kleur.",
-            "Maak één onderdeel echt groot.",
-            "Gebruik een beperkt aantal kleuren.",
-            "Zet losse onderdelen bij elkaar met een kader.",
-            "Laat bewust ruimte leeg."
+            "NEDERLANDS heeft de meeste aandacht.",
+            "Naam en klas zijn goed vindbaar.",
+            "Je ziet iets persoonlijks.",
+            "Je ziet iets dat bij Nederlands past.",
+            "Je hebt kleur, herhaling, formaat of een kader bewust gekozen."
           ]
         },
         {
           "type": "title",
           "title": "Aan de slag",
-          "subtitle": "Maak eerst je voorkant",
+          "subtitle": "Maak je voorkant",
           "showProjectLogo": false,
           "items": [
             "Werk vanuit je schets.",
             "Begin met de grote onderdelen.",
             "Voeg daarna details toe.",
-            "Houd NEDERLANDS, naam en klas goed leesbaar."
+            "Houd tekst leesbaar.",
+            "Vraag feedback voordat je alles definitief maakt."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Als iemand vraagt naar je ontwerp",
+          "subtitle": "Gebruik één van deze zinnen",
+          "showProjectLogo": false,
+          "items": [
+            "Ik heb gekozen voor ... omdat ...",
+            "Je ziet iets van mij in ...",
+            "Dit past bij Nederlands omdat ...",
+            "Mijn ontwerptruc is ...",
+            "Ik wil dat je eerst kijkt naar ..."
           ]
         },
         {
@@ -41356,10 +41387,19 @@
           "subtitle": "Kijk naar keuzes, niet naar wie het mooist tekent",
           "showProjectLogo": false,
           "items": [
-            "Welk idee had jij zelf nooit bedacht?",
-            "Welke ontwerptruc zie je terug?",
-            "Waar zie je iets persoonlijks?",
-            "Wat werkt slim aan de voorkant van iemand anders?"
+            "Kijk eerst stil naar drie ontwerpen.",
+            "Bespreek met je buur één slim idee.",
+            "Deel één ontwerpkeuze die jij zelf nooit had bedacht."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Afsluiten",
+          "subtitle": "Schrijf één zin in je hoofd of op klad",
+          "showProjectLogo": false,
+          "items": [
+            "Welke ontwerpkeuze maakt jouw netschrift persoonlijk?",
+            "Welke ontwerptruc ga je gebruiken of verder verbeteren?"
           ]
         },
         {
@@ -41569,68 +41609,87 @@
         ],
         "marker-startles-1-2": [
           {
-            "type": "title",
+            "type": "hero",
             "title": "Les 2 - Maak het van jou",
-            "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt"
+            "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
+            "items": []
           },
           {
-            "type": "visual",
-            "title": "Een schrift kan meer zijn dan een schrift",
-            "subtitle": "Kijk eerst naar vorm, kleur, letters en ruimte",
-            "items": [],
-            "caption": "Beeldsuggestie: close-up van een persoonlijk ontworpen schrift, journal cover of sketchbook cover",
-            "source": "Zoekterm: creative notebook cover, handmade journal cover, typography notebook design",
-            "layout": "image-right"
-          },
-          {
-            "type": "question",
-            "title": "Kijk als een ontwerper",
-            "subtitle": "Wat maakt een voorkant sterk?",
+            "type": "source",
+            "title": "Eerste indruk",
+            "subtitle": "Kijk naar een voorkant alsof je hem nog niet kent",
             "items": [
               "Waar kijk je als eerste naar?",
-              "Wat wordt herhaald?",
-              "Welke kleuren vallen op?",
-              "Waar is bewust ruimte leeg gelaten?",
-              "Waardoor voelt alles als één geheel?"
+              "Wat zegt de voorkant over de maker?",
+              "Waardoor voelt het verzorgd?"
+            ],
+            "text": "Een sterke voorkant vertelt meteen: dit schrift is van iemand."
+          },
+          {
+            "type": "gallery",
+            "title": "Inspiratiebeelden",
+            "subtitle": "Beelden die je later kunt zoeken of tonen",
+            "items": [
+              "Zoekterm: creative notebook cover typography",
+              "Zoekterm: handmade journal cover collage",
+              "Zoekterm: sketchbook cover design letters",
+              "Zoekterm: bullet journal title page Dutch school"
+            ]
+          },
+          {
+            "type": "spotlight",
+            "title": "NEDERLANDS",
+            "subtitle": "",
+            "items": [],
+            "kicker": "Dit woord moet werken",
+            "text": "Groot, leesbaar en bewust geplaatst"
+          },
+          {
+            "type": "wordbank",
+            "title": "Ontwerpwoorden",
+            "subtitle": "Gebruik deze woorden als je naar voorbeelden kijkt",
+            "items": [
+              "Herhaling: iets komt bewust terug",
+              "Contrast: iets valt op door verschil",
+              "Kader: losse onderdelen horen bij elkaar",
+              "Ruimte: leegte maakt het rustiger",
+              "Balans: links, rechts, boven en onder voelen logisch"
+            ]
+          },
+          {
+            "type": "before-after",
+            "title": "Mooi tekenen of slim ontwerpen",
+            "subtitle": "Je hoeft geen tekenwonder te zijn",
+            "items": [
+              "Tekenen: herkenbare plaatjes maken met veel detail",
+              "Ontwerpen: letters, vormen, kleur en ruimte bewust kiezen"
             ]
           },
           {
             "type": "compare",
-            "title": "Mooi tekenen of slim ontwerpen",
-            "subtitle": "Dat zijn twee verschillende dingen",
+            "title": "Twee sterke keuzes",
+            "subtitle": "Wat maakt het verschil?",
             "items": [
-              "Goed kunnen tekenen: je maakt herkenbare plaatjes met veel detail.",
-              "Slim ontwerpen: je kiest letters, vormen, ruimte en kleur bewust."
+              "Druk en vol: veel losse ideeën zonder duidelijke volgorde",
+              "Rustig en duidelijk: één hoofdidee, herhaling en genoeg ruimte"
             ]
           },
           {
-            "type": "bullets",
-            "title": "Belangrijk",
-            "subtitle": "Je hoeft geen tekenwonder te zijn",
+            "type": "poll",
+            "title": "Welk ontwerp past bij jou?",
+            "subtitle": "Kies snel een richting",
             "items": [
-              "Je kunt werken met letters.",
-              "Je kunt vormen en patronen gebruiken.",
-              "Je kunt een collage maken.",
-              "Je kunt woorden en symbolen combineren.",
-              "Een eenvoudig ontwerp kan juist sterk zijn."
-            ]
-          },
-          {
-            "type": "task",
-            "title": "Dit moet op je voorkant",
-            "subtitle": "De basis moet duidelijk zijn",
-            "items": [
-              "Zet NEDERLANDS groot en leesbaar op de voorkant.",
-              "Zet je naam en klas op een logische plek.",
-              "Laat iets van jezelf zien.",
-              "Laat iets zien dat bij taal, lezen of verhalen past.",
-              "Kies minimaal één ontwerptruc."
+              "Collage met plaatjes, woorden en vormen",
+              "Grote letters met kleine tekeningen eromheen",
+              "Boekenplank met titels die bij jou passen",
+              "Minimalistisch met één sterk beeld en een strak kader",
+              "Typografie met letters en woorden als ontwerp"
             ]
           },
           {
             "type": "question",
             "title": "Wat past bij jou?",
-            "subtitle": "Kies 3 tot 5 dingen die iets over jou zeggen",
+            "subtitle": "Kies 3 tot 5 dingen",
             "items": [
               "Muziek, boeken, sport of games",
               "Films, series of dieren",
@@ -41640,37 +41699,28 @@
             ]
           },
           {
-            "type": "visual",
-            "title": "Nederlands zichtbaar maken",
-            "subtitle": "Denk aan taal, lezen, schrijven en verhalen",
-            "items": [],
-            "caption": "Beeldsuggestie: boekenruggen, losse letters, pen en papier, tekstballonnen of typografie",
-            "source": "Zoekterm: letters typography collage notebook, books spines close up, pen paper ink",
-            "layout": "image-left"
-          },
-          {
-            "type": "bullets",
+            "type": "wordbank",
             "title": "Wat past bij Nederlands?",
             "subtitle": "Ideeën voor beeld en vorm",
             "items": [
               "Boeken en boekenruggen",
               "Letters en woorden",
-              "Pen, papier of inkt",
+              "Pen, papier en inkt",
               "Verhalen en tekstballonnen",
-              "Aanhalingstekens of alfabet",
+              "Aanhalingstekens en alfabet",
               "Een zin of woord dat jij mooi vindt"
             ]
           },
           {
-            "type": "compare",
-            "title": "Vijf ontwerprecepten",
-            "subtitle": "Kies er één als je vastloopt",
+            "type": "rubric",
+            "title": "Dit moet op je voorkant",
+            "subtitle": "Hier kijk ik straks naar",
             "items": [
-              "Collage: plaatjes, woorden, vormen en stickers.",
-              "Boekenplank: boekenruggen met titels die bij jou passen.",
-              "Doodles: één grote titel met kleine tekeningen eromheen.",
-              "Typografie: letters en woorden vormen het ontwerp.",
-              "Minimalistisch: één sterk beeld, een titel en een strak kader."
+              "Duidelijk: NEDERLANDS is meteen leesbaar",
+              "Vindbaar: je naam en klas staan logisch",
+              "Persoonlijk: er zit iets van jou in",
+              "Passend: er zit iets van taal, lezen of verhalen in",
+              "Ontworpen: je gebruikt minimaal één ontwerptruc"
             ]
           },
           {
@@ -41686,39 +41736,43 @@
             ]
           },
           {
-            "type": "visual",
-            "title": "Drie trucs die bijna altijd werken",
-            "subtitle": "Herhaling, formaat en kleur",
-            "items": [],
-            "caption": "Beeldsuggestie: drie kleine voorbeelden naast elkaar, patroon met herhaling, groot woordbeeld, beperkt kleurpalet",
-            "source": "Zoekterm: design principles repetition scale limited color palette",
-            "layout": "image-right"
-          },
-          {
-            "type": "bullets",
-            "title": "Ontwerptrucs",
-            "subtitle": "Maak je ontwerp sterker",
+            "type": "checklist",
+            "title": "Voor je op je schrift werkt",
+            "subtitle": "Controleer je schets",
             "items": [
-              "Herhaal één vorm, letter of kleur.",
-              "Maak één onderdeel echt groot.",
-              "Gebruik een beperkt aantal kleuren.",
-              "Zet losse onderdelen bij elkaar met een kader.",
-              "Laat bewust ruimte leeg."
+              "NEDERLANDS heeft de meeste aandacht.",
+              "Naam en klas zijn goed vindbaar.",
+              "Je ziet iets persoonlijks.",
+              "Je ziet iets dat bij Nederlands past.",
+              "Je hebt kleur, herhaling, formaat of een kader bewust gekozen."
             ]
           },
           {
             "type": "task",
             "title": "Aan de slag",
-            "subtitle": "Maak eerst je voorkant",
+            "subtitle": "Maak je voorkant",
             "items": [
               "Werk vanuit je schets.",
               "Begin met de grote onderdelen.",
               "Voeg daarna details toe.",
-              "Houd NEDERLANDS, naam en klas goed leesbaar."
+              "Houd tekst leesbaar.",
+              "Vraag feedback voordat je alles definitief maakt."
             ]
           },
           {
-            "type": "steps",
+            "type": "writing-frame",
+            "title": "Als iemand vraagt naar je ontwerp",
+            "subtitle": "Gebruik één van deze zinnen",
+            "items": [
+              "Ik heb gekozen voor ... omdat ...",
+              "Je ziet iets van mij in ...",
+              "Dit past bij Nederlands omdat ...",
+              "Mijn ontwerptruc is ...",
+              "Ik wil dat je eerst kijkt naar ..."
+            ]
+          },
+          {
+            "type": "task",
             "title": "Daarna je titelblad",
             "subtitle": "Laat je stijl terugkomen",
             "items": [
@@ -41730,14 +41784,22 @@
             ]
           },
           {
-            "type": "question",
+            "type": "think-pair-share",
             "title": "Galerij",
             "subtitle": "Kijk naar keuzes, niet naar wie het mooist tekent",
             "items": [
-              "Welk idee had jij zelf nooit bedacht?",
-              "Welke ontwerptruc zie je terug?",
-              "Waar zie je iets persoonlijks?",
-              "Wat werkt slim aan de voorkant van iemand anders?"
+              "Kijk eerst stil naar drie ontwerpen.",
+              "Bespreek met je buur één slim idee.",
+              "Deel één ontwerpkeuze die jij zelf nooit had bedacht."
+            ]
+          },
+          {
+            "type": "exit-ticket",
+            "title": "Afsluiten",
+            "subtitle": "Schrijf één zin in je hoofd of op klad",
+            "items": [
+              "Welke ontwerpkeuze maakt jouw netschrift persoonlijk?",
+              "Welke ontwerptruc ga je gebruiken of verder verbeteren?"
             ]
           },
           {
