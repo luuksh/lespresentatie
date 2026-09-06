@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:58:12+02:00",
+  "updatedAt": "2026-09-06T07:58:21+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3775,7 +3775,8 @@
           "presentationMarkerId": "marker-startles-1-2",
           "sequenceIndex": 1,
           "progressByClass": {
-            "1C": "done"
+            "1C": "todo",
+            "1D": "done"
           }
         },
         {
@@ -3812,7 +3813,8 @@
           "presentationMarkerId": "marker-startles-1-2",
           "sequenceIndex": 1,
           "progressByClass": {
-            "1C": "done"
+            "1C": "todo",
+            "1D": "done"
           }
         },
         {
@@ -32886,7 +32888,8 @@
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
-              "1C": "done"
+              "1C": "todo",
+              "1D": "done"
             }
           }
         },
@@ -34348,7 +34351,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T07:58:12+02:00-studio",
+  "sourceRevision": "2026-09-06T07:58:21+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
