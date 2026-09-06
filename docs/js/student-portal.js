@@ -2687,7 +2687,8 @@ function nextMarkerIndexForTarget(presentation, target) {
 
 function getLessonPresentationSlides(presentation, target) {
   if (target?.markerId && presentationMarkerIsDeleted(presentation, target.markerId)) return [];
-  const markerDeck = Array.isArray(presentation?.markerDecks?.[target?.markerId])
+  const hasMarkerDeck = Array.isArray(presentation?.markerDecks?.[target?.markerId]);
+  const markerDeck = hasMarkerDeck
     ? presentation.markerDecks[target.markerId].filter((slide) => slide && typeof slide === 'object')
     : [];
   if (markerDeck.some((slide) => (
@@ -2696,6 +2697,7 @@ function getLessonPresentationSlides(presentation, target) {
   ))) {
     return markerDeck;
   }
+  if (hasMarkerDeck) return [];
 
   const sourceSlides = Array.isArray(presentation?.slides) ? presentation.slides : [];
   if (!sourceSlides.length) return [];
@@ -2705,18 +2707,31 @@ function getLessonPresentationSlides(presentation, target) {
   return sourceSlides.slice(start, Math.max(start + 1, end));
 }
 
+function assembleRenderableLessonSlides(baseSlides, { startSlide = null, endSlide = null, homeworkSlide = null } = {}) {
+  const slides = (Array.isArray(baseSlides) ? baseSlides : []).filter((slide) => slide && typeof slide === 'object');
+  const out = [];
+  if (slides.length) {
+    out.push(slides[0]);
+    if (startSlide) out.push(startSlide);
+    out.push(...slides.slice(1));
+  } else if (startSlide) {
+    out.push(startSlide);
+  }
+  if (endSlide) out.push(endSlide);
+  if (homeworkSlide) out.push(homeworkSlide);
+  return out;
+}
+
 function getRenderableSlides(presentation, target) {
   const lessonSlides = getLessonPresentationSlides(presentation, target);
   const startSlide = lessonBuildSlide('start', target);
   const endSlide = lessonBuildSlide('end', target);
-  const slides = [
-    ...(startSlide ? [startSlide] : []),
-    ...lessonSlides,
-    ...(endSlide ? [endSlide] : []),
-  ];
   const homeworkPreviewSlide = getHomeworkPreviewSlide(target);
-  if (homeworkPreviewSlide) slides.push(homeworkPreviewSlide);
-  return slides;
+  return assembleRenderableLessonSlides(lessonSlides, {
+    startSlide,
+    endSlide,
+    homeworkSlide: homeworkPreviewSlide,
+  });
 }
 
 function renderSummaryList(container, rows, emptyText) {

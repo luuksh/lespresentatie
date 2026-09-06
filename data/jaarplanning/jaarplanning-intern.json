@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:39:00+02:00",
+  "updatedAt": "2026-09-06T09:00:47+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3683,7 +3683,9 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2
+          "sequenceIndex": 2,
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": []
@@ -3721,7 +3723,9 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2
+          "sequenceIndex": 2,
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": []
@@ -33682,26 +33686,54 @@
         "marker-startles-1-2": {
           "netschrift": {
             "items": [
-              "Netschrift bevat titel, datum, verzorgde indeling en de startopdracht van deze les."
+              "Je voorkant is ontworpen of duidelijk begonnen.",
+              "Op de voorkant staat NEDERLANDS duidelijk zichtbaar.",
+              "Je naam en klas zijn goed vindbaar.",
+              "Je titelblad bevat NETSCHRIFT NEDERLANDS, je naam, klas en schooljaar.",
+              "Je ontwerp laat iets van jou zien en iets dat bij Nederlands past.",
+              "Je gebruikt minimaal één ontwerptruc: herhaling, iets groots, beperkte kleuren of een kader."
             ]
           },
           "curriculum": {
             "lessonGoals": [
-              "Netschrift bevat titel, datum, verzorgde indeling en de startopdracht van deze les."
+              "Je ontdekt waardoor een bladzijde of voorkant er sterk uitziet.",
+              "Je kiest een eigen stijl voor je netschrift.",
+              "Je ontwerpt eerst op kladpapier voordat je op je schrift werkt.",
+              "Je maakt je voorkant en titelblad verzorgd, persoonlijk en duidelijk.",
+              "Je kijkt naar ontwerpkeuzes van anderen en benoemt wat slim werkt."
             ],
-            "skills": [],
-            "kerndoelen": [],
-            "subkerndoelen": []
+            "skills": [
+              "Reflectie",
+              "Schrijven",
+              "Taalverzorging",
+              "Creatief taal gebruiken"
+            ],
+            "kerndoelen": [
+              "1 Taalcompetentie",
+              "3 Produceert teksten",
+              "5 Reflecteert op taalactiviteiten",
+              "7 Taal en identiteit"
+            ],
+            "subkerndoelen": [
+              "1A Taal- en leesomgeving",
+              "3B Creatief taal gebruiken",
+              "3C Schrijven om te leren",
+              "7A Talige identiteit"
+            ]
           },
           "planning": {
             "lesson": "Les 2 - Maak het van jou",
             "homework": "netschrift en pen mee",
             "assessment": "",
-            "teacherNote": "",
-            "progressByClass": {
-              "1C": "todo",
-              "1D": "todo"
-            }
+            "teacherNote": ""
+          },
+          "homework": {
+            "items": [
+              "Neem je netschrift en pen mee.",
+              "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.",
+              "Zorg dat naam, klas en schooljaar duidelijk leesbaar zijn.",
+              "Denk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?"
+            ]
           }
         },
         "marker-startles-1-1": {
@@ -35398,7 +35430,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:39:00+02:00-studio",
+  "sourceRevision": "2026-09-06T09:00:47+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
