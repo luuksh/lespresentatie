@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:34:56+02:00",
+  "updatedAt": "2026-09-06T16:35:07+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -35854,9 +35854,9 @@
             "subtitle": "September 2026",
             "items": [],
             "kicker": "EERSTE ECHTE PAGINA",
+            "text": "Dit is niet wie je blijft. Dit is waar je begint.",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Drukletters in close-up.",
-            "text": "Dit is niet wie je blijft. Dit is waar je begint."
+            "imageAlt": "Drukletters in close-up."
           },
           {
             "type": "task",
@@ -36076,9 +36076,9 @@
               "Laat zien wat jouw bijdrage was."
             ],
             "kicker": "PROJECTENBOEK",
+            "text": "Nieuw project betekent: nieuw voorblad, nieuw tabje, inhoudsopgave bijwerken en afsluiten met een korte reflectie.",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Books%2C%20Bookstore%20%26%20Library.jpg",
-            "imageAlt": "Boekenkast met veel boeken.",
-            "text": "Nieuw project betekent: nieuw voorblad, nieuw tabje, inhoudsopgave bijwerken en afsluiten met een korte reflectie."
+            "imageAlt": "Boekenkast met veel boeken."
           },
           {
             "type": "rubric",
@@ -37055,7 +37055,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:34:56+02:00-studio",
+  "sourceRevision": "2026-09-06T16:35:07+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
