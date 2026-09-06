@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:33:18+02:00",
+  "updatedAt": "2026-09-06T08:33:23+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -32495,6 +32495,15 @@
         },
         {
           "type": "title",
+          "title": "Les 1 - Welkom bij Nederlands",
+          "subtitle": "Start Nederlands 1",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": ""
+        },
+        {
+          "type": "title",
           "title": "---",
           "subtitle": "",
           "showProjectLogo": false,
@@ -32503,18 +32512,11 @@
           "variant": ""
         },
         {
-          "type": "bullets",
-          "title": "Je bent allang met Nederlands bezig",
+          "type": "title",
+          "title": "---",
           "subtitle": "Heb je vandaag al...",
           "showProjectLogo": false,
-          "items": [
-            "Gepraat?",
-            "Geappt?",
-            "Gelezen?",
-            "Geluisterd?",
-            "Nagedacht?",
-            "Geschreven?"
-          ],
+          "items": [],
           "emphasis": false,
           "variant": ""
         },
@@ -32945,7 +32947,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 23
+        "marker-startles-1-2": 24
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -32961,21 +32963,18 @@
           },
           {
             "type": "title",
+            "title": "Les 1 - Welkom bij Nederlands",
+            "subtitle": "Start Nederlands 1"
+          },
+          {
+            "type": "title",
             "title": "---",
             "subtitle": ""
           },
           {
-            "type": "bullets",
-            "title": "Je bent allang met Nederlands bezig",
-            "subtitle": "Heb je vandaag al...",
-            "items": [
-              "Gepraat?",
-              "Geappt?",
-              "Gelezen?",
-              "Geluisterd?",
-              "Nagedacht?",
-              "Geschreven?"
-            ]
+            "type": "title",
+            "title": "---",
+            "subtitle": "Heb je vandaag al..."
           },
           {
             "type": "bullets",
@@ -34798,7 +34797,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:33:18+02:00-studio",
+  "sourceRevision": "2026-09-06T08:33:23+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
