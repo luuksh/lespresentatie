@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:57:07.682Z",
+  "updatedAt": "2026-09-06T08:04:24.721Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -87,19 +87,15 @@
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
           "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
-          "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1,
+          "lessonKey": "A",
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G4C|2026-09-07T10:50:00.000Z|2026-09-07T11:35:00.000Z",
@@ -142,7 +138,7 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "datumprojectie",
+      "source": "docentplatform",
       "lessons": [
         {
           "project": "Start Nederlands 4",
@@ -178,10 +174,9 @@
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
           "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
-          "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
+          "lessonKey": "C",
           "classId": "G1C",
           "scheduledDate": "2026-09-08T06:15:00.000Z"
         }
@@ -336,19 +331,15 @@
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
           "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
-          "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1,
+          "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-08T12:40:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G4B|2026-09-10T06:15:00.000Z|2026-09-10T07:00:00.000Z",
@@ -513,13 +504,12 @@
       "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 2 - Maak het van jou",
-          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
-          "lessonKey": "B",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-11T06:15:00.000Z"
         }
