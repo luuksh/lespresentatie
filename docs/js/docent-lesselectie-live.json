@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:22:53.082Z",
+  "updatedAt": "2026-09-06T14:31:38.125Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -18,7 +18,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
+          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewantwoorden af als dat nog niet klaar is.\nNeem volgende les kleurpotlood, fineliner of markeerstift mee als je dat wilt gebruiken. netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
@@ -52,7 +52,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
+          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewantwoorden af als dat nog niet klaar is.\nNeem volgende les kleurpotlood, fineliner of markeerstift mee als je dat wilt gebruiken. netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
@@ -173,7 +173,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
-          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+          "homework": "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nNeem iedere les je leesboek, netschrift en pen mee.\nDenk alvast na welk boek je als eerste wilt lezen.",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
           "lessonKey": "C",
