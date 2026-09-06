@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:11:27+02:00",
+  "updatedAt": "2026-09-06T16:12:28+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -5606,7 +5606,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5633,7 +5635,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5660,7 +5664,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5687,7 +5693,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5714,7 +5722,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5741,7 +5751,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5768,7 +5780,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1"
+          "presentationMarkerId": "marker-startles-3-1",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -34724,7 +34738,21 @@
           "title": "Les 1 - Welkom terug bij Nederlands",
           "subtitle": "Leer toch falen",
           "showProjectLogo": false,
-          "items": []
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34736,7 +34764,21 @@
             "Je ontwikkelt je eigen smaak en stijl verder.",
             "Je leert je gedachten steeds preciezer uit te drukken.",
             "Je gaat dingen proberen waarvan je nog niet weet of ze lukken."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34748,7 +34790,21 @@
             "Iets wat meteen lukt, leert je soms minder dan iets waarop je moet puzzelen.",
             "We kijken dit jaar naar falen in taal, verhalen en ons eigen werk.",
             "Proberen, vastlopen, verbeteren en opnieuw proberen horen bij Nederlands."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34761,7 +34817,21 @@
             "Je netschrift is je individuele werkplek.",
             "Je laptop gebruiken we gericht wanneer die iets toevoegt.",
             "Je leesboek en pen heb je iedere les bij je."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34773,7 +34843,21 @@
             "Je krijgt een O, V of G.",
             "Feedback laat zien waarom en wat je volgende stap is.",
             "Een beoordeling gaat niet alleen over één eindproduct, maar over wat jij laat zien."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34785,7 +34869,21 @@
             "Individueel werk komt eerst in je netschrift.",
             "Bij groepswerk vergelijk je daarna jullie individuele versies.",
             "Je netschrift laat zien wat jouw eigen bijdrage en ontwikkeling zijn."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34799,7 +34897,21 @@
             "Schrijf leesbaar en verzorgd.",
             "Verbeteringen mogen zichtbaar blijven.",
             "Verzorgd, overzichtelijk, leesbaar en persoonlijk."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34812,7 +34924,21 @@
             "Tien pagina's leesmeters.",
             "Daarna begint het gedeelte PROJECTEN.",
             "Nummer je gebruikte pagina's."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34824,7 +34950,21 @@
             "Reserveer vier pagina's voor je woordenlijst.",
             "Daarna komt grammatica.",
             "Nieuwe projecten krijgen later een eigen voorblad en tabje."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34837,7 +34977,21 @@
             "Iets wat vorig jaar niet lukte, maar waarvan ik iets heb geleerd...",
             "Dit wil ik dit jaar beter kunnen...",
             "Dit wil ik dit jaar durven proberen..."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34850,21 +35004,63 @@
             "Maak een eigen indeling.",
             "Gebruik woorden, kaders, symbolen of illustraties.",
             "Bewaar ruimte voor ontwikkeling: hier kijken we later op terug."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "title",
           "title": "Proberen mag mislukken",
           "subtitle": "Als je er maar iets mee doet",
           "showProjectLogo": false,
-          "items": []
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "title",
           "title": "Les 2 - Maak het van jou",
           "subtitle": "Jouw netschrift, jouw stijl",
           "showProjectLogo": false,
-          "items": []
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34877,7 +35073,21 @@
             "Je werkt je voorkant uit.",
             "Je maakt je titelblad af.",
             "Je gebruikt dezelfde ontwerpprincipes later bij projectvoorbladen."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34890,7 +35100,21 @@
             "Herhaling zorgt voor samenhang.",
             "Witruimte is bewust gebruikt.",
             "Vormgeving ondersteunt de inhoud."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34904,7 +35128,21 @@
             "Grafisch of geometrisch.",
             "Minimalistisch.",
             "Of een eigen combinatie."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34916,7 +35154,21 @@
             "Laat iets zien van wie jij bent.",
             "Verwerk iets dat met taal, verhalen of Nederlands te maken heeft.",
             "Kies bewust voor samenhang in vorm, letters en kleur."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34929,7 +35181,21 @@
             "DOODLES: veel kleine elementen rond één focuspunt.",
             "TYPOGRAFIE: taal zelf wordt het beeld.",
             "MINIMALISTISCH: weinig elementen, maar heel bewust geplaatst."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34942,7 +35208,21 @@
             "Beperk het aantal kleuren.",
             "Werk met contrast.",
             "Gebruik lege ruimte bewust."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34955,14 +35235,42 @@
             "Waar staat de titel?",
             "Hoe bewegen je ogen over het ontwerp?",
             "Pas aan voordat je op je schrift begint."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "title",
           "title": "Aan de slag",
           "subtitle": "Werk geconcentreerd en precies",
           "showProjectLogo": false,
-          "items": []
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34974,7 +35282,21 @@
             "Laat minimaal één element van je voorkant terugkomen.",
             "Houd naam, klas en schooljaar goed leesbaar.",
             "Less is more mag; veel details ook, zolang het bewust is."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34986,7 +35308,21 @@
             "Zoek één keuze die je sterk vindt.",
             "Bedenk waarom die werkt.",
             "Gebruik ideeën van anderen later gerust op je eigen manier."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "bullets",
@@ -34999,14 +35335,42 @@
             "Werk je inhoudsopgave bij.",
             "Laat de vormgeving passen bij de inhoud van het project.",
             "Sluit projecten af met een korte reflectie op je ontwikkeling."
-          ]
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         },
         {
           "type": "title",
           "title": "Je netschrift groeit met je mee",
           "subtitle": "Verzorgd - overzichtelijk - leesbaar - persoonlijk",
           "showProjectLogo": false,
-          "items": []
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
         }
       ],
       "markers": {
@@ -35316,6 +35680,17 @@
             "skills": [],
             "kerndoelen": [],
             "subkerndoelen": []
+          },
+          "homework": {
+            "items": [
+              "netschrift en pen mee"
+            ]
+          },
+          "planning": {
+            "lesson": "Startles 1: Welkom terug - leer toch falen",
+            "homework": "netschrift en pen mee",
+            "assessment": "",
+            "teacherNote": ""
           }
         },
         "marker-startles-3-2": {
@@ -36148,7 +36523,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:11:27+02:00-studio",
+  "sourceRevision": "2026-09-06T16:12:28+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
