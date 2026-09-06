@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T11:21:15+02:00",
+  "updatedAt": "2026-09-06T11:21:19+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -33842,69 +33842,16 @@
           "text": "",
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
           "imageAlt": "",
-          "caption": "Schrijven begint met aandacht voor wat je vastlegt",
-          "source": "Wikimedia Commons, Shixart1985",
+          "caption": "Vandaag wordt je schrift een persoonlijke werkplaats.",
+          "source": "",
           "images": [
             {
               "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
               "alt": "",
-              "caption": "Schrijven begint met aandacht voor wat je vastlegt",
-              "source": "Wikimedia Commons, Shixart1985"
+              "caption": "Vandaag wordt je schrift een persoonlijke werkplaats.",
+              "source": ""
             }
           ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "visual",
-          "title": "Een schrift kan een boek worden",
-          "subtitle": "Kijk naar letters, ruimte, kleur en materiaal",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "image-left",
-          "kicker": "",
-          "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
-          "imageAlt": "",
-          "caption": "Boekruggen laten zien hoe titel, kleur en herhaling samen kunnen werken",
-          "source": "Wikimedia Commons, Pouya sh",
-          "images": [
-            {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
-              "alt": "",
-              "caption": "Boekruggen laten zien hoe titel, kleur en herhaling samen kunnen werken",
-              "source": "Wikimedia Commons, Pouya sh"
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "source",
-          "title": "Eerste indruk",
-          "subtitle": "Lees de voorkant alsof je de maker nog niet kent",
-          "showProjectLogo": false,
-          "items": [
-            "Waar kijk je als eerste naar?",
-            "Wat zegt de voorkant over de maker?",
-            "Waardoor voelt het verzorgd?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "Een sterke voorkant vertelt meteen: dit schrift is van iemand.",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "Lesvraag",
-          "images": [],
           "quote": "",
           "attribution": "",
           "video": "",
@@ -33912,8 +33859,8 @@
         },
         {
           "type": "gallery",
-          "title": "Inspiratiegalerij",
-          "subtitle": "Kijk naar keuzes, niet naar perfect tekenen",
+          "title": "Eerst kijken",
+          "subtitle": "Wat maakt een voorkant of bladzijde sterk?",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
@@ -33928,27 +33875,6 @@
           "images": [],
           "quote": "",
           "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "quote",
-          "title": "Ontwerpgedachte",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "source",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "Eerst kijken. Dan kiezen.",
-          "attribution": "Werkwijze voor vandaag",
           "video": "",
           "url": ""
         },
@@ -33961,8 +33887,8 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "Dit woord moet werken",
-          "text": "Groot. Leesbaar. Bewust geplaatst.",
+          "kicker": "Dit moet meteen leesbaar zijn",
+          "text": "Groot. Rustig. Bewust.",
           "image": "",
           "imageAlt": "",
           "caption": "",
@@ -33974,23 +33900,49 @@
           "url": ""
         },
         {
-          "type": "wordbank",
-          "title": "Ontwerpwoorden",
-          "subtitle": "Gebruik deze woorden bij het kijken en bespreken",
+          "type": "visual",
+          "title": "Letters kunnen het beeld zijn",
+          "subtitle": "Je hoeft niet altijd te tekenen",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-left",
+          "kicker": "",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Album%20of%20Printed%20Initials%2C%20Ornaments%20and%20Title%20Pages%2C%20cut%20from%20Books%20%2824437145243%29.jpg",
+          "imageAlt": "",
+          "caption": "Letters kunnen versiering, titel en onderwerp tegelijk zijn.",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Album%20of%20Printed%20Initials%2C%20Ornaments%20and%20Title%20Pages%2C%20cut%20from%20Books%20%2824437145243%29.jpg",
+              "alt": "",
+              "caption": "Letters kunnen versiering, titel en onderwerp tegelijk zijn.",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "source",
+          "title": "Kijk als ontwerper",
+          "subtitle": "Niet mooi of lelijk, maar: wat werkt?",
           "showProjectLogo": false,
           "items": [
-            "Herhaling: iets komt bewust terug",
-            "Contrast: iets valt op door verschil",
-            "Kader: losse onderdelen horen bij elkaar",
-            "Ruimte: leegte maakt het rustiger",
-            "Balans: links, rechts, boven en onder voelen logisch",
-            "Focus: één onderdeel krijgt de meeste aandacht"
+            "Waar kijk je als eerste naar?",
+            "Welke keuze zorgt daarvoor?",
+            "Wat wordt herhaald?",
+            "Waar is bewust ruimte leeg gelaten?"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
           "kicker": "",
-          "text": "",
+          "text": "Een sterke voorkant vertelt meteen waar het schrift over gaat en van wie het is.",
           "image": "",
           "imageAlt": "",
           "caption": "",
@@ -34003,12 +33955,12 @@
         },
         {
           "type": "compare",
-          "title": "Mooi tekenen of slim ontwerpen",
-          "subtitle": "Dat zijn twee verschillende dingen",
+          "title": "Twee manieren van kijken",
+          "subtitle": "Van smaak naar ontwerp",
           "showProjectLogo": false,
           "items": [
-            "Goed kunnen tekenen: herkenbare plaatjes maken met veel detail",
-            "Slim ontwerpen: letters, vormen, kleur en ruimte bewust kiezen"
+            "Ik vind dit mooi: je reageert op je gevoel.",
+            "Ik zie waarom dit werkt: je benoemt kleur, ruimte, herhaling of contrast."
           ],
           "emphasis": false,
           "variant": "",
@@ -34027,12 +33979,12 @@
         },
         {
           "type": "before-after",
-          "title": "Van losse ideeën naar ontwerp",
-          "subtitle": "Wat wordt sterker?",
+          "title": "Van los naar sterk",
+          "subtitle": "Eén duidelijke keuze maakt vaak het verschil",
           "showProjectLogo": false,
           "items": [
-            "Voor: veel kleine tekeningen, kleuren en woorden zonder duidelijke volgorde",
-            "Na: één hoofdidee, herhaling, beperkte kleuren en een duidelijke titel"
+            "Voor: veel kleine plaatjes, kleuren en woorden zonder volgorde",
+            "Na: één groot woord, drie kleuren, herhaling en genoeg lege ruimte"
           ],
           "emphasis": false,
           "variant": "",
@@ -34050,9 +34002,37 @@
           "url": ""
         },
         {
+          "type": "visual",
+          "title": "Boekenplank als ontwerpidee",
+          "subtitle": "Jouw voorkant kan eruitzien als een rij boeken",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-right",
+          "kicker": "",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+          "imageAlt": "",
+          "caption": "Boekenruggen geven ideeën voor titels, kleurvlakken en herhaling.",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+              "alt": "",
+              "caption": "Boekenruggen geven ideeën voor titels, kleurvlakken en herhaling.",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
           "type": "poll",
-          "title": "Welke richting past bij jou?",
-          "subtitle": "Kies snel één ontwerprecept",
+          "title": "Kies een richting",
+          "subtitle": "Welke voorkant past het meest bij jou?",
           "showProjectLogo": false,
           "items": [
             "Collage met plaatjes, woorden en vormen",
@@ -34077,14 +34057,38 @@
           "url": ""
         },
         {
-          "type": "think-pair-share",
-          "title": "Persoonlijke keuzes",
-          "subtitle": "Eerst alleen, daarna samen",
+          "type": "gallery",
+          "title": "Vijf ontwerprecepten",
+          "subtitle": "Kies er één als je vastloopt",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "wordbank",
+          "title": "Ontwerpwoorden",
+          "subtitle": "Gebruik deze woorden bij het kijken",
           "showProjectLogo": false,
           "items": [
-            "Denk 30 seconden na: welke drie dingen passen bij jou?",
-            "Bespreek je keuzes met je buur.",
-            "Kies één idee dat je echt op je voorkant wilt gebruiken."
+            "Herhaling: iets komt bewust terug",
+            "Contrast: iets valt op door verschil",
+            "Kader: losse onderdelen horen bij elkaar",
+            "Ruimte: leegte maakt het rustiger",
+            "Balans: de bladzijde voelt niet scheef of vol aan",
+            "Focus: één onderdeel krijgt de meeste aandacht"
           ],
           "emphasis": false,
           "variant": "",
@@ -34129,9 +34133,37 @@
           "url": ""
         },
         {
-          "type": "bullets",
+          "type": "visual",
           "title": "Wat past bij Nederlands?",
-          "subtitle": "Ideeën voor beeld en vorm",
+          "subtitle": "Denk in beelden, woorden en tekens",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-left",
+          "kicker": "",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edwaert_Collier_-_Trompe_l%27%C5%93il_with_a_letter_rack_holding_newspapers%2C_letters%2C_writing_equipment_and_a_comb%2C_098l19030-b3v3g.jpg",
+          "imageAlt": "",
+          "caption": "Papier, tekst, brieven en schrijfgerei horen bij taal.",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Edwaert_Collier_-_Trompe_l%27%C5%93il_with_a_letter_rack_holding_newspapers%2C_letters%2C_writing_equipment_and_a_comb%2C_098l19030-b3v3g.jpg",
+              "alt": "",
+              "caption": "Papier, tekst, brieven en schrijfgerei horen bij taal.",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Beeldideeën voor Nederlands",
+          "subtitle": "Kies wat bij jouw ontwerp past",
           "showProjectLogo": false,
           "items": [
             "Boeken en boekenruggen",
@@ -34164,8 +34196,9 @@
           "items": [
             "Kies je richting.",
             "Maak een snelle schets.",
-            "Bepaal waar NEDERLANDS komt.",
-            "Voeg iets persoonlijks toe.",
+            "Plaats NEDERLANDS.",
+            "Voeg jezelf toe.",
+            "Voeg Nederlands toe.",
             "Werk pas daarna op je echte schrift."
           ],
           "emphasis": false,
@@ -34211,6 +34244,34 @@
           "url": ""
         },
         {
+          "type": "visual",
+          "title": "Begin groot",
+          "subtitle": "Durf de hele voorkant te gebruiken",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-right",
+          "kicker": "",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pen-writing.jpg",
+          "imageAlt": "",
+          "caption": "Een grote keuze geeft je ontwerp meteen richting.",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pen-writing.jpg",
+              "alt": "",
+              "caption": "Een grote keuze geeft je ontwerp meteen richting.",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
           "type": "writing-frame",
           "title": "Als je je ontwerp uitlegt",
           "subtitle": "Gebruik één van deze zinnen",
@@ -34247,7 +34308,8 @@
             "Vindbaar: je naam en klas staan logisch",
             "Persoonlijk: er zit iets van jou in",
             "Passend: er zit iets van taal, lezen of verhalen in",
-            "Ontworpen: je gebruikt minimaal één ontwerptruc"
+            "Ontworpen: je gebruikt minimaal één ontwerptruc",
+            "Verzorgd: je hebt rustig en netjes afgewerkt"
           ],
           "emphasis": false,
           "variant": "",
@@ -34274,7 +34336,8 @@
             "Naam en klas zijn goed vindbaar.",
             "Je ziet iets persoonlijks.",
             "Je ziet iets dat bij Nederlands past.",
-            "Je hebt kleur, herhaling, formaat of een kader bewust gekozen."
+            "Je gebruikt herhaling, formaat, kleur of een kader.",
+            "Je ontwerp is niet te vol."
           ],
           "emphasis": false,
           "variant": "",
@@ -34308,7 +34371,7 @@
           "image": "",
           "imageAlt": "",
           "caption": "Open het fragment over ontwerpprincipes",
-          "source": "Envato Tuts+, The Principles of Design",
+          "source": "",
           "images": [],
           "quote": "",
           "attribution": "",
@@ -34343,16 +34406,69 @@
           "url": ""
         },
         {
-          "type": "task",
+          "type": "visual",
           "title": "Daarna je titelblad",
           "subtitle": "Laat je stijl terugkomen",
           "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "image-left",
+          "kicker": "",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Writing_notes_while_using_a_laptop_at_a_desk.jpg",
+          "imageAlt": "",
+          "caption": "Je titelblad hoort bij dezelfde stijl als je voorkant.",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Writing_notes_while_using_a_laptop_at_a_desk.jpg",
+              "alt": "",
+              "caption": "Je titelblad hoort bij dezelfde stijl als je voorkant.",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "task",
+          "title": "Titelblad",
+          "subtitle": "Dit moet erop staan",
+          "showProjectLogo": false,
           "items": [
-            "Werk je titelblad verder uit.",
-            "Gebruik dezelfde letters, kleuren, vormen of symbolen.",
-            "Zet NETSCHRIFT NEDERLANDS duidelijk op het blad.",
-            "Voeg je naam, klas en schooljaar toe.",
-            "Controleer of alles netjes leesbaar blijft."
+            "NETSCHRIFT NEDERLANDS",
+            "Je naam",
+            "Je klas",
+            "Het schooljaar",
+            "Een stijl die past bij je voorkant"
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "",
+          "text": "",
+          "image": "",
+          "imageAlt": "",
+          "caption": "",
+          "source": "",
+          "images": [],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "think-pair-share",
+          "title": "Galerij",
+          "subtitle": "Kijk naar keuzes, niet naar wie het mooist tekent",
+          "showProjectLogo": false,
+          "items": [
+            "Kijk eerst stil naar drie ontwerpen.",
+            "Bespreek met je buur één slim idee.",
+            "Deel één ontwerpkeuze die jij zelf nooit had bedacht."
           ],
           "emphasis": false,
           "variant": "",
@@ -34394,21 +34510,28 @@
           "url": ""
         },
         {
-          "type": "title",
+          "type": "hero",
           "title": "Maak er iets bijzonders van",
           "subtitle": "Dit is pas het begin",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
-          "layout": "",
+          "layout": "image-right",
           "kicker": "",
           "text": "",
-          "image": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
           "imageAlt": "",
-          "caption": "",
+          "caption": "Je netschrift wordt dit jaar jouw eigen boek voor Nederlands.",
           "source": "",
-          "images": [],
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
+              "alt": "",
+              "caption": "Je netschrift wordt dit jaar jouw eigen boek voor Nederlands.",
+              "source": ""
+            }
+          ],
           "quote": "",
           "attribution": "",
           "video": "",
@@ -34618,91 +34741,76 @@
             "title": "Les 2 - Maak het van jou",
             "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
             "items": [],
-            "layout": "image-right",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
-            "caption": "Schrijven begint met aandacht voor wat je vastlegt",
-            "source": "Wikimedia Commons, Shixart1985"
-          },
-          {
-            "type": "visual",
-            "title": "Een schrift kan een boek worden",
-            "subtitle": "Kijk naar letters, ruimte, kleur en materiaal",
-            "items": [],
-            "layout": "image-left",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
-            "caption": "Boekruggen laten zien hoe titel, kleur en herhaling samen kunnen werken",
-            "source": "Wikimedia Commons, Pouya sh"
-          },
-          {
-            "type": "source",
-            "title": "Eerste indruk",
-            "subtitle": "Lees de voorkant alsof je de maker nog niet kent",
-            "items": [
-              "Waar kijk je als eerste naar?",
-              "Wat zegt de voorkant over de maker?",
-              "Waardoor voelt het verzorgd?"
-            ],
-            "text": "Een sterke voorkant vertelt meteen: dit schrift is van iemand.",
-            "source": "Lesvraag"
+            "caption": "Vandaag wordt je schrift een persoonlijke werkplaats.",
+            "layout": "image-right"
           },
           {
             "type": "gallery",
-            "title": "Inspiratiegalerij",
-            "subtitle": "Kijk naar keuzes, niet naar perfect tekenen",
+            "title": "Eerst kijken",
+            "subtitle": "Wat maakt een voorkant of bladzijde sterk?",
             "items": []
-          },
-          {
-            "type": "quote",
-            "title": "Ontwerpgedachte",
-            "subtitle": "",
-            "items": [],
-            "variant": "source",
-            "quote": "Eerst kijken. Dan kiezen.",
-            "attribution": "Werkwijze voor vandaag"
           },
           {
             "type": "spotlight",
             "title": "NEDERLANDS",
             "subtitle": "",
             "items": [],
-            "kicker": "Dit woord moet werken",
-            "text": "Groot. Leesbaar. Bewust geplaatst."
+            "kicker": "Dit moet meteen leesbaar zijn",
+            "text": "Groot. Rustig. Bewust."
           },
           {
-            "type": "wordbank",
-            "title": "Ontwerpwoorden",
-            "subtitle": "Gebruik deze woorden bij het kijken en bespreken",
+            "type": "visual",
+            "title": "Letters kunnen het beeld zijn",
+            "subtitle": "Je hoeft niet altijd te tekenen",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Album%20of%20Printed%20Initials%2C%20Ornaments%20and%20Title%20Pages%2C%20cut%20from%20Books%20%2824437145243%29.jpg",
+            "caption": "Letters kunnen versiering, titel en onderwerp tegelijk zijn.",
+            "layout": "image-left"
+          },
+          {
+            "type": "source",
+            "title": "Kijk als ontwerper",
+            "subtitle": "Niet mooi of lelijk, maar: wat werkt?",
             "items": [
-              "Herhaling: iets komt bewust terug",
-              "Contrast: iets valt op door verschil",
-              "Kader: losse onderdelen horen bij elkaar",
-              "Ruimte: leegte maakt het rustiger",
-              "Balans: links, rechts, boven en onder voelen logisch",
-              "Focus: één onderdeel krijgt de meeste aandacht"
-            ]
+              "Waar kijk je als eerste naar?",
+              "Welke keuze zorgt daarvoor?",
+              "Wat wordt herhaald?",
+              "Waar is bewust ruimte leeg gelaten?"
+            ],
+            "text": "Een sterke voorkant vertelt meteen waar het schrift over gaat en van wie het is."
           },
           {
             "type": "compare",
-            "title": "Mooi tekenen of slim ontwerpen",
-            "subtitle": "Dat zijn twee verschillende dingen",
+            "title": "Twee manieren van kijken",
+            "subtitle": "Van smaak naar ontwerp",
             "items": [
-              "Goed kunnen tekenen: herkenbare plaatjes maken met veel detail",
-              "Slim ontwerpen: letters, vormen, kleur en ruimte bewust kiezen"
+              "Ik vind dit mooi: je reageert op je gevoel.",
+              "Ik zie waarom dit werkt: je benoemt kleur, ruimte, herhaling of contrast."
             ]
           },
           {
             "type": "before-after",
-            "title": "Van losse ideeën naar ontwerp",
-            "subtitle": "Wat wordt sterker?",
+            "title": "Van los naar sterk",
+            "subtitle": "Eén duidelijke keuze maakt vaak het verschil",
             "items": [
-              "Voor: veel kleine tekeningen, kleuren en woorden zonder duidelijke volgorde",
-              "Na: één hoofdidee, herhaling, beperkte kleuren en een duidelijke titel"
+              "Voor: veel kleine plaatjes, kleuren en woorden zonder volgorde",
+              "Na: één groot woord, drie kleuren, herhaling en genoeg lege ruimte"
             ]
           },
           {
+            "type": "visual",
+            "title": "Boekenplank als ontwerpidee",
+            "subtitle": "Jouw voorkant kan eruitzien als een rij boeken",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+            "caption": "Boekenruggen geven ideeën voor titels, kleurvlakken en herhaling.",
+            "layout": "image-right"
+          },
+          {
             "type": "poll",
-            "title": "Welke richting past bij jou?",
-            "subtitle": "Kies snel één ontwerprecept",
+            "title": "Kies een richting",
+            "subtitle": "Welke voorkant past het meest bij jou?",
             "items": [
               "Collage met plaatjes, woorden en vormen",
               "Grote letters met kleine tekeningen eromheen",
@@ -34712,13 +34820,22 @@
             ]
           },
           {
-            "type": "think-pair-share",
-            "title": "Persoonlijke keuzes",
-            "subtitle": "Eerst alleen, daarna samen",
+            "type": "gallery",
+            "title": "Vijf ontwerprecepten",
+            "subtitle": "Kies er één als je vastloopt",
+            "items": []
+          },
+          {
+            "type": "wordbank",
+            "title": "Ontwerpwoorden",
+            "subtitle": "Gebruik deze woorden bij het kijken",
             "items": [
-              "Denk 30 seconden na: welke drie dingen passen bij jou?",
-              "Bespreek je keuzes met je buur.",
-              "Kies één idee dat je echt op je voorkant wilt gebruiken."
+              "Herhaling: iets komt bewust terug",
+              "Contrast: iets valt op door verschil",
+              "Kader: losse onderdelen horen bij elkaar",
+              "Ruimte: leegte maakt het rustiger",
+              "Balans: de bladzijde voelt niet scheef of vol aan",
+              "Focus: één onderdeel krijgt de meeste aandacht"
             ]
           },
           {
@@ -34734,9 +34851,18 @@
             ]
           },
           {
-            "type": "bullets",
+            "type": "visual",
             "title": "Wat past bij Nederlands?",
-            "subtitle": "Ideeën voor beeld en vorm",
+            "subtitle": "Denk in beelden, woorden en tekens",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edwaert_Collier_-_Trompe_l%27%C5%93il_with_a_letter_rack_holding_newspapers%2C_letters%2C_writing_equipment_and_a_comb%2C_098l19030-b3v3g.jpg",
+            "caption": "Papier, tekst, brieven en schrijfgerei horen bij taal.",
+            "layout": "image-left"
+          },
+          {
+            "type": "bullets",
+            "title": "Beeldideeën voor Nederlands",
+            "subtitle": "Kies wat bij jouw ontwerp past",
             "items": [
               "Boeken en boekenruggen",
               "Letters en woorden",
@@ -34753,8 +34879,9 @@
             "items": [
               "Kies je richting.",
               "Maak een snelle schets.",
-              "Bepaal waar NEDERLANDS komt.",
-              "Voeg iets persoonlijks toe.",
+              "Plaats NEDERLANDS.",
+              "Voeg jezelf toe.",
+              "Voeg Nederlands toe.",
               "Werk pas daarna op je echte schrift."
             ]
           },
@@ -34769,6 +34896,15 @@
               "Bepaal waar je naam komt.",
               "Controleer of je ontwerp in evenwicht is."
             ]
+          },
+          {
+            "type": "visual",
+            "title": "Begin groot",
+            "subtitle": "Durf de hele voorkant te gebruiken",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pen-writing.jpg",
+            "caption": "Een grote keuze geeft je ontwerp meteen richting.",
+            "layout": "image-right"
           },
           {
             "type": "writing-frame",
@@ -34791,7 +34927,8 @@
               "Vindbaar: je naam en klas staan logisch",
               "Persoonlijk: er zit iets van jou in",
               "Passend: er zit iets van taal, lezen of verhalen in",
-              "Ontworpen: je gebruikt minimaal één ontwerptruc"
+              "Ontworpen: je gebruikt minimaal één ontwerptruc",
+              "Verzorgd: je hebt rustig en netjes afgewerkt"
             ]
           },
           {
@@ -34803,7 +34940,8 @@
               "Naam en klas zijn goed vindbaar.",
               "Je ziet iets persoonlijks.",
               "Je ziet iets dat bij Nederlands past.",
-              "Je hebt kleur, herhaling, formaat of een kader bewust gekozen."
+              "Je gebruikt herhaling, formaat, kleur of een kader.",
+              "Je ontwerp is niet te vol."
             ]
           },
           {
@@ -34814,9 +34952,8 @@
               "Welke ontwerptruc herken je?",
               "Welke truc kun jij vandaag gebruiken?"
             ],
-            "caption": "Open het fragment over ontwerpprincipes",
-            "source": "Envato Tuts+, The Principles of Design",
-            "video": "https://design.tutsplus.com/articles/the-principles-of-design--cms-33962"
+            "video": "https://design.tutsplus.com/articles/the-principles-of-design--cms-33962",
+            "caption": "Open het fragment over ontwerpprincipes"
           },
           {
             "type": "task",
@@ -34831,15 +34968,34 @@
             ]
           },
           {
-            "type": "task",
+            "type": "visual",
             "title": "Daarna je titelblad",
             "subtitle": "Laat je stijl terugkomen",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Writing_notes_while_using_a_laptop_at_a_desk.jpg",
+            "caption": "Je titelblad hoort bij dezelfde stijl als je voorkant.",
+            "layout": "image-left"
+          },
+          {
+            "type": "task",
+            "title": "Titelblad",
+            "subtitle": "Dit moet erop staan",
             "items": [
-              "Werk je titelblad verder uit.",
-              "Gebruik dezelfde letters, kleuren, vormen of symbolen.",
-              "Zet NETSCHRIFT NEDERLANDS duidelijk op het blad.",
-              "Voeg je naam, klas en schooljaar toe.",
-              "Controleer of alles netjes leesbaar blijft."
+              "NETSCHRIFT NEDERLANDS",
+              "Je naam",
+              "Je klas",
+              "Het schooljaar",
+              "Een stijl die past bij je voorkant"
+            ]
+          },
+          {
+            "type": "think-pair-share",
+            "title": "Galerij",
+            "subtitle": "Kijk naar keuzes, niet naar wie het mooist tekent",
+            "items": [
+              "Kijk eerst stil naar drie ontwerpen.",
+              "Bespreek met je buur één slim idee.",
+              "Deel één ontwerpkeuze die jij zelf nooit had bedacht."
             ]
           },
           {
@@ -34852,9 +35008,13 @@
             ]
           },
           {
-            "type": "title",
+            "type": "hero",
             "title": "Maak er iets bijzonders van",
-            "subtitle": "Dit is pas het begin"
+            "subtitle": "Dit is pas het begin",
+            "items": [],
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
+            "caption": "Je netschrift wordt dit jaar jouw eigen boek voor Nederlands.",
+            "layout": "image-right"
           }
         ]
       },
@@ -36382,7 +36542,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T11:21:15+02:00-studio",
+  "sourceRevision": "2026-09-06T11:21:19+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
