@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:40:21+02:00",
+  "updatedAt": "2026-09-06T16:42:52+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -8025,6 +8025,105 @@
       "note": "Geen reguliere lessen deze week: CGU-week 2."
     },
     {
+      "classId": "4",
+      "week": "35",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 1
+        },
+        {
+          "project": "Start Nederlands 4",
+          "lesson": "Les 2 - Maak het van jou",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-start-nederlands-4",
+          "presentationMarkerId": "marker-startles-4-2",
+          "sequenceIndex": 2
+        },
+        {
+          "project": "Start Nederlands 4",
+          "lesson": "Startles 1: Nederlands 4",
+          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewnotities af als dat nog niet klaar is.\nDenk alvast na over één moment waarop taal voor jou verschil maakte. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-start-nederlands-4",
+          "presentationMarkerId": "marker-startles-4-1",
+          "sequenceIndex": 1
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4",
+      "week": "39",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 9
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 1: Framing herkennen en sturen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen",
+          "sequenceIndex": 10
+        },
+        {
+          "project": "Netschrift",
+          "lesson": "Feedback-en-forward-opdracht",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-netschrift",
+          "presentationMarkerId": "marker-feedback-en-forward-opdracht",
+          "sequenceIndex": 9
+        }
+      ],
+      "items": []
+    },
+    {
+      "classId": "4",
+      "week": "43",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "homework": "leesboek en schoolpasje mee",
+          "lessonKey": "A",
+          "presentationId": "project-heel-veel-lezen",
+          "sequenceIndex": 17
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
+          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
+          "lessonKey": "B",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes",
+          "sequenceIndex": 18
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren",
+          "sequenceIndex": 17
+        }
+      ],
+      "items": []
+    },
+    {
       "classId": "4.1",
       "week": "11",
       "lessons": [
@@ -8034,14 +8133,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -8058,14 +8149,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -8082,14 +8165,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -8106,14 +8181,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -8128,14 +8195,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -8150,14 +8209,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -8175,14 +8226,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -8210,14 +8253,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -8235,14 +8270,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -8261,14 +8288,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -8287,14 +8306,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -8312,14 +8323,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -8336,14 +8339,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -8360,14 +8355,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -8384,14 +8371,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -8414,14 +8393,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -8438,12 +8409,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -8472,12 +8453,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -8496,12 +8487,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -8518,12 +8519,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -8540,11 +8551,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -8564,11 +8586,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -8583,13 +8616,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -8604,13 +8630,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -8627,13 +8646,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -8648,13 +8660,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -8669,14 +8674,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -8695,13 +8692,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -8716,13 +8706,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -8746,14 +8729,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -8770,14 +8745,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -8794,14 +8761,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -8818,14 +8777,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -8840,14 +8791,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -8862,14 +8805,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -8887,14 +8822,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -8922,14 +8849,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -8947,14 +8866,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -8973,14 +8884,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -8999,14 +8902,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -9024,14 +8919,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -9048,14 +8935,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -9072,14 +8951,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -9096,14 +8967,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -9126,14 +8989,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -9150,12 +9005,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewnotities af als dat nog niet klaar is.\nDenk alvast na over één moment waarop taal voor jou verschil maakte. netschrift en pen mee",
+          "project": "Persoonlijkheid",
+          "lesson": "Les 2: Big Five",
+          "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-persoonlijkheid",
+          "presentationMarkerId": "marker-les-2-big-five",
+          "sequenceIndex": 4
+        },
+        {
+          "project": "Persoonlijkheid",
+          "lesson": "Les 1: Persoonlijkheid",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-persoonlijkheid",
+          "presentationMarkerId": "marker-les-1-persoonlijkheid",
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -9175,12 +9040,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -9209,12 +9084,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -9233,12 +9118,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -9255,12 +9150,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -9277,11 +9182,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -9301,11 +9217,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -9320,13 +9247,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -9341,13 +9261,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -9364,13 +9277,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -9385,13 +9291,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -9406,14 +9305,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -9432,13 +9323,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -9453,13 +9337,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -9483,14 +9360,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -9507,14 +9376,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -9531,14 +9392,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -9555,14 +9408,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -9577,14 +9422,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -9599,14 +9436,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -9624,14 +9453,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -9659,14 +9480,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -9684,14 +9497,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -9710,14 +9515,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -9736,14 +9533,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -9761,14 +9550,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -9785,14 +9566,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -9809,14 +9582,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -9833,14 +9598,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -9863,14 +9620,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -9887,12 +9636,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -9921,12 +9680,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -9945,12 +9714,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -9967,12 +9746,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -9989,11 +9778,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -10013,11 +9813,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -10032,13 +9843,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10053,13 +9857,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -10076,13 +9873,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10097,13 +9887,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10118,14 +9901,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -10144,13 +9919,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10165,13 +9933,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10195,14 +9956,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -10219,14 +9972,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -10243,14 +9988,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -10267,14 +10004,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -10289,14 +10018,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -10311,14 +10032,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -10336,14 +10049,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -10371,14 +10076,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -10396,14 +10093,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -10422,14 +10111,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -10448,14 +10129,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -10473,14 +10146,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -10497,14 +10162,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -10521,14 +10178,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -10545,14 +10194,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -10575,14 +10216,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -10599,12 +10232,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -10625,20 +10268,21 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
+          "project": "Renaissance",
+          "lesson": "",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-persoonlijkheid",
-          "presentationMarkerId": "marker-les-1-persoonlijkheid"
+          "presentationId": "renaissance-item",
+          "sequenceIndex": 8
         },
         {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 2: Big Five",
+          "project": "Renaissance",
+          "lesson": "Overzichtspresentatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-persoonlijkheid",
-          "presentationMarkerId": "marker-les-2-big-five"
+          "presentationId": "project-renaissance",
+          "presentationMarkerId": "marker-overzichtspresentatie",
+          "sequenceIndex": 7
         }
       ],
       "items": [
@@ -10666,12 +10310,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -10690,12 +10344,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -10712,12 +10376,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -10734,11 +10408,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -10758,11 +10443,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -10777,13 +10473,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10798,13 +10487,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -10821,13 +10503,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10842,13 +10517,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10863,14 +10531,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -10889,13 +10549,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10910,13 +10563,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -10940,14 +10586,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -10964,14 +10602,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -10988,14 +10618,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -11012,14 +10634,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -11034,14 +10648,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -11056,14 +10662,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -11081,14 +10679,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -11116,14 +10706,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -11141,14 +10723,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -11167,14 +10741,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -11193,14 +10759,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -11218,14 +10776,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -11242,14 +10792,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -11266,14 +10808,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -11290,14 +10824,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -11320,14 +10846,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -11344,12 +10862,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -11370,20 +10898,21 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
+          "project": "Renaissance",
+          "lesson": "",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-persoonlijkheid",
-          "presentationMarkerId": "marker-les-1-persoonlijkheid"
+          "presentationId": "renaissance-item",
+          "sequenceIndex": 8
         },
         {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 2: Big Five",
+          "project": "Renaissance",
+          "lesson": "Overzichtspresentatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "C",
-          "presentationId": "project-persoonlijkheid",
-          "presentationMarkerId": "marker-les-2-big-five"
+          "presentationId": "project-renaissance",
+          "presentationMarkerId": "marker-overzichtspresentatie",
+          "sequenceIndex": 7
         }
       ],
       "items": [
@@ -11411,12 +10940,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -11435,12 +10974,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -11457,12 +11006,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -11479,11 +11038,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -11503,11 +11073,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -11522,13 +11103,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -11543,13 +11117,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -11566,13 +11133,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -11587,13 +11147,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -11608,14 +11161,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -11634,13 +11179,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -11655,13 +11193,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -11685,14 +11216,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 1: Framing herkennen en sturen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-1-framing-herkennen-en-sturen"
         }
       ],
       "items": [
@@ -11709,14 +11232,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen"
         }
       ],
       "items": [
@@ -11733,14 +11248,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 3: Populisme, media en volkswil",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil"
         }
       ],
       "items": [
@@ -11757,14 +11264,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -11779,14 +11278,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw"
         }
       ],
       "items": []
@@ -11801,14 +11292,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie"
         }
       ],
       "items": [
@@ -11826,14 +11309,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief"
         }
       ],
       "items": [
@@ -11861,14 +11336,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop"
         }
       ],
       "items": [
@@ -11886,14 +11353,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Invloed",
-          "lesson": "Invloed 8: Toetsmodus blok 2 afronden en inleveren",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-invloed",
-          "presentationMarkerId": "marker-invloed-8-toetsmodus-blok-2-afronden-en-inleveren"
         }
       ],
       "items": [
@@ -11912,14 +11371,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 1: Projectstart, ideeen en groepjes",
-          "homework": "Kies je project en expert. De expert is volwassen en deskundig op jouw onderwerp; leg deze eerste week contact. Noteer in je netschrift je productidee, doelgroep, expert en twee talenten. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-1-projectstart-ideeen-en-groepjes"
         }
       ],
       "items": [
@@ -11938,14 +11389,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
-          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning"
         }
       ],
       "items": [
@@ -11963,14 +11406,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 3: Werkles en feedbackronde",
-          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde"
         }
       ],
       "items": [
@@ -11987,14 +11422,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": [
@@ -12011,14 +11438,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": [
@@ -12035,14 +11454,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 4: Werkles en tussenstand",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand"
         }
       ],
       "items": []
@@ -12065,14 +11476,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Taalmakers",
-          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-taalmakers",
-          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie"
         }
       ],
       "items": []
@@ -12089,12 +11492,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Start Nederlands 4",
-          "lesson": "Startles 1: Nederlands 4",
+          "project": "Technologie",
+          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-start-nederlands-4",
-          "presentationMarkerId": "marker-startles-4-1"
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie",
+          "sequenceIndex": 6
+        },
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "sequenceIndex": 5
         }
       ],
       "items": [
@@ -12123,12 +11536,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 1: Ik en technologie",
+          "project": "Invloed",
+          "lesson": "Invloed 3: Populisme, media en volkswil",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-1-ik-en-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-3-populisme-media-en-volkswil",
+          "sequenceIndex": 12
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 2: Complottheorieen en wantrouwen lezen",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-2-complottheorieen-en-wantrouwen-lezen",
+          "sequenceIndex": 11
         }
       ],
       "items": [
@@ -12147,12 +11570,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Technologie",
-          "lesson": "Les 3: Hoe verhoud jij je tot technologie?",
+          "project": "Invloed",
+          "lesson": "Invloed 5: Kleine woordjes en subtiele manipulatie",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-technologie",
-          "presentationMarkerId": "marker-les-3-hoe-verhoud-jij-je-tot-technologie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-5-kleine-woordjes-en-subtiele-manipulatie",
+          "sequenceIndex": 14
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 4: Drogredenen, denkfouten en complotbouw",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-4-drogredenen-denkfouten-en-complotbouw",
+          "sequenceIndex": 13
         }
       ],
       "items": []
@@ -12169,12 +11602,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "Overzichtspresentatie",
+          "project": "Invloed",
+          "lesson": "Invloed 7: Toetsmodus blok 1 op laptop",
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "project-renaissance",
-          "presentationMarkerId": "marker-overzichtspresentatie"
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-7-toetsmodus-blok-1-op-laptop",
+          "sequenceIndex": 16
+        },
+        {
+          "project": "Invloed",
+          "lesson": "Invloed 6: Schrijfplan, frame en spiekbrief",
+          "homework": "netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-invloed",
+          "presentationMarkerId": "marker-invloed-6-schrijfplan-frame-en-spiekbrief",
+          "sequenceIndex": 15
         }
       ],
       "items": []
@@ -12191,11 +11634,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 3: Werkles en feedbackronde",
+          "homework": "Werk zichtbaar verder aan je taalproduct en neem mee wat je nodig hebt voor feedback op je tussenstand. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-3-werkles-en-feedbackronde",
+          "sequenceIndex": 20
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 2: Projectvoorstel, leerdoelen en planning",
+          "homework": "Werk je projectvoorstel volledig uit in je netschrift: wie, wat, voor wie, waarom, talenten, expert en planning. Noteer ook wanneer je expert feedback/beoordeling geeft. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-2-projectvoorstel-leerdoelen-en-planning",
+          "sequenceIndex": 19
         }
       ],
       "items": [
@@ -12215,11 +11669,22 @@
           "presentationId": "project-heel-veel-lezen"
         },
         {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 5: Presenteren, gastenboek en reflectie",
+          "homework": "Neem je taalproduct, naamkaartje en gastenboek mee; zorg dat de expertbeoordeling en je eigen reflectie in je netschrift staan. netschrift en pen mee",
           "lessonKey": "B",
-          "presentationId": "renaissance-item"
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-5-presenteren-gastenboek-en-reflectie",
+          "sequenceIndex": 22
+        },
+        {
+          "project": "Taalmakers",
+          "lesson": "Taalmakers 4: Werkles en tussenstand",
+          "homework": "Zorg dat je product bijna toonbaar is en regel dat je volwassen, deskundige expert je product kan beoordelen. Die beoordeling moet in je netschrift komen. netschrift en pen mee",
+          "lessonKey": "C",
+          "presentationId": "project-taalmakers",
+          "presentationMarkerId": "marker-taalmakers-4-werkles-en-tussenstand",
+          "sequenceIndex": 21
         }
       ],
       "items": []
@@ -12234,13 +11699,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -12255,13 +11713,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": [
@@ -12278,13 +11729,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -12299,13 +11743,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -12320,14 +11757,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Netschrift",
-          "lesson": "Feedback-en-forward-opdracht",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "project-netschrift",
-          "presentationMarkerId": "marker-feedback-en-forward-opdracht"
         }
       ],
       "items": [
@@ -12346,13 +11775,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -12367,13 +11789,6 @@
           "homework": "leesboek en schoolpasje mee",
           "lessonKey": "A",
           "presentationId": "project-heel-veel-lezen"
-        },
-        {
-          "project": "Renaissance",
-          "lesson": "",
-          "homework": "netschrift en pen mee",
-          "lessonKey": "B",
-          "presentationId": "renaissance-item"
         }
       ],
       "items": []
@@ -13847,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:40:21+02:00",
+  "sourceRevision": "2026-09-06T16:42:52+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
