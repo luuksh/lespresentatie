@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:11:00+02:00",
+  "updatedAt": "2026-09-06T16:11:25+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3840,7 +3840,8 @@
           "assessment": "",
           "teacherNote": "",
           "progressByClass": {
-            "1D": "done"
+            "1D": "done",
+            "1C": "done"
           }
         },
         {
@@ -3881,7 +3882,8 @@
           "assessment": "",
           "teacherNote": "",
           "progressByClass": {
-            "1D": "done"
+            "1D": "done",
+            "1C": "done"
           }
         },
         {
@@ -34690,7 +34692,8 @@
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
-              "1D": "done"
+              "1D": "done",
+              "1C": "done"
             }
           },
           "homework": {
@@ -36145,7 +36148,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:11:00+02:00-studio",
+  "sourceRevision": "2026-09-06T16:11:25+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
