@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T12:17:36+02:00",
+  "updatedAt": "2026-09-06T12:18:30+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T12:17:36+02:00",
+  "sourceRevision": "2026-09-06T12:18:30+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -42006,7 +42006,10 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
-            "teacherNote": ""
+            "teacherNote": "",
+            "progressByClass": {
+              "1D": "done"
+            }
           },
           "homework": {
             "items": [
