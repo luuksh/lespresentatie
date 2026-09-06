@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T09:47:41+02:00",
+  "updatedAt": "2026-09-06T09:48:04+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -1258,7 +1258,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
@@ -1820,7 +1820,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T09:47:41+02:00",
+  "sourceRevision": "2026-09-06T09:48:04+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41763,7 +41763,7 @@
           },
           "planning": {
             "lesson": "Les 1 - Welkom bij Nederlands",
-            "homework": "netschrift en pen mee",
+            "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
