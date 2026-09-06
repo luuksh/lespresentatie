@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:06:58+02:00",
+  "updatedAt": "2026-09-06T16:01:46+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -2572,9 +2572,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2611,9 +2609,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2650,9 +2646,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2689,9 +2683,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2728,9 +2720,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2767,9 +2757,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -2806,9 +2794,7 @@
           "lessonKey": "C",
           "presentationId": "project-droomschool",
           "presentationMarkerId": "marker-les-1-intro",
-          "sequenceIndex": 3,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 3
         }
       ],
       "items": [
@@ -3852,10 +3838,7 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": "",
-          "progressByClass": {
-            "1D": "done"
-          }
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -3873,9 +3856,7 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 2
         }
       ],
       "items": []
@@ -3893,10 +3874,7 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": "",
-          "progressByClass": {
-            "1D": "done"
-          }
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -3914,9 +3892,7 @@
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "sequenceIndex": 2,
-          "assessment": "",
-          "teacherNote": ""
+          "sequenceIndex": 2
         }
       ],
       "items": []
@@ -19138,227 +19114,12 @@
         },
         {
           "type": "bullets",
-          "title": "Les 1 – Wat kan beter op school?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Projectstart: Verbeter het CGU"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Waarom dit project?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Jij kunt als leerling het CGU echt verbeteren!",
-            "We werken in teams en eindigen met een échte pitch.",
-            "Het winnende idee voeren we ook echt uit!",
-            "Vandaag: wat zou jij willen veranderen?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Vorm teams van 3 à 4 leerlingen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zorg voor een gevarieerde groep (diverse kwaliteiten).",
-            "Iedereen krijgt later een rol: onderzoeker, schrijver, presentator, enz.",
-            "Schrijf je groepsleden op in je schrift."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Brainstorm – Wat kan beter op het CGU?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Denk aan thema’s: sfeer, pauzes, lessen, lokalen, duurzaamheid…",
-            "Bedenk minstens 5 ideeën per groepje.",
-            "Schrijf ze duidelijk op groot papier of digitaal.",
-            "Klaar? Hang op of lever in bij docent."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Kies je Top 3",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Welke drie ideeën zijn het sterkst?",
-            "Denk aan:",
-            "Is het haalbaar op korte termijn?",
-            "Is het echt een verbetering voor de school?",
-            "Is het uitvoerbaar voor jullie groepje?",
-            "Bespreek in de groep en maak een top 3."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Deel je ideeën met de klas",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ieder groepje noemt hun 3 ideeën.",
-            "Docent verzamelt alle ideeën op het bord.",
-            "Herken je ideeën van andere groepjes?",
-            "Vraag om uitleg bij onduidelijke voorstellen."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Kies één idee per groep",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Dit idee ga je in de volgende lessen uitwerken.",
-            "Noteer jullie keuze + motivatie.",
-            "Lever dit schriftelijk in (kort verslagje).",
-            "Vanaf volgende les: realiteitscheck!"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Voorbereiding voor volgende keer",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
           "title": "Les 3 Projectplan schrijven",
           "subtitle": "",
           "showProjectLogo": false,
           "items": [
             "Van idee naar plan: hoe voeren we het écht uit?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "bullets",
@@ -19369,21 +19130,7 @@
             "Een concreet uitvoeringsplan opstellen",
             "Duidelijke stappen, verantwoordelijkheden en planning",
             "Obstakels voorzien en oplossingen bedenken"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "bullets",
@@ -19397,21 +19144,7 @@
             "Wie doet wat?",
             "Wat hebben we nodig?",
             "Wat zijn mogelijke obstakels en oplossingen?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "bullets",
@@ -19423,21 +19156,7 @@
             "Werk nauwkeurig en volledig",
             "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
             "Maak je plan duidelijk en concreet"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "bullets",
@@ -19452,21 +19171,7 @@
             "Originaliteit",
             "Volledigheid",
             "Geef tips + tops terug aan elkaar"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "bullets",
@@ -19477,650 +19182,108 @@
             "Verwerk de feedback in je eigen plan",
             "Check nog eens de onderdelen van het plan",
             "Lever de definitieve versie digitaal of op papier in"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          ]
         },
         {
           "type": "title",
           "title": "Volgende les: schrijf je pitch!",
           "subtitle": "",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          "items": []
+        },
+        {
+          "type": "bullets",
+          "title": "Les 1 – Wat kan beter op school?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Projectstart: Verbeter het CGU"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Waarom dit project?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Jij kunt als leerling het CGU echt verbeteren!",
+            "We werken in teams en eindigen met een échte pitch.",
+            "Het winnende idee voeren we ook echt uit!",
+            "Vandaag: wat zou jij willen veranderen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Vorm teams van 3 à 4 leerlingen",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Zorg voor een gevarieerde groep (diverse kwaliteiten).",
+            "Iedereen krijgt later een rol: onderzoeker, schrijver, presentator, enz.",
+            "Schrijf je groepsleden op in je schrift."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Brainstorm – Wat kan beter op het CGU?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Denk aan thema’s: sfeer, pauzes, lessen, lokalen, duurzaamheid…",
+            "Bedenk minstens 5 ideeën per groepje.",
+            "Schrijf ze duidelijk op groot papier of digitaal.",
+            "Klaar? Hang op of lever in bij docent."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies je Top 3",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Welke drie ideeën zijn het sterkst?",
+            "Denk aan:",
+            "Is het haalbaar op korte termijn?",
+            "Is het echt een verbetering voor de school?",
+            "Is het uitvoerbaar voor jullie groepje?",
+            "Bespreek in de groep en maak een top 3."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Deel je ideeën met de klas",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Ieder groepje noemt hun 3 ideeën.",
+            "Docent verzamelt alle ideeën op het bord.",
+            "Herken je ideeën van andere groepjes?",
+            "Vraag om uitleg bij onduidelijke voorstellen."
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Kies één idee per groep",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Dit idee ga je in de volgende lessen uitwerken.",
+            "Noteer jullie keuze + motivatie.",
+            "Lever dit schriftelijk in (kort verslagje).",
+            "Vanaf volgende les: realiteitscheck!"
+          ]
         },
         {
           "type": "title",
-          "title": "Droomschool: verbeter het CGU",
+          "title": "Voorbereiding voor volgende keer",
           "subtitle": "",
           "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Concretiseer: werk je plan uit",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wie, wat, waar, hoe, wanneer, hoe lang?",
-            "Wat is ervoor nodig?",
-            "Hoeveel zou het kosten?",
-            "Daarna:",
-            "Wie zou je hiervoor kunnen spreken?",
-            "Wie kan jullie verder helpen?",
-            "Hoe kunnen jullie contact leggen?",
-            "Daarna:",
-            "Wat is nu jullie eerste stap om meer informatie te verzamelen?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Haalbaar?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Les 4 Projectbeschrijving schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Vertel helder wat jullie willen verbeteren en waarom"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat leer je vandaag?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Jullie project helder en overtuigend opschrijven",
-            "Leren hoe je anderen enthousiast maakt met tekst",
-            "Een tekst maken die geschikt is voor de jury én voor op papier of online"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat moet erin staan?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Titel van het project",
-            "Inleiding Wat is het probleem op school?",
-            "Ons idee Wat gaan wij doen?",
-            "Waarom dit idee? Motiveer je keuze",
-            "Hoe werkt het? Leg praktisch uit wat je gaat doen",
-            "Slot Waarom moet dit gekozen worden?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Aan de slag!",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik pen/papier of een laptop",
-            "Werk samen aan één tekst, maar met ieders input",
-            "Let op: schrijf helder, overtuigend en zonder spelfouten",
-            "Gebruik de feedback uit vorige lessen"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Klasgenoot = redacteur",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wissel teksten uit met een ander groepje",
-            "Lees kritisch en geef feedback op:",
-            "Begrijpelijkheid",
-            "Overtuigingskracht",
-            "Taalgebruik",
-            "Logische opbouw",
-            "Pas je tekst daarna aan"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Definitieve versie inleveren",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Zet je namen en klas erbij",
-            "Lever de tekst in als Word/PDF (digitaal) of print",
-            "Deze tekst gebruiken jullie bij de pitch én in de projectpresentatie"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Volgende les: de pitch voorbereiden!",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Les 5 – Pitch voorbereiden en oefenen",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Overtuig de jury met jullie idee!"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat leer je vandaag?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een korte en krachtige pitch maken",
-            "Spreekvaardigheid en presentatievaardigheden oefenen",
-            "Gebruik van ondersteunende middelen plannen"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat is een goede pitch?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Kort (max. 2 minuten)",
-            "Enthousiast en overtuigend gebracht",
-            "Iedereen van de groep doet mee",
-            "Helder: wat is het probleem, jullie idee en waarom dat goed is",
-            "Mag ondersteund worden met beeld, voorwerpen of PowerPoint"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Stap 1 – Schrijf samen je pitch",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik de projectbeschrijving als basis",
-            "Maak de tekst levendig, helder en actief",
-            "Verdeel wie welk deel zegt (iedereen spreekt!)",
-            "Oefen het hardop en pas aan waar nodig"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Stap 2 – Oefenen, oefenen, oefenen!",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Oefen minstens drie keer hardop",
-            "Let op stemgebruik, oogcontact, lichaamstaal",
-            "Vraag een ander groepje om jullie feedback te geven",
-            "Probeer het met en zonder hulpmiddelen"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Stap 3 – Verbeteren met feedback",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Pas tekst en uitvoering aan op basis van tips",
-            "Zorg dat timing goed is (max. 2 minuten!)",
-            "Check of je hulpmiddelen werken (beelden, materialen, slides)"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Voorbereiden op de pitchdag",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Les 6 Presentatie aan de jury & evaluatie",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Tijd om te schitteren!"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Wat gaan we doen?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Jullie project presenteren aan de jury",
-            "Ervaren hoe het is om een echt idee te verdedigen",
-            "Reflecteren op het project: wat ging goed, wat kan beter?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Hoe werkt de jurering?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Elke groep krijgt 2 minuten voor de pitch",
-            "Daarna 2 minuten voor vragen van de jury",
-            "De jury beoordeelt op:",
-            "Originaliteit",
-            "Haalbaarheid",
-            "Overtuigingskracht",
-            "Samenwerking"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Laatste check voor je groep",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Is iedereen aanwezig en voorbereid?",
-            "Heb je je hulpmiddelen bij je?",
-            "Kun je alle tekst zonder briefje?",
-            "Wees ontspannen je kent je project!"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Reflectie Succesmomenten",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat ging goed in het project?",
-            "Waar zijn jullie trots op?",
-            "Welke rol paste goed bij jou?",
-            "Wat hebben jullie goed opgelost als groep?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "bullets",
-          "title": "Reflectie Verbeterpunten",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Wat liep niet zo soepel?",
-            "Waar zou je volgende keer anders beginnen?",
-            "Wat heb je geleerd over samenwerken?",
-            "Wat neem je mee naar een volgend project?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Bedankt voor jullie inzet!",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
+          "items": []
         }
       ],
       "markers": {
-        "marker-les-1-intro": 1,
-        "marker-les-3-projectplan": 9,
-        "marker-les-2-realiteitscheck": 16,
-        "marker-les-4-projectbeschrijving": 19,
-        "marker-les-5-pitch-voorbereiden": 26,
-        "marker-les-6-presentaties-reflectie": 33
+        "marker-les-3-projectplan": 1,
+        "marker-les-1-intro": 8
       },
       "lessonMeta": {
         "marker-les-1-intro": {
@@ -35054,10 +34217,7 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
-            "teacherNote": "",
-            "progressByClass": {
-              "1D": "done"
-            }
+            "teacherNote": ""
           },
           "homework": {
             "items": [
@@ -36508,7 +35668,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T14:06:58+02:00-studio",
+  "sourceRevision": "2026-09-06T16:01:46+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,

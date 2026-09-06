@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:06:58+02:00",
+  "updatedAt": "2026-09-06T16:01:46+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T14:06:58+02:00",
+  "sourceRevision": "2026-09-06T16:01:46+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -27114,6 +27114,85 @@
         },
         {
           "type": "bullets",
+          "title": "Les 3 Projectplan schrijven",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Van idee naar plan: hoe voeren we het écht uit?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Wat leer je vandaag?",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Een concreet uitvoeringsplan opstellen",
+            "Duidelijke stappen, verantwoordelijkheden en planning",
+            "Obstakels voorzien en oplossingen bedenken"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Een goed projectplan bevat:",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Probleem en doel",
+            "Oplossing (jullie idee)",
+            "Stappenplan / tijdlijn",
+            "Wie doet wat?",
+            "Wat hebben we nodig?",
+            "Wat zijn mogelijke obstakels en oplossingen?"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Aan de slag: invullen projectplan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Gebruik het werkblad of digitaal formulier",
+            "Werk nauwkeurig en volledig",
+            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
+            "Maak je plan duidelijk en concreet"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Tussentijdse feedback",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Ruil je plan met een ander groepje",
+            "Beoordeel elkaars plan op:",
+            "Duidelijkheid",
+            "Realisme",
+            "Originaliteit",
+            "Volledigheid",
+            "Geef tips + tops terug aan elkaar"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Werk feedback in je plan",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": [
+            "Verwerk de feedback in je eigen plan",
+            "Check nog eens de onderdelen van het plan",
+            "Lever de definitieve versie digitaal of op papier in"
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Volgende les: schrijf je pitch!",
+          "subtitle": "",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "bullets",
           "title": "Les 1 – Wat kan beter op school?",
           "subtitle": "",
           "showProjectLogo": false,
@@ -27197,85 +27276,6 @@
         {
           "type": "title",
           "title": "Voorbereiding voor volgende keer",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "bullets",
-          "title": "Les 3 Projectplan schrijven",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Van idee naar plan: hoe voeren we het écht uit?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Wat leer je vandaag?",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Een concreet uitvoeringsplan opstellen",
-            "Duidelijke stappen, verantwoordelijkheden en planning",
-            "Obstakels voorzien en oplossingen bedenken"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Een goed projectplan bevat:",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Probleem en doel",
-            "Oplossing (jullie idee)",
-            "Stappenplan / tijdlijn",
-            "Wie doet wat?",
-            "Wat hebben we nodig?",
-            "Wat zijn mogelijke obstakels en oplossingen?"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Aan de slag: invullen projectplan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Gebruik het werkblad of digitaal formulier",
-            "Werk nauwkeurig en volledig",
-            "Denk praktisch: hoe zou dit écht kunnen gebeuren?",
-            "Maak je plan duidelijk en concreet"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Tussentijdse feedback",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Ruil je plan met een ander groepje",
-            "Beoordeel elkaars plan op:",
-            "Duidelijkheid",
-            "Realisme",
-            "Originaliteit",
-            "Volledigheid",
-            "Geef tips + tops terug aan elkaar"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Werk feedback in je plan",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Verwerk de feedback in je eigen plan",
-            "Check nog eens de onderdelen van het plan",
-            "Lever de definitieve versie digitaal of op papier in"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Volgende les: schrijf je pitch!",
           "subtitle": "",
           "showProjectLogo": false,
           "items": []
@@ -27545,8 +27545,8 @@
         }
       ],
       "markers": {
-        "marker-les-1-intro": 1,
-        "marker-les-3-projectplan": 9,
+        "marker-les-3-projectplan": 1,
+        "marker-les-1-intro": 8,
         "marker-les-2-realiteitscheck": 16,
         "marker-les-4-projectbeschrijving": 19,
         "marker-les-5-pitch-voorbereiden": 26,
@@ -42006,10 +42006,7 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
-            "teacherNote": "",
-            "progressByClass": {
-              "1D": "done"
-            }
+            "teacherNote": ""
           },
           "homework": {
             "items": [

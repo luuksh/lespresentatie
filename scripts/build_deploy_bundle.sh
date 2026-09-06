@@ -35,7 +35,10 @@ internal_items=(
   "css"
   "js"
   "lesdocs"
-  "data"
+  "data/jaarplanning"
+  "data/kalender"
+  "data/kerndoelen"
+  "data/planning-rules.json"
   "intern"
   "l"
 )
