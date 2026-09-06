@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:00:36.024Z",
+  "updatedAt": "2026-09-06T14:05:27.617Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -86,7 +86,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
@@ -330,7 +330,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
