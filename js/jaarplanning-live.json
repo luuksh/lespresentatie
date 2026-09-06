@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:35:12+02:00",
+  "updatedAt": "2026-09-06T16:38:36+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:35:12+02:00",
+  "sourceRevision": "2026-09-06T16:38:36+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -44169,6 +44169,17 @@
             "skills": [],
             "kerndoelen": [],
             "subkerndoelen": []
+          },
+          "homework": {
+            "items": [
+              "netschrift en pen mee"
+            ]
+          },
+          "planning": {
+            "lesson": "Startles 1: Nederlands 4",
+            "homework": "netschrift en pen mee",
+            "assessment": "",
+            "teacherNote": ""
           }
         },
         "marker-startles-4-2": {
