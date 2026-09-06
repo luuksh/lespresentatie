@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T05:58:32.641Z",
+  "updatedAt": "2026-09-06T05:58:35.662Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -21,7 +21,7 @@
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
-          "lessonKey": "B",
+          "lessonKey": "A",
           "classId": "G3F",
           "scheduledDate": "2026-09-07T07:00:00.000Z"
         }
@@ -55,7 +55,7 @@
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
-          "lessonKey": "B",
+          "lessonKey": "A",
           "classId": "G3C",
           "scheduledDate": "2026-09-07T07:45:00.000Z"
         }
@@ -81,14 +81,14 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "datumprojectie",
+      "source": "docentplatform",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Les 2 - Maak het van jou",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
           "lessonKey": "A",
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
@@ -126,11 +126,9 @@
       ],
       "items": [
         "Start Nederlands 4: beoordeling kort neerzetten, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
-        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
-        "Geen les volgens schoolagenda: 01-09.",
-        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
+        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden."
       ],
-      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project. | Eerste startles jaarlaag 4 staat op vrijdag 4 september; week 37 vervolgt met startles 2 en Leesmeters op het vaste leesmoment."
+      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G4C|2026-09-07T11:35:00.000Z|2026-09-07T12:20:00.000Z",
@@ -330,15 +328,15 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "datumprojectie",
+      "source": "docentplatform",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
-          "lessonKey": "C",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
+          "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-08T12:40:00.000Z"
         }
@@ -551,11 +549,11 @@
       "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Persoonlijkheid",
-          "lesson": "Les 1: Persoonlijkheid",
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-persoonlijkheid",
-          "presentationMarkerId": "marker-les-1-persoonlijkheid",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
           "lessonKey": "B",
           "classId": "G4B",
           "scheduledDate": "2026-09-11T07:00:00.000Z"
@@ -566,7 +564,7 @@
         "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
         "Overzichtspresentatie"
       ],
-      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project. | Persoonlijkheid schuift een week op doordat week 37 de algemene startlessen Nederlands 4 bevat."
+      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G3B|2026-09-11T08:50:00.000Z|2026-09-11T09:35:00.000Z",
