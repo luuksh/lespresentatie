@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T09:51:01+02:00",
+  "updatedAt": "2026-09-06T09:52:53+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3832,14 +3832,16 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "progressByClass": {
             "1D": "done"
-          }
+          },
+          "assessment": "",
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -3871,14 +3873,16 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "progressByClass": {
             "1D": "done"
-          }
+          },
+          "assessment": "",
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -33350,7 +33354,7 @@
           },
           "planning": {
             "lesson": "Les 1 - Welkom bij Nederlands",
-            "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+            "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
@@ -34806,7 +34810,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T09:51:01+02:00-studio",
+  "sourceRevision": "2026-09-06T09:52:53+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
