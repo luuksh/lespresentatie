@@ -42,17 +42,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     '2026-09-02': STARTWEEK_PLANNING_WEEK,
     '2026-09-03': STARTWEEK_PLANNING_WEEK,
   });
-  const CURRENT_PROGRESS_ANCHORS = [
-    { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
-    { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
-    { grade: '3', project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-22' },
-    { classIds: ['G4D', '4G4', '4.4'], project: 'Taalmakers', lessonNumber: 1, anchorDate: '2026-05-29' },
-    { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
-  ];
-  const READING_LESSON_EXCEPTIONS = [
-    { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
-    { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
-  ];
+  const CURRENT_PROGRESS_ANCHORS = [];
+  const READING_LESSON_EXCEPTIONS = [];
   const FIXED_READING_MOMENTS = {
     G1C: { day: 4, start: '12:50' },
     G1D: { day: 4, start: '10:50' },
@@ -840,6 +831,57 @@ document.addEventListener('DOMContentLoaded', async () => {
         && Number(exception.lessonNumber) === lessonNumber
         && classIds.some((value) => classIdMatch(classId, value));
     });
+  }
+
+  function projectAgendaEntriesForClass(classId) {
+    const normalizedClass = normalizeClassId(classId);
+    if (!normalizedClass) return [];
+    return agendaEntriesForClass(agendaEntries, normalizedClass)
+      .filter((entry) => (
+        entry?.start
+        && entry?.end
+        && !isStandardReadingDay(entry)
+        && !isReadingLessonException(normalizedClass, entry)
+      ))
+      .sort((left, right) => left.start - right.start);
+  }
+
+  function projectAgendaIndexForEntry(classId, agendaEntry) {
+    const key = agendaEntryKey(agendaEntry);
+    if (!key) return -1;
+    return projectAgendaEntriesForClass(classId)
+      .findIndex((entry) => agendaEntryKey(entry) === key || isSameAgendaEntry(entry, agendaEntry));
+  }
+
+  function dateProjectedPlanningForAgendaEntry(entry, weekData = null) {
+    if (!entry) return null;
+    const classId = normalizeClassId(entry.classId);
+    if (isStandardReadingDay(entry) || isReadingLessonException(classId, entry)) {
+      const readingPlan = standardReadingPlanning();
+      return {
+        ...readingPlan,
+        weekData: mergePlanEntries(weekData, readingPlan.weekData),
+        lessonIndex: lessonNumberForWeek(agendaEntries, entry),
+        isDateProjected: true,
+      };
+    }
+
+    const projectIndex = projectAgendaIndexForEntry(classId, entry);
+    if (projectIndex < 0) return null;
+
+    const orderedLessons = getOrderedPlanningLessonsForClass(classId);
+    const match = orderedLessons[projectIndex] || null;
+    if (!match?.lesson) return null;
+
+    const mergedWeekData = mergePlanEntries(weekData, match.weekData);
+    return {
+      weekKey: match.weekKey,
+      weekData: mergedWeekData,
+      lesson: match.lesson,
+      lessons: [match.lesson],
+      lessonIndex: lessonNumberForWeek(agendaEntries, entry),
+      isDateProjected: true,
+    };
   }
 
   function anchorAgendaOffset(classId, anchor, agendaEntry) {
@@ -1825,11 +1867,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function availableLessonsForAgendaEntry(entry) {
     const classId = normalizeClassId(entry?.classId || '');
+    const projectedPlan = dateProjectedPlanningForAgendaEntry(entry, planningWeekDataForEntry(entry).weekData);
+    const projectedProject = String(projectedPlan?.lesson?.project || '').trim();
     const anchorProject = String(getCurrentProgressAnchor(classId)?.project || '').trim();
     const fallbackProject = (planningWeekDataForEntry(entry).weekData.lessons || [])
       .map((lesson) => String(lesson?.project || '').trim())
       .find((project) => project && !isReadingProjectName(project)) || '';
-    const currentProject = anchorProject || fallbackProject;
+    const currentProject = projectedProject || anchorProject || fallbackProject;
     const currentProjectKey = normalizedProjectName(currentProject);
     const options = [];
     const seen = new Set();
@@ -2157,8 +2201,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function mergeStudioPreferRicherBase(baseDoc, localDoc) {
-    const base = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(baseDoc)));
-    const local = ensureProjectOverviewPresentations(collapseToYearLayerDoc(normalizeStudioDoc(localDoc)));
+    const base = ensureProjectOverviewPresentations(normalizeStudioDoc(baseDoc));
+    const local = ensureProjectOverviewPresentations(normalizeStudioDoc(localDoc));
     const merged = normalizeStudioDoc(local);
     if (Array.isArray(base.entries) && base.entries.length) merged.entries = structuredClone(base.entries);
     if (Array.isArray(base.holidays)) merged.holidays = structuredClone(base.holidays);
@@ -2212,7 +2256,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         merged.presentations[deckId] = structuredClone(localPres);
       }
     }
-    return ensureProjectOverviewPresentations(collapseToYearLayerDoc(merged));
+    return ensureProjectOverviewPresentations(merged);
   }
 
   function loadPlanningStudioFromStorage() {
@@ -2246,7 +2290,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function rebuildPlanningFromStudio() {
-    const doc = ensureProjectOverviewPresentations(collapseToYearLayerDoc(planningStudio || {}));
+    const doc = ensureProjectOverviewPresentations(normalizeStudioDoc(planningStudio || {}));
     planningStudio = doc;
     planningData = buildPlanningIndex(doc);
     planningPresentations = doc.presentations || {};
@@ -2286,6 +2330,131 @@ document.addEventListener('DOMContentLoaded', async () => {
       fallbackProjectDeckId,
       fallbackMarkerId,
     };
+  }
+
+  function internalPresentationHasMarker(presentation, markerId) {
+    const cleanMarkerId = String(markerId || '').trim();
+    if (!presentation || typeof presentation !== 'object' || !cleanMarkerId) return false;
+    return Boolean(
+      presentation.markers && Object.prototype.hasOwnProperty.call(presentation.markers, cleanMarkerId)
+      || presentation.markerDecks && Object.prototype.hasOwnProperty.call(presentation.markerDecks, cleanMarkerId)
+    );
+  }
+
+  function internalPresentationProjectMatches(presentation, project) {
+    const cleanProject = String(project || '').trim();
+    if (!presentation || typeof presentation !== 'object' || !cleanProject) return false;
+    return String(presentation.project || presentation.title || '').trim() === cleanProject
+      || String(presentation.id || '').trim() === projectDeckId(cleanProject);
+  }
+
+  function addInternalPresentationCandidate(candidates, presentation) {
+    if (!presentation || typeof presentation !== 'object') return;
+    if (candidates.includes(presentation)) return;
+    candidates.push(presentation);
+  }
+
+  function internalPresentationCandidatesForTarget(target) {
+    const candidates = [];
+    const byId = (id) => planningPresentations[String(id || '').trim()];
+
+    addInternalPresentationCandidate(candidates, byId(target?.presentationId));
+    addInternalPresentationCandidate(candidates, byId(target?.fallbackProjectDeckId));
+    addInternalPresentationCandidate(candidates, byId(projectDeckId(target?.project)));
+
+    for (const presentation of Object.values(planningPresentations || {})) {
+      if (internalPresentationProjectMatches(presentation, target?.project)) {
+        addInternalPresentationCandidate(candidates, presentation);
+      }
+    }
+
+    return candidates;
+  }
+
+  function internalPresentationMarkerIdsForTarget(target) {
+    const markerIds = [];
+    const pushMarker = (value) => {
+      const markerId = String(value || '').trim();
+      if (!markerId || markerIds.includes(markerId)) return;
+      markerIds.push(markerId);
+    };
+
+    pushMarker(target?.markerId);
+    pushMarker(target?.fallbackMarkerId);
+    pushMarker(target?.title ? lessonMarkerId(target.title) : '');
+    return markerIds;
+  }
+
+  function lessonNumberFromTitle(title) {
+    const match = String(title || '').match(/\b(?:startles|les)\s*(\d+)\b/i);
+    return match ? Number(match[1]) : 0;
+  }
+
+  function inferMarkerIdForPresentationTitle(presentation, title) {
+    if (!presentation || typeof presentation !== 'object') return '';
+    const lessonNumber = lessonNumberFromTitle(title);
+    if (!lessonNumber) return '';
+
+    const markerIds = [
+      ...Object.keys(presentation.markerDecks || {}),
+      ...Object.keys(presentation.markers || {}),
+    ].filter(Boolean);
+
+    return markerIds.find((markerId) => {
+      const normalizedMarker = String(markerId || '').toLocaleLowerCase('nl-NL');
+      if (new RegExp(`(?:^|-)${lessonNumber}$`).test(normalizedMarker)) return true;
+      const firstSlide = Array.isArray(presentation.markerDecks?.[markerId])
+        ? presentation.markerDecks[markerId].find((slide) => slide && typeof slide === 'object')
+        : null;
+      const slideTitle = String(`${firstSlide?.title || ''} ${firstSlide?.subtitle || ''}`).toLocaleLowerCase('nl-NL');
+      return new RegExp(`\\bles\\s*${lessonNumber}\\b`, 'i').test(slideTitle);
+    }) || '';
+  }
+
+  function findInternalPresentationForTarget(target) {
+    if (!target || !planningPresentations || typeof planningPresentations !== 'object') {
+      return { presentation: null, markerId: '' };
+    }
+
+    const candidates = internalPresentationCandidatesForTarget(target);
+    const markerIds = internalPresentationMarkerIdsForTarget(target);
+
+    for (const markerId of markerIds) {
+      const localMatch = candidates.find((presentation) => internalPresentationHasMarker(presentation, markerId));
+      if (localMatch) return { presentation: localMatch, markerId };
+    }
+
+    for (const presentation of candidates) {
+      const markerId = inferMarkerIdForPresentationTitle(presentation, target.title);
+      if (markerId) return { presentation, markerId };
+    }
+
+    for (const markerId of markerIds) {
+      const projectMatch = Object.values(planningPresentations).find((presentation) => (
+        internalPresentationProjectMatches(presentation, target.project)
+        && internalPresentationHasMarker(presentation, markerId)
+      ));
+      if (projectMatch) return { presentation: projectMatch, markerId };
+    }
+
+    const projectTitleMatch = Object.values(planningPresentations).find((presentation) => (
+      internalPresentationProjectMatches(presentation, target.project)
+      && inferMarkerIdForPresentationTitle(presentation, target.title)
+    ));
+    if (projectTitleMatch) {
+      return {
+        presentation: projectTitleMatch,
+        markerId: inferMarkerIdForPresentationTitle(projectTitleMatch, target.title),
+      };
+    }
+
+    for (const markerId of markerIds) {
+      const globalMarkerMatch = Object.values(planningPresentations)
+        .find((presentation) => internalPresentationHasMarker(presentation, markerId));
+      if (globalMarkerMatch) return { presentation: globalMarkerMatch, markerId };
+    }
+
+    return { presentation: candidates[0] || null, markerId: '' };
   }
 
   function isStandardReadingLesson(lessonOrTarget) {
@@ -2376,7 +2545,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function lessonHasInternalPresentation(lesson) {
     if (isStandardReadingLesson(lesson)) return true;
-    return Boolean(lesson?.presentationId && planningPresentations[lesson.presentationId]);
+    return Boolean(resolveInternalPresentation(buildPresentationTarget(lesson)).presentation);
   }
 
   function resolveInternalPresentation(target) {
@@ -2384,52 +2553,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return { presentation: standardReadingPresentation(), markerId: STANDARD_READING_MARKER_ID };
     }
 
-    if (!target || !planningPresentations || typeof planningPresentations !== 'object') {
-      return { presentation: null, markerId: '' };
-    }
-
-    const candidatePresentationIds = [];
-    const pushUnique = (value) => {
-      const id = String(value || '').trim();
-      if (!id || candidatePresentationIds.includes(id)) return;
-      candidatePresentationIds.push(id);
-    };
-
-    pushUnique(target.presentationId);
-    pushUnique(target.fallbackProjectDeckId);
-    if (target.project) {
-      pushUnique(projectDeckId(target.project));
-      const byProjectName = Object.values(planningPresentations).find((pres) =>
-        pres
-        && typeof pres === 'object'
-        && String(pres.presentationType || '').trim() === 'project-overview'
-        && String(pres.project || '').trim() === String(target.project || '').trim()
-      );
-      pushUnique(byProjectName?.id);
-    }
-
-    const candidateMarkerIds = [];
-    const pushMarker = (value) => {
-      const marker = String(value || '').trim();
-      if (!marker || candidateMarkerIds.includes(marker)) return;
-      candidateMarkerIds.push(marker);
-    };
-    pushMarker(target.markerId);
-    pushMarker(target.fallbackMarkerId);
-    pushMarker(target.title ? lessonMarkerId(target.title) : '');
-
-    for (const pid of candidatePresentationIds) {
-      const internal = planningPresentations[pid];
-      if (!internal || typeof internal !== 'object') continue;
-      for (const markerId of candidateMarkerIds) {
-        if (internal?.markers && Object.prototype.hasOwnProperty.call(internal.markers, markerId)) {
-          return { presentation: internal, markerId };
-        }
-      }
-      return { presentation: internal, markerId: '' };
-    }
-
-    return { presentation: null, markerId: '' };
+    return findInternalPresentationForTarget(target);
   }
 
   function renderInternalSlide() {
@@ -3189,6 +3313,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       };
     }
     const plannedLessons = selectLessonsForToday(effectiveWeekPlan.weekData.lessons || [], effectiveWeekPlan.lessonIndex, true);
+    const dateProjectedPlan = dateProjectedPlanningForAgendaEntry(entry, effectiveWeekPlan.weekData);
+    const plannedHasProjectLesson = plannedLessons.some((lesson) => !isReadingProjectName(lesson?.project));
+    const projectedIsReadingLesson = (dateProjectedPlan?.lessons || [])
+      .some((lesson) => isReadingProjectName(lesson?.project));
+    if (dateProjectedPlan && (projectedIsReadingLesson || !plannedLessons.length || !plannedHasProjectLesson)) {
+      return {
+        lessons: Array.isArray(dateProjectedPlan.lessons) ? dateProjectedPlan.lessons : [dateProjectedPlan.lesson],
+        items: Array.isArray(dateProjectedPlan.weekData?.items) ? dateProjectedPlan.weekData.items : [],
+        note: String(dateProjectedPlan.weekData?.note || '').trim(),
+        lessonIndex: dateProjectedPlan.lessonIndex || effectiveWeekPlan.lessonIndex,
+        isDateProjected: true,
+      };
+    }
     if (hasExplicitStartLessons(effectiveWeekPlan.weekData)) {
       return {
         lessons: plannedLessons,
@@ -3252,7 +3389,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           lessonIndex: Number(plan.lessonIndex || 0),
           lessonSlot: plan.lessonIndex ? lessonLetter(Math.min(plan.lessonIndex, 3)) : '',
           isManual: Boolean(plan.isManual),
-          source: plan.isManual ? 'manual' : (isStartweekSelection ? 'startweek' : 'docentplatform'),
+          source: plan.isManual
+            ? 'manual'
+            : plan.isDateProjected
+              ? 'datumprojectie'
+              : (isStartweekSelection ? 'startweek' : 'docentplatform'),
           lessons: lessons.map((lesson) => ({
             ...lesson,
             classId,
@@ -3613,10 +3754,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const raw = normalizeStudioDoc(await res.json());
       planningStudio = forceLive
-        ? ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw))
+        ? ensureProjectOverviewPresentations(raw)
         : planningStudio
         ? mergeStudioPreferRicherBase(raw, planningStudio)
-        : ensureProjectOverviewPresentations(collapseToYearLayerDoc(raw));
+        : ensureProjectOverviewPresentations(raw);
       savePlanningStudioToStorage();
       rebuildPlanningFromStudio();
       renderNextLessonDayOverview(agendaEntries, new Date());

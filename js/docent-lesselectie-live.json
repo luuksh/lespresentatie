@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T19:25:07.265Z",
+  "updatedAt": "2026-09-06T05:19:36.533Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
+          "project": "Start Nederlands 3",
+          "lesson": "Startles 1: Welkom terug - leer toch falen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-start-nederlands-3",
+          "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
           "classId": "G3F",
           "scheduledDate": "2026-09-07T07:00:00.000Z"
@@ -29,9 +29,12 @@
       "items": [
         "Start jaar 3: netschrift als werkplaats, formatief werken en jaarthema Leer toch falen.",
         "Tweede startles: netschrift persoonlijk maken en projectklaar maken.",
-        "Leesmeters blijft de vaste dinsdagles."
+        "Leesmeters blijft de vaste dinsdagles.",
+        "Geen les volgens schoolagenda: 01-09.",
+        "Geen reguliere lessen: CGU-Week 1.",
+        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
       ],
-      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
+      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten. | Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 3 staat op vrijdag 4 september; Leesmeters blijft dinsdag het vaste leesmoment."
     },
     {
       "agendaKey": "G3C|2026-09-07T07:45:00.000Z|2026-09-07T08:30:00.000Z",
@@ -44,14 +47,14 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
+          "project": "Start Nederlands 3",
+          "lesson": "Startles 1: Welkom terug - leer toch falen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-start-nederlands-3",
+          "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
           "classId": "G3C",
           "scheduledDate": "2026-09-07T07:45:00.000Z"
@@ -60,9 +63,12 @@
       "items": [
         "Start jaar 3: netschrift als werkplaats, formatief werken en jaarthema Leer toch falen.",
         "Tweede startles: netschrift persoonlijk maken en projectklaar maken.",
-        "Leesmeters blijft de vaste dinsdagles."
+        "Leesmeters blijft de vaste dinsdagles.",
+        "Geen les volgens schoolagenda: 01-09.",
+        "Geen reguliere lessen: CGU-Week 1.",
+        "CGU-week: eerste reguliere Nederlandsles op vrijdag 4 september."
       ],
-      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
+      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten. | Geen reguliere lessen deze week: CGU-Week 1. | Eerste startles jaarlaag 3 staat op vrijdag 4 september; Leesmeters blijft dinsdag het vaste leesmoment."
     },
     {
       "agendaKey": "G1C|2026-09-07T08:50:00.000Z|2026-09-07T09:35:00.000Z",
@@ -78,21 +84,18 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
           "lessonKey": "A",
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G4C|2026-09-07T10:50:00.000Z|2026-09-07T11:35:00.000Z",
@@ -105,15 +108,15 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "A",
+          "project": "Start Nederlands 4",
+          "lesson": "Startles 1: Nederlands 4",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-start-nederlands-4",
+          "presentationMarkerId": "marker-startles-4-1",
+          "lessonKey": "B",
           "classId": "G4C",
           "scheduledDate": "2026-09-07T10:50:00.000Z"
         }
@@ -165,24 +168,21 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Startles 2: Maak het van jou",
+          "project": "Droomschool",
+          "lesson": "Les 1: Intro",
           "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
-          "lessonKey": "B",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-1-intro",
+          "lessonKey": "C",
           "classId": "G1C",
           "scheduledDate": "2026-09-08T06:15:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G3B|2026-09-08T07:00:00.000Z|2026-09-08T07:45:00.000Z",
@@ -195,15 +195,16 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
           "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "A",
+          "isStandardReadingLesson": true,
           "classId": "G3B",
           "scheduledDate": "2026-09-08T07:00:00.000Z"
         }
@@ -226,15 +227,16 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
           "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "A",
+          "isStandardReadingLesson": true,
           "classId": "G3E",
           "scheduledDate": "2026-09-08T07:45:00.000Z"
         }
@@ -257,15 +259,16 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1",
-          "lessonKey": "B",
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
           "classId": "G3C",
           "scheduledDate": "2026-09-08T08:50:00.000Z"
         }
@@ -276,6 +279,37 @@
         "Leesmeters blijft de vaste dinsdagles."
       ],
       "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
+    },
+    {
+      "agendaKey": "G4C|2026-09-08T10:50:00.000Z|2026-09-08T11:35:00.000Z",
+      "classId": "G4C",
+      "start": "2026-09-08T10:50:00.000Z",
+      "end": "2026-09-08T11:35:00.000Z",
+      "room": "U105",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "datumprojectie",
+      "lessons": [
+        {
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
+          "classId": "G4C",
+          "scheduledDate": "2026-09-08T10:50:00.000Z"
+        }
+      ],
+      "items": [
+        "Start Nederlands 4: beoordeling kort neerzetten, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
+        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden."
+      ],
+      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G1D|2026-09-08T12:40:00.000Z|2026-09-08T13:25:00.000Z",
@@ -291,21 +325,18 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
+          "project": "Spiegeldicht",
+          "lesson": "Kiezen",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-spiegeldicht",
+          "presentationMarkerId": "marker-kiezen",
           "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-08T12:40:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G4B|2026-09-10T06:15:00.000Z|2026-09-10T07:00:00.000Z",
@@ -318,15 +349,16 @@
       "lessonIndex": 1,
       "lessonSlot": "A",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
           "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "A",
+          "isStandardReadingLesson": true,
           "classId": "G4B",
           "scheduledDate": "2026-09-10T06:15:00.000Z"
         }
@@ -378,24 +410,22 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Start Nederlands 1",
-          "lesson": "Startles 2: Maak het van jou",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
-          "lessonKey": "B",
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
           "classId": "G1D",
           "scheduledDate": "2026-09-10T08:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G3F|2026-09-10T09:35:00.000Z|2026-09-10T10:20:00.000Z",
@@ -408,15 +438,16 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1",
-          "lessonKey": "B",
+          "project": "Leesmeters",
+          "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
+          "homework": "leesboek en schoolpasje mee",
+          "isStandardReadingLesson": true,
           "classId": "G3F",
           "scheduledDate": "2026-09-10T09:35:00.000Z"
         }
@@ -439,24 +470,22 @@
       "lessonIndex": 3,
       "lessonSlot": "C",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Leesmeters",
           "lesson": "Leesmeters",
+          "lessonKey": "READ",
+          "presentationId": "project-heel-veel-lezen",
+          "presentationMarkerId": "marker-heel-veel-lezen",
           "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "C",
+          "isStandardReadingLesson": true,
           "classId": "G1C",
           "scheduledDate": "2026-09-10T10:50:00.000Z"
         }
       ],
-      "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
-      ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "items": [],
+      "note": ""
     },
     {
       "agendaKey": "G1D|2026-09-11T06:15:00.000Z|2026-09-11T07:00:00.000Z",
@@ -469,24 +498,54 @@
       "lessonIndex": 3,
       "lessonSlot": "C",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Leesmeters",
-          "lesson": "Leesmeters",
-          "homework": "leesboek en schoolpasje mee",
-          "presentationId": "project-leesmeters",
-          "presentationMarkerId": "marker-leesmeters",
-          "lessonKey": "C",
+          "project": "Droomschool",
+          "lesson": "Les 3: Projectplan",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-droomschool",
+          "presentationMarkerId": "marker-les-3-projectplan",
+          "lessonKey": "A",
           "classId": "G1D",
           "scheduledDate": "2026-09-11T06:15:00.000Z"
         }
       ],
       "items": [
-        "Start Nederlands: netschrift inrichten, eerste reflectiepagina maken en voorkant/titelblad ontwerpen.",
-        "Start Nederlands: tweede startles, netschrift persoonlijk maken en voorkant/titelblad afronden."
+        "Geen les volgens schoolagenda: 01-09."
       ],
-      "note": "Startlessen jaarlaag 1. Daarna blijft Leesmeters de vaste leesroutine en sluiten projectvoorbladen aan op de volgende projecten. | Startles 2 jaarlaag 1 na de eerste les van vrijdag 4 september. Leesmeters blijft op het vaste leesmoment."
+      "note": ""
+    },
+    {
+      "agendaKey": "G4B|2026-09-11T07:00:00.000Z|2026-09-11T07:45:00.000Z",
+      "classId": "G4B",
+      "start": "2026-09-11T07:00:00.000Z",
+      "end": "2026-09-11T07:45:00.000Z",
+      "room": "U008",
+      "summary": "",
+      "description": "",
+      "lessonIndex": 3,
+      "lessonSlot": "C",
+      "isManual": false,
+      "source": "datumprojectie",
+      "lessons": [
+        {
+          "project": "Technologie",
+          "lesson": "Les 1: Ik en technologie",
+          "homework": "netschrift en pen mee",
+          "presentationId": "project-technologie",
+          "presentationMarkerId": "marker-les-1-ik-en-technologie",
+          "lessonKey": "B",
+          "classId": "G4B",
+          "scheduledDate": "2026-09-11T07:00:00.000Z"
+        }
+      ],
+      "items": [
+        "Start Nederlands 4: beoordeling kort neerzetten, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
+        "Start Nederlands 4: tweede startles, netschrift als dossier inrichten en eerste projectvoorblad voorbereiden.",
+        "Overzichtspresentatie"
+      ],
+      "note": "Startlessen jaarlaag 4. Het vervolg blijft gekoppeld aan het eerstvolgende project: Technologie, Persoonlijkheid, Renaissance of Invloed. | Startles 2 jaarlaag 4 na de eerste les van vrijdag 4 september. Het vervolg blijft gekoppeld aan het eerstvolgende project."
     },
     {
       "agendaKey": "G3B|2026-09-11T08:50:00.000Z|2026-09-11T09:35:00.000Z",
@@ -499,14 +558,14 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
+          "lesson": "Startles 2: Maak het van jou",
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1",
+          "presentationMarkerId": "marker-startles-3-2",
           "lessonKey": "B",
           "classId": "G3B",
           "scheduledDate": "2026-09-11T08:50:00.000Z"
@@ -515,9 +574,14 @@
       "items": [
         "Start jaar 3: netschrift als werkplaats, formatief werken en jaarthema Leer toch falen.",
         "Tweede startles: netschrift persoonlijk maken en projectklaar maken.",
-        "Leesmeters blijft de vaste dinsdagles."
+        "Leesmeters blijft de vaste dinsdagles.",
+        "BKK/Leesmeters blijft de leesles; tweede startles maakt het netschrift persoonlijk en projectklaar.",
+        "Vanaf week 39 start Faalfestival inhoudelijk.",
+        "Start Dieplezen met artikel.",
+        "Introductie Faalfestival; groepjes maken en onderwerp/personage kiezen.",
+        "Introductie middeleeuwen algemeen."
       ],
-      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
+      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten. | Startles 2 jaarlaag 3 naast de vaste Leesmeters-les. De top-3-verhalenopdracht blijft bewaard voor het latere leesprogramma. | BKK-week. Faalfestival-les naast de vaste Leesmeters-les."
     },
     {
       "agendaKey": "G3E|2026-09-11T09:35:00.000Z|2026-09-11T10:20:00.000Z",
@@ -530,14 +594,14 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Start Nederlands 3",
-          "lesson": "Startles 1: Welkom terug - leer toch falen",
+          "lesson": "Startles 2: Maak het van jou",
           "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-1",
+          "presentationMarkerId": "marker-startles-3-2",
           "lessonKey": "B",
           "classId": "G3E",
           "scheduledDate": "2026-09-11T09:35:00.000Z"
@@ -546,9 +610,14 @@
       "items": [
         "Start jaar 3: netschrift als werkplaats, formatief werken en jaarthema Leer toch falen.",
         "Tweede startles: netschrift persoonlijk maken en projectklaar maken.",
-        "Leesmeters blijft de vaste dinsdagles."
+        "Leesmeters blijft de vaste dinsdagles.",
+        "BKK/Leesmeters blijft de leesles; tweede startles maakt het netschrift persoonlijk en projectklaar.",
+        "Vanaf week 39 start Faalfestival inhoudelijk.",
+        "Start Dieplezen met artikel.",
+        "Introductie Faalfestival; groepjes maken en onderwerp/personage kiezen.",
+        "Introductie middeleeuwen algemeen."
       ],
-      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten."
+      "note": "Startles 1 jaarlaag 3. Leesmeters blijft de vaste andere les; startles 2 volgt in week 38 zodat Faalfestival in week 39 inhoudelijk kan starten. | Startles 2 jaarlaag 3 na de eerste les van vrijdag 4 september; daarna kan Faalfestival inhoudelijk starten. | Startles 2 jaarlaag 3 naast de vaste Leesmeters-les. De top-3-verhalenopdracht blijft bewaard voor het latere leesprogramma. | BKK-week. Faalfestival-les naast de vaste Leesmeters-les."
     }
   ]
 }

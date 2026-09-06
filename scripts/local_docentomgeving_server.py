@@ -19,7 +19,7 @@ MAX_BODY_BYTES = 20 * 1024 * 1024
 AUTO_GIT_PUSH_ENV = "KLASSENPLATTEGROND_AUTO_GIT_PUSH"
 PUBLIC_PORTAL_FILES = [
     "data/jaarplanning/jaarplanning-intern.json",
-    "docs",
+    "data/planning-rules.json",
     "assets",
     "lesdocs",
     "data/kerndoelen",
@@ -31,7 +31,13 @@ PUBLIC_PORTAL_FILES = [
     "css/jaarplanning-studio.css",
     "css/presentatie-studio.css",
     "leerlingen.html",
+    "docs/index.html",
     "docs/leerlingen.html",
+    "docs/favicon.svg",
+    "docs/assets",
+    "docs/lesdocs",
+    "docs/data/kerndoelen",
+    "docs/l",
     "css/student-portal.css",
     "docs/css/student-portal.css",
     "jaarplanning-studio.html",
@@ -42,19 +48,17 @@ PUBLIC_PORTAL_FILES = [
     "js/student-portal.js",
     "js/kerndoelen-data.js",
     "js/init.js",
-    "docs/js/init.js",
     "docs/js/student-portal.js",
     "docs/js/kerndoelen-data.js",
     "js/docent-lesselectie-live.json",
     "docs/js/docent-lesselectie-live.json",
     "js/jaarplanning-live.json",
     "docs/js/jaarplanning-live.json",
-    "js/zermelo-agenda-live.json",
-    "docs/js/zermelo-agenda-live.json",
-    "js/zermelo-leerlingen-live.json",
-    "docs/js/zermelo-leerlingen-live.json",
+    "docs/js/leerlingen_per_klas.json",
     "scripts/apply_presentatie_studio_export.py",
     "scripts/build_jaarplanning_internal.py",
+    "scripts/sync_zermelo_leerlingen.py",
+    "scripts/validate_publication.py",
     "scripts/local_docentomgeving_server.py",
     "scripts/start_local_docentomgeving.sh",
     "Open Jaarplanning Studio.command",
@@ -239,7 +243,7 @@ def auto_commit_and_push(response: dict) -> dict:
 
 
 def push_pending_publication_state_on_startup() -> None:
-    if not truthy_env(AUTO_GIT_PUSH_ENV, True):
+    if not truthy_env(AUTO_GIT_PUSH_ENV, False):
         print("Automatische opstart-publicatie staat uit.", flush=True)
         return
     try:

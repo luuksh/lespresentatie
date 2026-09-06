@@ -207,50 +207,102 @@ def grade_from_class_id(class_id: str) -> str:
     return ""
 
 
+def entry_class_id(entry: dict) -> str:
+    return str(entry.get("classId", "")).strip().upper()
+
+
+def entry_week(entry: dict) -> str:
+    return str(entry.get("week", "")).strip()
+
+
+def is_year_layer_entry(class_id: str) -> bool:
+    grade = grade_from_class_id(class_id)
+    return bool(grade and class_id == grade)
+
+
 def expand_year_layer_entries(entries: list[dict], current_entries: list[dict]) -> list[dict]:
     class_ids_by_grade: dict[str, list[str]] = {}
     weeks_by_class_id: dict[str, set[str]] = {}
-    preserved_layer_entries: list[dict] = []
-    incoming_weeks_by_grade: dict[str, set[str]] = {}
+    incoming_direct_keys: set[tuple[str, str]] = set()
+    incoming_layer_weeks_by_grade: dict[str, set[str]] = {}
+    incoming_direct_weeks_by_grade: dict[str, set[str]] = {}
+    incoming_all_weeks: set[str] = set()
+
     for entry in entries:
-        class_id = str(entry.get("classId", "")).strip()
+        class_id = entry_class_id(entry)
         grade = grade_from_class_id(class_id)
-        week = str(entry.get("week", "")).strip()
-        if class_id == grade and week:
-            incoming_weeks_by_grade.setdefault(grade, set()).add(week)
+        week = entry_week(entry)
+        if not class_id or not week:
+            continue
+        if class_id == "ALL":
+            incoming_all_weeks.add(week)
+        elif is_year_layer_entry(class_id):
+            incoming_layer_weeks_by_grade.setdefault(grade, set()).add(week)
+        else:
+            incoming_direct_keys.add((class_id, week))
+            if grade:
+                incoming_direct_weeks_by_grade.setdefault(grade, set()).add(week)
+                class_ids_by_grade.setdefault(grade, [])
+                if class_id not in class_ids_by_grade[grade]:
+                    class_ids_by_grade[grade].append(class_id)
 
     for entry in current_entries:
-        class_id = str(entry.get("classId", "")).strip()
-        week = str(entry.get("week", "")).strip()
+        class_id = entry_class_id(entry)
+        week = entry_week(entry)
         grade = grade_from_class_id(class_id)
-        if class_id == "ALL" or class_id == grade:
-            preserved_layer_entries.append(entry)
-            continue
         if not grade:
             continue
-        if week and week not in incoming_weeks_by_grade.get(grade, set()):
-            preserved_layer_entries.append(entry)
         class_ids_by_grade.setdefault(grade, [])
         if class_id not in class_ids_by_grade[grade]:
             class_ids_by_grade[grade].append(class_id)
         if week:
             weeks_by_class_id.setdefault(class_id, set()).add(week)
 
-    expanded: list[dict] = [*preserved_layer_entries]
-    for entry in entries:
-        class_id = str(entry.get("classId", "")).strip()
+    expanded: list[dict] = []
+    for entry in current_entries:
+        class_id = entry_class_id(entry)
+        week = entry_week(entry)
         grade = grade_from_class_id(class_id)
-        if class_id != grade:
+        if not class_id or not week:
+            continue
+        if class_id == "ALL":
+            if week not in incoming_all_weeks:
+                expanded.append(entry)
+            continue
+        if (class_id, week) in incoming_direct_keys:
+            continue
+        if is_year_layer_entry(class_id) and week in incoming_direct_weeks_by_grade.get(grade, set()):
+            continue
+        if week in incoming_layer_weeks_by_grade.get(grade, set()):
+            continue
+        expanded.append(entry)
+
+    for entry in entries:
+        class_id = entry_class_id(entry)
+        grade = grade_from_class_id(class_id)
+        week = entry_week(entry)
+        if not class_id or not week:
             continue
 
-        week = str(entry.get("week", "")).strip()
+        if class_id == "ALL" or not is_year_layer_entry(class_id):
+            expanded.append(entry)
+            continue
+
+        expanded_any = False
         for target_class_id in class_ids_by_grade.get(grade, []):
+            if target_class_id == class_id:
+                continue
+            if (target_class_id, week) in incoming_direct_keys:
+                continue
             current_weeks = weeks_by_class_id.get(target_class_id, set())
             if current_weeks and week not in current_weeks:
                 continue
             clone = dict(entry)
             clone["classId"] = target_class_id
             expanded.append(clone)
+            expanded_any = True
+        if not expanded_any:
+            expanded.append(entry)
 
     if not expanded:
         raise ValueError("Jaarplanning-export bevat geen publiceerbare jaarlaagregels.")

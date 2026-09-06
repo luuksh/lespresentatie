@@ -164,17 +164,8 @@ async function loadKerndoelenDocSafe(url) {
     return null;
   }
 }
-const CURRENT_PROGRESS_ANCHORS = [
-  { grade: '1', project: 'Taaltopia', lessonNumber: 6, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
-  { classIds: ['G3E', '3E'], project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-28', useProjectOnFirstLesson: true },
-  { grade: '3', project: 'V-rede', lessonNumber: 3, anchorDate: '2026-05-22' },
-  { classIds: ['G4D', '4G4', '4.4'], project: 'Taalmakers', lessonNumber: 1, anchorDate: '2026-05-29' },
-  { classIds: ['G4E', '4G5', '4.5'], project: 'Invloed', lessonNumber: 8, anchorDate: '2026-05-28' },
-];
-const READING_LESSON_EXCEPTIONS = [
-  { classIds: ['G4D', '4G4', '4.4'], date: '2026-05-28', lessonNumber: 1 },
-  { classIds: ['G4E', '4G5', '4.5'], date: '2026-05-28', lessonNumber: 2 },
-];
+const CURRENT_PROGRESS_ANCHORS = [];
+const READING_LESSON_EXCEPTIONS = [];
 const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
 const FIXED_READING_MOMENTS = {
   G1C: { day: 4, start: '12:50' },
@@ -2462,6 +2453,17 @@ function explicitNetschriftItemsForLesson(lesson) {
   return explicitNetschriftItemsForTarget(buildPresentationTarget(lesson));
 }
 
+function explicitHomeworkItemsForTarget(target) {
+  const resolved = resolvePresentation(target);
+  const presentation = resolved.presentation;
+  const markerId = String(resolved.markerId || target?.markerId || '').trim();
+  if (!presentation || !markerId || presentationMarkerIsDeleted(presentation, markerId)) return [];
+  const items = presentation.lessonMeta?.[markerId]?.homework?.items;
+  return Array.isArray(items)
+    ? items.map((item) => String(item || '').trim()).filter(Boolean)
+    : [];
+}
+
 function getProjectCulmination(classId, project) {
   const normalizedClassId = normalizeClassId(classId);
   const projectName = String(project || '').trim();
@@ -2510,6 +2512,18 @@ function isAssessmentLesson(classId, lesson) {
 }
 
 function getHomeworkPreviewSlide(target) {
+  const explicitItems = explicitHomeworkItemsForTarget(target);
+  if (explicitItems.length) {
+    return {
+      type: 'homework-preview',
+      emphasis: true,
+      variant: 'homework',
+      title: 'Schrijf in je agenda',
+      subtitle: 'Huiswerk voor de volgende keer',
+      items: explicitItems,
+    };
+  }
+
   const classId = normalizeClassId(target?.classId || state.currentClass);
   const week = String(target?.week || '').trim();
   const lessonKey = String(target?.lessonKey || '').trim().toUpperCase();
@@ -2532,9 +2546,11 @@ function getHomeworkPreviewSlide(target) {
 
   return {
     type: 'homework-preview',
-    title: `Huiswerk voor ${nextLesson.lesson || nextLesson.project || 'de volgende les'}`,
+    emphasis: true,
+    variant: 'homework',
+    title: 'Schrijf in je agenda',
     subtitle: scheduledLesson?.start
-      ? `${formatLessonDate(scheduledLesson.start)}`
+      ? `Huiswerk voor ${formatLessonDate(scheduledLesson.start)}`
       : 'Voor de volgende les',
     items,
   };
@@ -2549,19 +2565,19 @@ function lessonBuildSlide(phase, target) {
     return {
       type: `lesson-${phase}-netschrift`,
       emphasis: true,
-      title: phase === 'start' ? 'Deze les in je netschrift' : 'Na deze les in je netschrift',
-      subtitle: '',
+      variant: 'netschrift',
+      title: phase === 'start' ? 'Opdracht netschrift' : 'Netschriftcheck: gelukt?',
+      subtitle: phase === 'start' ? 'Dit moet straks terug te vinden zijn' : 'Controleer dit voordat je afsluit',
       items: explicitItems,
     };
   }
   const buildTargets = getLessonBuildTargets(project, title);
-  const isStart = phase === 'start';
-  const mediumName = buildTargets.medium.type === 'poster-presentation' ? 'poster' : 'netschrift';
   return {
     type: `lesson-${phase}-evidence`,
     emphasis: true,
-    title: `Deze les toegevoegd aan je ${mediumName}`,
-    subtitle: '',
+    variant: 'netschrift',
+    title: phase === 'start' ? 'Opdracht netschrift' : 'Netschriftcheck: gelukt?',
+    subtitle: phase === 'start' ? 'Dit moet straks terug te vinden zijn' : 'Controleer dit voordat je afsluit',
     items: [buildTargets.deliverable],
   };
 }
@@ -3029,8 +3045,10 @@ function renderPresentationSlide() {
       : `Slide ${index + 1} van ${slides.length}`;
   }
 
+  const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const variantClass = variant ? ` slide-card-${variant}` : '';
   dialogStage.innerHTML = `
-    <article class="slide-card${slide.emphasis ? ' slide-card-emphasis' : ''}">
+    <article class="slide-card${slide.emphasis ? ' slide-card-emphasis' : ''}${variantClass}">
       <h3>${renderHtmlText(title)}</h3>
       ${subtitle ? `<p>${renderHtmlText(subtitle)}</p>` : ''}
       ${bullets.length ? `<ul>${bullets.map((item) => `<li>${renderHtmlText(item)}</li>`).join('')}</ul>` : ''}

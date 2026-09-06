@@ -1434,6 +1434,18 @@ body::before {
   font-weight: 800;
 }
 
+.slide-card-homework {
+  border-color: rgba(35, 118, 90, 0.34);
+  background:
+    radial-gradient(circle at top right, rgba(35, 118, 90, 0.16), transparent 28%),
+    linear-gradient(180deg, #f7fbf9 0%, #fffdf9 100%);
+  box-shadow: 0 24px 70px rgba(35, 118, 90, 0.14);
+}
+
+.slide-card-homework h3 {
+  color: #23765a;
+}
+
 .slide-card h3 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.4rem);
