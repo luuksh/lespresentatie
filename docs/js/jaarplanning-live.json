@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:37:51+02:00",
+  "updatedAt": "2026-09-06T08:37:57+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:37:51+02:00",
+  "sourceRevision": "2026-09-06T08:37:57+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -40972,16 +40972,6 @@
           "items": []
         },
         {
-          "type": "bullets",
-          "title": "Kern",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Eerste punt",
-            "Tweede punt"
-          ]
-        },
-        {
           "type": "title",
           "title": "Les 1 - Welkom bij Nederlands",
           "subtitle": "Start Nederlands 1",
@@ -41365,7 +41355,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 24
+        "marker-startles-1-2": 23
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -41373,15 +41363,6 @@
             "type": "title",
             "title": "Welkom bij Nederlands",
             "subtitle": "De wereld als taallaboratorium"
-          },
-          {
-            "type": "bullets",
-            "title": "Kern",
-            "subtitle": "",
-            "items": [
-              "Eerste punt",
-              "Tweede punt"
-            ]
           },
           {
             "type": "title",
