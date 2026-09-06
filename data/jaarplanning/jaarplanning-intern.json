@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T10:09:25+02:00",
+  "updatedAt": "2026-09-06T10:19:05+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3832,11 +3832,13 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "assessment": "",
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -3868,11 +3870,13 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "assessment": "",
+          "teacherNote": ""
         },
         {
           "project": "Leesmeters",
@@ -33346,10 +33350,7 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen?",
             "assessment": "",
-            "teacherNote": "",
-            "progressByClass": {
-              "1D": "done"
-            }
+            "teacherNote": ""
           },
           "homework": {
             "items": [
@@ -34800,7 +34801,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T10:09:25+02:00-studio",
+  "sourceRevision": "2026-09-06T10:19:05+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
