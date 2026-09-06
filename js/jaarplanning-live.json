@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:37:57+02:00",
+  "updatedAt": "2026-09-06T08:38:10+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:37:57+02:00",
+  "sourceRevision": "2026-09-06T08:38:10+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -40981,13 +40981,6 @@
         {
           "type": "title",
           "title": "---",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "---",
           "subtitle": "Heb je vandaag al...",
           "showProjectLogo": false,
           "items": []
@@ -41355,7 +41348,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 23
+        "marker-startles-1-2": 22
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -41368,11 +41361,6 @@
             "type": "title",
             "title": "Les 1 - Welkom bij Nederlands",
             "subtitle": "Start Nederlands 1"
-          },
-          {
-            "type": "title",
-            "title": "---",
-            "subtitle": ""
           },
           {
             "type": "title",
