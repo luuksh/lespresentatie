@@ -1857,7 +1857,7 @@ function formatHomeworkContent(value) {
   return {
     textHtml: text ? richTextToHtml(text) : '',
     materialsHtml: materials.length
-      ? `<div class="homework-materials"><p class="homework-materials-label">Materialen:</p><div class="homework-material-list">${materials.map((label) => `<span class="homework-material">${escapeHtml(label)}</span>`).join('')}</div></div>`
+      ? `<div class="homework-materials"><p class="homework-materials-label">Neem mee:</p><div class="homework-material-list">${materials.map((label) => `<span class="homework-material">${escapeHtml(label)}</span>`).join('')}</div></div>`
       : '',
   };
 }
@@ -2882,7 +2882,7 @@ function submissionAlertHtml(nextSubmissionMoment) {
     <div class="submission-alert is-${escapeHtml(nextSubmissionMoment.state)}">
       <p class="submission-alert-label">
         <span class="submission-alert-icon" aria-hidden="true">${escapeHtml(nextSubmissionMoment.icon)}</span>
-        <span>Volgende netschrift inlevermoment</span>
+        <span>Lever in: netschrift</span>
       </p>
       ${deadlineText ? `<p class="submission-alert-deadline">${escapeHtml(deadlineText)}</p>` : ''}
       <p class="submission-alert-text">${escapeHtml(nextSubmissionMoment.text)}</p>
@@ -3109,7 +3109,7 @@ function renderCurrentWeek(projectGroups) {
     if (heroWeekValue) heroWeekValue.textContent = 'Nog onbekend';
     if (heroPresentationCount) heroPresentationCount.textContent = '-';
     if (heroHomeworkCount) heroHomeworkCount.textContent = nextSubmissionMoment ? '1' : '0';
-    renderSummaryList(homeworkSummary, nextSubmissionMoment ? [submissionAlertHtml(nextSubmissionMoment)] : [], 'Nog geen huiswerk voor de eerstvolgende les.');
+    renderSummaryList(homeworkSummary, nextSubmissionMoment ? [submissionAlertHtml(nextSubmissionMoment)] : [], 'Voor de volgende les staat nog geen huiswerk klaar.');
     renderSummaryList(projectSummary, [], 'Nog geen projectinformatie voor de eerstvolgende les.');
     renderProjectRubric(null);
     return;
@@ -3146,7 +3146,8 @@ function renderCurrentWeek(projectGroups) {
       const homework = formatHomeworkContent(lesson.homework);
       const date = index === 0 ? nextLesson.date : nextLesson.pairedDate;
       return `
-        <p class="homework-label">${escapeHtml(lesson.lesson || lesson.project || 'Les')}</p>
+        <p class="homework-label">Voor de volgende les</p>
+        <p class="homework-sublabel">${escapeHtml(lesson.lesson || lesson.project || 'Les')}</p>
         ${date ? `<p class="lesson-date">${escapeHtml(formatLessonDate(date))}</p>` : ''}
         ${homework.textHtml ? `<div class="homework-text">${homework.textHtml}</div>` : ''}
         ${homework.materialsHtml}
@@ -3156,7 +3157,7 @@ function renderCurrentWeek(projectGroups) {
     : [];
   const homeworkRows = [...lessonHomeworkRows, ...submissionRows];
   const projectRows = buildProjectSummaryRows({ project: nextLesson.lesson.project });
-  renderSummaryList(homeworkSummary, homeworkRows, 'Nog geen huiswerk voor de eerstvolgende les.');
+  renderSummaryList(homeworkSummary, homeworkRows, 'Voor de volgende les staat nog geen huiswerk klaar.');
   renderSummaryList(projectSummary, projectRows, 'Nog geen projectinformatie voor de eerstvolgende les.');
   renderProjectRubric(nextLesson);
 }

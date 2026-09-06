@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:24:27+02:00",
+  "updatedAt": "2026-09-06T08:25:37+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -1230,11 +1230,11 @@
       "lessons": [
         {
           "project": "Start Nederlands 1",
-          "lesson": "Les 2 - Maak het van jou",
+          "lesson": "Les 1 - Welkom bij Nederlands",
           "homework": "netschrift en pen mee",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-2",
+          "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1
         },
         {
@@ -1247,11 +1247,11 @@
         },
         {
           "project": "Start Nederlands 1",
-          "lesson": "Les 1 - Welkom bij Nederlands",
+          "lesson": "Les 2 - Maak het van jou",
           "homework": "netschrift en pen mee",
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
-          "presentationMarkerId": "marker-startles-1-1",
+          "presentationMarkerId": "marker-startles-1-2",
           "sequenceIndex": 2
         }
       ],
@@ -13700,7 +13700,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:24:27+02:00",
+  "sourceRevision": "2026-09-06T08:25:37+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
