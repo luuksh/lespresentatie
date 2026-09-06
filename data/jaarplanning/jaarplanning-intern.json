@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T12:17:26+02:00",
+  "updatedAt": "2026-09-06T12:17:31+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -33832,23 +33832,23 @@
         {
           "type": "hero",
           "title": "Les 2 - Maak het van jou",
-          "subtitle": "Ontwerp een netschrift dat meteen van jou voelt",
+          "subtitle": "Ontwerp een netschrift dat voelt als jouw eigen boek",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Nederlands begint op de voorkant",
+          "kicker": "LETTERS ALS BEELD",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-          "imageAlt": "Graffiti met grote letters op een muur.",
-          "caption": "Letters kunnen saai zijn. Of ze kunnen meteen aandacht pakken.",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
+          "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn.",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-              "alt": "Graffiti met grote letters op een muur.",
-              "caption": "Letters kunnen saai zijn. Of ze kunnen meteen aandacht pakken.",
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
+              "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn.",
               "source": ""
             }
           ],
@@ -33860,29 +33860,29 @@
         {
           "type": "visual",
           "title": "Eerste indruk",
-          "subtitle": "Je hebt vijf seconden",
+          "subtitle": "Waar stuurt het ontwerp je oog naartoe?",
           "showProjectLogo": false,
           "items": [
-            "Waar kijk je als eerste naar?",
-            "Welke kleur blijft hangen?",
-            "Wat voelt rustig?",
-            "Wat voelt druk?",
-            "Wat zou jij anders doen?"
+            "Wat zie je als eerste?",
+            "Welke kleur of vorm trekt aandacht?",
+            "Wat blijft rustig?",
+            "Wat maakt het geheel spannend?",
+            "Wat zou jij kunnen gebruiken?"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "image-left",
-          "kicker": "🖋 Kijk zonder uitleg",
+          "kicker": "KIJKEN VOOR JE BEGINT",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-          "imageAlt": "Een rij kleurrijke schriften.",
-          "caption": "Een goede voorkant laat snel zien waar hij over gaat.",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
+          "caption": "Een sterke voorkant kiest wat belangrijk is.",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-              "alt": "Een rij kleurrijke schriften.",
-              "caption": "Een goede voorkant laat snel zien waar hij over gaat.",
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
+              "caption": "Een sterke voorkant kiest wat belangrijk is.",
               "source": ""
             }
           ],
@@ -33894,22 +33894,22 @@
         {
           "type": "spotlight",
           "title": "NEDERLANDS",
-          "subtitle": "Dit woord moet je meteen zien",
+          "subtitle": "Dit woord moet straks meteen zichtbaar zijn",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Maak één ding groot",
-          "text": "NEDERLANDS",
-          "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-          "imageAlt": "Een vulpen.",
+          "kicker": "HOOFDROL",
+          "text": "Maak dit woord groot genoeg.",
+          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een zwart-witte typografische collage met grote letters.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F58B.svg",
-              "alt": "Een vulpen.",
+              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een zwart-witte typografische collage met grote letters.",
               "caption": "",
               "source": ""
             }
@@ -33921,29 +33921,29 @@
         },
         {
           "type": "question",
-          "title": "Kijk als een ontwerper",
-          "subtitle": "Niet: vind ik dit mooi? Wel: wat werkt hier?",
+          "title": "Wat maakt een bladzijde sterk?",
+          "subtitle": "Kijk naar keuzes, niet naar smaak",
           "showProjectLogo": false,
           "items": [
-            "Welke letters vallen op?",
-            "Waardoor vallen ze op?",
             "Wat wordt herhaald?",
-            "Waar zie je contrast?",
-            "Wat kun je hiervan lenen voor je schrift?"
+            "Waar zit contrast?",
+            "Waar is bewust ruimte leeg gelaten?",
+            "Wat voelt als hoofdbeeld?",
+            "Wat voelt als achtergrond?"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Ontwerpers kijken precies",
+          "kicker": "ONTWERPERSBLIK",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-          "imageAlt": "Graffitiletters op een muur.",
+          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-              "alt": "Graffitiletters op een muur.",
+              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon.",
               "caption": "",
               "source": ""
             }
@@ -33959,26 +33959,26 @@
           "subtitle": "Het verschil zit in kiezen",
           "showProjectLogo": false,
           "items": [
-            "Versieren: ik plak er nog iets bij.",
-            "Ontwerpen: ik kies één hoofdrol.",
-            "Versieren: alles is even groot.",
-            "Ontwerpen: titel, beeld en naam hebben een plek.",
-            "Versieren: ik vul lege ruimte.",
-            "Ontwerpen: ik gebruik lege ruimte bewust."
+            "Versieren: ik voeg steeds iets toe.",
+            "Ontwerpen: ik bepaal eerst de hoofdrol.",
+            "Versieren: alles mag evenveel aandacht.",
+            "Ontwerpen: sommige dingen zijn bewust rustiger.",
+            "Versieren: lege ruimte voelt ongemakkelijk.",
+            "Ontwerpen: lege ruimte maakt het sterker."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Niet alles tegelijk",
+          "kicker": "MINDER LOS, MEER SYSTEEM",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F4D6.svg",
-          "imageAlt": "Een open boek.",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F4D6.svg",
-              "alt": "Een open boek.",
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details.",
               "caption": "",
               "source": ""
             }
@@ -33990,14 +33990,14 @@
         },
         {
           "type": "gallery",
-          "title": "Vier stijlen",
-          "subtitle": "Welke past het meest bij jou?",
+          "title": "Vier beeldrichtingen",
+          "subtitle": "Kies een stijl voordat je details tekent",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Kies een richting",
+          "kicker": "GEEN LOSSE IDEEËN, MAAR EEN RICHTING",
           "text": "",
           "image": "",
           "imageAlt": "",
@@ -34012,38 +34012,38 @@
         {
           "type": "wordbank",
           "title": "Wat past bij jou?",
-          "subtitle": "Kies maximaal vijf woorden",
+          "subtitle": "Kies maximaal vijf aanknopingspunten",
           "showProjectLogo": false,
           "items": [
             "muziek",
             "sport",
-            "games",
-            "film",
-            "serie",
             "stad",
             "natuur",
+            "film",
+            "serie",
+            "game",
             "eten",
+            "reizen",
             "familie",
-            "vrienden",
             "initialen",
-            "logo",
-            "lievelingswoord",
+            "symbool",
             "kleur",
-            "hobby"
+            "lievelingswoord",
+            "patroon"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Persoonlijk, maar niet rommelig",
+          "kicker": "PERSOONLIJK, MAAR GERICHT",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F3A7.svg",
-          "imageAlt": "Koptelefoon als symbool voor muziek.",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een collage met kleurvlakken en papierstructuur.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F3A7.svg",
-              "alt": "Koptelefoon als symbool voor muziek.",
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een collage met kleurvlakken en papierstructuur.",
               "caption": "",
               "source": ""
             }
@@ -34056,38 +34056,38 @@
         {
           "type": "wordbank",
           "title": "Wat past bij Nederlands?",
-          "subtitle": "Gebruik taal als beeld",
+          "subtitle": "Gebruik taal als materiaal",
           "showProjectLogo": false,
           "items": [
             "letters",
             "woorden",
             "zinnen",
             "boeken",
-            "tekstballon",
+            "hoofdstukken",
+            "tekstballonnen",
             "aanhalingstekens",
-            "alfabet",
-            "verhaal",
-            "titel",
-            "bladzijde",
-            "hoofdstuk",
-            "pen",
+            "bladzijdes",
+            "titels",
             "papier",
             "inkt",
-            "gedicht"
+            "verhalen",
+            "gedichten",
+            "alfabet",
+            "leestekens"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Woorden zijn ook vormen",
+          "kicker": "WOORDEN KUNNEN VORMEN WORDEN",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-          "imageAlt": "Verschillende aanhalingstekens en leestekens.",
+          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage van letters en tekstfragmenten.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-              "alt": "Verschillende aanhalingstekens en leestekens.",
+              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage van letters en tekstfragmenten.",
               "caption": "",
               "source": ""
             }
@@ -34105,22 +34105,22 @@
           "items": [
             "Herhaal één vorm, letter of symbool.",
             "Maak één onderdeel groot.",
-            "Gebruik twee of drie kleuren.",
-            "Extra: zet er een kader omheen."
+            "Beperk je kleuren tot twee of drie.",
+            "Gebruik eventueel een kader om alles samen te brengen."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Simpel werkt vaak beter",
+          "kicker": "VAN LOS IDEE NAAR GEHEEL",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F4A1.svg",
-          "imageAlt": "Een lampje.",
+          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F4A1.svg",
-              "alt": "Een lampje.",
+              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten.",
               "caption": "",
               "source": ""
             }
@@ -34133,29 +34133,29 @@
         {
           "type": "before-after",
           "title": "Van druk naar sterk",
-          "subtitle": "Zo maak je je ontwerp beter",
+          "subtitle": "Kleine keuzes maken groot verschil",
           "showProjectLogo": false,
           "items": [
-            "Voor: overal kleine tekeningetjes.",
-            "Na: één beeld krijgt de hoofdrol.",
+            "Voor: overal kleine losse tekeningetjes.",
+            "Na: één vorm of woord krijgt de hoofdrol.",
             "Voor: veel kleuren zonder plan.",
-            "Na: drie kleuren komen terug.",
-            "Voor: NEDERLANDS staat ergens klein.",
-            "Na: NEDERLANDS springt eruit."
+            "Na: twee of drie kleuren keren terug.",
+            "Voor: naam en klas verdwijnen tussen de details.",
+            "Na: naam en klas hebben een vaste plek."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Eén duidelijke keuze",
+          "kicker": "SCHRAPPEN IS OOK ONTWERPEN",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/School%20Supplies%20%284271893115%29.jpg",
-          "imageAlt": "Schoolspullen bij elkaar.",
+          "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Close-up van een rode boekcover met duidelijke textuur.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/School%20Supplies%20%284271893115%29.jpg",
-              "alt": "Schoolspullen bij elkaar.",
+              "src": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Close-up van een rode boekcover met duidelijke textuur.",
               "caption": "",
               "source": ""
             }
@@ -34168,29 +34168,29 @@
         {
           "type": "task",
           "title": "Maak drie mini-schetsen",
-          "subtitle": "Nog niet op je echte schrift",
+          "subtitle": "Werk klein, snel en zonder gumstress",
           "showProjectLogo": false,
           "items": [
-            "Schets 1: NEDERLANDS heel groot.",
-            "Schets 2: jouw symbool heel groot.",
+            "Schets 1: NEDERLANDS als grootste onderdeel.",
+            "Schets 2: jouw persoonlijke symbool als grootste onderdeel.",
             "Schets 3: patroon, kader of boekenplank.",
-            "Werk klein en snel.",
-            "Kies daarna de sterkste versie."
+            "Kies daarna de sterkste.",
+            "Verbeter één ding voordat je op je schrift werkt."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Snel proberen",
+          "kicker": "EERST PROBEREN",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/270F.svg",
-          "imageAlt": "Een potlood.",
-          "caption": "",
+          "image": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Minimalistische compositie met potlood, tape en papier.",
+          "caption": "Een schets is geen eindversie. Een schets is een keuzeproef.",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/270F.svg",
-              "alt": "Een potlood.",
-              "caption": "",
+              "src": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Minimalistische compositie met potlood, tape en papier.",
+              "caption": "Een schets is geen eindversie. Een schets is een keuzeproef.",
               "source": ""
             }
           ],
@@ -34201,30 +34201,30 @@
         },
         {
           "type": "poll",
-          "title": "Welke richting kies jij?",
+          "title": "Welke stijl kies jij?",
           "subtitle": "Stem met je hand",
           "showProjectLogo": false,
           "items": [
-            "Street letters",
+            "Lettercollage",
             "Boekenplank",
-            "Doodles",
-            "Collage",
+            "Minimalistische cover",
+            "Mixed media",
             "Typografie",
-            "Minimalistisch"
+            "Strak kader met patroon"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Er zijn meerdere goede keuzes",
+          "kicker": "KIES EEN ONTWERPIDENTITEIT",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F590.svg",
-          "imageAlt": "Een opgestoken hand.",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Lichte collage met verf, papier en kleine grafische elementen.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F590.svg",
-              "alt": "Een opgestoken hand.",
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Lichte collage met verf, papier en kleine grafische elementen.",
               "caption": "",
               "source": ""
             }
@@ -34237,29 +34237,29 @@
         {
           "type": "checklist",
           "title": "Voor je begint",
-          "subtitle": "Check je schets",
+          "subtitle": "Controleer je schets",
           "showProjectLogo": false,
           "items": [
             "Zie je NEDERLANDS meteen?",
-            "Is je naam goed vindbaar?",
-            "Staat je klas erbij?",
-            "Zit er iets van jou in?",
-            "Zit er iets van Nederlands in?",
-            "Is het niet te vol?"
+            "Zijn je naam en klas duidelijk?",
+            "Past er iets bij jou?",
+            "Past er iets bij taal, lezen of verhalen?",
+            "Gebruik je herhaling, iets groots, beperkte kleuren of een kader?",
+            "Is het geheel niet te vol?"
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Eerst controleren",
+          "kicker": "SNELLE ONTWERPCHECK",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F50D.svg",
-          "imageAlt": "Een vergrootglas.",
+          "image": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F50D.svg",
-              "alt": "Een vergrootglas.",
+              "src": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond.",
               "caption": "",
               "source": ""
             }
@@ -34278,17 +34278,17 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Van schets naar schrift",
+          "kicker": "VAN SCHETS NAAR SCHRIFT",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-          "imageAlt": "Kleurrijke schriften.",
-          "caption": "Nu wordt je idee echt.",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met rustige vlakken en kleuraccenten.",
+          "caption": "Nu wordt je ontwerp echt.",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-              "alt": "Kleurrijke schriften.",
-              "caption": "Nu wordt je idee echt.",
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met rustige vlakken en kleuraccenten.",
+              "caption": "Nu wordt je ontwerp echt.",
               "source": ""
             }
           ],
@@ -34311,17 +34311,17 @@
           "emphasis": false,
           "variant": "",
           "layout": "image-left",
-          "kicker": "🖋 Eén stijl doorzetten",
+          "kicker": "ÉÉN STIJL DOORZETTEN",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F4D3.svg",
-          "imageAlt": "Een notitieboek.",
-          "caption": "",
+          "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Close-up van open boekpagina’s met tekst.",
+          "caption": "Een titelblad vertelt meteen wat voor boek je openslaat.",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F4D3.svg",
-              "alt": "Een notitieboek.",
-              "caption": "",
+              "src": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Close-up van open boekpagina’s met tekst.",
+              "caption": "Een titelblad vertelt meteen wat voor boek je openslaat.",
               "source": ""
             }
           ],
@@ -34340,21 +34340,21 @@
             "Persoonlijk: je ziet iets van de maker.",
             "Nederlands: taal, lezen of schrijven is zichtbaar.",
             "Samenhang: onderdelen passen bij elkaar.",
-            "Verzorgd: je hebt netjes afgewerkt."
+            "Verzorgd: het is netjes afgewerkt."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Bewust gemaakt telt",
+          "kicker": "BEWUST GEMAAKT",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F4CB.svg",
-          "imageAlt": "Een klembord.",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage met grote zwarte letters en tekstfragmenten.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F4CB.svg",
-              "alt": "Een klembord.",
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage met grote zwarte letters en tekstfragmenten.",
               "caption": "",
               "source": ""
             }
@@ -34378,16 +34378,16 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Niet beoordelen, maar benoemen",
+          "kicker": "NIET BEOORDELEN, MAAR BENOEMEN",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/1F441.svg",
-          "imageAlt": "Een oog.",
+          "image": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Boeken op een plank met ritme, kleur en diepte.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/1F441.svg",
-              "alt": "Een oog.",
+              "src": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Boeken op een plank met ritme, kleur en diepte.",
               "caption": "",
               "source": ""
             }
@@ -34406,7 +34406,7 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Ideeën verzamelen",
+          "kicker": "KIJKEN ALS MAKER",
           "text": "",
           "image": "",
           "imageAlt": "",
@@ -34432,16 +34432,16 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Dit wil ik later terugzien",
+          "kicker": "DIT WIL IK TERUGZIEN",
           "text": "",
-          "image": "https://openmoji.org/data/color/svg/2705.svg",
-          "imageAlt": "Een vinkje.",
+          "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Open boekpagina’s met tekst.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://openmoji.org/data/color/svg/2705.svg",
-              "alt": "Een vinkje.",
+              "src": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Open boekpagina’s met tekst.",
               "caption": "",
               "source": ""
             }
@@ -34460,16 +34460,16 @@
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "🖋 Jouw Nederlands, jouw boek",
+          "kicker": "JOUW NEDERLANDS, JOUW BOEK",
           "text": "",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-          "imageAlt": "Graffitiletters op een muur.",
+          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
           "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij.",
           "source": "",
           "images": [
             {
-              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-              "alt": "Graffitiletters op een muur.",
+              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
               "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij.",
               "source": ""
             }
@@ -34681,127 +34681,127 @@
           {
             "type": "hero",
             "title": "Les 2 - Maak het van jou",
-            "subtitle": "Ontwerp een netschrift dat meteen van jou voelt",
+            "subtitle": "Ontwerp een netschrift dat voelt als jouw eigen boek",
             "items": [],
-            "kicker": "🖋 Nederlands begint op de voorkant",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-            "imageAlt": "Graffiti met grote letters op een muur.",
-            "caption": "Letters kunnen saai zijn. Of ze kunnen meteen aandacht pakken."
+            "kicker": "LETTERS ALS BEELD",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
+            "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn."
           },
           {
             "type": "visual",
             "title": "Eerste indruk",
-            "subtitle": "Je hebt vijf seconden",
+            "subtitle": "Waar stuurt het ontwerp je oog naartoe?",
             "items": [
-              "Waar kijk je als eerste naar?",
-              "Welke kleur blijft hangen?",
-              "Wat voelt rustig?",
-              "Wat voelt druk?",
-              "Wat zou jij anders doen?"
+              "Wat zie je als eerste?",
+              "Welke kleur of vorm trekt aandacht?",
+              "Wat blijft rustig?",
+              "Wat maakt het geheel spannend?",
+              "Wat zou jij kunnen gebruiken?"
             ],
-            "kicker": "🖋 Kijk zonder uitleg",
+            "kicker": "KIJKEN VOOR JE BEGINT",
             "layout": "image-left",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-            "imageAlt": "Een rij kleurrijke schriften.",
-            "caption": "Een goede voorkant laat snel zien waar hij over gaat."
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
+            "caption": "Een sterke voorkant kiest wat belangrijk is."
           },
           {
             "type": "spotlight",
             "title": "NEDERLANDS",
-            "subtitle": "Dit woord moet je meteen zien",
+            "subtitle": "Dit woord moet straks meteen zichtbaar zijn",
             "items": [],
-            "kicker": "🖋 Maak één ding groot",
-            "text": "NEDERLANDS",
-            "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-            "imageAlt": "Een vulpen."
+            "kicker": "HOOFDROL",
+            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een zwart-witte typografische collage met grote letters.",
+            "text": "Maak dit woord groot genoeg."
           },
           {
             "type": "question",
-            "title": "Kijk als een ontwerper",
-            "subtitle": "Niet: vind ik dit mooi? Wel: wat werkt hier?",
+            "title": "Wat maakt een bladzijde sterk?",
+            "subtitle": "Kijk naar keuzes, niet naar smaak",
             "items": [
-              "Welke letters vallen op?",
-              "Waardoor vallen ze op?",
               "Wat wordt herhaald?",
-              "Waar zie je contrast?",
-              "Wat kun je hiervan lenen voor je schrift?"
+              "Waar zit contrast?",
+              "Waar is bewust ruimte leeg gelaten?",
+              "Wat voelt als hoofdbeeld?",
+              "Wat voelt als achtergrond?"
             ],
-            "kicker": "🖋 Ontwerpers kijken precies",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-            "imageAlt": "Graffitiletters op een muur."
+            "kicker": "ONTWERPERSBLIK",
+            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon."
           },
           {
             "type": "compare",
             "title": "Versieren of ontwerpen?",
             "subtitle": "Het verschil zit in kiezen",
             "items": [
-              "Versieren: ik plak er nog iets bij.",
-              "Ontwerpen: ik kies één hoofdrol.",
-              "Versieren: alles is even groot.",
-              "Ontwerpen: titel, beeld en naam hebben een plek.",
-              "Versieren: ik vul lege ruimte.",
-              "Ontwerpen: ik gebruik lege ruimte bewust."
+              "Versieren: ik voeg steeds iets toe.",
+              "Ontwerpen: ik bepaal eerst de hoofdrol.",
+              "Versieren: alles mag evenveel aandacht.",
+              "Ontwerpen: sommige dingen zijn bewust rustiger.",
+              "Versieren: lege ruimte voelt ongemakkelijk.",
+              "Ontwerpen: lege ruimte maakt het sterker."
             ],
-            "kicker": "🖋 Niet alles tegelijk",
-            "image": "https://openmoji.org/data/color/svg/1F4D6.svg",
-            "imageAlt": "Een open boek."
+            "kicker": "MINDER LOS, MEER SYSTEEM",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details."
           },
           {
             "type": "gallery",
-            "title": "Vier stijlen",
-            "subtitle": "Welke past het meest bij jou?",
+            "title": "Vier beeldrichtingen",
+            "subtitle": "Kies een stijl voordat je details tekent",
             "items": [],
-            "kicker": "🖋 Kies een richting"
+            "kicker": "GEEN LOSSE IDEEËN, MAAR EEN RICHTING"
           },
           {
             "type": "wordbank",
             "title": "Wat past bij jou?",
-            "subtitle": "Kies maximaal vijf woorden",
+            "subtitle": "Kies maximaal vijf aanknopingspunten",
             "items": [
               "muziek",
               "sport",
-              "games",
-              "film",
-              "serie",
               "stad",
               "natuur",
+              "film",
+              "serie",
+              "game",
               "eten",
+              "reizen",
               "familie",
-              "vrienden",
               "initialen",
-              "logo",
-              "lievelingswoord",
+              "symbool",
               "kleur",
-              "hobby"
+              "lievelingswoord",
+              "patroon"
             ],
-            "kicker": "🖋 Persoonlijk, maar niet rommelig",
-            "image": "https://openmoji.org/data/color/svg/1F3A7.svg",
-            "imageAlt": "Koptelefoon als symbool voor muziek."
+            "kicker": "PERSOONLIJK, MAAR GERICHT",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een collage met kleurvlakken en papierstructuur."
           },
           {
             "type": "wordbank",
             "title": "Wat past bij Nederlands?",
-            "subtitle": "Gebruik taal als beeld",
+            "subtitle": "Gebruik taal als materiaal",
             "items": [
               "letters",
               "woorden",
               "zinnen",
               "boeken",
-              "tekstballon",
+              "hoofdstukken",
+              "tekstballonnen",
               "aanhalingstekens",
-              "alfabet",
-              "verhaal",
-              "titel",
-              "bladzijde",
-              "hoofdstuk",
-              "pen",
+              "bladzijdes",
+              "titels",
               "papier",
               "inkt",
-              "gedicht"
+              "verhalen",
+              "gedichten",
+              "alfabet",
+              "leestekens"
             ],
-            "kicker": "🖋 Woorden zijn ook vormen",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-            "imageAlt": "Verschillende aanhalingstekens en leestekens."
+            "kicker": "WOORDEN KUNNEN VORMEN WORDEN",
+            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage van letters en tekstfragmenten."
           },
           {
             "type": "timeline",
@@ -34810,84 +34810,85 @@
             "items": [
               "Herhaal één vorm, letter of symbool.",
               "Maak één onderdeel groot.",
-              "Gebruik twee of drie kleuren.",
-              "Extra: zet er een kader omheen."
+              "Beperk je kleuren tot twee of drie.",
+              "Gebruik eventueel een kader om alles samen te brengen."
             ],
-            "kicker": "🖋 Simpel werkt vaak beter",
-            "image": "https://openmoji.org/data/color/svg/1F4A1.svg",
-            "imageAlt": "Een lampje."
+            "kicker": "VAN LOS IDEE NAAR GEHEEL",
+            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten."
           },
           {
             "type": "before-after",
             "title": "Van druk naar sterk",
-            "subtitle": "Zo maak je je ontwerp beter",
+            "subtitle": "Kleine keuzes maken groot verschil",
             "items": [
-              "Voor: overal kleine tekeningetjes.",
-              "Na: één beeld krijgt de hoofdrol.",
+              "Voor: overal kleine losse tekeningetjes.",
+              "Na: één vorm of woord krijgt de hoofdrol.",
               "Voor: veel kleuren zonder plan.",
-              "Na: drie kleuren komen terug.",
-              "Voor: NEDERLANDS staat ergens klein.",
-              "Na: NEDERLANDS springt eruit."
+              "Na: twee of drie kleuren keren terug.",
+              "Voor: naam en klas verdwijnen tussen de details.",
+              "Na: naam en klas hebben een vaste plek."
             ],
-            "kicker": "🖋 Eén duidelijke keuze",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/School%20Supplies%20%284271893115%29.jpg",
-            "imageAlt": "Schoolspullen bij elkaar."
+            "kicker": "SCHRAPPEN IS OOK ONTWERPEN",
+            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van een rode boekcover met duidelijke textuur."
           },
           {
             "type": "task",
             "title": "Maak drie mini-schetsen",
-            "subtitle": "Nog niet op je echte schrift",
+            "subtitle": "Werk klein, snel en zonder gumstress",
             "items": [
-              "Schets 1: NEDERLANDS heel groot.",
-              "Schets 2: jouw symbool heel groot.",
+              "Schets 1: NEDERLANDS als grootste onderdeel.",
+              "Schets 2: jouw persoonlijke symbool als grootste onderdeel.",
               "Schets 3: patroon, kader of boekenplank.",
-              "Werk klein en snel.",
-              "Kies daarna de sterkste versie."
+              "Kies daarna de sterkste.",
+              "Verbeter één ding voordat je op je schrift werkt."
             ],
-            "kicker": "🖋 Snel proberen",
-            "image": "https://openmoji.org/data/color/svg/270F.svg",
-            "imageAlt": "Een potlood."
+            "kicker": "EERST PROBEREN",
+            "image": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Minimalistische compositie met potlood, tape en papier.",
+            "caption": "Een schets is geen eindversie. Een schets is een keuzeproef."
           },
           {
             "type": "poll",
-            "title": "Welke richting kies jij?",
+            "title": "Welke stijl kies jij?",
             "subtitle": "Stem met je hand",
             "items": [
-              "Street letters",
+              "Lettercollage",
               "Boekenplank",
-              "Doodles",
-              "Collage",
+              "Minimalistische cover",
+              "Mixed media",
               "Typografie",
-              "Minimalistisch"
+              "Strak kader met patroon"
             ],
-            "kicker": "🖋 Er zijn meerdere goede keuzes",
-            "image": "https://openmoji.org/data/color/svg/1F590.svg",
-            "imageAlt": "Een opgestoken hand."
+            "kicker": "KIES EEN ONTWERPIDENTITEIT",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Lichte collage met verf, papier en kleine grafische elementen."
           },
           {
             "type": "checklist",
             "title": "Voor je begint",
-            "subtitle": "Check je schets",
+            "subtitle": "Controleer je schets",
             "items": [
               "Zie je NEDERLANDS meteen?",
-              "Is je naam goed vindbaar?",
-              "Staat je klas erbij?",
-              "Zit er iets van jou in?",
-              "Zit er iets van Nederlands in?",
-              "Is het niet te vol?"
+              "Zijn je naam en klas duidelijk?",
+              "Past er iets bij jou?",
+              "Past er iets bij taal, lezen of verhalen?",
+              "Gebruik je herhaling, iets groots, beperkte kleuren of een kader?",
+              "Is het geheel niet te vol?"
             ],
-            "kicker": "🖋 Eerst controleren",
-            "image": "https://openmoji.org/data/color/svg/1F50D.svg",
-            "imageAlt": "Een vergrootglas."
+            "kicker": "SNELLE ONTWERPCHECK",
+            "image": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond."
           },
           {
             "type": "title",
             "title": "Aan de slag",
             "subtitle": "Maak je voorkant",
-            "kicker": "🖋 Van schets naar schrift",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notebooks-rainbow.jpg",
-            "imageAlt": "Kleurrijke schriften.",
-            "caption": "Nu wordt je idee echt."
+            "kicker": "VAN SCHETS NAAR SCHRIFT",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met rustige vlakken en kleuraccenten.",
+            "caption": "Nu wordt je ontwerp echt."
           },
           {
             "type": "visual",
@@ -34899,10 +34900,11 @@
               "Laat iets van je voorkant terugkomen.",
               "Gebruik dezelfde kleuren, letters, vormen of symbolen."
             ],
-            "kicker": "🖋 Eén stijl doorzetten",
+            "kicker": "ÉÉN STIJL DOORZETTEN",
             "layout": "image-left",
-            "image": "https://openmoji.org/data/color/svg/1F4D3.svg",
-            "imageAlt": "Een notitieboek."
+            "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van open boekpagina’s met tekst.",
+            "caption": "Een titelblad vertelt meteen wat voor boek je openslaat."
           },
           {
             "type": "rubric",
@@ -34913,11 +34915,11 @@
               "Persoonlijk: je ziet iets van de maker.",
               "Nederlands: taal, lezen of schrijven is zichtbaar.",
               "Samenhang: onderdelen passen bij elkaar.",
-              "Verzorgd: je hebt netjes afgewerkt."
+              "Verzorgd: het is netjes afgewerkt."
             ],
-            "kicker": "🖋 Bewust gemaakt telt",
-            "image": "https://openmoji.org/data/color/svg/1F4CB.svg",
-            "imageAlt": "Een klembord."
+            "kicker": "BEWUST GEMAAKT",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage met grote zwarte letters en tekstfragmenten."
           },
           {
             "type": "think-pair-share",
@@ -34929,16 +34931,16 @@
               "Deel: welk idee had jij zelf niet bedacht?",
               "Verbeter: pas één klein onderdeel aan."
             ],
-            "kicker": "🖋 Niet beoordelen, maar benoemen",
-            "image": "https://openmoji.org/data/color/svg/1F441.svg",
-            "imageAlt": "Een oog."
+            "kicker": "NIET BEOORDELEN, MAAR BENOEMEN",
+            "image": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Boeken op een plank met ritme, kleur en diepte."
           },
           {
             "type": "gallery",
             "title": "Galerij",
             "subtitle": "Zoek slimme ontwerpkeuzes",
             "items": [],
-            "kicker": "🖋 Ideeën verzamelen"
+            "kicker": "KIJKEN ALS MAKER"
           },
           {
             "type": "exit-ticket",
@@ -34950,17 +34952,17 @@
               "Dit wil ik dit jaar in mijn netschrift kunnen terugzien...",
               "Volgende keer wil ik nog verbeteren..."
             ],
-            "kicker": "🖋 Dit wil ik later terugzien",
-            "image": "https://openmoji.org/data/color/svg/2705.svg",
-            "imageAlt": "Een vinkje."
+            "kicker": "DIT WIL IK TERUGZIEN",
+            "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Open boekpagina’s met tekst."
           },
           {
             "type": "title",
             "title": "Maak er iets bijzonders van",
             "subtitle": "Dit is pas het begin",
-            "kicker": "🖋 Jouw Nederlands, jouw boek",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooke_shields_alphabet_graffiti.jpg",
-            "imageAlt": "Graffitiletters op een muur.",
+            "kicker": "JOUW NEDERLANDS, JOUW BOEK",
+            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
             "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij."
           }
         ]
@@ -35003,14 +35005,14 @@
               "3B Creatief taal gebruiken",
               "3C Schrijven om te leren",
               "7A Talige identiteit",
-              "presentatiestijl:",
-              "beeldrijk",
-              "middelbare-school-proof",
-              "street/boek/schetsboek-sfeer",
-              "korte dia’s",
-              "veel kijkvragen",
-              "vaste stijlhaak: vulpen",
-              "geen bronnen onder afbeeldingen"
+              "beeldstijl:",
+              "editorial collage",
+              "typografie",
+              "boekontwerp",
+              "papierstructuur",
+              "rustige maar krachtige composities",
+              "geen grote iconen als hoofdbeeld",
+              "geen stockfoto's van schrijvende handen"
             ]
           },
           "planning": {
@@ -36497,7 +36499,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T12:17:26+02:00-studio",
+  "sourceRevision": "2026-09-06T12:17:31+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
