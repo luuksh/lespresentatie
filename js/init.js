@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const MANUAL_LESSON_OVERRIDES_KEY = 'lespresentatie.manualLessonOverridesByAgendaEntry';
   const TEACHER_LESSON_SELECTION_PUBLISH_URL = '/api/docent-lesselectie/publish';
   const BOARD_ASSIGNMENT_KEY = 'lespresentatie.boardAssignmentText';
+  const USE_LOCAL_STUDIO_DRAFT = window.APP_CONFIG?.useLocalStudioDraft === true;
   const PLAN_REFRESH_MS = 5 * 60 * 1000;
   const AGENDA_REFRESH_MS = 60 * 1000;
   const LESSON_TRANSITION_LEAD_MS = 60 * 1000;
@@ -2319,6 +2320,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function loadPlanningStudioFromStorage() {
+    if (!USE_LOCAL_STUDIO_DRAFT) return null;
     const raw = String(localStorage.getItem(PLAN_STUDIO_KEY) || '').trim();
     if (!raw) return null;
     try {
@@ -4465,6 +4467,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       fetchPlanning({ forceLive: true });
       return;
     }
+    if (!USE_LOCAL_STUDIO_DRAFT) return;
     if (event.key !== PLAN_STUDIO_KEY) return;
     const latest = loadPlanningStudioFromStorage();
     if (!latest) return;

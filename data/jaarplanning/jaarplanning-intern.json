@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T09:27:10+02:00",
+  "updatedAt": "2026-09-06T09:47:40+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3836,7 +3836,10 @@
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -3872,7 +3875,10 @@
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
-          "sequenceIndex": 1
+          "sequenceIndex": 1,
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -34800,7 +34806,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T09:27:10+02:00-studio",
+  "sourceRevision": "2026-09-06T09:47:40+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,

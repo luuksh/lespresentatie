@@ -9,6 +9,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import threading
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -17,6 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BODY_BYTES = 20 * 1024 * 1024
 AUTO_GIT_PUSH_ENV = "KLASSENPLATTEGROND_AUTO_GIT_PUSH"
+STUDIO_DOC_PATH = ROOT / "data/jaarplanning/jaarplanning-intern.json"
+PUBLISH_LOCK = threading.Lock()
 PUBLIC_PORTAL_FILES = [
     "data/jaarplanning/jaarplanning-intern.json",
     "data/planning-rules.json",
@@ -25,6 +28,7 @@ PUBLIC_PORTAL_FILES = [
     "data/kerndoelen",
     "index.html",
     "docent.html",
+    "leeglokaal.html",
     "css/internal-shell.css",
     "css/style.css",
     "css/lesstudio.css",
@@ -281,14 +285,47 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(HTTPStatus.NO_CONTENT)
         self.end_headers()
 
+    def do_GET(self) -> None:
+        route = self.path.split("?", 1)[0]
+        if route == "/api/studio/doc":
+            self.read_studio_doc()
+            return
+        super().do_GET()
+
     def do_POST(self) -> None:
         route = self.path.split("?", 1)[0]
         if route == "/api/docent-lesselectie/publish":
             self.publish_teacher_lesson_selection()
             return
 
-        if route != "/api/presentatie-studio/publish":
-            self.send_error(HTTPStatus.NOT_FOUND, "Onbekende API-route")
+        if route in {"/api/presentatie-studio/publish", "/api/studio/doc"}:
+            self.publish_studio_doc()
+            return
+
+        self.send_error(HTTPStatus.NOT_FOUND, "Onbekende API-route")
+
+    def read_studio_doc(self) -> None:
+        try:
+            with PUBLISH_LOCK:
+                doc = json.loads(STUDIO_DOC_PATH.read_text(encoding="utf-8"))
+            if not isinstance(doc, dict):
+                raise ValueError(f"Ongeldig centraal opslagbestand: {STUDIO_DOC_PATH.relative_to(ROOT)}")
+            self.send_json(HTTPStatus.OK, {
+                "ok": True,
+                "doc": doc,
+                "updatedAt": str(doc.get("updatedAt") or ""),
+                "sourceRevision": str(doc.get("sourceRevision") or ""),
+                "source": str(STUDIO_DOC_PATH.relative_to(ROOT)),
+            })
+        except Exception as exc:
+            self.send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"ok": False, "error": str(exc)})
+
+    def publish_studio_doc(self) -> None:
+        if not STUDIO_DOC_PATH.exists():
+            self.send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {
+                "ok": False,
+                "error": f"Centraal opslagbestand ontbreekt: {STUDIO_DOC_PATH.relative_to(ROOT)}",
+            })
             return
 
         length_raw = self.headers.get("Content-Length", "0")
@@ -317,23 +354,24 @@ class Handler(SimpleHTTPRequestHandler):
             temp_path = Path(temp.name)
 
         try:
-            result = subprocess.run(
-                [sys.executable, str(ROOT / "scripts/apply_presentatie_studio_export.py"), str(temp_path)],
-                cwd=ROOT,
-                text=True,
-                capture_output=True,
-                check=True,
-            )
-            response = json.loads(result.stdout.strip().splitlines()[-1])
-            try:
-                response["autoGit"] = auto_commit_and_push(response)
-            except subprocess.CalledProcessError as exc:
-                message = (exc.stderr or exc.stdout or str(exc)).strip()
-                response["autoGit"] = {
-                    "enabled": truthy_env(AUTO_GIT_PUSH_ENV, True),
-                    "ok": False,
-                    "message": message,
-                }
+            with PUBLISH_LOCK:
+                result = subprocess.run(
+                    [sys.executable, str(ROOT / "scripts/apply_presentatie_studio_export.py"), str(temp_path)],
+                    cwd=ROOT,
+                    text=True,
+                    capture_output=True,
+                    check=True,
+                )
+                response = json.loads(result.stdout.strip().splitlines()[-1])
+                try:
+                    response["autoGit"] = auto_commit_and_push(response)
+                except subprocess.CalledProcessError as exc:
+                    message = (exc.stderr or exc.stdout or str(exc)).strip()
+                    response["autoGit"] = {
+                        "enabled": truthy_env(AUTO_GIT_PUSH_ENV, True),
+                        "ok": False,
+                        "message": message,
+                    }
             self.send_json(HTTPStatus.OK, response)
         except subprocess.CalledProcessError as exc:
             message = (exc.stderr or exc.stdout or str(exc)).strip()
@@ -375,21 +413,27 @@ class Handler(SimpleHTTPRequestHandler):
         payload["updatedAt"] = str(payload.get("updatedAt") or "").strip() or current_utc_iso()
         encoded = json.dumps(payload, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
         written = []
-        for rel_path in ("js/docent-lesselectie-live.json", "docs/js/docent-lesselectie-live.json"):
-            target = ROOT / rel_path
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(encoded)
-            written.append(rel_path)
-
-        response = {
-            "ok": True,
-            "updatedAt": payload["updatedAt"],
-            "live": written[0],
-            "docsLive": written[1],
-            "entryCount": len(payload.get("entries", [])),
-        }
         try:
-            response["autoGit"] = auto_commit_and_push(response)
+            with PUBLISH_LOCK:
+                for rel_path in ("js/docent-lesselectie-live.json", "docs/js/docent-lesselectie-live.json"):
+                    target = ROOT / rel_path
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(encoded)
+                    written.append(rel_path)
+        except Exception as exc:
+            self.send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"ok": False, "error": str(exc)})
+            return
+
+        try:
+            with PUBLISH_LOCK:
+                response = {
+                    "ok": True,
+                    "updatedAt": payload["updatedAt"],
+                    "live": written[0],
+                    "docsLive": written[1],
+                    "entryCount": len(payload.get("entries", [])),
+                }
+                response["autoGit"] = auto_commit_and_push(response)
         except subprocess.CalledProcessError as exc:
             message = (exc.stderr or exc.stdout or str(exc)).strip()
             response["autoGit"] = {

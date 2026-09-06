@@ -1,8 +1,10 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
+const STUDIO_DIRTY_KEY = 'lespresentatie.jaarplanningStudioDirty';
 const STUDIO_BACKUP_KEY = 'lespresentatie.jaarplanningStudioBackups';
 const PLATFORM_REFRESH_KEY = 'lespresentatie.platformRefresh';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
-const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
+const STUDIO_DOC_ENDPOINT = 'api/studio/doc';
+const PUBLISH_ENDPOINT = STUDIO_DOC_ENDPOINT;
 const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
 const STARTWEEK_PLANNING_WEEK = 35;
 const MENTOR_STARTWEEK_PRESENTATION_ID = 'project-mentorles-1d';
@@ -78,12 +80,14 @@ function resetButton(button) {
 
 function markLocalChanges() {
   hasLocalChanges = true;
+  trySetLocalStorage(STUDIO_DIRTY_KEY, new Date().toISOString());
   saveProjectBtn?.classList.add('has-changes');
   publishAllBtn?.classList.add('has-changes');
 }
 
 function clearLocalChanges() {
   hasLocalChanges = false;
+  try { localStorage.removeItem(STUDIO_DIRTY_KEY); } catch {}
   saveProjectBtn?.classList.remove('has-changes');
   publishAllBtn?.classList.remove('has-changes');
 }
@@ -275,6 +279,219 @@ function parseNetschriftItems(value) {
     .split('\n')
     .map((line) => line.replace(/^\s*[-*•]\s+/, '').trim())
     .filter(Boolean);
+}
+
+const NETSCHRIFT_STRUCTURE_TAGS = new Set(['netschrift', 'netschrift-start', 'netschrift-eind', 'netschrift-check']);
+const HOMEWORK_STRUCTURE_TAGS = new Set(['huiswerk', 'homework', 'agenda']);
+const CURRICULUM_STRUCTURE_TAGS = new Set(['metadata', 'meta', 'doelen', 'lesdoelen', 'curriculum']);
+const CURRICULUM_FIELD_ALIASES = {
+  lesdoel: 'lessonGoals',
+  lesdoelen: 'lessonGoals',
+  leerdoel: 'lessonGoals',
+  leerdoelen: 'lessonGoals',
+  vaardigheid: 'skills',
+  vaardigheden: 'skills',
+  skill: 'skills',
+  skills: 'skills',
+  kerndoel: 'kerndoelen',
+  kerndoelen: 'kerndoelen',
+  subkerndoel: 'subkerndoelen',
+  subkerndoelen: 'subkerndoelen',
+};
+
+function cleanListItems(items) {
+  return [...new Set((Array.isArray(items) ? items : [])
+    .map((item) => String(item || '').replace(/^\s*[-*•]\s+/, '').trim())
+    .filter(Boolean))];
+}
+
+function splitStructuredList(value) {
+  return cleanListItems(String(value || '')
+    .split(/[;\n]/)
+    .flatMap((part) => part.split(/\s+\|\s+/)));
+}
+
+function parseStructureHead(line) {
+  const match = String(line || '').trim().match(/^\[([a-z0-9_-]+)\]\s*(.*)$/i);
+  if (!match) return null;
+  return {
+    tag: String(match[1] || '').trim().toLowerCase().replaceAll('_', '-'),
+    title: String(match[2] || '').trim(),
+  };
+}
+
+function normalizePresentationText(text) {
+  return String(text || '')
+    .split('\n')
+    .map((line) => line.trim().match(/^```/) ? '' : line)
+    .join('\n')
+    .trim();
+}
+
+function parseStructureBlockItems(lines) {
+  const items = [];
+  for (const line of lines) {
+    const subtitle = line.match(/^subtitle\s*:\s*(.*)$/i);
+    if (subtitle) {
+      const value = String(subtitle[1] || '').trim();
+      if (value) items.push(value);
+      continue;
+    }
+    const bullet = line.match(/^[-*•]\s+(.*)$/);
+    if (bullet) items.push(String(bullet[1] || '').trim());
+    else if (line && !/^[a-z][a-z\s-]*\s*:/i.test(line)) items.push(line);
+  }
+  return cleanListItems(items);
+}
+
+function parseCurriculumStructure(lines) {
+  const out = { lessonGoals: [], skills: [], kerndoelen: [], subkerndoelen: [] };
+  let activeField = 'lessonGoals';
+  for (const rawLine of lines) {
+    const line = String(rawLine || '').replace(/^\s*[-*•]\s+/, '').trim();
+    if (!line) continue;
+    const field = line.match(/^([a-zA-ZÀ-ž\s-]+)\s*:\s*(.*)$/);
+    if (field) {
+      const key = CURRICULUM_FIELD_ALIASES[String(field[1] || '').trim().toLowerCase()];
+      if (key) {
+        activeField = key;
+        out[key].push(...splitStructuredList(field[2]));
+        continue;
+      }
+    }
+    out[activeField].push(line);
+  }
+  return {
+    lessonGoals: cleanListItems(out.lessonGoals),
+    skills: cleanListItems(out.skills),
+    kerndoelen: cleanListItems(out.kerndoelen),
+    subkerndoelen: cleanListItems(out.subkerndoelen),
+  };
+}
+
+function cleanCurriculumMeta(curriculum) {
+  const source = curriculum && typeof curriculum === 'object' ? curriculum : {};
+  return {
+    lessonGoals: cleanListItems(source.lessonGoals),
+    skills: cleanListItems(source.skills),
+    kerndoelen: cleanListItems(source.kerndoelen),
+    subkerndoelen: cleanListItems(source.subkerndoelen),
+  };
+}
+
+function hasCurriculumMeta(curriculum) {
+  return Object.values(cleanCurriculumMeta(curriculum)).some((items) => items.length);
+}
+
+function parsePresentationStructure(text) {
+  const chunks = normalizePresentationText(text).split(/\n\s*---\s*\n/g).map((chunk) => chunk.trim()).filter(Boolean);
+  const visibleChunks = [];
+  const netschriftItems = [];
+  const homeworkItems = [];
+  const curriculum = { lessonGoals: [], skills: [], kerndoelen: [], subkerndoelen: [] };
+  let hasHomeworkBlock = false;
+  let hasCurriculumBlock = false;
+
+  for (const chunk of chunks) {
+    const lines = chunk.split('\n').map((line) => line.trim()).filter(Boolean);
+    const head = parseStructureHead(lines[0]);
+    if (!head) {
+      visibleChunks.push(chunk);
+      continue;
+    }
+    if (NETSCHRIFT_STRUCTURE_TAGS.has(head.tag)) {
+      netschriftItems.push(...parseStructureBlockItems([head.title, ...lines.slice(1)].filter(Boolean)));
+      continue;
+    }
+    if (HOMEWORK_STRUCTURE_TAGS.has(head.tag)) {
+      hasHomeworkBlock = true;
+      homeworkItems.push(...parseStructureBlockItems([head.title, ...lines.slice(1)].filter(Boolean)));
+      continue;
+    }
+    if (CURRICULUM_STRUCTURE_TAGS.has(head.tag)) {
+      hasCurriculumBlock = true;
+      const parsed = parseCurriculumStructure(lines.slice(1));
+      for (const key of Object.keys(curriculum)) curriculum[key].push(...parsed[key]);
+      continue;
+    }
+    visibleChunks.push(chunk);
+  }
+
+  return {
+    slides: parseSlides(visibleChunks.join('\n---\n'), { fallback: false }),
+    netschriftItems: cleanListItems(netschriftItems),
+    homeworkItems: cleanListItems(homeworkItems),
+    hasHomeworkBlock,
+    hasCurriculumBlock,
+    curriculum: cleanCurriculumMeta(curriculum),
+  };
+}
+
+function assembleRenderableLessonSlides(baseSlides, { startSlide = null, endSlide = null, homeworkSlide = null } = {}) {
+  const slides = (Array.isArray(baseSlides) ? baseSlides : []).filter((slide) => slide && typeof slide === 'object');
+  const out = [];
+  if (slides.length) {
+    out.push(slides[0]);
+    if (startSlide) out.push(startSlide);
+    out.push(...slides.slice(1));
+  } else if (startSlide) {
+    out.push(startSlide);
+  }
+  if (endSlide) out.push(endSlide);
+  if (homeworkSlide) out.push(homeworkSlide);
+  return out;
+}
+
+function renderableSlidesForMarker(presentation, markerId, baseSlides) {
+  const meta = presentation?.lessonMeta?.[markerId];
+  const netschriftItems = cleanListItems(meta?.netschrift?.items);
+  const homeworkItems = cleanListItems(meta?.homework?.items);
+  return assembleRenderableLessonSlides(baseSlides, {
+    startSlide: netschriftItems.length ? {
+      type: 'lesson-start-netschrift',
+      emphasis: true,
+      variant: 'netschrift',
+      title: 'Opdracht netschrift',
+      subtitle: 'Dit moet straks terug te vinden zijn',
+      items: netschriftItems,
+    } : null,
+    endSlide: netschriftItems.length ? {
+      type: 'lesson-end-netschrift',
+      emphasis: true,
+      variant: 'netschrift',
+      title: 'Netschriftcheck: gelukt?',
+      subtitle: 'Controleer dit voordat je afsluit',
+      items: netschriftItems,
+    } : null,
+    homeworkSlide: homeworkItems.length ? {
+      type: 'homework-preview',
+      emphasis: true,
+      variant: 'homework',
+      title: 'Schrijf in je agenda',
+      subtitle: 'Huiswerk voor de volgende keer',
+      items: homeworkItems,
+    } : null,
+  });
+}
+
+function applyStructuredLessonMeta(presentation, markerId, structure) {
+  const cleanMarkerId = String(markerId || '').trim();
+  if (!presentation || !cleanMarkerId || !structure) return;
+  const meta = lessonMetaForMarker(presentation, cleanMarkerId);
+  if (structure.hasCurriculumBlock) {
+    const curriculum = cleanCurriculumMeta(structure.curriculum);
+    if (hasCurriculumMeta(curriculum)) meta.curriculum = curriculum;
+    else delete meta.curriculum;
+  }
+  if (structure.hasHomeworkBlock) {
+    const homeworkItems = cleanListItems(structure.homeworkItems);
+    if (homeworkItems.length) meta.homework = { items: homeworkItems };
+    else delete meta.homework;
+  }
+  if (!Object.keys(meta).length) {
+    delete presentation.lessonMeta[cleanMarkerId];
+    if (!Object.keys(presentation.lessonMeta).length) delete presentation.lessonMeta;
+  }
 }
 
 function knownProjectNames() {
@@ -548,9 +765,27 @@ async function fetchJson(path) {
   return res.json();
 }
 
-function saveStudio() {
-  state.doc.updatedAt = new Date().toISOString();
+async function fetchCentralStudioDoc() {
+  if (window.location.protocol === 'file:') return fetchJson(BASE_SOURCE);
+  try {
+    const payload = await fetchJson(STUDIO_DOC_ENDPOINT);
+    if (payload?.ok === false) throw new Error(payload.error || 'Centrale opslag gaf geen geldige response.');
+    const doc = payload?.doc && typeof payload.doc === 'object' ? payload.doc : payload;
+    if (!doc || typeof doc !== 'object' || !Array.isArray(doc.entries)) {
+      throw new Error('Centrale opslag bevat geen geldige jaarplanning.');
+    }
+    return doc;
+  } catch (err) {
+    console.warn('Centrale presentatiestudio-opslag niet bereikbaar; val terug op live JSON.', err);
+    return fetchJson(BASE_SOURCE);
+  }
+}
+
+function saveStudio({ dirty = hasLocalChanges, touch = true } = {}) {
+  if (touch) state.doc.updatedAt = new Date().toISOString();
   lastStudioCacheWriteOk = trySetLocalStorage(STUDIO_KEY, JSON.stringify(state.doc));
+  if (dirty) trySetLocalStorage(STUDIO_DIRTY_KEY, new Date().toISOString());
+  else try { localStorage.removeItem(STUDIO_DIRTY_KEY); } catch {}
   return lastStudioCacheWriteOk;
 }
 
@@ -563,9 +798,9 @@ function signalPlatformsRefresh(result = {}) {
 
 async function syncFromPublishedSource(result = {}) {
   try {
-    const liveDoc = ensureProjectPresentations(await fetchJson(BASE_SOURCE));
+    const liveDoc = ensureProjectPresentations(await fetchCentralStudioDoc());
     state.doc = liveDoc;
-    saveStudio();
+    saveStudio({ dirty: false, touch: false });
   } catch (err) {
     console.warn('Live bron kon na publiceren niet worden teruggelezen:', err);
   }
@@ -676,10 +911,15 @@ function exportAll() {
 
 function autoGitMessage(result = {}) {
   const git = result.autoGit;
-  if (!git || git.enabled === false) return '';
+  if (!git) return '';
+  if (git.enabled === false) return ' Let op: automatisch git-pushen staat uit; online kan nog oud zijn.';
   return git.ok
     ? ` ${git.message || 'Automatisch gepusht.'}`
     : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
+}
+
+function autoGitNeedsAttention(result = {}) {
+  return result.autoGit?.ok === false || result.autoGit?.enabled === false;
 }
 
 function publishErrorMessage(err) {
@@ -734,7 +974,7 @@ async function publishAll({ skipFlush = false, skipCurrentProjectSave = false, a
     await syncFromPublishedSource(result);
     clearLocalChanges();
     setButtonDone(publishAllBtn, 'Gepubliceerd');
-    setStatus(`${auto ? 'Automatisch opgeslagen en gepubliceerd' : 'Gepubliceerd naar omgevingen'}: ${result.presentations || Object.keys(state.doc.presentations || {}).length} presentaties bijgewerkt.${autoGitMessage(result)} Refresh docent/leerling met Cmd+Shift+R als je de wijziging nog niet ziet.`, result.autoGit?.ok === false ? 'error' : 'success');
+    setStatus(`${auto ? 'Automatisch opgeslagen en gepubliceerd' : 'Gepubliceerd naar omgevingen'}: ${result.presentations || Object.keys(state.doc.presentations || {}).length} presentaties bijgewerkt.${autoGitMessage(result)} Refresh docent/leerling met Cmd+Shift+R als je de wijziging nog niet ziet.`, autoGitNeedsAttention(result) ? 'error' : 'success');
     return true;
   } catch (err) {
     console.error(err);
@@ -945,8 +1185,8 @@ function serializeSlides(slides) {
   return parts.join('\n---\n');
 }
 
-function parseSlides(text) {
-  const chunks = String(text || '')
+function parseSlides(text, { fallback = true } = {}) {
+  const chunks = normalizePresentationText(text)
     .split(/\n\s*---\s*\n/g)
     .map((chunk) => chunk.trim())
     .filter(Boolean);
@@ -986,7 +1226,7 @@ function parseSlides(text) {
     slides.push(slide);
   }
 
-  if (!slides.length) {
+  if (!slides.length && fallback) {
     return [{ type: 'title', title: 'Nieuwe slide', subtitle: '', items: [] }];
   }
   return slides;
@@ -1064,7 +1304,11 @@ function draftPresentationForProject(project) {
   if (project === renderedProject) {
     for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
       const markerId = String(textarea.dataset.marker || '').trim();
-      if (markerId) pres.markerDecks[markerId] = parseSlides(textarea.value);
+      if (markerId) {
+        const structure = parsePresentationStructure(textarea.value);
+        pres.markerDecks[markerId] = structure.slides;
+        applyStructuredLessonMeta(pres, markerId, structure);
+      }
     }
   }
 
@@ -1126,10 +1370,12 @@ function markerTitle(project, markerId, slides = []) {
 
 function slidesForStudioPlayer(presentation, markerId = '') {
   if (!markerId) return Array.isArray(presentation?.slides) ? presentation.slides : [];
-  const markerDeck = Array.isArray(presentation?.markerDecks?.[markerId])
+  const hasMarkerDeck = Array.isArray(presentation?.markerDecks?.[markerId]);
+  const markerDeck = hasMarkerDeck
     ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
     : [];
-  if (markerDeck.length) return markerDeck;
+  const renderedDeck = renderableSlidesForMarker(presentation, markerId, markerDeck);
+  if (renderedDeck.length || hasMarkerDeck) return renderedDeck;
   const idx = Number(presentation?.markers?.[markerId]);
   const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
   return Number.isInteger(idx) && slides[idx] ? [slides[idx]] : [];
@@ -1180,7 +1426,11 @@ function renderStudioPlayerSlide() {
     `;
 
   if (studioPlayerStage) {
-    studioPlayerStage.innerHTML = `<article class="studio-player-slide">${content}</article>`;
+    const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const classes = ['studio-player-slide'];
+    if (slide.emphasis) classes.push('is-emphasis');
+    if (variant) classes.push(`is-${variant}`);
+    studioPlayerStage.innerHTML = `<article class="${classes.join(' ')}">${content}</article>`;
   }
   if (studioPlayerTitle) studioPlayerTitle.textContent = activeStudioPresentation.title || 'Presentatie';
   if (studioPlayerCounter) studioPlayerCounter.textContent = slides.length ? `${idx + 1} / ${slides.length}` : '0 / 0';
@@ -1324,7 +1574,7 @@ function renderProject() {
         <span class="marker-id">${row.markerId}</span>
         <p class="marker-planning">${escapeHtml(planningSummaryForMarker(project, row.markerId))}</p>
       </td>
-      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[title] Intro met [linktekst](https://voorbeeld.nl)\\nsubtitle: Bekijk [bron](https://voorbeeld.nl)\\n---\\n[bullets] Kern\\n- punt 1 met [link](https://voorbeeld.nl)\\n- punt 2">${text}</textarea></td>
+      <td><textarea class="marker-textarea" data-marker="${row.markerId}" placeholder="[netschrift]\\n- Wat moet aan het einde van deze les in het netschrift staan?\\n---\\n[title] Intro met [linktekst](https://voorbeeld.nl)\\nsubtitle: Bekijk [bron](https://voorbeeld.nl)\\n---\\n[metadata]\\nvaardigheden: Schrijven; Reflectie\\nkerndoelen: KD1\\nsubkerndoelen: 1A">${text}</textarea></td>
       <td><textarea class="netschrift-textarea" data-netschrift-marker="${row.markerId}" placeholder="Wat moet na deze les in het netschrift staan?\\nBijvoorbeeld:\\n- Drie inzichten uit het artikel\\n- Antwoord op de onderzoeksvraag">${netschriftText}</textarea></td>
     `;
     markerBody.appendChild(tr);
@@ -1805,12 +2055,21 @@ function saveProject({ auto = false, project: forcedProject = '' } = {}) {
   for (const textarea of markerBody.querySelectorAll('.marker-textarea')) {
     const markerId = String(textarea.dataset.marker || '');
     if (!markerId) continue;
-    pres.markerDecks[markerId] = parseSlides(textarea.value);
+    const structure = parsePresentationStructure(textarea.value);
+    pres.markerDecks[markerId] = structure.slides;
+    applyStructuredLessonMeta(pres, markerId, structure);
   }
   for (const textarea of markerBody.querySelectorAll('.netschrift-textarea')) {
     const markerId = String(textarea.dataset.netschriftMarker || '');
     if (!markerId) continue;
-    setNetschriftItemsForMarker(pres, markerId, parseNetschriftItems(textarea.value));
+    const slideTextarea = markerBody.querySelector(`.marker-textarea[data-marker="${CSS.escape(markerId)}"]`);
+    const structuredItems = slideTextarea
+      ? parsePresentationStructure(slideTextarea.value).netschriftItems
+      : [];
+    setNetschriftItemsForMarker(pres, markerId, cleanListItems([
+      ...parseNetschriftItems(textarea.value),
+      ...structuredItems,
+    ]));
   }
 
   const markerOrder = orderedMarkerIdsWithExtras(markerRowsForProject(project).map((row) => row.markerId), pres);
@@ -1924,8 +2183,8 @@ function focusInitialMarkerFromUrl() {
 
 async function boot() {
   try {
-    const baseRaw = await fetchJson(BASE_SOURCE);
-    const fromStorage = localStorage.getItem(STUDIO_KEY);
+    const baseRaw = await fetchCentralStudioDoc();
+    const fromStorage = localStorage.getItem(STUDIO_DIRTY_KEY) ? localStorage.getItem(STUDIO_KEY) : null;
     let seed = fromStorage ? JSON.parse(fromStorage) : null;
     if (seed && !hasMentorStartweekPlanning(ensureProjectPresentations(seed))) {
       backupStudioDoc('oude cache zonder mentorstartweek genegeerd', seed);
@@ -1937,6 +2196,7 @@ async function boot() {
     state.doc = seed
       ? mergePreferRicherBase(baseRaw, seed)
       : ensureProjectPresentations(baseRaw);
+    if (seed) hasLocalChanges = true;
     const standaloneMerge = mergeStandalonePresentationsIntoProjects(state.doc);
     state.doc = standaloneMerge.doc;
     if (standaloneMerge.changed) markLocalChanges();

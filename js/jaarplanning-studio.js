@@ -1,6 +1,8 @@
 const STUDIO_KEY = 'lespresentatie.jaarplanningStudioData';
+const STUDIO_DIRTY_KEY = 'lespresentatie.jaarplanningStudioDirty';
 const BASE_SOURCE = 'js/jaarplanning-live.json';
-const PUBLISH_ENDPOINT = 'api/presentatie-studio/publish';
+const STUDIO_DOC_ENDPOINT = 'api/studio/doc';
+const PUBLISH_ENDPOINT = STUDIO_DOC_ENDPOINT;
 const STUDIO_SCHEMA_VERSION = 2;
 const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
 const SPECIAL_PLANNING_CLASS_IDS = [MENTOR_LESSON_CLASS_ID];
@@ -246,6 +248,22 @@ async function fetchJson(path) {
   const res = await fetch(url.toString(), { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
+}
+
+async function fetchCentralStudioDoc() {
+  if (window.location.protocol === 'file:') return fetchJson(BASE_SOURCE);
+  try {
+    const payload = await fetchJson(STUDIO_DOC_ENDPOINT);
+    if (payload?.ok === false) throw new Error(payload.error || 'Centrale opslag gaf geen geldige response.');
+    const doc = payload?.doc && typeof payload.doc === 'object' ? payload.doc : payload;
+    if (!doc || typeof doc !== 'object' || !Array.isArray(doc.entries)) {
+      throw new Error('Centrale opslag bevat geen geldige jaarplanning.');
+    }
+    return doc;
+  } catch (err) {
+    console.warn('Centrale jaarplanning-studio-opslag niet bereikbaar; val terug op live JSON.', err);
+    return fetchJson(BASE_SOURCE);
+  }
 }
 
 function layersFromDoc(doc) {
@@ -496,11 +514,16 @@ function renderLessonOrderPanel() {
     { state: 'active', title: 'Nu', items: [] },
     { state: 'future', title: 'Hierna', items: [] },
   ];
-  for (const slot of slots) {
+  slots.forEach((slot, orderIndex) => {
     const status = lessonTimelineStatus(slot.week);
     const group = groups.find((item) => item.state === status.state) || groups[2];
-    group.items.push({ slot, status, editableIndex: editableIndexBySlot.get(slot.lesson) });
-  }
+    group.items.push({
+      slot,
+      status,
+      orderNumber: orderIndex + 1,
+      editableIndex: editableIndexBySlot.get(slot.lesson),
+    });
+  });
 
   lessonOrderPanel.innerHTML = groups
     .filter((group) => group.items.length)
@@ -508,7 +531,7 @@ function renderLessonOrderPanel() {
       <section class="lesson-order-section">
         <h4>${escapeHtml(group.title)}</h4>
         <div class="lesson-order-cards">
-          ${group.items.map(({ slot, status, editableIndex }) => {
+          ${group.items.map(({ slot, status, orderNumber, editableIndex }) => {
             const lesson = slot.lesson;
             const project = String(lesson.project || '').trim();
             const title = lessonTitleForCard(slot);
@@ -521,7 +544,7 @@ function renderLessonOrderPanel() {
                 <div>
                   <p class="lesson-order-status">
                     <span aria-hidden="true">${escapeHtml(status.icon)}</span>
-                    <span>${escapeHtml(status.label)} · W${escapeHtml(slot.week)}${slot.lessonKey ? ` · ${escapeHtml(slot.lessonKey)}` : ''}</span>
+                    <span>${escapeHtml(status.label)} · Les ${escapeHtml(orderNumber)}${slot.lessonKey ? ` · ${escapeHtml(slot.lessonKey)}` : ''}</span>
                   </p>
                   <h5>${escapeHtml(title)}</h5>
                   ${project ? `<p>${escapeHtml(project)}</p>` : ''}
@@ -589,15 +612,21 @@ function bindLessonOrderPanel() {
   }
 }
 
-function saveStudio() {
-  state.doc.updatedAt = new Date().toISOString();
-  return trySaveStudioCache();
+function saveStudio({ dirty = true, touch = true } = {}) {
+  if (touch) state.doc.updatedAt = new Date().toISOString();
+  const ok = trySaveStudioCache();
+  if (dirty) {
+    try { localStorage.setItem(STUDIO_DIRTY_KEY, new Date().toISOString()); } catch {}
+  } else {
+    try { localStorage.removeItem(STUDIO_DIRTY_KEY); } catch {}
+  }
+  return ok;
 }
 
 async function syncFromPublishedSource() {
   try {
-    state.doc = collapseToYearLayerDoc(await fetchJson(BASE_SOURCE));
-    saveStudio();
+    state.doc = collapseToYearLayerDoc(await fetchCentralStudioDoc());
+    saveStudio({ dirty: false, touch: false });
     renderSheet();
     renderLessonOrderPanel();
   } catch (err) {
@@ -690,10 +719,15 @@ function exportAll() {
 
 function autoGitMessage(result = {}) {
   const git = result.autoGit;
-  if (!git || git.enabled === false) return '';
+  if (!git) return '';
+  if (git.enabled === false) return ' Let op: automatisch git-pushen staat uit; online kan nog oud zijn.';
   return git.ok
     ? ` ${git.message || 'Automatisch gepusht.'}`
     : ` Let op: automatisch pushen lukte niet: ${git.message || 'onbekende fout'}`;
+}
+
+function autoGitNeedsAttention(result = {}) {
+  return result.autoGit?.ok === false || result.autoGit?.enabled === false;
 }
 
 function publishErrorMessage(err) {
@@ -750,7 +784,7 @@ async function publishAll({ auto = false } = {}) {
     setButtonDone(saveAllBtn, auto ? 'Online' : 'Opgeslagen');
     setStatus(
       `${auto ? 'Automatisch opgeslagen' : 'Opgeslagen'}: ${result.entries || payload.counts.entries} planningregels en ${result.presentations || payload.counts.presentations} presentaties bijgewerkt.${autoGitMessage(result)}`,
-      result.autoGit?.ok === false,
+      autoGitNeedsAttention(result),
     );
     return true;
   } catch (err) {
@@ -862,12 +896,12 @@ function fillLayerOptions(layers) {
 async function boot() {
   try {
     const [baseRaw, classRaw] = await Promise.all([
-      fetchJson(BASE_SOURCE),
+      fetchCentralStudioDoc(),
       fetchJson('js/leerlingen_per_klas.json'),
     ]);
 
     state.baseDoc = collapseToYearLayerDoc(baseRaw);
-    const fromStorage = localStorage.getItem(STUDIO_KEY);
+    const fromStorage = localStorage.getItem(STUDIO_DIRTY_KEY) ? localStorage.getItem(STUDIO_KEY) : null;
     let localDoc = fromStorage ? collapseToYearLayerDoc(JSON.parse(fromStorage)) : null;
     if (localDoc && !hasMentorStartweekPlanning(localDoc)) {
       localStorage.removeItem(STUDIO_KEY);
@@ -885,7 +919,7 @@ async function boot() {
     fillLayerOptions(allLayers);
     classSelect.value = allLayers[0] || '1';
 
-    saveStudio();
+    saveStudio({ dirty: Boolean(localDoc), touch: Boolean(localDoc) });
     renderSheet();
     renderLessonOrderPanel();
     setStatus('Studio klaar. Excel-overzicht actief.');
