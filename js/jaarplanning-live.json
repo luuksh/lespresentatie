@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:48:32+02:00",
+  "updatedAt": "2026-09-06T16:49:51+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -8048,7 +8048,7 @@
         {
           "project": "Start Nederlands 4",
           "lesson": "Startles 1: Nederlands 4",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewnotities af als dat nog niet klaar is.\nDenk alvast na over één moment waarop taal voor jou verschil maakte. netschrift en pen mee",
+          "homework": "Neem je netschrift, pen en leesboek mee.\nNeem je interviewnotities volgende les mee.\nDenk alvast na welk taalmoment je wilt gebruiken voor je eerste tekst. netschrift en pen mee",
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-4",
           "presentationMarkerId": "marker-startles-4-1",
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:48:32+02:00",
+  "sourceRevision": "2026-09-06T16:49:51+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -42342,55 +42342,22 @@
         },
         {
           "type": "title",
-          "title": "Les 1 - Welkom bij Nederlands 4",
-          "subtitle": "De wereld als taallaboratorium",
+          "title": "Les 1 - Nederlands 4",
+          "subtitle": "Taal scherper lezen, schrijven en gebruiken",
           "showProjectLogo": false,
           "items": []
         },
         {
           "type": "title",
-          "title": "Nederlands 4",
-          "subtitle": "Meer zelfstandigheid, meer onderbouwing",
+          "title": "Wat verandert er?",
+          "subtitle": "Minder invullen, meer verantwoorden",
           "showProjectLogo": false,
           "items": [
             "Je leest langere en complexere teksten.",
-            "Je formuleert nauwkeuriger.",
-            "Je onderbouwt je keuzes beter.",
-            "Je ontwikkelt smaak, stijl en zelfstandigheid."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Taalmaker",
-          "subtitle": "Jij gebruikt taal niet neutraal",
-          "showProjectLogo": false,
-          "items": []
-        },
-        {
-          "type": "title",
-          "title": "Klas 3 en klas 4",
-          "subtitle": "De lat verschuift",
-          "showProjectLogo": false,
-          "items": [
-            "Klas 3: ik probeer een aanpak.",
-            "Klas 4: ik kan uitleggen waarom die aanpak werkt.",
-            "Klas 3: ik geef mijn mening.",
-            "Klas 4: ik onderbouw mijn mening met voorbeelden.",
-            "Klas 3: ik verbeter iets.",
-            "Klas 4: ik kan aanwijzen wat sterker is geworden."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Lesroute vandaag",
-          "subtitle": "45 minuten",
-          "showProjectLogo": false,
-          "items": [
-            "0-8 min: start Nederlands 4.",
-            "8-18 min: vaardigheden en beoordeling.",
-            "18-30 min: netschrift inrichten.",
-            "30-42 min: duo-interview.",
-            "42-45 min: markeren en afronden."
+            "Je formuleert preciezer.",
+            "Je onderbouwt met voorbeelden.",
+            "Je werkt zelfstandiger.",
+            "Je verbetert bewuster."
           ]
         },
         {
@@ -42402,192 +42369,123 @@
         },
         {
           "type": "title",
-          "title": "Beoordeling in klas 4",
-          "subtitle": "Cijfers, feedback en groei",
+          "title": "Beoordeling",
+          "subtitle": "In klas 4 werken we met cijfers",
           "showProjectLogo": false,
           "items": [
-            "Je weet vooraf welke vaardigheid centraal staat.",
-            "Feedback laat zien wat sterker kan.",
-            "Verbeteren hoort bij het werk.",
-            "Je moet keuzes steeds beter kunnen uitleggen."
+            "Feedback laat zien wat al werkt.",
+            "Feedback laat zien wat je volgende stap is.",
+            "Verbeteringen tellen mee in je ontwikkeling.",
+            "Je eindproduct is belangrijk, maar je proces ook."
           ]
         },
         {
           "type": "title",
-          "title": "Het netschrift",
-          "subtitle": "Jouw werkplaats voor Nederlands",
+          "title": "Bewijsplek",
+          "subtitle": "Daarom gebruiken we een netschrift",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Netschriftcode",
+          "subtitle": "Kort en consequent",
           "showProjectLogo": false,
           "items": [
-            "Je verzamelt ideeën.",
-            "Je bewaart eerste versies.",
-            "Je noteert feedback.",
-            "Je maakt verbeteringen zichtbaar.",
-            "Je laat jouw eigen bijdrage zien."
+            "Titel en datum bij iedere opdracht.",
+            "Witruimte, alinea's en tussenkopjes.",
+            "Leesbaar en verzorgd.",
+            "Schema's of kaders als ze helpen.",
+            "Verbeteringen mogen zichtbaar blijven."
           ]
         },
         {
           "type": "title",
-          "title": "De Netschriftcode",
-          "subtitle": "Onze vaste standaard",
+          "title": "Inrichten",
+          "subtitle": "Klaarzetten voor het jaar",
           "showProjectLogo": false,
           "items": [
-            "Nieuwe opdracht: titel en datum.",
-            "Gebruik witruimte, alinea's en tussenkopjes.",
-            "Schrijf rustig en leesbaar.",
-            "Gebruik kaders, schema's of illustraties als ze iets verduidelijken.",
-            "Corrigeer netjes; verbeteringen mogen zichtbaar blijven."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Mooi of functioneel?",
-          "subtitle": "In klas 4 moet vormgeving inhoud helpen",
-          "showProjectLogo": false,
-          "items": [
-            "Mooi: het ziet er verzorgd uit.",
-            "Functioneel: je begrijpt de inhoud sneller.",
-            "Mooi: er is aandacht besteed aan de pagina.",
-            "Functioneel: structuur, verbanden en stappen zijn duidelijk.",
-            "Mooi: persoonlijke stijl.",
-            "Functioneel: bruikbaar om later op terug te kijken."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Richt je netschrift in",
-          "subtitle": "Voorin",
-          "showProjectLogo": false,
-          "items": [
-            "Titelblad: NETSCHRIFT NEDERLANDS, naam, klas en schooljaar.",
-            "Eén pagina inhoudsopgave.",
+            "Titelblad.",
+            "Inhoudsopgave.",
             "Tien pagina's leesmeters.",
-            "Daarna begint het gedeelte PROJECTEN.",
-            "Nummer gebruikte pagina's vanaf nu."
+            "Daarna PROJECTEN.",
+            "Achterin woordenlijst en grammatica."
           ]
         },
         {
           "type": "title",
-          "title": "Richt je netschrift in",
-          "subtitle": "Achterin",
+          "title": "Waarom nu een interview?",
+          "subtitle": "Het is vooronderzoek voor je eerste tekst",
           "showProjectLogo": false,
           "items": [
-            "Draai je schrift om.",
-            "Reserveer vier pagina's voor woordenlijst.",
-            "Daarna begint grammatica.",
-            "Deze onderdelen vul je gedurende het jaar aan.",
-            "Houd projecten en oefenstof gescheiden."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Ieder project begint zo",
-          "subtitle": "Een vaste start voorkomt chaos",
-          "showProjectLogo": false,
-          "items": [
-            "Nieuw voorblad met projectnummer en projecttitel.",
-            "Noteer de vaardigheid die centraal staat.",
-            "Voeg een tabje toe.",
-            "Werk je inhoudsopgave bij.",
-            "Begin met individueel denkwerk."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Ieder project eindigt zo",
-          "subtitle": "Reflectie maakt groei zichtbaar",
-          "showProjectLogo": false,
-          "items": [
-            "Wat heb ik gemaakt of onderzocht?",
-            "Wat kan ik nu beter dan aan het begin?",
-            "Waar zie je dat concreet aan?",
-            "Wat werkte nog niet goed?",
-            "Wat neem ik mee naar de volgende opdracht?"
+            "Luister naar voorbeelden.",
+            "Vraag door op details.",
+            "Noteer letterlijke woorden.",
+            "Zoek waar taal iets veranderde."
           ]
         },
         {
           "type": "title",
           "title": "Duo-interview",
-          "subtitle": "Niet over jezelf schrijven, maar de ander precies vangen",
+          "subtitle": "Verzamel materiaal voor les 2",
           "showProjectLogo": false,
           "items": [
-            "Stel de vraag hardop.",
-            "Vraag door bij een vaag antwoord.",
-            "Schrijf niet letterlijk alles op.",
-            "Noteer de kern in goede zinnen.",
+            "Stel de vraag.",
+            "Vraag één keer door.",
+            "Noteer de kern.",
+            "Schrijf minimaal één letterlijk woord of zinnetje op.",
             "Wissel daarna van rol."
           ]
         },
         {
           "type": "title",
-          "title": "Interviewronde 1",
-          "subtitle": "Taal en smaak",
+          "title": "Interviewvragen",
+          "subtitle": "Kies er drie, vraag door bij één",
           "showProjectLogo": false,
           "items": [
-            "Welke zin, quote, liedregel of uitspraak is jou bijgebleven?",
-            "Welk boek, verhaal, lied, film of gesprek vond jij taalsterk?",
-            "Welke taalgebruik erger je snel?",
-            "Wanneer vind jij iemand overtuigend spreken?",
-            "Welke tekst zou iedereen eigenlijk moeten lezen of horen?"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Interviewronde 2",
-          "subtitle": "Proberen, falen en beter worden",
-          "showProjectLogo": false,
-          "items": [
-            "Waar liep je vorig jaar bij Nederlands op vast?",
-            "Wat heb je daarvan geleerd?",
-            "Waar wil je dit jaar scherper in worden?",
-            "Wat durf je nog niet goed bij spreken, lezen of schrijven?",
-            "Waar mag een docent jou op aanspreken?"
+            "Wanneer kwamen woorden anders over dan bedoeld?",
+            "Welke zin of uitspraak is je bijgebleven?",
+            "Wanneer vond iemand precies de goede woorden?",
+            "Welke tekst, boekzin of liedregel raakte je?",
+            "Wanneer kwam jij niet goed uit je woorden?",
+            "Wanneer werkte een grap alleen door de formulering?"
           ]
         },
         {
           "type": "title",
           "title": "Doorvragen",
-          "subtitle": "Maak het antwoord bruikbaar",
+          "subtitle": "Maak het concreet",
           "showProjectLogo": false,
           "items": [
-            "Kun je een voorbeeld geven?",
-            "Waarom juist dat?",
-            "Wat bedoel je precies met dat woord?",
-            "Wanneer merkte je dat?",
-            "Wat moet ik hiervan onthouden?"
+            "Wat werd er precies gezegd?",
+            "Door welk woord veranderde de toon?",
+            "Wat gebeurde er daarna?",
+            "Waarom bleef dit hangen?",
+            "Wat zegt dit volgens jou over taal?"
           ]
         },
         {
           "type": "title",
-          "title": "Markeer je materiaal",
-          "subtitle": "Dit heb je in les 2 nodig",
+          "title": "Markeer je beste materiaal",
+          "subtitle": "Dit neem je mee naar les 2",
           "showProjectLogo": false,
           "items": [
-            "Zet een ster bij het sterkste antwoord.",
-            "Zet een cirkel om een formulering die precies klinkt.",
-            "Zet een uitroepteken bij iets dat met ontwikkeling te maken heeft.",
-            "Schrijf onderaan: dit zegt iets over deze persoon omdat...",
-            "Bewaar deze notities voor les 2."
+            "Ster: sterkste taalmoment.",
+            "Cirkel: letterlijk woord of zinnetje.",
+            "Uitroepteken: waarom het ertoe deed.",
+            "Onderstreep: detail dat je niet wilt vergeten."
           ]
         },
         {
           "type": "title",
-          "title": "Einde les 1",
-          "subtitle": "Wat ligt er nu klaar?",
+          "title": "Vooruitblik",
+          "subtitle": "Volgende les schrijf je hierover",
           "showProjectLogo": false,
           "items": [
-            "Mijn netschrift heeft een basis.",
-            "Ik weet hoe projecten starten en eindigen.",
-            "Ik heb interviewmateriaal verzameld.",
-            "Ik heb gemarkeerd wat ik volgende les kan gebruiken.",
-            "Ik weet waarom verbeteren zichtbaar mag blijven."
+            "Ik schrijf waarschijnlijk over...",
+            "Het belangrijke woord of zinnetje is...",
+            "Dit moment laat iets zien over taal omdat..."
           ]
-        },
-        {
-          "type": "title",
-          "title": "Dit is je startpunt",
-          "subtitle": "Vanaf hier moet ontwikkeling zichtbaar worden",
-          "showProjectLogo": false,
-          "items": []
         },
         {
           "type": "title",
@@ -42841,306 +42739,186 @@
       ],
       "markers": {
         "marker-startles-4-1": 1,
-        "marker-startles-4-2": 22
+        "marker-startles-4-2": 14
       },
       "markerDecks": {
         "marker-startles-4-1": [
           {
             "type": "hero",
-            "title": "Les 1 - Welkom bij Nederlands 4",
-            "subtitle": "De wereld als taallaboratorium",
+            "title": "Les 1 - Nederlands 4",
+            "subtitle": "Taal scherper lezen, schrijven en gebruiken",
             "items": [],
             "kicker": "START BOVENBOUW",
             "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een stijlvolle collage van papier, tekstfragmenten en grote letters.",
-            "caption": "Dit jaar gaat Nederlands over taal die werkt: in teksten, gesprekken, verhalen, nieuws, muziek en je eigen keuzes."
+            "imageAlt": "Collage van papier, tekstfragmenten en grote letters.",
+            "caption": "Dit jaar gaat het niet alleen om antwoorden, maar om keuzes onderbouwen en ontwikkeling laten zien."
           },
           {
             "type": "visual",
-            "title": "Nederlands 4",
-            "subtitle": "Meer zelfstandigheid, meer onderbouwing",
+            "title": "Wat verandert er?",
+            "subtitle": "Minder invullen, meer verantwoorden",
             "items": [
               "Je leest langere en complexere teksten.",
-              "Je formuleert nauwkeuriger.",
-              "Je onderbouwt je keuzes beter.",
-              "Je ontwikkelt smaak, stijl en zelfstandigheid."
+              "Je formuleert preciezer.",
+              "Je onderbouwt met voorbeelden.",
+              "Je werkt zelfstandiger.",
+              "Je verbetert bewuster."
             ],
-            "kicker": "WAT VERANDERT ER?",
+            "kicker": "KLAS 4",
             "layout": "image-left",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van drukletters.",
-            "caption": "Je gaat minder alleen antwoorden geven en meer laten zien hoe je denkt."
-          },
-          {
-            "type": "spotlight",
-            "title": "Taalmaker",
-            "subtitle": "Jij gebruikt taal niet neutraal",
-            "items": [],
-            "kicker": "JIJ KIEST EFFECT",
-            "text": "Elk woord stuurt iets.",
-            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Abstracte papiercollage met tekststroken."
-          },
-          {
-            "type": "compare",
-            "title": "Klas 3 en klas 4",
-            "subtitle": "De lat verschuift",
-            "items": [
-              "Klas 3: ik probeer een aanpak.",
-              "Klas 4: ik kan uitleggen waarom die aanpak werkt.",
-              "Klas 3: ik geef mijn mening.",
-              "Klas 4: ik onderbouw mijn mening met voorbeelden.",
-              "Klas 3: ik verbeter iets.",
-              "Klas 4: ik kan aanwijzen wat sterker is geworden."
-            ],
-            "kicker": "VAN MEEDOEN NAAR VERANTWOORDEN",
-            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Mixed-media collage met papier, verf en lagen."
-          },
-          {
-            "type": "timeline",
-            "title": "Lesroute vandaag",
-            "subtitle": "45 minuten",
-            "items": [
-              "0-8 min: start Nederlands 4.",
-              "8-18 min: vaardigheden en beoordeling.",
-              "18-30 min: netschrift inrichten.",
-              "30-42 min: duo-interview.",
-              "42-45 min: markeren en afronden."
-            ],
-            "kicker": "SYSTEEM, INTERVIEW, STARTPUNT",
-            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van een rode boekcover met duidelijke structuur."
+            "imageAlt": "Close-up van drukletters."
           },
           {
             "type": "gallery",
             "title": "Vier vaardigheden",
             "subtitle": "Hier werk je het hele jaar aan",
             "items": [],
-            "kicker": "WAT MOET GROEIEN?"
+            "kicker": "WAT WORDT BEOORDEELD?"
           },
           {
             "type": "source",
-            "title": "Beoordeling in klas 4",
-            "subtitle": "Cijfers, feedback en groei",
+            "title": "Beoordeling",
+            "subtitle": "In klas 4 werken we met cijfers",
             "items": [
-              "Je weet vooraf welke vaardigheid centraal staat.",
-              "Feedback laat zien wat sterker kan.",
-              "Verbeteren hoort bij het werk.",
-              "Je moet keuzes steeds beter kunnen uitleggen."
+              "Feedback laat zien wat al werkt.",
+              "Feedback laat zien wat je volgende stap is.",
+              "Verbeteringen tellen mee in je ontwikkeling.",
+              "Je eindproduct is belangrijk, maar je proces ook."
             ],
-            "kicker": "WAT TELT MEE?",
-            "text": "Een beoordeling gaat niet alleen over één eindproduct, maar over wat jij laat zien: voorbereiding, keuzes, uitvoering, verbetering en reflectie.",
+            "kicker": "CIJFER + FEEDBACK",
             "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met kleurvlakken en tekst."
+            "imageAlt": "Papiercollage met tekstfragmenten.",
+            "text": "Bij ieder project weet je vooraf welke vaardigheid centraal staat en waarop je wordt beoordeeld."
           },
           {
-            "type": "visual",
-            "title": "Het netschrift",
-            "subtitle": "Jouw werkplaats voor Nederlands",
-            "items": [
-              "Je verzamelt ideeën.",
-              "Je bewaart eerste versies.",
-              "Je noteert feedback.",
-              "Je maakt verbeteringen zichtbaar.",
-              "Je laat jouw eigen bijdrage zien."
-            ],
-            "kicker": "DENKEN WORDT ZICHTBAAR",
-            "layout": "image-left",
-            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Mixed-media collage met papierlagen.",
-            "caption": "Niet alleen nette antwoorden tellen. Ook eerste ideeën, twijfels, analyses en verbeteringen zijn bewijs van leren."
+            "type": "spotlight",
+            "title": "Bewijsplek",
+            "subtitle": "Daarom gebruiken we een netschrift",
+            "items": [],
+            "kicker": "DENKEN ZICHTBAAR MAKEN",
+            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van een boekcover.",
+            "text": "Je netschrift laat zien hoe je denkt, kiest en verbetert."
           },
           {
             "type": "checklist",
-            "title": "De Netschriftcode",
-            "subtitle": "Onze vaste standaard",
+            "title": "Netschriftcode",
+            "subtitle": "Kort en consequent",
             "items": [
-              "Nieuwe opdracht: titel en datum.",
-              "Gebruik witruimte, alinea's en tussenkopjes.",
-              "Schrijf rustig en leesbaar.",
-              "Gebruik kaders, schema's of illustraties als ze iets verduidelijken.",
-              "Corrigeer netjes; verbeteringen mogen zichtbaar blijven."
+              "Titel en datum bij iedere opdracht.",
+              "Witruimte, alinea's en tussenkopjes.",
+              "Leesbaar en verzorgd.",
+              "Schema's of kaders als ze helpen.",
+              "Verbeteringen mogen zichtbaar blijven."
             ],
-            "kicker": "BOVENBOUW = BEWUST WERKEN",
+            "kicker": "VASTE STANDAARD",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Letterpressletters in close-up."
+            "imageAlt": "Letterpressletters."
           },
           {
-            "type": "compare",
-            "title": "Mooi of functioneel?",
-            "subtitle": "In klas 4 moet vormgeving inhoud helpen",
+            "type": "timeline",
+            "title": "Inrichten",
+            "subtitle": "Klaarzetten voor het jaar",
             "items": [
-              "Mooi: het ziet er verzorgd uit.",
-              "Functioneel: je begrijpt de inhoud sneller.",
-              "Mooi: er is aandacht besteed aan de pagina.",
-              "Functioneel: structuur, verbanden en stappen zijn duidelijk.",
-              "Mooi: persoonlijke stijl.",
-              "Functioneel: bruikbaar om later op terug te kijken."
-            ],
-            "kicker": "GEEN DECORATIE OM DECORATIE",
-            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Boekcover met sterke typografie en textuur."
-          },
-          {
-            "type": "steps",
-            "title": "Richt je netschrift in",
-            "subtitle": "Voorin",
-            "items": [
-              "Titelblad: NETSCHRIFT NEDERLANDS, naam, klas en schooljaar.",
-              "Eén pagina inhoudsopgave.",
+              "Titelblad.",
+              "Inhoudsopgave.",
               "Tien pagina's leesmeters.",
-              "Daarna begint het gedeelte PROJECTEN.",
-              "Nummer gebruikte pagina's vanaf nu."
+              "Daarna PROJECTEN.",
+              "Achterin woordenlijst en grammatica."
             ],
-            "kicker": "BASIS VOOR HET JAAR",
+            "kicker": "10 MINUTEN STRAK WERKEN",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
             "imageAlt": "Boekenkast met herhaalde boekenruggen."
           },
           {
-            "type": "steps",
-            "title": "Richt je netschrift in",
-            "subtitle": "Achterin",
+            "type": "visual",
+            "title": "Waarom nu een interview?",
+            "subtitle": "Het is vooronderzoek voor je eerste tekst",
             "items": [
-              "Draai je schrift om.",
-              "Reserveer vier pagina's voor woordenlijst.",
-              "Daarna begint grammatica.",
-              "Deze onderdelen vul je gedurende het jaar aan.",
-              "Houd projecten en oefenstof gescheiden."
+              "Luister naar voorbeelden.",
+              "Vraag door op details.",
+              "Noteer letterlijke woorden.",
+              "Zoek waar taal iets veranderde."
             ],
-            "kicker": "TWEE KANTEN, ÉÉN SYSTEEM",
-            "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
-            "imageAlt": "Close-up van boekpagina's."
-          },
-          {
-            "type": "timeline",
-            "title": "Ieder project begint zo",
-            "subtitle": "Een vaste start voorkomt chaos",
-            "items": [
-              "Nieuw voorblad met projectnummer en projecttitel.",
-              "Noteer de vaardigheid die centraal staat.",
-              "Voeg een tabje toe.",
-              "Werk je inhoudsopgave bij.",
-              "Begin met individueel denkwerk."
-            ],
-            "kicker": "PROJECTRITME",
-            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met herhaling en structuur."
-          },
-          {
-            "type": "timeline",
-            "title": "Ieder project eindigt zo",
-            "subtitle": "Reflectie maakt groei zichtbaar",
-            "items": [
-              "Wat heb ik gemaakt of onderzocht?",
-              "Wat kan ik nu beter dan aan het begin?",
-              "Waar zie je dat concreet aan?",
-              "Wat werkte nog niet goed?",
-              "Wat neem ik mee naar de volgende opdracht?"
-            ],
-            "kicker": "TERUGKIJKEN MET BEWIJS",
+            "kicker": "VAN GESPREK NAAR SCHRIJVEN",
+            "layout": "image-left",
             "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Mixed-media papiercollage."
+            "imageAlt": "Mixed-media collage met papier en tekst.",
+            "caption": "Je zoekt een concreet moment waarop taal verschil maakte. Dat kan van jou zijn, of uit het verhaal van je klasgenoot."
           },
           {
             "type": "task",
             "title": "Duo-interview",
-            "subtitle": "Niet over jezelf schrijven, maar de ander precies vangen",
+            "subtitle": "Verzamel materiaal voor les 2",
             "items": [
-              "Stel de vraag hardop.",
-              "Vraag door bij een vaag antwoord.",
-              "Schrijf niet letterlijk alles op.",
-              "Noteer de kern in goede zinnen.",
+              "Stel de vraag.",
+              "Vraag één keer door.",
+              "Noteer de kern.",
+              "Schrijf minimaal één letterlijk woord of zinnetje op.",
               "Wissel daarna van rol."
             ],
-            "kicker": "LUDIEKE KENNISMAKING",
-            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met kleur en tekstfragmenten.",
-            "caption": "Jij schrijft de antwoorden van je klasgenoot op. Kort, precies en met één keer doorvragen."
-          },
-          {
-            "type": "question",
-            "title": "Interviewronde 1",
-            "subtitle": "Taal en smaak",
-            "items": [
-              "Welke zin, quote, liedregel of uitspraak is jou bijgebleven?",
-              "Welk boek, verhaal, lied, film of gesprek vond jij taalsterk?",
-              "Welke taalgebruik erger je snel?",
-              "Wanneer vind jij iemand overtuigend spreken?",
-              "Welke tekst zou iedereen eigenlijk moeten lezen of horen?"
-            ],
-            "kicker": "WARM WORDEN",
-            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Typografische collage met grote letters."
-          },
-          {
-            "type": "question",
-            "title": "Interviewronde 2",
-            "subtitle": "Proberen, falen en beter worden",
-            "items": [
-              "Waar liep je vorig jaar bij Nederlands op vast?",
-              "Wat heb je daarvan geleerd?",
-              "Waar wil je dit jaar scherper in worden?",
-              "Wat durf je nog niet goed bij spreken, lezen of schrijven?",
-              "Waar mag een docent jou op aanspreken?"
-            ],
-            "kicker": "VRAAG DOOR",
+            "kicker": "TAALMOMENTEN",
             "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Abstracte collage met tekststroken."
+            "imageAlt": "Papiercollage met tekststroken."
+          },
+          {
+            "type": "question",
+            "title": "Interviewvragen",
+            "subtitle": "Kies er drie, vraag door bij één",
+            "items": [
+              "Wanneer kwamen woorden anders over dan bedoeld?",
+              "Welke zin of uitspraak is je bijgebleven?",
+              "Wanneer vond iemand precies de goede woorden?",
+              "Welke tekst, boekzin of liedregel raakte je?",
+              "Wanneer kwam jij niet goed uit je woorden?",
+              "Wanneer werkte een grap alleen door de formulering?"
+            ],
+            "kicker": "WAAR DEED TAAL IETS?",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage."
           },
           {
             "type": "writing-frame",
             "title": "Doorvragen",
-            "subtitle": "Maak het antwoord bruikbaar",
+            "subtitle": "Maak het concreet",
             "items": [
-              "Kun je een voorbeeld geven?",
-              "Waarom juist dat?",
-              "Wat bedoel je precies met dat woord?",
-              "Wanneer merkte je dat?",
-              "Wat moet ik hiervan onthouden?"
+              "Wat werd er precies gezegd?",
+              "Door welk woord veranderde de toon?",
+              "Wat gebeurde er daarna?",
+              "Waarom bleef dit hangen?",
+              "Wat zegt dit volgens jou over taal?"
             ],
-            "kicker": "INTERVIEWTECHNIEK",
+            "kicker": "DETAILS VINDEN",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
             "imageAlt": "Close-up van drukletters."
           },
           {
             "type": "task",
-            "title": "Markeer je materiaal",
-            "subtitle": "Dit heb je in les 2 nodig",
+            "title": "Markeer je beste materiaal",
+            "subtitle": "Dit neem je mee naar les 2",
             "items": [
-              "Zet een ster bij het sterkste antwoord.",
-              "Zet een cirkel om een formulering die precies klinkt.",
-              "Zet een uitroepteken bij iets dat met ontwikkeling te maken heeft.",
-              "Schrijf onderaan: dit zegt iets over deze persoon omdat...",
-              "Bewaar deze notities voor les 2."
+              "Ster: sterkste taalmoment.",
+              "Cirkel: letterlijk woord of zinnetje.",
+              "Uitroepteken: waarom het ertoe deed.",
+              "Onderstreep: detail dat je niet wilt vergeten."
             ],
-            "kicker": "VAN INTERVIEW NAAR SCHRIJFMATERIAAL",
-            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Mixed-media collage met papier en verf."
+            "kicker": "SCHRIJFSTOF",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met kleurvlakken."
           },
           {
             "type": "exit-ticket",
-            "title": "Einde les 1",
-            "subtitle": "Wat ligt er nu klaar?",
+            "title": "Vooruitblik",
+            "subtitle": "Volgende les schrijf je hierover",
             "items": [
-              "Mijn netschrift heeft een basis.",
-              "Ik weet hoe projecten starten en eindigen.",
-              "Ik heb interviewmateriaal verzameld.",
-              "Ik heb gemarkeerd wat ik volgende les kan gebruiken.",
-              "Ik weet waarom verbeteren zichtbaar mag blijven."
+              "Ik schrijf waarschijnlijk over...",
+              "Het belangrijke woord of zinnetje is...",
+              "Dit moment laat iets zien over taal omdat..."
             ],
-            "kicker": "CHECK VOORDAT JE GAAT",
+            "kicker": "KIES JE MOMENT",
             "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Rode boekcover met sterke structuur."
-          },
-          {
-            "type": "title",
-            "title": "Dit is je startpunt",
-            "subtitle": "Vanaf hier moet ontwikkeling zichtbaar worden",
-            "kicker": "NEDERLANDS 4",
-            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Typografische collage met papierlagen en letters.",
-            "caption": "Volgende les maak je van je interviewmateriaal een eerste schrijfopdracht."
+            "imageAlt": "Rode boekcover."
           }
         ],
         "marker-startles-4-2": [
@@ -43444,35 +43222,31 @@
         "marker-startles-4-1": {
           "netschrift": {
             "items": [
-              "Je verzamelt ideeën, analyses, eerste versies en verbeteringen.",
-              "Je bewaart werk waar je later op terug wilt kunnen kijken.",
-              "Je maakt zichtbaar hoe je tot een antwoord of product bent gekomen.",
-              "Ook bij groepswerk begint het denkwerk individueel in je netschrift.",
-              "Iedere nieuwe opdracht begint met een duidelijke titel en datum.",
-              "Gebruik witruimte, alinea's en tussenkopjes voor structuur.",
-              "Schrijf rustig en leesbaar.",
-              "Verbeteringen mogen zichtbaar blijven.",
               "Titelblad: NETSCHRIFT NEDERLANDS, naam, klas en schooljaar.",
-              "Eén pagina inhoudsopgave, tien pagina's leesmeters, daarna PROJECTEN.",
-              "Achterin: vier pagina's woordenlijst, daarna grammatica."
+              "Eén pagina inhoudsopgave.",
+              "Tien pagina's leesmeters.",
+              "Daarna begint PROJECTEN.",
+              "Achterin: vier pagina's woordenlijst, daarna grammatica.",
+              "Iedere opdracht begint met titel en datum.",
+              "Je bewaart ideeën, analyses, eerste versies, feedback en verbeteringen.",
+              "Je laat zien hoe je tot een antwoord of product komt."
             ]
           },
           "curriculum": {
             "lessonGoals": [
-              "Je begrijpt hoe Nederlands 4 anders werkt dan eerdere leerjaren.",
-              "Je weet hoe cijfers, feedback en vaardigheden dit jaar samenhangen.",
-              "Je richt je netschrift in als persoonlijke werkplaats.",
-              "Je interviewt een klasgenoot over taal, lezen, falen en ontwikkeling.",
-              "Je verzamelt materiaal voor je eerste schrijfopdracht."
+              "Je weet wat er in Nederlands 4 anders wordt.",
+              "Je kent de vier vaardigheden van dit jaar.",
+              "Je begrijpt hoe beoordeling met cijfers en feedback werkt.",
+              "Je richt je netschrift in als bewijsplek voor ontwikkeling.",
+              "Je verzamelt interviewmateriaal voor de eerste schrijfopdracht."
             ],
             "skills": [
-              "Reflectie",
               "Schrijven",
+              "Diep lezen",
+              "Literatuur",
               "Spreken",
-              "Luisteren",
-              "Interviewen",
-              "Taalbewustzijn",
-              "Taalverzorging"
+              "Reflectie",
+              "Interviewen"
             ],
             "kerndoelen": [
               "1 Taalcompetentie",
@@ -43481,24 +43255,23 @@
               "7 Taal en identiteit",
               "beeldstijl:",
               "editorial typography",
-              "boekontwerp",
               "papiercollage",
-              "denkproces zichtbaar",
+              "boekontwerp",
               "bovenbouwtoon",
-              "stijlvol en niet kinderachtig"
+              "bondig en stijlvol"
             ],
             "subkerndoelen": []
           },
           "homework": {
             "items": [
               "Neem je netschrift, pen en leesboek mee.",
-              "Maak je interviewnotities af als dat nog niet klaar is.",
-              "Denk alvast na over één moment waarop taal voor jou verschil maakte."
+              "Neem je interviewnotities volgende les mee.",
+              "Denk alvast na welk taalmoment je wilt gebruiken voor je eerste tekst."
             ]
           },
           "planning": {
             "lesson": "Startles 1: Nederlands 4",
-            "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewnotities af als dat nog niet klaar is.\nDenk alvast na over één moment waarop taal voor jou verschil maakte.",
+            "homework": "Neem je netschrift, pen en leesboek mee.\nNeem je interviewnotities volgende les mee.\nDenk alvast na welk taalmoment je wilt gebruiken voor je eerste tekst.",
             "assessment": "",
             "teacherNote": ""
           }
