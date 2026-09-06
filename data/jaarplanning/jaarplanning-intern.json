@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:07:20+02:00",
+  "updatedAt": "2026-09-06T16:11:00+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3838,7 +3838,10 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": ""
+          "teacherNote": "",
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -3876,7 +3879,10 @@
           "presentationMarkerId": "marker-startles-1-1",
           "sequenceIndex": 1,
           "assessment": "",
-          "teacherNote": ""
+          "teacherNote": "",
+          "progressByClass": {
+            "1D": "done"
+          }
         },
         {
           "project": "Leesmeters",
@@ -34682,7 +34688,10 @@
             "lesson": "Les 1 - Welkom bij Nederlands",
             "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
             "assessment": "",
-            "teacherNote": ""
+            "teacherNote": "",
+            "progressByClass": {
+              "1D": "done"
+            }
           },
           "homework": {
             "items": [
@@ -36136,7 +36145,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:07:20+02:00-studio",
+  "sourceRevision": "2026-09-06T16:11:00+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
