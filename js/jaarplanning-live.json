@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T11:21:10+02:00",
+  "updatedAt": "2026-09-06T11:21:15+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T11:21:10+02:00",
+  "sourceRevision": "2026-09-06T11:21:15+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41646,20 +41646,20 @@
             "title": "Les 2 - Maak het van jou",
             "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
             "items": [],
+            "layout": "image-right",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
             "caption": "Schrijven begint met aandacht voor wat je vastlegt",
-            "source": "Wikimedia Commons, Shixart1985",
-            "layout": "image-right"
+            "source": "Wikimedia Commons, Shixart1985"
           },
           {
             "type": "visual",
             "title": "Een schrift kan een boek worden",
             "subtitle": "Kijk naar letters, ruimte, kleur en materiaal",
             "items": [],
+            "layout": "image-left",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
             "caption": "Boekruggen laten zien hoe titel, kleur en herhaling samen kunnen werken",
-            "source": "Wikimedia Commons, Pouya sh",
-            "layout": "image-left"
+            "source": "Wikimedia Commons, Pouya sh"
           },
           {
             "type": "source",
@@ -41684,9 +41684,9 @@
             "title": "Ontwerpgedachte",
             "subtitle": "",
             "items": [],
+            "variant": "source",
             "quote": "Eerst kijken. Dan kiezen.",
-            "attribution": "Werkwijze voor vandaag",
-            "variant": "source"
+            "attribution": "Werkwijze voor vandaag"
           },
           {
             "type": "spotlight",
@@ -41842,9 +41842,9 @@
               "Welke ontwerptruc herken je?",
               "Welke truc kun jij vandaag gebruiken?"
             ],
-            "video": "https://design.tutsplus.com/articles/the-principles-of-design--cms-33962",
             "caption": "Open het fragment over ontwerpprincipes",
-            "source": "Envato Tuts+, The Principles of Design"
+            "source": "Envato Tuts+, The Principles of Design",
+            "video": "https://design.tutsplus.com/articles/the-principles-of-design--cms-33962"
           },
           {
             "type": "task",
