@@ -1181,6 +1181,93 @@ a:focus-visible {
   padding: clamp(40px, 7vh, 88px) clamp(48px, 7vw, 112px);
 }
 
+.dialog-slide.has-media {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.86fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 58px);
+}
+
+.dialog-slide.has-media.layout-image-left {
+  grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1fr);
+}
+
+.dialog-slide-copy {
+  min-width: 0;
+}
+
+.dialog-slide-kicker,
+.dialog-slide-attribution {
+  margin: 0 0 12px;
+  color: #8a2135;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dialog-slide-attribution {
+  margin: 18px 0 0;
+  color: #5b6c80;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.dialog-slide blockquote {
+  margin: 18px 0 0;
+  max-width: 24ch;
+  color: #172848;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.dialog-slide-media {
+  min-width: 0;
+  margin: 0;
+}
+
+.dialog-slide-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 24px 54px rgba(15, 31, 52, 0.22);
+}
+
+.dialog-slide-media figcaption {
+  margin-top: 10px;
+  color: #5b6c80;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.dialog-slide.is-question,
+.dialog-slide.is-task {
+  border-color: rgba(47, 111, 104, 0.34);
+  background:
+    linear-gradient(90deg, rgba(47, 111, 104, 0.18) 0 18px, rgba(197, 154, 74, 0.24) 18px 26px, transparent 26px),
+    #f8fbf8;
+}
+
+.dialog-slide-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.dialog-slide-compare li {
+  min-height: 150px;
+  border: 1px solid rgba(23, 40, 72, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 18px;
+}
+
 .dialog-slide.is-emphasis {
   border-color: rgba(197, 90, 17, 0.36);
   background:
@@ -1248,6 +1335,27 @@ a:focus-visible {
 .presentation-dialog.is-presentation-mode .dialog-slide p,
 .presentation-dialog.is-presentation-mode .dialog-slide li {
   font-size: 34px;
+}
+
+.presentation-dialog.is-presentation-mode .dialog-slide-kicker,
+.presentation-dialog.is-presentation-mode .dialog-slide-attribution,
+.presentation-dialog.is-presentation-mode .dialog-slide-media figcaption {
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .dialog-slide.has-media,
+  .dialog-slide.has-media.layout-image-left {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog-slide-media img {
+    max-height: 36vh;
+  }
+
+  .dialog-slide-compare {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes pulse {

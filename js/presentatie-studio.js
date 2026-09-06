@@ -686,17 +686,7 @@ function compilePresentationFromMarkerDecks(presentation, orderedMarkers, projec
       : [];
     if (!deck.length) continue;
     markers[markerId] = slides.length;
-    for (const slide of deck) {
-      slides.push({
-        type: String(slide.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
-        title: String(slide.title || '').trim(),
-        subtitle: String(slide.subtitle || '').trim(),
-        showProjectLogo: Boolean(slide.showProjectLogo),
-        items: Array.isArray(slide.items)
-          ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
-          : [],
-      });
-    }
+    slides.push(...deck.map(normalizeSlide));
   }
 
   presentation.slides = slides;
@@ -1172,17 +1162,51 @@ function serializeSlides(slides) {
   const parts = [];
   const safeSlides = Array.isArray(slides) ? slides : [];
   for (const slide of safeSlides) {
-    const type = String(slide?.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title';
-    const title = String(slide?.title || '').trim();
-    const subtitle = String(slide?.subtitle || '').trim();
-    const items = Array.isArray(slide?.items) ? slide.items.map((x) => String(x || '').trim()).filter(Boolean) : [];
+    const normalized = normalizeSlide(slide);
 
-    const lines = [`[${type}] ${title}`.trim()];
-    if (subtitle) lines.push(`subtitle: ${subtitle}`);
-    for (const item of items) lines.push(`- ${item}`);
+    const lines = [`[${normalized.type}] ${normalized.title}`.trim()];
+    if (normalized.subtitle) lines.push(`subtitle: ${normalized.subtitle}`);
+    if (normalized.kicker) lines.push(`kicker: ${normalized.kicker}`);
+    if (normalized.variant) lines.push(`variant: ${normalized.variant}`);
+    if (normalized.layout) lines.push(`layout: ${normalized.layout}`);
+    if (normalized.image) lines.push(`image: ${normalized.image}`);
+    if (normalized.imageAlt) lines.push(`image-alt: ${normalized.imageAlt}`);
+    if (normalized.caption) lines.push(`caption: ${normalized.caption}`);
+    if (normalized.source) lines.push(`source: ${normalized.source}`);
+    if (normalized.quote) lines.push(`quote: ${normalized.quote}`);
+    if (normalized.attribution) lines.push(`attribution: ${normalized.attribution}`);
+    if (normalized.emphasis) lines.push('emphasis: true');
+    if (normalized.showProjectLogo) lines.push('show-project-logo: true');
+    for (const item of normalized.items) lines.push(`- ${item}`);
     parts.push(lines.join('\n'));
   }
   return parts.join('\n---\n');
+}
+
+function normalizeSlide(slide) {
+  const rawType = String(slide?.type || 'title').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const allowedTypes = new Set(['title', 'bullets', 'visual', 'quote', 'compare', 'steps', 'question', 'task']);
+  const variant = String(slide?.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const layout = String(slide?.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  return {
+    type: allowedTypes.has(rawType) ? rawType : 'title',
+    title: String(slide?.title || '').trim(),
+    subtitle: String(slide?.subtitle || '').trim(),
+    showProjectLogo: Boolean(slide?.showProjectLogo),
+    items: Array.isArray(slide?.items)
+      ? slide.items.map((item) => String(item || '').trim()).filter(Boolean)
+      : [],
+    emphasis: Boolean(slide?.emphasis),
+    variant,
+    layout,
+    kicker: String(slide?.kicker || '').trim(),
+    image: String(slide?.image || '').trim(),
+    imageAlt: String(slide?.imageAlt || slide?.alt || '').trim(),
+    caption: String(slide?.caption || '').trim(),
+    source: String(slide?.source || '').trim(),
+    quote: String(slide?.quote || '').trim(),
+    attribution: String(slide?.attribution || '').trim(),
+  };
 }
 
 function parseSlides(text, { fallback = true } = {}) {
@@ -1196,32 +1220,46 @@ function parseSlides(text, { fallback = true } = {}) {
     const lines = chunk.split('\n').map((line) => line.trim()).filter(Boolean);
     if (!lines.length) continue;
 
-    let type = 'title';
-    let title = '';
-    let subtitle = '';
-    const items = [];
+    const slide = {
+      type: 'title',
+      title: '',
+      subtitle: '',
+      items: [],
+    };
 
-    const head = lines[0].match(/^\[(title|bullets)\]\s*(.*)$/i);
+    const head = lines[0].match(/^\[(title|bullets|visual|quote|compare|steps|question|task)\]\s*(.*)$/i);
     if (head) {
-      type = head[1].toLowerCase() === 'bullets' ? 'bullets' : 'title';
-      title = String(head[2] || '').trim();
+      slide.type = head[1].toLowerCase();
+      slide.title = String(head[2] || '').trim();
     } else {
-      title = lines[0];
+      slide.title = lines[0];
     }
 
     for (const line of lines.slice(1)) {
-      const sub = line.match(/^subtitle\s*:\s*(.*)$/i);
-      if (sub) {
-        subtitle = String(sub[1] || '').trim();
+      const field = line.match(/^([a-zA-ZÀ-ž_-]+)\s*:\s*(.*)$/);
+      if (field) {
+        const key = String(field[1] || '').trim().toLowerCase().replaceAll('_', '-');
+        const value = String(field[2] || '').trim();
+        if (key === 'subtitle') slide.subtitle = value;
+        else if (key === 'variant') slide.variant = value;
+        else if (key === 'layout') slide.layout = value;
+        else if (key === 'kicker') slide.kicker = value;
+        else if (key === 'image') slide.image = value;
+        else if (key === 'image-alt' || key === 'alt') slide.imageAlt = value;
+        else if (key === 'caption') slide.caption = value;
+        else if (key === 'source' || key === 'bron') slide.source = value;
+        else if (key === 'quote' || key === 'citaat') slide.quote = value;
+        else if (key === 'attribution' || key === 'auteur') slide.attribution = value;
+        else if (key === 'emphasis') slide.emphasis = /^(1|true|yes|ja)$/i.test(value);
+        else if (key === 'show-project-logo') slide.showProjectLogo = /^(1|true|yes|ja)$/i.test(value);
         continue;
       }
-      const bullet = line.match(/^[-*]\s+(.*)$/);
+      const bullet = line.match(/^[-*•]\s+(.*)$/);
       if (bullet) {
-        items.push(String(bullet[1] || '').trim());
+        slide.items.push(String(bullet[1] || '').trim());
       }
     }
 
-    const slide = { type, title, subtitle, items };
     if (slide.type === 'title') delete slide.items;
     slides.push(slide);
   }

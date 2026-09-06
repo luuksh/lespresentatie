@@ -22,7 +22,7 @@ const AUTOSAVE_DELAY_MS = 800;
 const MENTOR_LESSON_CLASS_ID = 'MENTORLES';
 const SPECIAL_PLANNING_LAYERS = [MENTOR_LESSON_CLASS_ID];
 const MENTOR_STARTWEEK_PRESENTATION_ID = 'project-mentorles-1d';
-const PRESENTATION_PLACEHOLDER = '[netschrift]\n- Wat moet aan het einde van deze les in het netschrift staan?\n---\n[title] Intro\nsubtitle: Project\n---\n[bullets] Kern\n- punt 1\n- punt 2\n---\n[metadata]\nvaardigheden: Schrijven; Reflectie\nkerndoelen: KD1; KD2\nsubkerndoelen: 1A; 2B';
+const PRESENTATION_PLACEHOLDER = '[netschrift]\n- Wat moet aan het einde van deze les in het netschrift staan?\n---\n[title] Intro\nsubtitle: Project\n---\n[visual] Beeld dat de les opent\nsubtitle: Kijk eerst goed. Wat valt op?\nimage: https://voorbeeld.nl/beeld.jpg\ncaption: Korte context bij het beeld\nsource: Bron of maker\nlayout: image-right\n---\n[bullets] Kern\n- punt 1\n- punt 2\n---\n[metadata]\nvaardigheden: Schrijven; Reflectie\nkerndoelen: KD1; KD2\nsubkerndoelen: 1A; 2B';
 const EMPTY_PRESENTATION_PLACEHOLDER = 'Geen presentatie. Typ hier nieuwe presentatietekst om opnieuw een presentatie te maken.';
 const SLOT_KEYS = ['A', 'B', 'C'];
 const MENTOR_LESSON_SLOT_KEYS = ['0', ...SLOT_KEYS];
@@ -1703,14 +1703,25 @@ function compilePresentation(project) {
 
 function normalizeSlide(slide) {
   const variant = String(slide?.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const rawType = String(slide?.type || 'title').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const allowedTypes = new Set(['title', 'bullets', 'visual', 'quote', 'compare', 'steps', 'question', 'task']);
+  const layout = String(slide?.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
   return {
-    type: String(slide?.type || 'title').toLowerCase() === 'bullets' ? 'bullets' : 'title',
+    type: allowedTypes.has(rawType) ? rawType : 'title',
     title: String(slide?.title || '').trim(),
     subtitle: String(slide?.subtitle || '').trim(),
     showProjectLogo: Boolean(slide?.showProjectLogo),
     items: Array.isArray(slide?.items) ? slide.items.map((item) => String(item || '').trim()).filter(Boolean) : [],
     emphasis: Boolean(slide?.emphasis),
     variant,
+    layout,
+    kicker: String(slide?.kicker || '').trim(),
+    image: String(slide?.image || '').trim(),
+    imageAlt: String(slide?.imageAlt || slide?.alt || '').trim(),
+    caption: String(slide?.caption || '').trim(),
+    source: String(slide?.source || '').trim(),
+    quote: String(slide?.quote || '').trim(),
+    attribution: String(slide?.attribution || '').trim(),
   };
 }
 
@@ -1911,17 +1922,32 @@ function parseSlides(text, { fallback = true } = {}) {
   for (const chunk of chunks) {
     const lines = chunk.split('\n').map((line) => line.trim()).filter(Boolean);
     if (!lines.length) continue;
-    const head = lines[0].match(/^\[(title|bullets)\]\s*(.*)$/i);
+    const head = lines[0].match(/^\[(title|bullets|visual|quote|compare|steps|question|task)\]\s*(.*)$/i);
     const slide = {
-      type: head?.[1]?.toLowerCase() === 'bullets' ? 'bullets' : 'title',
+      type: head?.[1]?.toLowerCase() || 'title',
       title: head ? String(head[2] || '').trim() : lines[0],
       subtitle: '',
       items: [],
     };
     for (const line of lines.slice(1)) {
-      const subtitle = line.match(/^subtitle\s*:\s*(.*)$/i);
-      const bullet = line.match(/^[-*]\s+(.*)$/);
-      if (subtitle) slide.subtitle = String(subtitle[1] || '').trim();
+      const field = line.match(/^([a-zA-ZÀ-ž_-]+)\s*:\s*(.*)$/);
+      const bullet = line.match(/^[-*•]\s+(.*)$/);
+      if (field) {
+        const key = String(field[1] || '').trim().toLowerCase().replaceAll('_', '-');
+        const value = String(field[2] || '').trim();
+        if (key === 'subtitle') slide.subtitle = value;
+        else if (key === 'variant') slide.variant = value;
+        else if (key === 'layout') slide.layout = value;
+        else if (key === 'kicker') slide.kicker = value;
+        else if (key === 'image') slide.image = value;
+        else if (key === 'image-alt' || key === 'alt') slide.imageAlt = value;
+        else if (key === 'caption') slide.caption = value;
+        else if (key === 'source' || key === 'bron') slide.source = value;
+        else if (key === 'quote' || key === 'citaat') slide.quote = value;
+        else if (key === 'attribution' || key === 'auteur') slide.attribution = value;
+        else if (key === 'emphasis') slide.emphasis = /^(1|true|yes|ja)$/i.test(value);
+        else if (key === 'show-project-logo') slide.showProjectLogo = /^(1|true|yes|ja)$/i.test(value);
+      }
       else if (bullet) slide.items.push(String(bullet[1] || '').trim());
     }
     if (slide.type === 'title') delete slide.items;
@@ -1936,6 +1962,17 @@ function serializeSlides(slides) {
     const normalized = normalizeSlide(slide);
     const lines = [`[${normalized.type}] ${normalized.title}`.trim()];
     if (normalized.subtitle) lines.push(`subtitle: ${normalized.subtitle}`);
+    if (normalized.kicker) lines.push(`kicker: ${normalized.kicker}`);
+    if (normalized.variant) lines.push(`variant: ${normalized.variant}`);
+    if (normalized.layout) lines.push(`layout: ${normalized.layout}`);
+    if (normalized.image) lines.push(`image: ${normalized.image}`);
+    if (normalized.imageAlt) lines.push(`image-alt: ${normalized.imageAlt}`);
+    if (normalized.caption) lines.push(`caption: ${normalized.caption}`);
+    if (normalized.source) lines.push(`source: ${normalized.source}`);
+    if (normalized.quote) lines.push(`quote: ${normalized.quote}`);
+    if (normalized.attribution) lines.push(`attribution: ${normalized.attribution}`);
+    if (normalized.emphasis) lines.push('emphasis: true');
+    if (normalized.showProjectLogo) lines.push('show-project-logo: true');
     for (const item of normalized.items) lines.push(`- ${item}`);
     return lines.join('\n');
   }).join('\n---\n');
@@ -3671,20 +3708,65 @@ function renderableSlidesForLesson(lesson) {
 }
 
 function dialogSlideClass(slide) {
+  const type = String(slide.type || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
   const classes = ['dialog-slide'];
+  if (type) classes.push(`is-${type}`);
   if (slide.emphasis) classes.push('is-emphasis');
   if (slide.variant) classes.push(`is-${slide.variant}`);
+  if (slide.image) classes.push('has-media');
+  if (slide.layout) classes.push(`layout-${slide.layout}`);
   return classes.join(' ');
+}
+
+function slideMediaHtml(slide) {
+  const src = String(slide.image || '').trim();
+  if (!src || /^javascript:/i.test(src)) return '';
+  const alt = String(slide.imageAlt || slide.caption || slide.title || '').trim();
+  const caption = String(slide.caption || '').trim();
+  const source = String(slide.source || '').trim();
+  return `
+    <figure class="dialog-slide-media">
+      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">
+      ${caption || source ? `<figcaption>${escapeHtml([caption, source].filter(Boolean).join(' · '))}</figcaption>` : ''}
+    </figure>
+  `;
+}
+
+function dialogSlideTextHtml(slide) {
+  const quote = String(slide.quote || '').trim();
+  const subtitle = String(slide.subtitle || '').trim();
+  const items = Array.isArray(slide.items) ? slide.items : [];
+  if (slide.type === 'quote' || quote) {
+    return `
+      <div class="dialog-slide-copy">
+        ${slide.kicker ? `<p class="dialog-slide-kicker">${escapeHtml(slide.kicker)}</p>` : ''}
+        ${slide.title ? `<h2>${escapeHtml(slide.title)}</h2>` : ''}
+        <blockquote>${escapeHtml(quote || subtitle || slide.title)}</blockquote>
+        ${slide.attribution ? `<p class="dialog-slide-attribution">${escapeHtml(slide.attribution)}</p>` : ''}
+      </div>
+    `;
+  }
+  const listTag = slide.type === 'steps' ? 'ol' : 'ul';
+  const listClass = slide.type === 'compare' ? ' class="dialog-slide-compare"' : '';
+  return `
+    <div class="dialog-slide-copy">
+      ${slide.kicker ? `<p class="dialog-slide-kicker">${escapeHtml(slide.kicker)}</p>` : ''}
+      <h2>${escapeHtml(slide.title || 'Presentatie')}</h2>
+      ${subtitle ? `<p>${escapeHtml(subtitle)}</p>` : ''}
+      ${items.length ? `<${listTag}${listClass}>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</${listTag}>` : ''}
+    </div>
+  `;
 }
 
 function renderDialogSlide() {
   const slides = state.activeSlides;
   const slide = normalizeSlide(slides[state.activeSlideIndex] || {});
+  const media = slideMediaHtml(slide);
   els.dialogStage.innerHTML = `
     <article class="${dialogSlideClass(slide)}">
-      <h2>${escapeHtml(slide.title || 'Presentatie')}</h2>
-      ${slide.subtitle ? `<p>${escapeHtml(slide.subtitle)}</p>` : ''}
-      ${slide.items.length ? `<ul>${slide.items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+      ${slide.layout === 'image-left' ? media : ''}
+      ${dialogSlideTextHtml(slide)}
+      ${slide.layout !== 'image-left' ? media : ''}
     </article>
   `;
   els.dialogCounter.textContent = slides.length ? `${state.activeSlideIndex + 1} / ${slides.length}` : '0 / 0';
@@ -3705,6 +3787,10 @@ function slideSnippetText(type) {
   const snippets = {
     title: `[title] ${title}\nsubtitle: ${project}`,
     bullets: '[bullets] Kern\n- Eerste punt\n- Tweede punt',
+    visual: `[visual] ${title}\nsubtitle: Kijk eerst goed. Wat valt op?\nimage: https://voorbeeld.nl/beeld.jpg\ncaption: Korte context bij het beeld\nsource: Bron of maker\nlayout: image-right`,
+    quote: '[quote] Citaat\nquote: Plaats hier een korte, scherpe zin uit de bron.\nattribution: Naam of bron\nvariant: source',
+    compare: '[compare] Vergelijking\nsubtitle: Wat verandert er?\n- Links: situatie, tekst of beeld A\n- Rechts: situatie, tekst of beeld B',
+    task: '[task] Aan het werk\nsubtitle: Werk rustig en zichtbaar\n- Stap 1\n- Stap 2',
     netschrift: '[netschrift]\n- Wat moet aan het einde van deze les in het netschrift staan?',
     homework: '[huiswerk]\n- Wat moeten leerlingen voor de volgende les doen of meenemen?',
     metadata: '[metadata]\nvaardigheden: \nkerndoelen: \nsubkerndoelen: ',

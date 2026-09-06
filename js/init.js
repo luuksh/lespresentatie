@@ -2851,23 +2851,74 @@ document.addEventListener('DOMContentLoaded', async () => {
       .join(';');
     const cardStyleAttr = themeVars ? ` style="${themeVars}"` : '';
     const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const slideType = String(slide.type || 'title').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const slideLayout = String(slide.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
     const cardClasses = ['presentation-slide-card'];
+    if (slideType) cardClasses.push(`is-${slideType}`);
     if (slide.emphasis) cardClasses.push('is-emphasis');
     if (variant) cardClasses.push(`is-${variant}`);
+    if (String(slide.image || '').trim()) cardClasses.push('has-media');
+    if (slideLayout) cardClasses.push(`layout-${slideLayout}`);
+    const titleForLength = String(slide.title || activePresentation.title || 'Slide').trim();
+    const richTitleLengthClass = titleForLength.length > 84 ? 'is-extra-long-title' : (titleForLength.length > 54 ? 'is-long-title' : '');
+    if (richTitleLengthClass) cardClasses.push(richTitleLengthClass);
+
+    const safeImageSrc = (value) => {
+      const src = String(value || '').trim();
+      return src && !/^javascript:/i.test(src) ? src : '';
+    };
+    const mediaHtml = () => {
+      const src = safeImageSrc(slide.image);
+      if (!src) return '';
+      const alt = String(slide.imageAlt || slide.caption || slide.title || '').trim();
+      const caption = String(slide.caption || '').trim();
+      const source = String(slide.source || '').trim();
+      return `
+        <figure class="presentation-slide-media">
+          <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">
+          ${caption || source ? `<figcaption>${linkedTextHtml([caption, source].filter(Boolean).join(' · '))}</figcaption>` : ''}
+        </figure>
+      `;
+    };
+
+    const slideTextHtml = (headingTag = 'h2') => {
+      const title = String(slide.title || activePresentation.title || 'Slide').trim();
+      const subtitle = String(slide.subtitle || '').trim();
+      const quote = String(slide.quote || '').trim();
+      const items = Array.isArray(slide.items) ? slide.items : [];
+      if (slideType === 'quote' || quote) {
+        return `
+          <div class="presentation-slide-copy">
+            ${slide.kicker ? `<p class="presentation-slide-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
+            ${title ? `<${headingTag} class="presentation-slide-title">${linkedTextHtml(title)}</${headingTag}>` : ''}
+            <blockquote class="presentation-slide-quote">${linkedTextHtml(quote || subtitle || title)}</blockquote>
+            ${slide.attribution ? `<p class="presentation-slide-attribution">${linkedTextHtml(slide.attribution)}</p>` : ''}
+          </div>
+        `;
+      }
+      const listTag = slideType === 'steps' ? 'ol' : 'ul';
+      const listClass = slideType === 'compare' ? ' presentation-slide-compare' : '';
+      return `
+        <div class="presentation-slide-copy">
+          ${slide.kicker ? `<p class="presentation-slide-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
+          <${headingTag} class="presentation-slide-title">${linkedTextHtml(title)}</${headingTag}>
+          ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
+          ${items.length ? `<${listTag} class="presentation-slide-bullets${listClass}">
+            ${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}
+          </${listTag}>` : ''}
+        </div>
+      `;
+    };
 
     const items = Array.isArray(slide.items) ? slide.items : [];
-    if (slide.type === 'bullets' || items.length) {
-      const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
-      const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
-      const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
+    if (slide.type === 'bullets' || items.length || slideType !== 'title') {
+      const media = mediaHtml();
       presentationInternalStage.innerHTML = `
-        <article class="${cardClasses.join(' ')}${titleLengthClass}"${cardStyleAttr}>
+        <article class="${cardClasses.join(' ')}"${cardStyleAttr}>
           ${logoHtml}
-          <h2 class="presentation-slide-title">${linkedTextHtml(title)}</h2>
-          ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
-          <ul class="presentation-slide-bullets">
-            ${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}
-          </ul>
+          ${slideLayout === 'image-left' ? media : ''}
+          ${slideTextHtml('h2')}
+          ${slideLayout !== 'image-left' ? media : ''}
         </article>
       `;
     } else {
