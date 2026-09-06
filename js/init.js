@@ -2110,17 +2110,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     return doc;
   }
 
-  function hasMentorStartweekPlanning(doc) {
+  function hasUsableStudioPlanning(doc) {
     const entries = Array.isArray(doc?.entries) ? doc.entries : [];
-    const entry = entries.find((row) => (
-      normalizeClassId(row?.classId) === MENTOR_LESSON_CLASS_ID
-      && String(row?.week || '').trim() === String(STARTWEEK_PLANNING_WEEK)
+    const hasEntryContent = entries.some((entry) => (
+      (Array.isArray(entry?.lessons) && entry.lessons.length > 0)
+      || (Array.isArray(entry?.items) && entry.items.length > 0)
+      || String(entry?.note || '').trim()
     ));
-    const lessons = Array.isArray(entry?.lessons) ? entry.lessons : [];
-    return ['A', 'B', 'C'].every((slot) => lessons.some((lesson) => (
-      String(lesson?.lessonKey || '').trim().toUpperCase() === slot
-      && String(lesson?.presentationId || '').trim() === 'project-mentorles-1d'
-    )));
+    if (hasEntryContent) return true;
+
+    const presentations = doc?.presentations && typeof doc.presentations === 'object'
+      ? Object.values(doc.presentations)
+      : [];
+    return presentations.some((presentation) => (
+      markerDeckSlideCount(presentation) > 0
+      || (Array.isArray(presentation?.slides) && presentation.slides.length > 0)
+    ));
   }
 
   function parseDocTimestamp(doc) {
@@ -2264,7 +2269,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!raw) return null;
     try {
       const doc = normalizeStudioDoc(JSON.parse(raw));
-      if (!hasMentorStartweekPlanning(doc)) {
+      if (!hasUsableStudioPlanning(doc)) {
         localStorage.removeItem(PLAN_STUDIO_KEY);
         return null;
       }
@@ -3676,8 +3681,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       planningWeekLabelEl.textContent = title;
     }
 
+    const agendaPlan = agendaConnected && activeAgendaEntry
+      ? planningForAgendaEntry(activeAgendaEntry)
+      : null;
+    const agendaPlanLessons = Array.isArray(agendaPlan?.lessons)
+      ? agendaPlan.lessons.filter(Boolean)
+      : [];
+    const useAgendaPlan = Boolean(
+      agendaPlan
+      && (
+        agendaPlanLessons.length
+        || (Array.isArray(agendaPlan.items) && agendaPlan.items.length)
+        || String(agendaPlan.note || '').trim()
+      )
+    );
+    if (useAgendaPlan) {
+      weekData = {
+        lessons: agendaPlanLessons,
+        items: Array.isArray(agendaPlan.items) ? agendaPlan.items : [],
+        note: String(agendaPlan.note || '').trim(),
+      };
+      if (agendaPlan.isDateProjected) {
+        planningWeekLabelEl.textContent = title;
+      }
+    }
+
     const lessonSelection = manualLesson
       ? [manualLesson]
+      : useAgendaPlan
+      ? agendaPlanLessons
       : currentProgressPlan
       ? [currentProgressPlan.lesson]
       : selectLessonsForToday(
