@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:33:16+02:00",
+  "updatedAt": "2026-09-06T08:33:18+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -32496,9 +32496,25 @@
         {
           "type": "title",
           "title": "---",
-          "subtitle": "Heb je vandaag al...",
+          "subtitle": "",
           "showProjectLogo": false,
           "items": [],
+          "emphasis": false,
+          "variant": ""
+        },
+        {
+          "type": "bullets",
+          "title": "Je bent allang met Nederlands bezig",
+          "subtitle": "Heb je vandaag al...",
+          "showProjectLogo": false,
+          "items": [
+            "Gepraat?",
+            "Geappt?",
+            "Gelezen?",
+            "Geluisterd?",
+            "Nagedacht?",
+            "Geschreven?"
+          ],
           "emphasis": false,
           "variant": ""
         },
@@ -32929,7 +32945,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 22
+        "marker-startles-1-2": 23
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -32946,7 +32962,20 @@
           {
             "type": "title",
             "title": "---",
-            "subtitle": "Heb je vandaag al..."
+            "subtitle": ""
+          },
+          {
+            "type": "bullets",
+            "title": "Je bent allang met Nederlands bezig",
+            "subtitle": "Heb je vandaag al...",
+            "items": [
+              "Gepraat?",
+              "Geappt?",
+              "Gelezen?",
+              "Geluisterd?",
+              "Nagedacht?",
+              "Geschreven?"
+            ]
           },
           {
             "type": "bullets",
@@ -33319,6 +33348,11 @@
             "homework": "netschrift en pen mee",
             "assessment": "",
             "teacherNote": ""
+          },
+          "homework": {
+            "items": [
+              "Wat moeten leerlingen voor de volgende les doen of meenemen?"
+            ]
           }
         }
       }
@@ -34764,7 +34798,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T08:33:16+02:00-studio",
+  "sourceRevision": "2026-09-06T08:33:18+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
