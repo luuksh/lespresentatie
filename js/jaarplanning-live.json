@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T11:28:05+02:00",
+  "updatedAt": "2026-09-06T11:28:53+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T11:28:05+02:00",
+  "sourceRevision": "2026-09-06T11:28:53+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41242,8 +41242,8 @@
             "Grote letters kunnen krachtig zijn.",
             "Herhaling maakt een patroon.",
             "Een kader maakt alles rustiger.",
-            "Een beperkt kleurenpalet maakt je ontwerp professioneler.",
-            "Een simpel idee kan juist het sterkst zijn."
+            "Een beperkt kleurenpalet maakt je ontwerp sterker.",
+            "Een simpel idee kan juist het meest opvallen."
           ]
         },
         {
@@ -41263,7 +41263,7 @@
         {
           "type": "title",
           "title": "Inspiratie: Nederlands op je voorkant",
-          "subtitle": "Kies beelden die bij taal passen",
+          "subtitle": "Taal kan er op heel verschillende manieren uitzien",
           "showProjectLogo": false,
           "items": []
         },
@@ -41702,8 +41702,7 @@
             "items": [],
             "kicker": "🖋 Nederlands begint met jouw handschrift",
             "variant": "image",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman_writing_on_a_notebook_with_a_pen.jpg",
-            "imageAlt": "Iemand schrijft met een pen in een schrift.",
+            "imageAlt": "Een opvallend en persoonlijk ontworpen schrift met handgetekende letters en illustraties.",
             "caption": "Vandaag wordt je schrift meer dan een schrift."
           },
           {
@@ -41719,8 +41718,7 @@
             ],
             "kicker": "🖋 Route van de les",
             "layout": "split",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
-            "imageAlt": "Een persoon schrijft in een notitieboek aan een bureau.",
+            "imageAlt": "Een leeg schrift ligt tussen potloden, stiften en ander ontwerpmateriaal.",
             "caption": "Eerst kijken, dan kiezen, dan maken."
           },
           {
@@ -41729,8 +41727,7 @@
             "subtitle": "Ons themasymbool",
             "items": [],
             "kicker": "Elke keer als je de vulpen ziet, gaat het over keuzes maken",
-            "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-            "imageAlt": "Een vulpen als symbool voor schrijven en ontwerpen.",
+            "imageAlt": "Een vulpen met handgeschreven tekst en inkt op papier.",
             "text": "Je netschrift is niet alleen een plek waar je opdrachten maakt. Het wordt een boek waarin je kunt terugzien hoe jij schrijft, denkt, leest en groeit."
           },
           {
@@ -41746,9 +41743,8 @@
             ],
             "kicker": "🖋 Ontwerpers kijken langzaam",
             "variant": "image",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
-            "imageAlt": "Veel boeken in een bibliotheek.",
-            "caption": "Een sterke pagina stuurt je blik."
+            "imageAlt": "Een opvallend vormgegeven boekomslag met een duidelijke blikvanger, sterke typografie en bewust gebruikte lege ruimte.",
+            "caption": "Een sterk ontwerp bepaalt waar je als eerste kijkt."
           },
           {
             "type": "visual",
@@ -41758,14 +41754,13 @@
               "Grote letters kunnen krachtig zijn.",
               "Herhaling maakt een patroon.",
               "Een kader maakt alles rustiger.",
-              "Een beperkt kleurenpalet maakt je ontwerp professioneler.",
-              "Een simpel idee kan juist het sterkst zijn."
+              "Een beperkt kleurenpalet maakt je ontwerp sterker.",
+              "Een simpel idee kan juist het meest opvallen."
             ],
             "kicker": "🖋 Tekenen mag, maar hoeft niet",
             "layout": "split",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Album%20of%20Printed%20Initials%2C%20Ornaments%20and%20Title%20Pages%2C%20cut%20from%20Books%20%2824437145243%29.jpg",
-            "imageAlt": "Oude sierletters en typografische ornamenten.",
-            "caption": "Letters kunnen zelf beeld worden."
+            "imageAlt": "Een grafisch ontwerp dat vooral bestaat uit grote letters, eenvoudige vormen en herhaling.",
+            "caption": "Letters en vormen kunnen zelf het beeld zijn."
           },
           {
             "type": "compare",
@@ -41780,14 +41775,13 @@
               "Ontwerpen: ik gebruik lege ruimte bewust."
             ],
             "kicker": "🖋 Slimmer kijken",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-            "imageAlt": "Verschillende soorten aanhalingstekens.",
-            "caption": "Details bepalen de uitstraling."
+            "imageAlt": "Twee ontwerpen naast elkaar: één druk en vol, één rustig met een duidelijke blikvanger.",
+            "caption": "Meer toevoegen maakt een ontwerp niet automatisch beter."
           },
           {
             "type": "gallery",
             "title": "Inspiratie: Nederlands op je voorkant",
-            "subtitle": "Kies beelden die bij taal passen",
+            "subtitle": "Taal kan er op heel verschillende manieren uitzien",
             "items": [],
             "kicker": "🖋 Beeldbank voor je hoofd"
           },
@@ -41804,9 +41798,8 @@
             ],
             "kicker": "🖋 Eerst duidelijk, dan bijzonder",
             "variant": "image",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pen-writing.jpg",
-            "imageAlt": "Een hand schrijft met een pen.",
-            "caption": "De belangrijkste informatie moet meteen vindbaar zijn."
+            "imageAlt": "Een zelfontworpen schoolschrift waarop vak, naam en klas duidelijk zichtbaar zijn.",
+            "caption": "Iemand moet meteen kunnen zien van wie dit schrift is en waarvoor het bedoeld is."
           },
           {
             "type": "wordbank",
@@ -41830,8 +41823,8 @@
               "kleuren"
             ],
             "kicker": "🖋 Jouw stijl begint met jouw keuzes",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
-            "imageAlt": "Iemand schrijft ideeën op in een schrift."
+            "imageAlt": "Een kleurrijk moodboard met muziek, sport, games, film, natuur, eten en andere interesses.",
+            "caption": "Je hoeft niet alles te gebruiken. Kies wat echt bij jou past."
           },
           {
             "type": "wordbank",
@@ -41854,8 +41847,8 @@
               "gedichten"
             ],
             "kicker": "🖋 Woorden kunnen ook decor zijn",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-            "imageAlt": "Typografische tekens en aanhalingstekens."
+            "imageAlt": "Een collage van letters, woorden, boeken, handschrift, tekstballonnen en typografische tekens.",
+            "caption": "Nederlands hoeft niet alleen een getekend boek of een pen te zijn."
           },
           {
             "type": "gallery",
@@ -41875,8 +41868,8 @@
               "BONUS: een kader kan losse onderdelen één geheel maken."
             ],
             "kicker": "🖋 Van los idee naar geheel",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Album%20of%20Printed%20Initials%2C%20Ornaments%20and%20Title%20Pages%2C%20cut%20from%20Books%20%2824437145243%29.jpg",
-            "imageAlt": "Voorbeelden van sierletters en typografie."
+            "imageAlt": "Grafische voorbeelden van herhaling, een sterk vergroot element en een beperkt kleurenpalet.",
+            "caption": "Kleine ontwerpkeuzes kunnen een groot verschil maken."
           },
           {
             "type": "before-after",
@@ -41891,8 +41884,8 @@
               "Na: kader, patroon of herhaling maakt er één geheel van."
             ],
             "kicker": "🖋 Ontwerpen is kiezen",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edwaert_Collier_-_Trompe_l%27%C5%93il_with_a_letter_rack_holding_newspapers%2C_letters%2C_writing_equipment_and_a_comb%2C_098l19030-b3v3g.jpg",
-            "imageAlt": "Een klassiek beeld met brieven, papier en schrijfspullen."
+            "imageAlt": "Een voor-en-na-voorbeeld waarbij een druk ontwerp is veranderd in een rustig ontwerp met één duidelijke blikvanger.",
+            "caption": "Het sterkere ontwerp heeft niet méér, maar duidelijkere keuzes."
           },
           {
             "type": "steps",
@@ -41906,9 +41899,8 @@
               "Kijk of je ontwerp in evenwicht is."
             ],
             "kicker": "🖋 Eerst proberen, daarna pas netjes",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Writing_notes_while_using_a_laptop_at_a_desk.jpg",
-            "imageAlt": "Aantekeningen maken aan een bureau.",
-            "caption": "Een schets voorkomt dat je meteen vastzit."
+            "imageAlt": "Met potlood getekende snelle schetsen voor verschillende ontwerpen van een schriftcover.",
+            "caption": "Een schets is om te proberen, niet om mooi te zijn."
           },
           {
             "type": "task",
@@ -41923,8 +41915,8 @@
             ],
             "kicker": "🖋 Eerst veel ideeën, daarna kiezen",
             "variant": "image",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Person_writing_in_a_notebook_while_sitting_at_a_desk.jpg",
-            "imageAlt": "Een leerling schrijft in een notitieboek."
+            "imageAlt": "Twee snelle schetsen van dezelfde boekomslag met een verschillende blikvanger.",
+            "caption": "Verander één grote keuze en je krijgt meteen een ander ontwerp."
           },
           {
             "type": "poll",
@@ -41939,16 +41931,16 @@
               "Iets heel anders"
             ],
             "kicker": "🖋 Er is niet één goede stijl",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
-            "imageAlt": "Boeken in een boekenkast."
+            "imageAlt": "Verschillende creatieve schriftcovers naast elkaar in duidelijk verschillende stijlen.",
+            "caption": "Dezelfde opdracht kan er totaal anders uitzien."
           },
           {
             "type": "title",
             "title": "Aan de slag",
             "subtitle": "Maak je voorkant",
             "kicker": "🖋 Nu gaat je ontwerp naar het echte schrift",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pen-writing.jpg",
-            "imageAlt": "Een pen schrijft op papier."
+            "imageAlt": "Een leerling werkt met stiften en potloden aan een zelfontworpen schriftcover.",
+            "caption": "Nu wordt je schets echt."
           },
           {
             "type": "checklist",
@@ -41963,8 +41955,8 @@
               "Is het verzorgd genoeg om het hele jaar te bewaren?"
             ],
             "kicker": "🖋 Ontwerpcheck",
-            "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-            "imageAlt": "Een vulpen als terugkerend symbool."
+            "imageAlt": "Een halfafgemaakte creatieve schriftcover met stiften, potloden en schetsmateriaal eromheen.",
+            "caption": "Stop af en toe en bekijk je ontwerp alsof je het voor het eerst ziet."
           },
           {
             "type": "visual",
@@ -41979,9 +41971,8 @@
             ],
             "kicker": "🖋 Eén schrift, één stijl",
             "layout": "split",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman_writing_on_a_notebook_with_a_pen.jpg",
-            "imageAlt": "Iemand schrijft zorgvuldig in een schrift.",
-            "caption": "Je titelblad hoort bij je voorkant."
+            "imageAlt": "Een verzorgd titelblad in een schrift met titel, naam en decoratieve elementen in één herkenbare stijl.",
+            "caption": "Voorkant en titelblad horen zichtbaar bij elkaar."
           },
           {
             "type": "rubric",
@@ -41995,8 +41986,8 @@
               "Verzorging: je hebt netjes gewerkt en keuzes afgemaakt."
             ],
             "kicker": "🖋 Niet perfect, wel bewust gemaakt",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quotation_marks_and_similar_signs.svg",
-            "imageAlt": "Aanhalingstekens en typografische tekens."
+            "imageAlt": "Een verzorgd en persoonlijk ontworpen schrift met een duidelijke titel, beperkt kleurgebruik en een herkenbare stijl.",
+            "caption": "Kun je aan het ontwerp zien dat er keuzes zijn gemaakt?"
           },
           {
             "type": "think-pair-share",
@@ -42009,8 +42000,8 @@
               "Verbeter: pas één onderdeel aan als dat nodig is."
             ],
             "kicker": "🖋 Benoem wat werkt",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library_books.jpg",
-            "imageAlt": "Boeken in een bibliotheek."
+            "imageAlt": "Leerlingen bekijken en bespreken elkaars creatieve werk aan een tafel.",
+            "caption": "Kijk niet alleen of je iets mooi vindt. Zoek welke keuze werkt."
           },
           {
             "type": "gallery",
@@ -42031,8 +42022,8 @@
               "Wat wil jij nog verbeteren?"
             ],
             "kicker": "🖋 Kijken zonder wedstrijd",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edwaert_Collier_-_Trompe_l%27%C5%93il_with_a_letter_rack_holding_newspapers%2C_letters%2C_writing_equipment_and_a_comb%2C_098l19030-b3v3g.jpg",
-            "imageAlt": "Een verzameling brieven en schrijfmateriaal."
+            "imageAlt": "Verschillende creatieve leerlingontwerpen liggen naast elkaar als een kleine tentoonstelling.",
+            "caption": "Je kijkt om ideeën te ontdekken, niet om een winnaar te kiezen."
           },
           {
             "type": "exit-ticket",
@@ -42045,16 +42036,16 @@
               "Volgende les wil ik nog verbeteren..."
             ],
             "kicker": "🖋 Dit wil ik later terugzien",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman_writing_on_a_notebook_with_a_pen.jpg",
-            "imageAlt": "Iemand schrijft in een schrift."
+            "imageAlt": "Een leerling schrijft rustig een korte reflectiezin in een schrift.",
+            "caption": "Sluit af met één gedachte die je wilt onthouden."
           },
           {
             "type": "title",
             "title": "Maak er iets bijzonders van",
             "subtitle": "Dit is pas het begin",
             "kicker": "🖋 Jouw Nederlands, jouw boek",
-            "image": "https://openmoji.org/data/color/svg/1F58B.svg",
-            "imageAlt": "Een vulpen als afsluitend themasymbool."
+            "imageAlt": "Een afgemaakt persoonlijk schrift ligt als een eigen boek op tafel.",
+            "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij."
           }
         ]
       },
@@ -42099,8 +42090,12 @@
               "presentatiestijl:",
               "beeldrijk",
               "persoonlijk",
-              "ateliergevoel",
+              "modern ateliergevoel",
+              "veel visuele afwisseling",
+              "afbeeldingen sluiten steeds direct aan op de inhoud van de dia",
+              "hoofdafbeeldingen worden niet herhaald",
               "terugkerend themasymbool: vulpen",
+              "vulpen alleen als klein themasymbool, niet steeds als hoofdbeeld",
               "geen bronvermelding onder afbeeldingen"
             ]
           },
