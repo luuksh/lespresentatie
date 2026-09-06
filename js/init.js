@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let currentPlanningLessons = [];
   let frontPresentationTarget = null;
   let activeSeriesNav = { presentation: null, items: [], index: -1 };
+  let directPresentationPreviewOpened = false;
   let autoBoardAssignmentLessonKey = '';
   let boardAssignmentWriteInProgress = false;
   let teacherLessonSelectionPublishTimer = null;
@@ -2337,6 +2338,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
+  function directPresentationPreviewTargetFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const presentationId = String(params.get('presentationId') || params.get('deckId') || '').trim();
+    const markerId = String(params.get('markerId') || params.get('presentationMarkerId') || '').trim();
+    const hasPreviewIntent = params.has('presentationPreview') || params.has('preview') || presentationId || markerId;
+    if (!hasPreviewIntent || (!presentationId && !markerId)) return null;
+
+    const project = String(params.get('project') || '').trim();
+    const title = String(params.get('title') || params.get('lesson') || '').trim() || 'Presentatie-preview';
+    return {
+      title,
+      project,
+      presentationId,
+      markerId,
+      fallbackProjectDeckId: project ? projectDeckId(project) : presentationId,
+      fallbackMarkerId: markerId || (title ? lessonMarkerId(title) : ''),
+    };
+  }
+
+  function applyDirectPresentationClassFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const rawClassId = String(params.get('classId') || params.get('klas') || params.get('class') || '').trim();
+    if (!rawClassId || !klasSelect) return;
+    const classId = ensureClassOption(rawClassId);
+    if (!classId || klasSelect.value === classId) return;
+    klasSelect.value = classId;
+    window.__autoAppliedProjectLayoutKey = '';
+    applyDefaultLayoutForClass(classId);
+    laadIndeling();
+  }
+
+  function openDirectPresentationPreviewFromUrl() {
+    if (directPresentationPreviewOpened) return false;
+    const target = directPresentationPreviewTargetFromUrl();
+    if (!target) return false;
+    applyDirectPresentationClassFromUrl();
+    const resolved = resolveInternalPresentation(target);
+    if (!resolved.presentation) return false;
+    directPresentationPreviewOpened = true;
+    openPresentationPanel(target);
+    return true;
+  }
+
   function internalPresentationHasMarker(presentation, markerId) {
     const cleanMarkerId = String(markerId || '').trim();
     if (!presentation || typeof presentation !== 'object' || !cleanMarkerId) return false;
@@ -4196,6 +4240,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   closePresentationPanel();
   window.addEventListener('pageshow', () => {
+    if (directPresentationPreviewTargetFromUrl()) {
+      openDirectPresentationPreviewFromUrl();
+      return;
+    }
     closePresentationPanel();
   });
 
@@ -4261,6 +4309,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   setEditorFileStatus('Jaarplanning Studio actief (intern).');
   resetPlanningTimer();
   renderPlanning();
+  openDirectPresentationPreviewFromUrl();
 
   applyAgendaSource(resolveAgendaSourceUrl(), false, { source: 'manual' });
   window.addEventListener('focus', () => {
