@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:57:36+02:00",
+  "updatedAt": "2026-09-06T16:57:46+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:57:36+02:00",
+  "sourceRevision": "2026-09-06T16:57:46+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -43357,9 +43357,9 @@
             "subtitle": "Niet alles tegelijk",
             "items": [],
             "kicker": "FOCUS",
+            "text": "Maak het klein, dan wordt het sterker.",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Letterpressletters.",
-            "text": "Maak het klein, dan wordt het sterker."
+            "imageAlt": "Letterpressletters."
           },
           {
             "type": "question",
@@ -43418,9 +43418,9 @@
               "Leg oorzaak en gevolg uit."
             ],
             "kicker": "LAAT ZIEN WAT JE KUNT",
+            "text": "Een sterke tekst beschrijft niet alleen een gebeurtenis, maar laat zien hoe woorden betekenis, toon of gevolg veranderden.",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van drukletters.",
-            "text": "Een sterke tekst beschrijft niet alleen een gebeurtenis, maar laat zien hoe woorden betekenis, toon of gevolg veranderden."
+            "imageAlt": "Close-up van drukletters."
           },
           {
             "type": "before-after",
@@ -43530,13 +43530,11 @@
           "netschrift": {
             "items": [
               "Titel: Een moment waarop taal ertoe deed.",
-              "Je schrijft 150-200 woorden.",
-              "Je gebruikt je interview als vooronderzoek.",
-              "Je kiest één concreet taalmoment: van jezelf of van je klasgenoot.",
+              "Je schrijft 150-200 woorden over één concreet taalmoment.",
+              "Je gebruikt materiaal uit het interview of een eigen ervaring.",
               "Je gebruikt minimaal één letterlijk woord of zinnetje.",
-              "Je legt uit waarom juist die taal belangrijk was.",
               "Je verbetert minimaal één formulering zichtbaar.",
-              "Je onderstreept je beste zin en schrijft waarom die werkt."
+              "Je onderstreept je beste zin en schrijft erbij waarom die werkt."
             ]
           },
           "curriculum": {
