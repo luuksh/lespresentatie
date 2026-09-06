@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T17:12:24+02:00",
+  "updatedAt": "2026-09-06T17:20:04+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -5949,7 +5949,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -5979,7 +5981,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -6009,7 +6013,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -6039,7 +6045,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -6069,7 +6077,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -6099,7 +6109,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -6129,7 +6141,9 @@
           "homework": "netschrift en pen mee",
           "lessonKey": "B",
           "presentationId": "project-start-nederlands-3",
-          "presentationMarkerId": "marker-startles-3-2"
+          "presentationMarkerId": "marker-startles-3-2",
+          "assessment": "",
+          "teacherNote": ""
         }
       ],
       "items": [
@@ -35209,30 +35223,12 @@
         "marker-startles-3-1": {
           "netschrift": {
             "items": [
-              "Je bewaart je denkwerk, uitwerkingen en verbeteringen.",
-              "Individueel werk komt eerst in je netschrift.",
-              "Bij groepswerk vergelijk je daarna jullie individuele versies.",
-              "Je netschrift laat zien wat jouw eigen bijdrage en ontwikkeling zijn.",
-              "Nieuwe opdracht: titel en datum.",
-              "Gebruik een duidelijke indeling en voldoende witruimte.",
-              "Werk met tussenkopjes, alinea's en kaders waar dat helpt.",
-              "Schrijf leesbaar en verzorgd.",
-              "Verbeteringen mogen zichtbaar blijven.",
-              "Verzorgd, overzichtelijk, leesbaar en persoonlijk.",
-              "Titelblad: NETSCHRIFT NEDERLANDS, naam, klas en schooljaar.",
-              "Eén pagina inhoudsopgave.",
-              "Tien pagina's leesmeters.",
-              "Daarna begint het gedeelte PROJECTEN.",
-              "Nummer je gebruikte pagina's.",
-              "Draai je schrift om.",
-              "Reserveer vier pagina's voor je woordenlijst.",
-              "Daarna komt grammatica.",
-              "Nieuwe projecten krijgen later een eigen voorblad en tabje.",
-              "Maak geen ingevuld vragenlijstje.",
-              "Geef de pagina een sterke titel.",
-              "Maak een eigen indeling.",
-              "Gebruik woorden, kaders, symbolen of illustraties.",
-              "Bewaar ruimte voor ontwikkeling: hier kijken we later op terug."
+              "Titel: Start Nederlands 3 - leer toch falen.",
+              "Je hebt de basis van je netschrift ingericht: titelblad, inhoudsopgave, leesmeters, projecten, woordenlijst en grammatica.",
+              "Je hebt korte interviewnotities van je klasgenoot opgeschreven.",
+              "Je hebt minimaal één antwoord gemarkeerd dat je volgende les kunt gebruiken.",
+              "Je schrijft onderaan: Dit viel mij op aan mijn klasgenoot...[netschrift]",
+              "Je schrijft onderaan: Dit viel mij op aan mijn klasgenoot..."
             ]
           },
           "curriculum": {
@@ -35268,6 +35264,17 @@
             "skills": [],
             "kerndoelen": [],
             "subkerndoelen": []
+          },
+          "homework": {
+            "items": [
+              "netschrift en pen mee"
+            ]
+          },
+          "planning": {
+            "lesson": "Startles 2: Maak het van jou",
+            "homework": "netschrift en pen mee",
+            "assessment": "",
+            "teacherNote": ""
           }
         }
       }
@@ -36964,7 +36971,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T17:12:24+02:00-studio",
+  "sourceRevision": "2026-09-06T17:20:04+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
