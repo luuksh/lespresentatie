@@ -2886,6 +2886,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     const images = slideImages();
     const safeMediaUrl = String(slide.video || slide.url || '').trim();
+    const externalEmbedHtml = (rawUrl, label = 'Open fragment') => {
+      let parsed = null;
+      try {
+        parsed = new URL(rawUrl);
+      } catch {
+        return '';
+      }
+      const host = parsed.hostname.replace(/^www\./, '').toLowerCase();
+      const path = parsed.pathname;
+      let embedUrl = '';
+      if (host === 'youtu.be') {
+        const id = path.split('/').filter(Boolean)[0] || '';
+        if (id) embedUrl = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+      } else if (host.endsWith('youtube.com')) {
+        const id = parsed.searchParams.get('v') || path.match(/\/embed\/([^/]+)/)?.[1] || path.match(/\/shorts\/([^/]+)/)?.[1] || '';
+        if (id) embedUrl = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+      } else if (host.endsWith('vimeo.com')) {
+        const id = path.split('/').filter(Boolean).find((part) => /^\d+$/.test(part)) || '';
+        if (id) embedUrl = `https://player.vimeo.com/video/${encodeURIComponent(id)}`;
+      }
+      if (embedUrl) {
+        return `<iframe src="${escapeHtml(embedUrl)}" title="${escapeHtml(label)}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      }
+      if (/\.(mp4|webm|ogg)(\?|$)/i.test(parsed.pathname)) {
+        return `<video src="${escapeHtml(rawUrl)}" controls preload="metadata"></video>`;
+      }
+      return `<a href="${escapeHtml(rawUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(label)}</a>`;
+    };
     const cardClasses = ['presentation-slide-card'];
     if (slideType) cardClasses.push(`is-${slideType}`);
     if (slide.emphasis) cardClasses.push('is-emphasis');
@@ -2899,7 +2927,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!images.length && safeMediaUrl && !/^javascript:/i.test(safeMediaUrl)) {
         return `
           <figure class="presentation-slide-media is-video">
-            <a href="${escapeHtml(safeMediaUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(slide.caption || slide.title || 'Open fragment')}</a>
+            ${externalEmbedHtml(safeMediaUrl, slide.caption || slide.title || 'Open fragment')}
             ${slide.source ? `<figcaption>${linkedTextHtml(slide.source)}</figcaption>` : ''}
           </figure>
         `;

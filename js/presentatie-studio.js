@@ -1543,6 +1543,34 @@ function renderStudioPlayerSlide() {
     ? slide.images
     : cleanSlideImages(slide);
   const mediaUrl = String(slide.video || slide.url || '').trim();
+  const externalEmbedHtml = (rawUrl, label = 'Open fragment') => {
+    let parsed = null;
+    try {
+      parsed = new URL(rawUrl);
+    } catch {
+      return '';
+    }
+    const host = parsed.hostname.replace(/^www\./, '').toLowerCase();
+    const path = parsed.pathname;
+    let embedUrl = '';
+    if (host === 'youtu.be') {
+      const id = path.split('/').filter(Boolean)[0] || '';
+      if (id) embedUrl = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+    } else if (host.endsWith('youtube.com')) {
+      const id = parsed.searchParams.get('v') || path.match(/\/embed\/([^/]+)/)?.[1] || path.match(/\/shorts\/([^/]+)/)?.[1] || '';
+      if (id) embedUrl = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+    } else if (host.endsWith('vimeo.com')) {
+      const id = path.split('/').filter(Boolean).find((part) => /^\d+$/.test(part)) || '';
+      if (id) embedUrl = `https://player.vimeo.com/video/${encodeURIComponent(id)}`;
+    }
+    if (embedUrl) {
+      return `<iframe src="${escapeHtml(embedUrl)}" title="${escapeHtml(label)}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    }
+    if (/\.(mp4|webm|ogg)(\?|$)/i.test(parsed.pathname)) {
+      return `<video src="${escapeHtml(rawUrl)}" controls preload="metadata"></video>`;
+    }
+    return `<a href="${escapeHtml(rawUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(label)}</a>`;
+  };
   const media = images.length
     ? `
       <div class="studio-player-media${images.length > 1 ? ' is-gallery-media' : ''}">
@@ -1557,7 +1585,7 @@ function renderStudioPlayerSlide() {
     : mediaUrl && !/^javascript:/i.test(mediaUrl)
       ? `
         <figure class="studio-player-media is-video">
-          <a href="${escapeHtml(mediaUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(slide.caption || title || 'Open fragment')}</a>
+          ${externalEmbedHtml(mediaUrl, slide.caption || title || 'Open fragment')}
           ${slide.source ? `<figcaption>${linkedTextHtml(slide.source)}</figcaption>` : ''}
         </figure>
       `
