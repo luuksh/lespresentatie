@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:54:53+02:00",
+  "updatedAt": "2026-09-06T16:55:20+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:54:53+02:00",
+  "sourceRevision": "2026-09-06T16:55:20+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41919,9 +41919,9 @@
             "subtitle": "Ons startpunt",
             "items": [],
             "kicker": "NIET PERFECT, WEL IN BEWEGING",
+            "text": "Falen telt pas als leren wanneer je er iets mee doet.",
             "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Collage met tekststroken, papier en kleurvlakken.",
-            "text": "Falen telt pas als leren wanneer je er iets mee doet."
+            "imageAlt": "Collage met tekststroken, papier en kleurvlakken."
           },
           {
             "type": "compare",
@@ -42456,16 +42456,11 @@
         "marker-startles-3-1": {
           "netschrift": {
             "items": [
-              "Je bewaart je denkwerk, uitwerkingen en verbeteringen.",
-              "Individueel werk komt eerst in je netschrift.",
-              "Je netschrift laat zien wat jouw eigen bijdrage en ontwikkeling zijn.",
-              "Nieuwe opdracht: titel en datum.",
-              "Gebruik een duidelijke indeling en voldoende witruimte.",
-              "Titelblad: NETSCHRIFT NEDERLANDS, naam, klas en schooljaar.",
-              "Eén pagina inhoudsopgave.",
-              "Tien pagina's leesmeters.",
-              "Daarna begint het gedeelte PROJECTEN.",
-              "Draai je schrift om: vier pagina's woordenlijst, daarna grammatica."
+              "Titel: Start Nederlands 3 - leer toch falen.",
+              "Je hebt de basis van je netschrift ingericht: titelblad, inhoudsopgave, leesmeters, projecten, woordenlijst en grammatica.",
+              "Je hebt korte interviewnotities van je klasgenoot opgeschreven.",
+              "Je hebt minimaal één antwoord gemarkeerd dat je volgende les kunt gebruiken.",
+              "Je schrijft onderaan: Dit viel mij op aan mijn klasgenoot..."
             ]
           },
           "curriculum": {
