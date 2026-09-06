@@ -413,6 +413,7 @@ select {
 
 .studio-player-slide {
   --studio-slide-scale: 1;
+  position: relative;
   width: min(1360px, calc(100vw - clamp(88px, 10vw, 180px)));
   max-height: calc(100vh - 168px);
   overflow: hidden;
@@ -442,6 +443,70 @@ select {
 .studio-player-slide.is-fit-overflow {
   overflow-y: auto;
   scrollbar-width: thin;
+}
+
+.studio-player-slide.is-netschrift {
+  border-color: rgba(229, 242, 255, 0.92);
+  background:
+    linear-gradient(90deg, rgba(139, 33, 52, 0.2) 0 18px, rgba(197, 154, 74, 0.25) 18px 25px, transparent 25px),
+    linear-gradient(90deg, transparent 0 110px, rgba(139, 33, 52, 0.26) 110px 113px, transparent 113px),
+    repeating-linear-gradient(180deg, transparent 0 33px, rgba(49, 93, 134, 0.16) 33px 35px),
+    radial-gradient(62% 76% at 87% 12%, rgba(255, 255, 255, 0.78), transparent 54%),
+    linear-gradient(145deg, #fffdf7 0%, #f7f4ea 54%, #e7f0f5 100%);
+  box-shadow:
+    0 38px 94px rgba(4, 16, 34, 0.42),
+    0 0 0 12px rgba(197, 154, 74, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96),
+    inset 32px 0 0 rgba(139, 33, 52, 0.08);
+}
+
+.studio-player-slide.is-netschrift::after {
+  content: "NETSCHRIFT";
+  position: absolute;
+  top: calc(30px * var(--studio-slide-scale, 1));
+  right: calc(42px * var(--studio-slide-scale, 1));
+  border: 1px solid rgba(47, 111, 104, 0.28);
+  border-radius: 8px;
+  background: rgba(238, 246, 241, 0.86);
+  color: #2f6f68;
+  font-size: calc(15px * var(--studio-slide-scale, 1));
+  font-weight: 900;
+  padding:
+    calc(5px * var(--studio-slide-scale, 1))
+    calc(10px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-netschrift .studio-player-slide-title {
+  color: #172848;
+}
+
+.studio-player-slide.is-netschrift .studio-player-slide-subtitle {
+  border-color: rgba(197, 154, 74, 0.44);
+  background: rgba(255, 249, 232, 0.82);
+  color: #315d86;
+}
+
+.studio-player-slide.is-netschrift .studio-player-bullets {
+  max-width: 44ch;
+  border-left: 3px solid rgba(139, 33, 52, 0.28);
+  padding-left: calc(28px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-netschrift .studio-player-bullets li {
+  min-height: calc(38px * var(--studio-slide-scale, 1));
+  border-bottom: 1px solid rgba(49, 93, 134, 0.14);
+  padding-bottom: calc(5px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-netschrift .studio-player-bullets li::before {
+  top: 0.28em;
+  border-radius: 4px 50% 50% 50%;
+  background:
+    linear-gradient(135deg, #8b2134 0 42%, #c59a4a 42% 57%, #2f6f68 57% 100%);
+  box-shadow:
+    0 0 0 6px rgba(197, 154, 74, 0.12),
+    0 0 18px rgba(47, 111, 104, 0.18);
+  transform: rotate(-24deg);
 }
 
 .studio-player-slide-title {

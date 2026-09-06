@@ -1197,12 +1197,35 @@ a:focus-visible {
   box-shadow: 0 18px 42px rgba(35, 118, 90, 0.12);
 }
 
+.dialog-slide.is-netschrift {
+  border-color: rgba(139, 33, 52, 0.34);
+  background:
+    linear-gradient(90deg, rgba(139, 33, 52, 0.18) 0 18px, rgba(197, 154, 74, 0.25) 18px 26px, transparent 26px),
+    linear-gradient(90deg, transparent 0 76px, rgba(139, 33, 52, 0.16) 76px 78px, transparent 78px),
+    repeating-linear-gradient(180deg, transparent 0 31px, rgba(49, 93, 134, 0.12) 31px 33px),
+    #fffdf7;
+  box-shadow: 0 18px 42px rgba(23, 40, 72, 0.13);
+}
+
 .dialog-slide.is-emphasis h2 {
   color: #9a4108;
 }
 
 .dialog-slide.is-homework h2 {
   color: #23765a;
+}
+
+.dialog-slide.is-netschrift h2 {
+  color: #172848;
+}
+
+.dialog-slide.is-netschrift p {
+  color: #315d86;
+}
+
+.dialog-slide.is-netschrift li {
+  border-bottom: 1px solid rgba(49, 93, 134, 0.12);
+  padding-bottom: 4px;
 }
 
 .dialog-slide h2 {
