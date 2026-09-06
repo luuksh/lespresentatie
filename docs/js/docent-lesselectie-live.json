@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:35:10.477Z",
+  "updatedAt": "2026-09-06T14:40:13.342Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -18,7 +18,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewantwoorden af als dat nog niet klaar is.\nNeem volgende les kleurpotlood, fineliner of markeerstift mee als je dat wilt gebruiken. netschrift en pen mee",
+          "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
@@ -52,7 +52,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 1: Welkom terug - leer toch falen",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je interviewantwoorden af als dat nog niet klaar is.\nNeem volgende les kleurpotlood, fineliner of markeerstift mee als je dat wilt gebruiken. netschrift en pen mee",
+          "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-1",
           "lessonKey": "A",
@@ -86,7 +86,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nNeem volgende les je netschrift, pen en kennismakingsformulier mee.\nNeem ook potlood, kleurpotloden of fineliner mee. netschrift en pen mee",
+          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
@@ -173,7 +173,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
-          "homework": "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nNeem iedere les je leesboek, netschrift en pen mee.\nDenk alvast na welk boek je als eerste wilt lezen.",
+          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
           "lessonKey": "C",
@@ -330,7 +330,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nNeem volgende les je netschrift, pen en kennismakingsformulier mee.\nNeem ook potlood, kleurpotloden of fineliner mee. netschrift en pen mee",
+          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
           "lessonKey": "A",
@@ -570,7 +570,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 2: Maak het van jou",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je startpagina af als die nog niet klaar is.\nWerk je titelblad of voorkant thuis verder af als dat nodig is. netschrift en pen mee",
+          "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-2",
           "lessonKey": "B",
@@ -606,7 +606,7 @@
         {
           "project": "Start Nederlands 3",
           "lesson": "Startles 2: Maak het van jou",
-          "homework": "Neem je netschrift, pen en leesboek mee.\nMaak je startpagina af als die nog niet klaar is.\nWerk je titelblad of voorkant thuis verder af als dat nodig is. netschrift en pen mee",
+          "homework": "netschrift en pen mee",
           "presentationId": "project-start-nederlands-3",
           "presentationMarkerId": "marker-startles-3-2",
           "lessonKey": "B",
