@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:58:21+02:00",
+  "updatedAt": "2026-09-06T07:58:32+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13749,7 +13749,7 @@
       ]
     }
   ],
-  "sourceRevision": "2026-09-06T07:58:21+02:00",
+  "sourceRevision": "2026-09-06T07:58:32+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41216,7 +41216,7 @@
             "teacherNote": "",
             "progressByClass": {
               "1C": "todo",
-              "1D": "done"
+              "1D": "todo"
             }
           }
         },

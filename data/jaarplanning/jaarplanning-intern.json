@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:58:21+02:00",
+  "updatedAt": "2026-09-06T07:58:32+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3776,7 +3776,7 @@
           "sequenceIndex": 1,
           "progressByClass": {
             "1C": "todo",
-            "1D": "done"
+            "1D": "todo"
           }
         },
         {
@@ -3814,7 +3814,7 @@
           "sequenceIndex": 1,
           "progressByClass": {
             "1C": "todo",
-            "1D": "done"
+            "1D": "todo"
           }
         },
         {
@@ -32889,7 +32889,7 @@
             "teacherNote": "",
             "progressByClass": {
               "1C": "todo",
-              "1D": "done"
+              "1D": "todo"
             }
           }
         },
@@ -34351,7 +34351,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T07:58:21+02:00-studio",
+  "sourceRevision": "2026-09-06T07:58:32+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
