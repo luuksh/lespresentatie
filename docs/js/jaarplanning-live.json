@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:12:28+02:00",
+  "updatedAt": "2026-09-06T16:17:55+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -1258,7 +1258,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
+          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nMaak je eerste netschriftpagina af.\nNeem iedere les je leesboek, netschrift en pen mee.\nNeem volgende les ook potlood, kleurpotloden of fineliner mee.",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
@@ -1820,7 +1820,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 1 - Welkom bij Nederlands",
-          "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
+          "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nMaak je eerste netschriftpagina af.\nNeem iedere les je leesboek, netschrift en pen mee.\nNeem volgende les ook potlood, kleurpotloden of fineliner mee.",
           "lessonKey": "A",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-1",
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T16:12:28+02:00",
+  "sourceRevision": "2026-09-06T16:17:55+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -40985,10 +40985,11 @@
         {
           "type": "title",
           "title": "Les 1 - Start Nederlands",
-          "subtitle": "Dit jaar ga je lezen, schrijven, spreken, denken, onderzoeken en maken",
+          "subtitle": "Lezen, schrijven, spreken, denken, onderzoeken en maken",
           "showProjectLogo": false,
           "items": [
             "Vandaag maak je kennis met het vak.",
+            "Je vult een kennismakingsformulier in.",
             "Je richt je netschrift in.",
             "Je maakt je eerste persoonlijke pagina."
           ]
@@ -41028,6 +41029,51 @@
         },
         {
           "type": "title",
+          "title": "Kennismakingsformulier",
+          "subtitle": "Niet zomaar invullen: laat iets van jezelf zien",
+          "showProjectLogo": false,
+          "items": [
+            "Schrijf leesbaar.",
+            "Geef echte antwoorden.",
+            "Je hoeft niet alles grappig te maken.",
+            "Eén origineel antwoord is beter dan vijf snelle antwoorden."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "Formuliervragen",
+          "subtitle": "Dit soort dingen gebruik je straks in je netschrift",
+          "showProjectLogo": false,
+          "items": []
+        },
+        {
+          "type": "title",
+          "title": "Vul in: Dit ben ik",
+          "subtitle": "Werk rustig en eerlijk",
+          "showProjectLogo": false,
+          "items": [
+            "Naam, woonplaats of buurt.",
+            "Beste muziek aller tijden.",
+            "Favoriete plek op aarde.",
+            "Als ik een boek zou zijn...",
+            "Hier kan ik hulp bij gebruiken bij Nederlands."
+          ]
+        },
+        {
+          "type": "title",
+          "title": "De achterkant telt ook",
+          "subtitle": "Je docent leert hoe jij werkt",
+          "showProjectLogo": false,
+          "items": [
+            "Hoe zou jij jezelf als leerling omschrijven?",
+            "Wat is iets leuks, geks of grappigs dat je op school hebt meegemaakt?",
+            "Hoe kan een docent jou helpen of motiveren?",
+            "Wat doe je graag in je vrije tijd?",
+            "Wat wil je later worden of studeren?"
+          ]
+        },
+        {
+          "type": "title",
           "title": "Hoe ziet Nederlands eruit?",
           "subtitle": "Actief werken, niet alleen luisteren",
           "showProjectLogo": false,
@@ -41046,7 +41092,7 @@
           "showProjectLogo": false,
           "items": [
             "Diep lezen: beter begrijpen wat er staat.",
-            "Literatuur: verhalen, boeken en personages onderzoeken.",
+            "Literatuur: verhalen en personages onderzoeken.",
             "Schrijven: gedachten helder formuleren.",
             "Spreken: duidelijk en passend overkomen.",
             "Taalkunde: ontdekken hoe taal werkt."
@@ -41055,21 +41101,9 @@
         {
           "type": "title",
           "title": "Dit wordt jouw Nederlands",
-          "subtitle": "Je netschrift laat zien wat jij leest, schrijft, denkt, ontdekt, maakt en leert",
+          "subtitle": "Je netschrift wordt een spoor van je ontwikkeling",
           "showProjectLogo": false,
           "items": []
-        },
-        {
-          "type": "title",
-          "title": "Waarom met de hand?",
-          "subtitle": "Langzamer schrijven kan helpen om beter te denken",
-          "showProjectLogo": false,
-          "items": [
-            "Je onthoudt beter.",
-            "Je denkt rustiger.",
-            "Je traint je concentratie.",
-            "Je werk wordt persoonlijker."
-          ]
         },
         {
           "type": "title",
@@ -41104,76 +41138,11 @@
           "subtitle": "Niet vooruitwerken",
           "showProjectLogo": false,
           "items": [
-            "Leg klaar: netschrift, pen of potlood en liniaal.",
-            "Wacht steeds op de volgende stap.",
-            "Controleer of je op de juiste pagina zit.",
-            "Werk rustig en precies.",
-            "Vraag pas hulp nadat je zelf hebt gecontroleerd."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Stap 1: titelblad",
-          "subtitle": "De eerste pagina van je Nederlands-boek",
-          "showProjectLogo": false,
-          "items": [
-            "Schrijf: Netschrift Nederlands.",
-            "Voeg je naam toe.",
-            "Voeg je klas toe.",
-            "Voeg schooljaar 2026-2027 toe.",
-            "Versier nog niet uitgebreid. Dat doen we volgende les."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Stap 2: inhoudsopgave",
-          "subtitle": "Maak alvast de grote onderdelen",
-          "showProjectLogo": false,
-          "items": [
-            "Leesmeters",
-            "Project 1",
-            "Project 2",
-            "Project 3",
-            "Woordenlijst",
-            "Grammatica"
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Stap 3: leesmeters",
-          "subtitle": "Hier houd je je leesontwikkeling bij",
-          "showProjectLogo": false,
-          "items": [
-            "Reserveer tien pagina's.",
-            "Nummer de pagina's die je gebruikt.",
-            "Hier komt je leesontwikkeling.",
-            "Daarna beginnen de projecten.",
-            "Vanaf nu werken we met paginanummers."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Ieder project krijgt straks",
-          "subtitle": "Een eigen plek in je schrift",
-          "showProjectLogo": false,
-          "items": [
-            "Een nieuw voorblad.",
-            "Een tabje.",
-            "Een plek in je inhoudsopgave.",
-            "Aan het einde een korte terugblik."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Stap 4: draai je schrift om",
-          "subtitle": "Vanaf de achterkant beginnen we met oefenen",
-          "showProjectLogo": false,
-          "items": [
-            "Begin vanaf de achterkant.",
-            "Reserveer vier pagina's voor de woordenlijst.",
-            "Daarna komt grammatica.",
-            "Zo blijven projecten en oefening uit elkaar.",
-            "Controleer of je de goede kant gebruikt."
+            "Titelblad.",
+            "Inhoudsopgave.",
+            "Leesmeters.",
+            "Projecten.",
+            "Woordenlijst en grammatica achterin."
           ]
         },
         {
@@ -41182,64 +41151,38 @@
           "subtitle": "Ik & Nederlands - september 2026",
           "showProjectLogo": false,
           "items": [
-            "Mijn top 3 boeken, verhalen, strips, graphic novels of luisterboeken.",
-            "Een boek of verhaal dat ik niet leuk vond.",
-            "Dit vind ik makkelijk bij Nederlands.",
-            "Dit vind ik lastig bij Nederlands.",
-            "Hier wil ik dit jaar beter in worden."
+            "Kies drie antwoorden uit je formulier.",
+            "Schrijf erbij wat ze over jou laten zien.",
+            "Voeg toe waar je beter in wilt worden.",
+            "Maak titel, tussenkopjes en witruimte.",
+            "Gebruik eventueel een klein kader of detail."
           ]
         },
         {
           "type": "title",
           "title": "Als je vastloopt",
-          "subtitle": "Gebruik één van deze zinnen",
+          "subtitle": "Begin met één van deze zinnen",
           "showProjectLogo": false,
           "items": [
-            "Nederlands gebruik ik vooral wanneer...",
-            "Lezen vind ik...",
-            "Schrijven gaat goed als...",
-            "Spreken voor de klas vind ik...",
+            "Bij Nederlands ben ik iemand die...",
+            "Als ik een boek zou zijn, dan zou ik...",
+            "Een docent helpt mij vooral door...",
+            "Dit jaar wil ik beter worden in...",
             "Aan het einde van dit jaar hoop ik dat..."
           ]
         },
         {
           "type": "title",
-          "title": "Maak er geen vragenlijst van",
-          "subtitle": "Het moet een pagina worden, geen ingevuld formulier",
+          "title": "Maak er geen formulier van",
+          "subtitle": "Het moet een netschriftpagina worden",
           "showProjectLogo": false,
           "items": [
-            "Voor: vijf antwoorden onder elkaar.",
+            "Voor: losse antwoorden onder elkaar.",
             "Na: titel, tussenkopjes, witruimte en kaders.",
-            "Voor: alles even groot.",
-            "Na: één titel springt eruit.",
             "Voor: snel ingevuld.",
-            "Na: persoonlijk en verzorgd."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Sterke eerste pagina",
-          "subtitle": "Hier kijk je straks zelf naar",
-          "showProjectLogo": false,
-          "items": [
-            "Titel en datum staan bovenaan.",
-            "De bladzijde is overzichtelijk.",
-            "Je antwoorden zijn persoonlijk.",
-            "Je gebruikt witruimte.",
-            "Je gebruikt minstens één kader, tussenkopje of kleine illustratie.",
-            "Je kunt deze pagina later opnieuw vergelijken."
-          ]
-        },
-        {
-          "type": "title",
-          "title": "Kijk even bij je buur",
-          "subtitle": "Zoek één keuze die werkt",
-          "showProjectLogo": false,
-          "items": [
-            "Denk: wat is sterk aan jouw pagina?",
-            "Kijk: wat valt op bij je buur?",
-            "Bespreek: welke keuze maakt het overzichtelijk?",
-            "Verbeter: pas één klein ding aan."
+            "Na: persoonlijk en verzorgd.",
+            "Voor: alles even groot.",
+            "Na: één onderdeel springt eruit."
           ]
         },
         {
@@ -41250,7 +41193,7 @@
           "items": [
             "Wat weet je nu over jezelf bij Nederlands?",
             "Wat wil je dit jaar beter kunnen?",
-            "Wat moet je aan het einde kunnen terugzien?",
+            "Welk antwoord uit je formulier past echt bij jou?",
             "Welke afspraak uit de Netschriftcode ga jij onthouden?"
           ]
         },
@@ -41508,7 +41451,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 25
+        "marker-startles-1-2": 21
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -41519,15 +41462,16 @@
             "items": [],
             "kicker": "TAAL IS OVERAL",
             "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een stijlvolle collage van papier, tekstfragmenten en grote letters.",
+            "imageAlt": "Een collage van papier, tekstfragmenten en grote letters.",
             "caption": "Nederlands gaat niet alleen over spelling. Het gaat over hoe taal werkt in het echt."
           },
           {
             "type": "visual",
             "title": "Les 1 - Start Nederlands",
-            "subtitle": "Dit jaar ga je lezen, schrijven, spreken, denken, onderzoeken en maken",
+            "subtitle": "Lezen, schrijven, spreken, denken, onderzoeken en maken",
             "items": [
               "Vandaag maak je kennis met het vak.",
+              "Je vult een kennismakingsformulier in.",
               "Je richt je netschrift in.",
               "Je maakt je eerste persoonlijke pagina."
             ],
@@ -41565,7 +41509,7 @@
             ],
             "kicker": "TAAL SCHAKELT",
             "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een abstracte collage met tekststroken, kleurvlakken en patronen."
+            "imageAlt": "Abstracte collage met tekststroken, kleurvlakken en patronen."
           },
           {
             "type": "spotlight",
@@ -41573,9 +41517,62 @@
             "subtitle": "Jij kiest woorden, toon, volgorde en effect",
             "items": [],
             "kicker": "JIJ DOET DIT AL",
+            "text": "Jij bent een taalmaker.",
             "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van letterpressletters.",
-            "text": "Jij bent een taalmaker."
+            "imageAlt": "Close-up van letterpressletters."
+          },
+          {
+            "type": "visual",
+            "title": "Kennismakingsformulier",
+            "subtitle": "Niet zomaar invullen: laat iets van jezelf zien",
+            "items": [
+              "Schrijf leesbaar.",
+              "Geef echte antwoorden.",
+              "Je hoeft niet alles grappig te maken.",
+              "Eén origineel antwoord is beter dan vijf snelle antwoorden."
+            ],
+            "kicker": "DIT BEN IK",
+            "layout": "image-left",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Een collage van gekleurd papier en tekstfragmenten.",
+            "caption": "Je antwoorden zijn straks materiaal voor je eerste netschriftpagina."
+          },
+          {
+            "type": "gallery",
+            "title": "Formuliervragen",
+            "subtitle": "Dit soort dingen gebruik je straks in je netschrift",
+            "items": [],
+            "kicker": "TAALPASPOORT"
+          },
+          {
+            "type": "task",
+            "title": "Vul in: Dit ben ik",
+            "subtitle": "Werk rustig en eerlijk",
+            "items": [
+              "Naam, woonplaats of buurt.",
+              "Beste muziek aller tijden.",
+              "Favoriete plek op aarde.",
+              "Als ik een boek zou zijn...",
+              "Hier kan ik hulp bij gebruiken bij Nederlands."
+            ],
+            "kicker": "KENNISMAKEN ZONDER KRINGGESPREK",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media collage met papier, verf en tekstlagen."
+          },
+          {
+            "type": "task",
+            "title": "De achterkant telt ook",
+            "subtitle": "Je docent leert hoe jij werkt",
+            "items": [
+              "Hoe zou jij jezelf als leerling omschrijven?",
+              "Wat is iets leuks, geks of grappigs dat je op school hebt meegemaakt?",
+              "Hoe kan een docent jou helpen of motiveren?",
+              "Wat doe je graag in je vrije tijd?",
+              "Wat wil je later worden of studeren?"
+            ],
+            "kicker": "HANDIG OM TE WETEN",
+            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met tekst, kleur en patroon."
           },
           {
             "type": "visual",
@@ -41591,7 +41588,7 @@
             "kicker": "VAK IN BEWEGING",
             "layout": "image-left",
             "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Books%2C%20Bookstore%20%26%20Library.jpg",
-            "imageAlt": "Een volle boekenkast in een bibliotheek of boekwinkel."
+            "imageAlt": "Een volle boekenkast."
           },
           {
             "type": "timeline",
@@ -41599,39 +41596,24 @@
             "subtitle": "In Magister zie je vaardigheden met O, V en G",
             "items": [
               "Diep lezen: beter begrijpen wat er staat.",
-              "Literatuur: verhalen, boeken en personages onderzoeken.",
+              "Literatuur: verhalen en personages onderzoeken.",
               "Schrijven: gedachten helder formuleren.",
               "Spreken: duidelijk en passend overkomen.",
               "Taalkunde: ontdekken hoe taal werkt."
             ],
             "kicker": "GROEI ZICHTBAAR MAKEN",
             "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van een rode boekcover met sterke textuur."
+            "imageAlt": "Close-up van een rode boekcover met textuur."
           },
           {
             "type": "visual",
             "title": "Dit wordt jouw Nederlands",
-            "subtitle": "Je netschrift laat zien wat jij leest, schrijft, denkt, ontdekt, maakt en leert",
+            "subtitle": "Je netschrift wordt een spoor van je ontwikkeling",
             "items": [],
             "kicker": "PERSOONLIJK ARCHIEF",
             "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
             "imageAlt": "Een mixed-media collage met papier, verf, tekst en lagen.",
-            "caption": "Je schrift wordt geen map met losse opdrachten, maar een spoor van je ontwikkeling."
-          },
-          {
-            "type": "source",
-            "title": "Waarom met de hand?",
-            "subtitle": "Langzamer schrijven kan helpen om beter te denken",
-            "items": [
-              "Je onthoudt beter.",
-              "Je denkt rustiger.",
-              "Je traint je concentratie.",
-              "Je werk wordt persoonlijker."
-            ],
-            "kicker": "HAND EN HOOFD",
-            "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
-            "imageAlt": "Close-up van oude boekpagina's met tekst.",
-            "text": "Met de hand werken dwingt je om te kiezen, samen te vatten en opnieuw te formuleren."
+            "caption": "Geen map met losse opdrachten, maar een boek waarin je kunt terugzien hoe je groeit."
           },
           {
             "type": "compare",
@@ -41669,11 +41651,11 @@
             "title": "We richten hem samen in",
             "subtitle": "Niet vooruitwerken",
             "items": [
-              "Leg klaar: netschrift, pen of potlood en liniaal.",
-              "Wacht steeds op de volgende stap.",
-              "Controleer of je op de juiste pagina zit.",
-              "Werk rustig en precies.",
-              "Vraag pas hulp nadat je zelf hebt gecontroleerd."
+              "Titelblad.",
+              "Inhoudsopgave.",
+              "Leesmeters.",
+              "Projecten.",
+              "Woordenlijst en grammatica achterin."
             ],
             "kicker": "STAP VOOR STAP",
             "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
@@ -41681,156 +41663,50 @@
           },
           {
             "type": "task",
-            "title": "Stap 1: titelblad",
-            "subtitle": "De eerste pagina van je Nederlands-boek",
-            "items": [
-              "Schrijf: Netschrift Nederlands.",
-              "Voeg je naam toe.",
-              "Voeg je klas toe.",
-              "Voeg schooljaar 2026-2027 toe.",
-              "Versier nog niet uitgebreid. Dat doen we volgende les."
-            ],
-            "kicker": "VOORKANT VAN BINNEN",
-            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Collage van letters en papier."
-          },
-          {
-            "type": "task",
-            "title": "Stap 2: inhoudsopgave",
-            "subtitle": "Maak alvast de grote onderdelen",
-            "items": [
-              "Leesmeters",
-              "Project 1",
-              "Project 2",
-              "Project 3",
-              "Woordenlijst",
-              "Grammatica"
-            ],
-            "kicker": "ORDE MAKEN",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
-            "imageAlt": "Boekenkast met veel boekenruggen."
-          },
-          {
-            "type": "task",
-            "title": "Stap 3: leesmeters",
-            "subtitle": "Hier houd je je leesontwikkeling bij",
-            "items": [
-              "Reserveer tien pagina's.",
-              "Nummer de pagina's die je gebruikt.",
-              "Hier komt je leesontwikkeling.",
-              "Daarna beginnen de projecten.",
-              "Vanaf nu werken we met paginanummers."
-            ],
-            "kicker": "LEZEN ZICHTBAAR MAKEN",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Books%2C%20Bookstore%20%26%20Library.jpg",
-            "imageAlt": "Een volle boekenkast met veel boeken."
-          },
-          {
-            "type": "visual",
-            "title": "Ieder project krijgt straks",
-            "subtitle": "Een eigen plek in je schrift",
-            "items": [
-              "Een nieuw voorblad.",
-              "Een tabje.",
-              "Een plek in je inhoudsopgave.",
-              "Aan het einde een korte terugblik."
-            ],
-            "kicker": "PROJECTEN ALS HOOFDSTUKKEN",
-            "layout": "image-left",
-            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Rode boekcover met textuur."
-          },
-          {
-            "type": "steps",
-            "title": "Stap 4: draai je schrift om",
-            "subtitle": "Vanaf de achterkant beginnen we met oefenen",
-            "items": [
-              "Begin vanaf de achterkant.",
-              "Reserveer vier pagina's voor de woordenlijst.",
-              "Daarna komt grammatica.",
-              "Zo blijven projecten en oefening uit elkaar.",
-              "Controleer of je de goede kant gebruikt."
-            ],
-            "kicker": "TWEE KANTEN, ÉÉN SYSTEEM",
-            "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
-            "imageAlt": "Close-up van gelaagde boekpagina's."
-          },
-          {
-            "type": "task",
             "title": "Je eerste echte pagina",
             "subtitle": "Ik & Nederlands - september 2026",
             "items": [
-              "Mijn top 3 boeken, verhalen, strips, graphic novels of luisterboeken.",
-              "Een boek of verhaal dat ik niet leuk vond.",
-              "Dit vind ik makkelijk bij Nederlands.",
-              "Dit vind ik lastig bij Nederlands.",
-              "Hier wil ik dit jaar beter in worden."
+              "Kies drie antwoorden uit je formulier.",
+              "Schrijf erbij wat ze over jou laten zien.",
+              "Voeg toe waar je beter in wilt worden.",
+              "Maak titel, tussenkopjes en witruimte.",
+              "Gebruik eventueel een klein kader of detail."
             ],
             "kicker": "STARTPORTRET",
             "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
             "imageAlt": "Stijlvolle collage met tekst, patronen en kleuraccenten.",
-            "caption": "Deze pagina maak je aan het einde van het jaar opnieuw."
+            "caption": "Gebruik je formulier, maar maak er een echte bladzijde van."
           },
           {
             "type": "writing-frame",
             "title": "Als je vastloopt",
-            "subtitle": "Gebruik één van deze zinnen",
+            "subtitle": "Begin met één van deze zinnen",
             "items": [
-              "Nederlands gebruik ik vooral wanneer...",
-              "Lezen vind ik...",
-              "Schrijven gaat goed als...",
-              "Spreken voor de klas vind ik...",
+              "Bij Nederlands ben ik iemand die...",
+              "Als ik een boek zou zijn, dan zou ik...",
+              "Een docent helpt mij vooral door...",
+              "Dit jaar wil ik beter worden in...",
               "Aan het einde van dit jaar hoop ik dat..."
             ],
-            "kicker": "BEGINNEN IS GENOEG",
+            "kicker": "GEEN VRAGENLIJST",
             "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
             "imageAlt": "Typografische collage met grote letters."
           },
           {
             "type": "before-after",
-            "title": "Maak er geen vragenlijst van",
-            "subtitle": "Het moet een pagina worden, geen ingevuld formulier",
+            "title": "Maak er geen formulier van",
+            "subtitle": "Het moet een netschriftpagina worden",
             "items": [
-              "Voor: vijf antwoorden onder elkaar.",
+              "Voor: losse antwoorden onder elkaar.",
               "Na: titel, tussenkopjes, witruimte en kaders.",
-              "Voor: alles even groot.",
-              "Na: één titel springt eruit.",
               "Voor: snel ingevuld.",
-              "Na: persoonlijk en verzorgd."
+              "Na: persoonlijk en verzorgd.",
+              "Voor: alles even groot.",
+              "Na: één onderdeel springt eruit."
             ],
             "kicker": "VORMGEVING TELT MEE",
             "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
             "imageAlt": "Collage met lagen papier en kleurvlakken."
-          },
-          {
-            "type": "rubric",
-            "title": "Sterke eerste pagina",
-            "subtitle": "Hier kijk je straks zelf naar",
-            "items": [
-              "Titel en datum staan bovenaan.",
-              "De bladzijde is overzichtelijk.",
-              "Je antwoorden zijn persoonlijk.",
-              "Je gebruikt witruimte.",
-              "Je gebruikt minstens één kader, tussenkopje of kleine illustratie.",
-              "Je kunt deze pagina later opnieuw vergelijken."
-            ],
-            "kicker": "KORTE CHECK",
-            "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van drukletters."
-          },
-          {
-            "type": "think-pair-share",
-            "title": "Kijk even bij je buur",
-            "subtitle": "Zoek één keuze die werkt",
-            "items": [
-              "Denk: wat is sterk aan jouw pagina?",
-              "Kijk: wat valt op bij je buur?",
-              "Bespreek: welke keuze maakt het overzichtelijk?",
-              "Verbeter: pas één klein ding aan."
-            ],
-            "kicker": "LEREN VAN ELKAAR",
-            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
-            "imageAlt": "Boekenkast met veel ruggen en kleuren."
           },
           {
             "type": "exit-ticket",
@@ -41839,13 +41715,12 @@
             "items": [
               "Wat weet je nu over jezelf bij Nederlands?",
               "Wat wil je dit jaar beter kunnen?",
-              "Wat moet je aan het einde kunnen terugzien?",
+              "Welk antwoord uit je formulier past echt bij jou?",
               "Welke afspraak uit de Netschriftcode ga jij onthouden?"
             ],
             "kicker": "STARTPUNT BEWAREN",
             "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Mixed-media collage met papier en tekst.",
-            "caption": "Later kun je zien wat er veranderd is."
+            "imageAlt": "Mixed-media collage met papier en tekst."
           },
           {
             "type": "title",
@@ -42214,10 +42089,9 @@
           "netschrift": {
             "items": [
               "Titel: Ik & Nederlands - september 2026.",
+              "Je verwerkt minimaal drie antwoorden uit je kennismakingsformulier.",
               "Je schrijft wat Nederlands voor jou nu betekent.",
-              "Je noteert je top 3 boeken, verhalen, strips, graphic novels of luisterboeken.",
-              "Je schrijft waar je al goed in bent bij Nederlands.",
-              "Je schrijft waar je dit jaar beter in wilt worden.",
+              "Je schrijft waar je al goed in bent en waar je hulp bij kunt gebruiken.",
               "Je pagina is verzorgd, overzichtelijk en persoonlijk."
             ]
           },
@@ -42225,9 +42099,9 @@
             "lessonGoals": [
               "Je ontdekt hoe breed het vak Nederlands is.",
               "Je herkent dat taal verandert per situatie.",
-              "Je begrijpt waarvoor je netschrift dit jaar gebruikt wordt.",
+              "Je laat iets van jezelf zien via taal.",
               "Je richt je netschrift zorgvuldig in.",
-              "Je maakt een eerste persoonlijke pagina over jezelf en Nederlands."
+              "Je maakt een eerste persoonlijke netschriftpagina."
             ],
             "skills": [
               "Reflectie",
@@ -42248,6 +42122,7 @@
               "boekontwerp",
               "papierstructuur",
               "letterpress",
+              "stijlvol en speels",
               "geen stockfoto's van schrijvende handen",
               "geen grote iconen als hoofdbeeld"
             ],
@@ -42255,7 +42130,7 @@
           },
           "planning": {
             "lesson": "Les 1 - Welkom bij Nederlands",
-            "homework": "Neem iedere les je leesboek, netschrift en pen mee.\nMaak je eerste netschriftpagina af als die nog niet klaar is.\nControleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.\nNeem volgende les ook een potlood of liniaal mee.",
+            "homework": "Maak je kennismakingsformulier af als dat nog niet klaar is.\nMaak je eerste netschriftpagina af.\nNeem iedere les je leesboek, netschrift en pen mee.\nNeem volgende les ook potlood, kleurpotloden of fineliner mee.",
             "assessment": "",
             "teacherNote": "",
             "progressByClass": {
@@ -42265,10 +42140,10 @@
           },
           "homework": {
             "items": [
+              "Maak je kennismakingsformulier af als dat nog niet klaar is.",
+              "Maak je eerste netschriftpagina af.",
               "Neem iedere les je leesboek, netschrift en pen mee.",
-              "Maak je eerste netschriftpagina af als die nog niet klaar is.",
-              "Controleer of je titelblad, inhoudsopgave, leesmeters en woordenlijst goed zijn ingericht.",
-              "Neem volgende les ook een potlood of liniaal mee."
+              "Neem volgende les ook potlood, kleurpotloden of fineliner mee."
             ]
           }
         }
