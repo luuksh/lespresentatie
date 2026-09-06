@@ -2768,6 +2768,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       .map(([key, value]) => `${key}:${escapeHtml(String(value).trim())}`)
       .join(';');
     const cardStyleAttr = themeVars ? ` style="${themeVars}"` : '';
+    const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const cardClasses = ['presentation-slide-card'];
+    if (slide.emphasis) cardClasses.push('is-emphasis');
+    if (variant) cardClasses.push(`is-${variant}`);
 
     if (slide.type === 'bullets') {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
@@ -2775,7 +2779,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const items = Array.isArray(slide.items) ? slide.items : [];
       const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card${titleLengthClass}"${cardStyleAttr}>
+        <article class="${cardClasses.join(' ')}${titleLengthClass}"${cardStyleAttr}>
           ${logoHtml}
           <h2 class="presentation-slide-title">${linkedTextHtml(title)}</h2>
           ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
@@ -2789,7 +2793,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
       const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
       presentationInternalStage.innerHTML = `
-        <article class="presentation-slide-card${titleLengthClass}"${cardStyleAttr}>
+        <article class="${cardClasses.join(' ')}${titleLengthClass}"${cardStyleAttr}>
           ${logoHtml}
           <h1 class="presentation-slide-title">${linkedTextHtml(title)}</h1>
           ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
@@ -2860,6 +2864,64 @@ document.addEventListener('DOMContentLoaded', async () => {
     return deleted.some((id) => String(id || '').trim() === String(markerId || '').trim());
   }
 
+  function cleanPresentationListItems(items) {
+    return [...new Set((Array.isArray(items) ? items : [])
+      .map((item) => String(item || '').replace(/^\s*[-*•]\s+/, '').trim())
+      .filter(Boolean))];
+  }
+
+  function lessonMetaForPresentationMarker(presentation, markerId) {
+    const meta = presentation?.lessonMeta?.[markerId];
+    return meta && typeof meta === 'object' ? meta : {};
+  }
+
+  function assembleRenderableLessonSlides(baseSlides, { startSlide = null, endSlide = null, homeworkSlide = null } = {}) {
+    const slides = (Array.isArray(baseSlides) ? baseSlides : []).filter((slide) => slide && typeof slide === 'object');
+    const out = [];
+    if (slides.length) {
+      out.push(slides[0]);
+      if (startSlide) out.push(startSlide);
+      out.push(...slides.slice(1));
+    } else if (startSlide) {
+      out.push(startSlide);
+    }
+    if (endSlide) out.push(endSlide);
+    if (homeworkSlide) out.push(homeworkSlide);
+    return out;
+  }
+
+  function renderableSlidesForPresentationMarker(presentation, markerId, baseSlides) {
+    const meta = lessonMetaForPresentationMarker(presentation, markerId);
+    const netschriftItems = cleanPresentationListItems(meta?.netschrift?.items);
+    const homeworkItems = cleanPresentationListItems(meta?.homework?.items);
+    return assembleRenderableLessonSlides(baseSlides, {
+      startSlide: netschriftItems.length ? {
+        type: 'lesson-start-netschrift',
+        emphasis: true,
+        variant: 'netschrift',
+        title: 'Opdracht netschrift',
+        subtitle: 'Dit moet straks terug te vinden zijn',
+        items: netschriftItems,
+      } : null,
+      endSlide: netschriftItems.length ? {
+        type: 'lesson-end-netschrift',
+        emphasis: true,
+        variant: 'netschrift',
+        title: 'Netschriftcheck: gelukt?',
+        subtitle: 'Controleer dit voordat je afsluit',
+        items: netschriftItems,
+      } : null,
+      homeworkSlide: homeworkItems.length ? {
+        type: 'homework-preview',
+        emphasis: true,
+        variant: 'homework',
+        title: 'Schrijf in je agenda',
+        subtitle: 'Huiswerk voor de volgende keer',
+        items: homeworkItems,
+      } : null,
+    });
+  }
+
   function nextSlideIndexAfterPresentationMarker(presentation, markerId) {
     const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
     const start = slideIndexForPresentationMarker(presentation, markerId);
@@ -2874,16 +2936,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function lessonSlidesForPresentationMarker(presentation, markerId) {
     if (presentationMarkerIsDeleted(presentation, markerId)) return [];
-    const markerDeck = Array.isArray(presentation?.markerDecks?.[markerId])
+    const hasMarkerDeck = Array.isArray(presentation?.markerDecks?.[markerId]);
+    const markerDeck = hasMarkerDeck
       ? presentation.markerDecks[markerId].filter((slide) => slide && typeof slide === 'object')
       : [];
-    if (markerDeckHasRealContent(markerDeck)) return markerDeck;
+    if (markerDeckHasRealContent(markerDeck)) {
+      return renderableSlidesForPresentationMarker(presentation, markerId, markerDeck);
+    }
+    if (hasMarkerDeck) {
+      return renderableSlidesForPresentationMarker(presentation, markerId, []);
+    }
 
     const slides = Array.isArray(presentation?.slides) ? presentation.slides : [];
     const start = slideIndexForPresentationMarker(presentation, markerId);
-    if (start < 0 || !slides.length) return [];
+    if (start < 0 || !slides.length) {
+      return renderableSlidesForPresentationMarker(presentation, markerId, []);
+    }
     const end = Math.max(start + 1, nextSlideIndexAfterPresentationMarker(presentation, markerId));
-    return slides.slice(start, end);
+    return renderableSlidesForPresentationMarker(presentation, markerId, slides.slice(start, end));
   }
 
   function seriesMarkerTitle(presentation, markerId) {
