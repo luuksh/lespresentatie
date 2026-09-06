@@ -2923,6 +2923,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const titleForLength = String(slide.title || activePresentation.title || 'Slide').trim();
     const richTitleLengthClass = titleForLength.length > 84 ? 'is-extra-long-title' : (titleForLength.length > 54 ? 'is-long-title' : '');
     if (richTitleLengthClass) cardClasses.push(richTitleLengthClass);
+    const quoteForLength = String(slide.quote || slide.text || slide.subtitle || '').trim();
+    const quoteLengthClass = quoteForLength.length > 150 ? 'is-extra-long-quote' : (quoteForLength.length > 72 ? 'is-long-quote' : '');
+    if (quoteLengthClass) cardClasses.push(quoteLengthClass);
     const mediaHtml = () => {
       if (!images.length && safeMediaUrl && !/^javascript:/i.test(safeMediaUrl)) {
         return `
@@ -2980,7 +2983,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     const items = Array.isArray(slide.items) ? slide.items : [];
-    if (slide.type === 'bullets' || items.length || slideType !== 'title') {
+    if (slide.type === 'bullets' || items.length || slideType !== 'title' || images.length || safeMediaUrl) {
       const media = mediaHtml();
       presentationInternalStage.innerHTML = `
         <article class="${cardClasses.join(' ')}"${cardStyleAttr}>

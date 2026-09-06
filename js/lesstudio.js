@@ -3802,6 +3802,9 @@ function dialogSlideClass(slide) {
   if (slide.variant) classes.push(`is-${slide.variant}`);
   if (slide.image || slide.video || slide.url || slide.images?.length) classes.push('has-media');
   if (slide.layout) classes.push(`layout-${slide.layout}`);
+  const quoteForLength = String(slide.quote || slide.text || slide.subtitle || '').trim();
+  if (quoteForLength.length > 150) classes.push('is-extra-long-quote');
+  else if (quoteForLength.length > 72) classes.push('is-long-quote');
   return classes.join(' ');
 }
 

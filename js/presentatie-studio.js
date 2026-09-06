@@ -1636,6 +1636,9 @@ function renderStudioPlayerSlide() {
     if (variant) classes.push(`is-${variant}`);
     if (media) classes.push('has-media');
     if (layout) classes.push(`layout-${layout}`);
+    const quoteForLength = String(slide.quote || slide.text || subtitle || '').trim();
+    if (quoteForLength.length > 150) classes.push('is-extra-long-quote');
+    else if (quoteForLength.length > 72) classes.push('is-long-quote');
     studioPlayerStage.innerHTML = `<article class="${classes.join(' ')}">${content}</article>`;
   }
   if (studioPlayerTitle) studioPlayerTitle.textContent = activeStudioPresentation.title || 'Presentatie';

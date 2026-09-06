@@ -1191,6 +1191,15 @@ a:focus-visible {
   grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1fr);
 }
 
+.dialog-slide.is-title.has-media {
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+}
+
+.dialog-slide.is-title.has-media h2 {
+  max-width: 12ch;
+  font-size: clamp(58px, 7vw, 92px);
+}
+
 .dialog-slide-copy {
   min-width: 0;
 }
@@ -1242,8 +1251,10 @@ a:focus-visible {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  max-height: min(48vh, 480px);
   border-radius: 8px;
   object-fit: cover;
+  background: rgba(255, 255, 255, 0.52);
   box-shadow: 0 24px 54px rgba(15, 31, 52, 0.22);
 }
 
@@ -1320,6 +1331,28 @@ a:focus-visible {
   line-height: 0.95;
 }
 
+.dialog-slide.is-spotlight.is-long-quote,
+.dialog-slide.is-spotlight.is-extra-long-quote {
+  text-align: left;
+}
+
+.dialog-slide.is-spotlight.is-long-quote .dialog-slide-copy,
+.dialog-slide.is-spotlight.is-extra-long-quote .dialog-slide-copy {
+  place-items: start;
+}
+
+.dialog-slide.is-spotlight.is-long-quote blockquote {
+  max-width: 21ch;
+  font-size: clamp(36px, 4.4vw, 58px);
+  line-height: 1.04;
+}
+
+.dialog-slide.is-spotlight.is-extra-long-quote blockquote {
+  max-width: 24ch;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.08;
+}
+
 .dialog-slide.is-source,
 .dialog-slide.is-timeline,
 .dialog-slide.is-writing-frame,
@@ -1350,6 +1383,28 @@ a:focus-visible {
 
 .dialog-slide.is-gallery .dialog-slide-media img {
   aspect-ratio: 1 / 1;
+}
+
+.dialog-slide.is-wordbank.has-media {
+  grid-template-columns: minmax(0, 1.18fr) minmax(220px, 0.62fr);
+  align-items: start;
+}
+
+.dialog-slide.is-wordbank .dialog-slide-compare {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.dialog-slide.is-wordbank .dialog-slide-compare li {
+  min-height: 50px;
+  padding: 8px 12px;
+}
+
+.dialog-slide.is-wordbank .dialog-slide-media img {
+  aspect-ratio: 1 / 1;
+  max-height: min(36vh, 360px);
+  object-fit: contain;
+  padding: 18px;
 }
 
 .dialog-slide-compare {
@@ -1390,11 +1445,11 @@ a:focus-visible {
 }
 
 .dialog-slide.is-homework {
-  border-color: rgba(35, 118, 90, 0.34);
+  border-color: rgba(127, 71, 148, 0.38);
   background:
-    linear-gradient(90deg, rgba(35, 118, 90, 0.18) 0 18px, rgba(127, 163, 199, 0.28) 18px 26px, transparent 26px),
-    #f7fbf9;
-  box-shadow: 0 18px 42px rgba(35, 118, 90, 0.12);
+    linear-gradient(90deg, rgba(127, 71, 148, 0.2) 0 18px, rgba(217, 151, 63, 0.28) 18px 26px, transparent 26px),
+    #fff8ee;
+  box-shadow: 0 18px 42px rgba(127, 71, 148, 0.12);
 }
 
 .dialog-slide.is-netschrift {
@@ -1405,6 +1460,29 @@ a:focus-visible {
     repeating-linear-gradient(180deg, transparent 0 31px, rgba(49, 93, 134, 0.12) 31px 33px),
     #fffdf7;
   box-shadow: 0 18px 42px rgba(23, 40, 72, 0.13);
+}
+
+.dialog-slide.is-netschrift::after,
+.dialog-slide.is-homework::after {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  border: 1px solid rgba(47, 111, 104, 0.26);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  font-weight: 950;
+  padding: 7px 12px;
+}
+
+.dialog-slide.is-netschrift::after {
+  content: "🖋 NETSCHRIFT";
+  color: #2f6f68;
+}
+
+.dialog-slide.is-homework::after {
+  content: "🗓 AGENDA";
+  color: #6f2b82;
 }
 
 .dialog-slide.is-emphasis h2 {
