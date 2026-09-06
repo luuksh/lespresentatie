@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T08:37:43+02:00",
+  "updatedAt": "2026-09-06T08:37:48+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13847,7 +13847,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T08:37:43+02:00",
+  "sourceRevision": "2026-09-06T08:37:48+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -41200,26 +41200,6 @@
           "items": []
         },
         {
-          "type": "bullets",
-          "title": "Kern",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Eerste punt",
-            "Tweede punt"
-          ]
-        },
-        {
-          "type": "bullets",
-          "title": "Kern",
-          "subtitle": "",
-          "showProjectLogo": false,
-          "items": [
-            "Eerste punt",
-            "Tweede punt"
-          ]
-        },
-        {
           "type": "title",
           "title": "Les 2 - Maak het van jou",
           "subtitle": "Het mooiste netschrift dat jij ooit hebt gemaakt",
@@ -41385,7 +41365,7 @@
       ],
       "markers": {
         "marker-startles-1-1": 1,
-        "marker-startles-1-2": 26
+        "marker-startles-1-2": 24
       },
       "markerDecks": {
         "marker-startles-1-1": [
@@ -41592,24 +41572,6 @@
             "type": "title",
             "title": "Dit is bladzijde een",
             "subtitle": "Aan het einde van het jaar maak je deze pagina opnieuw. Wat zou er dan veranderd zijn?"
-          },
-          {
-            "type": "bullets",
-            "title": "Kern",
-            "subtitle": "",
-            "items": [
-              "Eerste punt",
-              "Tweede punt"
-            ]
-          },
-          {
-            "type": "bullets",
-            "title": "Kern",
-            "subtitle": "",
-            "items": [
-              "Eerste punt",
-              "Tweede punt"
-            ]
           }
         ],
         "marker-startles-1-2": [
