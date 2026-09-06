@@ -2775,10 +2775,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (slide.emphasis) cardClasses.push('is-emphasis');
     if (variant) cardClasses.push(`is-${variant}`);
 
-    if (slide.type === 'bullets') {
+    const items = Array.isArray(slide.items) ? slide.items : [];
+    if (slide.type === 'bullets' || items.length) {
       const title = String(slide.title || '').trim() || activePresentation.title || 'Slide';
       const subtitle = String(slide.subtitle || activePresentation.project || '').trim();
-      const items = Array.isArray(slide.items) ? slide.items : [];
       const titleLengthClass = title.length > 84 ? ' is-extra-long-title' : (title.length > 54 ? ' is-long-title' : '');
       presentationInternalStage.innerHTML = `
         <article class="${cardClasses.join(' ')}${titleLengthClass}"${cardStyleAttr}>

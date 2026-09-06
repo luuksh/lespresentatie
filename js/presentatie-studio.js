@@ -1414,7 +1414,7 @@ function renderStudioPlayerSlide() {
   const subtitle = String(slide.subtitle || '').trim();
   const items = Array.isArray(slide.items) ? slide.items.map((item) => String(item || '').trim()).filter(Boolean) : [];
   const type = String(slide.type || 'title').trim().toLowerCase();
-  const content = type === 'bullets'
+  const content = type === 'bullets' || items.length
     ? `
       <h2 class="studio-player-slide-title">${linkedTextHtml(title)}</h2>
       ${subtitle ? `<p class="studio-player-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
