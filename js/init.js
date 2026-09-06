@@ -2853,31 +2853,67 @@ document.addEventListener('DOMContentLoaded', async () => {
     const variant = String(slide.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
     const slideType = String(slide.type || 'title').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
     const slideLayout = String(slide.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
-    const cardClasses = ['presentation-slide-card'];
-    if (slideType) cardClasses.push(`is-${slideType}`);
-    if (slide.emphasis) cardClasses.push('is-emphasis');
-    if (variant) cardClasses.push(`is-${variant}`);
-    if (String(slide.image || '').trim()) cardClasses.push('has-media');
-    if (slideLayout) cardClasses.push(`layout-${slideLayout}`);
-    const titleForLength = String(slide.title || activePresentation.title || 'Slide').trim();
-    const richTitleLengthClass = titleForLength.length > 84 ? 'is-extra-long-title' : (titleForLength.length > 54 ? 'is-long-title' : '');
-    if (richTitleLengthClass) cardClasses.push(richTitleLengthClass);
-
     const safeImageSrc = (value) => {
       const src = String(value || '').trim();
       return src && !/^javascript:/i.test(src) ? src : '';
     };
+    const slideImages = () => {
+      const out = [];
+      const add = (image) => {
+        const source = typeof image === 'string' ? { src: image } : (image && typeof image === 'object' ? image : {});
+        const src = safeImageSrc(source.src || source.image || source.url);
+        if (!src) return;
+        out.push({
+          src,
+          alt: String(source.alt || source.imageAlt || '').trim(),
+          caption: String(source.caption || '').trim(),
+          source: String(source.source || '').trim(),
+        });
+      };
+      if (Array.isArray(slide.images)) {
+        for (const image of slide.images) add(image);
+      }
+      const primaryImage = safeImageSrc(slide.image);
+      if (primaryImage && !out.some((image) => image.src === primaryImage)) {
+        out.unshift({
+          src: primaryImage,
+          alt: String(slide.imageAlt || slide.alt || '').trim(),
+          caption: String(slide.caption || '').trim(),
+          source: String(slide.source || '').trim(),
+        });
+      }
+      return out;
+    };
+    const images = slideImages();
+    const safeMediaUrl = String(slide.video || slide.url || '').trim();
+    const cardClasses = ['presentation-slide-card'];
+    if (slideType) cardClasses.push(`is-${slideType}`);
+    if (slide.emphasis) cardClasses.push('is-emphasis');
+    if (variant) cardClasses.push(`is-${variant}`);
+    if (images.length || safeMediaUrl) cardClasses.push('has-media');
+    if (slideLayout) cardClasses.push(`layout-${slideLayout}`);
+    const titleForLength = String(slide.title || activePresentation.title || 'Slide').trim();
+    const richTitleLengthClass = titleForLength.length > 84 ? 'is-extra-long-title' : (titleForLength.length > 54 ? 'is-long-title' : '');
+    if (richTitleLengthClass) cardClasses.push(richTitleLengthClass);
     const mediaHtml = () => {
-      const src = safeImageSrc(slide.image);
-      if (!src) return '';
-      const alt = String(slide.imageAlt || slide.caption || slide.title || '').trim();
-      const caption = String(slide.caption || '').trim();
-      const source = String(slide.source || '').trim();
+      if (!images.length && safeMediaUrl && !/^javascript:/i.test(safeMediaUrl)) {
+        return `
+          <figure class="presentation-slide-media is-video">
+            <a href="${escapeHtml(safeMediaUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(slide.caption || slide.title || 'Open fragment')}</a>
+            ${slide.source ? `<figcaption>${linkedTextHtml(slide.source)}</figcaption>` : ''}
+          </figure>
+        `;
+      }
+      if (!images.length) return '';
       return `
-        <figure class="presentation-slide-media">
-          <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">
-          ${caption || source ? `<figcaption>${linkedTextHtml([caption, source].filter(Boolean).join(' · '))}</figcaption>` : ''}
-        </figure>
+        <div class="presentation-slide-media${images.length > 1 ? ' is-gallery-media' : ''}">
+          ${images.map((image) => `
+            <figure>
+              <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || image.caption || slide.title || '')}" loading="lazy">
+              ${image.caption || image.source ? `<figcaption>${linkedTextHtml([image.caption, image.source].filter(Boolean).join(' · '))}</figcaption>` : ''}
+            </figure>
+          `).join('')}
+        </div>
       `;
     };
 
@@ -2885,24 +2921,29 @@ document.addEventListener('DOMContentLoaded', async () => {
       const title = String(slide.title || activePresentation.title || 'Slide').trim();
       const subtitle = String(slide.subtitle || '').trim();
       const quote = String(slide.quote || '').trim();
+      const bodyText = String(slide.text || '').trim();
       const items = Array.isArray(slide.items) ? slide.items : [];
-      if (slideType === 'quote' || quote) {
+      if (slideType === 'quote' || slideType === 'spotlight' || quote) {
         return `
           <div class="presentation-slide-copy">
             ${slide.kicker ? `<p class="presentation-slide-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
             ${title ? `<${headingTag} class="presentation-slide-title">${linkedTextHtml(title)}</${headingTag}>` : ''}
-            <blockquote class="presentation-slide-quote">${linkedTextHtml(quote || subtitle || title)}</blockquote>
+            <blockquote class="presentation-slide-quote">${linkedTextHtml(quote || bodyText || subtitle || title)}</blockquote>
             ${slide.attribution ? `<p class="presentation-slide-attribution">${linkedTextHtml(slide.attribution)}</p>` : ''}
           </div>
         `;
       }
-      const listTag = slideType === 'steps' ? 'ol' : 'ul';
-      const listClass = slideType === 'compare' ? ' presentation-slide-compare' : '';
+      const orderedTypes = new Set(['steps', 'timeline', 'think-pair-share']);
+      const gridTypes = new Set(['compare', 'before-after', 'rubric', 'wordbank']);
+      const listTag = orderedTypes.has(slideType) ? 'ol' : 'ul';
+      const listClass = gridTypes.has(slideType) ? ' presentation-slide-compare' : '';
       return `
         <div class="presentation-slide-copy">
           ${slide.kicker ? `<p class="presentation-slide-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
           <${headingTag} class="presentation-slide-title">${linkedTextHtml(title)}</${headingTag}>
           ${subtitle ? `<p class="presentation-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
+          ${bodyText ? `<p class="presentation-slide-body">${linkedTextHtml(bodyText)}</p>` : ''}
+          ${slide.source ? `<p class="presentation-slide-attribution">${linkedTextHtml(slide.source)}</p>` : ''}
           ${items.length ? `<${listTag} class="presentation-slide-bullets${listClass}">
             ${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}
           </${listTag}>` : ''}

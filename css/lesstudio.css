@@ -1223,6 +1223,17 @@ a:focus-visible {
 }
 
 .dialog-slide-media {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+}
+
+.dialog-slide-media.is-gallery-media {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dialog-slide-media figure {
   min-width: 0;
   margin: 0;
 }
@@ -1236,6 +1247,24 @@ a:focus-visible {
   box-shadow: 0 24px 54px rgba(15, 31, 52, 0.22);
 }
 
+.dialog-slide-media.is-video {
+  place-items: center;
+  min-height: 260px;
+  border: 1px solid rgba(23, 40, 72, 0.16);
+  border-radius: 8px;
+  background: #eef5fb;
+  padding: 24px;
+  text-align: center;
+}
+
+.dialog-slide-media.is-video a {
+  color: #172848;
+  font-size: 28px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
 .dialog-slide-media figcaption {
   margin-top: 10px;
   color: #5b6c80;
@@ -1245,11 +1274,34 @@ a:focus-visible {
 }
 
 .dialog-slide.is-question,
-.dialog-slide.is-task {
+.dialog-slide.is-task,
+.dialog-slide.is-poll,
+.dialog-slide.is-think-pair-share,
+.dialog-slide.is-exit-ticket,
+.dialog-slide.is-checklist {
   border-color: rgba(47, 111, 104, 0.34);
   background:
     linear-gradient(90deg, rgba(47, 111, 104, 0.18) 0 18px, rgba(197, 154, 74, 0.24) 18px 26px, transparent 26px),
     #f8fbf8;
+}
+
+.dialog-slide.is-hero,
+.dialog-slide.is-spotlight {
+  border-color: rgba(139, 33, 52, 0.3);
+  background:
+    linear-gradient(90deg, rgba(139, 33, 52, 0.18) 0 18px, rgba(197, 154, 74, 0.25) 18px 26px, transparent 26px),
+    #fffaf0;
+}
+
+.dialog-slide.is-source,
+.dialog-slide.is-timeline,
+.dialog-slide.is-writing-frame,
+.dialog-slide.is-rubric,
+.dialog-slide.is-wordbank {
+  border-color: rgba(38, 62, 94, 0.28);
+  background:
+    linear-gradient(90deg, rgba(38, 62, 94, 0.16) 0 18px, rgba(127, 163, 199, 0.24) 18px 26px, transparent 26px),
+    #f8fbff;
 }
 
 .dialog-slide-compare {
@@ -1266,6 +1318,10 @@ a:focus-visible {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
   padding: 18px;
+}
+
+.dialog-slide-body {
+  max-width: 44ch;
 }
 
 .dialog-slide.is-emphasis {
@@ -1354,6 +1410,10 @@ a:focus-visible {
   }
 
   .dialog-slide-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog-slide-media.is-gallery-media {
     grid-template-columns: 1fr;
   }
 }

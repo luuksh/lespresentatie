@@ -1169,12 +1169,24 @@ function serializeSlides(slides) {
     if (normalized.kicker) lines.push(`kicker: ${normalized.kicker}`);
     if (normalized.variant) lines.push(`variant: ${normalized.variant}`);
     if (normalized.layout) lines.push(`layout: ${normalized.layout}`);
-    if (normalized.image) lines.push(`image: ${normalized.image}`);
-    if (normalized.imageAlt) lines.push(`image-alt: ${normalized.imageAlt}`);
-    if (normalized.caption) lines.push(`caption: ${normalized.caption}`);
-    if (normalized.source) lines.push(`source: ${normalized.source}`);
+    if (normalized.text) lines.push(`text: ${normalized.text}`);
+    if (normalized.images.length > 1) {
+      normalized.images.forEach((image, index) => {
+        const number = index + 1;
+        lines.push(`image-${number}: ${image.src}`);
+        if (image.caption) lines.push(`caption-${number}: ${image.caption}`);
+        if (image.source) lines.push(`source-${number}: ${image.source}`);
+      });
+    } else {
+      if (normalized.image) lines.push(`image: ${normalized.image}`);
+      if (normalized.imageAlt) lines.push(`image-alt: ${normalized.imageAlt}`);
+      if (normalized.caption) lines.push(`caption: ${normalized.caption}`);
+      if (normalized.source) lines.push(`source: ${normalized.source}`);
+    }
     if (normalized.quote) lines.push(`quote: ${normalized.quote}`);
     if (normalized.attribution) lines.push(`attribution: ${normalized.attribution}`);
+    if (normalized.video) lines.push(`video: ${normalized.video}`);
+    if (normalized.url) lines.push(`url: ${normalized.url}`);
     if (normalized.emphasis) lines.push('emphasis: true');
     if (normalized.showProjectLogo) lines.push('show-project-logo: true');
     for (const item of normalized.items) lines.push(`- ${item}`);
@@ -1183,13 +1195,66 @@ function serializeSlides(slides) {
   return parts.join('\n---\n');
 }
 
+const PRESENTATION_SLIDE_TYPES = new Set([
+  'title',
+  'bullets',
+  'visual',
+  'quote',
+  'compare',
+  'steps',
+  'question',
+  'task',
+  'hero',
+  'gallery',
+  'source',
+  'timeline',
+  'before-after',
+  'spotlight',
+  'wordbank',
+  'writing-frame',
+  'poll',
+  'think-pair-share',
+  'rubric',
+  'checklist',
+  'exit-ticket',
+  'video',
+]);
+
+function cleanSlideImages(slide) {
+  const out = [];
+  const add = (image) => {
+    const source = typeof image === 'string' ? { src: image } : (image && typeof image === 'object' ? image : {});
+    const src = String(source.src || source.image || source.url || '').trim();
+    if (!src || /^javascript:/i.test(src)) return;
+    out.push({
+      src,
+      alt: String(source.alt || source.imageAlt || '').trim(),
+      caption: String(source.caption || '').trim(),
+      source: String(source.source || '').trim(),
+    });
+  };
+  if (Array.isArray(slide?.images)) {
+    for (const image of slide.images) add(image);
+  }
+  const primaryImage = String(slide?.image || '').trim();
+  if (primaryImage && !out.some((image) => image.src === primaryImage)) {
+    out.unshift({
+      src: primaryImage,
+      alt: String(slide?.imageAlt || slide?.alt || '').trim(),
+      caption: String(slide?.caption || '').trim(),
+      source: String(slide?.source || '').trim(),
+    });
+  }
+  return out;
+}
+
 function normalizeSlide(slide) {
   const rawType = String(slide?.type || 'title').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
-  const allowedTypes = new Set(['title', 'bullets', 'visual', 'quote', 'compare', 'steps', 'question', 'task']);
   const variant = String(slide?.variant || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
   const layout = String(slide?.layout || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const images = cleanSlideImages(slide);
   return {
-    type: allowedTypes.has(rawType) ? rawType : 'title',
+    type: PRESENTATION_SLIDE_TYPES.has(rawType) ? rawType : 'title',
     title: String(slide?.title || '').trim(),
     subtitle: String(slide?.subtitle || '').trim(),
     showProjectLogo: Boolean(slide?.showProjectLogo),
@@ -1200,12 +1265,16 @@ function normalizeSlide(slide) {
     variant,
     layout,
     kicker: String(slide?.kicker || '').trim(),
-    image: String(slide?.image || '').trim(),
-    imageAlt: String(slide?.imageAlt || slide?.alt || '').trim(),
-    caption: String(slide?.caption || '').trim(),
-    source: String(slide?.source || '').trim(),
+    text: String(slide?.text || slide?.body || '').trim(),
+    image: images[0]?.src || '',
+    imageAlt: images[0]?.alt || String(slide?.imageAlt || slide?.alt || '').trim(),
+    caption: images[0]?.caption || String(slide?.caption || '').trim(),
+    source: images[0]?.source || String(slide?.source || '').trim(),
+    images,
     quote: String(slide?.quote || '').trim(),
     attribution: String(slide?.attribution || '').trim(),
+    video: String(slide?.video || '').trim(),
+    url: String(slide?.url || '').trim(),
   };
 }
 
@@ -1227,7 +1296,7 @@ function parseSlides(text, { fallback = true } = {}) {
       items: [],
     };
 
-    const head = lines[0].match(/^\[(title|bullets|visual|quote|compare|steps|question|task)\]\s*(.*)$/i);
+    const head = lines[0].match(/^\[(title|bullets|visual|quote|compare|steps|question|task|hero|gallery|source|timeline|before-after|spotlight|wordbank|writing-frame|poll|think-pair-share|rubric|checklist|exit-ticket|video)\]\s*(.*)$/i);
     if (head) {
       slide.type = head[1].toLowerCase();
       slide.title = String(head[2] || '').trim();
@@ -1244,12 +1313,30 @@ function parseSlides(text, { fallback = true } = {}) {
         else if (key === 'variant') slide.variant = value;
         else if (key === 'layout') slide.layout = value;
         else if (key === 'kicker') slide.kicker = value;
+        else if (key === 'text' || key === 'tekst' || key === 'body') slide.text = value;
         else if (key === 'image') slide.image = value;
         else if (key === 'image-alt' || key === 'alt') slide.imageAlt = value;
         else if (key === 'caption') slide.caption = value;
         else if (key === 'source' || key === 'bron') slide.source = value;
+        else if (/^image-?\d+$/.test(key)) {
+          const index = Number(key.match(/\d+/)?.[0] || 1) - 1;
+          if (!Array.isArray(slide.images)) slide.images = [];
+          slide.images[index] = { ...(slide.images[index] || {}), src: value };
+        }
+        else if (/^caption-?\d+$/.test(key)) {
+          const index = Number(key.match(/\d+/)?.[0] || 1) - 1;
+          if (!Array.isArray(slide.images)) slide.images = [];
+          slide.images[index] = { ...(slide.images[index] || {}), caption: value };
+        }
+        else if (/^source-?\d+$/.test(key) || /^bron-?\d+$/.test(key)) {
+          const index = Number(key.match(/\d+/)?.[0] || 1) - 1;
+          if (!Array.isArray(slide.images)) slide.images = [];
+          slide.images[index] = { ...(slide.images[index] || {}), source: value };
+        }
         else if (key === 'quote' || key === 'citaat') slide.quote = value;
         else if (key === 'attribution' || key === 'auteur') slide.attribution = value;
+        else if (key === 'video') slide.video = value;
+        else if (key === 'url' || key === 'link') slide.url = value;
         else if (key === 'emphasis') slide.emphasis = /^(1|true|yes|ja)$/i.test(value);
         else if (key === 'show-project-logo') slide.showProjectLogo = /^(1|true|yes|ja)$/i.test(value);
         continue;
@@ -1452,33 +1539,51 @@ function renderStudioPlayerSlide() {
   const subtitle = String(slide.subtitle || '').trim();
   const items = Array.isArray(slide.items) ? slide.items.map((item) => String(item || '').trim()).filter(Boolean) : [];
   const type = String(slide.type || 'title').trim().toLowerCase();
-  const src = String(slide.image || '').trim();
-  const media = src && !/^javascript:/i.test(src)
+  const images = Array.isArray(slide.images) && slide.images.length
+    ? slide.images
+    : cleanSlideImages(slide);
+  const mediaUrl = String(slide.video || slide.url || '').trim();
+  const media = images.length
     ? `
-      <figure class="studio-player-media">
-        <img src="${escapeHtml(src)}" alt="${escapeHtml(slide.imageAlt || slide.caption || title)}" loading="lazy">
-        ${slide.caption || slide.source ? `<figcaption>${linkedTextHtml([slide.caption, slide.source].filter(Boolean).join(' · '))}</figcaption>` : ''}
-      </figure>
+      <div class="studio-player-media${images.length > 1 ? ' is-gallery-media' : ''}">
+        ${images.map((image) => `
+          <figure>
+            <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || image.caption || title)}" loading="lazy">
+            ${image.caption || image.source ? `<figcaption>${linkedTextHtml([image.caption, image.source].filter(Boolean).join(' · '))}</figcaption>` : ''}
+          </figure>
+        `).join('')}
+      </div>
     `
-    : '';
+    : mediaUrl && !/^javascript:/i.test(mediaUrl)
+      ? `
+        <figure class="studio-player-media is-video">
+          <a href="${escapeHtml(mediaUrl)}" target="_blank" rel="noopener noreferrer">${linkedTextHtml(slide.caption || title || 'Open fragment')}</a>
+          ${slide.source ? `<figcaption>${linkedTextHtml(slide.source)}</figcaption>` : ''}
+        </figure>
+      `
+      : '';
   let content = '';
-  if (type === 'quote' || slide.quote) {
+  if (type === 'quote' || type === 'spotlight' || slide.quote) {
     content = `
       <div class="studio-player-copy">
         ${slide.kicker ? `<p class="studio-player-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
         ${title ? `<h2 class="studio-player-slide-title">${linkedTextHtml(title)}</h2>` : ''}
-        <blockquote class="studio-player-quote">${linkedTextHtml(slide.quote || subtitle || title)}</blockquote>
+        <blockquote class="studio-player-quote">${linkedTextHtml(slide.quote || slide.text || subtitle || title)}</blockquote>
         ${slide.attribution ? `<p class="studio-player-attribution">${linkedTextHtml(slide.attribution)}</p>` : ''}
       </div>
     `;
   } else if (type === 'bullets' || items.length || type !== 'title') {
-    const listTag = type === 'steps' ? 'ol' : 'ul';
-    const listClass = type === 'compare' ? ' studio-player-compare' : '';
+    const orderedTypes = new Set(['steps', 'timeline', 'think-pair-share']);
+    const gridTypes = new Set(['compare', 'before-after', 'rubric', 'wordbank']);
+    const listTag = orderedTypes.has(type) ? 'ol' : 'ul';
+    const listClass = gridTypes.has(type) ? ' studio-player-compare' : '';
     content = `
       <div class="studio-player-copy">
         ${slide.kicker ? `<p class="studio-player-kicker">${linkedTextHtml(slide.kicker)}</p>` : ''}
       <h2 class="studio-player-slide-title">${linkedTextHtml(title)}</h2>
       ${subtitle ? `<p class="studio-player-slide-subtitle">${linkedTextHtml(subtitle)}</p>` : ''}
+        ${slide.text ? `<p class="studio-player-body">${linkedTextHtml(slide.text)}</p>` : ''}
+        ${slide.source ? `<p class="studio-player-attribution">${linkedTextHtml(slide.source)}</p>` : ''}
         ${items.length ? `<${listTag} class="studio-player-bullets${listClass}">${items.map((item) => `<li>${linkedTextHtml(item)}</li>`).join('')}</${listTag}>` : ''}
       </div>
     `;
