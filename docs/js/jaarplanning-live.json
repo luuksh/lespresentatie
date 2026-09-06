@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T17:11:49+02:00",
+  "updatedAt": "2026-09-06T17:12:07+02:00",
   "sourceType": "internal-json",
   "entries": [
     {
@@ -13262,7 +13262,7 @@
       "items": []
     }
   ],
-  "sourceRevision": "2026-09-06T17:11:49+02:00",
+  "sourceRevision": "2026-09-06T17:12:07+02:00",
   "readingLocks": {
     "1C": {
       "day": 2,
@@ -42787,9 +42787,9 @@
               "Je eindproduct is belangrijk, maar je proces ook."
             ],
             "kicker": "CIJFER + FEEDBACK",
+            "text": "Bij ieder project weet je vooraf welke vaardigheid centraal staat en waarop je wordt beoordeeld.",
             "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met tekstfragmenten.",
-            "text": "Bij ieder project weet je vooraf welke vaardigheid centraal staat en waarop je wordt beoordeeld."
+            "imageAlt": "Papiercollage met tekstfragmenten."
           },
           {
             "type": "spotlight",
@@ -42797,9 +42797,9 @@
             "subtitle": "Daarom gebruiken we een netschrift",
             "items": [],
             "kicker": "DENKEN ZICHTBAAR MAKEN",
+            "text": "Je netschrift laat zien hoe je denkt, kiest en verbetert.",
             "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van een boekcover.",
-            "text": "Je netschrift laat zien hoe je denkt, kiest en verbetert."
+            "imageAlt": "Close-up van een boekcover."
           },
           {
             "type": "checklist",
