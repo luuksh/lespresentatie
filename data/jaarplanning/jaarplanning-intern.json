@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T16:22:55+02:00",
+  "updatedAt": "2026-09-06T16:24:48+02:00",
   "entries": [
     {
       "classId": "3A",
@@ -3856,7 +3856,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
-          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+          "homework": "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nNeem iedere les je leesboek, netschrift en pen mee.\nDenk alvast na welk boek je als eerste wilt lezen.",
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
@@ -3898,7 +3898,7 @@
         {
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
-          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+          "homework": "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nNeem iedere les je leesboek, netschrift en pen mee.\nDenk alvast na welk boek je als eerste wilt lezen.",
           "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
@@ -33042,264 +33042,24 @@
         },
         {
           "type": "hero",
-          "title": "Les 2 - Maak het van jou",
-          "subtitle": "Ontwerp een netschrift dat voelt als jouw eigen boek",
+          "title": "Les 2 - Dit wordt mijn Nederlands",
+          "subtitle": "Van formulier naar eerste netschriftpagina",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "LETTERS ALS BEELD",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
-          "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn.",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
-              "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn.",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "visual",
-          "title": "Eerste indruk",
-          "subtitle": "Waar stuurt het ontwerp je oog naartoe?",
-          "showProjectLogo": false,
-          "items": [
-            "Wat zie je als eerste?",
-            "Welke kleur of vorm trekt aandacht?",
-            "Wat blijft rustig?",
-            "Wat maakt het geheel spannend?",
-            "Wat zou jij kunnen gebruiken?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "image-left",
-          "kicker": "KIJKEN VOOR JE BEGINT",
+          "kicker": "JOUW STARTPUNT",
           "text": "",
           "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
-          "caption": "Een sterke voorkant kiest wat belangrijk is.",
+          "imageAlt": "Stijlvolle papiercollage met kleurvlakken.",
+          "caption": "Vandaag maak je van losse antwoorden een persoonlijke bladzijde.",
           "source": "",
           "images": [
             {
               "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
-              "caption": "Een sterke voorkant kiest wat belangrijk is.",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "spotlight",
-          "title": "NEDERLANDS",
-          "subtitle": "Dit woord moet straks meteen zichtbaar zijn",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "HOOFDROL",
-          "text": "Maak dit woord groot genoeg.",
-          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een zwart-witte typografische collage met grote letters.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een zwart-witte typografische collage met grote letters.",
-              "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "question",
-          "title": "Wat maakt een bladzijde sterk?",
-          "subtitle": "Kijk naar keuzes, niet naar smaak",
-          "showProjectLogo": false,
-          "items": [
-            "Wat wordt herhaald?",
-            "Waar zit contrast?",
-            "Waar is bewust ruimte leeg gelaten?",
-            "Wat voelt als hoofdbeeld?",
-            "Wat voelt als achtergrond?"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "ONTWERPERSBLIK",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon.",
-              "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "compare",
-          "title": "Versieren of ontwerpen?",
-          "subtitle": "Het verschil zit in kiezen",
-          "showProjectLogo": false,
-          "items": [
-            "Versieren: ik voeg steeds iets toe.",
-            "Ontwerpen: ik bepaal eerst de hoofdrol.",
-            "Versieren: alles mag evenveel aandacht.",
-            "Ontwerpen: sommige dingen zijn bewust rustiger.",
-            "Versieren: lege ruimte voelt ongemakkelijk.",
-            "Ontwerpen: lege ruimte maakt het sterker."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "MINDER LOS, MEER SYSTEEM",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details.",
-              "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "gallery",
-          "title": "Vier beeldrichtingen",
-          "subtitle": "Kies een stijl voordat je details tekent",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "GEEN LOSSE IDEEËN, MAAR EEN RICHTING",
-          "text": "",
-          "image": "",
-          "imageAlt": "",
-          "caption": "",
-          "source": "",
-          "images": [],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "wordbank",
-          "title": "Wat past bij jou?",
-          "subtitle": "Kies maximaal vijf aanknopingspunten",
-          "showProjectLogo": false,
-          "items": [
-            "muziek",
-            "sport",
-            "stad",
-            "natuur",
-            "film",
-            "serie",
-            "game",
-            "eten",
-            "reizen",
-            "familie",
-            "initialen",
-            "symbool",
-            "kleur",
-            "lievelingswoord",
-            "patroon"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "PERSOONLIJK, MAAR GERICHT",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een collage met kleurvlakken en papierstructuur.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een collage met kleurvlakken en papierstructuur.",
-              "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "wordbank",
-          "title": "Wat past bij Nederlands?",
-          "subtitle": "Gebruik taal als materiaal",
-          "showProjectLogo": false,
-          "items": [
-            "letters",
-            "woorden",
-            "zinnen",
-            "boeken",
-            "hoofdstukken",
-            "tekstballonnen",
-            "aanhalingstekens",
-            "bladzijdes",
-            "titels",
-            "papier",
-            "inkt",
-            "verhalen",
-            "gedichten",
-            "alfabet",
-            "leestekens"
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "WOORDEN KUNNEN VORMEN WORDEN",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Typografische collage van letters en tekstfragmenten.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Typografische collage van letters en tekstfragmenten.",
-              "caption": "",
+              "alt": "Stijlvolle papiercollage met kleurvlakken.",
+              "caption": "Vandaag maak je van losse antwoorden een persoonlijke bladzijde.",
               "source": ""
             }
           ],
@@ -33310,28 +33070,29 @@
         },
         {
           "type": "timeline",
-          "title": "Drie ontwerptrucs",
-          "subtitle": "Kies er minstens één",
+          "title": "Lesroute vandaag",
+          "subtitle": "45 minuten",
           "showProjectLogo": false,
           "items": [
-            "Herhaal één vorm, letter of symbool.",
-            "Maak één onderdeel groot.",
-            "Beperk je kleuren tot twee of drie.",
-            "Gebruik eventueel een kader om alles samen te brengen."
+            "0-7 min: formulier terugpakken.",
+            "7-25 min: eerste netschriftpagina maken.",
+            "25-35 min: netschriftbasis afmaken.",
+            "35-42 min: voorkant en titelblad ontwerpen.",
+            "42-45 min: netschriftcheck en agenda."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "VAN LOS IDEE NAAR GEHEEL",
+          "kicker": "VAN LOS NAAR AF",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten.",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Mixed-media collage.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten.",
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Mixed-media collage.",
               "caption": "",
               "source": ""
             }
@@ -33342,31 +33103,57 @@
           "url": ""
         },
         {
-          "type": "before-after",
-          "title": "Van druk naar sterk",
-          "subtitle": "Kleine keuzes maken groot verschil",
+          "type": "visual",
+          "title": "Pak je formulier erbij",
+          "subtitle": "Je antwoorden zijn materiaal",
           "showProjectLogo": false,
           "items": [
-            "Voor: overal kleine losse tekeningetjes.",
-            "Na: één vorm of woord krijgt de hoofdrol.",
-            "Voor: veel kleuren zonder plan.",
-            "Na: twee of drie kleuren keren terug.",
-            "Voor: naam en klas verdwijnen tussen de details.",
-            "Na: naam en klas hebben een vaste plek."
+            "Kies één serieus antwoord.",
+            "Kies één grappig of opvallend antwoord.",
+            "Kies één antwoord over Nederlands of school.",
+            "Kies één doel voor dit jaar."
           ],
           "emphasis": false,
           "variant": "",
-          "layout": "",
-          "kicker": "SCHRAPPEN IS OOK ONTWERPEN",
+          "layout": "image-left",
+          "kicker": "NIET OVERSCHRIJVEN, MAAR KIEZEN",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Close-up van een rode boekcover met duidelijke textuur.",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage met papier.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Close-up van een rode boekcover met duidelijke textuur.",
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage met papier.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "spotlight",
+          "title": "Ik & Nederlands",
+          "subtitle": "Dit wordt je eerste echte pagina",
+          "showProjectLogo": false,
+          "items": [],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "TITEL",
+          "text": "Ik & Nederlands - september 2026",
+          "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Close-up van drukletters.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Close-up van drukletters.",
               "caption": "",
               "source": ""
             }
@@ -33378,30 +33165,30 @@
         },
         {
           "type": "task",
-          "title": "Maak drie mini-schetsen",
-          "subtitle": "Werk klein, snel en zonder gumstress",
+          "title": "Eerste pagina",
+          "subtitle": "Maak er geen formulier van",
           "showProjectLogo": false,
           "items": [
-            "Schets 1: NEDERLANDS als grootste onderdeel.",
-            "Schets 2: jouw persoonlijke symbool als grootste onderdeel.",
-            "Schets 3: patroon, kader of boekenplank.",
-            "Kies daarna de sterkste.",
-            "Verbeter één ding voordat je op je schrift werkt."
+            "Zet titel en datum bovenaan.",
+            "Verwerk minimaal drie formulierantwoorden.",
+            "Schrijf erbij wat die antwoorden over jou laten zien.",
+            "Voeg toe waarin je dit jaar wilt groeien.",
+            "Gebruik witruimte, tussenkopjes of kaders."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "EERST PROBEREN",
+          "kicker": "STARTPORTRET",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Minimalistische compositie met potlood, tape en papier.",
-          "caption": "Een schets is geen eindversie. Een schets is een keuzeproef.",
+          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met tekststroken.",
+          "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Minimalistische compositie met potlood, tape en papier.",
-              "caption": "Een schets is geen eindversie. Een schets is een keuzeproef.",
+              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met tekststroken.",
+              "caption": "",
               "source": ""
             }
           ],
@@ -33411,31 +33198,99 @@
           "url": ""
         },
         {
-          "type": "poll",
-          "title": "Welke stijl kies jij?",
-          "subtitle": "Stem met je hand",
+          "type": "writing-frame",
+          "title": "Als je vastloopt",
+          "subtitle": "Begin met één van deze zinnen",
           "showProjectLogo": false,
           "items": [
-            "Lettercollage",
-            "Boekenplank",
-            "Minimalistische cover",
-            "Mixed media",
-            "Typografie",
-            "Strak kader met patroon"
+            "Bij Nederlands ben ik iemand die...",
+            "Als ik een boek zou zijn, dan zou ik...",
+            "Een docent helpt mij vooral door...",
+            "Dit jaar wil ik beter worden in...",
+            "Aan het einde van dit jaar hoop ik dat..."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "KIES EEN ONTWERPIDENTITEIT",
+          "kicker": "OP GANG KOMEN",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Lichte collage met verf, papier en kleine grafische elementen.",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Collage met grote letters.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Lichte collage met verf, papier en kleine grafische elementen.",
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Collage met grote letters.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "before-after",
+          "title": "Van formulier naar bladzijde",
+          "subtitle": "Zo maak je het persoonlijker",
+          "showProjectLogo": false,
+          "items": [
+            "Voor: losse antwoorden onder elkaar.",
+            "Na: titel, tussenkopjes, witruimte en kaders.",
+            "Voor: alleen invullen.",
+            "Na: uitleggen wat iets over jou zegt.",
+            "Voor: alles even groot.",
+            "Na: één onderdeel springt eruit."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "VORMGEVING TELT MEE",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met lagen en kleur.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met lagen en kleur.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "question",
+          "title": "Snelle buurcheck",
+          "subtitle": "Laat je bladzijde 30 seconden zien",
+          "showProjectLogo": false,
+          "items": [
+            "Wat valt als eerste op?",
+            "Is de titel duidelijk?",
+            "Kun je iets over de maker ontdekken?",
+            "Is het overzichtelijk?",
+            "Wat kan nog netter?"
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "KIJKEN ALS LEZER",
+          "text": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+          "imageAlt": "Boekenkast met herhaling en ritme.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+              "alt": "Boekenkast met herhaling en ritme.",
               "caption": "",
               "source": ""
             }
@@ -33447,59 +33302,31 @@
         },
         {
           "type": "checklist",
-          "title": "Voor je begint",
-          "subtitle": "Controleer je schets",
+          "title": "Netschriftbasis afmaken",
+          "subtitle": "Controleer de inrichting van les 1",
           "showProjectLogo": false,
           "items": [
-            "Zie je NEDERLANDS meteen?",
-            "Zijn je naam en klas duidelijk?",
-            "Past er iets bij jou?",
-            "Past er iets bij taal, lezen of verhalen?",
-            "Gebruik je herhaling, iets groots, beperkte kleuren of een kader?",
-            "Is het geheel niet te vol?"
+            "Titelblad aanwezig.",
+            "Inhoudsopgave begonnen.",
+            "Leesmeters gereserveerd.",
+            "Projectruimte logisch gestart.",
+            "Woordenlijst achterin gereserveerd.",
+            "Grammatica achterin gereserveerd."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "SNELLE ONTWERPCHECK",
+          "kicker": "TERUG NAAR DE BASIS",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond.",
+          "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+          "imageAlt": "Close-up van boekpagina's.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond.",
+              "src": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+              "alt": "Close-up van boekpagina's.",
               "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "title",
-          "title": "Aan de slag",
-          "subtitle": "Maak je voorkant",
-          "showProjectLogo": false,
-          "items": [],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "VAN SCHETS NAAR SCHRIFT",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Papiercollage met rustige vlakken en kleuraccenten.",
-          "caption": "Nu wordt je ontwerp echt.",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Papiercollage met rustige vlakken en kleuraccenten.",
-              "caption": "Nu wordt je ontwerp echt.",
               "source": ""
             }
           ],
@@ -33510,29 +33337,29 @@
         },
         {
           "type": "visual",
-          "title": "Titelblad",
-          "subtitle": "De binnenkant hoort bij de voorkant",
+          "title": "Nu de voorkant",
+          "subtitle": "Je schrift moet meteen herkenbaar zijn",
           "showProjectLogo": false,
           "items": [
-            "Zet NETSCHRIFT NEDERLANDS duidelijk op je titelblad.",
-            "Voeg je naam, klas en schooljaar toe.",
-            "Laat iets van je voorkant terugkomen.",
-            "Gebruik dezelfde kleuren, letters, vormen of symbolen."
+            "NEDERLANDS moet duidelijk zichtbaar zijn.",
+            "Je naam en klas moeten vindbaar zijn.",
+            "Er mag iets van jou in zitten.",
+            "Er moet iets van taal, lezen of verhalen in zitten."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "image-left",
-          "kicker": "ÉÉN STIJL DOORZETTEN",
+          "kicker": "VAN BINNEN NAAR BUITEN",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Close-up van open boekpagina’s met tekst.",
-          "caption": "Een titelblad vertelt meteen wat voor boek je openslaat.",
+          "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Close-up van een boekcover.",
+          "caption": "Een goede voorkant laat zien van wie het schrift is en waarvoor het bedoeld is.",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Close-up van open boekpagina’s met tekst.",
-              "caption": "Een titelblad vertelt meteen wat voor boek je openslaat.",
+              "src": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Close-up van een boekcover.",
+              "caption": "Een goede voorkant laat zien van wie het schrift is en waarvoor het bedoeld is.",
               "source": ""
             }
           ],
@@ -33542,63 +33369,31 @@
           "url": ""
         },
         {
-          "type": "rubric",
-          "title": "Wanneer is het sterk?",
-          "subtitle": "Hier kijken we straks naar",
+          "type": "compare",
+          "title": "Letterlijk of slim?",
+          "subtitle": "Gebruik je formulier als inspiratie",
           "showProjectLogo": false,
           "items": [
-            "Duidelijk: je ziet meteen wat belangrijk is.",
-            "Persoonlijk: je ziet iets van de maker.",
-            "Nederlands: taal, lezen of schrijven is zichtbaar.",
-            "Samenhang: onderdelen passen bij elkaar.",
-            "Verzorgd: het is netjes afgewerkt."
+            "Letterlijk: ik schrijf mijn hobby op.",
+            "Slimmer: ik maak er een patroon of symbool van.",
+            "Letterlijk: ik teken een boek.",
+            "Slimmer: ik ontwerp mijn voorkant als boekcover.",
+            "Letterlijk: ik gebruik al mijn antwoorden.",
+            "Slimmer: ik kies één hoofdidee."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "BEWUST GEMAAKT",
+          "kicker": "ONTWERPEN IS VERTALEN",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Typografische collage met grote zwarte letters en tekstfragmenten.",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Mixed-media collage.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Typografische collage met grote zwarte letters en tekstfragmenten.",
-              "caption": "",
-              "source": ""
-            }
-          ],
-          "quote": "",
-          "attribution": "",
-          "video": "",
-          "url": ""
-        },
-        {
-          "type": "think-pair-share",
-          "title": "Kijkronde",
-          "subtitle": "Geef taal aan wat werkt",
-          "showProjectLogo": false,
-          "items": [
-            "Denk: wat valt als eerste op?",
-            "Overleg: waardoor werkt dat?",
-            "Deel: welk idee had jij zelf niet bedacht?",
-            "Verbeter: pas één klein onderdeel aan."
-          ],
-          "emphasis": false,
-          "variant": "",
-          "layout": "",
-          "kicker": "NIET BEOORDELEN, MAAR BENOEMEN",
-          "text": "",
-          "image": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Boeken op een plank met ritme, kleur en diepte.",
-          "caption": "",
-          "source": "",
-          "images": [
-            {
-              "src": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Boeken op een plank met ritme, kleur en diepte.",
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Mixed-media collage.",
               "caption": "",
               "source": ""
             }
@@ -33610,14 +33405,14 @@
         },
         {
           "type": "gallery",
-          "title": "Galerij",
-          "subtitle": "Zoek slimme ontwerpkeuzes",
+          "title": "Vier voorkant-richtingen",
+          "subtitle": "Kies een stijl",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "KIJKEN ALS MAKER",
+          "kicker": "ÉÉN RICHTING IS GENOEG",
           "text": "",
           "image": "",
           "imageAlt": "",
@@ -33630,29 +33425,164 @@
           "url": ""
         },
         {
-          "type": "exit-ticket",
-          "title": "Laatste zin",
-          "subtitle": "Schrijf één zin voor jezelf",
+          "type": "timeline",
+          "title": "Ontwerptrucs",
+          "subtitle": "Gebruik er minstens één",
           "showProjectLogo": false,
           "items": [
-            "Mijn ontwerp past bij mij omdat...",
-            "De slimste keuze op mijn voorkant is...",
+            "Herhaal één vorm, letter of symbool.",
+            "Maak één onderdeel groot.",
+            "Beperk je kleuren tot twee of drie.",
+            "Gebruik een kader om alles samen te brengen."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "KLEINE INGREPEN, GROOT EFFECT",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Papiercollage met herhaling en kleuraccenten.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Papiercollage met herhaling en kleuraccenten.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "task",
+          "title": "Mini-schets",
+          "subtitle": "Eerst op kladpapier",
+          "showProjectLogo": false,
+          "items": [
+            "Schets 1: NEDERLANDS heel groot.",
+            "Schets 2: jouw formulierwoord als hoofdbeeld.",
+            "Schets 3: kader, patroon of boekenplank.",
+            "Kies de sterkste.",
+            "Begin daarna pas op je schrift."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "PROBEREN VOORDAT HET NETJES MOET",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische papiercollage.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische papiercollage.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "task",
+          "title": "Titelblad verder afmaken",
+          "subtitle": "De binnenkant hoort bij de voorkant",
+          "showProjectLogo": false,
+          "items": [
+            "NETSCHRIFT NEDERLANDS staat duidelijk op je titelblad.",
+            "Naam, klas en schooljaar staan erbij.",
+            "Laat iets van de voorkant terugkomen.",
+            "Gebruik dezelfde kleuren, letters, vormen of symbolen."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "ÉÉN STIJL",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Boekcover met sterke textuur.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Boekcover met sterke textuur.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "rubric",
+          "title": "Wanneer is het af?",
+          "subtitle": "Dit moet je kunnen aanwijzen",
+          "showProjectLogo": false,
+          "items": [
+            "Ik heb een eerste persoonlijke pagina.",
+            "Mijn titelblad is duidelijk.",
+            "Mijn inhoudsopgave is begonnen.",
+            "Mijn leesmeters zijn gereserveerd.",
+            "Achterin is ruimte voor woordenlijst en grammatica.",
+            "Mijn voorkant is begonnen of af."
+          ],
+          "emphasis": false,
+          "variant": "",
+          "layout": "",
+          "kicker": "NETSCHRIFTCHECK",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Letterpressletters.",
+          "caption": "",
+          "source": "",
+          "images": [
+            {
+              "src": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Letterpressletters.",
+              "caption": "",
+              "source": ""
+            }
+          ],
+          "quote": "",
+          "attribution": "",
+          "video": "",
+          "url": ""
+        },
+        {
+          "type": "exit-ticket",
+          "title": "Laatste zin",
+          "subtitle": "Schrijf één zin onderaan je eerste pagina",
+          "showProjectLogo": false,
+          "items": [
             "Dit wil ik dit jaar in mijn netschrift kunnen terugzien...",
+            "Mijn eerste pagina past bij mij omdat...",
+            "Het antwoord uit mijn formulier dat ik heb gebruikt is...",
             "Volgende keer wil ik nog verbeteren..."
           ],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "DIT WIL IK TERUGZIEN",
+          "kicker": "TERUGKIJKEN",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Open boekpagina’s met tekst.",
+          "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Mixed-media collage met papier en tekst.",
           "caption": "",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Open boekpagina’s met tekst.",
+              "src": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Mixed-media collage met papier en tekst.",
               "caption": "",
               "source": ""
             }
@@ -33664,24 +33594,24 @@
         },
         {
           "type": "title",
-          "title": "Maak er iets bijzonders van",
-          "subtitle": "Dit is pas het begin",
+          "title": "Klaar voor het jaar",
+          "subtitle": "Je netschrift heeft nu een begin, een systeem en iets van jou",
           "showProjectLogo": false,
           "items": [],
           "emphasis": false,
           "variant": "",
           "layout": "",
-          "kicker": "JOUW NEDERLANDS, JOUW BOEK",
+          "kicker": "DIT IS JOUW NEDERLANDS",
           "text": "",
-          "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-          "imageAlt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
-          "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij.",
+          "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+          "imageAlt": "Typografische collage met papierlagen en letters.",
+          "caption": "Vanaf nu bouwen we hierin verder.",
           "source": "",
           "images": [
             {
-              "src": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-              "alt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
-              "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij.",
+              "src": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+              "alt": "Typografische collage met papierlagen en letters.",
+              "caption": "Vanaf nu bouwen we hierin verder.",
               "source": ""
             }
           ],
@@ -33930,290 +33860,251 @@
         "marker-startles-1-2": [
           {
             "type": "hero",
-            "title": "Les 2 - Maak het van jou",
-            "subtitle": "Ontwerp een netschrift dat voelt als jouw eigen boek",
+            "title": "Les 2 - Dit wordt mijn Nederlands",
+            "subtitle": "Van formulier naar eerste netschriftpagina",
             "items": [],
-            "kicker": "LETTERS ALS BEELD",
-            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een collage van gescheurd papier, tekstfragmenten en grote zwarte letters.",
-            "caption": "Taal hoeft niet alleen gelezen te worden. Taal kan ook beeld zijn."
-          },
-          {
-            "type": "visual",
-            "title": "Eerste indruk",
-            "subtitle": "Waar stuurt het ontwerp je oog naartoe?",
-            "items": [
-              "Wat zie je als eerste?",
-              "Welke kleur of vorm trekt aandacht?",
-              "Wat blijft rustig?",
-              "Wat maakt het geheel spannend?",
-              "Wat zou jij kunnen gebruiken?"
-            ],
-            "kicker": "KIJKEN VOOR JE BEGINT",
-            "layout": "image-left",
+            "kicker": "JOUW STARTPUNT",
             "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een kleurrijke papiercollage met lagen, kleurvlakken en tekstfragmenten.",
-            "caption": "Een sterke voorkant kiest wat belangrijk is."
-          },
-          {
-            "type": "spotlight",
-            "title": "NEDERLANDS",
-            "subtitle": "Dit woord moet straks meteen zichtbaar zijn",
-            "items": [],
-            "kicker": "HOOFDROL",
-            "text": "Maak dit woord groot genoeg.",
-            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een zwart-witte typografische collage met grote letters."
-          },
-          {
-            "type": "question",
-            "title": "Wat maakt een bladzijde sterk?",
-            "subtitle": "Kijk naar keuzes, niet naar smaak",
-            "items": [
-              "Wat wordt herhaald?",
-              "Waar zit contrast?",
-              "Waar is bewust ruimte leeg gelaten?",
-              "Wat voelt als hoofdbeeld?",
-              "Wat voelt als achtergrond?"
-            ],
-            "kicker": "ONTWERPERSBLIK",
-            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een abstracte collage met gescheurde stroken papier, tekst, kleur en patroon."
-          },
-          {
-            "type": "compare",
-            "title": "Versieren of ontwerpen?",
-            "subtitle": "Het verschil zit in kiezen",
-            "items": [
-              "Versieren: ik voeg steeds iets toe.",
-              "Ontwerpen: ik bepaal eerst de hoofdrol.",
-              "Versieren: alles mag evenveel aandacht.",
-              "Ontwerpen: sommige dingen zijn bewust rustiger.",
-              "Versieren: lege ruimte voelt ongemakkelijk.",
-              "Ontwerpen: lege ruimte maakt het sterker."
-            ],
-            "kicker": "MINDER LOS, MEER SYSTEEM",
-            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een lichte mixed-media collage met verf, papierlagen en kleine visuele details."
-          },
-          {
-            "type": "gallery",
-            "title": "Vier beeldrichtingen",
-            "subtitle": "Kies een stijl voordat je details tekent",
-            "items": [],
-            "kicker": "GEEN LOSSE IDEEËN, MAAR EEN RICHTING"
-          },
-          {
-            "type": "wordbank",
-            "title": "Wat past bij jou?",
-            "subtitle": "Kies maximaal vijf aanknopingspunten",
-            "items": [
-              "muziek",
-              "sport",
-              "stad",
-              "natuur",
-              "film",
-              "serie",
-              "game",
-              "eten",
-              "reizen",
-              "familie",
-              "initialen",
-              "symbool",
-              "kleur",
-              "lievelingswoord",
-              "patroon"
-            ],
-            "kicker": "PERSOONLIJK, MAAR GERICHT",
-            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een collage met kleurvlakken en papierstructuur."
-          },
-          {
-            "type": "wordbank",
-            "title": "Wat past bij Nederlands?",
-            "subtitle": "Gebruik taal als materiaal",
-            "items": [
-              "letters",
-              "woorden",
-              "zinnen",
-              "boeken",
-              "hoofdstukken",
-              "tekstballonnen",
-              "aanhalingstekens",
-              "bladzijdes",
-              "titels",
-              "papier",
-              "inkt",
-              "verhalen",
-              "gedichten",
-              "alfabet",
-              "leestekens"
-            ],
-            "kicker": "WOORDEN KUNNEN VORMEN WORDEN",
-            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Typografische collage van letters en tekstfragmenten."
+            "imageAlt": "Stijlvolle papiercollage met kleurvlakken.",
+            "caption": "Vandaag maak je van losse antwoorden een persoonlijke bladzijde."
           },
           {
             "type": "timeline",
-            "title": "Drie ontwerptrucs",
-            "subtitle": "Kies er minstens één",
+            "title": "Lesroute vandaag",
+            "subtitle": "45 minuten",
+            "items": [
+              "0-7 min: formulier terugpakken.",
+              "7-25 min: eerste netschriftpagina maken.",
+              "25-35 min: netschriftbasis afmaken.",
+              "35-42 min: voorkant en titelblad ontwerpen.",
+              "42-45 min: netschriftcheck en agenda."
+            ],
+            "kicker": "VAN LOS NAAR AF",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media collage."
+          },
+          {
+            "type": "visual",
+            "title": "Pak je formulier erbij",
+            "subtitle": "Je antwoorden zijn materiaal",
+            "items": [
+              "Kies één serieus antwoord.",
+              "Kies één grappig of opvallend antwoord.",
+              "Kies één antwoord over Nederlands of school.",
+              "Kies één doel voor dit jaar."
+            ],
+            "kicker": "NIET OVERSCHRIJVEN, MAAR KIEZEN",
+            "layout": "image-left",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage met papier."
+          },
+          {
+            "type": "spotlight",
+            "title": "Ik & Nederlands",
+            "subtitle": "Dit wordt je eerste echte pagina",
+            "items": [],
+            "kicker": "TITEL",
+            "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van drukletters.",
+            "text": "Ik & Nederlands - september 2026"
+          },
+          {
+            "type": "task",
+            "title": "Eerste pagina",
+            "subtitle": "Maak er geen formulier van",
+            "items": [
+              "Zet titel en datum bovenaan.",
+              "Verwerk minimaal drie formulierantwoorden.",
+              "Schrijf erbij wat die antwoorden over jou laten zien.",
+              "Voeg toe waarin je dit jaar wilt groeien.",
+              "Gebruik witruimte, tussenkopjes of kaders."
+            ],
+            "kicker": "STARTPORTRET",
+            "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met tekststroken."
+          },
+          {
+            "type": "writing-frame",
+            "title": "Als je vastloopt",
+            "subtitle": "Begin met één van deze zinnen",
+            "items": [
+              "Bij Nederlands ben ik iemand die...",
+              "Als ik een boek zou zijn, dan zou ik...",
+              "Een docent helpt mij vooral door...",
+              "Dit jaar wil ik beter worden in...",
+              "Aan het einde van dit jaar hoop ik dat..."
+            ],
+            "kicker": "OP GANG KOMEN",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Collage met grote letters."
+          },
+          {
+            "type": "before-after",
+            "title": "Van formulier naar bladzijde",
+            "subtitle": "Zo maak je het persoonlijker",
+            "items": [
+              "Voor: losse antwoorden onder elkaar.",
+              "Na: titel, tussenkopjes, witruimte en kaders.",
+              "Voor: alleen invullen.",
+              "Na: uitleggen wat iets over jou zegt.",
+              "Voor: alles even groot.",
+              "Na: één onderdeel springt eruit."
+            ],
+            "kicker": "VORMGEVING TELT MEE",
+            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Papiercollage met lagen en kleur."
+          },
+          {
+            "type": "question",
+            "title": "Snelle buurcheck",
+            "subtitle": "Laat je bladzijde 30 seconden zien",
+            "items": [
+              "Wat valt als eerste op?",
+              "Is de titel duidelijk?",
+              "Kun je iets over de maker ontdekken?",
+              "Is het overzichtelijk?",
+              "Wat kan nog netter?"
+            ],
+            "kicker": "KIJKEN ALS LEZER",
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bookshelf.jpg",
+            "imageAlt": "Boekenkast met herhaling en ritme."
+          },
+          {
+            "type": "checklist",
+            "title": "Netschriftbasis afmaken",
+            "subtitle": "Controleer de inrichting van les 1",
+            "items": [
+              "Titelblad aanwezig.",
+              "Inhoudsopgave begonnen.",
+              "Leesmeters gereserveerd.",
+              "Projectruimte logisch gestart.",
+              "Woordenlijst achterin gereserveerd.",
+              "Grammatica achterin gereserveerd."
+            ],
+            "kicker": "TERUG NAAR DE BASIS",
+            "image": "https://images.pexels.com/photos/8594535/pexels-photo-8594535.jpeg?auto=compress&cs=tinysrgb&w=2000",
+            "imageAlt": "Close-up van boekpagina's."
+          },
+          {
+            "type": "visual",
+            "title": "Nu de voorkant",
+            "subtitle": "Je schrift moet meteen herkenbaar zijn",
+            "items": [
+              "NEDERLANDS moet duidelijk zichtbaar zijn.",
+              "Je naam en klas moeten vindbaar zijn.",
+              "Er mag iets van jou in zitten.",
+              "Er moet iets van taal, lezen of verhalen in zitten."
+            ],
+            "kicker": "VAN BINNEN NAAR BUITEN",
+            "layout": "image-left",
+            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Close-up van een boekcover.",
+            "caption": "Een goede voorkant laat zien van wie het schrift is en waarvoor het bedoeld is."
+          },
+          {
+            "type": "compare",
+            "title": "Letterlijk of slim?",
+            "subtitle": "Gebruik je formulier als inspiratie",
+            "items": [
+              "Letterlijk: ik schrijf mijn hobby op.",
+              "Slimmer: ik maak er een patroon of symbool van.",
+              "Letterlijk: ik teken een boek.",
+              "Slimmer: ik ontwerp mijn voorkant als boekcover.",
+              "Letterlijk: ik gebruik al mijn antwoorden.",
+              "Slimmer: ik kies één hoofdidee."
+            ],
+            "kicker": "ONTWERPEN IS VERTALEN",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media collage."
+          },
+          {
+            "type": "gallery",
+            "title": "Vier voorkant-richtingen",
+            "subtitle": "Kies een stijl",
+            "items": [],
+            "kicker": "ÉÉN RICHTING IS GENOEG"
+          },
+          {
+            "type": "timeline",
+            "title": "Ontwerptrucs",
+            "subtitle": "Gebruik er minstens één",
             "items": [
               "Herhaal één vorm, letter of symbool.",
               "Maak één onderdeel groot.",
               "Beperk je kleuren tot twee of drie.",
-              "Gebruik eventueel een kader om alles samen te brengen."
+              "Gebruik een kader om alles samen te brengen."
             ],
-            "kicker": "VAN LOS IDEE NAAR GEHEEL",
+            "kicker": "KLEINE INGREPEN, GROOT EFFECT",
             "image": "https://images.unsplash.com/photo-1706271952260-a846f6df1048?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met herhaling, stroken, tekst en kleuraccenten."
-          },
-          {
-            "type": "before-after",
-            "title": "Van druk naar sterk",
-            "subtitle": "Kleine keuzes maken groot verschil",
-            "items": [
-              "Voor: overal kleine losse tekeningetjes.",
-              "Na: één vorm of woord krijgt de hoofdrol.",
-              "Voor: veel kleuren zonder plan.",
-              "Na: twee of drie kleuren keren terug.",
-              "Voor: naam en klas verdwijnen tussen de details.",
-              "Na: naam en klas hebben een vaste plek."
-            ],
-            "kicker": "SCHRAPPEN IS OOK ONTWERPEN",
-            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van een rode boekcover met duidelijke textuur."
+            "imageAlt": "Papiercollage met herhaling en kleuraccenten."
           },
           {
             "type": "task",
-            "title": "Maak drie mini-schetsen",
-            "subtitle": "Werk klein, snel en zonder gumstress",
+            "title": "Mini-schets",
+            "subtitle": "Eerst op kladpapier",
             "items": [
-              "Schets 1: NEDERLANDS als grootste onderdeel.",
-              "Schets 2: jouw persoonlijke symbool als grootste onderdeel.",
-              "Schets 3: patroon, kader of boekenplank.",
-              "Kies daarna de sterkste.",
-              "Verbeter één ding voordat je op je schrift werkt."
+              "Schets 1: NEDERLANDS heel groot.",
+              "Schets 2: jouw formulierwoord als hoofdbeeld.",
+              "Schets 3: kader, patroon of boekenplank.",
+              "Kies de sterkste.",
+              "Begin daarna pas op je schrift."
             ],
-            "kicker": "EERST PROBEREN",
-            "image": "https://images.unsplash.com/photo-1766961557611-0d0ebe2311c2?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Minimalistische compositie met potlood, tape en papier.",
-            "caption": "Een schets is geen eindversie. Een schets is een keuzeproef."
+            "kicker": "PROBEREN VOORDAT HET NETJES MOET",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische papiercollage."
           },
           {
-            "type": "poll",
-            "title": "Welke stijl kies jij?",
-            "subtitle": "Stem met je hand",
-            "items": [
-              "Lettercollage",
-              "Boekenplank",
-              "Minimalistische cover",
-              "Mixed media",
-              "Typografie",
-              "Strak kader met patroon"
-            ],
-            "kicker": "KIES EEN ONTWERPIDENTITEIT",
-            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Lichte collage met verf, papier en kleine grafische elementen."
-          },
-          {
-            "type": "checklist",
-            "title": "Voor je begint",
-            "subtitle": "Controleer je schets",
-            "items": [
-              "Zie je NEDERLANDS meteen?",
-              "Zijn je naam en klas duidelijk?",
-              "Past er iets bij jou?",
-              "Past er iets bij taal, lezen of verhalen?",
-              "Gebruik je herhaling, iets groots, beperkte kleuren of een kader?",
-              "Is het geheel niet te vol?"
-            ],
-            "kicker": "SNELLE ONTWERPCHECK",
-            "image": "https://images.unsplash.com/photo-1743760521201-ddb298df18cd?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Een minimalistisch notitieboek met potlood op een rustige ondergrond."
-          },
-          {
-            "type": "title",
-            "title": "Aan de slag",
-            "subtitle": "Maak je voorkant",
-            "kicker": "VAN SCHETS NAAR SCHRIFT",
-            "image": "https://images.unsplash.com/photo-1709467585628-afd0d20ef376?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Papiercollage met rustige vlakken en kleuraccenten.",
-            "caption": "Nu wordt je ontwerp echt."
-          },
-          {
-            "type": "visual",
-            "title": "Titelblad",
+            "type": "task",
+            "title": "Titelblad verder afmaken",
             "subtitle": "De binnenkant hoort bij de voorkant",
             "items": [
-              "Zet NETSCHRIFT NEDERLANDS duidelijk op je titelblad.",
-              "Voeg je naam, klas en schooljaar toe.",
-              "Laat iets van je voorkant terugkomen.",
+              "NETSCHRIFT NEDERLANDS staat duidelijk op je titelblad.",
+              "Naam, klas en schooljaar staan erbij.",
+              "Laat iets van de voorkant terugkomen.",
               "Gebruik dezelfde kleuren, letters, vormen of symbolen."
             ],
-            "kicker": "ÉÉN STIJL DOORZETTEN",
-            "layout": "image-left",
-            "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Close-up van open boekpagina’s met tekst.",
-            "caption": "Een titelblad vertelt meteen wat voor boek je openslaat."
+            "kicker": "ÉÉN STIJL",
+            "image": "https://images.unsplash.com/photo-1528459105426-b9548367069b?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Boekcover met sterke textuur."
           },
           {
             "type": "rubric",
-            "title": "Wanneer is het sterk?",
-            "subtitle": "Hier kijken we straks naar",
+            "title": "Wanneer is het af?",
+            "subtitle": "Dit moet je kunnen aanwijzen",
             "items": [
-              "Duidelijk: je ziet meteen wat belangrijk is.",
-              "Persoonlijk: je ziet iets van de maker.",
-              "Nederlands: taal, lezen of schrijven is zichtbaar.",
-              "Samenhang: onderdelen passen bij elkaar.",
-              "Verzorgd: het is netjes afgewerkt."
+              "Ik heb een eerste persoonlijke pagina.",
+              "Mijn titelblad is duidelijk.",
+              "Mijn inhoudsopgave is begonnen.",
+              "Mijn leesmeters zijn gereserveerd.",
+              "Achterin is ruimte voor woordenlijst en grammatica.",
+              "Mijn voorkant is begonnen of af."
             ],
-            "kicker": "BEWUST GEMAAKT",
-            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Typografische collage met grote zwarte letters en tekstfragmenten."
-          },
-          {
-            "type": "think-pair-share",
-            "title": "Kijkronde",
-            "subtitle": "Geef taal aan wat werkt",
-            "items": [
-              "Denk: wat valt als eerste op?",
-              "Overleg: waardoor werkt dat?",
-              "Deel: welk idee had jij zelf niet bedacht?",
-              "Verbeter: pas één klein onderdeel aan."
-            ],
-            "kicker": "NIET BEOORDELEN, MAAR BENOEMEN",
-            "image": "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Boeken op een plank met ritme, kleur en diepte."
-          },
-          {
-            "type": "gallery",
-            "title": "Galerij",
-            "subtitle": "Zoek slimme ontwerpkeuzes",
-            "items": [],
-            "kicker": "KIJKEN ALS MAKER"
+            "kicker": "NETSCHRIFTCHECK",
+            "image": "https://images.unsplash.com/photo-1699662585330-4b81921f609d?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Letterpressletters."
           },
           {
             "type": "exit-ticket",
             "title": "Laatste zin",
-            "subtitle": "Schrijf één zin voor jezelf",
+            "subtitle": "Schrijf één zin onderaan je eerste pagina",
             "items": [
-              "Mijn ontwerp past bij mij omdat...",
-              "De slimste keuze op mijn voorkant is...",
               "Dit wil ik dit jaar in mijn netschrift kunnen terugzien...",
+              "Mijn eerste pagina past bij mij omdat...",
+              "Het antwoord uit mijn formulier dat ik heb gebruikt is...",
               "Volgende keer wil ik nog verbeteren..."
             ],
-            "kicker": "DIT WIL IK TERUGZIEN",
-            "image": "https://images.unsplash.com/photo-1760636381941-b6b8e871d268?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Open boekpagina’s met tekst."
+            "kicker": "TERUGKIJKEN",
+            "image": "https://images.unsplash.com/photo-1699446320473-71c469f34d94?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Mixed-media collage met papier en tekst."
           },
           {
             "type": "title",
-            "title": "Maak er iets bijzonders van",
-            "subtitle": "Dit is pas het begin",
-            "kicker": "JOUW NEDERLANDS, JOUW BOEK",
-            "image": "https://images.unsplash.com/photo-1697224687385-5a6263118fbc?auto=format&fit=crop&q=80&w=2000",
-            "imageAlt": "Zwart-witte collage van letters, cijfers en tekstfragmenten.",
-            "caption": "Aan het einde van het jaar moet je kunnen zien: dit is van mij."
+            "title": "Klaar voor het jaar",
+            "subtitle": "Je netschrift heeft nu een begin, een systeem en iets van jou",
+            "kicker": "DIT IS JOUW NEDERLANDS",
+            "image": "https://images.unsplash.com/photo-1698778539388-fd440b64dbe3?auto=format&fit=crop&q=80&w=2000",
+            "imageAlt": "Typografische collage met papierlagen en letters.",
+            "caption": "Vanaf nu bouwen we hierin verder."
           }
         ]
       },
@@ -34222,61 +34113,57 @@
         "marker-startles-1-2": {
           "netschrift": {
             "items": [
-              "Je voorkant is ontworpen of duidelijk begonnen.",
-              "Op de voorkant staat NEDERLANDS duidelijk zichtbaar.",
-              "Je naam en klas zijn goed vindbaar.",
-              "Je titelblad bevat NETSCHRIFT NEDERLANDS, je naam, klas en schooljaar.",
-              "Je ontwerp laat iets van jou zien en iets dat bij Nederlands past.",
-              "Je gebruikt minimaal één ontwerptruc: herhaling, iets groots, beperkte kleuren of een kader."
+              "Je eerste echte pagina heet: Ik & Nederlands - september 2026.",
+              "Je verwerkt minimaal drie antwoorden uit je kennismakingsformulier.",
+              "Je maakt de pagina verzorgd, overzichtelijk en persoonlijk.",
+              "Je titelblad is af of duidelijk verder uitgewerkt.",
+              "Je inhoudsopgave, leesmeters, woordenlijst en grammatica-ruimte zijn gecontroleerd.",
+              "Je voorkant is ontworpen of duidelijk begonnen."
             ]
           },
           "curriculum": {
             "lessonGoals": [
-              "Je ontdekt waardoor een bladzijde of voorkant er sterk uitziet.",
-              "Je kiest een eigen stijl voor je netschrift.",
-              "Je ontwerpt eerst op kladpapier voordat je op je schrift werkt.",
-              "Je maakt je voorkant en titelblad verzorgd, persoonlijk en duidelijk.",
-              "Je kijkt naar ontwerpkeuzes van anderen en benoemt wat slim werkt."
+              "Je gebruikt je kennismakingsformulier als materiaal voor je netschrift.",
+              "Je maakt een eerste persoonlijke netschriftpagina.",
+              "Je maakt je netschrift klaar voor gebruik dit schooljaar.",
+              "Je kiest een stijl voor je voorkant en titelblad.",
+              "Je controleert of je netschrift overzichtelijk en verzorgd is."
             ],
             "skills": [
               "Reflectie",
               "Schrijven",
               "Taalverzorging",
-              "Creatief taal gebruiken"
+              "Creatief taal gebruiken",
+              "Ontwerpkeuzes benoemen"
             ],
             "kerndoelen": [
               "1 Taalcompetentie",
               "3 Produceert teksten",
               "5 Reflecteert op taalactiviteiten",
-              "7 Taal en identiteit"
-            ],
-            "subkerndoelen": [
-              "1A Taal- en leesomgeving",
-              "3B Creatief taal gebruiken",
-              "3C Schrijven om te leren",
-              "7A Talige identiteit",
+              "7 Taal en identiteit",
               "beeldstijl:",
               "editorial collage",
               "typografie",
-              "boekontwerp",
+              "boekcoverontwerp",
               "papierstructuur",
-              "rustige maar krachtige composities",
-              "geen grote iconen als hoofdbeeld",
-              "geen stockfoto's van schrijvende handen"
-            ]
+              "rustig maar speels",
+              "geen stockfoto's van schrijvende handen",
+              "geen grote iconen als hoofdbeeld"
+            ],
+            "subkerndoelen": []
           },
           "planning": {
             "lesson": "Les 2 - Maak het van jou",
-            "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+            "homework": "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nNeem iedere les je leesboek, netschrift en pen mee.\nDenk alvast na welk boek je als eerste wilt lezen.",
             "assessment": "",
             "teacherNote": ""
           },
           "homework": {
             "items": [
-              "Neem je netschrift en pen mee.",
               "Maak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.",
               "Zorg dat naam, klas en schooljaar duidelijk leesbaar zijn.",
-              "Denk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?"
+              "Neem iedere les je leesboek, netschrift en pen mee.",
+              "Denk alvast na welk boek je als eerste wilt lezen."
             ]
           }
         },
@@ -36141,7 +36028,7 @@
       }
     }
   },
-  "sourceRevision": "2026-09-06T16:22:55+02:00-studio",
+  "sourceRevision": "2026-09-06T16:24:48+02:00-studio",
   "readingLocks": {
     "1C": {
       "day": 2,
