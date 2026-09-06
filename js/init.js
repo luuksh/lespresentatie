@@ -2433,6 +2433,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     return true;
   }
 
+  function directPresentationPreviewIsEmbedded() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('embeddedPreview') === '1' && window.parent && window.parent !== window;
+  }
+
   function internalPresentationHasMarker(presentation, markerId) {
     const cleanMarkerId = String(markerId || '').trim();
     if (!presentation || typeof presentation !== 'object' || !cleanMarkerId) return false;
@@ -3010,12 +3015,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.classList.add('presentation-open');
     plattegrondFrame.classList.add('is-flipped');
     isPresentationOpen = true;
-    enterPresentationFullscreen();
+    if (!directPresentationPreviewIsEmbedded()) enterPresentationFullscreen();
     scheduleInternalSlideFit();
   }
 
-  function closePresentationPanel() {
+  function closePresentationPanel({ notifyParent = false } = {}) {
     if (!plattegrondFrame) return;
+    const wasPresentationOpen = isPresentationOpen;
     plattegrondFrame.classList.remove('is-flipped');
     document.body.classList.remove('presentation-open');
     isPresentationOpen = false;
@@ -3023,6 +3029,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.exitFullscreen().catch((err) => {
         console.warn('Fullscreen afsluiten niet beschikbaar:', err);
       });
+    }
+    if (notifyParent && wasPresentationOpen && directPresentationPreviewIsEmbedded()) {
+      window.parent.postMessage({ type: 'lesstudio:presentation-preview-close' }, '*');
     }
   }
 
@@ -4221,7 +4230,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   presentationBackBtn?.addEventListener('click', () => {
-    closePresentationPanel();
+    closePresentationPanel({ notifyParent: true });
   });
   frontPresentationBtn?.addEventListener('click', () => {
     if (!frontPresentationTarget) return;

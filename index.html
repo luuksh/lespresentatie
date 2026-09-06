@@ -6,7 +6,7 @@
   <title>Lesstudio | Klassenplattegrond</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
   <link rel="stylesheet" href="css/lesstudio.css?v=202609060945" />
-  <script type="module" src="js/lesstudio.js?v=202609060945"></script>
+  <script type="module" src="js/lesstudio.js?v=202609060956"></script>
 </head>
 <body>
   <main class="lesson-app">
@@ -17,7 +17,6 @@
       </div>
       <nav class="main-tabs" aria-label="Hoofdnavigatie">
         <button type="button" class="main-tab is-active" data-view="studio">Lesstudio</button>
-        <button type="button" class="main-tab" data-view="presentations">Presentaties</button>
         <a class="main-tab main-tab-link" href="docent.html">Docentenbord</a>
         <button type="button" class="main-tab" data-view="curriculum">Curriculum</button>
         <button type="button" class="main-tab" data-view="netschrift">Netschrift</button>
@@ -170,17 +169,6 @@
       </section>
     </section>
 
-    <section id="presentationLibraryView" class="app-view dashboard-view presentation-library-view" hidden>
-      <header class="dashboard-head">
-        <div>
-          <p class="app-kicker">Bibliotheek</p>
-          <h2>Alle presentaties</h2>
-        </div>
-        <a class="primary-action library-studio-link" href="presentatie-studio.html">Open oude presentatiestudio</a>
-      </header>
-      <div id="presentationLibrary" class="presentation-library"></div>
-    </section>
-
     <section id="curriculumView" class="app-view dashboard-view" hidden>
       <header class="dashboard-head">
         <div>
@@ -205,7 +193,7 @@
   </main>
 
   <dialog id="presentationDialog" class="presentation-dialog presentation-preview-dialog">
-    <iframe id="dialogFrame" class="presentation-preview-frame" title="Presentatie-preview" allow="fullscreen"></iframe>
+    <iframe id="dialogFrame" class="presentation-preview-frame" title="Presentatie-preview" allow="fullscreen" allowfullscreen></iframe>
     <button id="dialogCloseBtn" class="presentation-preview-close" type="button">Sluiten</button>
     <div id="dialogStage" class="dialog-stage" hidden></div>
     <button id="dialogPrevBtn" type="button" hidden>Vorige</button>
