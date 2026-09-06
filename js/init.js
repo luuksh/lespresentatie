@@ -3106,6 +3106,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         variant: 'netschrift',
         title: 'Opdracht netschrift',
         subtitle: 'Dit moet straks terug te vinden zijn',
+        image: 'https://openmoji.org/data/color/svg/1F4D3.svg',
+        imageAlt: 'Notitieboek als netschriftsymbool.',
+        layout: 'image-left',
         items: netschriftItems,
       } : null,
       endSlide: netschriftItems.length ? {
@@ -3114,6 +3117,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         variant: 'netschrift',
         title: 'Netschriftcheck: gelukt?',
         subtitle: 'Controleer dit voordat je afsluit',
+        image: 'https://openmoji.org/data/color/svg/2705.svg',
+        imageAlt: 'Vinkje als checksymbool.',
+        layout: 'image-left',
         items: netschriftItems,
       } : null,
       homeworkSlide: homeworkItems.length ? {
@@ -3122,6 +3128,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         variant: 'homework',
         title: 'Schrijf in je agenda',
         subtitle: 'Huiswerk voor de volgende keer',
+        image: 'https://openmoji.org/data/color/svg/1F4C5.svg',
+        imageAlt: 'Kalender als agendasymbool.',
+        layout: 'image-left',
         items: homeworkItems,
       } : null,
     });

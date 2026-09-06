@@ -1952,6 +1952,9 @@ function renderableSlidesForStructure(structure) {
       variant: 'netschrift',
       title: 'Opdracht netschrift',
       subtitle: 'Dit moet straks terug te vinden zijn',
+      image: 'https://openmoji.org/data/color/svg/1F4D3.svg',
+      imageAlt: 'Notitieboek als netschriftsymbool.',
+      layout: 'image-left',
       items: netschriftItems,
     } : null,
     endSlide: netschriftItems.length ? {
@@ -1960,6 +1963,9 @@ function renderableSlidesForStructure(structure) {
       variant: 'netschrift',
       title: 'Netschriftcheck: gelukt?',
       subtitle: 'Controleer dit voordat je afsluit',
+      image: 'https://openmoji.org/data/color/svg/2705.svg',
+      imageAlt: 'Vinkje als checksymbool.',
+      layout: 'image-left',
       items: netschriftItems,
     } : null,
     homeworkSlide: homeworkItems.length ? {
@@ -1968,6 +1974,9 @@ function renderableSlidesForStructure(structure) {
       variant: 'homework',
       title: 'Schrijf in je agenda',
       subtitle: 'Huiswerk voor de volgende keer',
+      image: 'https://openmoji.org/data/color/svg/1F4C5.svg',
+      imageAlt: 'Kalender als agendasymbool.',
+      layout: 'image-left',
       items: homeworkItems,
     } : null,
   });
@@ -3747,6 +3756,11 @@ function netschriftSlideForLesson(lesson, phase) {
     variant: 'netschrift',
     title: phase === 'start' ? 'Opdracht netschrift' : 'Netschriftcheck: gelukt?',
     subtitle: phase === 'start' ? 'Dit moet straks terug te vinden zijn' : 'Controleer dit voordat je afsluit',
+    image: phase === 'start'
+      ? 'https://openmoji.org/data/color/svg/1F4D3.svg'
+      : 'https://openmoji.org/data/color/svg/2705.svg',
+    imageAlt: phase === 'start' ? 'Notitieboek als netschriftsymbool.' : 'Vinkje als checksymbool.',
+    layout: 'image-left',
     items: items.length ? items : [fallback],
   };
 }
@@ -3768,6 +3782,9 @@ function homeworkSlideForLesson(lesson) {
       variant: 'homework',
       title: 'Schrijf in je agenda',
       subtitle: 'Huiswerk voor de volgende keer',
+      image: 'https://openmoji.org/data/color/svg/1F4C5.svg',
+      imageAlt: 'Kalender als agendasymbool.',
+      layout: 'image-left',
       items: explicitItems,
     };
   }
@@ -3781,6 +3798,9 @@ function homeworkSlideForLesson(lesson) {
     variant: 'homework',
     title: 'Schrijf in je agenda',
     subtitle: `Huiswerk voor ${nextLesson.lesson || nextLesson.project || 'de volgende les'}`,
+    image: 'https://openmoji.org/data/color/svg/1F4C5.svg',
+    imageAlt: 'Kalender als agendasymbool.',
+    layout: 'image-left',
     items: parseList(homework),
   };
 }

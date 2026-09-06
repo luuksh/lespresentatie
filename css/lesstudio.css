@@ -1407,6 +1407,15 @@ a:focus-visible {
   padding: 18px;
 }
 
+.dialog-slide.is-netschrift .dialog-slide-media img,
+.dialog-slide.is-homework .dialog-slide-media img,
+.dialog-slide.is-homework-preview .dialog-slide-media img {
+  aspect-ratio: 1 / 1;
+  max-height: min(34vh, 300px);
+  object-fit: contain;
+  padding: 28px;
+}
+
 .dialog-slide-compare {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -456,6 +456,15 @@ select {
   grid-template-columns: minmax(340px, 0.9fr) minmax(0, 1fr);
 }
 
+.studio-player-slide.is-title.has-media {
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+}
+
+.studio-player-slide.is-title.has-media .studio-player-slide-title {
+  font-size: calc(76px * var(--studio-slide-scale, 1));
+  max-width: 12ch;
+}
+
 .studio-player-copy {
   min-width: 0;
 }
@@ -509,8 +518,10 @@ select {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  max-height: calc(480px * var(--studio-slide-scale, 1));
   border-radius: 10px;
   object-fit: cover;
+  background: rgba(255, 255, 255, 0.52);
   box-shadow: 0 26px 58px rgba(15, 31, 52, 0.24);
 }
 
@@ -741,6 +752,28 @@ select {
   line-height: 0.95;
 }
 
+.studio-player-slide.is-spotlight.is-long-quote,
+.studio-player-slide.is-spotlight.is-extra-long-quote {
+  text-align: left;
+}
+
+.studio-player-slide.is-spotlight.is-long-quote .studio-player-copy,
+.studio-player-slide.is-spotlight.is-extra-long-quote .studio-player-copy {
+  place-items: start;
+}
+
+.studio-player-slide.is-spotlight.is-long-quote .studio-player-quote {
+  max-width: 21ch;
+  font-size: calc(54px * var(--studio-slide-scale, 1));
+  line-height: 1.04;
+}
+
+.studio-player-slide.is-spotlight.is-extra-long-quote .studio-player-quote {
+  max-width: 24ch;
+  font-size: calc(42px * var(--studio-slide-scale, 1));
+  line-height: 1.08;
+}
+
 .studio-player-slide.is-source,
 .studio-player-slide.is-timeline,
 .studio-player-slide.is-writing-frame,
@@ -837,6 +870,80 @@ ol.studio-player-bullets li::before {
 .studio-player-slide.is-rubric .studio-player-bullets {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: none;
+}
+
+.studio-player-slide.is-wordbank.has-media {
+  grid-template-columns: minmax(0, 1.18fr) minmax(260px, 0.62fr);
+  align-items: start;
+}
+
+.studio-player-slide.is-wordbank .studio-player-bullets {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(10px * var(--studio-slide-scale, 1));
+  font-size: calc(27px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-wordbank .studio-player-bullets li {
+  min-height: calc(48px * var(--studio-slide-scale, 1));
+  border: 1px solid rgba(38, 62, 94, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.56);
+  padding:
+    calc(8px * var(--studio-slide-scale, 1))
+    calc(12px * var(--studio-slide-scale, 1))
+    calc(8px * var(--studio-slide-scale, 1))
+    calc(42px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-wordbank .studio-player-media img {
+  aspect-ratio: 1 / 1;
+  max-height: calc(360px * var(--studio-slide-scale, 1));
+  object-fit: contain;
+  padding: calc(18px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-netschrift .studio-player-media img,
+.studio-player-slide.is-lesson-start-netschrift .studio-player-media img,
+.studio-player-slide.is-lesson-end-netschrift .studio-player-media img,
+.studio-player-slide.is-homework .studio-player-media img,
+.studio-player-slide.is-homework-preview .studio-player-media img {
+  aspect-ratio: 1 / 1;
+  max-height: calc(300px * var(--studio-slide-scale, 1));
+  object-fit: contain;
+  padding: calc(30px * var(--studio-slide-scale, 1));
+}
+
+.studio-player-slide.is-lesson-start-netschrift::after {
+  content: "🖋 NETSCHRIFT";
+}
+
+.studio-player-slide.is-lesson-end-netschrift::after {
+  content: "🖋 CHECK";
+}
+
+.studio-player-slide.is-homework,
+.studio-player-slide.is-homework-preview {
+  border-color: rgba(127, 71, 148, 0.54);
+  background:
+    linear-gradient(90deg, rgba(127, 71, 148, 0.2) 0 18px, rgba(217, 151, 63, 0.28) 18px 26px, transparent 26px),
+    linear-gradient(145deg, #fff8ee 0%, #f7eefb 54%, #eaf5f4 100%);
+}
+
+.studio-player-slide.is-homework::after,
+.studio-player-slide.is-homework-preview::after {
+  content: "🗓 AGENDA";
+  position: absolute;
+  top: calc(30px * var(--studio-slide-scale, 1));
+  right: calc(42px * var(--studio-slide-scale, 1));
+  border: 1px solid rgba(127, 71, 148, 0.26);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #6f2b82;
+  font-size: calc(18px * var(--studio-slide-scale, 1));
+  font-weight: 950;
+  padding:
+    calc(7px * var(--studio-slide-scale, 1))
+    calc(13px * var(--studio-slide-scale, 1));
 }
 
 .studio-player-slide.is-checklist .studio-player-bullets li::before {
