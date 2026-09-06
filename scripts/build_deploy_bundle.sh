@@ -9,31 +9,12 @@ INTERNAL_DIR="$DIST_DIR/internal"
 rm -rf "$PUBLIC_DIR" "$INTERNAL_DIR"
 mkdir -p "$PUBLIC_DIR" "$INTERNAL_DIR"
 
-public_items=(
-  "index.html"
-  "leerlingen.html"
-  "favicon.svg"
-  "DEPLOY_SECURITY.md"
-  "l"
-  "css/lesstudio.css"
-  "css/student-portal.css"
-  "js/lesstudio.js"
-  "js/student-portal.js"
-  "js/jaarplanning-live.json"
-  "js/zermelo-agenda-live.json"
-  "js/zermelo-leerlingen-live.json"
-  "js/leerlingen_per_klas.json"
-  "js/kerndoelen-data.js"
-  "data/kerndoelen"
-  "lesdocs"
-)
+if [ ! -d "$ROOT_DIR/docs" ]; then
+  echo "Publieke docs-map ontbreekt: $ROOT_DIR/docs" >&2
+  exit 1
+fi
 
-for item in "${public_items[@]}"; do
-  if [ -e "$ROOT_DIR/$item" ]; then
-    mkdir -p "$PUBLIC_DIR/$(dirname "$item")"
-    cp -R "$ROOT_DIR/$item" "$PUBLIC_DIR/$item"
-  fi
-done
+cp -R "$ROOT_DIR/docs/." "$PUBLIC_DIR/"
 
 cat > "$PUBLIC_DIR/.nojekyll" <<'EOF'
 EOF
@@ -49,6 +30,7 @@ internal_items=(
   "leeglokaal.html"
   "timer.html"
   "favicon.svg"
+  "assets"
   "DEPLOY_SECURITY.md"
   "css"
   "js"

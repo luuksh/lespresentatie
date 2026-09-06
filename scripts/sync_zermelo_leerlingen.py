@@ -175,6 +175,10 @@ def payload_to_class_map(payload: object) -> dict[str, list[str]]:
     return merge_class_lists({}, payload)
 
 
+def public_class_shell(classes: dict[str, list[str]]) -> dict[str, list[str]]:
+    return {class_id: [] for class_id in sorted(classes)}
+
+
 def fetch_json(url: str) -> object:
     try:
         import certifi  # type: ignore
@@ -217,10 +221,16 @@ def main() -> int:
         "classes": dict(sorted(classes.items())),
     }
     out_text = json.dumps(out, ensure_ascii=False, indent=2) + "\n"
+    public_out = {
+        "updatedAt": out["updatedAt"],
+        "sourceType": out["sourceType"],
+        "classes": public_class_shell(classes),
+    }
+    public_out_text = json.dumps(public_out, ensure_ascii=False, indent=2) + "\n"
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(out_text, encoding="utf-8")
     PUBLIC_OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    PUBLIC_OUT_PATH.write_text(out_text, encoding="utf-8")
+    PUBLIC_OUT_PATH.write_text(public_out_text, encoding="utf-8")
     print(f"Wrote {len(classes)} classes to {OUT_PATH} and {PUBLIC_OUT_PATH}")
     return 0
 

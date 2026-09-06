@@ -3,3 +3,4 @@ data/.DS_Store
 dist/
 scripts/__pycache__/
 .zermelo.local.env
+data/backups/

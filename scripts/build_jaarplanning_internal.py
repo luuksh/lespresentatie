@@ -169,7 +169,61 @@ def parse_args() -> argparse.Namespace:
         default="js/zermelo-agenda-live.json",
         help="Pad naar Zermelo-agenda JSON voor vaste lesdagen",
     )
+    parser.add_argument(
+        "--planning-rules-source",
+        default="data/planning-rules.json",
+        help="Pad naar gedeelde roosterregels voor lesaantallen en Leesmeters",
+    )
     return parser.parse_args()
+
+
+def load_planning_rules(path: str | Path) -> None:
+    global BASE_SCHEDULE, DEFAULT_READING_DAY_BY_CLASS, EXPECTED_LESSONS_BY_GRADE
+
+    source = Path(path)
+    if not source.exists():
+        return
+
+    raw = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(raw, dict):
+        return
+
+    expected = raw.get("expectedLessonsByGrade")
+    if isinstance(expected, dict):
+        EXPECTED_LESSONS_BY_GRADE = {
+            str(grade).strip(): int(count)
+            for grade, count in expected.items()
+            if str(grade).strip() and isinstance(count, int)
+        } or EXPECTED_LESSONS_BY_GRADE
+
+    reading_days = raw.get("defaultReadingDayByClass")
+    if isinstance(reading_days, dict):
+        DEFAULT_READING_DAY_BY_CLASS = {
+            canonical_planning_class_id(str(class_id)): int(day)
+            for class_id, day in reading_days.items()
+            if canonical_planning_class_id(str(class_id)) and isinstance(day, int)
+        } or DEFAULT_READING_DAY_BY_CLASS
+
+    base_schedule = raw.get("baseSchedule")
+    if isinstance(base_schedule, dict):
+        normalized_schedule: dict[str, list[dict[str, int | str]]] = {}
+        for class_id, slots in base_schedule.items():
+            normalized_class = canonical_planning_class_id(str(class_id))
+            if not normalized_class or not isinstance(slots, list):
+                continue
+            normalized_slots: list[dict[str, int | str]] = []
+            for slot in slots:
+                if not isinstance(slot, dict):
+                    continue
+                slot_key = str(slot.get("slot", "")).strip().upper()
+                day = normalize_weekday(slot.get("day"))
+                start = normalize_time(slot.get("start"))
+                if slot_key in LESSON_SLOT_ORDER and day and start:
+                    normalized_slots.append({"slot": slot_key, "day": day, "start": start})
+            if normalized_slots:
+                normalized_schedule[normalized_class] = normalized_slots
+        if normalized_schedule:
+            BASE_SCHEDULE = normalized_schedule
 
 
 def ensure_homework_contains(homework: str, required_text: str) -> str:
@@ -212,6 +266,11 @@ def normalize_lesson(row: object) -> dict:
         value = str(row.get(key, "")).strip()
         if value:
             out[key] = value
+    sequence_index = row.get("sequenceIndex")
+    if isinstance(sequence_index, int):
+        out["sequenceIndex"] = sequence_index
+    elif isinstance(sequence_index, float) and sequence_index.is_integer():
+        out["sequenceIndex"] = int(sequence_index)
     if row.get("preserveLessonKey"):
         out["preserveLessonKey"] = True
     if not out["project"] and not out["lesson"]:
@@ -568,14 +627,19 @@ def ensure_fixed_lesson_is_reading(class_id: str, lessons: list[dict]) -> list[d
         for lesson in project_lessons
     ):
         lesson_count = min(len(project_lessons) + 1, len(LESSON_SLOT_ORDER))
-    if any(lesson.get("preserveLessonKey") for lesson in ordered):
+    has_explicit_project_slots = any(
+        not is_reading_lesson(lesson)
+        and str(lesson.get("lessonKey", "")).strip().upper() in LESSON_SLOT_ORDER
+        for lesson in ordered
+    )
+    if any(lesson.get("preserveLessonKey") for lesson in ordered) or has_explicit_project_slots:
         output_by_key: dict[str, dict] = {}
         remaining_projects: list[dict] = []
         for lesson in project_lessons:
             current = dict(lesson)
             preserve_key = bool(current.pop("preserveLessonKey", False))
             key = str(current.get("lessonKey", "")).strip().upper()
-            if preserve_key and key in LESSON_SLOT_ORDER and key != reading_lesson_key:
+            if (preserve_key or has_explicit_project_slots) and key in LESSON_SLOT_ORDER and key != reading_lesson_key:
                 current["lessonKey"] = key
                 output_by_key[key] = current
             else:
@@ -759,6 +823,8 @@ def main() -> int:
     args = parse_args()
     in_path = Path(args.input)
     out_path = Path(args.output)
+
+    load_planning_rules(args.planning_rules_source)
 
     if not in_path.exists():
         raise FileNotFoundError(f"Inputbestand niet gevonden: {in_path}")
