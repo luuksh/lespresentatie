@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T06:30:13.868Z",
+  "updatedAt": "2026-09-06T06:34:06.038Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -84,11 +84,11 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
+          "project": "Taaltopia",
+          "lesson": "Les 6 - Creatief extra en presenteren",
+          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
+          "presentationId": "project-taaltopia",
+          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
           "lessonKey": "A",
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
