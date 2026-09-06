@@ -171,6 +171,64 @@ body.presentation-open #timerDock .clock-digital {
   background: rgba(17, 18, 24, 0.72);
 }
 
+body.presentation-direct-preview {
+  overflow: hidden;
+}
+
+body.presentation-direct-preview #layoutRoot {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+body.presentation-direct-preview .board-scaler,
+body.presentation-direct-preview .plattegrond-frame {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body.presentation-direct-preview .plattegrond-frame {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(218, 175, 92, 0.1) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 100%),
+    radial-gradient(90% 72% at 50% 20%, rgba(151, 184, 214, 0.24), transparent 62%),
+    radial-gradient(130% 80% at 10% 100%, rgba(179, 133, 73, 0.22), transparent 48%),
+    linear-gradient(135deg, #060914 0%, #112135 44%, #07101c 100%);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+  box-shadow: none;
+  padding: 0;
+  perspective: 2200px;
+}
+
+body.presentation-direct-preview .plattegrond-flip {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  transition: none;
+  transform: rotateY(180deg);
+}
+
+body.presentation-direct-preview .plattegrond-front {
+  visibility: hidden;
+}
+
+body.presentation-direct-preview .plattegrond-side {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  border-radius: 0;
+}
+
 body::after {
   content: none;
 }

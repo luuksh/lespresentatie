@@ -2425,9 +2425,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (directPresentationPreviewOpened) return false;
     const target = directPresentationPreviewTargetFromUrl();
     if (!target) return false;
+    document.body.classList.add('presentation-direct-preview', 'presentation-open');
+    if (presentationBackBtn && directPresentationPreviewIsEmbedded()) {
+      presentationBackBtn.textContent = 'Sluiten';
+      presentationBackBtn.setAttribute('aria-label', 'Sluit presentatie-preview');
+    }
     applyDirectPresentationClassFromUrl();
-    const resolved = resolveInternalPresentation(target);
-    if (!resolved.presentation) return false;
     directPresentationPreviewOpened = true;
     openPresentationPanel(target);
     return true;
@@ -3021,7 +3024,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function closePresentationPanel({ notifyParent = false } = {}) {
     if (!plattegrondFrame) return;
-    const wasPresentationOpen = isPresentationOpen;
+    if (notifyParent && directPresentationPreviewIsEmbedded()) {
+      window.parent.postMessage({ type: 'lesstudio:presentation-preview-close' }, '*');
+      return;
+    }
+    if (directPresentationPreviewIsEmbedded()) return;
     plattegrondFrame.classList.remove('is-flipped');
     document.body.classList.remove('presentation-open');
     isPresentationOpen = false;
@@ -3029,9 +3036,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.exitFullscreen().catch((err) => {
         console.warn('Fullscreen afsluiten niet beschikbaar:', err);
       });
-    }
-    if (notifyParent && wasPresentationOpen && directPresentationPreviewIsEmbedded()) {
-      window.parent.postMessage({ type: 'lesstudio:presentation-preview-close' }, '*');
     }
   }
 
@@ -4299,7 +4303,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyAgendaSource('', true);
   });
 
-  closePresentationPanel();
+  if (!directPresentationPreviewTargetFromUrl()) closePresentationPanel();
   window.addEventListener('pageshow', () => {
     if (directPresentationPreviewTargetFromUrl()) {
       openDirectPresentationPreviewFromUrl();

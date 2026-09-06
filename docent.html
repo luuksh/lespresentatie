@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
   <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg?v=20260305-01" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260905-02" />
+  <link rel="stylesheet" href="css/style.css?v=202609061010" />
 
   <script>
     window.APP_CONFIG = {
@@ -18,9 +18,17 @@
   </script>
   <script src="js/roster-source.js?v=202606010935"></script>
   <script type="module" src="js/indeling.js?v=202609032150"></script>
-  <script type="module" src="js/init.js?v=202609060945"></script>
+  <script type="module" src="js/init.js?v=202609061010"></script>
 </head>
 <body>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('presentationPreview') || params.has('preview')) {
+        document.body.classList.add('presentation-direct-preview', 'presentation-open');
+      }
+    })();
+  </script>
   <section id="opdrachtMount" class="opdracht-board" role="region" aria-label="Lesopdracht op bord">
     <p class="opdracht-label">Redactiebord</p>
     <div class="opdracht-menu">
