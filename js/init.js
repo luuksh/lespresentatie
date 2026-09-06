@@ -43,7 +43,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     '2026-09-02': STARTWEEK_PLANNING_WEEK,
     '2026-09-03': STARTWEEK_PLANNING_WEEK,
   });
-  const CURRENT_PROGRESS_ANCHORS = [];
+  const CURRENT_PROGRESS_ANCHORS = [
+    {
+      grade: '1',
+      anchorDate: '2026-09-07',
+      project: 'Start Nederlands 1',
+      lessonNumber: 1,
+      useProjectOnFirstLesson: true,
+    },
+  ];
   const READING_LESSON_EXCEPTIONS = [];
   const FIXED_READING_MOMENTS = {
     G1C: { day: 4, start: '12:50' },
@@ -860,6 +868,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function anchorUsesProjectForAgendaEntry(classId, anchor, agendaEntry) {
     if (!agendaEntry) return false;
+    if (isReadingLessonException(classId, agendaEntry)) return false;
+    if (isStandardReadingDay(agendaEntry)) return false;
     if (anchor.useProjectOnFirstLesson) return true;
     const agendaLessonNumber = lessonNumberForWeek(agendaEntries, agendaEntry);
     if (agendaLessonNumber <= 1) return false;
@@ -937,15 +947,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!agendaEntry?.start) return 0;
     const anchorRange = localDateRange(anchor.anchorDate);
     if (!anchorRange) return 0;
-    const classEntries = agendaEntriesForClass(agendaEntries, classId)
+    const projectEntries = agendaEntriesForClass(agendaEntries, classId)
       .filter((entry) => entry?.start && entry.start >= anchorRange.start)
+      .filter((entry) => anchorUsesProjectForAgendaEntry(classId, anchor, entry))
       .sort((left, right) => left.start - right.start);
-    const anchorEntryIndex = classEntries.findIndex((entry) => (
-      entry.start >= anchorRange.start
-      && anchorUsesProjectForAgendaEntry(classId, anchor, entry)
-    ));
+    const anchorEntryIndex = projectEntries.findIndex((entry) => entry.start >= anchorRange.start);
     if (anchorEntryIndex < 0) return 0;
-    const targetIndex = classEntries.findIndex((entry) => isSameAgendaEntry(entry, agendaEntry));
+    const targetIndex = projectEntries.findIndex((entry) => isSameAgendaEntry(entry, agendaEntry));
     if (targetIndex < 0 || targetIndex <= anchorEntryIndex) return 0;
     return targetIndex - anchorEntryIndex;
   }

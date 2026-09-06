@@ -164,7 +164,15 @@ async function loadKerndoelenDocSafe(url) {
     return null;
   }
 }
-const CURRENT_PROGRESS_ANCHORS = [];
+const CURRENT_PROGRESS_ANCHORS = [
+  {
+    grade: '1',
+    anchorDate: '2026-09-07',
+    project: 'Start Nederlands 1',
+    lessonNumber: 1,
+    useProjectOnFirstLesson: true,
+  },
+];
 const READING_LESSON_EXCEPTIONS = [];
 const LESSON_SLOT_INDEX = { A: 1, B: 2, C: 3 };
 const FIXED_READING_MOMENTS = {
@@ -1345,20 +1353,18 @@ function progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries,
 function progressAnchorAgendaOffset(classId, anchor, agendaEntries, targetEntry, now = new Date()) {
   const anchorRange = localDateRange(anchor.anchorDate);
   if (!anchorRange) return 0;
-  const classEntries = agendaEntries
+  const projectEntries = agendaEntries
     .filter((entry) => entry?.start && entry.start >= anchorRange.start)
+    .filter((entry) => progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry))
     .sort((left, right) => left.start - right.start);
-  const anchorEntryIndex = classEntries.findIndex((entry) => (
-    entry.start >= anchorRange.start
-    && progressAnchorUsesProjectForAgendaEntry(classId, anchor, agendaEntries, entry)
-  ));
+  const anchorEntryIndex = projectEntries.findIndex((entry) => entry.start >= anchorRange.start);
   if (anchorEntryIndex < 0) return 0;
   const targetIndex = targetEntry
-    ? classEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
+    ? projectEntries.findIndex((entry) => isSameAgendaEntry(entry, targetEntry))
     : -1;
   if (targetIndex > anchorEntryIndex) return targetIndex - anchorEntryIndex;
   if (targetIndex >= 0) return 0;
-  return classEntries.filter((entry, index) => {
+  return projectEntries.filter((entry, index) => {
     const end = entry.end instanceof Date ? entry.end : new Date(entry.end || entry.start);
     return index >= anchorEntryIndex && !Number.isNaN(end.getTime()) && end < now;
   }).length;

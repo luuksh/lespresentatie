@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:49:34.091Z",
+  "updatedAt": "2026-09-06T07:57:07.689Z",
   "source": "docentplatform",
   "entries": [
     {
@@ -84,12 +84,13 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Taaltopia",
-          "lesson": "Les 6 - Creatief extra en presenteren",
-          "homework": "Controleer of jullie poster compleet is en neem eventueel 1 geprinte afbeelding, titelstrook of pictogram mee. Bedenk ook wie wat zegt bij het presenteren. netschrift en pen mee",
-          "presentationId": "project-taaltopia",
-          "presentationMarkerId": "marker-les-6-creatief-extra-en-presenteren",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
+          "sequenceIndex": 1,
           "classId": "G1C",
           "scheduledDate": "2026-09-07T08:50:00.000Z"
         }
@@ -141,7 +142,7 @@
       "lessonIndex": 2,
       "lessonSlot": "B",
       "isManual": false,
-      "source": "docentplatform",
+      "source": "datumprojectie",
       "lessons": [
         {
           "project": "Start Nederlands 4",
@@ -177,9 +178,10 @@
           "project": "Start Nederlands 1",
           "lesson": "Les 2 - Maak het van jou",
           "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+          "lessonKey": "C",
           "presentationId": "project-start-nederlands-1",
           "presentationMarkerId": "marker-startles-1-2",
-          "lessonKey": "C",
+          "sequenceIndex": 2,
           "classId": "G1C",
           "scheduledDate": "2026-09-08T06:15:00.000Z"
         }
@@ -331,12 +333,13 @@
       "source": "docentplatform",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 3: Projectplan",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-3-projectplan",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 1 - Welkom bij Nederlands",
+          "homework": "Wat moeten leerlingen voor de volgende les doen of meenemen? netschrift en pen mee",
           "lessonKey": "A",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-1",
+          "sequenceIndex": 1,
           "classId": "G1D",
           "scheduledDate": "2026-09-08T12:40:00.000Z"
         }
@@ -510,12 +513,13 @@
       "source": "datumprojectie",
       "lessons": [
         {
-          "project": "Droomschool",
-          "lesson": "Les 1: Intro",
-          "homework": "netschrift en pen mee",
-          "presentationId": "project-droomschool",
-          "presentationMarkerId": "marker-les-1-intro",
-          "lessonKey": "A",
+          "project": "Start Nederlands 1",
+          "lesson": "Les 2 - Maak het van jou",
+          "homework": "Neem je netschrift en pen mee.\nMaak je voorkant en titelblad thuis verder af als ze nog niet klaar zijn.\nZorg dat naam, klas en schooljaar duidelijk leesbaar zijn.\nDenk alvast na: wat wil je dit jaar in je netschrift kunnen terugzien?",
+          "lessonKey": "B",
+          "presentationId": "project-start-nederlands-1",
+          "presentationMarkerId": "marker-startles-1-2",
+          "sequenceIndex": 2,
           "classId": "G1D",
           "scheduledDate": "2026-09-11T06:15:00.000Z"
         }
