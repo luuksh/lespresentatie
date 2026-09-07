@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T17:49:26.325587+00:00",
+  "updatedAt": "2026-09-07T20:58:38.939980+00:00",
   "sourceType": "zermelo-ical",
   "entries": [
     {
@@ -246,8 +246,8 @@
       "classId": "G3F",
       "start": "2026-09-14T07:00:00+00:00",
       "end": "2026-09-14T07:45:00+00:00",
-      "summary": "h212 ne g3f",
-      "description": "h212 ne g3f",
+      "summary": "[>] u105 ne g3f",
+      "description": "u105 ne g3f\nWijzigingen: Het lokaal is gewijzigd (was h212).",
       "location": "",
       "categories": "",
       "uid": "1138197@cgu"
@@ -256,8 +256,8 @@
       "classId": "G3C",
       "start": "2026-09-14T07:45:00+00:00",
       "end": "2026-09-14T08:30:00+00:00",
-      "summary": "h212 ne g3c",
-      "description": "h212 ne g3c",
+      "summary": "[>] u105 ne g3c",
+      "description": "u105 ne g3c\nWijzigingen: Het lokaal is gewijzigd (was h212).",
       "location": "",
       "categories": "",
       "uid": "1138206@cgu"
